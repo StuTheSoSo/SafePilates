@@ -18,9 +18,12 @@ export class HomePage implements OnInit {
   allExercises: Exercise[] = [];
   categories: string[] = [];
   selectedCategory = 'All';
+  featuredSections = [
+    { title: 'Classical Reformer', category: 'Reformer' },
+    { title: 'Chair Essentials', category: 'Chair' }
+  ];
   private router = inject(Router);
-
-  constructor(private safetyService: SafetyService) {}
+  private safetyService = inject(SafetyService);
 
   async ngOnInit() {
     this.allExercises = exercisesData as Exercise[];
@@ -67,6 +70,15 @@ export class HomePage implements OnInit {
     return this.selectedCategory === 'All'
       ? 'Exercise library preview'
       : `${this.selectedCategory} exercise preview`;
+  }
+
+  getFeaturedExercises(category: string): Exercise[] {
+    return this.allExercises.filter(exercise => exercise.category === category).slice(0, 4);
+  }
+
+  goToCategory(category: string) {
+    this.selectedCategory = category;
+    this.applyFilter();
   }
 
   goToSafetyChecker() {

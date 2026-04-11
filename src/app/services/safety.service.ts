@@ -170,6 +170,12 @@ export class SafetyService {
     const currentCount = Number(localStorage.getItem(countKey) || '0');
 
     try {
+      const otherText = (query.otherText || '').trim();
+      if (otherText && this.shouldUseHeuristicForOther(otherText)) {
+        localStorage.setItem(countKey, String(currentCount + 1));
+        return this.buildHeuristicGuidance(query, selectedConditions);
+      }
+
       const promptText =
         provider === 'local'
           ? this.buildLocalAiPrompt(query, selectedConditions)
@@ -186,6 +192,10 @@ export class SafetyService {
       console.error('AI fallback error', error);
       return 'Unable to reach AI guidance at this time. Please consult a qualified professional for more details.';
     }
+  }
+
+  private shouldUseHeuristicForOther(otherText: string): boolean {
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|pregnancy|postpartum|pelvic floor|pelvic|diastasis|stability|instability|impingement|bursitis|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
   }
 
   private localPipelinePromise: Promise<any> | null = null;
@@ -280,6 +290,166 @@ export class SafetyService {
       );
     }
 
+    // Pregnancy / pelvic floor / postpartum pattern
+    if (/(pregnancy|postpartum|post partum|pelvic floor|pelvic|diastasis|pregnan|maternity)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Heavy abdominal flexion or prolonged supine work after mid-pregnancy\n' +
+        '- Deep rotations or unsupported backbends that compromise the abdomen\n' +
+        '- Breath-holding, compression of the belly, or high-impact transitions\n\n' +
+        'Why\n' +
+        '- The body is adapting to a growing abdomen and pelvic floor changes\n' +
+        '- Safe Pilates during pregnancy focuses on stability, breathing, and comfort\n\n' +
+        'Safer focus\n' +
+        '- Use side-lying, seated, or supported standing variations\n' +
+        '- Keep the pelvis neutral and the breath steady\n' +
+        '- Prioritize pelvic floor awareness, spinal support, and comfortable range of motion\n\n' +
+        'If you are pregnant, consult a qualified provider before continuing and stop if any movement feels unsafe.'
+      );
+    }
+
+    // Balance / dizziness / vestibular concerns
+    if (/(balance|dizziness|vertigo|lightheaded|unsteady|wobbly)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Rapid head turns, inversions, or unsupported balance challenges\n' +
+        '- Sudden changes of position from lying to standing\n' +
+        '- Exercises that require precise single-leg balance without support\n\n' +
+        'Why\n' +
+        '- Vestibular symptoms are often aggravated by motion and unstable surfaces\n' +
+        '- Sudden shifts can worsen dizziness and increase fall risk\n\n' +
+        'Safer focus\n' +
+        '- Stay grounded with both feet on the mat and move slowly\n' +
+        '- Use supports like a chair or wall for balance as needed\n' +
+        '- Focus on gentle breath and core support rather than challenging equilibrium\n\n' +
+        'If dizziness is new, severe, or accompanied by other symptoms, seek medical advice before exercising.'
+      );
+    }
+
+    // Back / spine / low back concerns
+    if (/(low back|back pain|spine|spinal|scoliosis|stenosis|spondyl|disc|disc herniation|herniated disc|lumbar|thoracic|kyphosis|lordosis)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Repetitive end-range flexion, extension, or twisting of the spine\n' +
+        '- Quick load changes that destabilize the lumbar spine\n' +
+        '- Unsupported bridge or inversion work if it increases discomfort\n\n' +
+        'Why\n' +
+        '- The spine is sensitive to repeated compression, rotation, and shear\n' +
+        '- Controlled movement and neutral alignment reduce irritation\n\n' +
+        'Safer focus\n' +
+        '- Prioritize neutral spine stabilization and gentle articulation\n' +
+        '- Use core support with small meaningful spinal movements\n' +
+        '- Avoid explosive or extended-range exercises when the back feels symptomatic\n\n' +
+        'If pain is sharp, radiating, or accompanied by numbness, consult a clinician before continuing.'
+      );
+    }
+
+    // Hip / knee / lower joint concerns
+    if (/(knee|hip|ankle|joint replacement|replacement|arthritis|osteoarthritis|rheumatoid|joint pain)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Deep loaded knee bends, high torque hip rotations, or aggressive joint compression\n' +
+        '- Rapid leg cycling or repeated impact if it causes pain\n' +
+        '- Unsupported single-leg balance work when the joint is sensitive\n\n' +
+        'Why\n' +
+        '- Joint issues benefit from controlled range and stable alignment\n' +
+        '- Painful or unstable joints should not be overloaded with forceful movements\n\n' +
+        'Safer focus\n' +
+        '- Keep the limb in a pain-free range and focus on muscle support around the joint\n' +
+        '- Use support, lighter resistance, and slower movement quality\n' +
+        '- Emphasize alignment and fluid motion over depth or speed\n\n' +
+        'If the joint feels unstable, swollen, or overly painful, stop and seek professional guidance.'
+      );
+    }
+
+    // Neck / shoulder concerns
+    if (/(neck|shoulder|cervical|upper back|thoracic outlet|rotator cuff|shoulder impingement)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Unsupported head lifts, heavy shoulder load, or exercises that round the upper back\n' +
+        '- High-reaching overhead work and forceful arm presses if shoulder comfort is limited\n' +
+        '- Rapid neck rotation or extension when the cervical spine feels tight\n\n' +
+        'Why\n' +
+        '- The neck and shoulders require support and ease of motion to avoid strain\n' +
+        '- Poor upper-body alignment can increase tension in the neck and shoulder girdle\n\n' +
+        'Safer focus\n' +
+        '- Keep the head supported and the shoulder blades stable\n' +
+        '- Use gentle scapular control and small arm movements\n' +
+        '- Prioritize quality of posture over range of motion\n\n' +
+        'If pain or numbness persists with neck or shoulder movement, consult a qualified provider first.'
+      );
+    }
+
+    // Cardiovascular / hypertension concerns
+    if (/(hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|heart rate)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Inversions, breath-holding, or sudden high-intensity efforts\n' +
+        '- Heavy load and rapid transitions that spike heart rate\n' +
+        '- Holding the breath during exertion or straining strongly\n\n' +
+        'Why\n' +
+        '- Cardiovascular concerns are best managed with calm, steady movement and safe breath patterns\n' +
+        '- Rapid or high-pressure activity can raise blood pressure and stress the heart\n\n' +
+        'Safer focus\n' +
+        '- Keep movement smooth, controlled, and comfortable\n' +
+        '- Breathe steadily and avoid breath-holding\n' +
+        '- Use lower intensity, longer rest periods, and a slower pace\n\n' +
+        'If there is chest pain, dizziness, or palpitations, stop immediately and seek medical attention.'
+      );
+    }
+
+    // Post-surgical or recent surgery concerns
+    if (/(post[- ]surgery|recent surgery|surgery|replacement|recovery|reconstruction)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Aggressive movement, heavy loading, or deep joint/alignment stress during recovery\n' +
+        '- Twisting, abrupt transitions, or unsupported positions that may strain healing tissue\n' +
+        '- High-impact or high-resistance work before clearance\n\n' +
+        'Why\n' +
+        '- Healing tissues need gradual, protected movement with controlled loading\n' +
+        '- Premature intensity can delay recovery or irritate surgical sites\n\n' +
+        'Safer focus\n' +
+        '- Keep motion gentle, supported, and within comfort\n' +
+        '- Prioritize controlled alignment and slow progressions\n' +
+        '- Follow your clinician’s guidance and stop if anything feels too intense\n\n' +
+        'Always check with your surgeon or rehabilitation specialist before resuming Pilates after surgery.'
+      );
+    }
+
+    // Neurological / autoimmune / chronic condition pattern
+    if (/(multiple sclerosis|\bms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Sustained high-intensity efforts that increase fatigue or overheating\n' +
+        '- Rapid balance challenges or unsupported inversions if dizziness is present\n' +
+        '- Heavy loaded movement without a stable core and joint support\n\n' +
+        'Why\n' +
+        '- Neurological and autoimmune conditions often respond better to steady, low-impact movement than to high load or rapid change\n' +
+        '- Fatigue, heat, and balance disruption can make symptoms worse even without pain\n\n' +
+        'Safer focus\n' +
+        '- Choose gentle, supported Pilates patterns with emphasis on control, breath, and joint alignment\n' +
+        '- Prioritize frequent rest, hydration, and movement in a comfortable range\n' +
+        '- Work with slow transitions and avoid sudden head or torso rotations if balance is affected\n\n' +
+        'If symptoms change suddenly, increase significantly, or include new numbness, visual changes, or loss of coordination, seek professional advice before continuing.'
+      );
+    }
+
     // Generic injury/unknown concern fallback
     const shortOther = other ? `"${other}"` : 'this concern';
     return (
@@ -311,11 +481,21 @@ export class SafetyService {
       return true;
     }
 
+    // Reject generic, boilerplate model outputs that do not follow the expected guidance structure.
+    const hasAvoid = /\bAVOID\b/.test(upper);
+    const hasWhy = /\bWHY\b/.test(upper);
+    const hasSaferFocus = /\bSAFER\s+FOCUS\b/.test(upper);
+    if (!(hasAvoid && hasWhy && hasSaferFocus)) {
+      return true;
+    }
+
+    // Reject known bland fallback phrasing from weak local models.
+    if (upper.includes('THE FOLLOWING RULES ARE FOR') || upper.includes('GENERALLY SPEAKING') || upper.includes('THE CORRECT POSITION MUST BE AVOIDED')) {
+      return true;
+    }
+
     // Detect extreme repetition (common failure mode in tiny on-device models).
-    const words = upper
-      .replace(/[^A-Z0-9\s]/g, ' ')
-      .split(/\s+/)
-      .filter(Boolean);
+    const words = upper.replace(/[^A-Z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
     if (words.length < 10) {
       return false;
     }

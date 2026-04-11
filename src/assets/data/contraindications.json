@@ -75,6 +75,24 @@
     {"exerciseId":"single_leg_stretch","reason":"Repeated hip flexion and lower abdominal engagement can irritate a weak pelvic floor.","alternative":"Perform supported knee folds or modified marching with neutral pelvis."},
     {"exerciseId":"teaser","reason":"Full sit-up movement loads the pelvic floor and linea alba.","alternative":"Use supported seated core work and avoid full V position."}
   ],
+  "diastasis_recti": [
+    {"exerciseId":"the_hundred","reason":"Strong abdominal pumping can widen the separation and increase intra-abdominal pressure.","alternative":"Use supported core work with the head down and focus on transverse abdominis engagement."},
+    {"exerciseId":"roll_up","reason":"Loaded spinal flexion places stress on the linea alba.","alternative":"Practice pelvic tilts and supported roll-downs with a neutral spine."},
+    {"exerciseId":"teaser","reason":"Full V-position and abdominal lift can overstress separated abdominal muscles.","alternative":"Use modified seated core work with bent knees and low lift."},
+    {"exerciseId":"double_leg_stretch","reason":"Combined lower ab extension and arm reach may increase pressure through the midline.","alternative":"Choose heel slides and single-leg supports with minimal abdominal strain."}
+  ],
+  "shoulder_instability": [
+    {"exerciseId":"push_through","reason":"Heavy shoulder loading over the bar may aggravate instability or impingement.","alternative":"Use supported back extension with lighter resistance and stable shoulder placement."},
+    {"exerciseId":"swan_dive","reason":"Prone extension can place excessive demand on the neck and shoulder stabilizers.","alternative":"Choose gentle prone lifting with hands under shoulders for support."},
+    {"exerciseId":"swimming","reason":"Repeated alternating arm lifts can overwork unstable shoulder joints.","alternative":"Use lower range arm extension with more emphasis on scapular stability."},
+    {"exerciseId":"shoulder_bridge","reason":"Shoulder-supported bridge positions may increase discomfort if the shoulders are unstable.","alternative":"Keep the upper body relaxed and work with lower bridge variations or supine glute engagement."}
+  ],
+  "bursitis": [
+    {"exerciseId":"one_leg_circle","reason":"Large hip circles can irritate inflamed bursae around the hip or pelvis.","alternative":"Use smaller, slower leg circles with a supported pelvis."},
+    {"exerciseId":"hip_circles","reason":"Repetitive hip rotation may aggravate bursitis in the hip joint.","alternative":"Choose gentle supported hip pumps in a neutral range."},
+    {"exerciseId":"swan_dive","reason":"Prone back extension can compress already tender shoulder bursae.","alternative":"Work with supported chest lifts and avoid aggressive upper back extension."},
+    {"exerciseId":"long_box_series","reason":"Extended upper-body reach and loaded carriage movement may stress sensitive shoulder tissues.","alternative":"Use lighter springs and smaller arm movements while keeping the shoulders stable."}
+  ],
   "vertigo_dizziness": [
     {"exerciseId":"roll_over","reason":"Inversion can trigger dizziness and disorientation.","alternative":"Choose gentle supine pelvic tilts or seated mobility instead."},
     {"exerciseId":"corkscrew","reason":"Rapid spinal rotation with legs overhead can disrupt balance.","alternative":"Use slow hip circles with the head supported and eyes fixed."},

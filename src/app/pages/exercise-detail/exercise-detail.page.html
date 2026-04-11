@@ -13,11 +13,33 @@
       <ion-card-title>{{ exercise.name }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>{{ exercise.shortDescription }}</p>
-      <p class="exercise-category"><strong>Category:</strong> {{ exercise.category }}</p>
-      <p class="exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
-      <p *ngIf="exercise.benefits" class="exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
-      <p class="placeholder">Video and advanced guidance coming soon.</p>
+      <p class="exercise-description">{{ exercise.shortDescription }}</p>
+      <div class="exercise-meta">
+        <p class="exercise-category"><strong>Category:</strong> {{ exercise.category }}</p>
+        <p *ngIf="exercise.level" class="exercise-level"><strong>Level:</strong> {{ exercise.level }}</p>
+        <p class="exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
+        <p *ngIf="exercise.benefits" class="exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
+      </div>
+
+      <ion-list *ngIf="exercise.modifications?.length" lines="inset" class="exercise-detail-list">
+        <ion-list-header>
+          <ion-label>Modifications</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let mod of exercise.modifications">
+          <ion-label>{{ mod }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngIf="exercise.progressions?.length" lines="inset" class="exercise-detail-list">
+        <ion-list-header>
+          <ion-label>Progressions</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let prog of exercise.progressions">
+          <ion-label>{{ prog }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">Video and advanced guidance coming soon.</p>
     </ion-card-content>
   </ion-card>
 </ion-content>

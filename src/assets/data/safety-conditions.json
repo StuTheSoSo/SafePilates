@@ -56,6 +56,21 @@
     "description": "Focus on pelvic floor-friendly stability and avoid strong Valsalva or uncontrolled abdominal loading."
   },
   {
+    "id": "diastasis_recti",
+    "label": "Diastasis Recti / Abdominal Separation",
+    "description": "Avoid loaded abdominal flexion, intense twisting, and exercises that increase intra-abdominal pressure without support."
+  },
+  {
+    "id": "shoulder_instability",
+    "label": "Shoulder Instability / Impingement",
+    "description": "Avoid heavy overhead loading, unsupported shoulder weight-bearing, and movements that aggravate shoulder instability."
+  },
+  {
+    "id": "bursitis",
+    "label": "Bursitis / Tendinopathy",
+    "description": "Avoid repetitive friction, compression, or end-range joint positions around inflamed bursae."
+  },
+  {
     "id": "vertigo_dizziness",
     "label": "Vertigo / Dizziness",
     "description": "Avoid rapid head movement, inversions, and unsupported balance work that may trigger dizziness."

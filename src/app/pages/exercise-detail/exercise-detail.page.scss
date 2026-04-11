@@ -17,6 +17,35 @@ ion-card {
   line-height: 1.5;
 }
 
+.exercise-description {
+  margin-bottom: 1rem;
+  color: var(--sp-brand-ink);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.exercise-meta p {
+  margin: 0.45rem 0;
+}
+
+.exercise-detail-list {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.exercise-detail-list ion-label {
+  font-size: 0.98rem;
+  color: var(--sp-brand-ink);
+}
+
+.exercise-detail-list ion-list-header ion-label {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+  font-size: 1rem;
+}
+
 .exercise-benefits strong {
   font-weight: 700;
   color: var(--ion-color-primary);

@@ -34,5 +34,23 @@
     "goal": "Build Reformer strength and control.",
     "focusAreas": ["Reformer", "Leg strength", "Spinal support"],
     "exerciseIds": ["footwork", "elephant", "long_box_series", "short_spine_massage"]
+  },
+  {
+    "id": "postpartum_recovery_flow",
+    "name": "Postpartum Recovery Flow",
+    "description": "A gentle Pilates sequence designed to support postpartum core rebuilding, pelvic floor awareness, and gradual abdominal return.",
+    "level": "Beginner",
+    "goal": "Rebuild core support and pelvic stability after pregnancy.",
+    "focusAreas": ["Postpartum", "Pelvic floor", "Core rebuilding"],
+    "exerciseIds": ["pelvic_curl", "shoulder_bridge", "mermaid", "single_leg_stretch", "pilates_ring_squeeze"]
+  },
+  {
+    "id": "shoulder_friendly_flow",
+    "name": "Shoulder-Friendly Flow",
+    "description": "A focused session for shoulder comfort that emphasizes scapular support, gentle upper-body strength, and safe range of motion.",
+    "level": "Beginner",
+    "goal": "Support shoulder stability with safe Pilates movement.",
+    "focusAreas": ["Shoulder", "Scapular support", "Upper body"],
+    "exerciseIds": ["roll_down_bar", "long_box_series", "mermaid", "breaststroke", "pilates_ring_squeeze"]
   }
 ]

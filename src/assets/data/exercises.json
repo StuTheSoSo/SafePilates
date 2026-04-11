@@ -58,6 +58,23 @@
     "category": "Mat"
   },
   {
+    "id": "roll_down",
+    "name": "Roll Down",
+    "shortDescription": "Sequential spinal articulation from standing to mat that mobilizes the spine and lengthens the back.",
+    "focus": "Spinal articulation and core control.",
+    "benefits": "Improves segmental spine mobility while reinforcing deep abdominal support.",
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Bend the knees slightly and move slower if hamstring flexibility is limited.",
+      "Keep the arms long and the shoulders relaxed away from the ears."
+    ],
+    "progressions": [
+      "Work toward a slower, fully articulated roll-down with longer inhalations between each segment.",
+      "Add a small arm reach forward at the bottom to increase spinal length and control."
+    ]
+  },
+  {
     "id": "teaser",
     "name": "Teaser",
     "shortDescription": "Classic V-shape lift demanding core precision, hip flexor coordination, and a long, supported spine.",
@@ -290,6 +307,23 @@
     "category": "Mat"
   },
   {
+    "id": "push_up",
+    "name": "Push Up",
+    "shortDescription": "Dynamic core and upper-body exercise performed from a plank position with precise shoulder stacking.",
+    "focus": "Shoulder stability, core endurance, and upper-body control.",
+    "benefits": "Strengthens the arms, shoulders, and abdominals while reinforcing a long spine.",
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the knees on the mat and perform the movement from a modified plank if full arm support is too intense.",
+      "Reduce the range of motion and keep the elbows closer to the rib cage to protect the shoulders."
+    ],
+    "progressions": [
+      "Move to a full mat push-up with slower lowering and lifting once shoulder stability improves.",
+      "Add a controlled leg lift or alternating arm reach for a greater core challenge."
+    ]
+  },
+  {
     "id": "footwork",
     "name": "Footwork",
     "shortDescription": "Reformer leg pressing sequence that builds coordinated leg strength and alignment through the carriage.",
@@ -329,6 +363,40 @@
     "progressions": [
       "Lift the top arm higher and deepen the side bend once the base is stable.",
       "Add a gentle twist toward the ceiling while keeping the spine long."
+    ]
+  },
+  {
+    "id": "push_up_chair",
+    "name": "Push Up on Chair",
+    "shortDescription": "Chair exercise that builds upper-body strength and balance with controlled shoulder loading.",
+    "focus": "Shoulder stability and arm strength.",
+    "benefits": "Improves upper body strength and proprioception in a compact chair setting.",
+    "category": "Chair",
+    "level": "Intermediate",
+    "modifications": [
+      "Use a lower spring tension or keep the hands on a stable surface if the chair feels unstable.",
+      "Limit range of motion and keep the elbows soft to protect the shoulders."
+    ],
+    "progressions": [
+      "Increase the load gradually by pressing more fully through the arms with a steady torso.",
+      "Add a small leg lift or abdominal reach once shoulder control is secure."
+    ]
+  },
+  {
+    "id": "teaser_chair",
+    "name": "Teaser on Chair",
+    "shortDescription": "Chair-based teaser variation that challenges core control and balance with a seated lift.",
+    "focus": "Core strength and balance.",
+    "benefits": "Strengthens the abdominals while reinforcing pelvic stability and coordination. ",
+    "category": "Chair",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the knees bent and lift only as far as comfortable.",
+      "Use the hands on the chair for extra balance while building core support."
+    ],
+    "progressions": [
+      "Extend the legs further and lengthen the spine as abdominal control improves.",
+      "Work toward a full teaser shape with a slow, supported lowering phase." 
     ]
   },
   {
@@ -399,6 +467,91 @@
     ]
   },
   {
+    "id": "coordination",
+    "name": "Coordination",
+    "shortDescription": "A flowing Reformer sequence that combines footwork, arm coordination, and breathing for smooth carriage control.",
+    "focus": "Timing, core support, and breath coordination.",
+    "benefits": "Improves fluidity on the carriage while reinforcing stable alignment and respiration.",
+    "category": "Reformer",
+    "level": "Intermediate",
+    "modifications": [
+      "Use a lighter spring and smaller arm movements if rhythm is difficult.",
+      "Pause between each leg and arm transition to maintain a stable torso."
+    ],
+    "progressions": [
+      "Gradually deepen each leg extension and arm movement while keeping the carriage smooth.",
+      "Add a slower inhalation/exhalation rhythm to accentuate control."
+    ]
+  },
+  {
+    "id": "tendon_stretch",
+    "name": "Tendon Stretch",
+    "shortDescription": "Reformer exercise balancing an inverted foot position with shoulder stability and leg strength.",
+    "focus": "Leg tendon stretch and shoulder support.",
+    "benefits": "Builds balance, hamstring length, and coordinated upper body control.",
+    "category": "Reformer",
+    "level": "Advanced",
+    "modifications": [
+      "Keep the legs lower and the hips stable if the hamstrings feel tight.",
+      "Use lighter springs and a smaller ankle range to keep the shoulders supported."
+    ],
+    "progressions": [
+      "Work toward a fuller ankle stretch with a steady spine and controlled shoulder position.",
+      "Lengthen the hold once balance and comfort improve."
+    ]
+  },
+  {
+    "id": "long_spine_massage",
+    "name": "Long Spine Massage",
+    "shortDescription": "Reformer spinal articulation flow that lifts the hips and elongates the spine while the feet move in a circular path.",
+    "focus": "Spinal mobilization and hip control.",
+    "benefits": "Enhances back flexibility and promotes smooth articulation of the pelvis and spine.",
+    "category": "Reformer",
+    "level": "Advanced",
+    "modifications": [
+      "Keep the legs lower and less inverted if the hamstrings or back feel sensitive.",
+      "Move slowly through the circle and maintain steady breathing."
+    ],
+    "progressions": [
+      "Increase the circle height once spinal control is secure.",
+      "Add a gentle hip lift articulation with each breath for deeper mobilization."
+    ]
+  },
+  {
+    "id": "stomach_massage_round_back",
+    "name": "Stomach Massage (Round Back)",
+    "shortDescription": "Classic Reformer series that strengthens the core and improves carriage control with a rounded spine.",
+    "focus": "Core stability and articulated spine control.",
+    "benefits": "Develops abdominal support, breath coordination, and smooth leg carriage movement.",
+    "category": "Reformer",
+    "level": "Intermediate",
+    "modifications": [
+      "Use lighter springs and keep a short range of motion if the abdominals feel sensitive.",
+      "Slow the leg movements and focus on ribcage stabilization through the entire sequence."
+    ],
+    "progressions": [
+      "Increase the range of movement and work toward a longer carriage cycle with controlled breath.",
+      "Hold the legs slightly higher or use a lower tension spring for a deeper challenge."
+    ]
+  },
+  {
+    "id": "stomach_massage_flat_back",
+    "name": "Stomach Massage (Flat Back)",
+    "shortDescription": "Reformer variation emphasizing a flat back for abdominal strength and pelvic stability.",
+    "focus": "Core endurance and neutral spine support.",
+    "benefits": "Builds strength in the deep abdominals while promoting a stable, supported torso. ",
+    "category": "Reformer",
+    "level": "Intermediate",
+    "modifications": [
+      "Shorten the range of motion and keep the head relaxed to avoid neck strain.",
+      "Use a softer spring setting and pause at each leg change to reinforce stability."
+    ],
+    "progressions": [
+      "Increase the carriage range and coordinate with breathing for smoother transitions.",
+      "Try longer leg extensions once the lower abs feel secure and supported."
+    ]
+  },
+  {
     "id": "roll_down_bar",
     "name": "Roll Down Bar",
     "shortDescription": "Cadillac exercise that focuses on spinal articulation while moving the torso over the bar in a controlled roll-down.",
@@ -416,9 +569,43 @@
     ]
   },
   {
+    "id": "arm_springs",
+    "name": "Arm Springs",
+    "shortDescription": "Cadillac upper-body sequence using springs to build shoulder mobility and control.",
+    "focus": "Shoulder strength and scapular stability.",
+    "benefits": "Improves controlled arm movement and upper-body coordination through spring resistance.",
+    "category": "Cadillac",
+    "level": "Intermediate",
+    "modifications": [
+      "Use lighter springs and keep the elbows slightly bent to reduce strain.",
+      "Work with smaller arm arcs until the shoulders feel stable."
+    ],
+    "progressions": [
+      "Increase the range of motion and add slower transitions for more shoulder control.",
+      "Experiment with higher spring tension once the movement feels secure." 
+    ]
+  },
+  {
+    "id": "leg_springs",
+    "name": "Leg Springs",
+    "shortDescription": "Cadillac leg spring series that strengthens the legs while maintaining pelvic stability.",
+    "focus": "Hip stability and leg strength.",
+    "benefits": "Builds coordinated lower-body control with spring resistance and stable pelvis alignment.",
+    "category": "Cadillac",
+    "level": "Intermediate",
+    "modifications": [
+      "Use lighter spring tension and keep the movement slow if the hips feel sensitive.",
+      "Keep the legs in a smaller range of motion and keep the spine supported." 
+    ],
+    "progressions": [
+      "Increase the spring tension gradually as control improves.",
+      "Try longer leg circles or lifts with a steady pelvis." 
+    ]
+  },
+  {
     "id": "pilates_ring_squeeze",
     "name": "Pilates Ring Squeeze",
-    "shortDescription": "Prop-based inner thigh and upper body exercise using the magic circle to create controlled resistance.",
+    "shortDescription": "Prop-based inner thigh and upper body exercise using the circle to create controlled resistance.",
     "focus": "Inner thigh strength and upper body stability.",
     "benefits": "Adds accessible resistance for improved muscle engagement and precision.",
     "category": "Props",
@@ -430,6 +617,40 @@
     "progressions": [
       "Increase the squeeze resistance as control improves.",
       "Combine the ring squeeze with longer arm movements for an added challenge."
+    ]
+  },
+  {
+    "id": "ball_roll",
+    "name": "Ball Roll",
+    "shortDescription": "Supine ball exercise that massages the spine and challenges balance while strengthening the core.",
+    "focus": "Core stability and spinal articulation.",
+    "benefits": "Enhances proprioception, coordination, and controlled movement with a small Pilates ball.",
+    "category": "Props",
+    "level": "Intermediate",
+    "modifications": [
+      "Use a smaller ball and keep the legs closer to the body for greater support.",
+      "Move more slowly through each roll to maintain stability."
+    ],
+    "progressions": [
+      "Roll with longer legs or a larger ball once control improves.",
+      "Add a small pause at the top of each roll to engage the deep core." 
+    ]
+  },
+  {
+    "id": "band_arm_series",
+    "name": "Resistance Band Arm Series",
+    "shortDescription": "Standing or seated band sequence that strengthens the arms and shoulders with portable resistance.",
+    "focus": "Upper body strength and scapular stability.",
+    "benefits": "Improves shoulder control and arm endurance using easy-to-use prop resistance.",
+    "category": "Props",
+    "level": "All",
+    "modifications": [
+      "Use lighter band tension and keep the movements small if the shoulders are sensitive.",
+      "Perform the series seated for extra stability."
+    ],
+    "progressions": [
+      "Increase band tension or add longer reaches as control improves.",
+      "Combine the band series with core bracing for a full-body challenge." 
     ]
   }
 ]

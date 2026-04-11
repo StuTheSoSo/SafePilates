@@ -39,7 +39,16 @@
     "shortDescription": "Controlled inversion and spine mobility exercise that opens the back line and stretches the hamstrings.",
     "focus": "Back extension and hamstring release.",
     "benefits": "Enhances back flexibility and helps stretch the posterior chain.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the legs bent and move with a smaller range of motion to protect the hamstrings and lower back.",
+      "Use the arms to support the motion and roll only as far as the shoulders allow."
+    ],
+    "progressions": [
+      "Straighten the legs more gradually as hamstring flexibility improves.",
+      "Lower the legs more slowly toward vertical while keeping the spine controlled."
+    ]
   },
   {
     "id": "rolling_like_a_ball",
@@ -47,7 +56,16 @@
     "shortDescription": "Rounded rolling movement that massages the spine, challenges balance, and coordinates breath with motion.",
     "focus": "Spinal massage and balance control.",
     "benefits": "Develops balance, spine mobility, and circular movement control.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the feet on the mat or hold the shins instead of the ankles to reduce strain.",
+      "Use a smaller rocking range and focus on maintaining a rounded spine."
+    ],
+    "progressions": [
+      "Increase balance challenge by rocking with a slightly smaller base of support.",
+      "Add a small pause at the top of the rock before rolling back."
+    ]
   },
   {
     "id": "spine_stretch_forward",
@@ -55,7 +73,16 @@
     "shortDescription": "Seated forward stretch with dynamic spinal flexion and hamstring length, emphasizing posture and ribcage control.",
     "focus": "Posterior chain length and posture.",
     "benefits": "Promotes spinal flexion with hamstring length and posture awareness.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Sit on a small block or cushion to ease hamstring stretch.",
+      "Bend the knees slightly and reach only as far as the spine can stay long."
+    ],
+    "progressions": [
+      "Extend the legs further and reach the arms farther past the feet.",
+      "Hold the longer position with a steady breath and a strong core."
+    ]
   },
   {
     "id": "roll_down",
@@ -80,7 +107,16 @@
     "shortDescription": "Classic V-shape lift demanding core precision, hip flexor coordination, and a long, supported spine.",
     "focus": "Core strength and control.",
     "benefits": "Strengthens the full core and challenges coordination in a balanced lift.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Practice with bent knees and support the thighs with the hands.",
+      "Lift only as high as the lower back can stay long and stable."
+    ],
+    "progressions": [
+      "Straighten the legs and lower the arms overhead with control.",
+      "Hold the top position for a longer count while maintaining breath."
+    ]
   },
   {
     "id": "saw",
@@ -88,7 +124,16 @@
     "shortDescription": "Seated rotation with spinal flexion that stretches the hamstrings and obliques while maintaining a stable pelvis.",
     "focus": "Oblique rotation and hamstring mobility.",
     "benefits": "Improves rotational mobility and encourages a long, stable spine.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Reduce the twist range and keep the spine long rather than collapsing.",
+      "Shorten the leg separation if the hamstrings feel too tight."
+    ],
+    "progressions": [
+      "Reach farther past the feet and deepen the rotation with a stable torso.",
+      "Increase the reach while keeping the ribs lifted over the hips."
+    ]
   },
   {
     "id": "corkscrew",
@@ -96,7 +141,16 @@
     "shortDescription": "Supine hip circle exercise for lower abdominal control and gentle spinal articulation through rotation.",
     "focus": "Lower abdominal strength and rotation.",
     "benefits": "Targets lower abdominal support and gentle hip mobility.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Advanced",
+    "modifications": [
+      "Keep the legs higher and use smaller circles to protect the lower back.",
+      "Keep the shoulders grounded and move slowly with control."
+    ],
+    "progressions": [
+      "Lengthen the descent of the legs and increase the circle size gradually.",
+      "Slow the motion and focus on steady torso stabilization through each rotation."
+    ]
   },
   {
     "id": "jackknife",
@@ -104,7 +158,16 @@
     "shortDescription": "Advanced bridge-to-inversion that articulates the spine and hips while challenging control and shoulder stability.",
     "focus": "Spine articulation and shoulder stability.",
     "benefits": "Builds control through inverted spine articulation and hip lift.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Advanced",
+    "modifications": [
+      "Use bridge prep and lift the hips only as high as comfortable.",
+      "Keep the knees slightly bent and avoid straining the lower back."
+    ],
+    "progressions": [
+      "Work toward a higher hip lift and a fuller roll onto the shoulders.",
+      "Slowly lower back down with control rather than dropping through the spine."
+    ]
   },
   {
     "id": "neck_pull",
@@ -112,7 +175,16 @@
     "shortDescription": "Torso lift from supine using abdominal strength to articulate the spine while maintaining neck length.",
     "focus": "Abdominal coordination and spine mobility.",
     "benefits": "Supports core-driven upper spinal articulation without neck strain.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the hands behind the head and avoid pulling on the neck.",
+      "Maintain a small chin tuck and only lift as far as the abdominals can support."
+    ],
+    "progressions": [
+      "Lower the legs closer to the mat while keeping the spine articulated.",
+      "Extend the arms overhead as core control improves."
+    ]
   },
   {
     "id": "spine_twist",
@@ -120,7 +192,16 @@
     "shortDescription": "Seated rotational mobility movement that maintains pelvic stability while opening the torso and shoulders.",
     "focus": "Spinal rotation and torso flexibility.",
     "benefits": "Increases seated spine rotation while maintaining pelvic stability.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Bend the knees and shorten the leg separation to reduce torque.",
+      "Keep the hips stable and rotate only as far as the spine stays tall."
+    ],
+    "progressions": [
+      "Extend the legs farther and deepen the twist while keeping the ribs lifted.",
+      "Look over the leading shoulder to lengthen through the spine and neck."
+    ]
   },
   {
     "id": "side_bend",
@@ -128,7 +209,16 @@
     "shortDescription": "Lateral flexion exercise that stretches the side body and strengthens the obliques with a long torso line.",
     "focus": "Side-body length and oblique engagement.",
     "benefits": "Lengthens the side body and strengthens lateral core support.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the bottom elbow slightly bent and use a smaller side-bend arc.",
+      "Avoid collapsing into the lower ribs by keeping the side body long."
+    ],
+    "progressions": [
+      "Lift higher through the top arm and deepen the side stretch safely.",
+      "Extend the legs more fully while maintaining a strong base on the mat."
+    ]
   },
   {
     "id": "boomerang",
@@ -136,7 +226,16 @@
     "shortDescription": "Dynamic rolling balance combining twist, hip lift and coordination in a flowing V-sit shape.",
     "focus": "Balance, coordination, and full-body integration.",
     "benefits": "Boosts coordination, balance, and dynamic postural control.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Advanced",
+    "modifications": [
+      "Practice teaser and roll-up prep first, and keep the rotation smaller.",
+      "Move slowly through the transition and keep the legs closer together."
+    ],
+    "progressions": [
+      "Increase the leg switch speed while maintaining control.",
+      "Deepen the roll-through portion with a longer balanced hold."
+    ]
   },
   {
     "id": "swan_dive",
@@ -144,7 +243,16 @@
     "shortDescription": "Prone extension that lifts the chest and legs with fluid spine movement and length through the back.",
     "focus": "Back extension and posterior chain strengthening.",
     "benefits": "Strengthens the back line and encourages fluid extension.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the chest lower and lift only as high as the back can support.",
+      "Keep the knees soft and avoid overarching the lower spine."
+    ],
+    "progressions": [
+      "Lift higher and extend the spine more fully in the glide.",
+      "Lengthen the arms forward and maintain a strong shoulder line."
+    ]
   },
   {
     "id": "swimming",
@@ -152,7 +260,16 @@
     "shortDescription": "Prone alternate arm and leg lifts that tone the posterior chain and encourage coordinated breath.",
     "focus": "Back extensors and shoulder stability.",
     "benefits": "Tones the posterior chain and improves breath-synchronized movement.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Alternate arm and leg lifts rather than lifting all limbs at once.",
+      "Keep the head down if neck mobility is sensitive."
+    ],
+    "progressions": [
+      "Lift both arms and legs higher while maintaining a long spine.",
+      "Increase the speed slightly while keeping the movement smooth and rhythmic."
+    ]
   },
   {
     "id": "shoulder_bridge",
@@ -160,7 +277,16 @@
     "shortDescription": "Pelvic articulation exercise that mobilizes the spine and engages the hamstrings from a supported shoulder base.",
     "focus": "Spinal articulation and glute activation.",
     "benefits": "Mobilizes the spine and activates glutes with controlled lifting.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the hips lower and use hands for support if needed.",
+      "Widen the feet and soften the lift to reduce strain on the spine."
+    ],
+    "progressions": [
+      "Lift higher into the bridge with stronger hamstring engagement.",
+      "Add single-leg bridge work once the basic bridge feels stable."
+    ]
   },
   {
     "id": "leg_pull_front",
@@ -168,7 +294,16 @@
     "shortDescription": "Plank-based leg lift that strengthens the core, glutes and shoulders while promoting full-body alignment.",
     "focus": "Core power and shoulder stability.",
     "benefits": "Challenges full-body alignment and shoulder-core integration.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Drop the knees to the mat and shorten the plank position.",
+      "Keep the hips level and avoid letting the lower back sag."
+    ],
+    "progressions": [
+      "Work toward a full straight-leg plank with a longer hold.",
+      "Lift one leg higher while maintaining shoulder stability and neutral spine."
+    ]
   },
   {
     "id": "leg_pull_back",
@@ -176,7 +311,16 @@
     "shortDescription": "Prone leg lift movement that trains lower back support, glute control and stable shoulder placement.",
     "focus": "Posterior chain control and extension.",
     "benefits": "Reinforces lower back support and glute engagement in prone extension.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the knees bent or start on the elbows to reduce load.",
+      "Use smaller leg lifts and keep the core engaged to avoid arching."
+    ],
+    "progressions": [
+      "Progress to full straight legs with a stable pelvis.",
+      "Hold the lifted position longer while maintaining even breathing."
+    ]
   },
   {
     "id": "side_kick_series",
@@ -184,7 +328,16 @@
     "shortDescription": "Side-lying leg sequence focusing on hip stability, precise control, and long supporting posture.",
     "focus": "Hip stability and leg control.",
     "benefits": "Sharpens hip stability and precise leg control in side-lying work.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the kicks smaller and support the head with the upper hand.",
+      "Slow the tempo to focus on controlled hip alignment."
+    ],
+    "progressions": [
+      "Increase leg height and lengthen the range of motion.",
+      "Add a slight pulse at the top of each kick with a stable torso."
+    ]
   },
   {
     "id": "seal",
@@ -192,7 +345,16 @@
     "shortDescription": "Playful rounded rolling exercise that combines balance, breath, and spinal rounding with rhythmic clapping.",
     "focus": "Spine articulation and balance.",
     "benefits": "Builds coordination and spine articulation through playful rolling.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the feet closer together and use smaller rocks.",
+      "Limit the clap depth and avoid bouncing too aggressively."
+    ],
+    "progressions": [
+      "Rock with a slightly larger base of support and longer hold between rocks.",
+      "Increase the circle size while keeping the spine rounded and shoulders relaxed."
+    ]
   },
   {
     "id": "crab",
@@ -200,7 +362,16 @@
     "shortDescription": "Supine roll with legs overhead that challenges spinal articulation, shoulder support, and breath rhythm.",
     "focus": "Core strength and spinal mobility.",
     "benefits": "Enhances spinal mobility with shoulder stability in a rolling balance.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Make the leg circles smaller and keep the shoulders grounded.",
+      "Move slowly and avoid lifting the hip too high."
+    ],
+    "progressions": [
+      "Perform larger leg circles with more control through the hip joint.",
+      "Extend the leg longer while maintaining a stable upper body."
+    ]
   },
   {
     "id": "control_balance",
@@ -208,7 +379,16 @@
     "shortDescription": "Advanced inversion that tests balance, hip control, and maintaining a long spine in a lifted position.",
     "focus": "Balance and lower back control.",
     "benefits": "Tests balance and lower back strength in a lifted inversion.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Advanced",
+    "modifications": [
+      "Keep one leg lower and use the hands lightly for balance if needed.",
+      "Avoid forcing the inverted position and focus on core stability."
+    ],
+    "progressions": [
+      "Straighten both legs more fully with a controlled lift.",
+      "Hold the position longer while maintaining length through the spine."
+    ]
   },
   {
     "id": "scissors",
@@ -216,7 +396,16 @@
     "shortDescription": "Supine alternating leg stretch that opens the hamstrings while preserving a stable trunk and pelvis.",
     "focus": "Hamstring stretch and core stability.",
     "benefits": "Strengthens abdominal support while deepening hamstring stretch.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the head down and bend the lower knee slightly.",
+      "Use a smaller leg separation to reduce hamstring strain."
+    ],
+    "progressions": [
+      "Straighten both legs more and lower the bottom leg closer to the mat.",
+      "Increase the rhythmic coordination with a stronger abdominal draw-in."
+    ]
   },
   {
     "id": "bicycle",
@@ -224,7 +413,16 @@
     "shortDescription": "Alternating supine leg cycling that strengthens the core and promotes controlled spinal stability.",
     "focus": "Core endurance and hip mobility.",
     "benefits": "Develops core endurance and controlled lower-body rotation.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the lower leg higher and move more slowly for better control.",
+      "Soften the neck and avoid lifting the head excessively."
+    ],
+    "progressions": [
+      "Increase the range of motion and keep the breath steady.",
+      "Circle the arms and legs with more coordination and a longer spine."
+    ]
   },
   {
     "id": "one_leg_circle",
@@ -232,7 +430,16 @@
     "shortDescription": "Single-leg hip circle from supine that develops pelvic stability and hip joint mobility.",
     "focus": "Hip mobility and pelvic stability.",
     "benefits": "Improves hip mobility while maintaining a stable torso and pelvis.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Bend the supporting knee slightly and use smaller circles.",
+      "Focus on stabilizing the hips rather than the size of the leg circle."
+    ],
+    "progressions": [
+      "Perform larger circles with a longer supporting leg.",
+      "Keep the standing hip stable while the moving leg circles."
+    ]
   },
   {
     "id": "single_leg_stretch",
@@ -240,7 +447,16 @@
     "shortDescription": "Alternating knee draw-ins that coordinate breath with abdominal engagement and hip stability.",
     "focus": "Core coordination and hip flexor control.",
     "benefits": "Builds coordination between breath, core, and leg movement.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the head down and work one leg at a time with smaller range.",
+      "Shorten the leg extension to maintain lower back stability."
+    ],
+    "progressions": [
+      "Extend the legs farther and increase coordination with breath.",
+      "Move more smoothly between legs with a stronger core hold."
+    ]
   },
   {
     "id": "double_leg_stretch",
@@ -248,7 +464,16 @@
     "shortDescription": "Full-body extension requiring precise timing, core support, and smooth breath coordination.",
     "focus": "Whole-body coordination and abdominal support.",
     "benefits": "Encourages full-body length and coordinated abdominal support.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the head down and use a smaller arm and leg circle.",
+      "Limit the range of motion if the lower back feels unstable."
+    ],
+    "progressions": [
+      "Extend the arms overhead and lower the legs deeper with control.",
+      "Widen the circle as strength improves while maintaining coordination."
+    ]
   },
   {
     "id": "open_leg_rocker",
@@ -256,7 +481,16 @@
     "shortDescription": "Rolling balance exercise with open legs that challenges core control, spine articulation, and lengthening.",
     "focus": "Core balance and spinal articulation.",
     "benefits": "Tests balance, core strength, and spine articulation in rolling.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Advanced",
+    "modifications": [
+      "Use a smaller rocking range and practice teaser prep first.",
+      "Keep the legs closer together and maintain a stable spine."
+    ],
+    "progressions": [
+      "Increase the rocking height and balance with a longer hold at the top.",
+      "Lengthen the legs and deepen the spine articulation through the motion."
+    ]
   },
   {
     "id": "hip_circles",
@@ -264,7 +498,16 @@
     "shortDescription": "Controlled hip rotation movement that mobilizes the pelvis while engaging the core for stability.",
     "focus": "Hip mobility and core support.",
     "benefits": "Mobilizes the hips while reinforcing core stability.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Use smaller leg swings and keep the hips stable.",
+      "Support the head with the upper hand if needed."
+    ],
+    "progressions": [
+      "Increase circle size while keeping the torso still.",
+      "Keep the spine long and avoid leaning into the supporting side."
+    ]
   },
   {
     "id": "one_leg_kick",
@@ -272,7 +515,16 @@
     "shortDescription": "Prone leg kick series that strengthens the hamstrings and chest while keeping the spine long and shoulders grounded.",
     "focus": "Posterior chain strength and shoulder stability.",
     "benefits": "Strengthens hamstrings and shoulders in a controlled prone position.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the knees wider and use smaller kick pulses.",
+      "Support the head lightly with the top hand to reduce neck strain."
+    ],
+    "progressions": [
+      "Straighten the moving leg more and increase the kick range.",
+      "Speed up the rhythm slightly while maintaining control."
+    ]
   },
   {
     "id": "double_leg_kick",
@@ -280,7 +532,16 @@
     "shortDescription": "Prone chest lift with leg kicks, blending spinal extension with shoulder stability and rhythmic breath.",
     "focus": "Back extension and coordination.",
     "benefits": "Combines back extension with upper-body stability and rhythm.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the head down and use smaller lifts and kicks.",
+      "Soften the arch and focus on engaging the upper back."
+    ],
+    "progressions": [
+      "Lift higher and kick stronger with a longer spinal extension.",
+      "Lengthen the arms and keep the shoulder blades wide."
+    ]
   },
   {
     "id": "knee_stretch",
@@ -288,7 +549,16 @@
     "shortDescription": "Kneeling knee circles that enhance pelvic stability, leg control, and mindful abdominal engagement.",
     "focus": "Pelvic stability and leg coordination.",
     "benefits": "Fortifies pelvic stability and smooth leg coordination in kneeling.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Tuck the knees more and keep the hands on the bar for support.",
+      "Reduce the depth of the round-back motion to stay comfortable."
+    ],
+    "progressions": [
+      "Increase the round-back range and deepen the motion.",
+      "Add a longer hold at the end of the stretch to build stability."
+    ]
   },
   {
     "id": "pelvic_curl",
@@ -296,7 +566,16 @@
     "shortDescription": "Articulated bridge movement that mobilizes the spine, activates the glutes, and lengthens the back body.",
     "focus": "Spinal articulation and glute activation.",
     "benefits": "Articulates the spine while activating glutes and posterior chain.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Beginner",
+    "modifications": [
+      "Lift only partway and keep the motion small and controlled.",
+      "Use the arms and feet for support if the lower back feels tight."
+    ],
+    "progressions": [
+      "Roll through the spine more fully and lift higher into bridge.",
+      "Hold the top position longer with a stronger hamstring engagement."
+    ]
   },
   {
     "id": "breaststroke",
@@ -304,7 +583,16 @@
     "shortDescription": "Prone arm and leg extension performed with gentle torso lift and steady breath rhythm.",
     "focus": "Posterior chain extension and breath flow.",
     "benefits": "Gentle extension that connects breath with posterior chain flow.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the head down and use a smaller leg and arm reach.",
+      "Avoid overarching the lower back by keeping the core engaged."
+    ],
+    "progressions": [
+      "Deepen the arch and lengthen the glide between movements.",
+      "Strengthen the leg press and keep the shoulder line stable."
+    ]
   },
   {
     "id": "push_up",
@@ -346,7 +634,16 @@
     "shortDescription": "Reformer forward fold with hip hinge that mobilizes the hamstrings and challenges core control.",
     "focus": "Hamstring stretch and core stabilization.",
     "benefits": "Enhances spinal length and shoulder stability while strengthening the posterior chain.",
-    "category": "Reformer"
+    "category": "Reformer",
+    "level": "Beginner",
+    "modifications": [
+      "Shorten the stride and keep the knees soft to reduce hamstring tension.",
+      "Keep the shoulders relaxed and avoid pressing the hips too high."
+    ],
+    "progressions": [
+      "Lengthen the spine and lower the heels closer to the carriage.",
+      "Increase the stretch while maintaining a strong abdominal support."
+    ]
   },
   {
     "id": "mermaid",
@@ -396,7 +693,7 @@
     ],
     "progressions": [
       "Extend the legs further and lengthen the spine as abdominal control improves.",
-      "Work toward a full teaser shape with a slow, supported lowering phase." 
+      "Work toward a full teaser shape with a slow, supported lowering phase."
     ]
   },
   {
@@ -405,7 +702,16 @@
     "shortDescription": "Cadillac exercise that presses the body over the bar, strengthening the back and postural stability.",
     "focus": "Back extension and shoulder strength.",
     "benefits": "Builds spinal articulation and controlled upper-body power.",
-    "category": "Cadillac"
+    "category": "Cadillac",
+    "level": "Intermediate",
+    "modifications": [
+      "Use lighter springs and a smaller hinge range on the Cadillac.",
+      "Keep the movement slow and controlled through the spine."
+    ],
+    "progressions": [
+      "Deepen the hinge and extend the shoulder line more fully.",
+      "Add a longer hold in the upper position with a steady breath."
+    ]
   },
   {
     "id": "magic_circle_press",
@@ -413,7 +719,16 @@
     "shortDescription": "Mat-based prop exercise that challenges inner thigh and upper body engagement using the circle.",
     "focus": "Inner thigh strength and upper body compression.",
     "benefits": "Improves muscle tone and precision through added resistance.",
-    "category": "Props"
+    "category": "Props",
+    "level": "Beginner",
+    "modifications": [
+      "Hold the circle lower and squeeze gently with less resistance.",
+      "Use a smaller range of motion for the arms to keep the shoulders soft."
+    ],
+    "progressions": [
+      "Lift the circle higher and lengthen the press with stronger control.",
+      "Slow the pulse and hold the squeeze for a longer count."
+    ]
   },
   {
     "id": "short_spine_massage",
@@ -582,7 +897,7 @@
     ],
     "progressions": [
       "Increase the range of motion and add slower transitions for more shoulder control.",
-      "Experiment with higher spring tension once the movement feels secure." 
+      "Experiment with higher spring tension once the movement feels secure."
     ]
   },
   {
@@ -595,11 +910,11 @@
     "level": "Intermediate",
     "modifications": [
       "Use lighter spring tension and keep the movement slow if the hips feel sensitive.",
-      "Keep the legs in a smaller range of motion and keep the spine supported." 
+      "Keep the legs in a smaller range of motion and keep the spine supported."
     ],
     "progressions": [
       "Increase the spring tension gradually as control improves.",
-      "Try longer leg circles or lifts with a steady pelvis." 
+      "Try longer leg circles or lifts with a steady pelvis."
     ]
   },
   {
@@ -633,7 +948,7 @@
     ],
     "progressions": [
       "Roll with longer legs or a larger ball once control improves.",
-      "Add a small pause at the top of each roll to engage the deep core." 
+      "Add a small pause at the top of each roll to engage the deep core."
     ]
   },
   {
@@ -650,7 +965,7 @@
     ],
     "progressions": [
       "Increase band tension or add longer reaches as control improves.",
-      "Combine the band series with core bracing for a full-body challenge." 
+      "Combine the band series with core bracing for a full-body challenge."
     ]
   }
 ]

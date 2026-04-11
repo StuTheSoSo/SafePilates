@@ -12,15 +12,32 @@
     <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</strong>
   </div>
 
+  <ion-card *ngIf="selectedConditionLabels.length" class="summary-card">
+    <ion-card-header>
+      <ion-card-title>Selected concerns</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ selectedConditionLabels.join(', ') }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="selectedConditionHints.length" class="hint-card">
+    <ion-card-header>
+      <ion-card-title>Quick Safety Tips</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="none">
+        <ion-item *ngFor="let hint of selectedConditionHints">
+          <ion-label>{{ hint }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
   <ng-container *ngIf="guidance; else justAi">
     <ng-container *ngIf="hasResults; else justAi">
       <ion-list>
         <ion-item-group *ngFor="let condition of guidance.conditionResults">
-          <ion-item-divider color="light">
-            <ion-label>
-              <h2>{{ condition.conditionLabel }}</h2>
-            </ion-label>
-          </ion-item-divider>
           <ion-item>
             <ion-label>
               <p class="why-text"><strong>Why?</strong> {{ condition.conditionDescription }}</p>
@@ -31,7 +48,7 @@
           </ion-item>
           <ion-item *ngFor="let contraindication of condition.contraindications">
             <ion-label>
-              <h3>{{ contraindication.exerciseId | titlecase }}</h3>
+              <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
               <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
               <p><strong>Safer focus:</strong> {{ contraindication.alternative }}</p>
             </ion-label>

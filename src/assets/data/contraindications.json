@@ -99,6 +99,31 @@
     {"exerciseId":"jackknife","reason":"Inversion and sudden balance challenge may worsen vertigo.","alternative":"Stay on the mat with supported bridge progressions and slow movement."},
     {"exerciseId":"control_balance","reason":"Advanced inversions and balancing can provoke lightheadedness.","alternative":"Focus on floor-based core stability and steady breath."}
   ],
+  "postpartum": [
+    {"exerciseId":"roll_up","reason":"Loaded spinal flexion and abdominal lifting can stress a recovering postpartum core.","alternative":"Use supported pelvic tilts and gentle seated core reconnection work."},
+    {"exerciseId":"teaser","reason":"Full V-style lifting can overload the healing linea alba and pelvic floor.","alternative":"Practice supported seated core lifts with bent knees and gentle breath."},
+    {"exerciseId":"double_leg_stretch","reason":"Strong abdominal extension and reach may overpressure a recovering midline.","alternative":"Choose heel slides and single-leg supports with minimal abdominal strain."}
+  ],
+  "balance_issues": [
+    {"exerciseId":"control_balance","reason":"Advanced balance work increases fall risk and instability.","alternative":"Focus on grounded floor-based stability and slow core control."},
+    {"exerciseId":"jackknife","reason":"Inversion and high balance demand can be too challenging for unstable clients.","alternative":"Use supported bridge progressions and low-level hip lifts."},
+    {"exerciseId":"roll_over","reason":"Legs overhead inversion can challenge balance and spatial orientation.","alternative":"Choose seated or supine core mobility without inversion."}
+  ],
+  "joint_replacement": [
+    {"exerciseId":"footwork","reason":"Reformer leg pressing can place too much load on a replaced knee or hip.","alternative":"Use lighter springs, smaller range of motion, or seated leg support."},
+    {"exerciseId":"knee_stretch","reason":"Loaded knee flexion and hip movement can strain a replaced joint.","alternative":"Choose supported knee lifts with minimal range and controlled alignment."},
+    {"exerciseId":"one_leg_circle","reason":"Large hip circles may aggravate a replaced hip joint.","alternative":"Use smaller supported leg circles or isometric hip stability work."}
+  ],
+  "foot_ankle_issues": [
+    {"exerciseId":"footwork","reason":"Reformer footbar work places repeated load through the ankles and forefoot.","alternative":"Use lighter resistance and keep the feet flat with minimal plantarflexion."},
+    {"exerciseId":"elephant","reason":"Weight-bearing through the feet and ankles can aggravate sensitive joints.","alternative":"Choose seated or supported hamstring stretches without heavy foot load."},
+    {"exerciseId":"bicycle","reason":"Rapid lower-leg movement and pointed foot positions can irritate ankle or foot pain.","alternative":"Use slower supine leg circles with a neutral foot position."}
+  ],
+  "chronic_fatigue": [
+    {"exerciseId":"the_hundred","reason":"High-repetition breath and core work can worsen fatigue if pacing is too aggressive.","alternative":"Use shorter sets, gentler breath work, and allow rest breaks."},
+    {"exerciseId":"swimming","reason":"Sustained prone arm and leg lifts can be too demanding for low-energy clients.","alternative":"Choose single-limb lifts with frequent recovery pauses."},
+    {"exerciseId":"leg_pull_front","reason":"Extended plank-based leg lifts may overtax a fatigued body.","alternative":"Use supported quadruped or supine core exercises with less sustained load."}
+  ],
   "diabetes": [
     {"exerciseId":"footwork","reason":"High-resistance leg work can be challenging if circulation or neuropathy is present.","alternative":"Use lighter springs and focus on smooth, controlled carriage movement."},
     {"exerciseId":"leg_pull_back","reason":"Prolonged prone effort may fatigue the shoulders and legs quickly.","alternative":"Choose shorter duration posterior chain work with frequent rest."},

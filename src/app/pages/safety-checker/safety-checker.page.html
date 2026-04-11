@@ -19,10 +19,18 @@
       <p>Tap the concerns that apply to you. Selected items are highlighted in strong color so you can review them at a glance.</p>
     </div>
 
-    <div class="status-row" *ngIf="!loading && !hasNoConditions">
-      <div>{{ selectedCount }} concern{{ selectedCount === 1 ? '' : 's' }} selected</div>
-      <ion-button fill="clear" size="small" (click)="clearSelection()" [disabled]="selectedCount === 0">Clear</ion-button>
+    <div class="action-block">
+      <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
+        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+        <span *ngIf="!loading">Get Guidance</span>
+      </ion-button>
+
+      <div class="status-row" *ngIf="!loading && !hasNoConditions">
+        <div>{{ selectedCount }} concern{{ selectedCount === 1 ? '' : 's' }} selected</div>
+        <ion-button fill="clear" size="small" (click)="clearSelection()" [disabled]="selectedCount === 0">Clear</ion-button>
+      </div>
     </div>
+
   </div>
 
   <ion-spinner *ngIf="loading" name="crescent" class="loading-spinner"></ion-spinner>
@@ -65,9 +73,4 @@
   <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
     Please describe your concern so the AI can provide useful guidance.
   </ion-note>
-
-  <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
-    <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
-    <span *ngIf="!loading">Get Guidance</span>
-  </ion-button>
 </ion-content>

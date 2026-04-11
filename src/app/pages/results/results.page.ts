@@ -34,6 +34,30 @@ export class ResultsPage implements OnInit {
     return !!this.guidance?.conditionResults.length;
   }
 
+  conditionHints: Record<string, string> = {
+    pregnancy: 'Pregnancy guidance varies by trimester. Select your trimester to get the most relevant modifications.',
+    postpartum: 'Postpartum work should start gently and rebuild pelvic floor and core support with low-load, slow movement.',
+    balance_issues: 'Choose grounded movement and avoid unsupported balance challenges until strength improves.',
+    joint_replacement: 'Use low-impact, controlled exercises and avoid high joint loads around replaced hips, knees, or shoulders.',
+    foot_ankle_issues: 'Reduce foot loading, keep the feet supported, and avoid forced plantarflexion or unstable ankle positions.',
+    chronic_fatigue: 'Keep sessions short, use frequent rest, and avoid pushing through excessive fatigue.'
+  };
+
+  get selectedConditionLabels() {
+    return this.guidance?.conditionResults?.map(result => result.conditionLabel) ?? [];
+  }
+
+  get selectedConditionHints() {
+    const conditionIds = this.guidance?.conditionResults?.map(result => result.conditionId) ?? [];
+    return Array.from(new Set(conditionIds.map(id => this.conditionHints[id]).filter(Boolean)));
+  }
+
+  formatExerciseLabel(exerciseId: string): string {
+    return exerciseId
+      .replace(/_/g, ' ')
+      .replace(/\b\w/g, char => char.toUpperCase());
+  }
+
   viewAgain() {
     this.router.navigate(['/safety-checker']);
   }

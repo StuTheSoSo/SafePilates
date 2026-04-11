@@ -81,6 +81,31 @@
     "description": "Use steady movement, monitor intensity, and avoid prolonged strain during blood sugar fluctuation."
   },
   {
+    "id": "postpartum",
+    "label": "Postpartum / Postnatal Recovery",
+    "description": "Focus on gentle core reconnection, pelvic floor recovery, and progressive return to load."
+  },
+  {
+    "id": "balance_issues",
+    "label": "Balance / Fall Risk",
+    "description": "Avoid unsupported balance challenges and progress with stable, grounded movement."
+  },
+  {
+    "id": "joint_replacement",
+    "label": "Joint Replacement (knee, hip, shoulder)",
+    "description": "Favor controlled, low-impact movement and avoid high-load joint stress around the replaced joint."
+  },
+  {
+    "id": "foot_ankle_issues",
+    "label": "Foot / Ankle Issues",
+    "description": "Avoid high-impact foot loading, excessive plantarflexion, and unsupported ankle instability."
+  },
+  {
+    "id": "chronic_fatigue",
+    "label": "Chronic Fatigue / Autoimmune Sensitivity",
+    "description": "Use gentle pacing, shorter sessions, and avoid pushing through excessive fatigue."
+  },
+  {
     "id": "other",
     "label": "Other",
     "description": "Get AI-backed guidance for a condition not listed here."

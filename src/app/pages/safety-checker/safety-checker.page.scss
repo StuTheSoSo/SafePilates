@@ -37,6 +37,11 @@
   line-height: 1.6;
 }
 
+.action-block {
+  display: grid;
+  gap: 0.75rem;
+}
+
 .status-row {
   display: flex;
   justify-content: space-between;
@@ -108,6 +113,23 @@ ion-item {
 
 ion-button {
   margin-top: 1.5rem;
+}
+
+.hint-card {
+  margin-top: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--sp-border);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.hint-card ion-item {
+  padding: 0.75rem 0;
+}
+
+.hint-card ion-label {
+  color: var(--sp-ink-2);
+  font-size: 0.96rem;
 }
 
 .disclaimer-card {

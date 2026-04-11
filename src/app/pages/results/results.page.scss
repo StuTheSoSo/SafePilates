@@ -22,6 +22,37 @@ ion-item-divider {
   font-weight: 700;
 }
 
+.summary-card {
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--sp-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.summary-card ion-card-content p {
+  margin: 0;
+  color: var(--sp-ink-2);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
+.hint-card {
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--sp-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.hint-card ion-card-content p,
+.hint-card ion-label {
+  margin: 0;
+  color: var(--sp-ink-2);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
 .why-text {
   margin: 0;
   color: var(--sp-brand-ink);

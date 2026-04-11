@@ -21,14 +21,29 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="selectedConditionHints.length" class="hint-card">
+  <ion-card *ngIf="conditionOverview" class="overview-card">
     <ion-card-header>
-      <ion-card-title>Quick Safety Tips</ion-card-title>
+      <ion-card-title>Condition summary</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ conditionOverview }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card *ngIf="hasResults" class="hint-card">
+    <ion-card-header>
+      <ion-card-title>What to do first</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-list lines="none">
-        <ion-item *ngFor="let hint of selectedConditionHints">
-          <ion-label>{{ hint }}</ion-label>
+        <ion-item>
+          <ion-label>Start with breath, neutral spine, and pelvic support before adding load.</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Choose slow, supported movement instead of end-range flexion or rotation.</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Rest when needed and avoid pushing through discomfort.</ion-label>
         </ion-item>
       </ion-list>
     </ion-card-content>
@@ -36,25 +51,31 @@
 
   <ng-container *ngIf="guidance; else justAi">
     <ng-container *ngIf="hasResults; else justAi">
-      <ion-list>
-        <ion-item-group *ngFor="let condition of guidance.conditionResults">
-          <ion-item>
-            <ion-label>
-              <p class="why-text"><strong>Why?</strong> {{ condition.conditionDescription }}</p>
-            </ion-label>
-          </ion-item>
-          <ion-item *ngIf="condition.contraindications.length === 0">
-            <ion-label>No local modifications found. AI fallback or professional guidance may help.</ion-label>
-          </ion-item>
-          <ion-item *ngFor="let contraindication of condition.contraindications">
-            <ion-label>
-              <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-              <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
-              <p><strong>Safer focus:</strong> {{ contraindication.alternative }}</p>
-            </ion-label>
-          </ion-item>
-        </ion-item-group>
-      </ion-list>
+      <div class="condition-list">
+        <ion-card class="condition-card" *ngFor="let condition of guidance.conditionResults">
+          <ion-card-header>
+            <ion-card-title>{{ condition.conditionLabel }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p class="why-text"><strong>Why?</strong> {{ condition.conditionDescription }}</p>
+            <div *ngIf="condition.contraindications.length > 0" class="avoid-banner">
+              These exercises are best avoided or modified when this concern applies.
+            </div>
+            <div *ngIf="condition.contraindications.length === 0" class="no-results">
+              No local modifications found. AI fallback or professional guidance may help.
+            </div>
+            <ion-list lines="none">
+              <ion-item *ngFor="let contraindication of condition.contraindications">
+                <ion-label>
+                  <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
+                  <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
+                  <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
+                </ion-label>
+              </ion-item>
+            </ion-list>
+          </ion-card-content>
+        </ion-card>
+      </div>
     </ng-container>
 
     <ion-card *ngIf="guidance.aiFallback">
@@ -65,6 +86,9 @@
         <p class="ai-text">{{ guidance.aiFallback }}</p>
       </ion-card-content>
     </ion-card>
+    <ion-note class="professional-note">
+      If symptoms persist or you are unsure, consult a qualified clinician before progressing.
+    </ion-note>
   </ng-container>
 
   <ng-template #justAi>

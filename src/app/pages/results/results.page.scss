@@ -37,6 +37,25 @@ ion-item-divider {
   line-height: 1.6;
 }
 
+.overview-card,
+.condition-card {
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1px solid var(--sp-border);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.overview-card ion-card-content p,
+.hint-card ion-card-content p,
+.hint-card ion-label,
+.condition-card ion-card-content p {
+  margin: 0;
+  color: var(--sp-ink-2);
+  font-size: 0.98rem;
+  line-height: 1.6;
+}
+
 .hint-card {
   margin-bottom: 1rem;
   border-radius: 20px;
@@ -60,6 +79,36 @@ ion-item-divider {
   font-family: 'Nunito', 'Inter', sans-serif;
   font-weight: 600;
   line-height: 1.5;
+}
+
+.avoid-banner {
+  margin: 1rem 0 0.75rem;
+  padding: 0.9rem 1rem;
+  border-radius: 16px;
+  background: rgba(255, 229, 230, 0.95);
+  border: 1px solid rgba(255, 157, 134, 0.35);
+  color: var(--ion-color-danger);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.no-results {
+  margin: 0.75rem 0;
+  padding: 0.85rem 0.75rem;
+  background: rgba(188, 152, 255, 0.1);
+  border-radius: 14px;
+  color: var(--ion-color-primary);
+  font-weight: 600;
+}
+
+.professional-note {
+  margin: 1rem 0 0;
+  padding: 1rem;
+  border-radius: 18px;
+  background: rgba(235, 230, 255, 0.9);
+  border: 1px solid rgba(138, 90, 255, 0.2);
+  color: var(--ion-color-primary);
+  font-weight: 600;
 }
 
 .ai-text {

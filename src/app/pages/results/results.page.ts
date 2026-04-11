@@ -47,6 +47,15 @@ export class ResultsPage implements OnInit {
     return this.guidance?.conditionResults?.map(result => result.conditionLabel) ?? [];
   }
 
+  get conditionOverview() {
+    if (!this.guidance?.conditionResults?.length) {
+      return '';
+    }
+    return this.guidance.conditionResults
+      .map(result => `${result.conditionLabel}: ${result.conditionDescription}`)
+      .join(' ');
+  }
+
   get selectedConditionHints() {
     const conditionIds = this.guidance?.conditionResults?.map(result => result.conditionId) ?? [];
     return Array.from(new Set(conditionIds.map(id => this.conditionHints[id]).filter(Boolean)));

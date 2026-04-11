@@ -5,35 +5,35 @@
 }
 
 .disclaimer-card {
-  background: #fff6f9;
-  border: 1.5px solid #f8d7e5;
+  background: rgba(255, 255, 255, 0.96);
+  border: 1.5px solid var(--sp-border);
   border-radius: 18px;
-  box-shadow: 0 2px 8px rgba(224, 122, 154, 0.08);
+  box-shadow: 0 2px 8px var(--sp-shadow-soft);
 }
 
 .disclaimer-card strong {
   display: block;
   margin-bottom: 0.5rem;
-  color: #0f172a;
+  color: var(--sp-ink);
 }
 
 .disclaimer-card p {
   margin: 0;
   line-height: 1.5;
-  color: #334155;
+  color: var(--sp-ink-2);
 }
 
 .intro-block h2 {
   margin: 0;
   font-size: 1.35rem;
-  color: #e07a9a;
+  color: var(--ion-color-primary);
   font-family: 'Nunito', 'Inter', sans-serif;
   font-weight: 800;
 }
 
 .intro-block p {
   margin: 0.5rem 0 0;
-  color: #475569;
+  color: var(--sp-ink-3);
   line-height: 1.6;
 }
 
@@ -42,10 +42,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.85rem 1rem;
-  background: #ffe6f0;
+  background: var(--sp-chip-start);
   border-radius: 16px;
-  border: 1.5px solid #f8d7e5;
-  color: #a14a6a;
+  border: 1.5px solid var(--sp-border);
+  color: var(--sp-brand-ink);
   font-weight: 600;
 }
 
@@ -72,13 +72,13 @@
 
 
 .condition-chip.selected {
-  background: linear-gradient(90deg, #e07a9a 60%, #b39ddb 100%) !important;
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
   color: #fff !important;
-  border-color: #b39ddb !important;
-  --background: #e07a9a !important;
+  border-color: var(--ion-color-tertiary) !important;
+  --background: var(--ion-color-primary) !important;
   --color: #fff !important;
-  --border-color: #b39ddb !important;
-  box-shadow: 0 14px 32px rgba(224, 122, 154, 0.18);
+  --border-color: var(--ion-color-tertiary) !important;
+  box-shadow: 0 14px 32px var(--sp-selected-shadow);
   font-weight: 700;
 }
 .condition-chip.selected ion-label,
@@ -86,11 +86,11 @@
   color: #fff !important;
 }
 .condition-chip:not(.selected) {
-  background: #fff6f9 !important;
-  --background: #fff6f9 !important;
-  --color: #a14a6a !important;
-  --border-color: #f8d7e5 !important;
-  color: #a14a6a !important;
+  background: rgba(255, 255, 255, 0.92) !important;
+  --background: rgba(255, 255, 255, 0.92) !important;
+  --color: var(--sp-brand-ink) !important;
+  --border-color: var(--sp-border) !important;
+  color: var(--sp-brand-ink) !important;
 }
 
 .loading-spinner {

@@ -1,11 +1,12 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
-import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult } from '../models';
+import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult, Program } from '../models';
 import { environment } from '../../environments/environment';
 import safetyConditionsData from '../../assets/data/safety-conditions.json' with { type: 'json' };
 import exercisesData from '../../assets/data/exercises.json' with { type: 'json' };
 import contraindicationsData from '../../assets/data/contraindications.json' with { type: 'json' };
+import programsData from '../../assets/data/programs.json' with { type: 'json' };
 
 type AiProvider = 'none' | 'local';
 
@@ -15,6 +16,7 @@ export class SafetyService {
   private conditions: Condition[] = [];
   private exercises: Exercise[] = [];
   private contraindications: Record<string, Contraindication[]> = {};
+  private programs: Program[] = [];
   private dataLoaded = false;
   private latestQuery: SafetyQuery | null = null;
   private latestGuidance: GuidanceResult | null = null;
@@ -50,6 +52,18 @@ export class SafetyService {
       console.warn('Safety data load failed, using bundled fallback data', error);
     }
 
+    this.programs = programsData as Program[];
+    try {
+      const programs = await firstValueFrom(this.http.get<Program[]>('/assets/data/programs.json'));
+      if (programs?.length) {
+        this.programs = programs;
+      }
+    } catch {
+      // Keep bundled programs if asset loading fails.
+    }
+
+    this.dataLoaded = true;
+
     this.dataLoaded = true;
   }
 
@@ -71,6 +85,14 @@ export class SafetyService {
 
   getGuidance(): GuidanceResult | null {
     return this.latestGuidance;
+  }
+
+  getPrograms(): Program[] {
+    return this.programs;
+  }
+
+  getProgramById(id: string): Program | undefined {
+    return this.programs.find(program => program.id === id);
   }
 
   async fetchGuidance(query: SafetyQuery): Promise<GuidanceResult> {

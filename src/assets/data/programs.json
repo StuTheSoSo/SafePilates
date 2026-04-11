@@ -1,0 +1,38 @@
+[
+  {
+    "id": "beginner_mat_foundation",
+    "name": "Beginner Mat Foundation",
+    "description": "A gentle introductory Pilates session focused on core support, spinal articulation, and breath coordination.",
+    "level": "Beginner",
+    "goal": "Build stable core and mat movement confidence.",
+    "focusAreas": ["Core", "Spinal articulation", "Breath"],
+    "exerciseIds": ["the_hundred", "roll_up", "spine_stretch_forward", "pelvic_curl", "shoulder_bridge"]
+  },
+  {
+    "id": "prenatal_mobility_flow",
+    "name": "Prenatal Mobility Flow",
+    "description": "A pregnancy-safe Pilates flow that supports the changing body with gentle spinal mobility and lateral openness.",
+    "level": "Beginner",
+    "goal": "Maintain mobility and core support during pregnancy.",
+    "focusAreas": ["Prenatal", "Mobility", "Pelvic stability"],
+    "exerciseIds": ["mermaid", "shoulder_bridge", "pelvic_curl", "leg_pull_back", "spine_stretch_forward"]
+  },
+  {
+    "id": "back_friendly_recovery",
+    "name": "Back-Friendly Recovery",
+    "description": "A low-impact session designed to support the low back with neutral spine strength, gentle articulation, and pelvic control.",
+    "level": "Intermediate",
+    "goal": "Improve back stability and reduce compressive stress.",
+    "focusAreas": ["Low back", "Neutral spine", "Core stability"],
+    "exerciseIds": ["pelvic_curl", "shoulder_bridge", "rolling_like_a_ball", "spine_stretch_forward", "side_kick_series"]
+  },
+  {
+    "id": "reformer_strength_flow",
+    "name": "Reformer Strength Flow",
+    "description": "An apparatus-based routine that develops lower-body control, carriage coordination, and spinal support.",
+    "level": "Intermediate",
+    "goal": "Build Reformer strength and control.",
+    "focusAreas": ["Reformer", "Leg strength", "Spinal support"],
+    "exerciseIds": ["footwork", "elephant", "long_box_series", "short_spine_massage"]
+  }
+]

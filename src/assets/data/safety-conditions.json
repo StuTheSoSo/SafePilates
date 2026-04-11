@@ -46,6 +46,26 @@
     "description": "Respect pain-free range and avoid heavy loading or extreme end-range motions."
   },
   {
+    "id": "scoliosis",
+    "label": "Scoliosis / Spinal Asymmetry",
+    "description": "Favor asymmetry-aware posture, avoid aggressive twisting, and prioritize balanced spinal support."
+  },
+  {
+    "id": "pelvic_floor_dysfunction",
+    "label": "Pelvic Floor Dysfunction",
+    "description": "Focus on pelvic floor-friendly stability and avoid strong Valsalva or uncontrolled abdominal loading."
+  },
+  {
+    "id": "vertigo_dizziness",
+    "label": "Vertigo / Dizziness",
+    "description": "Avoid rapid head movement, inversions, and unsupported balance work that may trigger dizziness."
+  },
+  {
+    "id": "diabetes",
+    "label": "Diabetes / Metabolic Concerns",
+    "description": "Use steady movement, monitor intensity, and avoid prolonged strain during blood sugar fluctuation."
+  },
+  {
     "id": "other",
     "label": "Other",
     "description": "Get AI-backed guidance for a condition not listed here."

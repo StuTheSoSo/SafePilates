@@ -5,7 +5,16 @@
     "shortDescription": "A breath-driven warm-up that engages the abdominals while pumping the arms and stabilizing the ribcage.",
     "focus": "Core endurance and breathing coordination.",
     "benefits": "Improves lung capacity and steady core support through intentional breath pacing.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the head on the mat and legs lower to reduce cervical strain and core load.",
+      "Perform single-leg pumps or supported heel taps if full leg extension is too intense."
+    ],
+    "progressions": [
+      "Extend the legs higher while keeping the pelvis stable.",
+      "Increase arm speed slightly once breath coordination is steady."
+    ]
   },
   {
     "id": "roll_up",
@@ -13,7 +22,16 @@
     "shortDescription": "Sequential spinal articulation from supine to seated that builds core strength while lengthening the back.",
     "focus": "Spinal articulation and abdominal mobility.",
     "benefits": "Builds deep abdominal control while teaching safe spinal articulation.",
-    "category": "Mat"
+    "category": "Mat",
+    "level": "Intermediate",
+    "modifications": [
+      "Bend the knees and use the arms to support the spine during the roll-up.",
+      "Start with a tabletop prep variation if hamstring flexibility is limited."
+    ],
+    "progressions": [
+      "Perform with straight legs and less use of the arms.",
+      "Lift the arms overhead to increase the challenge once the spine is stable."
+    ]
   },
   {
     "id": "roll_over",
@@ -277,7 +295,16 @@
     "shortDescription": "Reformer leg pressing sequence that builds coordinated leg strength and alignment through the carriage.",
     "focus": "Reformer leg strength and alignment.",
     "benefits": "Improves lower-body coordination, knee tracking, and pelvic stability.",
-    "category": "Reformer"
+    "category": "Reformer",
+    "level": "Beginner",
+    "modifications": [
+      "Use lighter springs or a smaller range of motion to reduce knee strain.",
+      "Keep the heels down and focus on smooth pelvic stability throughout the press."
+    ],
+    "progressions": [
+      "Increase spring tension gradually as alignment and control improve.",
+      "Explore single-leg variations on the carriage after the basic series feels stable."
+    ]
   },
   {
     "id": "elephant",
@@ -293,7 +320,16 @@
     "shortDescription": "Side-body stretch on the chair that opens the ribcage and improves lateral mobility.",
     "focus": "Side-body stretch and thoracic mobility.",
     "benefits": "Increases flexibility in the waistline and creates more freedom in the upper body.",
-    "category": "Chair"
+    "category": "Chair",
+    "level": "Intermediate",
+    "modifications": [
+      "Keep the pelvis stable and work with a smaller reach if the ribcage or low back is sensitive.",
+      "Use the hand on the chair for support to avoid collapsing into the side body."
+    ],
+    "progressions": [
+      "Lift the top arm higher and deepen the side bend once the base is stable.",
+      "Add a gentle twist toward the ceiling while keeping the spine long."
+    ]
   },
   {
     "id": "push_through",
@@ -317,6 +353,83 @@
     "shortDescription": "Reformer spinal articulation with leg circles that decompresses the spine and stretches the hamstrings.",
     "focus": "Spinal mobilization and hamstring length.",
     "benefits": "Encourages deep spinal flexion and improves overall carriage control.",
-    "category": "Reformer"
+    "category": "Reformer",
+    "level": "Advanced",
+    "modifications": [
+      "Keep the legs lower and move slowly through the circle while maintaining breath.",
+      "Stop before full inversion if the shoulders or low back feel compromised."
+    ],
+    "progressions": [
+      "Use a slightly larger leg circle once spinal control is strong.",
+      "Add small pulsing movements for deeper pelvic articulation."
+    ]
+  },
+  {
+    "id": "knee_stretch_series",
+    "name": "Knee Stretch Series",
+    "shortDescription": "Reformer series performed in kneeling position that improves pelvic stability and leg alignment.",
+    "focus": "Pelvic stability and posterior chain control.",
+    "benefits": "Strengthens the core, glutes, and leg stabilizers in a controlled kneeling posture.",
+    "category": "Reformer",
+    "level": "Intermediate",
+    "modifications": [
+      "Use a softer spring setting to reduce hip and knee pressure.",
+      "Keep the hips square and limit the range of motion if the knees feel irritated."
+    ],
+    "progressions": [
+      "Increase the carriage range gradually while keeping the trunk stable.",
+      "Move into the back extension variation on the same springs for added challenge."
+    ]
+  },
+  {
+    "id": "long_box_series",
+    "name": "Long Box Series",
+    "shortDescription": "Reformer flow on the long box that targets upper body strength and back extension with carriage coordination.",
+    "focus": "Upper body strength and spinal support.",
+    "benefits": "Builds back extensors, shoulder stability, and proprioception on the carriage.",
+    "category": "Reformer",
+    "level": "Intermediate",
+    "modifications": [
+      "Use lighter springs and keep the head in line with the spine during reach.",
+      "Perform smaller range of motion on the arm exercises if the shoulders are sensitive."
+    ],
+    "progressions": [
+      "Add longer arms or leg lifts once the back support is comfortable.",
+      "Increase the spring tension slightly to develop more strength through the carriage."
+    ]
+  },
+  {
+    "id": "roll_down_bar",
+    "name": "Roll Down Bar",
+    "shortDescription": "Cadillac exercise that focuses on spinal articulation while moving the torso over the bar in a controlled roll-down.",
+    "focus": "Spinal articulation and shoulder stability.",
+    "benefits": "Improves deep core control and encourages smooth spinal mobility.",
+    "category": "Cadillac",
+    "level": "Intermediate",
+    "modifications": [
+      "Start with a smaller range and keep the shoulders relaxed away from the ears.",
+      "Use a softer spring or lighter resistance if the upper back feels tight."
+    ],
+    "progressions": [
+      "Increase the roll-down depth with a slower cadence.",
+      "Add arm reach variations while maintaining spinal length and control."
+    ]
+  },
+  {
+    "id": "pilates_ring_squeeze",
+    "name": "Pilates Ring Squeeze",
+    "shortDescription": "Prop-based inner thigh and upper body exercise using the magic circle to create controlled resistance.",
+    "focus": "Inner thigh strength and upper body stability.",
+    "benefits": "Adds accessible resistance for improved muscle engagement and precision.",
+    "category": "Props",
+    "level": "All",
+    "modifications": [
+      "Use a lighter squeeze and focus on keeping the pelvis stable.",
+      "Hold the ring lightly if wrist or shoulder tension is present."
+    ],
+    "progressions": [
+      "Increase the squeeze resistance as control improves.",
+      "Combine the ring squeeze with longer arm movements for an added challenge."
+    ]
   }
 ]

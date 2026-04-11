@@ -64,5 +64,26 @@
     {"exerciseId":"seal","reason":"Rolling can feel harsh on arthritic spine or hips.","alternative":"Use supported core strengthening without dynamic rolling."},
     {"exerciseId":"footwork","reason":"Reformer leg press work can aggravate arthritic knee or hip joints without careful load management.","alternative":"Use lighter resistance and focus on small controlled range."},
     {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression may be uncomfortable for arthritic joints.","alternative":"Choose gentle spine mobilization without large range or inversion."}
+  ],
+  "scoliosis": [
+    {"exerciseId":"roll_up","reason":"Large spinal flexion can accentuate the curve if not controlled.","alternative":"Use supported roll-downs with a neutral pelvis and asymmetry awareness."},
+    {"exerciseId":"saw","reason":"Rotation through the spine may create uneven loading in a curved spine.","alternative":"Do gentle seated side stretches with equal attention to both sides."},
+    {"exerciseId":"side_bend","reason":"Deep asymmetric side flexion can strain a scoliotic curve.","alternative":"Work with small side bends and keep the ribs long."}
+  ],
+  "pelvic_floor_dysfunction": [
+    {"exerciseId":"the_hundred","reason":"Strong abdominal pumping and breath coordination may increase pelvic floor pressure.","alternative":"Keep the head supported and focus on gentle pelvic floor engagement."},
+    {"exerciseId":"single_leg_stretch","reason":"Repeated hip flexion and lower abdominal engagement can irritate a weak pelvic floor.","alternative":"Perform supported knee folds or modified marching with neutral pelvis."},
+    {"exerciseId":"teaser","reason":"Full sit-up movement loads the pelvic floor and linea alba.","alternative":"Use supported seated core work and avoid full V position."}
+  ],
+  "vertigo_dizziness": [
+    {"exerciseId":"roll_over","reason":"Inversion can trigger dizziness and disorientation.","alternative":"Choose gentle supine pelvic tilts or seated mobility instead."},
+    {"exerciseId":"corkscrew","reason":"Rapid spinal rotation with legs overhead can disrupt balance.","alternative":"Use slow hip circles with the head supported and eyes fixed."},
+    {"exerciseId":"jackknife","reason":"Inversion and sudden balance challenge may worsen vertigo.","alternative":"Stay on the mat with supported bridge progressions and slow movement."},
+    {"exerciseId":"control_balance","reason":"Advanced inversions and balancing can provoke lightheadedness.","alternative":"Focus on floor-based core stability and steady breath."}
+  ],
+  "diabetes": [
+    {"exerciseId":"footwork","reason":"High-resistance leg work can be challenging if circulation or neuropathy is present.","alternative":"Use lighter springs and focus on smooth, controlled carriage movement."},
+    {"exerciseId":"leg_pull_back","reason":"Prolonged prone effort may fatigue the shoulders and legs quickly.","alternative":"Choose shorter duration posterior chain work with frequent rest."},
+    {"exerciseId":"bicycle","reason":"Rapid alternating lower body movement can be uncomfortable if sensation is reduced.","alternative":"Use slower leg rhythms and keep the pelvis stable."}
   ]
 }

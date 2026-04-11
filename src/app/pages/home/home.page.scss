@@ -1,15 +1,15 @@
 .hero-card {
-  background: linear-gradient(135deg, #fff6f9 60%, #ffd6c1 100%);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
   border-radius: 28px;
   padding: 1.7rem 1.5rem 1.5rem 1.5rem;
-  box-shadow: 0 8px 32px rgba(224, 122, 154, 0.10);
-  border: 1.5px solid #f8d7e5;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
 }
 
 .hero-card h1 {
   margin-bottom: 0.75rem;
   font-size: 2.1rem;
-  color: #e07a9a;
+  color: var(--ion-color-primary);
   font-family: 'Nunito', 'Inter', sans-serif;
   font-weight: 800;
   letter-spacing: -0.01em;
@@ -17,7 +17,7 @@
 
 .hero-card p {
   margin-bottom: 1.25rem;
-  color: #a14a6a;
+  color: var(--sp-brand-ink);
   font-size: 1.08rem;
   font-weight: 500;
 }
@@ -35,27 +35,27 @@
   font-size: 1.01rem;
   font-family: 'Nunito', 'Inter', sans-serif;
   font-weight: 700;
-  background: linear-gradient(90deg, #ffe6f0 60%, #b39ddb 100%);
-  color: #a14a6a;
+  background: linear-gradient(90deg, var(--sp-chip-start) 60%, var(--sp-chip-end) 100%);
+  color: var(--sp-brand-ink);
   border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(224, 122, 154, 0.08);
-  border: 1.5px solid #f8d7e5;
+  box-shadow: 0 2px 8px var(--sp-shadow-soft);
+  border: 1.5px solid var(--sp-border);
   transition: background 0.2s, color 0.2s;
 }
 
 .category-row ion-chip.selected {
-  --background: #e07a9a;
+  --background: var(--ion-color-primary);
   --color: #fff;
-  --border-color: #b39ddb;
-  background: linear-gradient(90deg, #e07a9a 60%, #b39ddb 100%) !important;
+  --border-color: var(--ion-color-tertiary);
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
   color: #fff !important;
-  border: 1.5px solid #b39ddb;
+  border: 1.5px solid var(--ion-color-tertiary);
 }
 
 .exercise-focus,
 .exercise-category {
   margin: 0.75rem 0 0;
-  color: #a14a6a;
+  color: var(--sp-brand-ink);
   font-size: 1.01rem;
   font-weight: 600;
   font-family: 'Nunito', 'Inter', sans-serif;

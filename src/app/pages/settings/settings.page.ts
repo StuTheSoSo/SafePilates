@@ -17,13 +17,12 @@ interface ThemeOption {
 })
 export class SettingsPage {
   themeOptions: ThemeOption[] = [
-    { label: 'Blush (default)', value: 'theme-blush' },
-    { label: 'Lavender', value: 'theme-lavender' },
-    { label: 'Teal', value: 'theme-teal' },
-    { label: 'Sky Blue', value: 'theme-sky' },
-    { label: 'Soft Slate', value: 'theme-slate' },
+    { label: 'Rose (feminine)', value: 'theme-rose' },
+    { label: 'Lilac (feminine)', value: 'theme-lilac' },
+    { label: 'Ocean (subtle)', value: 'theme-ocean' },
+    { label: 'Sage (subtle)', value: 'theme-sage' },
   ];
-  selectedTheme = localStorage.getItem('safepilates-theme') || 'theme-blush';
+  selectedTheme = this.normalizeTheme(localStorage.getItem('safepilates-theme')) || 'theme-rose';
 
   constructor() {
     this.applyTheme(this.selectedTheme);
@@ -34,6 +33,25 @@ export class SettingsPage {
     this.selectedTheme = theme;
     this.applyTheme(theme);
     localStorage.setItem('safepilates-theme', theme);
+  }
+
+  private normalizeTheme(value: string | null): string | null {
+    if (!value) {
+      return null;
+    }
+
+    // Migrate legacy theme names.
+    const legacyMap: Record<string, string> = {
+      'theme-blush': 'theme-rose',
+      'theme-lavender': 'theme-lilac',
+      'theme-sky': 'theme-ocean',
+      'theme-teal': 'theme-sage',
+      'theme-slate': 'theme-sage'
+    };
+    const mapped = legacyMap[value] || value;
+
+    const allowed = new Set(this.themeOptions.map(t => t.value));
+    return allowed.has(mapped) ? mapped : null;
   }
 
   applyTheme(theme: string) {

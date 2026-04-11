@@ -12,6 +12,9 @@ export interface Exercise {
   focus: string;
   benefits?: string;
   category: string;
+  level?: 'Beginner' | 'Intermediate' | 'Advanced' | string;
+  modifications?: string[];
+  progressions?: string[];
 }
 
 export interface Contraindication {
@@ -25,6 +28,16 @@ export interface ConditionResult {
   conditionLabel: string;
   conditionDescription: string;
   contraindications: Contraindication[];
+}
+
+export interface Program {
+  id: string;
+  name: string;
+  description: string;
+  level: 'Beginner' | 'Intermediate' | 'Advanced' | 'All' | string;
+  goal: string;
+  focusAreas: string[];
+  exerciseIds: string[];
 }
 
 export interface SafetyQuery {

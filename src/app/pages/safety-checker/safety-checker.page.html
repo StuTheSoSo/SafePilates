@@ -73,4 +73,11 @@
   <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
     Please describe your concern so the AI can provide useful guidance.
   </ion-note>
+
+  <div class="action-block bottom-action">
+    <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
+      <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+      <span *ngIf="!loading">Get Guidance</span>
+    </ion-button>
+  </div>
 </ion-content>

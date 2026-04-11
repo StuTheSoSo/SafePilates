@@ -12,7 +12,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class AppComponent {
   private router = inject(Router);
-  private readonly themeStorageKey = 'safepilates-theme';
+  private readonly themeStorageKey = 'pilatesafe-theme';
   private readonly defaultTheme = 'theme-rose';
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
 

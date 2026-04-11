@@ -1,6 +1,6 @@
 {
-  "name": "SafePilates",
-  "short_name": "SafePilates",
+  "name": "PilateSafe",
+  "short_name": "PilateSafe",
   "description": "Safety-first Pilates guidance for people with health concerns.",
   "display": "standalone",
   "start_url": "/",
@@ -17,6 +17,11 @@
       "src": "assets/icon/icon-512.png",
       "sizes": "512x512",
       "type": "image/png"
+    },
+    {
+      "src": "assets/icon/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml"
     }
   ]
 }

@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen class="ion-padding">
+<ion-content fullscreen class="ion-padding results-content">
   <div class="disclaimer-card ion-padding">
     <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</strong>
   </div>
@@ -65,13 +65,15 @@
               No local modifications found. AI fallback or professional guidance may help.
             </div>
             <ion-list lines="none">
-              <ion-item *ngFor="let contraindication of condition.contraindications">
-                <ion-label>
-                  <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-                  <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
-                  <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
-                </ion-label>
-              </ion-item>
+              <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
+                <ion-item lines="none">
+                  <ion-label>
+                    <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
+                    <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
+                    <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
+                  </ion-label>
+                </ion-item>
+              </div>
             </ion-list>
           </ion-card-content>
         </ion-card>
@@ -86,9 +88,9 @@
         <p class="ai-text">{{ guidance.aiFallback }}</p>
       </ion-card-content>
     </ion-card>
-    <ion-note class="professional-note">
+    <div class="professional-note">
       If symptoms persist or you are unsure, consult a qualified clinician before progressing.
-    </ion-note>
+    </div>
   </ng-container>
 
   <ng-template #justAi>
@@ -102,5 +104,5 @@
     </ion-card>
   </ng-template>
 
-  <ion-button expand="block" (click)="viewAgain()">Check another concern</ion-button>
+  <ion-button expand="block" class="results-action" (click)="viewAgain()">Check another concern</ion-button>
 </ion-content>

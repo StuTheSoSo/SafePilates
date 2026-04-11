@@ -46,6 +46,27 @@ ion-item-divider {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
 }
 
+.condition-card .contraindication-card {
+  margin: 0 0 0.9rem;
+  padding: 0.15rem;
+  border-radius: 18px;
+  border: 1px solid rgba(58, 134, 255, 0.15);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 8px 18px rgba(10, 30, 80, 0.04);
+}
+
+.condition-card .contraindication-card:last-child {
+  margin-bottom: 0;
+}
+
+.condition-card .contraindication-card ion-item {
+  --background: transparent;
+  --inner-padding-start: 0.75rem;
+  --inner-padding-end: 0.75rem;
+  --padding-top: 0;
+  --padding-bottom: 0;
+}
+
 .overview-card ion-card-content p,
 .hint-card ion-card-content p,
 .hint-card ion-label,
@@ -102,13 +123,28 @@ ion-item-divider {
 }
 
 .professional-note {
-  margin: 1rem 0 0;
-  padding: 1rem;
-  border-radius: 18px;
-  background: rgba(235, 230, 255, 0.9);
-  border: 1px solid rgba(138, 90, 255, 0.2);
+  display: block;
+  width: 100%;
+  margin: 1rem 0 1.5rem;
+  padding: 1rem 1.2rem;
+  border-radius: 22px;
+  background: rgba(247, 250, 248, 0.96);
+  border: 1px solid rgba(96, 147, 128, 0.18);
   color: var(--ion-color-primary);
   font-weight: 600;
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+}
+
+.results-content {
+  padding-bottom: 2.25rem;
+}
+
+.results-action {
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .ai-text {

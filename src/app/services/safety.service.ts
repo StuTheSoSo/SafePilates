@@ -87,6 +87,18 @@ export class SafetyService {
     return this.latestGuidance;
   }
 
+  setGuidance(guidance: GuidanceResult) {
+    this.latestGuidance = guidance;
+  }
+
+  setErrorGuidance(message: string) {
+    this.latestGuidance = {
+      conditionResults: [],
+      aiFallback: message,
+      aiUsed: false
+    };
+  }
+
   getPrograms(): Program[] {
     return this.programs;
   }
@@ -626,7 +638,7 @@ export class SafetyService {
       .filter(Boolean)
       .join(' ');
 
-    return `You are SafePilates Advisor, a cautious expert on Pilates safety for people with health concerns. Your role is ONLY to provide general educational guidance, not medical advice, diagnosis, or personalized prescriptions.
+    return `You are PilateSafe Advisor, a cautious expert on Pilates safety for people with health concerns. Your role is ONLY to provide general educational guidance, not medical advice, diagnosis, or personalized prescriptions.
 
 CRITICAL SAFETY RULES — NEVER BREAK THESE:
 - ALWAYS begin the response with this exact bold disclaimer on its own line:

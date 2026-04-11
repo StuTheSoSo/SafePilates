@@ -22,7 +22,7 @@ export class SettingsPage {
     { label: 'Ocean (subtle)', value: 'theme-ocean' },
     { label: 'Sage (subtle)', value: 'theme-sage' },
   ];
-  selectedTheme = this.normalizeTheme(localStorage.getItem('safepilates-theme')) || 'theme-rose';
+  selectedTheme = this.normalizeTheme(localStorage.getItem('pilatesafe-theme')) || 'theme-rose';
 
   constructor() {
     this.applyTheme(this.selectedTheme);
@@ -32,7 +32,7 @@ export class SettingsPage {
     const theme = event.detail ? event.detail.value : event;
     this.selectedTheme = theme;
     this.applyTheme(theme);
-    localStorage.setItem('safepilates-theme', theme);
+    localStorage.setItem('pilatesafe-theme', theme);
   }
 
   private normalizeTheme(value: string | null): string | null {

@@ -80,12 +80,20 @@ export class SafetyCheckerPage implements OnInit {
     }
 
     this.loading = true;
-    await this.safetyService.fetchGuidance({
-      conditionIds: this.selectedConditions,
-      pregnancyTrimester: this.selectedIds.has('pregnancy') ? this.pregnancyTrimester : undefined,
-      otherText: this.otherText.trim()
-    });
-    this.loading = false;
-    this.router.navigate(['/results']);
+    try {
+      await this.safetyService.fetchGuidance({
+        conditionIds: this.selectedConditions,
+        pregnancyTrimester: this.selectedIds.has('pregnancy') ? this.pregnancyTrimester : undefined,
+        otherText: this.otherText.trim()
+      });
+    } catch (error) {
+      console.error('Guidance request failed', error);
+      this.safetyService.setErrorGuidance(
+        'Unable to retrieve guidance right now. Please try again later or check your connection.'
+      );
+    } finally {
+      this.loading = false;
+      this.router.navigate(['/results']);
+    }
   }
 }

@@ -195,7 +195,7 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|pregnancy|postpartum|pelvic floor|pelvic|diastasis|stability|instability|impingement|bursitis|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnancy|postpartum|pelvic floor|pelvic|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
   }
 
   private localPipelinePromise: Promise<any> | null = null;
@@ -327,6 +327,48 @@ export class SafetyService {
         '- Use supports like a chair or wall for balance as needed\n' +
         '- Focus on gentle breath and core support rather than challenging equilibrium\n\n' +
         'If dizziness is new, severe, or accompanied by other symptoms, seek medical advice before exercising.'
+      );
+    }
+
+    // Respiratory / asthma / breath concerns
+    if (/(asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Breathing & Respiratory Support\n\n' +
+        'Avoid\n' +
+        '- High-intensity breath-holding movements or rapid exertion\n' +
+        '- Inversions or positions that compress the chest and ribs\n' +
+        '- Fast transitions without first checking that breathing feels calm\n\n' +
+        'Why\n' +
+        '- Respiratory concerns respond better to gentle, controlled movement and steady breath\n' +
+        '- Heavy or abrupt exertion can trigger wheezing, shortness of breath, or chest tightness\n\n' +
+        'Safer focus\n' +
+        '- Choose low-impact Pilates with smooth inhalation/exhalation patterns\n' +
+        '- Keep the chest open, the ribs soft, and avoid compressive upper-body positions\n' +
+        '- Pause, rest, and normalize breathing whenever the effort increases\n\n' +
+        'If breathing becomes difficult, wheezy, or tight, stop and seek medical guidance before continuing.'
+      );
+    }
+
+    // Foot / arch / fallen arches concerns
+    if (/(fallen arches|flat foot|flat feet|arch|plantar|heel|foot pain|metatarsal|posterior tibial|pes planus)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Foot & Arch Support\n\n' +
+        'Avoid\n' +
+        '- Unsupported standing balance and high-impact foot loading\n' +
+        '- Deep ankle squats or exercises that force excessive pronation\n' +
+        '- Long unsupported spans on the forefoot or toes\n\n' +
+        'Why\n' +
+        '- Arch support and foot alignment are essential for protecting the plantar system\n' +
+        '- Unsupported foot collapse can increase strain through the ankle, knee, and low back\n\n' +
+        'Safer focus\n' +
+        '- Use a stable base, maintain neutral foot alignment, and keep weight evenly distributed\n' +
+        '- Favor low-impact foot positions with gentle sole contact and support under the arch\n' +
+        '- Build intrinsic foot strength and ankle stability before progressing to challenging balance work\n\n' +
+        'If foot pain persists, worsens, or is accompanied by swelling, get clearance from a qualified provider before continuing.'
       );
     }
 

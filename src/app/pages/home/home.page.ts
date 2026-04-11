@@ -19,6 +19,7 @@ export class HomePage implements OnInit {
   categories: string[] = [];
   selectedCategory = 'All';
   featuredSections = [
+    { title: 'Warm-up & Cool down', category: 'Warm-up / Cool down' },
     { title: 'Classical Reformer', category: 'Reformer' },
     { title: 'Chair Essentials', category: 'Chair' }
   ];

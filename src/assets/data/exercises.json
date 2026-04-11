@@ -578,6 +578,57 @@
     ]
   },
   {
+    "id": "shoulder_rolls",
+    "name": "Shoulder Rolls",
+    "shortDescription": "Gentle circular shoulder mobility that releases tension and prepares the upper body for movement.",
+    "focus": "Shoulder mobility and upper-back release.",
+    "benefits": "Improves shoulder range of motion and reduces stiffness before Pilates practice.",
+    "category": "Warm-up / Cool down",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the circles small and slow if the neck or shoulders feel tight.",
+      "Perform the movement seated or standing with the spine long and relaxed."
+    ],
+    "progressions": [
+      "Increase the circle size gradually while maintaining a relaxed neck.",
+      "Add a gentle arm swing between rolls to mobilize the shoulder blades."
+    ]
+  },
+  {
+    "id": "spine_mobilization",
+    "name": "Spine Mobilization",
+    "shortDescription": "Slow spinal flexion and extension from a seated position to warm up the spine and awaken the core.",
+    "focus": "Spinal mobility and core activation.",
+    "benefits": "Prepares the back and torso for exercise by improving segmental movement and breath coordination.",
+    "category": "Warm-up / Cool down",
+    "level": "Beginner",
+    "modifications": [
+      "Move through a smaller range of motion and keep the breath easy.",
+      "Use a cushion under the hips if sitting tall is uncomfortable."
+    ],
+    "progressions": [
+      "Increase the depth of the flexion and extension while maintaining control.",
+      "Add a slight twist at the top of the movement for added thoracic mobility."
+    ]
+  },
+  {
+    "id": "seated_side_bend",
+    "name": "Seated Side Bend",
+    "shortDescription": "Long side-body stretch performed from a seated position to release tension and lengthen the waist.",
+    "focus": "Side-body flexibility and breathing.",
+    "benefits": "Opens the ribcage and side body while supporting gentle release after movement.",
+    "category": "Warm-up / Cool down",
+    "level": "Beginner",
+    "modifications": [
+      "Keep the bottom hand light on the floor and reach the top arm gently.",
+      "Bend the knees slightly if the hips feel tight in the seated position."
+    ],
+    "progressions": [
+      "Reach the top arm farther and lengthen through both sides of the waist.",
+      "Add a small twist toward the front leg while keeping the spine long."
+    ]
+  },
+  {
     "id": "breaststroke",
     "name": "Breaststroke",
     "shortDescription": "Prone arm and leg extension performed with gentle torso lift and steady breath rhythm.",

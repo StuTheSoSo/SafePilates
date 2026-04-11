@@ -1,32 +1,52 @@
+
 ion-card {
-  min-height: 160px;
+  min-height: 170px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(224, 122, 154, 0.10);
+  background: linear-gradient(135deg, #fff6f9 60%, #ffd6c1 100%);
+  border: 1.5px solid #f8d7e5;
 }
 
 ion-card-content {
-  color: #475569;
+  color: #a14a6a;
+  font-family: 'Nunito', 'Inter', sans-serif;
 }
 
 .category-row {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin: 1rem 0;
+  margin: 1.1rem 0 1.3rem 0;
 }
 
 .category-row ion-chip {
   cursor: pointer;
   border-width: 1.5px;
+  font-size: 1.01rem;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffe6f0 60%, #b39ddb 100%);
+  color: #a14a6a;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(224, 122, 154, 0.08);
+  border: 1.5px solid #f8d7e5;
+  transition: background 0.2s, color 0.2s;
 }
 
 .category-row ion-chip.selected {
-  --background: #3a86ff;
-  --color: #ffffff;
-  --border-color: #2669d9;
+  --background: #e07a9a;
+  --color: #fff;
+  --border-color: #b39ddb;
+  background: linear-gradient(90deg, #e07a9a 60%, #b39ddb 100%) !important;
+  color: #fff !important;
+  border: 1.5px solid #b39ddb;
 }
 
 .exercise-focus,
 .exercise-category {
   margin-top: 0.75rem;
-  color: #475569;
-  font-size: 0.95rem;
+  color: #a14a6a;
+  font-size: 1.01rem;
+  font-weight: 600;
+  font-family: 'Nunito', 'Inter', sans-serif;
 }

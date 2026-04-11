@@ -31,4 +31,21 @@
       <p>The exercise library and condition guidance are stored locally in JSON to keep the experience fast and offline-first.</p>
     </ion-card-content>
   </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Color Theme</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <div class="theme-row">
+        <ion-chip *ngFor="let theme of themeOptions"
+                  [outline]="selectedTheme !== theme.value"
+                  [color]="selectedTheme === theme.value ? 'primary' : 'secondary'"
+                  [class.selected]="selectedTheme === theme.value"
+                  (click)="onThemeChange(theme.value)">
+          <ion-label>{{ theme.label }}</ion-label>
+        </ion-chip>
+      </div>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

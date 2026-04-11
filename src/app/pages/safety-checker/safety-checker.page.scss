@@ -5,10 +5,10 @@
 }
 
 .disclaimer-card {
-  background: #ffffff;
-  border: 1px solid rgba(15, 50, 100, 0.1);
+  background: #fff6f9;
+  border: 1.5px solid #f8d7e5;
   border-radius: 18px;
-  box-shadow: 0 18px 40px rgba(15, 50, 100, 0.06);
+  box-shadow: 0 2px 8px rgba(224, 122, 154, 0.08);
 }
 
 .disclaimer-card strong {
@@ -26,7 +26,9 @@
 .intro-block h2 {
   margin: 0;
   font-size: 1.35rem;
-  color: #0f172a;
+  color: #e07a9a;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
 }
 
 .intro-block p {
@@ -40,10 +42,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.85rem 1rem;
-  background: #eef5ff;
-  border-radius: 14px;
-  border: 1px solid #dbe7ff;
-  color: #0f172a;
+  background: #ffe6f0;
+  border-radius: 16px;
+  border: 1.5px solid #f8d7e5;
+  color: #a14a6a;
+  font-weight: 600;
 }
 
 .condition-grid {
@@ -67,46 +70,27 @@
   white-space: normal;
 }
 
-.condition-chip ion-label {
-  white-space: normal;
-  line-height: 1.5;
-  word-break: break-word;
-  color: inherit;
-  font-size: 0.98rem;
-}
 
 .condition-chip.selected {
-  background: #071a35 !important;
-  color: #ffffff !important;
-  border-color: #071a35 !important;
-  --background: #071a35 !important;
-  --color: #ffffff !important;
-  --border-color: #071a35 !important;
-  box-shadow: 0 14px 32px rgba(7, 26, 53, 0.28);
+  background: linear-gradient(90deg, #e07a9a 60%, #b39ddb 100%) !important;
+  color: #fff !important;
+  border-color: #b39ddb !important;
+  --background: #e07a9a !important;
+  --color: #fff !important;
+  --border-color: #b39ddb !important;
+  box-shadow: 0 14px 32px rgba(224, 122, 154, 0.18);
   font-weight: 700;
 }
-
 .condition-chip.selected ion-label,
 .condition-chip.selected ion-icon {
-  color: #ffffff !important;
+  color: #fff !important;
 }
-
 .condition-chip:not(.selected) {
-  background: #f8fafc !important;
-  --background: #f8fafc !important;
-  --color: #334155 !important;
-  --border-color: rgba(15, 23, 42, 0.12) !important;
-  color: #334155 !important;
-}
-
-.selected-icon {
-  font-size: 1.2rem;
-  color: #ffffff;
-}
-
-.selected-icon {
-  font-size: 1.1rem;
-  color: #ffffff;
+  background: #fff6f9 !important;
+  --background: #fff6f9 !important;
+  --color: #a14a6a !important;
+  --border-color: #f8d7e5 !important;
+  color: #a14a6a !important;
 }
 
 .loading-spinner {

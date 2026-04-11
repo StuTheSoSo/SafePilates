@@ -4,39 +4,68 @@ ion-footer {
   left: 0;
   right: 0;
   z-index: 1000;
-  --background: #ffffff;
-  --border-color: rgba(15, 23, 42, 0.08);
-  box-shadow: 0 -10px 40px rgba(15, 23, 42, 0.08);
+  --background: transparent;
+  box-shadow: 0 -12px 32px rgba(24, 24, 56, 0.14);
 }
 
 ion-toolbar {
-  --min-height: 64px;
-  padding: 0.35rem 0;
-  backdrop-filter: blur(16px);
+  --min-height: 96px;
+  padding: 0.85rem 0 1rem 0;
+  backdrop-filter: blur(18px);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92) 0%, rgba(255, 255, 255, 0.80) 100%);
+  border-top: 1px solid rgba(224, 122, 154, 0.14);
 }
 
-ion-grid {
-  width: 100%;
-  padding: 0 0.25rem;
+.tab-row {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.75rem;
+  background: linear-gradient(90deg, var(--ion-color-accent) 10%, rgba(255,255,255,0.85) 100%);
+  border-radius: 32px;
+  margin: 0 0.35rem;
+  padding: 0.7rem 0.75rem;
 }
 
-ion-button {
-  --padding-start: 0.25rem;
-  --padding-end: 0.25rem;
-  --padding-top: 0.5rem;
-  --padding-bottom: 0.5rem;
-  --border-radius: 14px;
-  --background: transparent;
-  color: var(--ion-color-primary);
-  font-size: 0.88rem;
-  justify-content: flex-start;
+.tab-btn {
+  flex: 1;
+  min-height: 68px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(255,255,255,0.94) 100%);
+  border: 1px solid rgba(var(--ion-color-accent-rgb, 255, 214, 193), 0.45);
+  border-radius: 24px;
+  color: var(--ion-color-secondary);
+  padding: 0.55rem 0.35rem;
+  box-shadow: 0 8px 24px rgba(224, 122, 154, 0.10);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'Nunito', 'Inter', sans-serif;
 }
 
-ion-icon {
-  font-size: 1.2rem;
-  margin-right: 0.35rem;
+.tab-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(224, 122, 154, 0.14);
 }
 
-ion-content {
-  --background: linear-gradient(180deg, #f7f9ff 0%, #f2f4ff 100%);
+.tab-btn.selected {
+  background: linear-gradient(90deg, var(--ion-color-primary) 55%, var(--ion-color-tertiary) 100%) !important;
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 14px 34px rgba(224, 122, 154, 0.24);
+}
+
+.tab-btn ion-icon {
+  font-size: 1.45rem;
+  margin-bottom: 0.18rem;
+  color: inherit;
+}
+
+.tab-btn span {
+  font-size: 0.96rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: inherit;
 }

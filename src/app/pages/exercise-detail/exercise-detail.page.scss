@@ -1,21 +1,28 @@
 ion-card {
   min-height: 180px;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(224, 122, 154, 0.10);
+  background: linear-gradient(135deg, #fff6f9 60%, #ffd6c1 100%);
+  border: 1.5px solid #f8d7e5;
 }
 
 .exercise-category,
 .exercise-focus,
 .exercise-benefits {
   margin: 0.75rem 0 0;
-  color: #475569;
-  font-size: 0.98rem;
+  color: #a14a6a;
+  font-size: 1.01rem;
+  font-weight: 600;
+  font-family: 'Nunito', 'Inter', sans-serif;
   line-height: 1.5;
 }
 
 .exercise-benefits strong {
-  font-weight: 600;
+  font-weight: 700;
+  color: #e07a9a;
 }
 
 .placeholder {
   margin-top: 1rem;
-  color: #64748b;
+  color: #b39ddb;
 }

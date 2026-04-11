@@ -1,35 +1,13 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
   <ion-footer translucent>
-    <ion-toolbar>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-button fill="clear" expand="full" (click)="navigate('/')">
-              <ion-icon slot="start" name="home-outline"></ion-icon>
-              Home
-            </ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button fill="clear" expand="full" (click)="navigate('/safety-checker')">
-              <ion-icon slot="start" name="shield-checkmark-outline"></ion-icon>
-              Safety
-            </ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button fill="clear" expand="full" (click)="navigate('/library')">
-              <ion-icon slot="start" name="library-outline"></ion-icon>
-              Library
-            </ion-button>
-          </ion-col>
-          <ion-col>
-            <ion-button fill="clear" expand="full" (click)="navigate('/settings')">
-              <ion-icon slot="start" name="settings-outline"></ion-icon>
-              Settings
-            </ion-button>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+    <ion-toolbar class="tab-toolbar">
+      <div class="tab-row">
+        <button class="tab-btn" *ngFor="let tab of tabs" [class.selected]="currentRoute === tab.route" (click)="navigate(tab.route)">
+          <ion-icon [name]="tab.icon"></ion-icon>
+          <span>{{ tab.label }}</span>
+        </button>
+      </div>
     </ion-toolbar>
   </ion-footer>
 </ion-app>

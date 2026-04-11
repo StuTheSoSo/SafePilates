@@ -15,12 +15,17 @@ import exercisesData from '../../../assets/data/exercises.json' with { type: 'js
 })
 export class LibraryPage implements OnInit {
   exercises: Exercise[] = [];
+  allExercises: Exercise[] = [];
+  categories: string[] = [];
+  selectedCategory = 'All';
   private router = inject(Router);
-
-  constructor(private safetyService: SafetyService) {}
+  private safetyService = inject(SafetyService);
 
   async ngOnInit() {
-    this.exercises = exercisesData as Exercise[];
+    this.allExercises = exercisesData as Exercise[];
+    this.categories = this.getCategories(this.allExercises);
+    this.categories.unshift('All');
+    this.applyFilter();
     await this.loadExercises();
   }
 
@@ -32,8 +37,28 @@ export class LibraryPage implements OnInit {
     await this.safetyService.initData();
     const loaded = this.safetyService.getExercises();
     if (loaded.length) {
-      this.exercises = loaded;
+      this.allExercises = loaded;
     }
+    this.categories = this.getCategories(this.allExercises);
+    if (!this.categories.includes('All')) {
+      this.categories.unshift('All');
+    }
+    this.applyFilter();
+  }
+
+  private getCategories(exercises: Exercise[]) {
+    return Array.from(new Set(exercises.map(exercise => exercise.category ?? 'Mat'))).sort();
+  }
+
+  selectCategory(category: string) {
+    this.selectedCategory = category;
+    this.applyFilter();
+  }
+
+  private applyFilter() {
+    this.exercises = this.selectedCategory === 'All'
+      ? this.allExercises
+      : this.allExercises.filter(exercise => exercise.category === this.selectedCategory);
   }
 
   openExercise(id: string) {

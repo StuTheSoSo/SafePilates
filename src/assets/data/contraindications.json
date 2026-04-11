@@ -4,54 +4,65 @@
     {"exerciseId":"roll_over","reason":"Inversion and end-range spinal loading can compress weak bones.","alternative":"Replace with gentle pelvic tilts in supine."},
     {"exerciseId":"rolling_like_a_ball","reason":"Rounded spine rolling applies repeated flexion stress.","alternative":"Choose supported knee folds or single-leg stretches."},
     {"exerciseId":"spine_stretch_forward","reason":"Forward flexion with load increases vertebral compression risk.","alternative":"Try seated postural work with neutral spine extension."},
-    {"exerciseId":"teaser","reason":"High-load core lift in flexion and balance can strain the spine.","alternative":"Use modified supported sit-up progressions with a ball."}
+    {"exerciseId":"teaser","reason":"High-load core lift in flexion and balance can strain the spine.","alternative":"Use modified supported sit-up progressions with a ball."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and loaded spinal articulation may compress fragile vertebrae.","alternative":"Choose gentle supine leg slides or pelvic tilts with neutral spine."}
   ],
   "pregnancy": [
     {"exerciseId":"roll_up","reason":"Heavy abdominal flexion can stress the growing uterus and diastasis recti.","alternative":"Move to side-lying or supported seated core work."},
     {"exerciseId":"roll_over","reason":"Inversion and supine leg lift may be uncomfortable after mid-pregnancy.","alternative":"Use gentle pelvic floor breathing in seated or side-lying."},
     {"exerciseId":"teaser","reason":"Full sit-up style lifting and balance can overwork the linea alba.","alternative":"Focus on neutral spine posture and pelvic floor activation."},
-    {"exerciseId":"neck_pull","reason":"Supported head and torso lift from supine can strain the belly and neck.","alternative":"Use safe standing or side-lying core variations."}
+    {"exerciseId":"neck_pull","reason":"Supported head and torso lift from supine can strain the belly and neck.","alternative":"Use safe standing or side-lying core variations."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression are best avoided during pregnancy.","alternative":"Choose side-lying stretches and gentle supported hip work."}
   ],
   "low_back_pain": [
     {"exerciseId":"roll_up","reason":"Repetitive spinal flexion can aggravate a painful disc or posterior chain.","alternative":"Choose pelvic tilts and supported bridging with neutral spine."},
     {"exerciseId":"rolling_like_a_ball","reason":"Loaded rolling may flare low back symptoms.","alternative":"Use gentle seated or supine core stabilization exercises."},
     {"exerciseId":"saw","reason":"Rotation with spinal flexion can irritate a sensitive lumbar spine.","alternative":"Use hip-focused side-lying work and neutral spine rotation."},
-    {"exerciseId":"jackknife","reason":"Inversion and lumbar extension can be too intense for many back conditions.","alternative":"Use supported bridge progressions and gentle hip lifts."}
+    {"exerciseId":"jackknife","reason":"Inversion and lumbar extension can be too intense for many back conditions.","alternative":"Use supported bridge progressions and gentle hip lifts."},
+    {"exerciseId":"short_spine_massage","reason":"Spinal articulation with inversion can aggravate low back pain and neural tension.","alternative":"Use neutral pelvic stabilization exercises and gentle supine stretch work."}
   ],
   "hypertension": [
     {"exerciseId":"roll_over","reason":"Inversion may raise blood pressure and should be avoided.","alternative":"Use seated or quadruped mobility with steady breathing."},
     {"exerciseId":"jackknife","reason":"High-effort inversion can stress the cardiovascular system.","alternative":"Choose neutral spine plank holds or seated leg work."},
     {"exerciseId":"corkscrew","reason":"Breath-holding and rapid rotation may spike blood pressure.","alternative":"Use slow, controlled hip circles with relaxed breathing."},
-    {"exerciseId":"control_balance","reason":"Balance inversions can feel too intense for heart concerns.","alternative":"Stay on the mat with core stability and leg lifts."}
+    {"exerciseId":"control_balance","reason":"Balance inversions can feel too intense for heart concerns.","alternative":"Stay on the mat with core stability and leg lifts."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression can elevate blood pressure in sensitive individuals.","alternative":"Choose low-lying core stabilization and gentle standing mobility."}
   ],
   "knee_issues": [
     {"exerciseId":"shoulder_bridge","reason":"Deep hip lift can load knees and aggravate joint pain.","alternative":"Use gentle pelvic tilts and supported glute bridges."},
     {"exerciseId":"leg_pull_front","reason":"Plank-based leg lifts place pressure on the knees and hips.","alternative":"Work in quadruped with lifted legs or side-lying leg lifts."},
     {"exerciseId":"leg_pull_back","reason":"Prone leg extensions can irritate knee or hamstring tension.","alternative":"Use seated or side-lying single-leg moves with reduced range."},
-    {"exerciseId":"bicycle","reason":"Repeated knee flexion may strain arthritic joints.","alternative":"Choose static leg holds or gentle marching in supine."}
+    {"exerciseId":"bicycle","reason":"Repeated knee flexion may strain arthritic joints.","alternative":"Choose static leg holds or gentle marching in supine."},
+    {"exerciseId":"footwork","reason":"Reformer leg pressing can place continuous load through sensitive knees.","alternative":"Use seated or supported legwork with small range and lighter resistance."}
   ],
   "hip_issues": [
     {"exerciseId":"one_leg_circle","reason":"Large hip circles can aggravate painful or unstable hips.","alternative":"Use smaller leg circles or hip hinges with support."},
     {"exerciseId":"scissors","reason":"Extreme hip range in supine can irritate hip joints.","alternative":"Keep legs lower and work with smaller controlled lifts."},
     {"exerciseId":"open_leg_rocker","reason":"Wide open leg balance places strain on the hip capsule.","alternative":"Use seated adductor and abductor control work."},
-    {"exerciseId":"hip_circles","reason":"Rotational hip motion may be painful if the joint is inflamed.","alternative":"Choose gentle supported hip pumps in supine."}
+    {"exerciseId":"hip_circles","reason":"Rotational hip motion may be painful if the joint is inflamed.","alternative":"Choose gentle supported hip pumps in supine."},
+    {"exerciseId":"footwork","reason":"Repeated leg pressing can irritate sensitive hips due to loaded flexion and extension.","alternative":"Work with small range and lighter resistance, or choose supine leg slides."}
   ],
   "neck_shoulder": [
     {"exerciseId":"the_hundred","reason":"Sustained lifted head and neck can aggravate cervical tension.","alternative":"Keep the head supported while maintaining core breath."},
     {"exerciseId":"neck_pull","reason":"Unsupported head lift increases neck strain and shoulder tension.","alternative":"Use chin-tucks and gentle supported rolling in a neutral neck."},
     {"exerciseId":"teaser","reason":"Head lift with balance can load neck and shoulder stabilizers.","alternative":"Use seated supported core work and avoid full V position."},
-    {"exerciseId":"swan_dive","reason":"Prone back extension stresses the neck and upper shoulders.","alternative":"Use gentle prone lifts with hands under shoulders for support."}
+    {"exerciseId":"swan_dive","reason":"Prone back extension stresses the neck and upper shoulders.","alternative":"Use gentle prone lifts with hands under shoulders for support."},
+    {"exerciseId":"push_through","reason":"Loading the shoulders over the bar can aggravate shoulder instability or neck tension.","alternative":"Use gentle supported back extension with lower resistance."},
+    {"exerciseId":"short_spine_massage","reason":"Reformer shoulder loading under an inverted spine can stress tight neck/shoulder areas.","alternative":"Choose supported prone back extension or supine spine mobilization without inversion."}
   ],
   "recent_surgery": [
     {"exerciseId":"roll_up","reason":"Loaded spinal flexion is often too aggressive after surgery.","alternative":"Focus on gentle breathing, pelvic floor, and posture support."},
     {"exerciseId":"roll_over","reason":"Inversion and deep articulation can be unsafe during recovery.","alternative":"Choose supported movements and follow professional clearance."},
     {"exerciseId":"spine_twist","reason":"Twisting with load may stress healing tissues.","alternative":"Use neutral spine rotation from seated or standing positions."},
-    {"exerciseId":"side_bend","reason":"Lateral flexion can be uncomfortable after surgery.","alternative":"Keep movements gentle and avoid end-range bending."}
+    {"exerciseId":"side_bend","reason":"Lateral flexion can be uncomfortable after surgery.","alternative":"Keep movements gentle and avoid end-range bending."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and deep spinal articulation are usually contraindicated after recent surgery.","alternative":"Use gentle supine pelvic tilts and supported spine mobilization."}
   ],
   "arthritis": [
     {"exerciseId":"roll_up","reason":"Repetitive flexion may aggravate stiff joints.","alternative":"Use small spinal articulations and neutral core work."},
     {"exerciseId":"saw","reason":"Rotation with forward flexion can irritate arthritic joints.","alternative":"Use seated side-lying rotation with support."},
     {"exerciseId":"corkscrew","reason":"Inverted hip circles may be too intense for sensitive joints.","alternative":"Choose simple hip circles with reduced range."},
-    {"exerciseId":"seal","reason":"Rolling can feel harsh on arthritic spine or hips.","alternative":"Use supported core strengthening without dynamic rolling."}
+    {"exerciseId":"seal","reason":"Rolling can feel harsh on arthritic spine or hips.","alternative":"Use supported core strengthening without dynamic rolling."},
+    {"exerciseId":"footwork","reason":"Reformer leg press work can aggravate arthritic knee or hip joints without careful load management.","alternative":"Use lighter resistance and focus on small controlled range."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression may be uncomfortable for arthritic joints.","alternative":"Choose gentle spine mobilization without large range or inversion."}
   ]
 }

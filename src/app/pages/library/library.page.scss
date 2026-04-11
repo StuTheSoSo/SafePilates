@@ -6,6 +6,24 @@ ion-card-content {
   color: #475569;
 }
 
+.category-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.category-row ion-chip {
+  cursor: pointer;
+  border-width: 1.5px;
+}
+
+.category-row ion-chip.selected {
+  --background: #3a86ff;
+  --color: #ffffff;
+  --border-color: #2669d9;
+}
+
 .exercise-focus,
 .exercise-category {
   margin-top: 0.75rem;

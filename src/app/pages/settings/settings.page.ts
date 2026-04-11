@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 interface ThemeOption {
   label: string;
@@ -11,7 +12,7 @@ interface ThemeOption {
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule],
+  imports: [CommonModule, IonicModule, FormsModule, RouterModule],
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss']
 })

@@ -207,7 +207,7 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnancy|postpartum|pelvic floor|pelvic|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnancy|postpartum|pelvic floor|pelvic|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|obese|obesity|overweight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
   }
 
   private localPipelinePromise: Promise<any> | null = null;
@@ -421,6 +421,27 @@ export class SafetyService {
         '- Use support, lighter resistance, and slower movement quality\n' +
         '- Emphasize alignment and fluid motion over depth or speed\n\n' +
         'If the joint feels unstable, swollen, or overly painful, stop and seek professional guidance.'
+      );
+    }
+
+    // Obesity / weight-related concerns
+    if (/(obese|obesity|overweight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- High-impact jumps, running, or unsupported loading that may stress joints\n' +
+        '- Deep, forceful leg and hip positions that feel uncomfortable\n' +
+        '- Breath-holding or pushing through fatigue\n\n' +
+        'Why\n' +
+        '- Extra joint load and movement patterns can increase strain on knees, hips, and lower back\n' +
+        '- Slow, controlled Pilates supports posture and helps build strength without excessive impact\n' +
+        '- Comfortable breathing and gradual progress are especially important when weight or metabolic concerns are present\n\n' +
+        'Safer focus\n' +
+        '- Use supported, low-impact variations and keep the movements smooth and controlled\n' +
+        '- Build core stability, pelvic alignment, and hip strength before adding load\n' +
+        '- Prioritize breath, posture, and pain-free motion over repetitions or intensity\n\n' +
+        'If you have joint pain, metabolic concerns, or questions about safe exercise progressions, consult a qualified provider before continuing.'
       );
     }
 

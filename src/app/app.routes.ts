@@ -5,6 +5,8 @@ import { ResultsPage } from './pages/results/results.page';
 import { LibraryPage } from './pages/library/library.page';
 import { ExerciseDetailPage } from './pages/exercise-detail/exercise-detail.page';
 import { SettingsPage } from './pages/settings/settings.page';
+import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.page';
+import { EulaPage } from './pages/eula/eula.page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
@@ -13,5 +15,7 @@ export const routes: Routes = [
   { path: 'library', component: LibraryPage },
   { path: 'exercise/:id', component: ExerciseDetailPage },
   { path: 'settings', component: SettingsPage },
+  { path: 'privacy-policy', component: PrivacyPolicyPage },
+  { path: 'eula', component: EulaPage },
   { path: '**', redirectTo: '' }
 ];

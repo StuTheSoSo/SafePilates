@@ -62,6 +62,10 @@
     <ion-textarea [(ngModel)]="otherText" placeholder="Briefly describe the concern"></ion-textarea>
   </ion-item>
 
+  <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
+    Please describe your concern so the AI can provide useful guidance.
+  </ion-note>
+
   <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
     <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
     <span *ngIf="!loading">Get Guidance</span>

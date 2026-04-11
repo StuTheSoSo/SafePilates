@@ -63,7 +63,7 @@ export class SafetyCheckerPage implements OnInit {
   }
 
   get canSubmit() {
-    return this.selectedIds.size > 0;
+    return this.selectedIds.size > 0 && (!this.hasOther || this.otherText.trim().length > 0);
   }
 
   async submit() {
@@ -75,7 +75,7 @@ export class SafetyCheckerPage implements OnInit {
     await this.safetyService.fetchGuidance({
       conditionIds: this.selectedConditions,
       pregnancyTrimester: this.selectedIds.has('pregnancy') ? this.pregnancyTrimester : undefined,
-      otherText: this.otherText
+      otherText: this.otherText.trim()
     });
     this.loading = false;
     this.router.navigate(['/results']);

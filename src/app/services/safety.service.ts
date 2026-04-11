@@ -136,7 +136,7 @@ export class SafetyService {
       const promptText = this.buildAiPrompt(query, selectedConditions);
       const sdk = await import('@google/generative-ai');
       const client = new sdk.GoogleGenerativeAI(environment.geminiApiKey);
-      const model = client.getGenerativeModel({ model: 'models/text-bison-001' });
+      const model = client.getGenerativeModel({ model: 'models/text-bison-001' }, { apiVersion: 'v1' });
       const response = await model.generateContent({
         contents: [
           {
@@ -162,24 +162,27 @@ export class SafetyService {
   }
 
   private buildAiPrompt(query: SafetyQuery, selectedConditions: Condition[]): string {
-    const conditionNames = selectedConditions.map(c => c.label).join(', ') || 'no listed condition';
-    const otherText = query.otherText ? ` Condition details: ${query.otherText}` : '';
-    const trimester = query.pregnancyTrimester ? ` Trimester: ${query.pregnancyTrimester}.` : '';
+    const listedConditions = selectedConditions.filter(condition => condition.id !== 'other');
+    const listedNames = listedConditions.map(c => c.label).join(', ');
+    const trimmedOther = query.otherText?.trim() ?? '';
+    const otherText = trimmedOther ? `Other concern details: ${trimmedOther}.` : 'Other concern details were not provided.';
+    const trimester = query.pregnancyTrimester ? `Pregnancy trimester: ${query.pregnancyTrimester}.` : '';
+    const conditionSummary = [listedNames && `Conditions: ${listedNames}.`, trimester, trimmedOther ? otherText : '']
+      .filter(Boolean)
+      .join(' ');
 
-    return `You are SafePilates Advisor, a cautious expert on Pilates safety for people with health concerns. Your role is ONLY to provide general educational guidance on classical mat Pilates exercises that should be avoided or modified for specific conditions.
+    return `You are SafePilates Advisor, a cautious expert on Pilates safety for people with health concerns. Your role is ONLY to provide general educational guidance, not medical advice, diagnosis, or personalized prescriptions.
 
 CRITICAL SAFETY RULES — NEVER BREAK THESE:
-- ALWAYS begin your response with this exact bold disclaimer on its own line:  
+- ALWAYS begin the response with this exact bold disclaimer on its own line:
 **⚠️ IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.**
-- Never diagnose, prescribe exercises, or give personalized medical advice.
-- If the condition is acute, undiagnosed, post-surgical, or severe, strongly recommend professional medical clearance first and provide only very general guidance.
-- Base all advice on established guidelines (e.g., Royal Osteoporosis Society for bone density, ACOG for pregnancy, physical therapy consensus for back pain).
-- Focus on what the user CAN safely do while being clear about risks.
-- Keep the entire response concise (under 400 words total). Use short bullet points and clear headings for mobile readability.
-- If unsure about a rare condition, say so and recommend consulting a professional rather than guessing.
+- Do NOT diagnose conditions, prescribe specific rehabilitation exercises, or give individualized medical recommendations.
+- If the selected concern is "Other," stay general, refer to symptoms or movement risks, and recommend professional clearance.
+- Keep the response concise (under 350 words) with short headings and bullet points for mobile readability.
+- If the issue is unclear, rare, or potentially serious, say so and urge the user to consult a qualified healthcare professional.
 
-Selected conditions: ${conditionNames}.${trimester}${otherText}
+${conditionSummary || 'No listed conditions provided.'}
 
-Provide a concise table or bullet list of exercises to avoid or modify, a brief reason, and safer alternatives. Keep the advice educational and general.`;
+Provide a brief list of Pilates movement patterns or exercises to avoid or modify, a short reason for each, and a safer general alternative or focus area. Keep the answer educational, clear, and non-prescriptive.`;
   }
 }

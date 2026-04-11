@@ -1,0 +1,27 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Exercise Library</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-grid class="ion-padding">
+    <ion-row>
+      <ion-col size="12" size-md="6" *ngFor="let exercise of exercises">
+        <ion-card button (click)="openExercise(exercise.id)">
+          <ion-card-header>
+            <ion-card-title>{{ exercise.name }}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>{{ exercise.shortDescription }}</p>
+            <p class="exercise-focus">Focus: {{ exercise.focus }}</p>
+            <p class="exercise-category">Category: {{ exercise.category }}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

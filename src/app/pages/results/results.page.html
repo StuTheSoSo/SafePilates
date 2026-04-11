@@ -1,0 +1,65 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/safety-checker"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Results</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <div class="disclaimer-card ion-padding">
+    <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</strong>
+  </div>
+
+  <ng-container *ngIf="guidance; else justAi">
+    <ng-container *ngIf="hasResults; else justAi">
+      <ion-list>
+        <ion-item-group *ngFor="let condition of guidance.conditionResults">
+          <ion-item-divider color="light">
+            <ion-label>
+              <h2>{{ condition.conditionLabel }}</h2>
+            </ion-label>
+          </ion-item-divider>
+          <ion-item>
+            <ion-label>
+              <p class="why-text"><strong>Why?</strong> {{ condition.conditionDescription }}</p>
+            </ion-label>
+          </ion-item>
+          <ion-item *ngIf="condition.contraindications.length === 0">
+            <ion-label>No local modifications found. AI fallback or professional guidance may help.</ion-label>
+          </ion-item>
+          <ion-item *ngFor="let contraindication of condition.contraindications">
+            <ion-label>
+              <h3>{{ contraindication.exerciseId | titlecase }}</h3>
+              <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
+              <p><strong>Safer focus:</strong> {{ contraindication.alternative }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-item-group>
+      </ion-list>
+    </ng-container>
+
+    <ion-card *ngIf="guidance.aiFallback">
+      <ion-card-header>
+        <ion-card-title>AI guidance fallback</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ guidance.aiFallback }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <ng-template #justAi>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Safety guidance</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ guidance?.aiFallback ?? 'No local results. Please return to the checker to select concerns.' }}</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+
+  <ion-button expand="block" (click)="viewAgain()">Check another concern</ion-button>
+</ion-content>

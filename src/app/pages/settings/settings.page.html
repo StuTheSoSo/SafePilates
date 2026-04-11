@@ -1,0 +1,34 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Settings</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ion-card class="disclaimer-card ion-padding">
+    <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</strong>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>App settings</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>This MVP stores most guidance locally for fast offline access. AI fallback is used only for "Other" or unmatched concerns.</p>
+      <p>To enable Gemini AI fallback, add your API key in <code>src/environments/environment.ts</code> or <code>src/environments/environment.prod.ts</code>.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>About SafePilates</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>SafePilates is a safety-first mobile MVP for classical mat Pilates guidance, built with Angular 19, Ionic 8, and Capacitor 8.</p>
+      <p>The exercise library and condition guidance are stored locally in JSON to keep the experience fast and offline-first.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

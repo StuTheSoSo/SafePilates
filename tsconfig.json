@@ -1,0 +1,36 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./wwwout",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "strict": true,
+    "useDefineForClassFields": false,
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@assets/*": ["src/assets/*"]
+    }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": true,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true
+  },
+  "files": ["src/main.ts", "src/polyfills.ts"],
+  "include": ["src/**/*.ts"],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.spec.json" }
+  ]
+}

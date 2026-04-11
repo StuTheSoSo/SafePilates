@@ -1,0 +1,42 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>SafePilates</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <section class="hero-card ion-margin-bottom">
+    <h1>Safe Pilates for every body</h1>
+    <p>Find fast, offline guidance for Pilates exercises across mat work, reformer, chair, and prop-based training.</p>
+    <ion-button expand="block" (click)="goToSafetyChecker()">Safety Checker</ion-button>
+  </section>
+
+  <div class="category-row">
+    <ion-chip *ngFor="let category of categories"
+              outline
+              [color]="selectedCategory === category ? 'primary' : 'secondary'"
+              [class.selected]="selectedCategory === category"
+              (click)="selectCategory(category)">
+      {{ category }}
+    </ion-chip>
+  </div>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ previewLabel }}</ion-card-title>
+      <ion-card-subtitle>{{ exercises.length }} exercises shown</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngFor="let exercise of exercises" button (click)="openExercise(exercise.id)">
+          <ion-label>
+            <h3>{{ exercise.name }}</h3>
+            <p>{{ exercise.shortDescription }}</p>
+            <p class="exercise-focus">Focus: {{ exercise.focus }}</p>
+          </ion-label>
+          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

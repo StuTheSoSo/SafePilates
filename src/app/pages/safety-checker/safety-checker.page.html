@@ -1,0 +1,69 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Safety Checker</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <div class="page-hero">
+    <div class="disclaimer-card ion-padding">
+      <strong>IMPORTANT:</strong>
+      <p>This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</p>
+    </div>
+
+    <div class="intro-block">
+      <h2>Check Pilates safety</h2>
+      <p>Tap the concerns that apply to you. Selected items are highlighted in strong color so you can review them at a glance.</p>
+    </div>
+
+    <div class="status-row" *ngIf="!loading && !hasNoConditions">
+      <div>{{ selectedCount }} concern{{ selectedCount === 1 ? '' : 's' }} selected</div>
+      <ion-button fill="clear" size="small" (click)="clearSelection()" [disabled]="selectedCount === 0">Clear</ion-button>
+    </div>
+  </div>
+
+  <ion-spinner *ngIf="loading" name="crescent" class="loading-spinner"></ion-spinner>
+  <ion-note *ngIf="hasNoConditions" color="danger">
+    Could not load condition guidance yet. Please refresh the app or try again shortly.
+  </ion-note>
+
+  <div *ngIf="!loading && conditions.length > 0" class="condition-grid">
+    <ion-chip *ngFor="let condition of conditions"
+              [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
+              [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
+              [class.selected]="selectedIds.has(condition.id)"
+              (click)="toggleCondition(condition.id)"
+              class="condition-chip">
+      <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
+      <ion-label>{{ condition.label }}</ion-label>
+    </ion-chip>
+  </div>
+
+  <ion-item *ngIf="selectedIds.has('pregnancy')" class="trimester-item">
+    <ion-label>Pregnancy trimester</ion-label>
+    <ion-segment value="{{ pregnancyTrimester }}" (ionChange)="pregnancyTrimester = $any($event.detail).value">
+      <ion-segment-button value="1st">
+        <ion-label>1st</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2nd">
+        <ion-label>2nd</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="3rd">
+        <ion-label>3rd</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-item>
+
+  <ion-item *ngIf="hasOther">
+    <ion-label position="stacked">Other concern details</ion-label>
+    <ion-textarea [(ngModel)]="otherText" placeholder="Briefly describe the concern"></ion-textarea>
+  </ion-item>
+
+  <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
+    <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+    <span *ngIf="!loading">Get Guidance</span>
+  </ion-button>
+</ion-content>

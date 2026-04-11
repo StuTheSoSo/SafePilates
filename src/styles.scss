@@ -1,0 +1,64 @@
+@import "@ionic/angular/css/core.css";
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+:root {
+  --ion-color-primary: #3a86ff;
+  --ion-color-primary-rgb: 58, 134, 255;
+  --ion-color-secondary: #0d3b66;
+  --ion-color-tertiary: #f4d35e;
+  --ion-color-light: #f8f9ff;
+  --ion-color-dark: #091832;
+  --ion-font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--ion-font-family);
+  background: var(--ion-color-light);
+  color: var(--ion-color-dark);
+}
+
+ion-app {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #eef4ff 0%, #f8fbff 100%);
+}
+
+ion-card {
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(15, 50, 100, 0.08);
+}
+
+ion-chip {
+  margin: 0.25rem;
+}
+
+ion-content {
+  --padding-top: calc(env(safe-area-inset-top) + 0.5rem);
+  --padding-bottom: calc(env(safe-area-inset-bottom) + 84px);
+  --padding-start: calc(env(safe-area-inset-left) + 0.75rem);
+  --padding-end: calc(env(safe-area-inset-right) + 0.75rem);
+}
+
+ion-segment {
+  margin: 0.75rem 0;
+}
+
+.status-block {
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.disclaimer-card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(0,0,0,0.06);
+}

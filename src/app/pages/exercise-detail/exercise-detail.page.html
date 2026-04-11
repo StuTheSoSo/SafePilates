@@ -1,0 +1,34 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/library"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ exercise?.name || 'Exercise Detail' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ion-card *ngIf="exercise; else missingExercise">
+    <ion-card-header>
+      <ion-card-title>{{ exercise.name }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ exercise.shortDescription }}</p>
+      <p class="exercise-category"><strong>Category:</strong> {{ exercise.category }}</p>
+      <p class="exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
+      <p *ngIf="exercise.benefits" class="exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
+      <p class="placeholder">Video and advanced guidance coming soon.</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ng-template #missingExercise>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Exercise not found</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Please return to the library and select another exercise.</p>
+    </ion-card-content>
+  </ion-card>
+</ng-template>

@@ -1,0 +1,7 @@
+{
+  "name": "SafePilates",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,21 @@
+ion-card {
+  min-height: 180px;
+}
+
+.exercise-category,
+.exercise-focus,
+.exercise-benefits {
+  margin: 0.75rem 0 0;
+  color: #475569;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.exercise-benefits strong {
+  font-weight: 600;
+}
+
+.placeholder {
+  margin-top: 1rem;
+  color: #64748b;
+}

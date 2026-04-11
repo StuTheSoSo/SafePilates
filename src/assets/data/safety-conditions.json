@@ -1,0 +1,53 @@
+[
+  {
+    "id": "osteoporosis",
+    "label": "Osteoporosis / Osteopenia / Low Bone Density",
+    "description": "Avoid loaded spinal flexion, rotation, and end-range side bending."
+  },
+  {
+    "id": "pregnancy",
+    "label": "Pregnancy",
+    "description": "Modify by trimester; avoid prolonged supine and heavy abdominal flexion after mid-pregnancy.",
+    "hasTrimester": true
+  },
+  {
+    "id": "low_back_pain",
+    "label": "Chronic Low Back Pain (disc herniation, spinal stenosis, spondylolisthesis)",
+    "description": "Prefer neutral spine stabilization and avoid repetitive flexion or painful movements."
+  },
+  {
+    "id": "hypertension",
+    "label": "Hypertension / Cardiovascular Concerns",
+    "description": "Avoid inversions and breath-holding; use slow, controlled movement."
+  },
+  {
+    "id": "knee_issues",
+    "label": "Knee Issues (arthritis, pain, replacement)",
+    "description": "Avoid deep loaded knee flexion, painful range, and direct joint pressure."
+  },
+  {
+    "id": "hip_issues",
+    "label": "Hip Issues (arthritis, pain, replacement)",
+    "description": "Use smaller hip ranges and avoid extreme opening or loaded rotation."
+  },
+  {
+    "id": "neck_shoulder",
+    "label": "Neck / Shoulder Issues",
+    "description": "Avoid unsupported head lifts and excessive shoulder loading."
+  },
+  {
+    "id": "recent_surgery",
+    "label": "Recent Surgery",
+    "description": "Get medical clearance first; favor gentle, supported movement and avoid high-risk exercises."
+  },
+  {
+    "id": "arthritis",
+    "label": "Arthritis (general)",
+    "description": "Respect pain-free range and avoid heavy loading or extreme end-range motions."
+  },
+  {
+    "id": "other",
+    "label": "Other",
+    "description": "Get AI-backed guidance for a condition not listed here."
+  }
+]

@@ -22,3 +22,8 @@ pnpm-debug.log*
 .DS_Store
 *.tmp
 *.swp
+
+# On-device AI model assets (download locally; don't commit large binaries by default)
+/src/assets/models/**
+!/src/assets/models/.gitkeep
+!/src/assets/models/README.md

@@ -7,6 +7,8 @@ import safetyConditionsData from '../../assets/data/safety-conditions.json' with
 import exercisesData from '../../assets/data/exercises.json' with { type: 'json' };
 import contraindicationsData from '../../assets/data/contraindications.json' with { type: 'json' };
 
+type AiProvider = 'none' | 'local';
+
 @Injectable({ providedIn: 'root' })
 export class SafetyService {
   private http = inject(HttpClient);
@@ -85,11 +87,12 @@ export class SafetyService {
 
     const noLocalData = selectedConditions.some(condition => condition.id === 'other') || conditionResults.every(result => result.contraindications.length === 0);
     let aiFallback: string | undefined;
-    const aiAvailable = Boolean(environment.geminiApiKey?.trim());
+    const aiProvider = this.getAiProvider();
+    const aiAvailable = this.isAiConfigured(aiProvider);
     const aiUsed = noLocalData && aiAvailable;
 
     if (noLocalData) {
-      aiFallback = await this.getAiFallback(query, selectedConditions, aiAvailable);
+      aiFallback = await this.getAiFallback(aiProvider, query, selectedConditions, aiAvailable);
     }
 
     const result: GuidanceResult = {
@@ -102,13 +105,28 @@ export class SafetyService {
     return result;
   }
 
-  private async getAiFallback(query: SafetyQuery, selectedConditions: Condition[], aiAvailable: boolean): Promise<string> {
+  private getAiProvider(): AiProvider {
+    const provider = (environment as { aiProvider?: string }).aiProvider?.trim().toLowerCase();
+    if (provider === 'local' || provider === 'none') {
+      return provider;
+    }
+    return 'none';
+  }
+
+  private isAiConfigured(provider: AiProvider): boolean {
+    if (provider === 'none') {
+      return false;
+    }
+    return this.getLocalModelConfig().modelId.length > 0;
+  }
+
+  private async getAiFallback(provider: AiProvider, query: SafetyQuery, selectedConditions: Condition[], aiAvailable: boolean): Promise<string> {
     if (!aiAvailable) {
       return 'AI fallback is not configured in this build. Please consult a qualified professional for guidance or choose a listed condition for local safety guidance.';
     }
 
     return this.withTimeout(
-      this.requestAiFallback(query, selectedConditions),
+      this.requestAiFallback(provider, query, selectedConditions),
       9000,
       async () => 'AI guidance is taking longer than expected. Please try again later or consult a qualified professional.'
     );
@@ -124,28 +142,21 @@ export class SafetyService {
     return result;
   }
 
-  async requestAiFallback(query: SafetyQuery, selectedConditions: Condition[]): Promise<string> {
+  async requestAiFallback(provider: AiProvider, query: SafetyQuery, selectedConditions: Condition[]): Promise<string> {
     const dateKey = new Date().toISOString().slice(0, 10);
     const countKey = `aiCalls_${dateKey}`;
     const currentCount = Number(localStorage.getItem(countKey) || '0');
-    if (currentCount >= 5) {
-      return 'AI guidance limit reached for today. Please rely on the local safety guidance and consult a professional.';
-    }
 
     try {
-      const promptText = this.buildAiPrompt(query, selectedConditions);
-      const sdk = await import('@google/generative-ai');
-      const client = new sdk.GoogleGenerativeAI(environment.geminiApiKey);
-      const model = client.getGenerativeModel({ model: 'models/text-bison-001' }, { apiVersion: 'v1' });
-      const response = await model.generateContent({
-        contents: [
-          {
-            role: 'user',
-            parts: [{ text: promptText }]
-          }
-        ]
-      });
-      const aiText = response.response?.text?.() ?? 'No response received from AI.';
+      const promptText =
+        provider === 'local'
+          ? this.buildLocalAiPrompt(query, selectedConditions)
+          : this.buildAiPrompt(query, selectedConditions);
+
+      const aiText =
+        provider === 'local'
+          ? await this.requestLocalOnDevice(promptText, query, selectedConditions)
+          : 'AI fallback is disabled. Please consult a qualified professional for guidance.';
 
       localStorage.setItem(countKey, String(currentCount + 1));
       return aiText;
@@ -153,6 +164,206 @@ export class SafetyService {
       console.error('AI fallback error', error);
       return 'Unable to reach AI guidance at this time. Please consult a qualified professional for more details.';
     }
+  }
+
+  private localPipelinePromise: Promise<any> | null = null;
+
+  private getLocalModelConfig(): { modelId: string; modelBasePath: string; wasmBasePath: string } {
+    const envAny = environment as unknown as { localModelId?: string; localModelBasePath?: string; localWasmBasePath?: string };
+    return {
+      modelId: (envAny.localModelId || '').trim(),
+      modelBasePath: (envAny.localModelBasePath || '/assets/models').trim().replace(/\/+$/, ''),
+      wasmBasePath: (envAny.localWasmBasePath || '/assets/onnx').trim().replace(/\/+$/, '')
+    };
+  }
+
+  private async requestLocalOnDevice(promptText: string, query: SafetyQuery, selectedConditions: Condition[]): Promise<string> {
+    const { modelId, modelBasePath, wasmBasePath } = this.getLocalModelConfig();
+    if (!modelId) {
+      return 'On-device AI is enabled but no local model is configured. Please bundle a model under assets and set localModelId.';
+    }
+
+    const clippedPrompt = this.clipPrompt(promptText, 900);
+
+    try {
+      const pipeline = await this.getLocalPipeline(modelId, modelBasePath, wasmBasePath);
+
+      // Attempt 1: deterministic + concise.
+      let text = await this.generateLocal(pipeline, clippedPrompt, {
+        max_new_tokens: 260,
+        temperature: 0.2,
+        repetition_penalty: 1.15,
+        no_repeat_ngram_size: 3,
+        num_beams: 3
+      });
+
+      // Attempt 2: sampling can help when beam search collapses to a generic disclaimer.
+      if (!text || this.isClearlyBadLocalOutput(text) || text.length < 120) {
+        text = await this.generateLocal(pipeline, clippedPrompt, {
+          max_new_tokens: 320,
+          do_sample: true,
+          top_p: 0.9,
+          temperature: 0.7,
+          repetition_penalty: 1.12,
+          no_repeat_ngram_size: 3
+        });
+      }
+
+      if (!text) {
+        return this.buildHeuristicGuidance(query, selectedConditions);
+      }
+      if (this.isClearlyBadLocalOutput(text) || text.length < 80) {
+        return this.buildHeuristicGuidance(query, selectedConditions);
+      }
+      return text;
+    } catch (error) {
+      console.error('On-device AI error', error);
+      return this.buildHeuristicGuidance(query, selectedConditions);
+    }
+  }
+
+  private buildHeuristicGuidance(query: SafetyQuery, selectedConditions: Condition[]): string {
+    const other = (query.otherText || '').trim();
+    const otherLower = other.toLowerCase();
+
+    // If "Other" is effectively empty, fall back to a generic message.
+    const contextBits: string[] = [];
+    const listed = selectedConditions.filter(c => c.id !== 'other').map(c => c.label);
+    if (listed.length) contextBits.push(`Listed conditions: ${listed.join(', ')}`);
+    if (query.pregnancyTrimester) contextBits.push(`Trimester: ${query.pregnancyTrimester}`);
+    if (other) contextBits.push(`Other: ${other}`);
+
+    const contextLine = contextBits.length ? `Context: ${contextBits.join(' • ')}\n\n` : '';
+
+    const disclaimer =
+      'IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.\n\n';
+
+    // Hamstring strain/pull pattern
+    if (/(hamstring|pulled\s+hamstring|strain)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Avoid\n' +
+        '- Aggressive hamstring stretching or long holds at end-range\n' +
+        '- Straight-leg lifts, teaser-like work, or strong hip-hinge effort if it increases pain\n' +
+        '- Deep forward folds and loaded end-range lengthening\n\n' +
+        'Why\n' +
+        '- Early after a strain, end-range lengthening and high load can irritate healing tissue\n' +
+        '- Pain and guarding can cause compensations in the pelvis/low back\n\n' +
+        'Safer focus\n' +
+        '- Pain-free range only: small, controlled hip motion with knees slightly bent\n' +
+        '- Gentle posterior-chain activation without strain (e.g., supported bridges within comfort)\n' +
+        '- Pelvic/hip stability and breath-led core support; stop if symptoms increase\n\n' +
+        'If there was a sudden “pop,” significant bruising/swelling, or difficulty walking, get medical evaluation before exercising.'
+      );
+    }
+
+    // Generic injury/unknown concern fallback
+    const shortOther = other ? `"${other}"` : 'this concern';
+    return (
+      disclaimer +
+      contextLine +
+      'Avoid\n' +
+      '- Any movement that reproduces sharp pain, numbness/tingling, or a feeling of instability\n' +
+      '- End-range stretching and heavy effort in the painful direction\n' +
+      '- Fast transitions or loaded spinal flexion/rotation if symptoms worsen\n\n' +
+      'Why\n' +
+      '- Pain is a signal that tissue tolerance or joint control may be exceeded\n' +
+      '- Moving through pain can increase irritation and slow recovery\n\n' +
+      'Safer focus\n' +
+      `- Keep everything in a comfortable range while you clarify ${shortOther}\n` +
+      '- Choose supported, low-load patterns: breathing + gentle core activation, neutral spine work, slow controlled movement\n' +
+      '- If symptoms persist, worsen, or are unclear, get clearance from a clinician before continuing'
+    );
+  }
+
+  private async generateLocal(pipeline: any, prompt: string, generation: Record<string, unknown>): Promise<string> {
+    const output = await pipeline(prompt, generation);
+    const text = this.extractGeneratedText(output)?.trim();
+    return text || '';
+  }
+
+  private isClearlyBadLocalOutput(text: string): boolean {
+    const upper = text.toUpperCase();
+    if (upper.includes('DISAPPEARANCE') && upper.split('DISAPPEARANCE').length - 1 >= 6) {
+      return true;
+    }
+
+    // Detect extreme repetition (common failure mode in tiny on-device models).
+    const words = upper
+      .replace(/[^A-Z0-9\s]/g, ' ')
+      .split(/\s+/)
+      .filter(Boolean);
+    if (words.length < 10) {
+      return false;
+    }
+
+    let longestRun = 1;
+    let run = 1;
+    for (let i = 1; i < words.length; i++) {
+      if (words[i] === words[i - 1]) {
+        run += 1;
+        longestRun = Math.max(longestRun, run);
+      } else {
+        run = 1;
+      }
+    }
+    return longestRun >= 8;
+  }
+
+  private clipPrompt(text: string, maxChars: number): string {
+    if (text.length <= maxChars) {
+      return text;
+    }
+    return `${text.slice(0, maxChars)}\n\n(Truncated for on-device model limits.)`;
+  }
+
+  private extractGeneratedText(output: any): string | undefined {
+    // Transformers.js pipelines return slightly different shapes depending on task/version.
+    if (!output) return undefined;
+    if (typeof output === 'string') return output;
+    if (Array.isArray(output)) {
+      const first = output[0];
+      if (typeof first === 'string') return first;
+      if (first?.generated_text) return first.generated_text;
+      if (first?.summary_text) return first.summary_text;
+      if (first?.translation_text) return first.translation_text;
+      if (first?.text) return first.text;
+    }
+    if (output?.generated_text) return output.generated_text;
+    if (output?.text) return output.text;
+    return undefined;
+  }
+
+  private async getLocalPipeline(modelId: string, modelBasePath: string, wasmBasePath: string): Promise<any> {
+    if (!this.localPipelinePromise) {
+      this.localPipelinePromise = (async () => {
+        const transformers: any = await import('@huggingface/transformers');
+        const env = transformers.env;
+
+        // Fully offline: only load assets from the app bundle.
+        env.allowRemoteModels = false;
+        env.allowLocalModels = true;
+        env.localModelPath = modelBasePath;
+        env.useBrowserCache = true;
+
+        // Ensure ONNX runtime WASM assets are loaded locally (copied into assets at build time).
+        if (env.backends?.onnx?.wasm) {
+          env.backends.onnx.wasm.wasmPaths = `${wasmBasePath}/`;
+          // Mobile WebViews often don't support WASM threads; force single-thread for compatibility.
+          env.backends.onnx.wasm.numThreads = 1;
+        }
+
+        // In browsers (including iOS/Android WebViews), Transformers.js uses 'wasm' or 'webgpu' devices.
+        try {
+          return transformers.pipeline('text2text-generation', modelId, { device: 'wasm', quantized: true });
+        } catch {
+          return transformers.pipeline('text2text-generation', modelId, { device: 'wasm' });
+        }
+      })();
+    }
+
+    return this.localPipelinePromise;
   }
 
   getAiUsageCount(): number {
@@ -184,5 +395,43 @@ CRITICAL SAFETY RULES — NEVER BREAK THESE:
 ${conditionSummary || 'No listed conditions provided.'}
 
 Provide a brief list of Pilates movement patterns or exercises to avoid or modify, a short reason for each, and a safer general alternative or focus area. Keep the answer educational, clear, and non-prescriptive.`;
+  }
+
+  private buildLocalAiPrompt(query: SafetyQuery, selectedConditions: Condition[]): string {
+    // Keep this short: tiny on-device models are easily derailed by long “system” prompts.
+    const listedConditions = selectedConditions.filter(condition => condition.id !== 'other');
+    const listedNames = listedConditions.map(c => c.label).join(', ');
+    const other = (query.otherText?.trim() || '').slice(0, 120);
+    const trimester = query.pregnancyTrimester ? `Pregnancy trimester: ${query.pregnancyTrimester}.` : '';
+
+    const input = [
+      listedNames ? `Listed conditions: ${listedNames}.` : '',
+      trimester,
+      other ? `Other concern: ${other}.` : ''
+    ]
+      .filter(Boolean)
+      .join(' ');
+
+    return `You are writing general Pilates safety guidance (not medical advice).
+
+First line MUST be:
+IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.
+
+Context: ${input || 'No details provided.'}
+
+Now write the guidance with EXACTLY these headings and 2–4 bullet points each:
+
+Avoid
+- ...
+
+Why
+- ...
+
+Safer focus
+- ...
+
+Rules:
+- Stay general (no diagnosis, no rehab prescription).
+- If the concern is unclear or serious, recommend professional clearance.`;
   }
 }

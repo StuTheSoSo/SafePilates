@@ -15,7 +15,16 @@
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "assets": ["src/assets", "src/manifest.webmanifest", "src/svg"],
+            "assets": [
+              "src/assets",
+              "src/manifest.webmanifest",
+              "src/svg",
+              {
+                "glob": "**/*",
+                "input": "node_modules/onnxruntime-web/dist",
+                "output": "assets/onnx"
+              }
+            ],
             "styles": ["src/styles.scss"],
             "scripts": []
           },
@@ -30,7 +39,6 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
               "aot": true,
               "extractLicenses": true,

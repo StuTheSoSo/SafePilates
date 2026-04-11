@@ -18,6 +18,15 @@ export class ResultsPage implements OnInit {
   constructor(private safetyService: SafetyService, private router: Router) {}
 
   ngOnInit() {
+    this.refreshGuidance();
+  }
+
+  ionViewWillEnter() {
+    // Ionic may keep this page alive in the router outlet; refresh every time it becomes active.
+    this.refreshGuidance();
+  }
+
+  private refreshGuidance() {
     this.guidance = this.safetyService.getGuidance();
   }
 

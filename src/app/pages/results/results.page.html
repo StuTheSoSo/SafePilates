@@ -45,7 +45,7 @@
         <ion-card-title>AI guidance fallback</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>{{ guidance.aiFallback }}</p>
+        <p class="ai-text">{{ guidance.aiFallback }}</p>
       </ion-card-content>
     </ion-card>
   </ng-container>
@@ -56,7 +56,7 @@
         <ion-card-title>Safety guidance</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>{{ guidance?.aiFallback ?? 'No local results. Please return to the checker to select concerns.' }}</p>
+        <p class="ai-text">{{ guidance?.aiFallback ?? 'No local results. Please return to the checker to select concerns.' }}</p>
       </ion-card-content>
     </ion-card>
   </ng-template>

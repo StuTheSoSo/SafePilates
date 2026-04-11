@@ -71,6 +71,14 @@ export class SafetyCheckerPage implements OnInit {
       return;
     }
 
+    // Lightweight “did you mean” mapping for common typos entered under "Other".
+    // This improves results without needing AI and keeps the app offline-first.
+    const otherTextLower = this.otherText.trim().toLowerCase();
+    if (this.hasOther && !this.selectedIds.has('pregnancy') && /(pregnanc|pregenanc|pregnan)/.test(otherTextLower)) {
+      this.selectedIds.delete('other');
+      this.selectedIds.add('pregnancy');
+    }
+
     this.loading = true;
     await this.safetyService.fetchGuidance({
       conditionIds: this.selectedConditions,

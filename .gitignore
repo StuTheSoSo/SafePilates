@@ -11,6 +11,7 @@
 
 # Capacitor native platform output
 /ios
+/android
 
 # Environment files containing secrets
 /src/environments/environment.ts

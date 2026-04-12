@@ -40,7 +40,8 @@ export class ResultsPage implements OnInit {
     balance_issues: 'Choose grounded movement and avoid unsupported balance challenges until strength improves.',
     joint_replacement: 'Use low-impact, controlled exercises and avoid high joint loads around replaced hips, knees, or shoulders.',
     foot_ankle_issues: 'Reduce foot loading, keep the feet supported, and avoid forced plantarflexion or unstable ankle positions.',
-    chronic_fatigue: 'Keep sessions short, use frequent rest, and avoid pushing through excessive fatigue.'
+    chronic_fatigue: 'Keep sessions short, use frequent rest, and avoid pushing through excessive fatigue.',
+    respiratory: 'Keep breathing calm and choose open chest, low-impact movement when respiratory symptoms are present.'
   };
 
   get selectedConditionLabels() {
@@ -80,6 +81,10 @@ export class ResultsPage implements OnInit {
     neck_shoulder: [
       'Keep the neck long, shoulders supported, and avoid unsupported head or shoulder loading.',
       'Focus on posture, scapular stability, and gentle range rather than aggressive overhead or neck-intensive work.'
+    ],
+    respiratory: [
+      'Use gentle, low-impact movement with smooth inhalation and exhalation.',
+      'Avoid breath-holding, rapid exertion, and tight chest compression.'
     ],
     recent_surgery: [
       'Get medical clearance and reintroduce movement gradually, avoiding high load, impact, and sudden change.',
@@ -215,6 +220,11 @@ export class ResultsPage implements OnInit {
       what: 'Neck and shoulder issues often reflect tension, impingement, instability, or postural strain.',
       dangers: 'Unsupported head lifts, heavy shoulder loading, and end-range shoulder positions can worsen impingement or instability.',
       avoid: 'Avoid Plank with poor head alignment, Swan, overhead reaching with heavy resistance, and unsupported neck extension.'
+    },
+    respiratory: {
+      what: 'Respiratory concerns like asthma, bronchospasm, or breathlessness require careful attention to breathing and chest comfort.',
+      dangers: 'Breath-holding, rapid exertion, and chest-compressive positions can trigger wheezing, shortness of breath, or tightness.',
+      avoid: 'Avoid Jackknife, Roll Over, rapid transitions, breath-holding, and deep, compressive upper-body work without clearance.'
     },
     recent_surgery: {
       what: 'Recent surgery means tissues are healing and must be reintroduced to movement gradually with medical clearance.',

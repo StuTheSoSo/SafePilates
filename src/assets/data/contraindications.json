@@ -128,5 +128,10 @@
     {"exerciseId":"footwork","reason":"High-resistance leg work can be challenging if circulation or neuropathy is present.","alternative":"Use lighter springs and focus on smooth, controlled carriage movement."},
     {"exerciseId":"leg_pull_back","reason":"Prolonged prone effort may fatigue the shoulders and legs quickly.","alternative":"Choose shorter duration posterior chain work with frequent rest."},
     {"exerciseId":"bicycle","reason":"Rapid alternating lower body movement can be uncomfortable if sensation is reduced.","alternative":"Use slower leg rhythms and keep the pelvis stable."}
+  ],
+  "respiratory": [
+    {"exerciseId":"jackknife","reason":"Inversions and upper-body compression can make breathing difficult for people with asthma.","alternative":"Use supported chest lifts and avoid chest-compressive or breath-holding positions."},
+    {"exerciseId":"roll_over","reason":"Legs-overhead position and spinal flexion can restrict the rib cage and challenge breathing.","alternative":"Choose gentle supine core work with the head and chest supported."},
+    {"exerciseId":"the_hundred","reason":"Rapid breath cycling and core intensity may trigger wheezing or breathlessness.","alternative":"Practice slower breath-based abdominal work with frequent rest and open chest posture."}
   ]
 }

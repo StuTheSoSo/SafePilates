@@ -112,7 +112,16 @@ export class SafetyService {
     this.latestQuery = query;
 
     const selectedConditions = query.conditionIds.map(id => this.conditions.find(item => item.id === id)).filter(Boolean) as Condition[];
-    const conditionResults: ConditionResult[] = selectedConditions.map(condition => ({
+    const otherText = query.otherText?.trim() ?? '';
+    const inferredConditions = query.conditionIds.includes('other') && otherText ? this.inferConditionsFromOtherText(otherText) : [];
+    const effectiveConditions = selectedConditions.filter(condition => condition.id !== 'other');
+    const allConditions = inferredConditions.length > 0
+      ? [...effectiveConditions, ...inferredConditions]
+      : [...selectedConditions];
+    const uniqueConditions = allConditions.filter(
+      (condition, index, self) => self.findIndex(item => item.id === condition.id) === index
+    );
+    const conditionResults: ConditionResult[] = uniqueConditions.map(condition => ({
       conditionId: condition.id,
       conditionLabel: condition.label,
       conditionDescription: condition.description,
@@ -120,7 +129,7 @@ export class SafetyService {
       contraindications: this.contraindications[condition.id] ?? []
     }));
 
-    const noLocalData = selectedConditions.some(condition => condition.id === 'other') || conditionResults.every(result => result.contraindications.length === 0);
+    const noLocalData = allConditions.some(condition => condition.id === 'other') || conditionResults.every(result => result.contraindications.length === 0);
     let aiFallback: string | undefined;
     const aiProvider = this.getAiProvider();
     const aiAvailable = this.isAiConfigured(aiProvider);
@@ -184,7 +193,7 @@ export class SafetyService {
 
     try {
       const otherText = (query.otherText || '').trim();
-      if (otherText && this.shouldUseHeuristicForOther(otherText)) {
+      if (otherText && this.shouldUseHeuristicForOther(otherText) && !this.isAiConfigured(provider)) {
         localStorage.setItem(countKey, String(currentCount + 1));
         return this.buildHeuristicGuidance(query, selectedConditions);
       }
@@ -208,7 +217,77 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnancy|postpartum|pelvic floor|pelvic|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|obese|obesity|overweight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|heart|blood pressure|cardiovascular|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|obese|obesity|overweight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+  }
+
+  private inferConditionsFromOtherText(otherText: string): Condition[] {
+    const lower = otherText.toLowerCase();
+    const matches = new Set<string>();
+
+    if (/(pregnanc|postpartum|post partum|pelvic floor|diastasis|maternity)/.test(lower)) {
+      if (/postpartum|post partum/.test(lower)) {
+        matches.add('postpartum');
+      } else {
+        matches.add('pregnancy');
+      }
+    }
+    if (/(knee|hip|ankle|joint replacement|replacement|arthritis|osteoarthritis|rheumatoid|joint pain)/.test(lower)) {
+      if (/replacement/.test(lower)) {
+        matches.add('joint_replacement');
+      }
+      if (/knee/.test(lower)) {
+        matches.add('knee_issues');
+      }
+      if (/hip/.test(lower)) {
+        matches.add('hip_issues');
+      }
+      if (/ankle|foot|arch|fallen arches|flat foot|plantar|heel/.test(lower)) {
+        matches.add('foot_ankle_issues');
+      }
+      if (/arthriti|arthritis/.test(lower)) {
+        matches.add('arthritis');
+      }
+    }
+    if (/(neck|shoulder|cervical|upper back|thoracic outlet|rotator cuff|shoulder impingement)/.test(lower)) {
+      matches.add('neck_shoulder');
+    }
+    if (/(hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|heart rate)/.test(lower)) {
+      matches.add('hypertension');
+    }
+    if (/(scoli|spine|spinal|stenosis|spondyl|disc|herniated|kyphosis|lordosis)/.test(lower)) {
+      matches.add('scoliosis');
+    }
+    if (/(bursitis|tendinopathy)/.test(lower)) {
+      matches.add('bursitis');
+    }
+    if (/(asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough)/.test(lower)) {
+      matches.add('respiratory');
+    }
+    if (/(vertigo|dizziness|lightheaded|unsteady|wobbly)/.test(lower)) {
+      matches.add('vertigo_dizziness');
+    }
+    if (/(diabetes|metabolic|blood sugar|insulin)/.test(lower)) {
+      matches.add('diabetes');
+    }
+    if (/(fatigue|chronic fatigue|autoimmune|fibromyalgia|lupus|multiple sclerosis|ms|neuropathy|neurological|nerve|demyelinating|neurogenic)/.test(lower)) {
+      matches.add('chronic_fatigue');
+    }
+    if (/(pregnancy|pelvic floor|diastasis|postpartum)/.test(lower)) {
+      matches.add('pelvic_floor_dysfunction');
+    }
+    if (/(pregnancy|diastasis)/.test(lower)) {
+      matches.add('diastasis_recti');
+    }
+    if (/(recent surgery|post[- ]surgery|recovery|reconstruction)/.test(lower)) {
+      matches.add('recent_surgery');
+    }
+    if (/(foot|ankle|heel|plantar|arch|flat foot|fallen arches|metatarsal|posterior tibial|pes planus)/.test(lower)) {
+      matches.add('foot_ankle_issues');
+    }
+
+    return Array.from(matches)
+      .map(id => this.conditions.find(condition => condition.id === id))
+      .filter(Boolean) as Condition[];
   }
 
   private localPipelinePromise: Promise<any> | null = null;
@@ -361,6 +440,48 @@ export class SafetyService {
         '- Keep the chest open, the ribs soft, and avoid compressive upper-body positions\n' +
         '- Pause, rest, and normalize breathing whenever the effort increases\n\n' +
         'If breathing becomes difficult, wheezy, or tight, stop and seek medical guidance before continuing.'
+      );
+    }
+
+    // Digestive / gastrointestinal concerns
+    if (/(digestive|gastro|ibs|gerd|acid reflux|heartburn|stomach|intestinal|colitis|crohn|bloating|nausea)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Digestive & Core Support\n\n' +
+        'Avoid\n' +
+        '- Deep abdominal compression, strong twists, or aggressive forward folds that feel uncomfortable\n' +
+        '- Breath-holding or forceful abdominal bracing\n' +
+        '- Rapid transitions that exacerbate nausea or bloating\n\n' +
+        'Why\n' +
+        '- Gastrointestinal symptoms often improve with gentle core support and calm, steady movement\n' +
+        '- Excessive compression or rotation can increase discomfort and pressure in the abdomen\n\n' +
+        'Safer focus\n' +
+        '- Keep the breath soft and the core gently engaged without squeezing the belly\n' +
+        '- Favor supported, neutral-spine positions and avoid intense abdominal strain\n' +
+        '- Move slowly and stop if any exercise increases digestive discomfort\n\n' +
+        'If digestive symptoms worsen, consult a qualified provider before continuing.'
+      );
+    }
+
+    // Cancer / oncology / lymphedema concerns
+    if (/(cancer|chemotherapy|radiation|oncology|mastectomy|lumpectomy|lymph|lymphedema|tumor|malignancy|metastasis)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Oncology & Recovery Support\n\n' +
+        'Avoid\n' +
+        '- High-impact, high-intensity, or unsupported movements without clearance\n' +
+        '- Heavy loading through surgical sites or areas affected by treatment\n' +
+        '- Forced range of motion in areas with recent surgery, radiation, or swelling\n\n' +
+        'Why\n' +
+        '- Cancer treatment and recovery often require very gradual progress, careful load management, and support around vulnerable tissues\n' +
+        '- Prioritizing comfort and professional clearance helps prevent irritation and swelling\n\n' +
+        'Safer focus\n' +
+        '- Choose gentle, supported Pilates with an emphasis on breath, posture, and relaxed movement\n' +
+        '- Avoid pushing through fatigue, pain, or localized discomfort\n' +
+        '- Keep the body hydrated and stop if any area feels overly strained or swollen\n\n' +
+        'Always check with your oncology care team or rehabilitation specialist before continuing.'
       );
     }
 
@@ -656,7 +777,8 @@ export class SafetyService {
     const trimmedOther = query.otherText?.trim() ?? '';
     const otherText = trimmedOther ? `Other concern details: ${trimmedOther}.` : 'Other concern details were not provided.';
     const trimester = query.pregnancyTrimester ? `Pregnancy trimester: ${query.pregnancyTrimester}.` : '';
-    const conditionSummary = [listedNames && `Conditions: ${listedNames}.`, trimester, trimmedOther ? otherText : '']
+    const inferredHint = trimmedOther ? this.getLikelyOtherConditionText(trimmedOther) : undefined;
+    const conditionSummary = [listedNames && `Conditions: ${listedNames}.`, trimester, trimmedOther ? otherText : '', inferredHint]
       .filter(Boolean)
       .join(' ');
 
@@ -667,6 +789,7 @@ CRITICAL SAFETY RULES — NEVER BREAK THESE:
 **⚠️ IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.**
 - Do NOT diagnose conditions, prescribe specific rehabilitation exercises, or give individualized medical recommendations.
 - If the selected concern is "Other," stay general, refer to symptoms or movement risks, and recommend professional clearance.
+- If the user's text suggests a likely category such as respiratory, digestive, neurological, or musculoskeletal, use that category to shape safer, more relevant guidance.
 - Keep the response concise (under 350 words) with short headings and bullet points for mobile readability.
 - If the issue is unclear, rare, or potentially serious, say so and urge the user to consult a qualified healthcare professional.
 
@@ -690,12 +813,14 @@ Provide a brief list of Pilates movement patterns or exercises to avoid or modif
       .filter(Boolean)
       .join(' ');
 
+    const inferredHint = other ? this.getLikelyOtherConditionText(other) : undefined;
     return `You are writing general Pilates safety guidance (not medical advice).
 
 First line MUST be:
 IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.
 
 Context: ${input || 'No details provided.'}
+${inferredHint ? `Likely concern type: ${inferredHint}` : ''}
 
 Now write the guidance with EXACTLY these headings and 2–4 bullet points each:
 
@@ -711,5 +836,13 @@ Safer focus
 Rules:
 - Stay general (no diagnosis, no rehab prescription).
 - If the concern is unclear or serious, recommend professional clearance.`;
+  }
+
+  private getLikelyOtherConditionText(otherText: string): string | undefined {
+    const inferred = this.inferConditionsFromOtherText(otherText || '');
+    if (!inferred.length) {
+      return undefined;
+    }
+    return inferred.map(condition => condition.label).join(', ');
   }
 }

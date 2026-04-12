@@ -11,10 +11,6 @@
   </section>
 
   <div class="page-hero">
-    <div class="disclaimer-card">
-      <strong>IMPORTANT:</strong>
-      <p>This is educational information only and not a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.</p>
-    </div>
 
     <div class="intro-block">
       <h2>Check Pilates safety</h2>
@@ -28,11 +24,6 @@
         <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
         <span *ngIf="!loading">Get Guidance</span>
       </ion-button>
-
-      <div class="status-row" *ngIf="!loading">
-        <div>{{ selectedCount }} concern{{ selectedCount === 1 ? '' : 's' }} selected</div>
-        <ion-button fill="clear" size="small" (click)="clearSelection()" [disabled]="selectedCount === 0">Clear</ion-button>
-      </div>
     </div>
   </div>
 
@@ -77,58 +68,6 @@
     Please describe your concern so you can review it safely.
   </ion-note>
 
-  <div class="category-row">
-    <ion-chip *ngFor="let category of categories"
-              outline
-              [color]="selectedCategory === category ? 'primary' : 'secondary'"
-              [class.selected]="selectedCategory === category"
-              (click)="selectCategory(category)">
-      {{ category }}
-    </ion-chip>
-  </div>
-
-  <ion-card class="ion-padding">
-    <ion-card-header>
-      <ion-card-title>{{ previewLabel }}</ion-card-title>
-      <ion-card-subtitle>{{ exercises.length }} exercises shown</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-list>
-        <ion-item *ngFor="let exercise of exercises" button detail="false" (click)="openExercise(exercise.id)">
-          <ion-label>
-            <h3>{{ exercise.name }}</h3>
-            <p>{{ exercise.shortDescription }}</p>
-            <p class="exercise-focus">Focus: {{ exercise.focus }}</p>
-          </ion-label>
-          <ion-icon slot="end" name="chevron-forward-outline"></ion-icon>
-        </ion-item>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
-
-  <div *ngIf="selectedCategory === 'All'">
-    <div *ngFor="let section of featuredSections" class="featured-section">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>{{ section.title }}</ion-card-title>
-          <ion-card-subtitle>Top {{ section.category }} exercises</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-list>
-            <ion-item *ngFor="let exercise of getFeaturedExercises(section.category)" button detail="false" (click)="openExercise(exercise.id)">
-              <ion-label>
-                <h3>{{ exercise.name }}</h3>
-                <p>{{ exercise.shortDescription }}</p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-          <ion-button fill="outline" size="small" expand="block" (click)="goToCategory(section.category)">
-            View all {{ section.category }}
-          </ion-button>
-        </ion-card-content>
-      </ion-card>
-    </div>
-  </div>
 
   <ion-card>
     <ion-card-header>

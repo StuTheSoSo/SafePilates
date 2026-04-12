@@ -14,6 +14,8 @@
     </ion-card-header>
     <ion-card-content>
       <p class="exercise-description">{{ exercise.shortDescription }}</p>
+      <p *ngIf="exercise.keyTakeaway" class="exercise-takeaway"><strong>Key takeaway:</strong> {{ exercise.keyTakeaway }}</p>
+      <p *ngIf="exercise.safetyNote" class="exercise-safety"><strong>Safety:</strong> {{ exercise.safetyNote }}</p>
       <div class="exercise-meta">
         <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
         <p class="exercise-meta-item"><strong>Category:</strong> {{ exercise.category }}</p>

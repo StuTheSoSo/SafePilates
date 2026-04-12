@@ -24,7 +24,11 @@
       "Lift your head, neck and shoulders off the mat while keeping the lower back grounded.",
       "Pump your arms vigorously in small motions alongside the body.",
       "Coordinate the movement with breath: inhale for five pumps, exhale for five pumps.",
-      "Stay steady through the ribs and avoid pressing the shoulders into the ears."
+      "Stay steady through the ribs and avoid pressing the shoulders into the ears.",
+      [
+        "Regression: Keep the head on the mat and legs lower to reduce cervical strain and core load.",
+        "Progression: Extend the legs higher while keeping the pelvis stable."
+      ]
     ],
     "commonMistakes": [
       "Allowing the lower back to arch away from the mat.",
@@ -34,7 +38,9 @@
       "Abdominals",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on core endurance and breathing coordination",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "roll_up",
@@ -55,13 +61,17 @@
     "equipment": "Mat",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to peel the spine up, inhale at the top, then exhale to articulate down.",
-    "setup": "Lie supine with legs straight and arms reaching overhead.",
+    "setup": "Lie supine with legs straight and arms reaching overhead, pelvis neutral, and ribs soft.",
     "instructions": [
-      "Lie supine with legs straight and arms reaching overhead.",
-      "Inhale to lengthen your spine and reach the arms overhead.",
-      "Exhale to articulate the spine up one vertebra at a time.",
-      "Reach forward from the hips while keeping the shoulders down.",
-      "Exhale to roll back down slowly and maintain abdominal control."
+      "Lie supine with legs straight, arms reaching overhead, and the pelvis neutral.",
+      "Inhale to lengthen through the spine and keep the shoulders wide and relaxed.",
+      "Exhale to peel the spine up one vertebra at a time, reaching forward from the hips.",
+      "Hold the top with the abdominals engaged and the lower ribs drawn in.",
+      "Inhale to initiate the descent, then exhale to articulate the spine down slowly.",
+      [
+        "Regression: Bend the knees and use the arms to support the spine during the roll-up.",
+        "Progression: Perform with straight legs and less use of the arms."
+      ]
     ],
     "commonMistakes": [
       "Using momentum instead of articulating the spine.",
@@ -71,7 +81,9 @@
       "Abdominals",
       "Spinal erectors",
       "Hamstrings"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal articulation and abdominal mobility",
+    "safetyNote": "Keep the neck long, avoid pulling on the head, and stop if the lower back lifts away from the mat."
   },
   {
     "id": "roll_over",
@@ -92,13 +104,17 @@
     "equipment": "Mat",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to lift the legs overhead, inhale at the top, then exhale to lower with control.",
-    "setup": "Lie supine with legs straight and arms alongside the body.",
+    "setup": "Lie supine with legs straight, arms alongside the body, and the lower back anchored to the mat.",
     "instructions": [
       "Lie supine with legs straight and arms alongside the body.",
-      "Inhale to prepare and draw the abdominals in.",
-      "Exhale to lift the legs overhead and roll onto the shoulders.",
-      "Keep the legs long and the pelvis stable as you pause at the top.",
-      "Exhale to lower the legs back down with control."
+      "Inhale to prepare, draw the abdominals in, and keep the ribs soft.",
+      "Exhale to lift the legs overhead and roll onto the shoulders with control.",
+      "Pause at the top with the pelvis stable and the legs long.",
+      "Inhale at the top, then exhale to lower the legs back down slowly while keeping the lower back supported.",
+      [
+        "Regression: Keep the legs bent and move with a smaller range of motion to protect the hamstrings and lower back.",
+        "Progression: Straighten the legs more gradually as hamstring flexibility improves."
+      ]
     ],
     "commonMistakes": [
       "Dropping the legs too quickly and losing core control.",
@@ -108,7 +124,9 @@
       "Abdominals",
       "Hamstrings",
       "Low back"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension and hamstring release",
+    "safetyNote": "Move slowly, keep the lower back anchored, and choose a regression if the hamstrings or neck feel strained."
   },
   {
     "id": "rolling_like_a_ball",
@@ -135,7 +153,11 @@
       "Round the spine and draw the knees to the chest.",
       "Balance on the sit bones and take a deep inhale.",
       "Exhale to rock back toward the shoulders, maintaining the rounded shape.",
-      "Inhale as you return to balance with control."
+      "Inhale as you return to balance with control.",
+      [
+        "Regression: Keep the feet on the mat or hold the shins instead of the ankles to reduce strain.",
+        "Progression: Increase balance challenge by rocking with a slightly smaller base of support."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -147,7 +169,9 @@
       "Abdominals",
       "Spinal extensors",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal massage and balance control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "spine_stretch_forward",
@@ -174,7 +198,11 @@
       "Sit tall with the legs extended and feet flexed.",
       "Exhale to reach forward from the hips and round the spine.",
       "Keep the chin slightly tucked and the shoulders down.",
-      "Inhale to return to an upright posture with control."
+      "Inhale to return to an upright posture with control.",
+      [
+        "Regression: Sit on a small block or cushion to ease hamstring stretch.",
+        "Progression: Extend the legs further and reach the arms farther past the feet."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -185,7 +213,9 @@
       "Hamstrings",
       "Spinal extensors",
       "Abdominals"
-    ]
+    ],
+    "keyTakeaway": "Focus on posterior chain length and posture",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "roll_down",
@@ -205,14 +235,18 @@
     ],
     "equipment": "Mat",
     "reps": "8–10 repetitions",
-    "breathing": "Exhale to initiate the movement, inhale to return with control.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to peel the spine down, inhale to articulate back up with length.",
+    "setup": "Stand tall with feet hips-width apart, knees soft, pelvis neutral, and arms long in front.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Stand tall with the feet hips-width apart.",
-      "Exhale to peel the spine down toward the mat one vertebra at a time.",
-      "Keep the abdominal support engaged as you move.",
-      "Inhale at the bottom and exhale to roll back up with length."
+      "Stand tall with feet hips-width apart, knees soft, pelvis neutral, and ribs soft.",
+      "Inhale to lengthen through the crown and draw the shoulder blades down.",
+      "Exhale to peel the spine down toward the mat one vertebra at a time, keeping the pelvis steady.",
+      "Keep the hamstrings engaged and the lower back supported as you reach toward your toes.",
+      "Inhale to begin the roll-up, then exhale to articulate back to standing with control.",
+      [
+        "Regression: Bend the knees slightly and reduce the forward reach to protect the hamstrings.",
+        "Progression: Add a small arm reach forward at the bottom while keeping the spine long."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -224,7 +258,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal articulation and core control",
+    "safetyNote": "Maintain even abdominal support, avoid collapsing through the low back, and only lower as far as your hamstrings allow without rounding excessively."
   },
   {
     "id": "teaser",
@@ -245,13 +281,17 @@
     "equipment": "Mat",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate standing, seated, or prone position with a neutral spine.",
+    "setup": "Lie supine with knees bent, feet flat, and arms reaching overhead; keep the spine long and the shoulders soft.",
     "instructions": [
-      "Begin on the mat in the appropriate standing, seated, or prone position with a neutral spine.",
-      "Inhale to prepare and lengthen through the spine.",
-      "Exhale to lift the head and torso while reaching the arms forward.",
-      "Keep the legs active and the pelvis stable in the V-shape.",
-      "Inhale to hold the position, then exhale to lower down slowly."
+      "Lie supine with knees bent, feet flat, and arms reaching overhead.",
+      "Inhale to prepare, draw the ribs down, and engage the abdominals.",
+      "Exhale to roll up into a V-shape, reaching the arms toward the toes while keeping the pelvis steady.",
+      "Hold for one breath with the spine long and the legs active.",
+      "Exhale to roll down slowly, articulating the spine back to the mat.",
+      [
+        "Regression: Practice with bent knees and support the thighs with the hands.",
+        "Progression: Straighten the legs and lower the arms overhead with control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -262,7 +302,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on core strength and control",
+    "safetyNote": "Keep the neck long and the pelvis stable; stop if the lower back rounds excessively or the head tucks."
   },
   {
     "id": "saw",
@@ -289,7 +331,11 @@
       "Sit tall with the legs extended and arms out to the sides.",
       "Exhale to twist from the waist and reach the little finger toward the opposite foot.",
       "Keep the torso long as you fold over the front leg.",
-      "Inhale to return to center with control."
+      "Inhale to return to center with control.",
+      [
+        "Regression: Reduce the twist range and keep the spine long rather than collapsing.",
+        "Progression: Reach farther past the feet and deepen the rotation with a stable torso."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -300,7 +346,9 @@
       "Obliques",
       "Hamstrings",
       "Spinal rotators"
-    ]
+    ],
+    "keyTakeaway": "Focus on oblique rotation and hamstring mobility",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "corkscrew",
@@ -320,14 +368,18 @@
     ],
     "equipment": "Mat",
     "reps": "4–6 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to initiate the circle, inhale to return to center with control.",
+    "setup": "Lie supine with legs lifted toward the ceiling, arms by your sides, and the lower back anchored to the mat.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Lift the legs toward the ceiling and point the toes.",
-      "Exhale to lower both legs to one side in a controlled circle.",
-      "Keep the shoulders grounded and the hips level.",
-      "Inhale as you return through the center and repeat on the other side."
+      "Lie supine with legs lifted toward the ceiling, arms by your sides, and the lower back anchored to the mat.",
+      "Inhale to prepare and draw the abdominal wall gently toward the spine.",
+      "Exhale to lower both legs to one side in a controlled circle, keeping the pelvis steady.",
+      "Keep the shoulders grounded and the ribs soft while the legs move through the circle.",
+      "Inhale through center, then exhale to circle to the opposite side with even control.",
+      [
+        "Regression: Keep the legs higher and use smaller circles to protect the lower back.",
+        "Progression: Lengthen the descent and increase the circle size gradually while maintaining pelvic stability."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -338,7 +390,9 @@
       "Abdominals",
       "Hip flexors",
       "Adductors"
-    ]
+    ],
+    "keyTakeaway": "Focus on lower abdominal strength and rotation",
+    "safetyNote": "Keep the lower ribs drawing in and the pelvis stable to protect the lumbar spine; use smaller circles if the low back lifts."
   },
   {
     "id": "jackknife",
@@ -358,14 +412,18 @@
     ],
     "equipment": "Mat",
     "reps": "4–6 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to lift the hips and legs, inhale to lower with control.",
+    "setup": "Lie supine with legs straight, arms by your sides, and the pelvis grounded.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Lift the legs overhead and press the hips up toward the ceiling.",
-      "Exhale to straighten the legs and reach the heels away.",
-      "Keep the shoulders and upper back grounded for stability.",
-      "Inhale as you lower the hips back down with control."
+      "Lie supine with legs straight, arms by your sides, and the pelvis grounded.",
+      "Inhale to prepare, activate the abdominals, and keep the neck long.",
+      "Exhale to lift the legs overhead and press the hips up toward the ceiling with a strong core.",
+      "Keep the shoulders down and the lower back supported as the legs reach toward vertical.",
+      "Inhale to bend the knees slightly if needed, then exhale to lower the hips back down slowly.",
+      [
+        "Regression: Use bridge prep and lift the hips only as high as comfortable.",
+        "Progression: Work toward a higher hip lift and a fuller roll onto the shoulders with control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -376,7 +434,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spine articulation and shoulder stability",
+    "safetyNote": "Keep the shoulder blades grounded and avoid compressing the neck; only lift as high as your hamstrings and lower back allow without strain."
   },
   {
     "id": "neck_pull",
@@ -396,14 +456,18 @@
     ],
     "equipment": "Mat",
     "reps": "6–8 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to roll up with control, inhale to lengthen, and exhale to roll back down.",
+    "setup": "Lie supine with knees bent, feet flat on the mat, and hands lightly supporting the base of the skull.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Hold the back of the head lightly and inhale to organize the spine.",
-      "Exhale to peel the spine up and forward, keeping the chin tucked.",
-      "Keep the abdominal corset engaged through the roll.",
-      "Inhale at the top, then exhale to articulate back down."
+      "Lie supine with knees bent, feet flat on the mat, and hands lightly supporting the base of the skull.",
+      "Inhale to lengthen through the spine and softly draw the lower ribs down.",
+      "Exhale to peel the spine up and forward while keeping the chin tucked and the abdominal corset engaged.",
+      "Hold the top with the shoulders broad and the spine long.",
+      "Inhale at the top, then exhale to articulate the spine back down slowly, keeping the neck long.",
+      [
+        "Regression: Keep the head resting lightly and avoid pulling on the neck.",
+        "Progression: Lower the legs closer to the mat while maintaining spinal articulation."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -414,7 +478,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on abdominal coordination and spine mobility",
+    "safetyNote": "Keep the chin tucked and avoid pulling on the head; rely on the abdominals to lift the spine rather than the neck."
   },
   {
     "id": "spine_twist",
@@ -434,14 +500,18 @@
     ],
     "equipment": "Mat",
     "reps": "8–10 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to rotate, inhale to return to center with control.",
+    "setup": "Sit tall with legs extended or bent, feet grounded, spine long, and arms reaching wide.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Sit tall with the feet softly grounded and the spine long.",
-      "Exhale to twist from the waist and open through the chest.",
-      "Keep both sit bones anchored and avoid collapsing forward.",
-      "Inhale back to center with control."
+      "Sit tall with legs extended or bent, feet grounded, spine long, and arms reaching wide.",
+      "Inhale to lengthen through the crown and draw the shoulders away from the ears.",
+      "Exhale to twist from the waist, keeping the sit bones anchored and the ribs lifted.",
+      "Keep the torso long and avoid collapsing the chest as you rotate.",
+      "Inhale back to center with control and prepare for the next side.",
+      [
+        "Regression: Bend the knees and shorten the leg separation to reduce torque.",
+        "Progression: Extend the legs farther and deepen the twist while keeping the ribs lifted."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -452,7 +522,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal rotation and torso flexibility",
+    "safetyNote": "Keep both sit bones grounded and avoid compressing the lower back; rotate from the waist with a long spine."
   },
   {
     "id": "side_bend",
@@ -472,14 +544,18 @@
     ],
     "equipment": "Mat",
     "reps": "6–8 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate standing, seated, or prone position with a neutral spine.",
+    "breathing": "Exhale to side bend, inhale to return to neutral with length.",
+    "setup": "Lie on your side with the body stacked, bottom arm extended, and top hand resting lightly on the hip.",
     "instructions": [
-      "Begin on the mat in the appropriate standing, seated, or prone position with a neutral spine.",
-      "Begin in a side-lying position with both legs bent or stacked.",
-      "Exhale to lift the torso and reach the top arm overhead.",
-      "Keep the supporting elbow bent and the ribs lifted.",
-      "Inhale to return to the starting position with a long side body."
+      "Lie on your side with the body stacked, bottom arm extended, and top hand resting lightly on the hip.",
+      "Inhale to lengthen through the torso and keep the pelvis aligned.",
+      "Exhale to lift the top hand overhead and side bend without losing the side-body length.",
+      "Keep the bottom hip stacked and the ribs lifted throughout the motion.",
+      "Inhale to return to the starting position with a long side body.",
+      [
+        "Regression: Keep the bottom elbow slightly bent and use a smaller side-bend arc.",
+        "Progression: Lengthen the legs more fully while maintaining a strong base on the mat."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -491,7 +567,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on side-body length and oblique engagement",
+    "safetyNote": "Keep the hips stacked and the spine long; avoid collapsing the lower ribs into the mat."
   },
   {
     "id": "boomerang",
@@ -511,14 +589,18 @@
     ],
     "equipment": "Mat",
     "reps": "4–6 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to roll back and up, inhale to steady, and exhale to roll down with control.",
+    "setup": "Sit with legs crossed, spine tall, arms reaching forward, and shoulders relaxed.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Begin seated with the legs crossed and arms reaching forward.",
+      "Sit with legs crossed, spine tall, arms reaching forward, and shoulders relaxed.",
+      "Inhale to prepare, draw the ribs down, and engage the abdominals.",
       "Exhale to roll back slightly, then inhale as you lift into the boomerang shape.",
-      "Keep the spine long and the legs engaged behind you.",
-      "Exhale to roll down and unwrap the legs with control."
+      "Keep the spine long and the legs active behind you as you balance.",
+      "Exhale to roll down and unwrap the legs with control, maintaining the length through the spine.",
+      [
+        "Regression: Practice teaser and roll-up prep first, and keep the rotation smaller.",
+        "Progression: Increase the leg switch speed while maintaining control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -529,7 +611,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on balance, coordination, and full-body integration",
+    "safetyNote": "Move with steady breath and control; keep the spine long and avoid compressing the lumbar spine during the roll-through."
   },
   {
     "id": "swan",
@@ -556,7 +640,11 @@
       "Begin prone with the legs long and the hands under the shoulders.",
       "Inhale to prepare and lengthen through the spine.",
       "Exhale to lift the chest and chestbone while keeping the hips grounded.",
-      "Inhale at the top, then exhale to lower back down slowly."
+      "Inhale at the top, then exhale to lower back down slowly.",
+      [
+        "Regression: Keep the forearms on the mat and lift only as far as comfortable.",
+        "Progression: Extend the arms further and lift higher while keeping the neck long."
+      ]
     ],
     "commonMistakes": [
       "Lifting from the lower back instead of lengthening through the upper spine.",
@@ -566,7 +654,9 @@
       "Spinal extensors",
       "Glutes",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension and spinal articulation",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "swan_prep",
@@ -593,7 +683,11 @@
       "Start prone with the elbows bent and hands under the shoulders.",
       "Inhale to draw the shoulder blades together and lengthen the spine.",
       "Exhale to lift the chest slightly with control.",
-      "Inhale to lower back down while keeping the neck long."
+      "Inhale to lower back down while keeping the neck long.",
+      [
+        "Regression: Keep the forearms on the mat and lift only a few inches.",
+        "Progression: Move toward full arm extension while keeping the ribs lifted."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -605,7 +699,9 @@
       "Spinal extensors",
       "Glutes",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal extension preparation and shoulder stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "swan_dive",
@@ -632,7 +728,11 @@
       "Start prone with the forehead on the mat and arms extended forward.",
       "Inhale to prepare and extend the spine.",
       "Exhale to lift the chest and legs into a gentle backbend.",
-      "Inhale to lower down slowly while maintaining control."
+      "Inhale to lower down slowly while maintaining control.",
+      [
+        "Regression: Keep the chest lower and lift only as high as the back can support.",
+        "Progression: Lift higher and extend the spine more fully in the glide."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -644,7 +744,9 @@
       "Spinal extensors",
       "Hamstrings",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension and posterior chain strengthening",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "swimming",
@@ -671,7 +773,11 @@
       "Lift the head, chest, and legs slightly off the mat.",
       "Extend opposite arm and leg in a swimming pattern.",
       "Keep the abdominals engaged and the neck long.",
-      "Exhale as one arm and opposite leg reach back, then switch sides."
+      "Exhale as one arm and opposite leg reach back, then switch sides.",
+      [
+        "Regression: Alternate arm and leg lifts rather than lifting all limbs at once.",
+        "Progression: Lift both arms and legs higher while maintaining a long spine."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -682,7 +788,9 @@
       "Spinal extensors",
       "Glutes",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extensors and shoulder stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "shoulder_bridge",
@@ -709,7 +817,11 @@
       "Press into the feet and lift the hips into a bridge.",
       "Keep the shoulders and upper back grounded while the pelvis lifts.",
       "Inhale at the top, then exhale to roll the spine down slowly.",
-      "Maintain the abdominals and avoid letting the knees fall outward."
+      "Maintain the abdominals and avoid letting the knees fall outward.",
+      [
+        "Regression: Keep the hips lower and use hands for support if needed.",
+        "Progression: Lift higher into the bridge with stronger hamstring engagement."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -721,7 +833,9 @@
       "Glutes",
       "Hamstrings",
       "Spinal erectors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal articulation and glute activation",
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
   },
   {
     "id": "leg_pull_front",
@@ -748,7 +862,11 @@
       "Hold a strong front plank with the shoulders over the wrists.",
       "Exhale to lift one leg while keeping the body in a straight line.",
       "Keep the hips level and the core stable.",
-      "Inhale to lower the leg and repeat on the opposite side."
+      "Inhale to lower the leg and repeat on the opposite side.",
+      [
+        "Regression: Drop the knees to the mat and shorten the plank position.",
+        "Progression: Work toward a full straight-leg plank with a longer hold."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -759,7 +877,9 @@
       "Shoulders",
       "Abdominals",
       "Glutes"
-    ]
+    ],
+    "keyTakeaway": "Focus on core power and shoulder stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "leg_pull_back",
@@ -786,7 +906,11 @@
       "Begin in a prone position with hands under the shoulders.",
       "Inhale to prepare and press the hands into the mat.",
       "Exhale to lift one leg and extend it behind you.",
-      "Keep the pelvis stable and the head aligned with the spine."
+      "Keep the pelvis stable and the head aligned with the spine.",
+      [
+        "Regression: Keep the knees bent or start on the elbows to reduce load.",
+        "Progression: Progress to full straight legs with a stable pelvis."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -798,7 +922,9 @@
       "Glutes",
       "Hamstrings",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on posterior chain control and extension",
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
   },
   {
     "id": "side_kick",
@@ -825,7 +951,11 @@
       "Lie on your side with the body in a straight line.",
       "Exhale to lift the top leg while keeping the hips stacked.",
       "Inhale to lower the leg with control.",
-      "Repeat the kicking motion with steady breath."
+      "Repeat the kicking motion with steady breath.",
+      [
+        "Regression: Keep the top leg lower and use smaller movements until control improves.",
+        "Progression: Straighten the top leg and lift it higher with precision."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -837,7 +967,9 @@
       "Hip abductors",
       "Hamstrings",
       "Obliques"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip stability and side-body control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "side_kick_series",
@@ -864,7 +996,11 @@
       "Begin on your side with the legs stacked and the torso stable.",
       "Perform the series of kicks and circles while keeping the supporting side long.",
       "Exhale during the lifting and circling phases.",
-      "Inhale as you reposition for the next movement."
+      "Inhale as you reposition for the next movement.",
+      [
+        "Regression: Keep the kicks smaller and support the head with the upper hand.",
+        "Progression: Increase leg height and lengthen the range of motion."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -876,7 +1012,9 @@
       "Hip abductors",
       "Glutes",
       "Obliques"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip stability and leg control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "seal",
@@ -903,7 +1041,11 @@
       "Sit with the feet together and hands holding the ankles.",
       "Round the spine and take a deep inhale.",
       "Exhale to rock back onto the shoulders, keeping the knees together.",
-      "Inhale to roll forward and clap the heels gently before repeating."
+      "Inhale to roll forward and clap the heels gently before repeating.",
+      [
+        "Regression: Keep the feet closer together and use smaller rocks.",
+        "Progression: Rock with a slightly larger base of support and longer hold between rocks."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -914,7 +1056,9 @@
       "Abdominals",
       "Hip flexors",
       "Spine stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on spine articulation and balance",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "crab",
@@ -941,7 +1085,11 @@
       "Sit with the knees bent and the hands behind you for support.",
       "Inhale and shift your weight back slightly on the shoulder blades.",
       "Exhale to lift the hips and lift one leg in the air with control.",
-      "Inhale to lower the leg and repeat on the other side, keeping the pelvis stable."
+      "Inhale to lower the leg and repeat on the other side, keeping the pelvis stable.",
+      [
+        "Regression: Make the leg circles smaller and keep the shoulders grounded.",
+        "Progression: Perform larger leg circles with more control through the hip joint."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -952,7 +1100,9 @@
       "Abdominals",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on core strength and spinal mobility",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "rocking",
@@ -979,7 +1129,11 @@
       "Hold the feet or shins and begin with a rounded spine.",
       "Exhale to rock back and then inhale to roll forward into balance.",
       "Keep the movement smooth and controlled.",
-      "Maintain the breath and avoid lifting the shoulders."
+      "Maintain the breath and avoid lifting the shoulders.",
+      [
+        "Regression: Keep the legs closer together and use smaller rolls.",
+        "Progression: Increase the roll height and pause at the top with control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -990,7 +1144,9 @@
       "Abdominals",
       "Hip flexors",
       "Spinal stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobility and balance",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "control_balance",
@@ -1017,7 +1173,11 @@
       "Start lying on your back with the legs lifted toward the ceiling.",
       "Inhale to prepare and lengthen through the spine.",
       "Exhale to roll up and reach the legs toward the ceiling with control.",
-      "Inhale to lower back down slowly without dropping the legs."
+      "Inhale to lower back down slowly without dropping the legs.",
+      [
+        "Regression: Keep one leg lower and use the hands lightly for balance if needed.",
+        "Progression: Straighten both legs more fully with a controlled lift."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1029,7 +1189,9 @@
       "Shoulders",
       "Glutes",
       "Spinal extensors"
-    ]
+    ],
+    "keyTakeaway": "Focus on balance and lower back control",
+    "safetyNote": "Move with control and steady breathing; choose a regression if balance or coordination falters."
   },
   {
     "id": "scissors",
@@ -1056,7 +1218,11 @@
       "Lift one leg toward the ceiling while drawing the other leg toward the chest.",
       "Exhale to switch the legs in a controlled scissors motion.",
       "Keep the lower back pressed into the mat throughout.",
-      "Inhale before each switch and use the breath to keep the movement steady."
+      "Inhale before each switch and use the breath to keep the movement steady.",
+      [
+        "Regression: Keep the head down and bend the lower knee slightly.",
+        "Progression: Straighten both legs more and lower the bottom leg closer to the mat."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1068,7 +1234,9 @@
       "Abdominals",
       "Hip flexors",
       "Hamstrings"
-    ]
+    ],
+    "keyTakeaway": "Focus on hamstring stretch and core stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "bicycle",
@@ -1095,7 +1263,11 @@
       "Lift the head and shoulders and bring one knee toward the chest.",
       "Exhale as you extend the opposite leg and twist the torso slightly.",
       "Inhale to switch legs while keeping the abdominals engaged.",
-      "Move with a steady rhythm and avoid pulling on the neck."
+      "Move with a steady rhythm and avoid pulling on the neck.",
+      [
+        "Regression: Keep the lower leg higher and move more slowly for better control.",
+        "Progression: Increase the range of motion and keep the breath steady."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1107,7 +1279,9 @@
       "Abdominals",
       "Hip flexors",
       "Quadriceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on core endurance and hip mobility",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "one_leg_circle",
@@ -1134,7 +1308,11 @@
       "Lift one leg toward the ceiling and stabilize the hips.",
       "Exhale to circle the leg outward and around with control.",
       "Keep the pelvis level and the supporting leg steady.",
-      "Inhale as the leg returns to the starting position."
+      "Inhale as the leg returns to the starting position.",
+      [
+        "Regression: Bend the supporting knee slightly and use smaller circles.",
+        "Progression: Perform larger circles with a longer supporting leg."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1146,7 +1324,9 @@
       "Hip flexors",
       "Adductors",
       "Abdominals"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip mobility and pelvic stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "single_leg_stretch",
@@ -1173,7 +1353,11 @@
       "Grip one shin and pull the knee toward the chest.",
       "Exhale as you switch legs while keeping the shoulders lifted.",
       "Keep the lower back anchored to the mat.",
-      "Inhale as you alternate legs with controlled breath."
+      "Inhale as you alternate legs with controlled breath.",
+      [
+        "Regression: Keep the head down and work one leg at a time with smaller range.",
+        "Progression: Extend the legs farther and increase coordination with breath."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1184,7 +1368,9 @@
       "Abdominals",
       "Hip flexors",
       "Quadriceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on core coordination and hip flexor control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "double_leg_stretch",
@@ -1211,7 +1397,11 @@
       "Hold both shins and draw the knees into the chest.",
       "Exhale to extend the arms and legs away from the body.",
       "Inhale to circle the arms back and pull the knees in.",
-      "Keep the neck long and the abdominals engaged throughout."
+      "Keep the neck long and the abdominals engaged throughout.",
+      [
+        "Regression: Keep the head down and use a smaller arm and leg circle.",
+        "Progression: Extend the arms overhead and lower the legs deeper with control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1222,7 +1412,9 @@
       "Abdominals",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on whole-body coordination and abdominal support",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "open_leg_rocker",
@@ -1249,7 +1441,11 @@
       "Balance on the sit bones with the legs in a wide V.",
       "Exhale to rock back onto the shoulders while keeping the spine rounded.",
       "Inhale to balance up and straighten the legs slightly.",
-      "Keep the chest lifted and the movement controlled."
+      "Keep the chest lifted and the movement controlled.",
+      [
+        "Regression: Use a smaller rocking range and practice teaser prep first.",
+        "Progression: Increase the rocking height and balance with a longer hold at the top."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1260,7 +1456,9 @@
       "Abdominals",
       "Hamstrings",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on core balance and spinal articulation",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "hip_circles",
@@ -1280,14 +1478,18 @@
     ],
     "equipment": "Mat",
     "reps": "6–8 repetitions",
-    "breathing": "Exhale to initiate the movement, inhale to return with control.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale through the circle, inhale as you return to center.",
+    "setup": "Lie supine with one leg lifted toward the ceiling, arms by your sides, and the lower back anchored.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Lift one leg and begin circling it slowly in the hip socket.",
-      "Exhale as you move through the circle and inhale as you return to the start.",
-      "Keep the supporting pelvis stable and the movement small.",
-      "Repeat in both directions with control."
+      "Lie supine with one leg lifted toward the ceiling, arms by your sides, and the lower back anchored.",
+      "Inhale to prepare and keep the pelvis stable.",
+      "Exhale to circle the lifted leg slowly through the hip socket, controlling the motion from the core.",
+      "Keep the supporting pelvis steady and the torso neutral.",
+      "Inhale as the leg returns to the starting position and repeat in the opposite direction.",
+      [
+        "Regression: Use smaller leg swings and keep the hips stable.",
+        "Progression: Increase circle size while keeping the torso still."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1299,7 +1501,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip mobility and core support",
+    "safetyNote": "Keep the lower back pressed into the mat and the movement contained to the hip socket; avoid swinging from the torso."
   },
   {
     "id": "hip_twist",
@@ -1319,14 +1523,18 @@
     ],
     "equipment": "Mat",
     "reps": "6–8 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
+    "breathing": "Exhale to twist the legs, inhale to return to center with control.",
+    "setup": "Lie supine with legs vertical, arms by your sides, and the lower back anchored to the mat.",
     "instructions": [
-      "Begin on the mat in the appropriate supine or seated position with the spine neutral.",
-      "Lift the legs overhead and rotate them side to side with control.",
+      "Lie supine with legs vertical, arms by your sides, and the lower back anchored to the mat.",
+      "Inhale to prepare and activate the abdominals.",
+      "Exhale to lower the legs to one side with control, keeping the hips level.",
       "Keep the upper back grounded and the shoulders relaxed.",
-      "Exhale as you twist and inhale as you return to center.",
-      "Move slowly to protect the lower back and maintain core support."
+      "Inhale to return the legs to center, then exhale to lower to the opposite side.",
+      [
+        "Regression: Keep the legs lower and the twist smaller if the lower back feels sensitive.",
+        "Progression: Lift the legs higher and deepen the twist with stable hips."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1337,7 +1545,9 @@
       "Abdominals",
       "Spinal stabilizers",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on core rotation and hip control",
+    "safetyNote": "Keep the lower back anchored and move with small, stable rotations; avoid letting the ribs lift too high."
   },
   {
     "id": "one_leg_kick",
@@ -1364,7 +1574,11 @@
       "Lie prone with the elbows bent and hands under the forehead.",
       "Exhale to kick one heel toward the glutes with a small range of motion.",
       "Keep the head long and the chest lifted slightly.",
-      "Inhale to lower and switch legs with control."
+      "Inhale to lower and switch legs with control.",
+      [
+        "Regression: Keep the knees wider and use smaller kick pulses.",
+        "Progression: Straighten the moving leg more and increase the kick range."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1375,7 +1589,9 @@
       "Hamstrings",
       "Glutes",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on posterior chain strength and shoulder stability",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "double_leg_kick",
@@ -1402,7 +1618,11 @@
       "Lie prone with the hands clasped behind the back.",
       "Inhale to prepare and lengthen through the spine.",
       "Exhale to kick both heels toward the glutes and lift the chest.",
-      "Inhale to lower back down with control."
+      "Inhale to lower back down with control.",
+      [
+        "Regression: Keep the head down and use smaller lifts and kicks.",
+        "Progression: Lift higher and kick stronger with a longer spinal extension."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1413,7 +1633,9 @@
       "Hamstrings",
       "Glutes",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension and coordination",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "knee_stretch",
@@ -1440,7 +1662,11 @@
       "Begin on hands and knees with a neutral spine.",
       "Exhale to round the spine and draw the navel in as you stretch the hips back.",
       "Inhale to lift the chest and return to a flat back.",
-      "Repeat with controlled breath and smooth motion."
+      "Repeat with controlled breath and smooth motion.",
+      [
+        "Regression: Tuck the knees more and keep the hands on the bar for support.",
+        "Progression: Increase the round-back range and deepen the motion."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1451,7 +1677,9 @@
       "Glutes",
       "Hamstrings",
       "Core stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on pelvic stability and leg coordination",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "side_kick_kneeling",
@@ -1478,7 +1706,11 @@
       "Kneel on one knee with the other leg extended to the side.",
       "Exhale to kick the extended leg with control.",
       "Keep the pelvis square and the torso upright.",
-      "Inhale to return the leg and repeat with steady breath."
+      "Inhale to return the leg and repeat with steady breath.",
+      [
+        "Regression: Keep the movements smaller and the supporting hand grounded for extra stability.",
+        "Progression: Increase leg height while maintaining a stable kneeling base."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1490,7 +1722,9 @@
       "Hip abductors",
       "Glutes",
       "Core stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on pelvic stability and hip control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "pelvic_curl",
@@ -1517,7 +1751,11 @@
       "Lie supine with the feet hip-width apart and knees bent.",
       "Exhale to lift the hips and roll the spine up into a bridge.",
       "Hold the top with the abdominals engaged.",
-      "Inhale as you roll the spine down one vertebra at a time."
+      "Inhale as you roll the spine down one vertebra at a time.",
+      [
+        "Regression: Lift only partway and keep the motion small and controlled.",
+        "Progression: Roll through the spine more fully and lift higher into bridge."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1528,7 +1766,9 @@
       "Glutes",
       "Hamstrings",
       "Spinal erectors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal articulation and glute activation",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "shoulder_rolls",
@@ -1555,7 +1795,11 @@
       "Sit or stand tall with the shoulders relaxed.",
       "Inhale to lift the shoulders toward the ears.",
       "Exhale to roll them back and down with control.",
-      "Repeat the circular motion while maintaining a long neck."
+      "Repeat the circular motion while maintaining a long neck.",
+      [
+        "Regression: Keep the circles small and slow if the neck or shoulders feel tight.",
+        "Progression: Increase the circle size gradually while maintaining a relaxed neck."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1566,7 +1810,9 @@
     "primaryMuscles": [
       "Core",
       "Stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on shoulder mobility and upper-back release",
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
   },
   {
     "id": "spine_mobilization",
@@ -1593,7 +1839,11 @@
       "Sit tall with the spine long and the legs extended or bent.",
       "Exhale to round the spine forward while keeping the head aligned.",
       "Inhale to lengthen the spine and return to the starting position.",
-      "Move with control and avoid collapsing at the chest."
+      "Move with control and avoid collapsing at the chest.",
+      [
+        "Regression: Move through a smaller range of motion and keep the breath easy.",
+        "Progression: Increase the depth of the flexion and extension while maintaining control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1603,7 +1853,9 @@
     "primaryMuscles": [
       "Core",
       "Stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobility and core activation",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "seated_side_bend",
@@ -1630,7 +1882,11 @@
       "Sit tall with the legs angled or crossed comfortably.",
       "Exhale to reach the top arm overhead and side bend gently.",
       "Keep the sitting bones grounded and the ribs lifted.",
-      "Inhale to return to center with a long spine."
+      "Inhale to return to center with a long spine.",
+      [
+        "Regression: Keep the bottom hand light on the floor and reach the top arm gently.",
+        "Progression: Reach the top arm farther and lengthen through both sides of the waist."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1641,7 +1897,9 @@
     "primaryMuscles": [
       "Core",
       "Stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on side-body flexibility and breathing",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "breaststroke",
@@ -1668,7 +1926,11 @@
       "Begin prone with the arms extended forward and legs long.",
       "Inhale as you open the arms wide and lift the chest.",
       "Exhale as you draw the elbows back and lengthen the spine.",
-      "Inhale to lower back down with control."
+      "Inhale to lower back down with control.",
+      [
+        "Regression: Keep the head down and use a smaller leg and arm reach.",
+        "Progression: Deepen the arch and lengthen the glide between movements."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1679,7 +1941,9 @@
       "Upper back",
       "Glutes",
       "Hamstrings"
-    ]
+    ],
+    "keyTakeaway": "Focus on posterior chain extension and breath flow",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "push_up",
@@ -1706,7 +1970,11 @@
       "Start in a strong plank with the hands under the shoulders.",
       "Keep the body in one long line from head to heels.",
       "Exhale to bend the elbows and lower the body smoothly.",
-      "Inhale to press back up while keeping the core engaged."
+      "Inhale to press back up while keeping the core engaged.",
+      [
+        "Regression: Keep the knees on the mat and perform the movement from a modified plank if full arm support is too intense.",
+        "Progression: Move to a full mat push-up with slower lowering and lifting once shoulder stability improves."
+      ]
     ],
     "commonMistakes": [
       "Letting the hips sag or hike too high.",
@@ -1716,7 +1984,9 @@
       "Chest",
       "Shoulders",
       "Triceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on shoulder stability, core endurance, and upper-body control",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "footwork",
@@ -1743,7 +2013,11 @@
       "Place both feet on the footbar with the hips and spine aligned.",
       "Exhale to press the carriage away with both legs.",
       "Inhale to bend the knees and control the return.",
-      "Keep the pelvis stable and the knees tracking over the toes."
+      "Keep the pelvis stable and the knees tracking over the toes.",
+      [
+        "Regression: Use lighter springs or a smaller range of motion to reduce knee strain.",
+        "Progression: Increase spring tension gradually as alignment and control improve."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1754,7 +2028,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on reformer leg strength and alignment",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "elephant",
@@ -1781,7 +2057,11 @@
       "Stand on the reformer with the hands on the footbar and hips lifted.",
       "Exhale to push the carriage back while keeping the legs straight.",
       "Inhale as you draw the carriage back in with a long spine.",
-      "Keep the shoulders away from the ears and the core active."
+      "Keep the shoulders away from the ears and the core active.",
+      [
+        "Regression: Shorten the stride and keep the knees soft to reduce hamstring tension.",
+        "Progression: Lengthen the spine and lower the heels closer to the carriage."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1792,7 +2072,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on hamstring stretch and core stabilization",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "mermaid",
@@ -1819,7 +2101,11 @@
       "Sit sideways with one hand on the floor or chair for support.",
       "Exhale to lift the opposite arm and side bend away from the supporting hip.",
       "Keep the ribs lifted and the spine long.",
-      "Inhale to return upright with control."
+      "Inhale to return upright with control.",
+      [
+        "Regression: Keep the pelvis stable and work with a smaller reach if the ribcage or low back is sensitive.",
+        "Progression: Lift the top arm higher and deepen the side bend once the base is stable."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1830,7 +2116,9 @@
       "Obliques",
       "Shoulders",
       "Latissimus"
-    ]
+    ],
+    "keyTakeaway": "Focus on side-body stretch and thoracic mobility",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "push_up_chair",
@@ -1851,13 +2139,17 @@
     "equipment": "Wunda Chair",
     "reps": "6–8 repetitions",
     "breathing": "Inhale to prepare, exhale to press or lift with control.",
-    "setup": "Place hands on the Chair handles and feet on the floor in a plank stance.",
+    "setup": "Set up on the Chair with the pedal springs checked and the spine supported in place.",
     "instructions": [
       "Place hands on the Chair handles and feet on the floor in a plank stance.",
       "Begin with the hands on the chair and the body in a straight line.",
       "Exhale to bend the elbows and lower toward the seat.",
       "Keep the shoulders stable and the elbows close to the ribs.",
-      "Inhale to press back up with control."
+      "Inhale to press back up with control.",
+      [
+        "Regression: Use a lower spring tension or keep the hands on a stable surface if the chair feels unstable.",
+        "Progression: Increase the load gradually by pressing more fully through the arms with a steady torso."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1869,7 +2161,9 @@
       "Chest",
       "Shoulders",
       "Triceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on shoulder stability and arm strength",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "teaser_chair",
@@ -1896,7 +2190,11 @@
       "Sit on the chair with the spine long and the legs supported.",
       "Exhale to curl the torso up while reaching the arms forward.",
       "Keep the pelvis grounded and the abs engaged.",
-      "Inhale to return to the seated position with control."
+      "Inhale to return to the seated position with control.",
+      [
+        "Regression: Keep the knees bent and lift only as far as comfortable.",
+        "Progression: Extend the legs further and lengthen the spine as abdominal control improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1907,7 +2205,9 @@
       "Abdominals",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on core strength and balance",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "push_through",
@@ -1928,13 +2228,17 @@
     "equipment": "Cadillac",
     "reps": "6–8 repetitions",
     "breathing": "Inhale to prepare, exhale to press or lift with control.",
-    "setup": "Lie supine on the Cadillac with hands on the roll-down bar and feet on the carriage.",
+    "setup": "Lie supine on the Cadillac with the tower springs set and the spine supported.",
     "instructions": [
       "Lie supine on the Cadillac with hands on the roll-down bar and feet on the carriage.",
       "Lie supine with the feet on the footbar and the hands holding the handles.",
       "Exhale to press the carriage away while keeping the hips lifted.",
       "Control the movement through the legs and core.",
-      "Inhale as you return the carriage with a long spine."
+      "Inhale as you return the carriage with a long spine.",
+      [
+        "Regression: Use lighter springs and a smaller hinge range on the Cadillac.",
+        "Progression: Deepen the hinge and extend the shoulder line more fully."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1946,7 +2250,9 @@
       "Shoulders",
       "Triceps",
       "Upper back"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension and shoulder strength",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "magic_circle_press",
@@ -1967,13 +2273,17 @@
     "equipment": "Magic Circle",
     "reps": "8–10 repetitions",
     "breathing": "Inhale to prepare, exhale to press or lift with control.",
-    "setup": "Sit or lie with the circle between the hands or legs depending on the exercise.",
+    "setup": "Sit with the Magic Circle lightly between the hands or inner thighs, spine long, shoulders relaxed, and the pelvic floor engaged. Keep the ribs softened and the arms active through the ring.",
     "instructions": [
-      "Sit or lie with the circle between the hands or legs depending on the exercise.",
-      "Place the magic circle between the hands or legs in the starting position.",
-      "Inhale to prepare and lengthen through the spine.",
-      "Exhale to press the ring gently and engage the targeted muscles.",
-      "Keep the shoulders relaxed and the core active."
+      "Sit tall with the Magic Circle held between the hands or inner thighs, feet flexed and weight balanced through the sit bones.",
+      "Inhale to lengthen the spine, soften the shoulders, and draw the ribs slightly toward the center.",
+      "Exhale to press the ring gently while keeping the pelvic floor engaged and the shoulder blades wide.",
+      "Hold the press for one breath with the powerhouse stable and the neck long.",
+      "Inhale to release the ring with control and maintain the core connection before the next repetition.",
+      [
+        "Regression: Keep the knees bent and place the circle lower for a gentler press.",
+        "Progression: Lift the circle higher and hold the squeeze longer with stronger abdominal support."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -1985,7 +2295,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on inner thigh strength and upper body compression",
+    "safetyNote": "Keep the shoulders soft, avoid gripping the ring too hard, and stop if the wrists or neck become tense."
   },
   {
     "id": "short_spine_massage",
@@ -2012,7 +2324,11 @@
       "Lie supine with the feet on the footbar and the pelvis stable.",
       "Exhale to roll the hips up and over into the short spine position.",
       "Keep the legs strong and the spine articulated.",
-      "Inhale to roll the spine back down with control."
+      "Inhale to roll the spine back down with control.",
+      [
+        "Regression: Keep the legs lower and move slowly through the circle while maintaining breath.",
+        "Progression: Use a slightly larger leg circle once spinal control is strong."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2023,7 +2339,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobilization and hamstring length",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "knee_stretch_series",
@@ -2050,7 +2368,11 @@
       "Kneel on the carriage with hands on the footbar and spine neutral.",
       "Exhale to round the spine and slide the carriage back slightly.",
       "Inhale to flatten the back and return to the starting position.",
-      "Keep the movement smooth and controlled through the spine."
+      "Keep the movement smooth and controlled through the spine.",
+      [
+        "Regression: Use a softer spring setting to reduce hip and knee pressure.",
+        "Progression: Increase the carriage range gradually while keeping the trunk stable."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2061,7 +2383,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on pelvic stability and posterior chain control",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "long_box_series",
@@ -2088,7 +2412,11 @@
       "Lie prone on the long box with the shoulders aligned over the footbar.",
       "Perform each component of the series with stable shoulder support.",
       "Exhale to move through each exercise and inhale to recover.",
-      "Keep the spine long and the core engaged throughout."
+      "Keep the spine long and the core engaged throughout.",
+      [
+        "Regression: Use lighter springs and keep the head in line with the spine during reach.",
+        "Progression: Add longer arms or leg lifts once the back support is comfortable."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2099,7 +2427,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on upper body strength and spinal support",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "coordination",
@@ -2126,7 +2456,11 @@
       "Lie supine with the head slightly lifted and the legs in tabletop.",
       "Inhale to open the arms wide and lengthen the legs forward.",
       "Exhale to circle the arms back and bring the knees in.",
-      "Keep the abdominals engaged and the movement fluid."
+      "Keep the abdominals engaged and the movement fluid.",
+      [
+        "Regression: Use a lighter spring and smaller arm movements if rhythm is difficult.",
+        "Progression: Gradually deepen each leg extension and arm movement while keeping the carriage smooth."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2137,7 +2471,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on timing, core support, and breath coordination",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "tendon_stretch",
@@ -2164,7 +2500,11 @@
       "Stand with the feet on the footbar and the hands holding the handles.",
       "Exhale to press the carriage away while keeping the legs straight.",
       "Inhale as you return with control and length through the spine.",
-      "Keep the shoulders stable and the core active."
+      "Keep the shoulders stable and the core active.",
+      [
+        "Regression: Keep the legs lower and the hips stable if the hamstrings feel tight.",
+        "Progression: Work toward a fuller ankle stretch with a steady spine and controlled shoulder position."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2175,7 +2515,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on leg tendon stretch and shoulder support",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "long_spine_massage",
@@ -2202,7 +2544,11 @@
       "Lie supine with the hips stacked and legs long in the straps.",
       "Inhale to prepare and lengthen through the spine.",
       "Exhale to lift the hips into a long spine position.",
-      "Inhale to lower back down with control, maintaining core support."
+      "Inhale to lower back down with control, maintaining core support.",
+      [
+        "Regression: Keep the legs lower and less inverted if the hamstrings or back feel sensitive.",
+        "Progression: Increase the circle height once spinal control is secure."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2213,7 +2559,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobilization and hip control",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "stomach_massage_round_back",
@@ -2240,7 +2588,11 @@
       "Sit on the reformer with the spine rounded and hands on the footbar.",
       "Exhale to push the carriage away and maintain the rounded spinal shape.",
       "Inhale as you return and keep the hips and shoulders aligned.",
-      "Repeat with steady breath and controlled motion."
+      "Repeat with steady breath and controlled motion.",
+      [
+        "Regression: Use lighter springs and keep a short range of motion if the abdominals feel sensitive.",
+        "Progression: Increase the range of movement and work toward a longer carriage cycle with controlled breath."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2252,7 +2604,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on core stability and articulated spine control",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "stomach_massage_flat_back",
@@ -2279,7 +2633,11 @@
       "Sit tall on the reformer with a flat back and feet on the footbar.",
       "Exhale to press the carriage away while keeping the spine long.",
       "Inhale to return with control and maintain spinal alignment.",
-      "Keep the core engaged and the shoulders relaxed."
+      "Keep the core engaged and the shoulders relaxed.",
+      [
+        "Regression: Shorten the range of motion and keep the head relaxed to avoid neck strain.",
+        "Progression: Increase the carriage range and coordinate with breathing for smoother transitions."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2291,7 +2649,9 @@
       "Core stabilizers",
       "Upper back",
       "Leg muscles"
-    ]
+    ],
+    "keyTakeaway": "Focus on core endurance and neutral spine support",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "roll_down_bar",
@@ -2312,13 +2672,17 @@
     "equipment": "Cadillac",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate the movement, inhale to return with control.",
-    "setup": "Sit facing the roll-down bar with feet anchored or on the mat.",
+    "setup": "Sit on the Cadillac with the feet grounded and the appropriate springs attached for the exercise.",
     "instructions": [
       "Sit facing the roll-down bar with feet anchored or on the mat.",
       "Stand with the bar in your hands and the spine long.",
       "Exhale to roll down from the head to the tailbone while holding the bar.",
       "Keep the arms relaxed and the abdominal support active.",
-      "Inhale as you roll back up with control."
+      "Inhale as you roll back up with control.",
+      [
+        "Regression: Start with a smaller range and keep the shoulders relaxed away from the ears.",
+        "Progression: Increase the roll-down depth with a slower cadence."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2330,7 +2694,9 @@
       "Abdominals",
       "Spinal extensors",
       "Latissimus"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal articulation and shoulder stability",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "arm_springs",
@@ -2357,7 +2723,11 @@
       "Sit or stand with the arm springs attached and the shoulders relaxed.",
       "Exhale to move the arms through the spring resistance.",
       "Keep the elbows soft and the shoulder blades stable.",
-      "Inhale as you return to the starting position with control."
+      "Inhale as you return to the starting position with control.",
+      [
+        "Regression: Use lighter springs and keep the elbows slightly bent to reduce strain.",
+        "Progression: Increase the range of motion and add slower transitions for more shoulder control."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2368,7 +2738,9 @@
       "Shoulders",
       "Upper back",
       "Triceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on shoulder strength and scapular stability",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "leg_springs",
@@ -2395,7 +2767,11 @@
       "Lie supine with the legs in the springs and the spine long.",
       "Exhale to move the legs through the range of motion with control.",
       "Keep the pelvis stable and the lower back anchored.",
-      "Inhale to reset the legs for the next repetition."
+      "Inhale to reset the legs for the next repetition.",
+      [
+        "Regression: Use lighter spring tension and keep the movement slow if the hips feel sensitive.",
+        "Progression: Increase the spring tension gradually as control improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2406,7 +2782,9 @@
       "Hamstrings",
       "Glutes",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip stability and leg strength",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "pilates_ring_squeeze",
@@ -2427,13 +2805,17 @@
     "equipment": "Magic Circle",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Sit or lie with the ring placed between the hands or legs as directed.",
+    "setup": "Sit or lie with the Pilates ring positioned between the hands or legs, spine long, and the breath calm.",
     "instructions": [
-      "Sit or lie with the ring placed between the hands or legs as directed.",
-      "Place the ring between the hands or legs as directed.",
-      "Exhale to press the ring gently and activate the target muscles.",
-      "Maintain even pressure and avoid gripping too tightly.",
-      "Inhale as you release and prepare for the next repetition."
+      "Sit tall or lie supine with the Pilates ring positioned between your hands or legs.",
+      "Inhale to prepare and lengthen the spine while keeping the shoulders relaxed.",
+      "Exhale to press the ring gently, engaging the inner thighs or upper arms without squeezing the shoulders.",
+      "Keep the muscles active but avoid locking the joints.",
+      "Inhale to release the pressure slowly and reset for the next repetition.",
+      [
+        "Regression: Use a lighter squeeze and focus on keeping the pelvis stable.",
+        "Progression: Increase the squeeze resistance as control improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2444,7 +2826,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on inner thigh strength and upper body stability",
+    "safetyNote": "Avoid gripping the ring too hard and keep the shoulders relaxed; stop if you feel wrist or neck discomfort."
   },
   {
     "id": "ball_roll",
@@ -2465,13 +2849,17 @@
     "equipment": "Stability Ball",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate the movement, inhale to return with control.",
-    "setup": "Sit on the stability ball with feet grounded and spine neutral.",
+    "setup": "Sit on the stability ball with feet grounded, spine neutral, and weight evenly distributed through the sit bones.",
     "instructions": [
-      "Sit on the stability ball with feet grounded and spine neutral.",
-      "Position the ball under the body or legs, depending on the exercise.",
-      "Exhale to roll or press into the ball with steady control.",
-      "Keep the spine long and the core engaged.",
-      "Inhale as you return to the starting position."
+      "Sit on the stability ball with feet grounded, knees soft, and the spine long.",
+      "Press evenly into the feet and engage the deep core before moving.",
+      "Exhale to roll the ball slightly with the feet or legs while keeping the pelvis stable.",
+      "Keep the spine neutral and the abdominal support active throughout.",
+      "Inhale as you return to the starting position with balance and control.",
+      [
+        "Regression: Use a smaller ball and keep the legs closer to the body for greater support.",
+        "Progression: Roll with longer legs or a larger ball once control improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2483,7 +2871,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on core stability and spinal articulation",
+    "safetyNote": "Keep the hips level and the core engaged; stop if the ball feels unstable or if your lower back rounds."
   },
   {
     "id": "band_arm_series",
@@ -2504,13 +2894,17 @@
     "equipment": "Resistance Band",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Stand or sit with the band looped around the hands and arms extended.",
+    "setup": "Sit or stand with the resistance band looped evenly around both hands, arms extended, shoulders down, and spine tall.",
     "instructions": [
-      "Stand or sit with the band looped around the hands and arms extended.",
-      "Hold the band with even tension and good shoulder alignment.",
-      "Exhale to move the arms through the series of exercises.",
-      "Keep the breath steady and the spine tall.",
-      "Inhale as you return to the starting position between reps."
+      "Sit or stand with the resistance band looped evenly around both hands and the spine tall.",
+      "Inhale to prepare with the shoulders down and the chest open.",
+      "Exhale to move the arms through the exercise pattern, keeping the breath steady.",
+      "Keep the shoulder blades stable and the core engaged during the motion.",
+      "Inhale to return to the starting position with control.",
+      [
+        "Regression: Use lighter band tension and keep the movements small if the shoulders are sensitive.",
+        "Progression: Increase band tension or add longer reaches as control improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2521,7 +2915,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on upper body strength and scapular stability",
+    "safetyNote": "Keep the band tension even, avoid shrugging the shoulders, and stop if you feel any joint pain."
   },
   {
     "id": "single_straight_leg_stretch",
@@ -2548,7 +2944,11 @@
       "Lift one leg toward the ceiling while maintaining the other leg on the mat.",
       "Exhale to lower the lifted leg with control and keep the pelvis stable.",
       "Inhale to lift and switch legs smoothly.",
-      "Keep the shoulders relaxed and the lower back grounded."
+      "Keep the shoulders relaxed and the lower back grounded.",
+      [
+        "Regression: Keep the head on the mat and reduce the leg range if the lower back arches.",
+        "Progression: Lower both legs closer to the mat while keeping the pelvis stable."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2559,7 +2959,9 @@
       "Abdominals",
       "Hamstrings",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on lower abdominal strength and hip flexor engagement",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "double_straight_leg_stretch",
@@ -2586,7 +2988,11 @@
       "Hold both legs together and lift them slightly off the mat.",
       "Exhale to lower the legs toward the floor with a long spine.",
       "Inhale to lift them back up and maintain core engagement.",
-      "Keep the movement controlled and avoid arching the lower back."
+      "Keep the movement controlled and avoid arching the lower back.",
+      [
+        "Regression: Keep the hands behind the head for neck support and raise the legs higher.",
+        "Progression: Lower the legs progressively closer to the mat while keeping the spine imprinted."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2597,7 +3003,9 @@
       "Abdominals",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on lower abdominal and deep core strength",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "criss_cross",
@@ -2624,7 +3032,11 @@
       "Lift the head and shoulders and draw one knee toward the chest.",
       "Exhale to twist the opposite elbow toward the knee.",
       "Inhale as you switch sides with control.",
-      "Keep the ribs pulled in and avoid pulling on the neck."
+      "Keep the ribs pulled in and avoid pulling on the neck.",
+      [
+        "Regression: Keep the twisting range small and avoid pulling the neck with the hands.",
+        "Progression: Extend the bottom leg lower while maintaining the rotation to increase core demand."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2635,7 +3047,9 @@
       "Obliques",
       "Abdominals",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on oblique strength and spinal rotation",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "plank",
@@ -2662,7 +3076,11 @@
       "Press firmly into the hands and feet with the body in a straight line.",
       "Keep the abdominals engaged and the back flat.",
       "Breathe steadily as you hold the position.",
-      "Avoid letting the hips sag or the shoulders creep toward the ears."
+      "Avoid letting the hips sag or the shoulders creep toward the ears.",
+      [
+        "Regression: Drop to the knees to reduce the load on the core and shoulders.",
+        "Progression: Add a single-arm or single-leg lift while maintaining a stable plank."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2674,7 +3092,9 @@
       "Core",
       "Shoulders",
       "Back"
-    ]
+    ],
+    "keyTakeaway": "Focus on core endurance and full-body alignment",
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
   },
   {
     "id": "rowing_series",
@@ -2701,7 +3121,11 @@
       "Sit tall with the feet on the footbar and hands on the straps.",
       "Exhale to pull the straps while keeping the elbows close to the body.",
       "Inhale to extend the arms and recover with a long spine.",
-      "Keep the breath even and the shoulders stable."
+      "Keep the breath even and the shoulders stable.",
+      [
+        "Regression: Use lighter spring resistance and reduce the range of arm motion initially.",
+        "Progression: Add a forward hinge and reach at the end of each pulling pattern."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2712,7 +3136,9 @@
       "Upper back",
       "Shoulders",
       "Biceps"
-    ]
+    ],
+    "keyTakeaway": "Focus on back strength, shoulder mobility, and upright posture",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "short_box_series",
@@ -2735,11 +3161,15 @@
     "breathing": "Exhale to initiate, inhale to release and reset.",
     "setup": "Sit on the short box with feet against the footbar and spine tall.",
     "instructions": [
-      "Sit on the short box with feet against the footbar and spine tall.",
-      "Sit on the box with the feet anchored and the spine long.",
-      "Move through each exercise variation with control and alignment.",
-      "Exhale as you come into each position and inhale as you recover.",
-      "Keep the core active and avoid collapsing through the rib cage."
+      "Sit on the short box with feet against the footbar, knees soft, and spine tall.",
+      "Inhale to lift through the crown and keep the ribs drawing down.",
+      "Exhale to move through each variation with controlled spinal articulation and stable hips.",
+      "Keep the core engaged and the shoulders relaxed as you rotate or side bend.",
+      "Inhale to return to center with a long spine and evenly grounded sit bones.",
+      [
+        "Regression: Reduce the range in each direction and keep hands lightly touching the box for support.",
+        "Progression: Add a full side bend or twist with arm reach to deepen the range."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2750,7 +3180,9 @@
       "Abdominals",
       "Spinal rotators",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobility in all planes and core control",
+    "safetyNote": "Keep the spine supported through each variation and stop if any twisting movement causes discomfort in the lower back."
   },
   {
     "id": "running_reformer",
@@ -2777,7 +3209,11 @@
       "Stand on the reformer with the shoulders over the hands and carriage stable.",
       "Exhale to press one leg down and inhale as the opposite leg lifts.",
       "Keep the hips level and avoid compressing the lower back.",
-      "Move with controlled rhythm and steady breath."
+      "Move with controlled rhythm and steady breath.",
+      [
+        "Regression: Slow the alternation and focus on controlled heel lowering to ease calf tightness.",
+        "Progression: Increase the speed to a light jogging rhythm while maintaining pelvis stability."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2788,7 +3224,9 @@
       "Calves",
       "Hamstrings",
       "Hip flexors"
-    ]
+    ],
+    "keyTakeaway": "Focus on ankle mobility and lower-leg circulation",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "semi_circle",
@@ -2809,13 +3247,17 @@
     "equipment": "Reformer",
     "reps": "4–6 repetitions",
     "breathing": "Exhale to initiate the movement, inhale to return with control.",
-    "setup": "Lie supine on the long box with your head supported and legs extended overhead.",
+    "setup": "Lie supine on the Reformer with the heels on the footbar, spring tension medium, and the spine long.",
     "instructions": [
       "Lie supine on the long box with your head supported and legs extended overhead.",
       "Lie supine with both legs in the ropes and the hips lifted.",
       "Exhale to circle the legs in a semi-circle while the spine stays long.",
       "Keep the shoulders grounded and the abdominals engaged.",
-      "Inhale as the legs return to the starting position."
+      "Inhale as the legs return to the starting position.",
+      [
+        "Regression: Reduce the range of the arc and keep the hips higher than the knees throughout.",
+        "Progression: Slow the pace to challenge control through the hanging position."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2827,7 +3269,9 @@
       "Spinal extensors",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip extension, spinal articulation, and shoulder stability",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "backstroke",
@@ -2848,13 +3292,17 @@
     "equipment": "Reformer",
     "reps": "6–8 repetitions",
     "breathing": "Inhale to prepare, exhale to lift and lengthen the spine.",
-    "setup": "Lie supine on the long box with straps in hand and legs extended overhead.",
+    "setup": "Lie prone on the long box with the hips level, chest supported, and the forehead resting lightly on a cushion. Use a light spring load, arms by the sides or alongside the shoulders, and keep the spine long.",
     "instructions": [
-      "Lie prone on the long box with the arms and legs long.",
-      "Inhale to prepare and lengthen the spine.",
-      "Exhale to lift the chest and swing the arms backward.",
-      "Keep the hips grounded and the legs active.",
-      "Inhale to return the arms forward and lower the legs with control."
+      "Lie prone on the long box with the head neutral, arms long, shoulders wide, and the pelvis anchored.",
+      "Inhale to lengthen the spine and feel the ribs widen evenly across the back.",
+      "Exhale to lift the chest and sweep the arms back with control, keeping the shoulder blades broad and the pelvis stable.",
+      "Keep the legs active and the low ribs drawing in as the arms move.",
+      "Inhale to lower the chest slowly with a long spine, then prepare for the next repetition.",
+      [
+        "Regression: Perform the arms or legs separately before combining the movement.",
+        "Progression: Add a pause at full extension and lengthen the return with steady breath."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2866,7 +3314,9 @@
       "Shoulders",
       "Upper back",
       "Core"
-    ]
+    ],
+    "keyTakeaway": "Focus on chest opening, shoulder mobility, and full-body coordination",
+    "safetyNote": "Support the head lightly and avoid overextending the neck; keep the spine long and the movement controlled."
   },
   {
     "id": "pulling_straps",
@@ -2887,13 +3337,17 @@
     "equipment": "Reformer",
     "reps": "6–8 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Lie prone on the long box with straps in hand and chest lifted slightly.",
+    "setup": "Lie prone on the long box with straps in hand, chest lifted slightly, and the spine long.",
     "instructions": [
-      "Lie prone on the long box with straps in hand and chest lifted slightly.",
-      "Inhale to prepare and lengthen through the spine.",
-      "Exhale to pull the straps toward your hips while keeping the shoulders down.",
-      "Keep the elbows soft and the neck long.",
-      "Inhale to return to the start with control."
+      "Lie prone on the long box with straps in hand, chest lifted slightly, and the spine long.",
+      "Inhale to prepare, broaden the shoulders, and draw the lower ribs in.",
+      "Exhale to pull the straps toward the hips while keeping the scapulae wide and the elbows soft.",
+      "Keep the pelvis stable and the neck long as the chest lifts.",
+      "Inhale to return to the start with control and maintain the breath rhythm.",
+      [
+        "Regression: Keep the lift small and focus on length rather than height.",
+        "Progression: Increase the lift height and hold briefly at the top."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2904,7 +3358,9 @@
       "Upper back",
       "Shoulders",
       "Glutes"
-    ]
+    ],
+    "keyTakeaway": "Focus on back extension strength and posterior shoulder engagement",
+    "safetyNote": "Keep the neck long and avoid compressing the lower back; use lighter spring tension if the lift feels too intense."
   },
   {
     "id": "down_stretch",
@@ -2931,7 +3387,11 @@
       "Sit on the barrel or apparatus with the feet stable and the spine long.",
       "Exhale to fold forward and lengthen through the back.",
       "Keep the core engaged and the shoulders relaxed.",
-      "Inhale to lift back up with control."
+      "Inhale to lift back up with control.",
+      [
+        "Regression: Keep the knees on a pad and limit the range of carriage travel.",
+        "Progression: Increase the carriage travel distance as shoulder stability improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2942,7 +3402,9 @@
       "Shoulders",
       "Spinal extensors",
       "Hamstrings"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal extension and core-to-shoulder stability",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "up_stretch",
@@ -2969,7 +3431,11 @@
       "Lie prone or supine as directed with the body supported.",
       "Inhale to prepare and lengthen the spine.",
       "Exhale to lift and stretch through the arms and legs.",
-      "Inhale to lower back to the starting position."
+      "Inhale to lower back to the starting position.",
+      [
+        "Regression: Bend the knees slightly to reduce hamstring load.",
+        "Progression: Deepen the pike and push the heels back further."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -2980,7 +3446,9 @@
       "Shoulders",
       "Hamstrings",
       "Spinal extensors"
-    ]
+    ],
+    "keyTakeaway": "Focus on hamstring length and scapular stability",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "snake",
@@ -3007,7 +3475,11 @@
       "Inhale to prepare and lengthen through the spine.",
       "Exhale to lift and extend the spine or legs with control.",
       "Keep the shoulders stable and the breath steady.",
-      "Inhale as you return to the starting position."
+      "Inhale as you return to the starting position.",
+      [
+        "Regression: Keep the range small and focus on maintaining a square shoulder position.",
+        "Progression: Increase the carriage travel and hold the side plank briefly at the end range."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3018,7 +3490,9 @@
       "Obliques",
       "Hip abductors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on lateral core stability and rotational strength",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "front_splits",
@@ -3039,13 +3513,17 @@
     "equipment": "Reformer",
     "reps": "4–6 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Stand with one foot on the platform and one foot on the carriage.",
+    "setup": "Stand on the Reformer with one foot on the platform and one foot on the carriage, hips square, spine tall, and spring tension light to medium. Keep the front foot flat and the back heel pressing into the carriage.",
     "instructions": [
-      "Stand with one foot on the platform and one foot on the carriage.",
-      "Stand or kneel with one leg forward and one leg back as directed.",
-      "Exhale to lengthen through the front leg and open the hips.",
-      "Keep the pelvis square and the spine long.",
-      "Inhale to hold the position with even breath."
+      "Stand with the front foot on the platform and the back foot on the carriage, keeping the hips square and the spine tall.",
+      "Inhale to prepare by lengthening through the crown and engaging the lower abdominals.",
+      "Exhale to press the carriage back slowly, maintaining a stable pelvis and active front leg.",
+      "Keep the back heel pressing into the carriage and the front knee tracking over the second toe.",
+      "Inhale to hold the split position with control and even breath, then use the exhale to return the carriage with precision.",
+      [
+        "Regression: Keep the front foot on the platform and limit the lunge depth.",
+        "Progression: Increase the lunge depth and allow the carriage to travel further while keeping the hips square."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3057,7 +3535,9 @@
       "Hip flexors",
       "Quadriceps",
       "Adductors"
-    ]
+    ],
+    "keyTakeaway": "Focus on hip flexor length and standing balance",
+    "safetyNote": "Keep the hips square and avoid letting the back knee drop; stop if the front knee or lower back feels unstable."
   },
   {
     "id": "side_splits",
@@ -3078,13 +3558,17 @@
     "equipment": "Reformer",
     "reps": "4–6 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Stand sideways on the Reformer with one foot on the platform and one on the carriage.",
+    "setup": "Stand sideways on the Reformer with one foot on the platform and one foot on the carriage, feet hip-width apart, springs light, and the spine tall. Keep the pelvis stacked and the shoulders relaxed.",
     "instructions": [
-      "Stand sideways on the Reformer with one foot on the platform and one on the carriage.",
-      "Begin seated or standing with the legs wide apart.",
-      "Exhale to open further into the split with control.",
-      "Keep the spine tall and the hips level.",
-      "Inhale to maintain the stretch and steady the breath."
+      "Stand with one foot on the platform and one foot on the carriage, keeping the hips stacked and the spine tall.",
+      "Inhale to prepare by finding even weight through both feet and drawing the ribs inward.",
+      "Exhale to open the legs apart with control, maintaining a long spine and stable pelvis.",
+      "Keep the knees slightly soft, the hips level, and the shoulders wide as the carriage moves.",
+      "Inhale to hold the open position with steady breath and exhale to close the legs with precision.",
+      [
+        "Regression: Keep the range of movement small and stand close to the footbar for stability.",
+        "Progression: Increase the split range and slow the return to challenge adductor eccentric strength."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3096,7 +3580,9 @@
       "Adductors",
       "Glutes",
       "Core stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on inner thigh length and hip abductor strength",
+    "safetyNote": "Keep the hips level and the spine tall; stop if the inner thigh stretch becomes painful or the carriage feels unstable."
   },
   {
     "id": "overhead_reformer",
@@ -3117,13 +3603,17 @@
     "equipment": "Reformer",
     "reps": "4–6 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Lie supine on the Reformer with legs extended overhead and straps in hand.",
+    "setup": "Lie supine on the Reformer with the heels on the footbar, spring tension medium, and the spine long.",
     "instructions": [
       "Lie supine on the Reformer with legs extended overhead and straps in hand.",
       "Stand or kneel with the hands holding the overhead handles.",
       "Exhale to press the handles up while keeping the shoulders down.",
       "Inhale to lower with control and keep the core engaged.",
-      "Maintain a long line through the spine."
+      "Maintain a long line through the spine.",
+      [
+        "Regression: Keep the legs at 90 degrees and only lift the hips slightly.",
+        "Progression: Work toward a fully vertical leg position while controlling the carriage."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3134,7 +3624,9 @@
       "Abdominals",
       "Shoulders",
       "Spinal extensors"
-    ]
+    ],
+    "keyTakeaway": "Focus on deep core strength and spinal articulation under inversion",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "balance_point",
@@ -3157,11 +3649,15 @@
     "breathing": "Exhale to initiate, inhale to release and reset.",
     "setup": "Sit on the carriage in a V position with straps in hand.",
     "instructions": [
-      "Sit on the carriage in a V position with straps in hand.",
-      "Inhale to prepare and draw the abdominals into the lift.",
-      "Exhale to balance and lift the hips as the legs extend.",
-      "Keep the spine long and the shoulders steady.",
-      "Inhale to lower back down with control."
+      "Sit on the carriage in a V position with straps in hand and the spine long.",
+      "Inhale to prepare, draw the abdominals up, and feel the hip flexors engage.",
+      "Exhale to lift the hips while balancing on the sit bones and extending the legs.",
+      "Keep the shoulders steady and the ribs closed as the carriage moves.",
+      "Inhale to lower the hips with control and maintain the balance position.",
+      [
+        "Regression: Keep the feet lightly touching the footbar for stability.",
+        "Progression: Remove foot contact and balance freely on the carriage."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3173,7 +3669,9 @@
       "Hip flexors",
       "Abdominals",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on balance, core stability, and hip flexor control",
+    "safetyNote": "Move with slow, steady breath and choose a regression if the carriage feels unstable."
   },
   {
     "id": "tower_cadillac",
@@ -3200,7 +3698,11 @@
       "Set up on the Cadillac with the springs and bars positioned safely.",
       "Exhale to move through the exercise while keeping the spine supported.",
       "Inhale to recover with a long and stable posture.",
-      "Keep the breath steady and the shoulders relaxed."
+      "Keep the breath steady and the shoulders relaxed.",
+      [
+        "Regression: Keep the legs slightly bent and avoid pressing past the bar.",
+        "Progression: Press the legs to a fully vertical position and slow the return."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3211,7 +3713,9 @@
       "Core",
       "Hip flexors",
       "Shoulders"
-    ]
+    ],
+    "keyTakeaway": "Focus on core strength and hip flexor coordination",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "cat_stretch_cadillac",
@@ -3232,13 +3736,17 @@
     "equipment": "Cadillac",
     "reps": "8–10 repetitions",
     "breathing": "Inhale to prepare, exhale to lift and lengthen the spine.",
-    "setup": "Kneel facing the Cadillac with hands on the push-through bar.",
+    "setup": "Kneel under the Cadillac with the hands on the bar and the springs adjusted for smooth travel.",
     "instructions": [
       "Kneel facing the Cadillac with hands on the push-through bar.",
       "Begin on all fours under the Cadillac with a neutral spine.",
       "Exhale to round the back and draw the navel in.",
       "Inhale to arch the spine and lengthen through the tailbone.",
-      "Move smoothly between the two positions."
+      "Move smoothly between the two positions.",
+      [
+        "Regression: Keep the range small and focus on one spinal segment at a time.",
+        "Progression: Increase the arc of both flexion and extension."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3249,7 +3757,9 @@
       "Spinal flexors",
       "Spinal extensors",
       "Core"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal flexion and extension mobility",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "hanging_cadillac",
@@ -3270,13 +3780,17 @@
     "equipment": "Cadillac",
     "reps": "8–10 repetitions",
     "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Stand under the Cadillac bar and grasp it with both hands for light traction.",
+    "setup": "Set up on the Cadillac with the springs and bars positioned safely and maintain a supported spine.",
     "instructions": [
       "Stand under the Cadillac bar and grasp it with both hands for light traction.",
       "Hang from the Cadillac with a long spine and relaxed shoulders.",
       "Breathe deeply while allowing the ribs to expand and the spine to lengthen.",
       "Keep the core engaged and avoid holding tension in the neck.",
-      "Inhale and exhale steadily as you maintain the hang."
+      "Inhale and exhale steadily as you maintain the hang.",
+      [
+        "Regression: Keep the feet touching the floor for partial weight support.",
+        "Progression: Lift the feet from the floor and hold a free hang."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3287,7 +3801,9 @@
       "Shoulders",
       "Spine",
       "Core stabilizers"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal decompression and shoulder girdle mobility",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "going_up_front",
@@ -3314,7 +3830,11 @@
       "Start prone with the hands on the handles and the spine long.",
       "Exhale to press the body upward from the front of the apparatus.",
       "Keep the legs active and the shoulders stable.",
-      "Inhale as you lower back down with control."
+      "Inhale as you lower back down with control.",
+      [
+        "Regression: Hold onto the chair handles for support while learning the movement.",
+        "Progression: Release the hands and maintain balance without support."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3325,7 +3845,9 @@
       "Quadriceps",
       "Glutes",
       "Core"
-    ]
+    ],
+    "keyTakeaway": "Focus on single-leg strength and balance",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "going_up_side",
@@ -3352,7 +3874,11 @@
       "Start lying on your side with the hands on the apparatus support.",
       "Exhale to press up from the side while keeping the torso lifted.",
       "Inhale to lower with control and maintain proper alignment.",
-      "Keep the hips stacked and the core engaged."
+      "Keep the hips stacked and the core engaged.",
+      [
+        "Regression: Hold the chair frame and limit the range of the pedal press.",
+        "Progression: Release the hand support to increase the balance challenge."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3364,7 +3890,9 @@
       "Hip abductors",
       "Glutes",
       "Obliques"
-    ]
+    ],
+    "keyTakeaway": "Focus on lateral hip stability and single-leg strength",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "pumping_chair",
@@ -3391,7 +3919,11 @@
       "Sit or stand safely on the chair with the hands on the handles.",
       "Exhale to pump the carriage or springs with coordinated movement.",
       "Keep the shoulders down and the core engaged.",
-      "Inhale between repetitions and maintain a steady rhythm."
+      "Inhale between repetitions and maintain a steady rhythm.",
+      [
+        "Regression: Use a light spring and focus on maintaining an upright spine.",
+        "Progression: Increase the spring resistance as coordination and strength improve."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3402,7 +3934,9 @@
       "Quadriceps",
       "Glutes",
       "Core"
-    ]
+    ],
+    "keyTakeaway": "Focus on core endurance and limb coordination under spring load",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "achilles_stretch_chair",
@@ -3429,7 +3963,11 @@
       "Sit or stand with one foot on the chair pedal and the other foot on the floor.",
       "Exhale to flex the ankle and feel a stretch through the Achilles.",
       "Keep the knee soft and the spine tall.",
-      "Inhale to release and repeat with the other side."
+      "Inhale to release and repeat with the other side.",
+      [
+        "Regression: Keep the stretch gentle and avoid forcing the heel below the pedal.",
+        "Progression: Deepen the heel drop and hold at the end range for longer."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3440,7 +3978,9 @@
       "Calves",
       "Achilles tendon",
       "Ankles"
-    ]
+    ],
+    "keyTakeaway": "Focus on calf and Achilles tendon flexibility",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "foam_roller_series",
@@ -3467,7 +4007,11 @@
       "Position the foam roller as directed and align your body over it.",
       "Exhale to roll or press with control along the roller.",
       "Keep the core engaged and the movements smooth.",
-      "Inhale as you return to the starting position between reps."
+      "Inhale as you return to the starting position between reps.",
+      [
+        "Regression: Perform exercises next to a wall for balance support.",
+        "Progression: Remove wall support and perform exercises in free balance."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3479,7 +4023,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal mobility, balance, and soft tissue release",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   },
   {
     "id": "arc_barrel_series",
@@ -3499,14 +4045,18 @@
     ],
     "equipment": "Arc Barrel",
     "reps": "6–8 repetitions",
-    "breathing": "Exhale to initiate, inhale to release and reset.",
-    "setup": "Position the arc barrel under the thoracic spine or pelvis as directed.",
+    "breathing": "Exhale to move through each variation, inhale to recover with a long spine.",
+    "setup": "Place the arc barrel under the thoracic spine or pelvis, feet grounded, and ensure the body is supported on the curve.",
     "instructions": [
-      "Position the arc barrel under the thoracic spine or pelvis as directed.",
-      "Position yourself on the barrel with the spine supported.",
-      "Exhale to move through the series with controlled alignment.",
-      "Keep the ribs lifted and the core active.",
-      "Inhale as you reset between each variation."
+      "Place the arc barrel under the thoracic spine or pelvis, feet grounded, and ensure the body is supported on the curve.",
+      "Inhale to prepare, lengthen through the spine, and feel the support of the barrel.",
+      "Exhale to move into the first variation with controlled spinal articulation and open shoulders.",
+      "Keep the ribs lifted and the core engaged as you transition into the next movement.",
+      "Inhale to reset with a long spine and stable base before repeating or changing direction.",
+      [
+        "Regression: Reduce the arc amplitude by placing a folded mat under the barrel.",
+        "Progression: Increase the range of extension and side bend as mobility improves."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3517,7 +4067,9 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on spinal extension and lateral flexion range of motion",
+    "safetyNote": "Confirm the arc barrel is stable, keep the core engaged, and avoid overextending the lower back."
   },
   {
     "id": "spine_corrector_series",
@@ -3544,7 +4096,11 @@
       "Lie or sit on the spine corrector with the body supported by the curve.",
       "Exhale to move through each exercise with smooth spinal articulation.",
       "Keep the abdominal support engaged and the shoulders relaxed.",
-      "Inhale to recover and prepare for the next variation."
+      "Inhale to recover and prepare for the next variation.",
+      [
+        "Regression: Keep the range of motion small and avoid compressing the lower back.",
+        "Progression: Add arm circles or leg variations to the foundational exercises."
+      ]
     ],
     "commonMistakes": [
       "Holding the breath instead of breathing continuously.",
@@ -3555,6 +4111,8 @@
       "Core",
       "Stabilizers",
       "Flexibility"
-    ]
+    ],
+    "keyTakeaway": "Focus on postural rebalancing and spinal articulation",
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
   }
 ]

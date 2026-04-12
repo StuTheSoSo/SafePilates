@@ -13,6 +13,31 @@ ion-card {
   line-height: 1.75;
 }
 
+.exercise-takeaway {
+  margin: 0 0 1rem;
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.exercise-takeaway strong {
+  color: var(--ion-color-primary);
+  font-weight: 700;
+}
+
+.exercise-safety {
+  margin: 0 0 1rem;
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-safety strong {
+  color: var(--ion-color-primary);
+  font-weight: 700;
+}
+
 .exercise-meta {
   display: grid;
   gap: 0.4rem;

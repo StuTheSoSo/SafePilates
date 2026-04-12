@@ -9,6 +9,9 @@
 # Ionic/Capacitor build output
 /www
 
+# Capacitor native platform output
+/ios
+
 # Environment files containing secrets
 /src/environments/environment.ts
 /src/environments/environment.prod.ts

@@ -111,6 +111,11 @@
     "description": "Avoid breath-holding, rapid exertion, and chest-compressive positions if you have asthma or respiratory symptoms."
   },
   {
+    "id": "swollen_glands",
+    "label": "Swollen Glands / Enlarged Lymph Nodes",
+    "description": "Swollen lymph nodes often indicate infection or inflammation. Favor gentle movement and avoid pressure or strain near the neck, jaw, or armpits."
+  },
+  {
     "id": "weight_concerns",
     "label": "Overweight / Obesity / Weight Concerns",
     "description": "Favor low-impact, joint-friendly Pilates and avoid excessive load, fast transitions, or unstable balance work."

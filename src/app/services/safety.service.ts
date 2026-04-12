@@ -217,7 +217,7 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|swollen glands|swollen lymph nodes|lymphadenopathy|gland swelling|obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
   }
 
   private inferConditionsFromOtherText(otherText: string): Condition[] {
@@ -819,7 +819,18 @@ CRITICAL SAFETY RULES — NEVER BREAK THESE:
 
 ${conditionSummary || 'No listed conditions provided.'}
 
-Provide a brief list of Pilates movement patterns or exercises to avoid or modify, a short reason for each, and a safer general alternative or focus area. Keep the answer educational, clear, and non-prescriptive.`;
+Provide guidance in these three sections exactly, using the headings shown below and bullet points where appropriate:
+
+What is it?
+- A brief description of the concern or how it affects Pilates practice.
+
+What are the dangers?
+- A concise summary of the movement risks or why the condition matters.
+
+Exercises to be avoided
+- List Pilates movement patterns or exercises to avoid or modify, with a short reason and a safer alternative or focus area for each.
+
+Keep the answer educational, clear, and non-prescriptive.`;
   }
 
   private buildLocalAiPrompt(query: SafetyQuery, selectedConditions: Condition[]): string {
@@ -848,13 +859,13 @@ ${inferredHint ? `Likely concern type: ${inferredHint}` : ''}
 
 Now write the guidance with EXACTLY these headings and 2–4 bullet points each:
 
-Avoid
+What is it?
 - ...
 
-Why
+What are the dangers?
 - ...
 
-Safer focus
+Exercises to be avoided
 - ...
 
 Rules:

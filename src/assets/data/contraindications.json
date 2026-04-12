@@ -139,5 +139,10 @@
     {"exerciseId":"jackknife","reason":"Inversions and upper-body compression can make breathing difficult for people with asthma.","alternative":"Use supported chest lifts and avoid chest-compressive or breath-holding positions."},
     {"exerciseId":"roll_over","reason":"Legs-overhead position and spinal flexion can restrict the rib cage and challenge breathing.","alternative":"Choose gentle supine core work with the head and chest supported."},
     {"exerciseId":"the_hundred","reason":"Rapid breath cycling and core intensity may trigger wheezing or breathlessness.","alternative":"Practice slower breath-based abdominal work with frequent rest and open chest posture."}
+  ],
+  "swollen_glands": [
+    {"exerciseId":"neck_pull","reason":"Supportive head and neck lifting can aggravate tender lymph nodes in the neck.","alternative":"Keep the head supported and focus on gentle core activation without heavy neck motion."},
+    {"exerciseId":"roll_over","reason":"Legs-overhead inversion may increase pressure and discomfort around swollen neck and shoulder nodes.","alternative":"Choose more neutral, supported supine core work with the head and neck in a comfortable position."},
+    {"exerciseId":"seated_spine_twist","reason":"Strong rotation around the cervical spine can irritate tender lymph nodes in the neck and jaw.","alternative":"Use smaller seated rotations with a long spine and avoid deep turning of the head."}
   ]
 }

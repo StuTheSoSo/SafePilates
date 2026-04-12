@@ -41,7 +41,8 @@ export class ResultsPage implements OnInit {
     joint_replacement: 'Use low-impact, controlled exercises and avoid high joint loads around replaced hips, knees, or shoulders.',
     foot_ankle_issues: 'Reduce foot loading, keep the feet supported, and avoid forced plantarflexion or unstable ankle positions.',
     chronic_fatigue: 'Keep sessions short, use frequent rest, and avoid pushing through excessive fatigue.',
-    respiratory: 'Keep breathing calm and choose open chest, low-impact movement when respiratory symptoms are present.'
+    respiratory: 'Keep breathing calm and choose open chest, low-impact movement when respiratory symptoms are present.',
+    swollen_glands: 'Swollen glands often signal infection or inflammation. Avoid pressure to the neck and head, and move gently until the cause is assessed.'
   };
 
   get selectedConditionLabels() {
@@ -85,6 +86,10 @@ export class ResultsPage implements OnInit {
     respiratory: [
       'Use gentle, low-impact movement with smooth inhalation and exhalation.',
       'Avoid breath-holding, rapid exertion, and tight chest compression.'
+    ],
+    swollen_glands: [
+      'Move gently and avoid deep neck extension, strong jaw movement, or direct pressure on swollen nodes.',
+      'Choose quiet, supportive Pilates that does not aggravate tenderness in the neck, armpit, or groin.'
     ],
     recent_surgery: [
       'Get medical clearance and reintroduce movement gradually, avoiding high load, impact, and sudden change.',
@@ -225,6 +230,11 @@ export class ResultsPage implements OnInit {
       what: 'Respiratory concerns like asthma, bronchospasm, or breathlessness require careful attention to breathing and chest comfort.',
       dangers: 'Breath-holding, rapid exertion, and chest-compressive positions can trigger wheezing, shortness of breath, or tightness.',
       avoid: 'Avoid Jackknife, Roll Over, rapid transitions, breath-holding, and deep, compressive upper-body work without clearance.'
+    },
+    swollen_glands: {
+      what: 'Swollen glands are enlarged lymph nodes typically caused by infection, inflammation, or immune response in the neck, armpit, or groin.',
+      dangers: 'Swollen nodes can be tender and may indicate an active infection or inflammation. Aggressive movement, pressure, or strain near the affected area can increase discomfort.',
+      avoid: 'Avoid deep neck flexion/extension, strong jaw or shoulder compression, prolonged prone neck loading, and rapid head turns around the tender nodes.'
     },
     recent_surgery: {
       what: 'Recent surgery means tissues are healing and must be reintroduced to movement gradually with medical clearance.',

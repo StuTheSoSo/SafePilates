@@ -10,9 +10,9 @@ Run:
 
 This downloads the default small model into `src/assets/models/...` using a **minimal** set of files (to keep the app size down).
 
-To download the larger (smarter) base model:
+This app is configured to use only the small model, so download the model with:
 
-`npm run -s ai:model:download:base`
+`npm run -s ai:model:download`
 
 If you previously downloaded an older snapshot that included many ONNX variants, delete the folder and re-download:
 

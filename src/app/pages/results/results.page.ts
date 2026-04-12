@@ -184,107 +184,107 @@ export class ResultsPage implements OnInit {
     osteoporosis: {
       what: 'A condition where bones weaken and fracture risk rises, especially in the spine, hips, and wrists.',
       dangers: 'Weak bones are vulnerable to compression fractures, especially from spinal flexion, twisting, and impact. Sudden or heavy axial load can cause fracture even without a fall.',
-      avoid: 'Avoid loaded spinal flexion, end-range rotation, high-impact jumping, and deep twisting movements.'
+      avoid: 'Avoid Roll Up, Roll Over, Teaser, Jackknife, deep spinal flexion, end-range rotation, and high-impact jumping.'
     },
     pregnancy: {
       what: 'A natural state with changing anatomy, circulation, and balance. Trimester-specific modifications help protect mother and fetus.',
       dangers: 'Pregnancy increases pelvic pressure, shifts balance, and changes heart rate response. Prolonged supine, breath-holding, deep twist, and unstable positions can add risk.',
-      avoid: 'Avoid prolonged supine after the first trimester, intense crunches, deep twisting, inversions, and unstable balance challenges.'
+      avoid: 'Avoid Roll Up, The Hundred, Teaser, Jackknife, Roll Over, inversions, prolonged supine after the first trimester, and unstable balance challenges.'
     },
     low_back_pain: {
       what: 'Chronic low back pain often involves disc irritation, muscular imbalance, or spinal joint sensitivity.',
       dangers: 'Repeated flexion, extension, and loading through a painful lumbar spine can aggravate tissue irritation and nerve symptoms.',
-      avoid: 'Avoid heavy lifting, rapid twisting, repeated spinal flexion or extension, unsupported backbends, and pain-provoking movements.'
+      avoid: 'Avoid Roll Up, Spine Stretch Forward, Swan Dive, Teaser, heavy lifting, rapid twisting, and repeated spinal flexion/extension.'
     },
     hypertension: {
       what: 'High blood pressure or cardiovascular concerns mean the circulatory system is under extra strain.',
       dangers: 'Sudden high-intensity effort, breath-holding, and inverted positions can spike blood pressure and place stress on the heart.',
-      avoid: 'Avoid inversions, Valsalva-style breath hold, heavy overhead loading, and sudden high-intensity bursts.'
+      avoid: 'Avoid Jackknife, Roll Over, The Hundred with breath-holding, heavy overhead loading, and sudden high-intensity bursts.'
     },
     knee_issues: {
       what: 'Knee pain, arthritis, or replacement can make the joint sensitive to load, depth, and position.',
       dangers: 'Deep loaded knee flexion and twisting under load can stress cartilage, ligaments, or prosthetic components.',
-      avoid: 'Avoid deep squats, weighted lunges, unsupported kneeling, high-impact stepping, and deep loaded knee flexion.'
+      avoid: 'Avoid deep squats, weighted lunges, unsupported kneeling, Shoulder Bridge if painful, high-impact stepping, and deep loaded knee flexion.'
     },
     hip_issues: {
       what: 'Hip pain, arthritis, or replacement means the joint may tolerate ranges and load differently than a healthy hip.',
       dangers: 'Excessive rotation, end-range opening, and unsupported weight-bearing can irritate the hip joint or implant.',
-      avoid: 'Avoid forced hip opening, loaded rotation, single-leg hip loading, and aggressive end-range hip positions.'
+      avoid: 'Avoid wide stance lunges, clamshells with forceful hip rotation, impact jumping, step-ups with twist, and sharp pivoting.'
     },
     neck_shoulder: {
       what: 'Neck and shoulder issues often reflect tension, impingement, instability, or postural strain.',
       dangers: 'Unsupported head lifts, heavy shoulder loading, and end-range shoulder positions can worsen impingement or instability.',
-      avoid: 'Avoid unsupported crunches, prolonged neck flexion, heavy shoulder presses, and deep overhead reaches.'
+      avoid: 'Avoid Plank with poor head alignment, Swan, overhead reaching with heavy resistance, and unsupported neck extension.'
     },
     recent_surgery: {
       what: 'Recent surgery means tissues are healing and must be reintroduced to movement gradually with medical clearance.',
       dangers: 'High load, abrupt movement, and unsupported motion near the surgical area can delay healing, reopen incisions, or cause pain.',
-      avoid: 'Avoid abrupt balance work, heavy resistance, deep joint stress, and unsupported movement near the surgical site.'
+      avoid: 'Avoid Plank, Roll Up, deep hip rotation, loaded lunges, and movements that pull on surgical sites until cleared by a provider.'
     },
     arthritis: {
       what: 'Arthritis causes joint inflammation, stiffness, and sensitivity to stress in weight-bearing and moving joints.',
       dangers: 'Forced end-range motion, high-impact loading, and repetitive joint stress can increase inflammation and pain.',
-      avoid: 'Avoid heavy weighted joint loading, forced end-range motion, high-impact jumping, and repetitive pounding.'
+      avoid: 'Avoid deep knee bends, heavy shoulder presses, loaded impact jumping, long holds in painful joints, and end-range spinal flexion.'
     },
     scoliosis: {
       what: 'Scoliosis is a spinal asymmetry that changes how the spine and ribs move under load.',
       dangers: 'Aggressive twisting, uneven loading, and unsupported asymmetrical positions can increase pain and spinal stress.',
-      avoid: 'Avoid forced rotation, unsupported side-bending, heavy unilateral spinal loading, and excess one-sided work.'
+      avoid: 'Avoid single-sided loaded bends, seated twist machines, forced asymmetrical rotation, and unsupported side bending on the spine.'
     },
     pelvic_floor_dysfunction: {
       what: 'Pelvic floor dysfunction affects the muscles supporting the pelvic organs and the deep core system.',
       dangers: 'High intra-abdominal pressure, breath-holding, and uncontrolled loading can worsen pelvic symptoms and leakage.',
-      avoid: 'Avoid intense crunching, breath-holding, heavy lifting without support, and high-impact jumping.'
+      avoid: 'Avoid The Hundred, full sit-ups, heavy weighted lifts, high-impact jumps, and anything that causes pelvic pressure or leaking.'
     },
     diastasis_recti: {
       what: 'Diastasis recti is a separation of the abdominal midline where connective tissue needs gentle reconnection.',
       dangers: 'Loaded abdominal flexion, twisting, and sudden compression can stress the linea alba and slow healing.',
-      avoid: 'Avoid full sit-ups, intense crunches, loaded twisting, unsupported plank without pelvic support, and sudden core compression.'
+      avoid: 'Avoid full sit-ups, intense crunches, Teaser, loaded twisting, unsupported plank without pelvic support, and sudden core compression.'
     },
     shoulder_instability: {
       what: 'Shoulder instability or impingement means the joint is prone to slipping, pinching, or painful movement.',
       dangers: 'Unsupported weight-bearing, deep overhead load, and abrupt movement can aggravate instability or impingement.',
-      avoid: 'Avoid full plank push-ups, heavy overhead pressing, unsupported arm balances, and abrupt shoulder loading.'
+      avoid: 'Avoid full Plank, Swan, heavy overhead pressing, unsupported arm balances, and abrupt shoulder loading.'
     },
     bursitis: {
       what: 'Bursitis and tendinopathy are inflammatory conditions of joint cushioning sacs and tendons.',
       dangers: 'Repeated friction, compression, or sustained pressure can worsen inflammation around the affected bursa.',
-      avoid: 'Avoid positions that compress the affected joint, repetitive high-load movement, and sharp end-range stress.'
+      avoid: 'Avoid sustained kneeling, deep shoulder compression, repetitive arm elevation, and high-impact joint loading.'
     },
     vertigo_dizziness: {
       what: 'Vertigo and dizziness involve unstable vestibular and balance systems, making head movement a risk factor.',
       dangers: 'Rapid head turns, inversions, and unsupported balance work can trigger dizziness and increase fall risk.',
-      avoid: 'Avoid inversions, fast head rotations, unstable balance challenges, and sudden position changes.'
+      avoid: 'Avoid inversions, fast head rotations, rolling down quickly, unstable balance challenges, and sudden position changes.'
     },
     diabetes: {
       what: 'Diabetes affects blood sugar regulation, circulation, and recovery, so activity should be paced and monitored.',
       dangers: 'Prolonged high intensity, dehydration, and poor foot protection can increase the risk of glucose swings, neuropathy, and injury.',
-      avoid: 'Avoid unsupervised high-intensity intervals, extreme heat, barefoot high-impact work, and exercises that risk foot trauma.'
+      avoid: 'Avoid unsupervised high-intensity intervals, barefoot high-impact work, prolonged standing without support, and exercises that risk foot trauma.'
     },
     postpartum: {
       what: 'Postpartum recovery involves rebuilding core, pelvic floor, and overall strength after childbirth.',
       dangers: 'Too much load too soon, excessive abdominal pressure, and unsupported pelvic motion can delay recovery and exacerbate weakness.',
-      avoid: 'Avoid intense abdominal crunching, heavy pelvic floor loading, high-impact jumping, and excessive twisting.'
+      avoid: 'Avoid Roll Up, full sit-ups, intense abdominal crunching, high-impact jumping, and excessive twisting too soon after delivery.'
     },
     balance_issues: {
       what: 'Balance or fall risk means the body needs stable, grounded support rather than unpredictable movement.',
       dangers: 'Unstable surfaces, unsupported single-leg work, and sudden directional changes can increase fall risk and injury.',
-      avoid: 'Avoid wobbly balance challenges, unsupported one-legged positions, and fast directional changes.'
+      avoid: 'Avoid unsupported one-legged positions, dynamic balance challenges, unstable surfaces, and sudden direction changes.'
     },
     joint_replacement: {
       what: 'Joint replacement means a prosthetic joint is present and needs cautious load management and controlled motion.',
       dangers: 'Deep flexion, high impact, twisting under load, and sudden stress can irritate the replaced joint or surrounding tissues.',
-      avoid: 'Avoid deep loaded knee/hip flexion, high-impact landings, twisting under load, and aggressive joint compression.'
+      avoid: 'Avoid deep loaded knee/hip flexion, high-impact landings, twisting under load, step-ups with heavy load, and aggressive joint compression.'
     },
     foot_ankle_issues: {
       what: 'Foot and ankle issues include pain, instability, arthritis, or surgery that affect how the foot bears weight.',
       dangers: 'Unstable surfaces, high-impact loading, and extreme ankle positions can aggravate pain and instability.',
-      avoid: 'Avoid high-impact jumping, unsupported single-leg hopping, extreme plantarflexion, and unstable surface work.'
+      avoid: 'Avoid high-impact jumping, unsupported single-leg hopping, forced plantarflexion, unstable surface work, and barefoot landings.'
     },
     chronic_fatigue: {
       what: 'Chronic fatigue means low energy tolerance and the need for careful pacing, rest, and recovery.',
       dangers: 'Excessive effort, long intense sessions, and poor recovery can worsen fatigue and delay progress.',
-      avoid: 'Avoid long high-intensity sessions, repeated maximal effort, and little rest between movements.'
+      avoid: 'Avoid long high-intensity sessions, repeated maximal effort, sustained overload, and insufficient rest between movements.'
     },
     other: {
       what: 'A condition not listed here; individualized guidance from a clinician is the safest next step.',

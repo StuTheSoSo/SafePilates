@@ -15,11 +15,34 @@
     <ion-card-content>
       <p class="exercise-description">{{ exercise.shortDescription }}</p>
       <div class="exercise-meta">
-        <p class="exercise-category"><strong>Category:</strong> {{ exercise.category }}</p>
-        <p *ngIf="exercise.level" class="exercise-level"><strong>Level:</strong> {{ exercise.level }}</p>
-        <p class="exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
-        <p *ngIf="exercise.benefits" class="exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
+        <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+        <p class="exercise-meta-item"><strong>Category:</strong> {{ exercise.category }}</p>
+        <p *ngIf="exercise.level" class="exercise-meta-item"><strong>Level:</strong> {{ exercise.level }}</p>
+        <p class="exercise-meta-item exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
+        <p *ngIf="exercise.reps" class="exercise-meta-item"><strong>Suggested reps:</strong> {{ exercise.reps }}</p>
+        <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>Primary muscles:</strong> {{ exercise.primaryMuscles.join(', ') }}</p>
+        <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>Setup:</strong> {{ exercise.setup }}</p>
+        <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>Breathing:</strong> {{ exercise.breathing }}</p>
+        <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
       </div>
+
+      <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
+        <ion-list-header>
+          <ion-label>Instructions</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let step of exercise.instructions">
+          <ion-label>{{ step }}</ion-label>
+        </ion-item>
+      </ion-list>
+
+      <ion-list *ngIf="exercise.commonMistakes?.length" lines="inset" class="exercise-detail-list">
+        <ion-list-header>
+          <ion-label>Common Mistakes</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let mistake of exercise.commonMistakes">
+          <ion-label>{{ mistake }}</ion-label>
+        </ion-item>
+      </ion-list>
 
       <ion-list *ngIf="exercise.modifications?.length" lines="inset" class="exercise-detail-list">
         <ion-list-header>

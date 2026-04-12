@@ -12,6 +12,14 @@ export interface Exercise {
   focus: string;
   benefits?: string;
   category: string;
+  equipment?: string;
+  setup?: string;
+  breathing?: string;
+  instructions?: string[];
+  commonMistakes?: string[];
+  reps?: string;
+  primaryMuscles?: string[];
+  videoUrl?: string;
   level?: 'Beginner' | 'Intermediate' | 'Advanced' | string;
   modifications?: string[];
   progressions?: string[];

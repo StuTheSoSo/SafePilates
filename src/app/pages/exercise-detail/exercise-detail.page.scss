@@ -6,26 +6,75 @@ ion-card {
   border: 1.5px solid var(--sp-border);
 }
 
-.exercise-category,
-.exercise-focus,
-.exercise-benefits {
-  margin: 0.75rem 0 0;
-  color: var(--sp-brand-ink);
-  font-size: 1.01rem;
-  font-weight: 600;
-  font-family: 'Nunito', 'Inter', sans-serif;
-  line-height: 1.5;
-}
-
 .exercise-description {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   color: var(--sp-brand-ink);
   font-size: 1.05rem;
-  line-height: 1.7;
+  line-height: 1.75;
 }
 
-.exercise-meta p {
-  margin: 0.45rem 0;
+.exercise-meta {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 1.1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(79, 143, 122, 0.11);
+}
+
+.exercise-meta-item {
+  margin: 0;
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  line-height: 1.65;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid rgba(79, 143, 122, 0.12);
+}
+
+.exercise-meta-item:last-child {
+  border-bottom: none;
+}
+
+.exercise-meta-item strong {
+  color: var(--ion-color-medium);
+  font-weight: 700;
+}
+
+.exercise-focus {
+  font-weight: 700;
+  color: var(--sp-brand-ink);
+}
+
+.exercise-benefits {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.exercise-detail-list {
+  margin-top: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+}
+
+.exercise-detail-list ion-label {
+  font-size: 0.98rem;
+  color: var(--sp-brand-ink);
+}
+
+.exercise-detail-list ion-list-header ion-label {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+  font-size: 1rem;
+}
+
+.exercise-benefits strong {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+}
+
+.placeholder {
+  margin-top: 1rem;
+  color: var(--ion-color-tertiary);
 }
 
 .exercise-detail-list {

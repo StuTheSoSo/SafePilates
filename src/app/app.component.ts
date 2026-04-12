@@ -18,7 +18,6 @@ export class AppComponent {
 
   tabs = [
     { label: 'Home', icon: 'home-outline', route: '/' },
-    { label: 'Safety', icon: 'shield-checkmark-outline', route: '/safety-checker' },
     { label: 'Library', icon: 'library-outline', route: '/library' },
     { label: 'Settings', icon: 'settings-outline', route: '/settings' },
   ];

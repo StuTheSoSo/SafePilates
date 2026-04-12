@@ -68,6 +68,6 @@ export class ResultsPage implements OnInit {
   }
 
   viewAgain() {
-    this.router.navigate(['/safety-checker']);
+    this.router.navigate(['/']);
   }
 }

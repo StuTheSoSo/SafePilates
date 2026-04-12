@@ -15,7 +15,7 @@ export interface Exercise {
   equipment?: string;
   setup?: string;
   breathing?: string;
-  instructions?: string[];
+  instructions?: Array<string | string[]>;
   commonMistakes?: string[];
   reps?: string;
   primaryMuscles?: string[];

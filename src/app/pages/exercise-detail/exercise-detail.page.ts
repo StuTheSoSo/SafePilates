@@ -17,6 +17,10 @@ export class ExerciseDetailPage implements OnInit {
 
   constructor(private route: ActivatedRoute, private safetyService: SafetyService) {}
 
+  isArray(value: unknown): value is string[] {
+    return Array.isArray(value);
+  }
+
   async ngOnInit() {
     await this.safetyService.initData();
     const id = this.route.snapshot.paramMap.get('id');

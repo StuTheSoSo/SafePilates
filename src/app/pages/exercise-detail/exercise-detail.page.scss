@@ -61,6 +61,28 @@ ion-card {
   color: var(--sp-brand-ink);
 }
 
+.exercise-step {
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.exercise-step-number {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+  min-width: 1.8rem;
+}
+
+.exercise-substeps {
+  margin: 0.5rem 0 0 1.8rem;
+  padding-left: 0.5rem;
+  color: var(--sp-brand-ink);
+}
+
+.exercise-substeps li {
+  margin-bottom: 0.35rem;
+}
+
 .exercise-detail-list ion-list-header ion-label {
   font-weight: 700;
   color: var(--ion-color-primary);

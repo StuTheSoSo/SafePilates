@@ -61,6 +61,21 @@ export class LibraryPage implements OnInit {
       : this.allExercises.filter(exercise => exercise.category === this.selectedCategory);
   }
 
+  get libraryWarnings() {
+    return this.allExercises
+      .map(exercise => {
+        const issues: string[] = [];
+        if (!exercise.focus?.trim()) {
+          issues.push('missing focus');
+        }
+        if (!exercise.category?.trim()) {
+          issues.push('missing category');
+        }
+        return issues.length ? { name: exercise.name, issues } : null;
+      })
+      .filter(Boolean) as { name: string; issues: string[] }[];
+  }
+
   openExercise(id: string) {
     this.router.navigateByUrl(`/exercise/${id}`);
   }

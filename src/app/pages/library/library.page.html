@@ -18,6 +18,23 @@
     </ion-chip>
   </div>
 
+  <ng-container *ngIf="libraryWarnings.length">
+    <ion-card color="warning" class="ion-margin-horizontal ion-margin-top">
+      <ion-card-header>
+        <ion-card-subtitle>Library validation</ion-card-subtitle>
+        <ion-card-title>Missing exercise metadata</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ libraryWarnings.length }} exercise(s) have missing focus or category values.</p>
+        <ul>
+          <li *ngFor="let warning of libraryWarnings">
+            <strong>{{ warning.name }}</strong> — {{ warning.issues.join(', ') }}
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
   <ion-grid class="ion-padding">
     <ion-row>
       <ion-col size="12" size-md="6" *ngFor="let exercise of exercises">

@@ -21,15 +21,6 @@
     </ion-card-content>
   </ion-card>
 
-  <ion-card *ngIf="conditionOverview" class="overview-card">
-    <ion-card-header>
-      <ion-card-title>Condition summary</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{ conditionOverview }}</p>
-    </ion-card-content>
-  </ion-card>
-
   <ion-card *ngIf="hasResults" class="hint-card">
     <ion-card-header>
       <ion-card-title>What to do first</ion-card-title>
@@ -57,9 +48,22 @@
             <ion-card-title>{{ condition.conditionLabel }}</ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p class="why-text"><strong>Why?</strong> {{ condition.conditionDescription }}</p>
-            <div *ngIf="condition.contraindications.length > 0" class="avoid-banner">
-              These exercises are best avoided or modified when this concern applies.
+            <div class="condition-sections">
+              <div class="condition-block">
+                <h3>What is it?</h3>
+                <p>{{ getConditionSection('what', condition.conditionId) }}</p>
+              </div>
+              <div class="condition-block">
+                <h3>What are the dangers?</h3>
+                <p>{{ getConditionSection('dangers', condition.conditionId) }}</p>
+              </div>
+              <div class="condition-block">
+                <h3>Exercises to be avoided</h3>
+                <p>{{ getConditionSection('avoid', condition.conditionId) }}</p>
+                <p *ngIf="condition.contraindications.length" class="avoid-exercises">
+                  <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
+                </p>
+              </div>
             </div>
             <div *ngIf="condition.contraindications.length === 0" class="no-results">
               No local modifications found. AI fallback or professional guidance may help.

@@ -93,24 +93,31 @@ ion-item-divider {
   line-height: 1.6;
 }
 
-.why-text {
-  margin: 0;
-  color: var(--sp-brand-ink);
-  font-size: 1.01rem;
-  font-family: 'Nunito', 'Inter', sans-serif;
-  font-weight: 600;
-  line-height: 1.5;
+.condition-sections {
+  display: grid;
+  gap: 0.95rem;
+  margin-bottom: 1rem;
 }
 
-.avoid-banner {
-  margin: 1rem 0 0.75rem;
-  padding: 0.9rem 1rem;
-  border-radius: 16px;
-  background: rgba(255, 229, 230, 0.95);
-  border: 1px solid rgba(255, 157, 134, 0.35);
-  color: var(--ion-color-danger);
-  font-weight: 700;
-  letter-spacing: 0.01em;
+.condition-block {
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  background: rgba(248, 251, 255, 0.95);
+  border: 1px solid rgba(180, 199, 230, 0.55);
+}
+
+.condition-block h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--ion-color-primary);
+}
+
+.condition-block p {
+  margin: 0;
+  color: var(--sp-ink-2);
+  line-height: 1.6;
+  font-size: 0.96rem;
 }
 
 .no-results {

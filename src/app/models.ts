@@ -20,8 +20,21 @@ export interface Exercise {
   instructions?: Array<string | string[]>;
   commonMistakes?: string[];
   reps?: string;
+  repRanges?: {
+    beginner?: string;
+    intermediate?: string;
+    advanced?: string;
+    notes?: string;
+  };
   primaryMuscles?: string[];
+  whereToFeel?: string;
+  transitionIn?: string;
+  transitionOut?: string;
+  apparatusSettings?: string;
+  contraindicationsNote?: string;
+  selfCheck?: string;
   videoUrl?: string;
+  breathPatternVisual?: string;
   level?: 'Beginner' | 'Intermediate' | 'Advanced' | string;
   modifications?: string[];
   progressions?: string[];

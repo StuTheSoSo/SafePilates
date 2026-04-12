@@ -38,6 +38,18 @@ ion-card {
   font-weight: 700;
 }
 
+.exercise-contraindications {
+  margin: 0 0 1rem;
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-contraindications strong {
+  color: var(--ion-color-primary);
+  font-weight: 700;
+}
+
 .exercise-meta {
   display: grid;
   gap: 0.4rem;
@@ -57,6 +69,11 @@ ion-card {
 
 .exercise-meta-item:last-child {
   border-bottom: none;
+}
+
+.exercise-rep-ranges span {
+  display: block;
+  margin-left: 0.6rem;
 }
 
 .exercise-meta-item strong {

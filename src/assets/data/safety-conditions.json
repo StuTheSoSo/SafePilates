@@ -111,6 +111,11 @@
     "description": "Avoid breath-holding, rapid exertion, and chest-compressive positions if you have asthma or respiratory symptoms."
   },
   {
+    "id": "weight_concerns",
+    "label": "Overweight / Obesity / Weight Concerns",
+    "description": "Favor low-impact, joint-friendly Pilates and avoid excessive load, fast transitions, or unstable balance work."
+  },
+  {
     "id": "other",
     "label": "Other",
     "description": "Get AI-backed guidance for a condition not listed here."

@@ -129,6 +129,12 @@
     {"exerciseId":"leg_pull_back","reason":"Prolonged prone effort may fatigue the shoulders and legs quickly.","alternative":"Choose shorter duration posterior chain work with frequent rest."},
     {"exerciseId":"bicycle","reason":"Rapid alternating lower body movement can be uncomfortable if sensation is reduced.","alternative":"Use slower leg rhythms and keep the pelvis stable."}
   ],
+  "weight_concerns": [
+    {"exerciseId":"teaser","reason":"High core and balance demand can be difficult under added body weight.","alternative":"Use supported core lifts with bent knees and a lower center of gravity."},
+    {"exerciseId":"jackknife","reason":"Inversion and rapid leg lifting may increase strain on the lower back and hips.","alternative":"Choose supported bridges and slower hip lifts with a neutral spine."},
+    {"exerciseId":"boomerang","reason":"Dynamic rolling balance can be unstable and overly demanding on the joints.","alternative":"Focus on controlled seated or supine core work with stable foot contact."},
+    {"exerciseId":"control_balance","reason":"Advanced balance and leg extension demand can tax joint control and stability.","alternative":"Use grounded stability exercises with both feet on the mat and small range movements."}
+  ],
   "respiratory": [
     {"exerciseId":"jackknife","reason":"Inversions and upper-body compression can make breathing difficult for people with asthma.","alternative":"Use supported chest lifts and avoid chest-compressive or breath-holding positions."},
     {"exerciseId":"roll_over","reason":"Legs-overhead position and spinal flexion can restrict the rib cage and challenge breathing.","alternative":"Choose gentle supine core work with the head and chest supported."},

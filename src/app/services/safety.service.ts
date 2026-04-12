@@ -217,7 +217,7 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|obese|obesity|overweight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
   }
 
   private inferConditionsFromOtherText(otherText: string): Condition[] {
@@ -280,6 +280,9 @@ export class SafetyService {
     }
     if (/(recent surgery|post[- ]surgery|recovery|reconstruction)/.test(lower)) {
       matches.add('recent_surgery');
+    }
+    if (/(obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi)/.test(lower)) {
+      matches.add('weight_concerns');
     }
     if (/(foot|ankle|heel|plantar|arch|flat foot|fallen arches|metatarsal|posterior tibial|pes planus)/.test(lower)) {
       matches.add('foot_ankle_issues');
@@ -440,6 +443,27 @@ export class SafetyService {
         '- Keep the chest open, the ribs soft, and avoid compressive upper-body positions\n' +
         '- Pause, rest, and normalize breathing whenever the effort increases\n\n' +
         'If breathing becomes difficult, wheezy, or tight, stop and seek medical guidance before continuing.'
+      );
+    }
+
+    // Weight or obesity concerns
+    if (/(obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Weight & Joint-Friendly Pilates\n\n' +
+        'Avoid\n' +
+        '- High-impact or fast-transition exercises that stress the knees, hips, and lower back\n' +
+        '- Deep loaded stepping, fast balance challenges, or heavy inversion work\n' +
+        '- Extended time in positions that compress the joints without adequate support\n\n' +
+        'Why\n' +
+        '- Extra body weight can increase joint pressure and fatigue during high-load Pilates movements\n' +
+        '- Slower, controlled movement and better support protect the hips, knees, and spine\n\n' +
+        'Safer focus\n' +
+        '- Choose low-impact, supported Pilates with smooth transitions and stable base contact\n' +
+        '- Keep the breath steady, maintain good alignment, and avoid rushing through the sequence\n' +
+        '- Favor exercises that emphasize core support and joint-friendly mobility rather than maximal range\n\n' +
+        'If weight-related joint discomfort or fatigue increases, stop and consult a qualified instructor or clinician before continuing.'
       );
     }
 

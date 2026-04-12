@@ -16,16 +16,33 @@
       <p class="exercise-description">{{ exercise.shortDescription }}</p>
       <p *ngIf="exercise.keyTakeaway" class="exercise-takeaway"><strong>Key takeaway:</strong> {{ exercise.keyTakeaway }}</p>
       <p *ngIf="exercise.safetyNote" class="exercise-safety"><strong>Safety:</strong> {{ exercise.safetyNote }}</p>
+      <p *ngIf="exercise.contraindicationsNote" class="exercise-contraindications"><strong>Contraindications:</strong> {{ exercise.contraindicationsNote }}</p>
       <div class="exercise-meta">
         <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+        <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
         <p class="exercise-meta-item"><strong>Category:</strong> {{ exercise.category }}</p>
         <p *ngIf="exercise.level" class="exercise-meta-item"><strong>Level:</strong> {{ exercise.level }}</p>
         <p class="exercise-meta-item exercise-focus"><strong>Focus:</strong> {{ exercise.focus }}</p>
-        <p *ngIf="exercise.reps" class="exercise-meta-item"><strong>Suggested reps:</strong> {{ exercise.reps }}</p>
+        <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>Suggested reps:</strong>
+          <span *ngIf="exercise.repRanges.beginner">Beginner: {{ exercise.repRanges.beginner }}</span>
+          <span *ngIf="exercise.repRanges.intermediate">Intermediate: {{ exercise.repRanges.intermediate }}</span>
+          <span *ngIf="exercise.repRanges.advanced">Advanced: {{ exercise.repRanges.advanced }}</span>
+          <span *ngIf="exercise.repRanges.notes">({{ exercise.repRanges.notes }})</span>
+        </p>
+        <p *ngIf="exercise.reps && !exercise.repRanges" class="exercise-meta-item"><strong>Suggested reps:</strong> {{ exercise.reps }}</p>
         <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>Primary muscles:</strong> {{ exercise.primaryMuscles.join(', ') }}</p>
+        <p *ngIf="exercise.whereToFeel" class="exercise-meta-item"><strong>Where to feel it:</strong> {{ exercise.whereToFeel }}</p>
         <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>Setup:</strong> {{ exercise.setup }}</p>
+        <p *ngIf="exercise.transitionIn" class="exercise-meta-item"><strong>Transition in:</strong> {{ exercise.transitionIn }}</p>
+        <p *ngIf="exercise.transitionOut" class="exercise-meta-item"><strong>Transition out:</strong> {{ exercise.transitionOut }}</p>
         <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>Breathing:</strong> {{ exercise.breathing }}</p>
         <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>Benefits:</strong> {{ exercise.benefits }}</p>
+        <p *ngIf="exercise.selfCheck" class="exercise-meta-item exercise-selfcheck"><strong>Self-check:</strong> {{ exercise.selfCheck }}</p>
+        <p *ngIf="exercise.videoUrl" class="exercise-meta-item exercise-video">
+          <a [href]="exercise.videoUrl" target="_blank" rel="noopener">
+            <ion-icon name="play-circle-outline"></ion-icon> Watch demo video
+          </a>
+        </p>
       </div>
 
       <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">

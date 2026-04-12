@@ -40,7 +40,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on core endurance and breathing coordination",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the abdominals and inner thighs as you stabilize the ribcage.",
+    "transitionIn": "Lie supine with knees bent in tabletop, arms by your sides, and prepare for breath.",
+    "transitionOut": "Lower the head and feet to the mat, then roll to your side to sit up safely.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are your abdominals engaged and your neck relaxed?"
   },
   {
     "id": "roll_up",
@@ -83,7 +94,18 @@
       "Hamstrings"
     ],
     "keyTakeaway": "Focus on spinal articulation and abdominal mobility",
-    "safetyNote": "Keep the neck long, avoid pulling on the head, and stop if the lower back lifts away from the mat."
+    "safetyNote": "Keep the neck long, avoid pulling on the head, and stop if the lower back lifts away from the mat.",
+    "whereToFeel": "Primary sensation: abdominals and spinal flexors during the roll and hamstrings in the stretch.",
+    "transitionIn": "Lie supine with legs straight and arms overhead, pelvis neutral.",
+    "transitionOut": "After the last rep, bend the knees and roll to your side before sitting up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the movement slow and articulate the spine."
   },
   {
     "id": "roll_over",
@@ -126,7 +148,18 @@
       "Low back"
     ],
     "keyTakeaway": "Focus on back extension and hamstring release",
-    "safetyNote": "Move slowly, keep the lower back anchored, and choose a regression if the hamstrings or neck feel strained."
+    "safetyNote": "Move slowly, keep the lower back anchored, and choose a regression if the hamstrings or neck feel strained.",
+    "whereToFeel": "Feel the stretch in the hamstrings and the control in the lower abdominals.",
+    "transitionIn": "Lie supine with legs straight, arms by your sides, and lower back anchored.",
+    "transitionOut": "Lower the legs, roll to your side, and use your hands to help you sit up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are your shoulders relaxed and your core supporting the lift?"
   },
   {
     "id": "rolling_like_a_ball",
@@ -171,7 +204,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on spinal massage and balance control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the abdominals and spinal extensors working to control the roll and balance.",
+    "transitionIn": "Sit at the front of the mat, knees bent, hands on shins, and balance on sit bones.",
+    "transitionOut": "Place feet on the mat and uncurl the spine to sit tall.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are you using your abdominals to control the roll, not momentum?"
   },
   {
     "id": "spine_stretch_forward",
@@ -215,7 +259,18 @@
       "Abdominals"
     ],
     "keyTakeaway": "Focus on posterior chain length and posture",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the length in the hamstrings and the deep flexion of the abdominals.",
+    "transitionIn": "Sit tall with legs extended and feet flexed, arms reaching forward.",
+    "transitionOut": "Bend the knees and use your hands to help you stand or move to the next exercise.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the spine long as you reach forward."
   },
   {
     "id": "roll_down",
@@ -260,7 +315,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on spinal articulation and core control",
-    "safetyNote": "Maintain even abdominal support, avoid collapsing through the low back, and only lower as far as your hamstrings allow without rounding excessively."
+    "safetyNote": "Maintain even abdominal support, avoid collapsing through the low back, and only lower as far as your hamstrings allow without rounding excessively.",
+    "whereToFeel": "Feel the abdominals and spinal stabilizers controlling the descent and return.",
+    "transitionIn": "Stand tall at the top of the mat, feet hips-width apart.",
+    "transitionOut": "After the last roll-up, bend the knees and return to standing.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are you peeling the spine down one vertebra at a time?"
   },
   {
     "id": "teaser",
@@ -304,7 +370,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on core strength and control",
-    "safetyNote": "Keep the neck long and the pelvis stable; stop if the lower back rounds excessively or the head tucks."
+    "safetyNote": "Keep the neck long and the pelvis stable; stop if the lower back rounds excessively or the head tucks.",
+    "whereToFeel": "Feel the abdominals and hip flexors working to maintain the V-shape.",
+    "transitionIn": "Lie supine with knees bent, feet flat, arms overhead.",
+    "transitionOut": "Lower the legs and spine to the mat, then roll to your side to sit up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the V-shape steady and the neck long."
   },
   {
     "id": "saw",
@@ -348,7 +425,18 @@
       "Spinal rotators"
     ],
     "keyTakeaway": "Focus on oblique rotation and hamstring mobility",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the obliques and hamstrings as you rotate and reach.",
+    "transitionIn": "Sit with legs wide, arms extended, and spine tall.",
+    "transitionOut": "Bring legs together and use your hands to help you stand or move on.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are both sit bones grounded as you twist?"
   },
   {
     "id": "corkscrew",
@@ -392,7 +480,18 @@
       "Adductors"
     ],
     "keyTakeaway": "Focus on lower abdominal strength and rotation",
-    "safetyNote": "Keep the lower ribs drawing in and the pelvis stable to protect the lumbar spine; use smaller circles if the low back lifts."
+    "safetyNote": "Keep the lower ribs drawing in and the pelvis stable to protect the lumbar spine; use smaller circles if the low back lifts.",
+    "whereToFeel": "Feel the lower abdominals and inner thighs guiding the controlled circles.",
+    "transitionIn": "Lie supine with legs lifted, arms by your sides.",
+    "transitionOut": "Lower the legs to the mat and roll to your side to sit up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the pelvis stable and the circles controlled."
   },
   {
     "id": "jackknife",
@@ -436,7 +535,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on spine articulation and shoulder stability",
-    "safetyNote": "Keep the shoulder blades grounded and avoid compressing the neck; only lift as high as your hamstrings and lower back allow without strain."
+    "safetyNote": "Keep the shoulder blades grounded and avoid compressing the neck; only lift as high as your hamstrings and lower back allow without strain.",
+    "whereToFeel": "Feel the abdominals and hip flexors lifting the legs and supporting the spine.",
+    "transitionIn": "Lie supine with legs straight, arms by your sides.",
+    "transitionOut": "Lower the legs and hips, then roll to your side to sit up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are you lifting with the abdominals, not swinging the legs?"
   },
   {
     "id": "neck_pull",
@@ -480,7 +590,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on abdominal coordination and spine mobility",
-    "safetyNote": "Keep the chin tucked and avoid pulling on the head; rely on the abdominals to lift the spine rather than the neck."
+    "safetyNote": "Keep the chin tucked and avoid pulling on the head; rely on the abdominals to lift the spine rather than the neck.",
+    "whereToFeel": "Feel the abdominals and spinal flexors articulating the spine.",
+    "transitionIn": "Lie supine with knees bent, feet flat, hands behind head.",
+    "transitionOut": "After the last rep, bend the knees and roll to your side before sitting up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the neck long and avoid pulling with the hands."
   },
   {
     "id": "spine_twist",
@@ -524,7 +645,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on spinal rotation and torso flexibility",
-    "safetyNote": "Keep both sit bones grounded and avoid compressing the lower back; rotate from the waist with a long spine."
+    "safetyNote": "Keep both sit bones grounded and avoid compressing the lower back; rotate from the waist with a long spine.",
+    "whereToFeel": "Feel the obliques and spinal rotators as you twist.",
+    "transitionIn": "Sit tall with legs extended or bent, arms wide.",
+    "transitionOut": "Bring legs together and use your hands to help you stand or move on.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are you rotating from the waist, not the shoulders?"
   },
   {
     "id": "side_bend",
@@ -569,7 +701,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on side-body length and oblique engagement",
-    "safetyNote": "Keep the hips stacked and the spine long; avoid collapsing the lower ribs into the mat."
+    "safetyNote": "Keep the hips stacked and the spine long; avoid collapsing the lower ribs into the mat.",
+    "whereToFeel": "Feel the obliques and side body lengthening and supporting the lift.",
+    "transitionIn": "Lie on your side, body stacked, bottom arm extended.",
+    "transitionOut": "Lower the hips and use your hands to help you sit up.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Quick tip: Keep the hips stacked and the side body long."
   },
   {
     "id": "boomerang",
@@ -613,7 +756,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on balance, coordination, and full-body integration",
-    "safetyNote": "Move with steady breath and control; keep the spine long and avoid compressing the lumbar spine during the roll-through."
+    "safetyNote": "Move with steady breath and control; keep the spine long and avoid compressing the lumbar spine during the roll-through.",
+    "whereToFeel": "Feel the abdominals, hip flexors, and spinal extensors coordinating the movement.",
+    "transitionIn": "Sit with legs crossed, spine tall, arms reaching forward.",
+    "transitionOut": "Unwrap the legs and use your hands to help you stand or move to the next exercise.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Are you coordinating the roll and leg switch with control?"
   },
   {
     "id": "swan",
@@ -656,7 +810,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on back extension and spinal articulation",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the back extension and spinal articulation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "swan_prep",
@@ -701,7 +866,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on spinal extension preparation and shoulder stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the spinal extension preparation and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "swan_dive",
@@ -746,7 +922,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on back extension and posterior chain strengthening",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the back extension and posterior chain strengthening..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "swimming",
@@ -790,7 +977,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on back extensors and shoulder stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the back extensors and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "shoulder_bridge",
@@ -835,7 +1033,18 @@
       "Spinal erectors"
     ],
     "keyTakeaway": "Focus on spinal articulation and glute activation",
-    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain.",
+    "whereToFeel": "Feel the work in the spinal articulation and glute activation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "leg_pull_front",
@@ -879,7 +1088,18 @@
       "Glutes"
     ],
     "keyTakeaway": "Focus on core power and shoulder stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core power and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "leg_pull_back",
@@ -924,7 +1144,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on posterior chain control and extension",
-    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain.",
+    "whereToFeel": "Feel the work in the posterior chain control and extension..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "side_kick",
@@ -969,7 +1200,18 @@
       "Obliques"
     ],
     "keyTakeaway": "Focus on hip stability and side-body control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the hip stability and side-body control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "side_kick_series",
@@ -1014,7 +1256,18 @@
       "Obliques"
     ],
     "keyTakeaway": "Focus on hip stability and leg control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the hip stability and leg control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "seal",
@@ -1058,7 +1311,18 @@
       "Spine stabilizers"
     ],
     "keyTakeaway": "Focus on spine articulation and balance",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the spine articulation and balance..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "crab",
@@ -1102,7 +1366,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on core strength and spinal mobility",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core strength and spinal mobility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "rocking",
@@ -1146,7 +1421,18 @@
       "Spinal stabilizers"
     ],
     "keyTakeaway": "Focus on spinal mobility and balance",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the spinal mobility and balance..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "control_balance",
@@ -1191,7 +1477,18 @@
       "Spinal extensors"
     ],
     "keyTakeaway": "Focus on balance and lower back control",
-    "safetyNote": "Move with control and steady breathing; choose a regression if balance or coordination falters."
+    "safetyNote": "Move with control and steady breathing; choose a regression if balance or coordination falters.",
+    "whereToFeel": "Feel the work in the balance and lower back control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "scissors",
@@ -1236,7 +1533,18 @@
       "Hamstrings"
     ],
     "keyTakeaway": "Focus on hamstring stretch and core stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the hamstring stretch and core stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "bicycle",
@@ -1281,7 +1589,18 @@
       "Quadriceps"
     ],
     "keyTakeaway": "Focus on core endurance and hip mobility",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core endurance and hip mobility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "one_leg_circle",
@@ -1326,7 +1645,18 @@
       "Abdominals"
     ],
     "keyTakeaway": "Focus on hip mobility and pelvic stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the hip mobility and pelvic stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "single_leg_stretch",
@@ -1370,7 +1700,18 @@
       "Quadriceps"
     ],
     "keyTakeaway": "Focus on core coordination and hip flexor control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core coordination and hip flexor control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "double_leg_stretch",
@@ -1414,7 +1755,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on whole-body coordination and abdominal support",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the whole-body coordination and abdominal support..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "open_leg_rocker",
@@ -1458,7 +1810,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on core balance and spinal articulation",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core balance and spinal articulation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "hip_circles",
@@ -1503,7 +1866,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on hip mobility and core support",
-    "safetyNote": "Keep the lower back pressed into the mat and the movement contained to the hip socket; avoid swinging from the torso."
+    "safetyNote": "Keep the lower back pressed into the mat and the movement contained to the hip socket; avoid swinging from the torso.",
+    "whereToFeel": "Feel the work in the hip mobility and core support..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "hip_twist",
@@ -1547,7 +1921,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on core rotation and hip control",
-    "safetyNote": "Keep the lower back anchored and move with small, stable rotations; avoid letting the ribs lift too high."
+    "safetyNote": "Keep the lower back anchored and move with small, stable rotations; avoid letting the ribs lift too high.",
+    "whereToFeel": "Feel the work in the core rotation and hip control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "one_leg_kick",
@@ -1591,7 +1976,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on posterior chain strength and shoulder stability",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the posterior chain strength and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "double_leg_kick",
@@ -1635,7 +2031,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on back extension and coordination",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the back extension and coordination..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "knee_stretch",
@@ -1679,7 +2086,18 @@
       "Core stabilizers"
     ],
     "keyTakeaway": "Focus on pelvic stability and leg coordination",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the pelvic stability and leg coordination..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "side_kick_kneeling",
@@ -1724,7 +2142,18 @@
       "Core stabilizers"
     ],
     "keyTakeaway": "Focus on pelvic stability and hip control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the pelvic stability and hip control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "pelvic_curl",
@@ -1768,7 +2197,18 @@
       "Spinal erectors"
     ],
     "keyTakeaway": "Focus on spinal articulation and glute activation",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the spinal articulation and glute activation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "shoulder_rolls",
@@ -1812,7 +2252,18 @@
       "Stabilizers"
     ],
     "keyTakeaway": "Focus on shoulder mobility and upper-back release",
-    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain."
+    "safetyNote": "Keep the spine long, avoid pinching tension, and stop if you feel sharp or unstable pain.",
+    "whereToFeel": "Feel the work in the shoulder mobility and upper-back release..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "spine_mobilization",
@@ -1855,7 +2306,18 @@
       "Stabilizers"
     ],
     "keyTakeaway": "Focus on spinal mobility and core activation",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the spinal mobility and core activation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "seated_side_bend",
@@ -1899,7 +2361,18 @@
       "Stabilizers"
     ],
     "keyTakeaway": "Focus on side-body flexibility and breathing",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the side-body flexibility and breathing..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "breaststroke",
@@ -1943,7 +2416,18 @@
       "Hamstrings"
     ],
     "keyTakeaway": "Focus on posterior chain extension and breath flow",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the posterior chain extension and breath flow..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "push_up",
@@ -1986,7 +2470,18 @@
       "Triceps"
     ],
     "keyTakeaway": "Focus on shoulder stability, core endurance, and upper-body control",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the shoulder stability, core endurance, and upper-body control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "footwork",
@@ -2030,7 +2525,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on reformer leg strength and alignment",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the reformer leg strength and alignment..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "elephant",
@@ -2074,7 +2581,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on hamstring stretch and core stabilization",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the hamstring stretch and core stabilization..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "mermaid",
@@ -2118,7 +2637,19 @@
       "Latissimus"
     ],
     "keyTakeaway": "Focus on side-body stretch and thoracic mobility",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the side-body stretch and thoracic mobility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "push_up_chair",
@@ -2163,7 +2694,19 @@
       "Triceps"
     ],
     "keyTakeaway": "Focus on shoulder stability and arm strength",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the shoulder stability and arm strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "teaser_chair",
@@ -2207,7 +2750,19 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on core strength and balance",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the core strength and balance..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "push_through",
@@ -2252,7 +2807,19 @@
       "Upper back"
     ],
     "keyTakeaway": "Focus on back extension and shoulder strength",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the back extension and shoulder strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "magic_circle_press",
@@ -2297,7 +2864,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on inner thigh strength and upper body compression",
-    "safetyNote": "Keep the shoulders soft, avoid gripping the ring too hard, and stop if the wrists or neck become tense."
+    "safetyNote": "Keep the shoulders soft, avoid gripping the ring too hard, and stop if the wrists or neck become tense.",
+    "whereToFeel": "Feel the work in the inner thigh strength and upper body compression..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Magic Circle. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "short_spine_massage",
@@ -2341,7 +2920,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on spinal mobilization and hamstring length",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal mobilization and hamstring length..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "knee_stretch_series",
@@ -2385,7 +2976,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on pelvic stability and posterior chain control",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the pelvic stability and posterior chain control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "long_box_series",
@@ -2429,7 +3032,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on upper body strength and spinal support",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the upper body strength and spinal support..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "coordination",
@@ -2473,7 +3088,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on timing, core support, and breath coordination",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the timing, core support, and breath coordination..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "tendon_stretch",
@@ -2517,7 +3144,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on leg tendon stretch and shoulder support",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the leg tendon stretch and shoulder support..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "long_spine_massage",
@@ -2561,7 +3200,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on spinal mobilization and hip control",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal mobilization and hip control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "stomach_massage_round_back",
@@ -2606,7 +3257,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on core stability and articulated spine control",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the core stability and articulated spine control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "stomach_massage_flat_back",
@@ -2651,7 +3314,19 @@
       "Leg muscles"
     ],
     "keyTakeaway": "Focus on core endurance and neutral spine support",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the core endurance and neutral spine support..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "roll_down_bar",
@@ -2696,7 +3371,19 @@
       "Latissimus"
     ],
     "keyTakeaway": "Focus on spinal articulation and shoulder stability",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal articulation and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "arm_springs",
@@ -2740,7 +3427,19 @@
       "Triceps"
     ],
     "keyTakeaway": "Focus on shoulder strength and scapular stability",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the shoulder strength and scapular stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "leg_springs",
@@ -2784,7 +3483,19 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on hip stability and leg strength",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the hip stability and leg strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "pilates_ring_squeeze",
@@ -2828,7 +3539,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on inner thigh strength and upper body stability",
-    "safetyNote": "Avoid gripping the ring too hard and keep the shoulders relaxed; stop if you feel wrist or neck discomfort."
+    "safetyNote": "Avoid gripping the ring too hard and keep the shoulders relaxed; stop if you feel wrist or neck discomfort.",
+    "whereToFeel": "Feel the work in the inner thigh strength and upper body stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Magic Circle. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "ball_roll",
@@ -2873,7 +3596,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on core stability and spinal articulation",
-    "safetyNote": "Keep the hips level and the core engaged; stop if the ball feels unstable or if your lower back rounds."
+    "safetyNote": "Keep the hips level and the core engaged; stop if the ball feels unstable or if your lower back rounds.",
+    "whereToFeel": "Feel the work in the core stability and spinal articulation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Stability Ball. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "band_arm_series",
@@ -2917,7 +3652,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on upper body strength and scapular stability",
-    "safetyNote": "Keep the band tension even, avoid shrugging the shoulders, and stop if you feel any joint pain."
+    "safetyNote": "Keep the band tension even, avoid shrugging the shoulders, and stop if you feel any joint pain.",
+    "whereToFeel": "Feel the work in the upper body strength and scapular stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Resistance Band. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "single_straight_leg_stretch",
@@ -2961,7 +3708,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on lower abdominal strength and hip flexor engagement",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the lower abdominal strength and hip flexor engagement..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "double_straight_leg_stretch",
@@ -3005,7 +3763,18 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on lower abdominal and deep core strength",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the lower abdominal and deep core strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "criss_cross",
@@ -3049,7 +3818,18 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on oblique strength and spinal rotation",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the oblique strength and spinal rotation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "plank",
@@ -3094,7 +3874,18 @@
       "Back"
     ],
     "keyTakeaway": "Focus on core endurance and full-body alignment",
-    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs."
+    "safetyNote": "Maintain even breathing, keep the spine supported, and stop if any sharp pain or breath-holding occurs.",
+    "whereToFeel": "Feel the work in the core endurance and full-body alignment..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "rowing_series",
@@ -3138,7 +3929,19 @@
       "Biceps"
     ],
     "keyTakeaway": "Focus on back strength, shoulder mobility, and upright posture",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the back strength, shoulder mobility, and upright posture..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "short_box_series",
@@ -3182,7 +3985,19 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on spinal mobility in all planes and core control",
-    "safetyNote": "Keep the spine supported through each variation and stop if any twisting movement causes discomfort in the lower back."
+    "safetyNote": "Keep the spine supported through each variation and stop if any twisting movement causes discomfort in the lower back.",
+    "whereToFeel": "Feel the work in the spinal mobility in all planes and core control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "running_reformer",
@@ -3226,7 +4041,19 @@
       "Hip flexors"
     ],
     "keyTakeaway": "Focus on ankle mobility and lower-leg circulation",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the ankle mobility and lower-leg circulation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "semi_circle",
@@ -3271,7 +4098,19 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on hip extension, spinal articulation, and shoulder stability",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the hip extension, spinal articulation, and shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "backstroke",
@@ -3316,7 +4155,19 @@
       "Core"
     ],
     "keyTakeaway": "Focus on chest opening, shoulder mobility, and full-body coordination",
-    "safetyNote": "Support the head lightly and avoid overextending the neck; keep the spine long and the movement controlled."
+    "safetyNote": "Support the head lightly and avoid overextending the neck; keep the spine long and the movement controlled.",
+    "whereToFeel": "Feel the work in the chest opening, shoulder mobility, and full-body coordination..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "pulling_straps",
@@ -3360,7 +4211,19 @@
       "Glutes"
     ],
     "keyTakeaway": "Focus on back extension strength and posterior shoulder engagement",
-    "safetyNote": "Keep the neck long and avoid compressing the lower back; use lighter spring tension if the lift feels too intense."
+    "safetyNote": "Keep the neck long and avoid compressing the lower back; use lighter spring tension if the lift feels too intense.",
+    "whereToFeel": "Feel the work in the back extension strength and posterior shoulder engagement..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "down_stretch",
@@ -3404,7 +4267,19 @@
       "Hamstrings"
     ],
     "keyTakeaway": "Focus on spinal extension and core-to-shoulder stability",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal extension and core-to-shoulder stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "up_stretch",
@@ -3448,7 +4323,19 @@
       "Spinal extensors"
     ],
     "keyTakeaway": "Focus on hamstring length and scapular stability",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the hamstring length and scapular stability..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "snake",
@@ -3492,7 +4379,19 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on lateral core stability and rotational strength",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the lateral core stability and rotational strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "front_splits",
@@ -3537,7 +4436,19 @@
       "Adductors"
     ],
     "keyTakeaway": "Focus on hip flexor length and standing balance",
-    "safetyNote": "Keep the hips square and avoid letting the back knee drop; stop if the front knee or lower back feels unstable."
+    "safetyNote": "Keep the hips square and avoid letting the back knee drop; stop if the front knee or lower back feels unstable.",
+    "whereToFeel": "Feel the work in the hip flexor length and standing balance..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "side_splits",
@@ -3582,7 +4493,19 @@
       "Core stabilizers"
     ],
     "keyTakeaway": "Focus on inner thigh length and hip abductor strength",
-    "safetyNote": "Keep the hips level and the spine tall; stop if the inner thigh stretch becomes painful or the carriage feels unstable."
+    "safetyNote": "Keep the hips level and the spine tall; stop if the inner thigh stretch becomes painful or the carriage feels unstable.",
+    "whereToFeel": "Feel the work in the inner thigh length and hip abductor strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "overhead_reformer",
@@ -3626,7 +4549,19 @@
       "Spinal extensors"
     ],
     "keyTakeaway": "Focus on deep core strength and spinal articulation under inversion",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the deep core strength and spinal articulation under inversion..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "balance_point",
@@ -3671,7 +4606,19 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on balance, core stability, and hip flexor control",
-    "safetyNote": "Move with slow, steady breath and choose a regression if the carriage feels unstable."
+    "safetyNote": "Move with slow, steady breath and choose a regression if the carriage feels unstable.",
+    "whereToFeel": "Feel the work in the balance, core stability, and hip flexor control..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Reformer. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "tower_cadillac",
@@ -3715,7 +4662,19 @@
       "Shoulders"
     ],
     "keyTakeaway": "Focus on core strength and hip flexor coordination",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the core strength and hip flexor coordination..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "cat_stretch_cadillac",
@@ -3759,7 +4718,19 @@
       "Core"
     ],
     "keyTakeaway": "Focus on spinal flexion and extension mobility",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal flexion and extension mobility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "hanging_cadillac",
@@ -3803,7 +4774,19 @@
       "Core stabilizers"
     ],
     "keyTakeaway": "Focus on spinal decompression and shoulder girdle mobility",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal decompression and shoulder girdle mobility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Cadillac. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "going_up_front",
@@ -3847,7 +4830,19 @@
       "Core"
     ],
     "keyTakeaway": "Focus on single-leg strength and balance",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the single-leg strength and balance..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "going_up_side",
@@ -3892,7 +4887,19 @@
       "Obliques"
     ],
     "keyTakeaway": "Focus on lateral hip stability and single-leg strength",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the lateral hip stability and single-leg strength..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "pumping_chair",
@@ -3936,7 +4943,19 @@
       "Core"
     ],
     "keyTakeaway": "Focus on core endurance and limb coordination under spring load",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the core endurance and limb coordination under spring load..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "achilles_stretch_chair",
@@ -3980,7 +4999,19 @@
       "Ankles"
     ],
     "keyTakeaway": "Focus on calf and Achilles tendon flexibility",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the calf and achilles tendon flexibility..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Wunda Chair. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "foam_roller_series",
@@ -4025,7 +5056,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on spinal mobility, balance, and soft tissue release",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the spinal mobility, balance, and soft tissue release..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Foam Roller. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "arc_barrel_series",
@@ -4069,7 +5112,19 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on spinal extension and lateral flexion range of motion",
-    "safetyNote": "Confirm the arc barrel is stable, keep the core engaged, and avoid overextending the lower back."
+    "safetyNote": "Confirm the arc barrel is stable, keep the core engaged, and avoid overextending the lower back.",
+    "whereToFeel": "Feel the work in the spinal extension and lateral flexion range of motion..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Arc Barrel. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   },
   {
     "id": "spine_corrector_series",
@@ -4113,6 +5168,18 @@
       "Flexibility"
     ],
     "keyTakeaway": "Focus on postural rebalancing and spinal articulation",
-    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears."
+    "safetyNote": "Confirm the apparatus setup and use smooth breath-driven control; stop if any joint or neck discomfort appears.",
+    "whereToFeel": "Feel the work in the postural rebalancing and spinal articulation..",
+    "transitionIn": "Begin in the starting position described in setup.",
+    "transitionOut": "Return to a safe resting position or transition as appropriate.",
+    "apparatusSettings": "Check springs, straps, and safety for Spine Corrector. See setup for details.",
+    "contraindicationsNote": "Consult your instructor if you have osteoporosis, pregnancy, recent injury, or other medical conditions.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Focus on quality and control over quantity."
+    },
+    "selfCheck": "Check: Maintain alignment and control throughout the movement."
   }
 ]

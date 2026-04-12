@@ -27,6 +27,7 @@ export interface ConditionResult {
   conditionId: string;
   conditionLabel: string;
   conditionDescription: string;
+  pregnancyTrimester?: string;
   contraindications: Contraindication[];
 }
 

@@ -27,11 +27,12 @@ export class HomePage implements OnInit {
   ];
   conditions: Condition[] = [];
   selectedIds = new Set<string>();
-  pregnancyTrimester = '1st';
+  pregnancyTrimester = '';
   otherText = '';
   loading = false;
   initFailed = false;
   showSafetyOverlay = true;
+  showTrimesterModal = false;
 
   private router = inject(Router);
   private safetyService = inject(SafetyService);
@@ -112,13 +113,22 @@ export class HomePage implements OnInit {
 
   clearSelection() {
     this.selectedIds.clear();
+    this.pregnancyTrimester = '';
+    this.showTrimesterModal = false;
   }
 
   toggleCondition(conditionId: string) {
     if (this.selectedIds.has(conditionId)) {
       this.selectedIds.delete(conditionId);
+      if (conditionId === 'pregnancy') {
+        this.pregnancyTrimester = '';
+        this.showTrimesterModal = false;
+      }
     } else {
       this.selectedIds.add(conditionId);
+      if (conditionId === 'pregnancy') {
+        this.showTrimesterModal = true;
+      }
     }
   }
 
@@ -131,11 +141,17 @@ export class HomePage implements OnInit {
   }
 
   get canSubmit() {
-    return this.selectedIds.size > 0 && (!this.hasOther || this.otherText.trim().length > 0);
+    const needsTrimester = this.selectedIds.has('pregnancy');
+    return this.selectedIds.size > 0
+      && (!this.hasOther || this.otherText.trim().length > 0)
+      && (!needsTrimester || !!this.pregnancyTrimester);
   }
 
   async submit() {
     if (!this.canSubmit) {
+      if (this.selectedIds.has('pregnancy') && !this.pregnancyTrimester) {
+        this.showTrimesterModal = true;
+      }
       return;
     }
 
@@ -165,6 +181,14 @@ export class HomePage implements OnInit {
 
   closeSafetyOverlay() {
     this.showSafetyOverlay = false;
+  }
+
+  onTrimesterSelected(value: string) {
+    this.pregnancyTrimester = value;
+  }
+
+  closeTrimesterModal() {
+    this.showTrimesterModal = false;
   }
 
   getFeaturedExercises(category: string): Exercise[] {

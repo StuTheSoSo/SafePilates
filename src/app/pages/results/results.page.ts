@@ -52,75 +52,203 @@ export class ResultsPage implements OnInit {
     return Array.from(new Set(conditionIds.map(id => this.conditionHints[id]).filter(Boolean)));
   }
 
+  private readonly conditionActionGuidance: Record<string, string[]> = {
+    pregnancy: [
+      'Keep movement gentle, low-impact, and well-supported. Avoid prolonged supine after the first trimester and unsupported balance work.',
+      'Focus on steady breathing, pelvic support, and avoiding heavy abdominal compression, deep twists, or inversions.'
+    ],
+    osteoporosis: [
+      'Choose stable, supported exercises with gentle weight-bearing and balance practice, avoiding spinal flexion, rotation, and impact.',
+      'Keep your spine neutral and protect your bones from compression or sudden loading.'
+    ],
+    low_back_pain: [
+      'Start with gentle core and pelvic stabilization, maintaining a neutral spine and moving in pain-free ranges.',
+      'Avoid repeated flexion, extension or lifting through the low back until stability improves.'
+    ],
+    hypertension: [
+      'Use slow, controlled movement with even breathing and avoid breath-holding, inversions, and sudden high-intensity effort.',
+      'Keep heart rate moderate and prioritize gentle, supported mobility over heavy loading.'
+    ],
+    knee_issues: [
+      'Favor pain-free ranges, soft landings, and supported knee positions while avoiding deep loaded knee flexion.',
+      'Use gradual progression, keep the knee aligned, and avoid twisting under load.'
+    ],
+    hip_issues: [
+      'Use controlled, stable hip movement and avoid extreme rotation, deep joint loading, and unsupported single-leg work.',
+      'Choose smaller ranges and support the hips with props or a bench when needed.'
+    ],
+    neck_shoulder: [
+      'Keep the neck long, shoulders supported, and avoid unsupported head or shoulder loading.',
+      'Focus on posture, scapular stability, and gentle range rather than aggressive overhead or neck-intensive work.'
+    ],
+    recent_surgery: [
+      'Get medical clearance and reintroduce movement gradually, avoiding high load, impact, and sudden change.',
+      'Focus on gentle, supported mobility and avoid positions that stress the surgical area.'
+    ],
+    arthritis: [
+      'Respect pain-free range, choose low-impact movement, and avoid forced end-range positions or heavy loading.',
+      'Move with support and protect inflamed joints with gentle, controlled exercises.'
+    ],
+    scoliosis: [
+      'Use balanced, supported movement and avoid aggressive twisting or uneven loading through the spine.',
+      'Prioritize spinal support, symmetry, and gentle posture work rather than deep rotational motions.'
+    ],
+    pelvic_floor_dysfunction: [
+      'Keep pressure low and support the pelvic floor with gentle core and breathing practice.',
+      'Avoid heavy lifting, breath-holding, and high-impact or uncontrolled abdominal loading.'
+    ],
+    diastasis_recti: [
+      'Focus on gentle core reconnection and avoid loaded abdominal flexion, twisting, or sudden compression.',
+      'Use modified core work that supports the midline without increasing intra-abdominal pressure.'
+    ],
+    shoulder_instability: [
+      'Keep shoulder work controlled and avoid unsupported weight-bearing, deep overhead load, and abrupt motions.',
+      'Prioritize stability and gentle range before any heavier or more complex shoulder positions.'
+    ],
+    bursitis: [
+      'Avoid positions that compress or irritate the inflamed bursa and use gentle, supported joint movement.',
+      'Keep load light and minimize repetitive friction around the affected joint.'
+    ],
+    vertigo_dizziness: [
+      'Start with stable, grounded positions and avoid rapid head turns, inversions, or unsupported balance work.',
+      'Move slowly and keep the head neutral to reduce dizziness risk.'
+    ],
+    diabetes: [
+      'Monitor intensity and hydration, choose safe foot support, and avoid high-impact or prolonged high-intensity effort.',
+      'Keep movement steady and listen to your body to prevent blood sugar swings and injury.'
+    ],
+    postpartum: [
+      'Progress gently with core reconnection and pelvic floor support, avoiding heavy abdominal compression too soon.',
+      'Prioritize healing, support, and controlled movement over aggressive exercise.'
+    ],
+    balance_issues: [
+      'Choose stable, grounded movement with support and avoid wobbly balance challenges or sudden changes.',
+      'Build strength and stability before progressing to less stable positions.'
+    ],
+    joint_replacement: [
+      'Keep load low, move with control, and avoid high-impact or deep joint stress around the replaced joint.',
+      'Use gentle progressions and support the joint with appropriate alignment and assistance.'
+    ],
+    foot_ankle_issues: [
+      'Use supportive foot positions and avoid high-impact loading, sudden direction changes, and unstable surfaces.',
+      'Prioritize gentle strength and mobility with good foot alignment.'
+    ],
+    chronic_fatigue: [
+      'Use short, gentle sessions with plenty of rest and avoid pushing through excessive fatigue.',
+      'Pace movement carefully and recover fully before increasing load or duration.'
+    ],
+    other: [
+      'Start conservatively with supported, low-load movement and avoid unfamiliar high-risk exercises.',
+      'Consult a qualified clinician for condition-specific guidance.'
+    ]
+  };
+
+  get actionGuidance() {
+    const selected = this.guidance?.conditionResults?.flatMap(result => {
+      if (result.conditionId === 'pregnancy') {
+        return this.getPregnancyActionGuidance(result);
+      }
+      return this.conditionActionGuidance[result.conditionId] ?? [];
+    }) ?? [];
+    const unique = Array.from(new Set(selected));
+    return unique.length ? unique.slice(0, 4) : [
+      'If you have a concern, start with gentle, well-supported movement and avoid pain-provoking positions.',
+      'Keep breathing steady, stay within pain-free range, and prioritize control over depth or intensity.'
+    ];
+  }
+
+  private getPregnancyActionGuidance(condition: ConditionResult): string[] {
+    const trimester = (condition.pregnancyTrimester || 'Unknown').toLowerCase();
+    const firstTrimester = [
+      'Keep exercise gentle and avoid prolonged supine positions after the first trimester.',
+      'Avoid deep abdominal flexion, intense core crunches, and unstable balance work.'
+    ];
+    const secondTrimester = [
+      'Use stable, supported movement as your center of gravity shifts, and avoid deep spinal flexion or backbends.',
+      'Avoid inversions, deep twisting, and any exercise that feels uncomfortable around the belly.'
+    ];
+    const thirdTrimester = [
+      'Focus on gentle mobility and pelvic support, and avoid prolonged supine, deep twisting, or unsupported balance positions.',
+      'Choose exercises that feel steady, comfortable, and avoid intense abdominal compression.'
+    ];
+    if (trimester === '1st') return firstTrimester;
+    if (trimester === '2nd') return secondTrimester;
+    if (trimester === '3rd') return thirdTrimester;
+    return [
+      'Keep exercise gentle, supported, and avoid positions that increase abdominal pressure or instability.',
+      'Steer clear of inversions, deep twist, and heavy abdominal loading until cleared by your care team.'
+    ];
+  }
+
   private readonly conditionSafetySections: Record<string, { what: string; dangers: string; avoid: string }> = {
     osteoporosis: {
       what: 'A condition where bones weaken and fracture risk rises, especially in the spine, hips, and wrists.',
-      dangers: 'Spinal flexion, heavy axial loading, twisting, and high-impact stress can increase fracture risk in weakened bone.',
+      dangers: 'Weak bones are vulnerable to compression fractures, especially from spinal flexion, twisting, and impact. Sudden or heavy axial load can cause fracture even without a fall.',
       avoid: 'Avoid loaded spinal flexion, end-range rotation, high-impact jumping, and deep twisting movements.'
     },
     pregnancy: {
       what: 'A natural state with changing anatomy, circulation, and balance. Trimester-specific modifications help protect mother and fetus.',
-      dangers: 'Prolonged supine, breath-holding, heavy abdominal flexion, and unstable positions can add unnecessary stress during pregnancy.',
+      dangers: 'Pregnancy increases pelvic pressure, shifts balance, and changes heart rate response. Prolonged supine, breath-holding, deep twist, and unstable positions can add risk.',
       avoid: 'Avoid prolonged supine after the first trimester, intense crunches, deep twisting, inversions, and unstable balance challenges.'
     },
     low_back_pain: {
       what: 'Chronic low back pain often involves disc irritation, muscular imbalance, or spinal joint sensitivity.',
-      dangers: 'Repeated flexion/extension, high load through the lumbar spine, and painful postures can worsen symptoms.',
+      dangers: 'Repeated flexion, extension, and loading through a painful lumbar spine can aggravate tissue irritation and nerve symptoms.',
       avoid: 'Avoid heavy lifting, rapid twisting, repeated spinal flexion or extension, unsupported backbends, and pain-provoking movements.'
     },
     hypertension: {
       what: 'High blood pressure or cardiovascular concerns mean the circulatory system is under extra strain.',
-      dangers: 'Sharp inversions, breath-holding, sudden intense effort, and high-resistance moves can spike blood pressure undesirably.',
+      dangers: 'Sudden high-intensity effort, breath-holding, and inverted positions can spike blood pressure and place stress on the heart.',
       avoid: 'Avoid inversions, Valsalva-style breath hold, heavy overhead loading, and sudden high-intensity bursts.'
     },
     knee_issues: {
       what: 'Knee pain, arthritis, or replacement can make the joint sensitive to load, depth, and position.',
-      dangers: 'Deep loaded bending, twisting under load, kneeling on hard surfaces, and impact can irritate the knee joint.',
+      dangers: 'Deep loaded knee flexion and twisting under load can stress cartilage, ligaments, or prosthetic components.',
       avoid: 'Avoid deep squats, weighted lunges, unsupported kneeling, high-impact stepping, and deep loaded knee flexion.'
     },
     hip_issues: {
       what: 'Hip pain, arthritis, or replacement means the joint may tolerate ranges and load differently than a healthy hip.',
-      dangers: 'Excessive rotation, wide abduction, and unstable weight-bearing can increase discomfort or stress a vulnerable hip.',
+      dangers: 'Excessive rotation, end-range opening, and unsupported weight-bearing can irritate the hip joint or implant.',
       avoid: 'Avoid forced hip opening, loaded rotation, single-leg hip loading, and aggressive end-range hip positions.'
     },
     neck_shoulder: {
       what: 'Neck and shoulder issues often reflect tension, impingement, instability, or postural strain.',
-      dangers: 'Unsupported head lifts, heavy shoulder loading, and extreme reach can aggravate cervical or shoulder structures.',
-      avoid: 'Avoid unsupported crunches, rollovers with the head unsupported, heavy shoulder presses, and deep overhead reaches.'
+      dangers: 'Unsupported head lifts, heavy shoulder loading, and end-range shoulder positions can worsen impingement or instability.',
+      avoid: 'Avoid unsupported crunches, prolonged neck flexion, heavy shoulder presses, and deep overhead reaches.'
     },
     recent_surgery: {
       what: 'Recent surgery means tissues are healing and must be reintroduced to movement gradually with medical clearance.',
-      dangers: 'Early loading, sudden twisting, compression, and high-impact movement can delay healing or cause pain.',
+      dangers: 'High load, abrupt movement, and unsupported motion near the surgical area can delay healing, reopen incisions, or cause pain.',
       avoid: 'Avoid abrupt balance work, heavy resistance, deep joint stress, and unsupported movement near the surgical site.'
     },
     arthritis: {
       what: 'Arthritis causes joint inflammation, stiffness, and sensitivity to stress in weight-bearing and moving joints.',
-      dangers: 'Extreme range, heavy compression, and rapid repetition can increase joint irritation and discomfort.',
+      dangers: 'Forced end-range motion, high-impact loading, and repetitive joint stress can increase inflammation and pain.',
       avoid: 'Avoid heavy weighted joint loading, forced end-range motion, high-impact jumping, and repetitive pounding.'
     },
     scoliosis: {
       what: 'Scoliosis is a spinal asymmetry that changes how the spine and ribs move under load.',
-      dangers: 'Aggressive twisting, uneven loading, and unsupported asymmetrical positions can increase discomfort and strain.',
+      dangers: 'Aggressive twisting, uneven loading, and unsupported asymmetrical positions can increase pain and spinal stress.',
       avoid: 'Avoid forced rotation, unsupported side-bending, heavy unilateral spinal loading, and excess one-sided work.'
     },
     pelvic_floor_dysfunction: {
       what: 'Pelvic floor dysfunction affects the muscles supporting the pelvic organs and the deep core system.',
-      dangers: 'Strong Valsalva, uncontrolled pressure, and high-impact load can overload the pelvic floor and worsen symptoms.',
+      dangers: 'High intra-abdominal pressure, breath-holding, and uncontrolled loading can worsen pelvic symptoms and leakage.',
       avoid: 'Avoid intense crunching, breath-holding, heavy lifting without support, and high-impact jumping.'
     },
     diastasis_recti: {
       what: 'Diastasis recti is a separation of the abdominal midline where connective tissue needs gentle reconnection.',
-      dangers: 'Loaded abdominal flexion, twisting, and sudden core compression can stress the linea alba and slow recovery.',
+      dangers: 'Loaded abdominal flexion, twisting, and sudden compression can stress the linea alba and slow healing.',
       avoid: 'Avoid full sit-ups, intense crunches, loaded twisting, unsupported plank without pelvic support, and sudden core compression.'
     },
     shoulder_instability: {
       what: 'Shoulder instability or impingement means the joint is prone to slipping, pinching, or painful movement.',
-      dangers: 'Unsupported weight-bearing, deep overhead load, and sudden movement can aggravate instability or impingement.',
+      dangers: 'Unsupported weight-bearing, deep overhead load, and abrupt movement can aggravate instability or impingement.',
       avoid: 'Avoid full plank push-ups, heavy overhead pressing, unsupported arm balances, and abrupt shoulder loading.'
     },
     bursitis: {
       what: 'Bursitis and tendinopathy are inflammatory conditions of joint cushioning sacs and tendons.',
-      dangers: 'Repetitive friction, compression, and end-range joint positions can worsen inflammation around the affected area.',
+      dangers: 'Repeated friction, compression, or sustained pressure can worsen inflammation around the affected bursa.',
       avoid: 'Avoid positions that compress the affected joint, repetitive high-load movement, and sharp end-range stress.'
     },
     vertigo_dizziness: {
@@ -130,32 +258,32 @@ export class ResultsPage implements OnInit {
     },
     diabetes: {
       what: 'Diabetes affects blood sugar regulation, circulation, and recovery, so activity should be paced and monitored.',
-      dangers: 'Prolonged high intensity, dehydration, and poor foot protection can raise risk of blood sugar swings and injury.',
+      dangers: 'Prolonged high intensity, dehydration, and poor foot protection can increase the risk of glucose swings, neuropathy, and injury.',
       avoid: 'Avoid unsupervised high-intensity intervals, extreme heat, barefoot high-impact work, and exercises that risk foot trauma.'
     },
     postpartum: {
       what: 'Postpartum recovery involves rebuilding core, pelvic floor, and overall strength after childbirth.',
-      dangers: 'Too much load too soon, excessive abdominal compression, and unsupported pelvic pressure can delay recovery.',
+      dangers: 'Too much load too soon, excessive abdominal pressure, and unsupported pelvic motion can delay recovery and exacerbate weakness.',
       avoid: 'Avoid intense abdominal crunching, heavy pelvic floor loading, high-impact jumping, and excessive twisting.'
     },
     balance_issues: {
       what: 'Balance or fall risk means the body needs stable, grounded support rather than unpredictable movement.',
-      dangers: 'Unsupported single-leg work, unstable surfaces, and sudden shifts can increase fall and injury risk.',
+      dangers: 'Unstable surfaces, unsupported single-leg work, and sudden directional changes can increase fall risk and injury.',
       avoid: 'Avoid wobbly balance challenges, unsupported one-legged positions, and fast directional changes.'
     },
     joint_replacement: {
       what: 'Joint replacement means a prosthetic joint is present and needs cautious load management and controlled motion.',
-      dangers: 'High impact, deep joint flexion, twisting under load, and sudden direction changes can stress the replaced joint.',
+      dangers: 'Deep flexion, high impact, twisting under load, and sudden stress can irritate the replaced joint or surrounding tissues.',
       avoid: 'Avoid deep loaded knee/hip flexion, high-impact landings, twisting under load, and aggressive joint compression.'
     },
     foot_ankle_issues: {
       what: 'Foot and ankle issues include pain, instability, arthritis, or surgery that affect how the foot bears weight.',
-      dangers: 'Excessive force, unstable surfaces, and extreme plantarflexion or inversion can aggravate foot and ankle structures.',
+      dangers: 'Unstable surfaces, high-impact loading, and extreme ankle positions can aggravate pain and instability.',
       avoid: 'Avoid high-impact jumping, unsupported single-leg hopping, extreme plantarflexion, and unstable surface work.'
     },
     chronic_fatigue: {
       what: 'Chronic fatigue means low energy tolerance and the need for careful pacing, rest, and recovery.',
-      dangers: 'Pushing beyond tolerance, prolonged hard effort, and inadequate rest can trigger worsening fatigue.',
+      dangers: 'Excessive effort, long intense sessions, and poor recovery can worsen fatigue and delay progress.',
       avoid: 'Avoid long high-intensity sessions, repeated maximal effort, and little rest between movements.'
     },
     other: {
@@ -165,8 +293,36 @@ export class ResultsPage implements OnInit {
     }
   };
 
-  getConditionSection(section: 'what' | 'dangers' | 'avoid', conditionId: string) {
-    return this.conditionSafetySections[conditionId]?.[section] ?? 'A safer version of this content is not available for this condition yet.';
+  getConditionSection(section: 'what' | 'dangers' | 'avoid', condition: ConditionResult) {
+    if (condition.conditionId === 'pregnancy') {
+      const trimester = (condition.pregnancyTrimester || 'Unknown').toLowerCase();
+      const pregnancySections: Record<string, Record<'what' | 'dangers' | 'avoid', string>> = {
+        '1st': {
+          what: 'Early pregnancy brings rapid hormonal and postural changes. Focus on gentle movement, pelvic stability, and avoiding prolonged supine after the first trimester.',
+          dangers: 'High abdominal pressure, intense twisting, and unsupported balance work can increase discomfort and create unnecessary strain.',
+          avoid: 'Avoid prolonged supine after the first trimester, deep abdominal crunches, heavy twisting, inversions, and unstable balance challenges.'
+        },
+        '2nd': {
+          what: 'Mid-pregnancy involves a growing belly and shifting center of gravity, so stability and controlled movement are essential.',
+          dangers: 'Overstretching, deep backbends, and sudden balance challenges can stress the lower back and pelvic floor as the body changes.',
+          avoid: 'Avoid deep spinal flexion, unsupported backbends, inversions, intense core crunches, and any unstable balance poses.'
+        },
+        '3rd': {
+          what: 'Late pregnancy increases pelvic pressure and balance changes. Gentle, supported movement is the safest approach.',
+          dangers: 'Excessive abdominal loading, end-range hip opening, and unstable or inverted positions can aggravate pelvic pressure and discomfort.',
+          avoid: 'Avoid intense abdominal flexion, prolonged supine, inversions, deep spinal twist, and unstable single-leg balance work.'
+        },
+        unknown: {
+          what: 'Pregnancy requires progressing carefully with support, avoiding positions that increase abdominal pressure or instability.',
+          dangers: 'Unsupported balance work, deep abdominal load, and inverted positions can place unnecessary strain during pregnancy.',
+          avoid: 'Avoid deep crunches, prolonged supine holds, inversions, and unstable balance challenges.'
+        }
+      };
+      const normalized = pregnancySections[trimester] ? trimester : 'unknown';
+      return pregnancySections[normalized][section];
+    }
+
+    return this.conditionSafetySections[condition.conditionId]?.[section] ?? 'A safer version of this content is not available for this condition yet.';
   }
 
   getAvoidedExercises(condition: ConditionResult): string {

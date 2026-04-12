@@ -40,24 +40,14 @@
               (click)="toggleCondition(condition.id)"
               class="condition-chip">
       <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
-      <ion-label>{{ condition.label }}</ion-label>
+      <ion-label>
+        {{ condition.label }}
+        <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
+          ({{ pregnancyTrimester }} trimester)
+        </span>
+      </ion-label>
     </ion-chip>
   </div>
-
-  <ion-item *ngIf="selectedIds.has('pregnancy')" class="trimester-item">
-    <ion-label>Pregnancy trimester</ion-label>
-    <ion-segment value="{{ pregnancyTrimester }}" (ionChange)="pregnancyTrimester = $any($event.detail).value">
-      <ion-segment-button value="1st">
-        <ion-label>1st</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="2nd">
-        <ion-label>2nd</ion-label>
-      </ion-segment-button>
-      <ion-segment-button value="3rd">
-        <ion-label>3rd</ion-label>
-      </ion-segment-button>
-    </ion-segment>
-  </ion-item>
 
   <ion-item *ngIf="hasOther">
     <ion-label position="stacked">Other concern details</ion-label>
@@ -101,6 +91,42 @@
       <div class="overlay-actions">
         <ion-button expand="block" (click)="closeSafetyOverlay()">
           Acknowledge
+        </ion-button>
+      </div>
+    </div>
+  </div>
+
+  <div class="trimester-modal" *ngIf="showTrimesterModal">
+    <div class="overlay-backdrop" (click)="closeTrimesterModal()"></div>
+    <div class="overlay-panel">
+      <div class="overlay-header">
+        <div>
+          <h2>Pregnancy Trimester</h2>
+          <p>Select your current trimester to tailor results.</p>
+        </div>
+      </div>
+
+      <ion-item>
+        <ion-label>Trimester</ion-label>
+        <ion-segment [(ngModel)]="pregnancyTrimester" (ionChange)="onTrimesterSelected($event.detail.value)">
+          <ion-segment-button value="1st">
+            <ion-label>1st</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="2nd">
+            <ion-label>2nd</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="3rd">
+            <ion-label>3rd</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-item>
+      <p *ngIf="pregnancyTrimester" class="selected-trimester">
+        Selected: {{ pregnancyTrimester }} trimester
+      </p>
+
+      <div class="overlay-actions">
+        <ion-button expand="block" [disabled]="!pregnancyTrimester" (click)="closeTrimesterModal()">
+          Continue
         </ion-button>
       </div>
     </div>

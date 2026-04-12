@@ -116,6 +116,7 @@ export class SafetyService {
       conditionId: condition.id,
       conditionLabel: condition.label,
       conditionDescription: condition.description,
+      pregnancyTrimester: condition.id === 'pregnancy' ? (query.pregnancyTrimester ?? 'Unknown') : undefined,
       contraindications: this.contraindications[condition.id] ?? []
     }));
 

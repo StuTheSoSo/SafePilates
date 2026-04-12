@@ -188,7 +188,39 @@
 }
 
 .trimester-item {
+  margin-top: 0.75rem;
+}
+
+.trimester-panel {
   margin-top: 1rem;
+  padding: 0.95rem 1rem;
+  border-radius: 20px;
+  background: rgba(226, 245, 238, 0.95);
+  border: 1px solid rgba(76, 180, 161, 0.2);
+}
+
+.trimester-note {
+  margin-bottom: 0.75rem;
+  color: var(--ion-color-primary);
+  font-weight: 700;
+  font-size: 0.96rem;
+}
+
+.selected-trimester {
+  margin: 0.75rem 0 0;
+  font-size: 0.95rem;
+  color: var(--ion-color-primary);
+  font-weight: 700;
+}
+
+.trimester-warning {
+  margin-top: 0.7rem;
+  padding: 0.85rem 0.95rem;
+  border-radius: 16px;
+  background: rgba(255, 244, 229, 0.95);
+  border: 1px solid rgba(255, 183, 96, 0.35);
+  color: var(--ion-color-warning);
+  font-weight: 600;
 }
 
 ion-item {
@@ -252,7 +284,8 @@ ion-button {
   height: auto;
   line-height: 1.2;
 }
-.safety-overlay {
+.safety-overlay,
+.trimester-modal {
   position: fixed;
   inset: 0;
   z-index: 1200;

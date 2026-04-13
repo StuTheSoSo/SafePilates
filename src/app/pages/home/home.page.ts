@@ -29,10 +29,38 @@ export class HomePage implements OnInit {
   selectedIds = new Set<string>();
   pregnancyTrimester = '';
   otherText = '';
+  searchText = '';
   loading = false;
   initFailed = false;
   showSafetyOverlay = true;
   showTrimesterModal = false;
+
+  onSearchTextChange(event: CustomEvent) {
+    this.searchText = event.detail.value || '';
+    this.trimHiddenSelections();
+  }
+
+  private trimHiddenSelections() {
+    const visibleIds = new Set(
+      this.filteredGroupedConditions.flatMap(group =>
+        group.conditions.map(condition => condition.id)
+      )
+    );
+
+    const updatedSelection = new Set<string>();
+    this.selectedIds.forEach(id => {
+      if (visibleIds.has(id)) {
+        updatedSelection.add(id);
+      }
+    });
+
+    if (updatedSelection.size !== this.selectedIds.size) {
+      this.selectedIds = updatedSelection;
+      if (!this.selectedIds.has('pregnancy')) {
+        this.pregnancyTrimester = '';
+      }
+    }
+  }
 
   conditionGroups = [
     {
@@ -226,6 +254,24 @@ export class HomePage implements OnInit {
     }));
   }
 
+  get filteredGroupedConditions() {
+    const term = this.searchText.trim().toLowerCase();
+    if (!term) {
+      return this.groupedConditions;
+    }
+    return this.groupedConditions
+      .map(group => ({
+        ...group,
+        conditions: group.conditions.filter(condition => this.conditionMatchesSearch(condition, term))
+      }))
+      .filter(group => group.conditions.length > 0);
+  }
+
+  private conditionMatchesSearch(condition: Condition, term: string) {
+    return [condition.label, condition.description]
+      .some(field => field.toLowerCase().includes(term));
+  }
+
   get canSubmit() {
     const needsTrimester = this.selectedIds.has('pregnancy');
     return this.selectedIds.size > 0
@@ -252,7 +298,8 @@ export class HomePage implements OnInit {
       await this.safetyService.fetchGuidance({
         conditionIds: this.selectedConditions,
         pregnancyTrimester: this.selectedIds.has('pregnancy') ? this.pregnancyTrimester : undefined,
-        otherText: this.otherText.trim()
+        otherText: this.otherText.trim(),
+        searchTerm: this.searchText.trim() || undefined
       });
     } catch (error) {
       console.error('Guidance request failed', error);

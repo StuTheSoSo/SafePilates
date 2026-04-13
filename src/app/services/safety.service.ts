@@ -159,7 +159,8 @@ export class SafetyService {
     const result: GuidanceResult = {
       conditionResults,
       aiFallback,
-      aiUsed
+      aiUsed,
+      searchTerm: query.searchTerm?.trim() || undefined
     };
 
     this.latestGuidance = result;

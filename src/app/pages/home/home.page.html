@@ -4,83 +4,95 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen class="ion-padding home-content">
-  <section class="hero-card ion-margin-bottom">
-    <h1>PilateSafe for every body</h1>
-    <p>Find fast, offline guidance for Pilates exercises across mat work, reformer, chair, and prop-based training.</p>
-  </section>
+<ion-content fullscreen>
+  <div class="home-content">
+    <div class="home-inner">
+      <ion-card class="hero-card ion-margin-bottom">
+      <h1>PilateSafe for every body</h1>
+      <p>Find fast, offline guidance for Pilates exercises across mat work, reformer, chair, and prop-based training.</p>
+    </ion-card>
 
-  <div class="page-hero">
+    <div class="page-hero">
+      <ion-searchbar
+        placeholder="Search concerns"
+        [(ngModel)]="searchText"
+        (ionInput)="onSearchTextChange($event)"
+        debounce="300"
+        showCancelButton="focus"
+        animated="true"
+        class="condition-searchbar">
+      </ion-searchbar>
 
-    <div class="intro-block">
-      <h2>Check Pilates safety</h2>
-      <p>Tap the concerns that apply to the client.</p>
+      <ion-note *ngIf="searchText.trim() && filteredGroupedConditions.length === 0" color="medium" class="search-empty">
+        No concerns match "{{ searchText }}". Try a different keyword.
+      </ion-note>
     </div>
-  </div>
 
-  <div class="home-bottom-panel" *ngIf="selectedCount > 0">
-    <div class="action-block">
-      <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
-        <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
-        <span *ngIf="!loading">Get Guidance</span>
-      </ion-button>
-    </div>
-  </div>
-
-  <ion-spinner *ngIf="loading" name="crescent" class="loading-spinner"></ion-spinner>
-  <ion-note *ngIf="hasNoConditions" color="danger">
-    Could not load condition guidance yet. Please refresh the app or try again shortly.
-  </ion-note>
-
-  <div *ngIf="!loading && groupedConditions.length > 0" class="condition-groups">
-    <div *ngFor="let group of groupedConditions" class="condition-group">
-      <div class="group-header">
-        <h3>{{ group.label }}</h3>
-        <p *ngIf="group.subtitle">{{ group.subtitle }}</p>
-      </div>
-      <div class="condition-grid">
-        <ion-chip *ngFor="let condition of group.conditions"
-                  [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
-                  [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
-                  [class.selected]="selectedIds.has(condition.id)"
-                  (click)="toggleCondition(condition.id)"
-                  class="condition-chip">
-          <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
-          <ion-label>
-            {{ condition.label }}
-            <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
-              ({{ pregnancyTrimester }} trimester)
-            </span>
-          </ion-label>
-        </ion-chip>
+    <div class="home-bottom-panel" *ngIf="selectedCount > 0">
+      <div class="action-block">
+        <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
+          <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
+          <span *ngIf="!loading">Get Guidance</span>
+        </ion-button>
       </div>
     </div>
+
+    <ion-spinner *ngIf="loading" name="crescent" class="loading-spinner"></ion-spinner>
+    <ion-note *ngIf="hasNoConditions" color="danger">
+      Could not load condition guidance yet. Please refresh the app or try again shortly.
+    </ion-note>
+
+    <div *ngIf="!loading && filteredGroupedConditions.length > 0" class="condition-groups">
+      <ion-card *ngFor="let group of filteredGroupedConditions" class="condition-group">
+        <div class="group-header">
+          <h3>{{ group.label }}</h3>
+          <p *ngIf="group.subtitle">{{ group.subtitle }}</p>
+        </div>
+        <div class="condition-grid">
+          <ion-chip *ngFor="let condition of group.conditions"
+                    [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
+                    [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
+                    [class.selected]="selectedIds.has(condition.id)"
+                    (click)="toggleCondition(condition.id)"
+                    class="condition-chip">
+            <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
+            <ion-label>
+              {{ condition.label }}
+              <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
+                ({{ pregnancyTrimester }} trimester)
+              </span>
+            </ion-label>
+          </ion-chip>
+        </div>
+      </ion-card>
+    </div>
+
+    <ion-item *ngIf="hasOther">
+      <ion-label position="stacked">Other concern details</ion-label>
+      <ion-textarea [(ngModel)]="otherText" placeholder="Briefly describe the concern"></ion-textarea>
+    </ion-item>
+
+    <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
+      Please describe the client’s concern so you can review it safely.
+    </ion-note>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Privacy & Legal</ion-card-title>
+      </ion-card-header>
+      <ion-list>
+        <ion-item routerLink="/privacy-policy" detail>
+          <ion-label>Privacy Policy</ion-label>
+        </ion-item>
+        <ion-item routerLink="/eula" detail>
+          <ion-label>End User License Agreement</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
   </div>
+</div>
 
-  <ion-item *ngIf="hasOther">
-    <ion-label position="stacked">Other concern details</ion-label>
-    <ion-textarea [(ngModel)]="otherText" placeholder="Briefly describe the concern"></ion-textarea>
-  </ion-item>
-
-  <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
-    Please describe the client’s concern so you can review it safely.
-  </ion-note>
-
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Privacy & Legal</ion-card-title>
-    </ion-card-header>
-    <ion-list>
-      <ion-item routerLink="/privacy-policy" detail>
-        <ion-label>Privacy Policy</ion-label>
-      </ion-item>
-      <ion-item routerLink="/eula" detail>
-        <ion-label>End User License Agreement</ion-label>
-      </ion-item>
-    </ion-list>
-  </ion-card>
-
+  <!-- overlays and modals remain outside home-inner -->
   <div class="safety-overlay" *ngIf="showSafetyOverlay">
     <div class="overlay-backdrop" (click)="closeSafetyOverlay()"></div>
     <div class="overlay-panel">
@@ -103,7 +115,6 @@
       </div>
     </div>
   </div>
-
   <div class="trimester-modal" *ngIf="showTrimesterModal">
     <div class="overlay-backdrop" (click)="closeTrimesterModal()"></div>
     <div class="overlay-panel">

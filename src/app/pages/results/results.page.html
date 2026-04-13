@@ -17,7 +17,7 @@
       <ion-card-title>Selected concerns</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>{{ selectedConditionLabels.join(', ') }}</p>
+      <p [innerHTML]="getHighlightedText(selectedConditionLabels.join(', '))"></p>
     </ion-card-content>
   </ion-card>
 
@@ -39,22 +39,22 @@
       <div class="condition-list">
         <ion-card class="condition-card" *ngFor="let condition of guidance.conditionResults">
           <ion-card-header>
-            <ion-card-title>{{ condition.conditionLabel }}</ion-card-title>
+            <ion-card-title [innerHTML]="getHighlightedText(condition.conditionLabel)"></ion-card-title>
             <p *ngIf="condition.pregnancyTrimester" class="trimester-tag">{{ condition.pregnancyTrimester }} trimester guidance</p>
           </ion-card-header>
           <ion-card-content>
             <div class="condition-sections">
               <div class="condition-block">
                 <h3>What is it?</h3>
-                <p>{{ getConditionSection('what', condition) }}</p>
+                <p [innerHTML]="getHighlightedText(getConditionSection('what', condition))"></p>
               </div>
               <div class="condition-block">
                 <h3>What are the dangers?</h3>
-                <p>{{ getConditionSection('dangers', condition) }}</p>
+                <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
               </div>
               <div class="condition-block">
                 <h3>Exercises to be avoided</h3>
-                <p>{{ getConditionSection('avoid', condition) }}</p>
+                <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
                 <p *ngIf="condition.contraindications.length" class="avoid-exercises">
                   <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
                 </p>

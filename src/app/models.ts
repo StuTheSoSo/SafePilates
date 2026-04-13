@@ -68,10 +68,12 @@ export interface SafetyQuery {
   conditionIds: string[];
   pregnancyTrimester?: string;
   otherText?: string;
+  searchTerm?: string;
 }
 
 export interface GuidanceResult {
   conditionResults: ConditionResult[];
   aiFallback?: string;
   aiUsed: boolean;
+  searchTerm?: string;
 }

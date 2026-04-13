@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
@@ -15,7 +16,7 @@ import { GuidanceResult, ConditionResult } from '../../models';
 export class ResultsPage implements OnInit {
   guidance: GuidanceResult | null = null;
 
-  constructor(private safetyService: SafetyService, private router: Router) {}
+  constructor(private safetyService: SafetyService, private router: Router, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.refreshGuidance();
@@ -569,6 +570,32 @@ export class ResultsPage implements OnInit {
     }
 
     return this.conditionSafetySections[condition.conditionId]?.[section] ?? 'A safer version of this content is not available for this condition yet.';
+  }
+
+  getHighlightedText(text: string): SafeHtml {
+    const term = this.guidance?.searchTerm?.trim();
+    if (!term) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.escapeHtml(text));
+    }
+    const escapedTerm = this.escapeRegExp(term);
+    const highlighted = this.escapeHtml(text).replace(new RegExp(escapedTerm, 'gi'), match => `<mark>${match}</mark>`);
+    return this.sanitizer.bypassSecurityTrustHtml(highlighted);
+  }
+
+  private escapeHtml(text: string): string {
+    return text.replace(/[&<>"]+/g, value => {
+      switch (value) {
+        case '&': return '&amp;';
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '"': return '&quot;';
+        default: return value;
+      }
+    });
+  }
+
+  private escapeRegExp(text: string): string {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   getAvoidedExercises(condition: ConditionResult): string {

@@ -87,6 +87,23 @@ export class SafetyService {
     return this.latestGuidance;
   }
 
+  getSelectedConditionResults(): ConditionResult[] {
+    return this.latestGuidance?.conditionResults ?? [];
+  }
+
+  getExerciseGuidanceForSelectedConditions(exerciseId: string): Array<{ conditionId: string; conditionLabel: string; reason: string; alternative: string }> {
+    return this.latestGuidance?.conditionResults?.flatMap((result: ConditionResult) =>
+      result.contraindications
+        .filter((item: Contraindication) => item.exerciseId === exerciseId)
+        .map((item: Contraindication) => ({
+          conditionId: result.conditionId,
+          conditionLabel: result.conditionLabel,
+          reason: item.reason,
+          alternative: item.alternative
+        }))
+    ) ?? [];
+  }
+
   setGuidance(guidance: GuidanceResult) {
     this.latestGuidance = guidance;
   }
@@ -111,7 +128,7 @@ export class SafetyService {
     await this.initData();
     this.latestQuery = query;
 
-    const selectedConditions = query.conditionIds.map(id => this.conditions.find(item => item.id === id)).filter(Boolean) as Condition[];
+    const selectedConditions = query.conditionIds.map((id: string) => this.conditions.find(item => item.id === id)).filter(Boolean) as Condition[];
     const otherText = query.otherText?.trim() ?? '';
     const inferredConditions = query.conditionIds.includes('other') && otherText ? this.inferConditionsFromOtherText(otherText) : [];
     const effectiveConditions = selectedConditions.filter(condition => condition.id !== 'other');

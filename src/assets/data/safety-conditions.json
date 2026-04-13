@@ -11,44 +11,9 @@
     "hasTrimester": true
   },
   {
-    "id": "low_back_pain",
-    "label": "Chronic Low Back Pain (disc herniation, spinal stenosis, spondylolisthesis)",
-    "description": "Prefer neutral spine stabilization and avoid repetitive flexion or painful movements."
-  },
-  {
-    "id": "hypertension",
-    "label": "Hypertension / Cardiovascular Concerns",
-    "description": "Avoid inversions and breath-holding; use slow, controlled movement."
-  },
-  {
-    "id": "knee_issues",
-    "label": "Knee Issues (arthritis, pain, replacement)",
-    "description": "Avoid deep loaded knee flexion, painful range, and direct joint pressure."
-  },
-  {
-    "id": "hip_issues",
-    "label": "Hip Issues (arthritis, pain, replacement)",
-    "description": "Use smaller hip ranges and avoid extreme opening or loaded rotation."
-  },
-  {
-    "id": "neck_shoulder",
-    "label": "Neck / Shoulder Issues",
-    "description": "Avoid unsupported head lifts and excessive shoulder loading."
-  },
-  {
-    "id": "recent_surgery",
-    "label": "Recent Surgery",
-    "description": "Get medical clearance first; favor gentle, supported movement and avoid high-risk exercises."
-  },
-  {
-    "id": "arthritis",
-    "label": "Arthritis (general)",
-    "description": "Respect pain-free range and avoid heavy loading or extreme end-range motions."
-  },
-  {
-    "id": "scoliosis",
-    "label": "Scoliosis / Spinal Asymmetry",
-    "description": "Favor asymmetry-aware posture, avoid aggressive twisting, and prioritize balanced spinal support."
+    "id": "postpartum",
+    "label": "Postpartum / Postnatal Recovery",
+    "description": "Focus on gentle core reconnection, pelvic floor recovery, and progressive return to load."
   },
   {
     "id": "pelvic_floor_dysfunction",
@@ -61,39 +26,29 @@
     "description": "Avoid loaded abdominal flexion, intense twisting, and exercises that increase intra-abdominal pressure without support."
   },
   {
-    "id": "shoulder_instability",
-    "label": "Shoulder Instability / Impingement",
-    "description": "Avoid heavy overhead loading, unsupported shoulder weight-bearing, and movements that aggravate shoulder instability."
+    "id": "low_back_pain",
+    "label": "Chronic Low Back Pain (disc herniation, spinal stenosis, spondylolisthesis)",
+    "description": "Prefer neutral spine stabilization and avoid repetitive flexion or painful movements."
   },
   {
-    "id": "bursitis",
-    "label": "Bursitis / Tendinopathy",
-    "description": "Avoid repetitive friction, compression, or end-range joint positions around inflamed bursae."
+    "id": "scoliosis",
+    "label": "Scoliosis / Spinal Asymmetry",
+    "description": "Favor asymmetry-aware posture, avoid aggressive twisting, and prioritize balanced spinal support."
   },
   {
-    "id": "vertigo_dizziness",
-    "label": "Vertigo / Dizziness",
-    "description": "Avoid rapid head movement, inversions, and unsupported balance work that may trigger dizziness."
+    "id": "arthritis",
+    "label": "Arthritis (general)",
+    "description": "Respect pain-free range and avoid heavy loading or extreme end-range motions."
   },
   {
-    "id": "diabetes",
-    "label": "Diabetes / Metabolic Concerns",
-    "description": "Use steady movement, monitor intensity, and avoid prolonged strain during blood sugar fluctuation."
+    "id": "knee_issues",
+    "label": "Knee Issues (arthritis, pain, replacement)",
+    "description": "Avoid deep loaded knee flexion, painful range, and direct joint pressure."
   },
   {
-    "id": "postpartum",
-    "label": "Postpartum / Postnatal Recovery",
-    "description": "Focus on gentle core reconnection, pelvic floor recovery, and progressive return to load."
-  },
-  {
-    "id": "balance_issues",
-    "label": "Balance / Fall Risk",
-    "description": "Avoid unsupported balance challenges and progress with stable, grounded movement."
-  },
-  {
-    "id": "joint_replacement",
-    "label": "Joint Replacement (knee, hip, shoulder)",
-    "description": "Favor controlled, low-impact movement and avoid high-load joint stress around the replaced joint."
+    "id": "hip_issues",
+    "label": "Hip Issues (arthritis, pain, replacement)",
+    "description": "Use smaller hip ranges and avoid extreme opening or loaded rotation."
   },
   {
     "id": "foot_ankle_issues",
@@ -101,9 +56,29 @@
     "description": "Avoid high-impact foot loading, excessive plantarflexion, and unsupported ankle instability."
   },
   {
-    "id": "chronic_fatigue",
-    "label": "Chronic Fatigue / Autoimmune Sensitivity",
-    "description": "Use gentle pacing, shorter sessions, and avoid pushing through excessive fatigue."
+    "id": "joint_replacement",
+    "label": "Joint Replacement (knee, hip, shoulder)",
+    "description": "Favor controlled, low-impact movement and avoid high-load joint stress around the replaced joint."
+  },
+  {
+    "id": "recent_surgery",
+    "label": "Recent Surgery",
+    "description": "Get medical clearance first; favor gentle, supported movement and avoid high-risk exercises."
+  },
+  {
+    "id": "shoulder_instability",
+    "label": "Shoulder Instability / Impingement",
+    "description": "Avoid heavy overhead loading, unsupported shoulder weight-bearing, and movements that aggravate shoulder instability."
+  },
+  {
+    "id": "neck_shoulder",
+    "label": "Neck / Shoulder Issues",
+    "description": "Avoid unsupported head lifts and excessive shoulder loading."
+  },
+  {
+    "id": "bursitis",
+    "label": "Bursitis / Tendinopathy",
+    "description": "Avoid repetitive friction, compression, or end-range joint positions around inflamed bursae."
   },
   {
     "id": "respiratory",
@@ -111,14 +86,139 @@
     "description": "Avoid breath-holding, rapid exertion, and chest-compressive positions if you have asthma or respiratory symptoms."
   },
   {
+    "id": "respiratory_pulmonary",
+    "label": "Respiratory / Pulmonary Condition",
+    "description": "Favor gentle breath-led work; avoid breath-holding, rapid exertion, and positions that compress the chest or restrict airflow."
+  },
+  {
+    "id": "hypertension",
+    "label": "Hypertension / Cardiovascular Concerns",
+    "description": "Avoid inversions and breath-holding; use slow, controlled movement."
+  },
+  {
+    "id": "cardiovascular_disease",
+    "label": "Cardiovascular Disease",
+    "description": "Avoid heavy load, rapid transitions, and breath-holding; favor low-intensity, steady movement and monitor heart response."
+  },
+  {
+    "id": "arrhythmia_cardiac_device",
+    "label": "Arrhythmia / Cardiac Device",
+    "description": "Modify intensity and torso positions; avoid sudden high exertion and positions that alter chest compression or stress the device site."
+  },
+  {
+    "id": "diabetes",
+    "label": "Diabetes / Metabolic Concerns",
+    "description": "Use steady movement, monitor intensity, and avoid prolonged strain during blood sugar fluctuation."
+  },
+  {
+    "id": "metabolic_endocrine",
+    "label": "Metabolic / Endocrine Condition",
+    "description": "Manage intensity, pacing, and temperature sensitivity; avoid sudden exertion if energy, blood sugar, or hormonal balance is unstable."
+  },
+  {
+    "id": "autoimmune_inflammatory",
+    "label": "Autoimmune / Inflammatory Condition",
+    "description": "Plan around flare cycles; avoid high-load or prolonged joint compression during active inflammation and use gentler pacing."
+  },
+  {
+    "id": "chronic_fatigue",
+    "label": "Chronic Fatigue / Autoimmune Sensitivity",
+    "description": "Use gentle pacing, shorter sessions, and avoid pushing through excessive fatigue."
+  },
+  {
+    "id": "immune_infectious",
+    "label": "Immune / Infectious Condition",
+    "description": "Choose low-impact, adaptable movement; avoid pushing through fatigue, fever, or systemic illness and adjust for recovery capacity."
+  },
+  {
+    "id": "oncology_treatment",
+    "label": "Active Cancer / Cancer Treatment",
+    "description": "Use symptom-guided movement; avoid high load, aggressive compression, and unsupported effort during active treatment or recovery."
+  },
+  {
     "id": "swollen_glands",
     "label": "Swollen Glands / Enlarged Lymph Nodes",
     "description": "Swollen lymph nodes often indicate infection or inflammation. Favor gentle movement and avoid pressure or strain near the neck, jaw, or armpits."
   },
   {
+    "id": "gastrointestinal_pelvic",
+    "label": "Gastrointestinal / Pelvic Floor Condition",
+    "description": "Modify core compression and flexion; avoid strong intra-abdominal pressure and pelvic strain that may exacerbate symptoms."
+  },
+  {
+    "id": "neurological_disorder",
+    "label": "Neurological Disorder",
+    "description": "Adjust for balance, coordination, and sensation changes; prioritize support, slower progressions, and clear cues."
+  },
+  {
+    "id": "vertigo_dizziness",
+    "label": "Vertigo / Dizziness",
+    "description": "Avoid rapid head movement, inversions, and unsupported balance work that may trigger dizziness."
+  },
+  {
+    "id": "balance_issues",
+    "label": "Balance / Fall Risk",
+    "description": "Avoid unsupported balance challenges and progress with stable, grounded movement."
+  },
+  {
+    "id": "mental_cognitive",
+    "label": "Mental Health / Cognitive Condition",
+    "description": "Use simple cues, extra support, and gentle pacing to help with concentration, stress response, and safe movement execution."
+  },
+  {
     "id": "weight_concerns",
     "label": "Overweight / Obesity / Weight Concerns",
     "description": "Favor low-impact, joint-friendly Pilates and avoid excessive load, fast transitions, or unstable balance work."
+  },
+  {
+    "id": "vision_impairment",
+    "label": "Vision Impairment / Blindness",
+    "description": "Provide extra cueing, hands-on support, and ensure a safe, obstacle-free environment. Adapt balance and orientation work as needed."
+  },
+  {
+    "id": "hearing_impairment",
+    "label": "Hearing Impairment / Deafness",
+    "description": "Use visual demonstration, written instructions, or tactile feedback. Ensure clear sightlines and minimize reliance on verbal cues."
+  },
+  {
+    "id": "epilepsy_seizure",
+    "label": "Epilepsy / Seizure Disorder",
+    "description": "Avoid triggers such as flashing lights or rapid head movements. Monitor for warning signs and ensure a safe environment in case of seizure."
+  },
+  {
+    "id": "severe_allergy",
+    "label": "Severe Allergies / Anaphylaxis Risk",
+    "description": "Be aware of environmental and equipment allergens (e.g., latex, cleaning agents). Ensure emergency plan and medication (e.g., epinephrine) are accessible."
+  },
+  {
+    "id": "chronic_pain_syndrome",
+    "label": "Chronic Pain Syndrome (e.g., Fibromyalgia)",
+    "description": "Use gentle pacing, pain monitoring, and gradual progressions. Avoid overexertion and respect individual pain thresholds."
+  },
+  {
+    "id": "skin_condition",
+    "label": "Skin Condition (e.g., wounds, eczema, psoriasis)",
+    "description": "Modify for comfort and hygiene. Avoid direct contact with equipment on open wounds and ensure proper cleaning protocols."
+  },
+  {
+    "id": "transplant_immunosuppression",
+    "label": "Transplant Recipient / Immunosuppression",
+    "description": "Favor gentle, low-impact exercise. Monitor for infection risk and avoid crowded or unsanitary environments."
+  },
+  {
+    "id": "recent_hospitalization",
+    "label": "Recent Hospitalization / Prolonged Bed Rest",
+    "description": "Reintroduce movement gradually. Monitor for deconditioning, orthostatic hypotension, and progress at a safe pace."
+  },
+  {
+    "id": "pacemaker_implant",
+    "label": "Pacemaker / Implanted Medical Device",
+    "description": "Avoid direct pressure or trauma to the device site. Follow any device-specific movement restrictions and consult with the medical team as needed."
+  },
+  {
+    "id": "substance_use_recovery",
+    "label": "Substance Use Disorder / Recovery",
+    "description": "Be aware of possible impacts on coordination, judgment, and energy. Use trauma-informed approaches and provide extra support as needed."
   },
   {
     "id": "other",

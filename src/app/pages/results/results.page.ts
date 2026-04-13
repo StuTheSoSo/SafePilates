@@ -39,10 +39,47 @@ export class ResultsPage implements OnInit {
     postpartum: 'Postpartum work should start gently and rebuild pelvic floor and core support with low-load, slow movement.',
     balance_issues: 'Choose grounded movement and avoid unsupported balance challenges until strength improves.',
     joint_replacement: 'Use low-impact, controlled exercises and avoid high joint loads around replaced hips, knees, or shoulders.',
+    recent_surgery: 'Move slowly with medical clearance, avoid aggressive progression, and protect healing tissues after surgery.',
     foot_ankle_issues: 'Reduce foot loading, keep the feet supported, and avoid forced plantarflexion or unstable ankle positions.',
     chronic_fatigue: 'Keep sessions short, use frequent rest, and avoid pushing through excessive fatigue.',
     respiratory: 'Keep breathing calm and choose open chest, low-impact movement when respiratory symptoms are present.',
-    swollen_glands: 'Swollen glands often signal infection or inflammation. Avoid pressure to the neck and head, and move gently until the cause is assessed.'
+    swollen_glands: 'Swollen glands often signal infection or inflammation. Avoid pressure to the neck and head, and move gently until the cause is assessed.',
+    vision_impairment: 'Use tactile support, a clutter-free practice area, and exercises that do not depend on visual targeting.',
+    hearing_impairment: 'Provide visual and tactile cues so the client can follow the session safely without relying on sound.',
+    epilepsy_seizure: 'Avoid seizure triggers, keep movement slow and supported, and have an emergency plan readily accessible.',
+    severe_allergy: 'Verify allergens first, avoid scented products, and keep epinephrine available for any severe reaction.',
+    chronic_pain_syndrome: 'Respect pain signals and use gentle, low-load movement with frequent rest to prevent flares.',
+    skin_condition: 'Protect sensitive or irritated skin with padding and avoid exercises that increase friction or pressure.',
+    transplant_immunosuppression: 'Choose low-impact movement and keep the environment clean while immunity is suppressed.',
+    recent_hospitalization: 'Rebuild movement gradually after bed rest and avoid aggressive progression during early recovery.',
+    pacemaker_implant: 'Avoid pressure and deep compression over the device site and use gentle upper-body work.',
+    substance_use_recovery: 'Use grounding, predictable movement and avoid complex routines that require rapid decision-making.',
+    osteoporosis: 'Support fragile bones with low-impact, controlled movement and avoid spinal flexion or heavy load without clearance.',
+    pelvic_floor_dysfunction: 'Keep pelvic pressure low and avoid strong breath-holding or heavy abdominal loading.',
+    diastasis_recti: 'Support the midline with gentle core reconnection and avoid intense crunches or twisting.',
+    low_back_pain: 'Maintain neutral spine alignment and avoid repeated flexion, extension, or twisting through the lumbar spine.',
+    scoliosis: 'Favor symmetrical, supported movement and avoid aggressive twisting or uneven loading on the spine.',
+    arthritis: 'Move within pain-free range, choose low-impact exercises, and avoid forced joint positions or heavy loading.',
+    knee_issues: 'Support the knee with alignment and avoid deep loaded flexion, twisting, or weight-bearing that causes pain.',
+    hip_issues: 'Use controlled hip motion and avoid extreme rotation, end-range opening, or unsupported single-leg load.',
+    shoulder_instability: 'Keep shoulder movement stable and avoid unsupported weight-bearing, deep overhead reach, or quick loading.',
+    neck_shoulder: 'Support neck alignment and avoid unsupported head lifts, deep extension, or heavy shoulder compression.',
+    bursitis: 'Protect inflamed bursae with padding, gentle range of motion, and avoid sustained compression or friction.',
+    hypertension: 'Keep exertion moderate, avoid breath-holding, and favor steady, controlled movement over intense effort.',
+    diabetes: 'Monitor effort and hydration, keep feet protected, and avoid sudden high-intensity work that may disrupt glucose control.',
+    vertigo_dizziness: 'Move slowly and support the head, avoiding rapid turns, inversions, or unstable balance challenges.',
+    other: 'Start conservatively with gentle, supported movement and avoid unfamiliar high-risk positions until you know how your body responds.',
+    respiratory_pulmonary: 'Favor easy, steady breathing and avoid chest compression, breath-holding, and rapid exertion.',
+    cardiovascular_disease: 'Keep intensity moderate, monitor heart response, and avoid breath-holding or sudden high-intensity effort.',
+    arrhythmia_cardiac_device: 'Avoid sudden exertion and deep chest compression, and keep movement calm around any implanted device.',
+    metabolic_endocrine: 'Move with careful pacing, avoid rapid intensity spikes, and watch for temperature sensitivity or energy swings.',
+    autoimmune_inflammatory: 'Plan around flare cycles and avoid high-load or prolonged joint compression during active inflammation.',
+    immune_infectious: 'Avoid pushing through active illness; favor gentle, low-impact movement and rest if symptoms worsen.',
+    oncology_treatment: 'Adapt to fatigue and treatment side effects, avoiding aggressive load, deep compression, and unsupported effort.',
+    gastrointestinal_pelvic: 'Keep core work gentle, avoid strong intra-abdominal pressure, and prioritize pelvic comfort and support.',
+    neurological_disorder: 'Use additional support, slow progressions, and clear cues to compensate for coordination and sensation changes.',
+    mental_cognitive: 'Keep the routine simple and predictable, avoid complex transitions, and allow extra time for processing and focus.',
+    weight_concerns: 'Use joint-friendly, low-impact Pilates and avoid fast, unstable transitions or excessive load on the spine and hips.'
   };
 
   get selectedConditionLabels() {
@@ -147,6 +184,90 @@ export class ResultsPage implements OnInit {
       'Use short, gentle sessions with plenty of rest and avoid pushing through excessive fatigue.',
       'Pace movement carefully and recover fully before increasing load or duration.'
     ],
+    vision_impairment: [
+      'Use stable, anchored movement and minimize reliance on visual targeting or rapid direction changes.',
+      'Keep the space clear, provide extra tactile or verbal cues, and choose exercises with solid surface contact rather than visual alignment cues.'
+    ],
+    hearing_impairment: [
+      'Use visual demonstration, clear gestures, and written or tactile cues instead of fast verbal pacing.',
+      'Keep the routine predictable, avoid audio-only transitions, and favor steady, easy-to-follow sequences.'
+    ],
+    epilepsy_seizure: [
+      'Avoid rapid head movement, flashing lights, and high-intensity sequences that may trigger a seizure.',
+      'Keep the environment calm, movement slow and supported, and ensure an emergency plan and access to help are available.'
+    ],
+    severe_allergy: [
+      'Confirm allergens before the session and avoid scented products, latex, or food near the practice space.',
+      'Keep epinephrine accessible, use hypoallergenic props, and ensure equipment is cleaned between clients.'
+    ],
+    chronic_pain_syndrome: [
+      'Respect pain signals, use gentle pacing, and avoid prolonged, high-load, or repetitive exercise that may trigger a flare.',
+      'Choose shorter sets with frequent rest, lighter resistance, and equipment modifications to reduce joint or soft tissue strain.'
+    ],
+    skin_condition: [
+      'Protect sensitive skin with additional padding and avoid direct pressure on inflamed or open areas.',
+      'Maintain clean equipment, use soft surfaces, and choose exercises that limit friction and compression on affected skin.'
+    ],
+    transplant_immunosuppression: [
+      'Use very gentle, low-impact exercise and keep the environment clean to reduce infection risk.',
+      'Avoid crowded spaces and shared high-touch equipment without proper cleaning, and limit aggressive load while immunity is suppressed.'
+    ],
+    recent_hospitalization: [
+      'Reintroduce movement slowly with supportive positions and avoid high-effort sessions after bed rest.',
+      'Watch for dizziness or fatigue, avoid rapid position changes, and prioritise short, gentle mobility work first.'
+    ],
+    pacemaker_implant: [
+      'Avoid direct pressure or aggressive compression over the device site and keep upper-body movement controlled.',
+      'Choose low-impact exercises, avoid breath-holding, and monitor heart rate response during effort.'
+    ],
+    substance_use_recovery: [
+      'Use grounding, simple movement with calm cues and avoid complex balance exercises that require rapid decision-making.',
+      'Focus on stability, clear cues, and gentle pacing rather than advanced or emotionally intense movement.'
+    ],
+    respiratory_pulmonary: [
+      'Use gentle, breath-focused movement and avoid deep chest compression, breath-holding, and sudden increases in intensity.',
+      'Choose open, supported positions that allow easy inhalation and exhalation without constricting the rib cage.'
+    ],
+    cardiovascular_disease: [
+      'Keep the effort moderate, avoid high-intensity bursts, and do not hold your breath during exertion.',
+      'Favor slow, controlled movement and monitor for excessive heart rate or breathlessness.'
+    ],
+    arrhythmia_cardiac_device: [
+      'Keep movements calm and controlled, avoiding sudden rapid effort or deep compression near the device site.',
+      'Stay in comfortable ranges, avoid breath-holding, and listen for any signs of irregular heart rhythm.'
+    ],
+    metabolic_endocrine: [
+      'Pace exercise carefully and avoid rapid intensity changes if blood sugar, energy, or temperature regulation is unstable.',
+      'Choose moderate, steady movement and be prepared to stop or rest if you feel dizzy, overheated, or weak.'
+    ],
+    autoimmune_inflammatory: [
+      'Use lower load, shorter sessions, and avoid prolonged joint compression during flare-ups or active inflammation.',
+      'Prioritize gentle circulation, mobility, and rest rather than pushing to high effort during active symptoms.'
+    ],
+    immune_infectious: [
+      'Avoid exertion during fever, cough, or systemic symptoms and favor rest until the acute illness resolves.',
+      'When returning to movement, start gently with low-impact, well-supported exercises and avoid high-intensity effort.'
+    ],
+    oncology_treatment: [
+      'Adapt to energy and treatment side effects, avoiding aggressive compression, heavy resistance, and unsupported effort.',
+      'Choose gentle, controlled Pilates and stop if you feel dizzy, nauseated, or excessively fatigued.'
+    ],
+    gastrointestinal_pelvic: [
+      'Keep core and pelvic work gentle, avoid strong intra-abdominal pressure, and stop if pelvic or abdominal discomfort appears.',
+      'Favor supported, low-impact movement and avoid intense twisting, crunching, or straining through the pelvis.'
+    ],
+    neurological_disorder: [
+      'Use extra support, slow progressions, and simple movement patterns to reduce fall and coordination risk.',
+      'Avoid rapid transitions, unstable balance challenges, and anything that feels unsafe for sensation changes.'
+    ],
+    mental_cognitive: [
+      'Keep cues clear, pace predictable, and sessions focused on safety and comfort rather than complexity.',
+      'Avoid long, complicated sequences and allow extra time for understanding each movement.'
+    ],
+    weight_concerns: [
+      'Choose joint-friendly, low-impact Pilates with good support and avoid high-impact or unstable transitions.',
+      'Focus on steady alignment, gradual progression, and minimizing excessive load through the spine and hips.'
+    ],
     other: [
       'Start conservatively with supported, low-load movement and avoid unfamiliar high-risk exercises.',
       'Consult a qualified clinician for condition-specific guidance.'
@@ -201,6 +322,56 @@ export class ResultsPage implements OnInit {
       dangers: 'Pregnancy increases pelvic pressure, shifts balance, and changes heart rate response. Prolonged supine, breath-holding, deep twist, and unstable positions can add risk.',
       avoid: 'Avoid Roll Up, The Hundred, Teaser, Jackknife, Roll Over, inversions, prolonged supine after the first trimester, and unstable balance challenges.'
     },
+    vision_impairment: {
+      what: 'Vision impairment or blindness affects how the client judges distance, sees obstacles, and senses the environment.',
+      dangers: 'Reduced visual feedback increases fall risk and can make transitions harder to time safely. Unclear surroundings and rapid directional changes can lead to missteps, collisions, or loss of balance.',
+      avoid: 'Avoid unsupported balance challenges, rapid changes of direction, dim lighting, and exercises that rely on precise visual alignment or fast visual cues. Keep the environment clutter-free and use tactile support when possible.'
+    },
+    hearing_impairment: {
+      what: 'Hearing impairment or deafness means the client may not receive verbal cues, timing prompts, or audio feedback reliably.',
+      dangers: 'Missing spoken instructions can lead to unsafe transitions, mistimed breathing, or delayed responses. Routines that depend on audio timing or spoken corrections may increase confusion and risk.',
+      avoid: 'Avoid exercises that rely on fast verbal pacing, audio-only cueing, or sudden transitions without visual or tactile guidance. Favor predictable, visually demonstrated sequences.'
+    },
+    epilepsy_seizure: {
+      what: 'Epilepsy is a neurological condition marked by recurrent seizures, which may be triggered by specific stimuli, exertion, or fatigue.',
+      dangers: 'A seizure during exercise can cause falls, head injury, airway compromise, or uncontrolled movement. Bright lights, rapid head motion, overheating, and intense exertion may increase trigger risk.',
+      avoid: 'Avoid flashing lights, rapid head rotations, high-impact jumping, intense sequencing, unstable balance poses, and hot or crowded environments that can raise stress or body temperature.'
+    },
+    severe_allergy: {
+      what: 'Severe allergies and anaphylaxis risk mean exposure to allergens can trigger life-threatening reactions such as airway swelling and shock.',
+      dangers: 'Contact with latex, scented products, food allergens, or irritants can cause rapid respiratory distress, hives, hypotension, and anaphylaxis. Shared equipment or cleaning products can be hidden sources of exposure.',
+      avoid: 'Avoid latex props, scented cleaners, food in the practice area, and any known allergen exposure without an emergency plan and access to epinephrine. Use hypoallergenic, disposable, or cleaned props as needed.'
+    },
+    chronic_pain_syndrome: {
+      what: 'Chronic pain syndromes like fibromyalgia involve widespread sensitivity and fluctuating tolerance to movement, load, and stress.',
+      dangers: 'Overexertion, prolonged static holds, and repeated high-load movement can trigger pain flares, fatigue, and reduced recovery ability. Poor pacing or heavy apparatus resistance may worsen symptoms.',
+      avoid: 'Avoid long high-intensity sets, sustained maximal effort, repeated heavy resistance, back-to-back demanding exercises, and prolonged static positions that create pain or stiffness.'
+    },
+    skin_condition: {
+      what: 'Skin conditions such as wounds, eczema, or psoriasis can cause sensitivity, irritation, and infection risk when under pressure or friction.',
+      dangers: 'Direct pressure, sweat, friction, and contact with dirty equipment may worsen inflammation, pain, or open skin damage. Repeated rubbing or compression can exacerbate outbreaks or slow healing.',
+      avoid: 'Avoid prone or seated positions that press on affected skin, direct equipment pressure on open or inflamed areas, bare contact with rough surfaces, and exercises that cause repeated rubbing.'
+    },
+    transplant_immunosuppression: {
+      what: 'Transplant recipients on immunosuppression have reduced immune defenses and often lower energy while healing.',
+      dangers: 'Infection risk is higher, and excessive load or abrupt movement can stress healing tissues or compromise transplant function. Crowded or unsanitary equipment increases exposure risk.',
+      avoid: 'Avoid crowded, unsanitary spaces, shared high-touch equipment without cleaning, high-impact exercise, sudden heavy lifting, and aggressive unsupported movements.'
+    },
+    recent_hospitalization: {
+      what: 'Recent hospitalization or prolonged bed rest results in deconditioning, weakness, and altered cardiovascular and orthostatic response.',
+      dangers: 'Sudden high-effort movement, rapid standing transitions, or long sessions can cause dizziness, fatigue, orthostatic hypotension, and injury as the body recovers.',
+      avoid: 'Avoid unsupported balance work, high-load lifting, rapid position changes, long demanding sequences, and vigorous apparatus resistance immediately after discharge.'
+    },
+    pacemaker_implant: {
+      what: 'A pacemaker or implanted cardiac device regulates heart rhythm and relies on stable positioning and gentle load management.',
+      dangers: 'Direct pressure on the device site, deep chest compression, and sudden strenuous effort can irritate the implant area or affect device function. Valsalva-style breath-holding should also be avoided.',
+      avoid: 'Avoid heavy upper-body load, deep chest compression, forceful arm reach behind the chest, positions that press or tug on the implant site, and breath-holding under strain.'
+    },
+    substance_use_recovery: {
+      what: 'Substance use disorder or recovery can affect coordination, judgment, energy, and emotional resilience.',
+      dangers: 'Impaired focus, uneven coordination, and fluctuating energy raise the risk of falls, strain, or injury during complex or fast movement. Substance withdrawal or medication effects may also alter balance and perception.',
+      avoid: 'Avoid advanced balance challenges, high-speed sequences, partner-assisted tricks, complex apparatus transitions, and anything that requires rapid decision-making without full attention.'
+    },
     low_back_pain: {
       what: 'Chronic low back pain often involves disc irritation, muscular imbalance, or spinal joint sensitivity.',
       dangers: 'Repeated flexion, extension, and loading through a painful lumbar spine can aggravate tissue irritation and nerve symptoms.',
@@ -230,6 +401,61 @@ export class ResultsPage implements OnInit {
       what: 'Respiratory concerns like asthma, bronchospasm, or breathlessness require careful attention to breathing and chest comfort.',
       dangers: 'Breath-holding, rapid exertion, and chest-compressive positions can trigger wheezing, shortness of breath, or tightness.',
       avoid: 'Avoid Jackknife, Roll Over, rapid transitions, breath-holding, and deep, compressive upper-body work without clearance.'
+    },
+    respiratory_pulmonary: {
+      what: 'Respiratory and pulmonary conditions can limit airflow and gas exchange, requiring careful control of breathing and exercise intensity.',
+      dangers: 'Rapid exertion, chest compression, and breath-holding can worsen shortness of breath, bronchospasm, or lung discomfort.',
+      avoid: 'Avoid rapid transitions, breath-holding, deep chest compression, high-intensity sequences, and prone positions that restrict the rib cage.'
+    },
+    cardiovascular_disease: {
+      what: 'Cardiovascular disease includes conditions like coronary artery disease, heart failure, and weakened heart muscle.',
+      dangers: 'Heavy load, rapid intensity spikes, and breath-holding can overstrain the heart and raise blood pressure or ischemic risk.',
+      avoid: 'Avoid high-intensity intervals, heavy resistance, deep chest compression, sudden direction changes, and unsupported upper-body effort.'
+    },
+    arrhythmia_cardiac_device: {
+      what: 'Arrhythmias and implanted cardiac devices require stable cardiovascular pacing and gentle movement around the chest area.',
+      dangers: 'Sudden exertion, deep chest pressure, and Valsalva-like breath-holding may trigger irregular rhythms or irritate the implant site.',
+      avoid: 'Avoid rapid intensity changes, breath-holding, deep upper-body compression, and exercise that places force on the device location.'
+    },
+    metabolic_endocrine: {
+      what: 'Metabolic and endocrine conditions can affect blood sugar, hormone balance, weight, and temperature regulation.',
+      dangers: 'Sudden intensity changes, dehydration, or overheating can destabilize glucose levels, energy, and hormonal response.',
+      avoid: 'Avoid prolonged high-intensity work, rapid transitions, hot environments, and aggressive load when metabolism or energy is unstable.'
+    },
+    autoimmune_inflammatory: {
+      what: 'Autoimmune and inflammatory conditions often cause joint and tissue sensitivity, with flare cycles and variable tolerance.',
+      dangers: 'High load, prolonged compression, and repetitive joint stress can worsen inflammation, pain, and recovery time.',
+      avoid: 'Avoid sustained heavy resistance, repeated high-impact movement, deep joint compression, and long static holds during active inflammation.'
+    },
+    immune_infectious: {
+      what: 'Immune and infectious conditions can include systemic illness and reduced recovery capacity during active infection.',
+      dangers: 'Pushing through fever, fatigue, or systemic symptoms can worsen illness, delay recovery, and increase risk of complications.',
+      avoid: 'Avoid intense exertion during active illness, crowded shared equipment spaces, prolonged high-load workouts, and exercising while febrile or symptomatic.'
+    },
+    oncology_treatment: {
+      what: 'Active cancer treatment affects energy, blood counts, and tissue tolerance, so exercise must be carefully adapted.',
+      dangers: 'Aggressive loading, deep compression, and prolonged effort can increase fatigue, bruising, infection risk, and treatment-related side effects.',
+      avoid: 'Avoid heavy resistance, deep spinal or chest compression, breath-holding, unstable balance, and long high-intensity sequences during active treatment or recovery.'
+    },
+    gastrointestinal_pelvic: {
+      what: 'Gastrointestinal and pelvic floor conditions can be sensitive to core compression, twisting, and intra-abdominal pressure.',
+      dangers: 'Strong abdominal load, intense twist, and pelvic strain can aggravate pain, reflux, leakage, or pelvic floor dysfunction.',
+      avoid: 'Avoid intense crunches, deep twisting, heavy loaded core work, strong breath-holding, and rapid pelvic floor pressure changes.'
+    },
+    neurological_disorder: {
+      what: 'Neurological disorders may affect balance, coordination, sensation, and motor control.',
+      dangers: 'Unstable positions, rapid transitions, and complex movement patterns can increase fall risk, injury, and dizziness.',
+      avoid: 'Avoid unsupported balance challenges, fast direction changes, complex apparatus sequences, and rapidly changing foot/hand positions.'
+    },
+    mental_cognitive: {
+      what: 'Mental health and cognitive conditions can affect attention, decision-making, stress response, and motor control.',
+      dangers: 'Overly complex sequences, fast transitions, and unclear cues can increase anxiety, loss of focus, and risk of movement errors.',
+      avoid: 'Avoid long complicated routines, rapid pace changes, indirect cueing, and sequences that rely on quick memory or multitasking.'
+    },
+    weight_concerns: {
+      what: 'Overweight or obesity can increase joint load, change movement mechanics, and alter balance and mobility.',
+      dangers: 'High-impact or unstable movement can stress joints, increase fatigue, and raise the risk of knee, hip, or back discomfort.',
+      avoid: 'Avoid high-impact jumping, fast unstable transitions, unsupported single-leg work, and excessive spinal or hip compression under load.'
     },
     swollen_glands: {
       what: 'Swollen glands are enlarged lymph nodes typically caused by infection, inflammation, or immune response in the neck, armpit, or groin.',

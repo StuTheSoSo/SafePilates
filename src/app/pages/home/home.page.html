@@ -14,11 +14,11 @@
 
     <div class="intro-block">
       <h2>Check Pilates safety</h2>
-      <p>Tap the concerns that apply to the client. Selected items are highlighted in strong color so you can review them at a glance.</p>
+      <p>Tap the concerns that apply to the client.</p>
     </div>
   </div>
 
-  <div class="home-bottom-panel">
+  <div class="home-bottom-panel" *ngIf="selectedCount > 0">
     <div class="action-block">
       <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
         <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>

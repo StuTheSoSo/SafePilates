@@ -80,6 +80,23 @@
         </ion-item>
       </ion-list>
 
+      <ion-card *ngIf="conditionWarnings.length" class="exercise-detail-list">
+        <ion-card-header>
+          <ion-card-title>Condition-specific guidance</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list lines="none">
+            <ion-item *ngFor="let warning of conditionWarnings">
+              <ion-label>
+                <h3>{{ warning.conditionLabel }}</h3>
+                <p><strong>Avoid/Modify:</strong> {{ warning.reason }}</p>
+                <p><strong>Alternative:</strong> {{ warning.alternative }}</p>
+              </ion-label>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
       <ion-list *ngIf="exercise.progressions?.length" lines="inset" class="exercise-detail-list">
         <ion-list-header>
           <ion-label>Progressions</ion-label>

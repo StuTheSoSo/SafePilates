@@ -144,5 +144,106 @@
     {"exerciseId":"neck_pull","reason":"Supportive head and neck lifting can aggravate tender lymph nodes in the neck.","alternative":"Keep the head supported and focus on gentle core activation without heavy neck motion."},
     {"exerciseId":"roll_over","reason":"Legs-overhead inversion may increase pressure and discomfort around swollen neck and shoulder nodes.","alternative":"Choose more neutral, supported supine core work with the head and neck in a comfortable position."},
     {"exerciseId":"seated_spine_twist","reason":"Strong rotation around the cervical spine can irritate tender lymph nodes in the neck and jaw.","alternative":"Use smaller seated rotations with a long spine and avoid deep turning of the head."}
+  ],
+  "vision_impairment": [
+    {"exerciseId":"control_balance","reason":"Unsupported balance poses depend on visual feedback and can increase fall risk with low vision.","alternative":"Use grounded, supported exercises like seated leg work and stable standing mobility."},
+    {"exerciseId":"roll_over","reason":"Inversion and quick transitions can be difficult to judge safely when vision is impaired.","alternative":"Choose supported supine mobility and gentle core work with hands on stable surfaces."}
+  ],
+  "hearing_impairment": [
+    {"exerciseId":"control_balance","reason":"Exercises requiring fast verbal cues are harder to follow without reliable hearing.","alternative":"Use slow, predictable movement with visual demonstration and clear gestures."},
+    {"exerciseId":"teaser","reason":"Complex timing and balance in Teaser can be unsafe without visual or tactile cueing support.","alternative":"Use supported seated core lifts with bent knees and steady cues."}
+  ],
+  "epilepsy_seizure": [
+    {"exerciseId":"jackknife","reason":"Inversions and rapid spinal articulations may raise the risk of a seizure-related fall.","alternative":"Keep the spine low with supported bridge progressions and slow movement."},
+    {"exerciseId":"control_balance","reason":"Unstable balance work can be dangerous if a seizure occurs during the exercise.","alternative":"Use stable floor-based core work and avoid unsupported balancing positions."}
+  ],
+  "severe_allergy": [
+    {"exerciseId":"footwork","reason":"Reformer straps and props can contain latex or allergens that trigger a severe reaction.","alternative":"Use mat-based lower-body work with hypoallergenic props and clean equipment."}
+  ],
+  "chronic_pain_syndrome": [
+    {"exerciseId":"the_hundred","reason":"Sustained core pumping can be too intense for widespread pain sensitivity and fatigue.","alternative":"Practice shorter sets with the head supported and gentle breath timing."},
+    {"exerciseId":"teaser","reason":"High core demand and balance requirements may flare pain in multiple regions.","alternative":"Use modified seated core work with support and low lift."}
+  ],
+  "skin_condition": [
+    {"exerciseId":"swan_dive","reason":"Prone extensions press the torso and can irritate inflamed or sensitive skin on the chest and abdomen.","alternative":"Choose supported prone lifts with forearms on the mat or seated back extension work."},
+    {"exerciseId":"shoulder_bridge","reason":"Shoulder pressure from the mat or equipment can aggravate eczema, wounds, or psoriasis on the upper body.","alternative":"Use gentle pelvic tilts and supported glute bridge variants with padding."}
+  ],
+  "transplant_immunosuppression": [
+    {"exerciseId":"short_spine_massage","reason":"Aggressive spinal articulation and inversion can be too stressful while immune function and recovery remain delicate.","alternative":"Use gentle supine pelvic tilts and supported spine mobilization without inversion."}
+  ],
+  "recent_hospitalization": [
+    {"exerciseId":"jackknife","reason":"Inversion and rapid spinal movement are often too intense for someone recovering from recent hospitalization or bed rest.","alternative":"Choose supported bridge progressions and slow, controlled hip lifts."},
+    {"exerciseId":"control_balance","reason":"Unsupported balance challenges increase fall risk for clients who are deconditioned after hospitalization.","alternative":"Use grounded core strength work with both feet on the mat."}
+  ],
+  "pacemaker_implant": [
+    {"exerciseId":"swan_dive","reason":"Prone back extension can compress the chest and upper body near the pacemaker site.","alternative":"Choose gentle supported chest lifts with the forearms on the mat."},
+    {"exerciseId":"push_through","reason":"Heavy shoulder and chest loading may place uncomfortable pressure near a cardiac implant.","alternative":"Use lighter support and lower-range back extension movements."}
+  ],
+  "substance_use_recovery": [
+    {"exerciseId":"control_balance","reason":"Unstable balance work can be unsafe if coordination or concentration is impaired in recovery.","alternative":"Use stable, grounded Pilates exercises with clear, simple cues."},
+    {"exerciseId":"roll_over","reason":"Inversion and rapid position changes may be risky if attention and body awareness are variable.","alternative":"Choose gentle supine mobility and supported core work instead."}
+  ],
+  "respiratory_pulmonary": [
+    {"exerciseId":"jackknife","reason":"Inversion and deep chest compression can worsen breathing difficulty during pulmonary flare-ups.","alternative":"Use supported bridge progressions or chest-open gentle seated mobility."},
+    {"exerciseId":"roll_over","reason":"Legs overhead and spinal flexion may restrict the rib cage and trigger breathlessness.","alternative":"Choose supine core work with the head and chest supported."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression can make breathing uncomfortable for someone with pulmonary limits.","alternative":"Use gentle pelvic tilts and low-lying spine articulation without inversion."},
+    {"exerciseId":"the_hundred","reason":"High-intensity breath coordination can be too demanding for compromised lung function.","alternative":"Practice slower breath-based abdominal work with frequent rest."}
+  ],
+  "cardiovascular_disease": [
+    {"exerciseId":"jackknife","reason":"Inversion and high exertion can spike blood pressure and strain the heart.","alternative":"Use low-lying core work and stable bridge progressions."},
+    {"exerciseId":"roll_over","reason":"Rapid transitions and legs-overhead positioning can be stressful for a weakened cardiovascular system.","alternative":"Choose gentle supine mobility and slow spinal articulation."},
+    {"exerciseId":"push_through","reason":"Heavy upper-body loading may overtax heart rate response and blood pressure control.","alternative":"Use lighter shoulder support and avoid maximal resistance."},
+    {"exerciseId":"running_reformer","reason":"Sustained leg pushing may create excessive cardiovascular demand for someone with heart disease.","alternative":"Favor slower, low-resistance leg work and monitor exertion closely."}
+  ],
+  "arrhythmia_cardiac_device": [
+    {"exerciseId":"push_through","reason":"Deep chest compression and upper-body loading may irritate the device site or disrupt rhythm control.","alternative":"Choose gentle supported back extension with minimal resistance."},
+    {"exerciseId":"swan_dive","reason":"Prone extension and chest pressure can be uncomfortable with an implanted cardiac device.","alternative":"Use gentle chest lifts with forearms on the mat."},
+    {"exerciseId":"jackknife","reason":"Rapid inversion and sudden effort changes may trigger an irregular heart rhythm.","alternative":"Stay low to the mat and use controlled bridge progressions."},
+    {"exerciseId":"control_balance","reason":"Unstable balance work can be unsafe if an arrhythmia affects coordination or awareness.","alternative":"Use grounded core stability exercises with both feet on the mat."}
+  ],
+  "metabolic_endocrine": [
+    {"exerciseId":"the_hundred","reason":"Fast breath pumping and sustained core intensity can destabilize blood sugar and energy levels.","alternative":"Use shorter sets with gentle breathing and frequent rest."},
+    {"exerciseId":"running_reformer","reason":"Sustained leg pushing may create rapid metabolic demand and energy swings.","alternative":"Choose slower, lower-resistance leg work with careful pacing."},
+    {"exerciseId":"boomerang","reason":"Dynamic full-body sequencing can be too intense when metabolic or hormonal balance is unstable.","alternative":"Focus on slower, supported core and spinal articulation work."},
+    {"exerciseId":"teaser","reason":"High core intensity and balance demand may overtax glucose or hormone-regulated energy systems.","alternative":"Use supported seated core lifts with bent knees and a neutral spine."}
+  ],
+  "autoimmune_inflammatory": [
+    {"exerciseId":"swan_dive","reason":"Deep back extension and prolonged upper-body loading can worsen joint or tissue inflammation.","alternative":"Use gentle supported prone lifts with small range."},
+    {"exerciseId":"shoulder_bridge","reason":"Loaded hip lift and shoulder compression may be painful or inflammatory during a flare.","alternative":"Choose pelvic tilts with a neutral spine and plenty of rest between reps."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and spinal compression may aggravate systemic inflammatory symptoms.","alternative":"Use supine pelvic tilts and gentle spine mobilization without inversion."},
+    {"exerciseId":"one_leg_circle","reason":"Large hip motion and rotational loading can feel too intense during autoimmune inflammation.","alternative":"Use smaller leg circles and support the pelvis with the hands."}
+  ],
+  "immune_infectious": [
+    {"exerciseId":"the_hundred","reason":"Breath-focused core intensity can be too taxing during active infection or immune compromise.","alternative":"Practice gentle breath work and rest when symptoms are present."},
+    {"exerciseId":"jackknife","reason":"Inversion and higher exertion may worsen fatigue and systemic illness symptoms.","alternative":"Use supported bridge progressions and reduce intensity."},
+    {"exerciseId":"running_reformer","reason":"Sustained resistance work can be overly demanding while recovering from infection.","alternative":"Choose low-resistance, low-impact leg work with extra rest breaks."},
+    {"exerciseId":"push_through","reason":"Heavy upper-body effort may be unsafe during acute illness or reduced immunity.","alternative":"Use gentle supported back extension and stop if symptoms worsen."}
+  ],
+  "oncology_treatment": [
+    {"exerciseId":"roll_over","reason":"Inversion and spinal compression can be poorly tolerated during active cancer treatment.","alternative":"Choose gentle supine core work with the head and chest supported."},
+    {"exerciseId":"jackknife","reason":"High exertion and inversion may increase fatigue, bruising, or cardiovascular stress.","alternative":"Use low-lying bridge progressions with controlled breathing."},
+    {"exerciseId":"swan_dive","reason":"Prone chest compression and back extension may be too aggressive during treatment-related fatigue.","alternative":"Use supported prone lifts with forearms on the mat."},
+    {"exerciseId":"short_spine_massage","reason":"Inversion and deep spine articulation can be risky when blood counts or tissue tolerance are low.","alternative":"Use gentle supine pelvic tilts and low-lying mobility instead."}
+  ],
+  "gastrointestinal_pelvic": [
+    {"exerciseId":"roll_up","reason":"Loaded abdominal flexion can increase intra-abdominal pressure and aggravate pelvic or GI symptoms.","alternative":"Use pelvic tilts and gentle core reconnection with a neutral spine."},
+    {"exerciseId":"the_hundred","reason":"Strong abdominal pumping and breath coordination may worsen pelvic floor or digestive discomfort.","alternative":"Practice slower core work with less abdominal compression."},
+    {"exerciseId":"double_leg_stretch","reason":"Combined lower ab extension and arm reach may place excessive strain on the pelvic floor and abdomen.","alternative":"Use heel slides and single-leg supports with minimal pressure."},
+    {"exerciseId":"teaser","reason":"High core lift and balance demand can increase pelvic pressure and abdominal discomfort.","alternative":"Use supported seated core work with bent knees and a gentle lift."}
+  ],
+  "neurological_disorder": [
+    {"exerciseId":"control_balance","reason":"Unstable balance work may increase fall risk if coordination or sensation is affected.","alternative":"Use grounded core stability exercises with a wide base of support."},
+    {"exerciseId":"roll_over","reason":"Inversion and fast position changes can be challenging for clients with neurological coordination issues.","alternative":"Choose slow, supported spinal mobility and avoid overhead leg positions."},
+    {"exerciseId":"one_leg_circle","reason":"Large leg circles require control and proprioception that may be impaired in neurological conditions.","alternative":"Use smaller supported leg circles or single-leg lifts with the pelvis stabilized."},
+    {"exerciseId":"teaser","reason":"High balance and coordination demand can be unsafe if motor control is inconsistent.","alternative":"Use supported seated core lifts with bent knees and a stable base."}
+  ],
+  "mental_cognitive": [
+    {"exerciseId":"control_balance","reason":"Complex balance poses can be unsafe if concentration, memory, or processing speed are affected.","alternative":"Use simple, grounded exercises with clear, predictable cues."},
+    {"exerciseId":"boomerang","reason":"Dynamic sequencing and quick transitions may overwhelm someone with cognitive or mental-health concerns.","alternative":"Choose slower, more linear exercises with one movement at a time."},
+    {"exerciseId":"criss_cross","reason":"Fast rotation and coordination can be difficult to follow safely with cognitive or emotional symptoms.","alternative":"Use gentle seated or supine rotation with clear, paced instruction."},
+    {"exerciseId":"teaser","reason":"High complexity and balance demand may be too much when mental focus or stress tolerance are low.","alternative":"Use supported seated core work with simple, steady movement."}
+  ],
+  "other": [
+    {"exerciseId":"control_balance","reason":"This condition is not specifically listed; choose gentle, supported work and consult a qualified clinician before attempting high-risk movement.","alternative":"Use grounded Pilates with a stable base, low load, and clear instruction."}
   ]
 }

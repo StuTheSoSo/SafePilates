@@ -363,7 +363,7 @@ export class SafetyService {
     const contextLine = contextBits.length ? `Context: ${contextBits.join(' • ')}\n\n` : '';
 
     const disclaimer =
-      'IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.\n\n';
+      'IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.\n\n';
 
     // Hamstring strain/pull pattern
     if (/(hamstring|pulled\s+hamstring|strain)/.test(otherLower)) {
@@ -401,7 +401,7 @@ export class SafetyService {
         '- Use side-lying, seated, or supported standing variations\n' +
         '- Keep the pelvis neutral and the breath steady\n' +
         '- Prioritize pelvic floor awareness, spinal support, and comfortable range of motion\n\n' +
-        'If you are pregnant, consult a qualified provider before continuing and stop if any movement feels unsafe.'
+        'If the client is pregnant, consult a qualified provider before continuing and stop if any movement feels unsafe.'
       );
     }
 
@@ -587,7 +587,7 @@ export class SafetyService {
         '- Use supported, low-impact variations and keep the movements smooth and controlled\n' +
         '- Build core stability, pelvic alignment, and hip strength before adding load\n' +
         '- Prioritize breath, posture, and pain-free motion over repetitions or intensity\n\n' +
-        'If you have joint pain, metabolic concerns, or questions about safe exercise progressions, consult a qualified provider before continuing.'
+        'If the client has joint pain, metabolic concerns, or questions about safe exercise progressions, consult a qualified provider before continuing.'
       );
     }
 
@@ -646,7 +646,7 @@ export class SafetyService {
         'Safer focus\n' +
         '- Keep motion gentle, supported, and within comfort\n' +
         '- Prioritize controlled alignment and slow progressions\n' +
-        '- Follow your clinician’s guidance and stop if anything feels too intense\n\n' +
+        '- Follow the client’s clinician’s guidance and stop if anything feels too intense\n\n' +
         'Always check with your surgeon or rehabilitation specialist before resuming Pilates after surgery.'
       );
     }
@@ -684,7 +684,7 @@ export class SafetyService {
       '- Pain is a signal that tissue tolerance or joint control may be exceeded\n' +
       '- Moving through pain can increase irritation and slow recovery\n\n' +
       'Safer focus\n' +
-      `- Keep everything in a comfortable range while you clarify ${shortOther}\n` +
+`- Keep everything in a comfortable range while clarifying ${shortOther}\n` +
       '- Choose supported, low-load patterns: breathing + gentle core activation, neutral spine work, slow controlled movement\n' +
       '- If symptoms persist, worsen, or are unclear, get clearance from a clinician before continuing'
     );
@@ -810,7 +810,7 @@ export class SafetyService {
 
 CRITICAL SAFETY RULES — NEVER BREAK THESE:
 - ALWAYS begin the response with this exact bold disclaimer on its own line:
-**⚠️ IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.**
+**⚠️ IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.**
 - Do NOT diagnose conditions, prescribe specific rehabilitation exercises, or give individualized medical recommendations.
 - If the selected concern is "Other," stay general, refer to symptoms or movement risks, and recommend professional clearance.
 - If the user's text suggests a likely category such as respiratory, digestive, neurological, or musculoskeletal, use that category to shape safer, more relevant guidance.
@@ -852,7 +852,7 @@ Keep the answer educational, clear, and non-prescriptive.`;
     return `You are writing general Pilates safety guidance (not medical advice).
 
 First line MUST be:
-IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult your doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if you feel pain.
+IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.
 
 Context: ${input || 'No details provided.'}
 ${inferredHint ? `Likely concern type: ${inferredHint}` : ''}

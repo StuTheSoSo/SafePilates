@@ -138,7 +138,32 @@
   color: var(--sp-brand-ink);
   font-weight: 600;
 }
+.condition-group {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1.5px solid var(--sp-border);
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  padding: 1rem 1rem 1.2rem;
+  margin-bottom: 1rem;
+}
 
+.group-header {
+  margin-bottom: 0.85rem;
+}
+
+.group-header h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ion-color-primary);
+}
+
+.group-header p {
+  margin: 0.35rem 0 0;
+  color: var(--sp-ink-3);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
 .condition-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

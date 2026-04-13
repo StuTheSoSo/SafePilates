@@ -34,6 +34,83 @@ export class HomePage implements OnInit {
   showSafetyOverlay = true;
   showTrimesterModal = false;
 
+  conditionGroups = [
+    {
+      label: 'Spine & Joints',
+      subtitle: 'Back, hips, knees, shoulders, and joint support',
+      ids: [
+        'osteoporosis',
+        'low_back_pain',
+        'scoliosis',
+        'arthritis',
+        'knee_issues',
+        'hip_issues',
+        'foot_ankle_issues',
+        'joint_replacement',
+        'shoulder_instability',
+        'neck_shoulder',
+        'bursitis'
+      ]
+    },
+    {
+      label: 'Core, Pelvic & Pregnancy',
+      subtitle: 'Pregnancy, postpartum, pelvic floor, and abdominal recovery',
+      ids: [
+        'pregnancy',
+        'postpartum',
+        'pelvic_floor_dysfunction',
+        'diastasis_recti',
+        'gastrointestinal_pelvic',
+        'recent_surgery'
+      ]
+    },
+    {
+      label: 'Heart, Lungs & Metabolic',
+      subtitle: 'Cardiovascular, respiratory, and endocrine concerns',
+      ids: [
+        'respiratory',
+        'respiratory_pulmonary',
+        'hypertension',
+        'cardiovascular_disease',
+        'arrhythmia_cardiac_device',
+        'diabetes',
+        'metabolic_endocrine'
+      ]
+    },
+    {
+      label: 'Immune, Inflammation & Recovery',
+      subtitle: 'Autoimmune, infection, cancer treatment, and recovery support',
+      ids: [
+        'autoimmune_inflammatory',
+        'chronic_fatigue',
+        'immune_infectious',
+        'oncology_treatment',
+        'swollen_glands',
+        'transplant_immunosuppression',
+        'severe_allergy',
+        'skin_condition'
+      ]
+    },
+    {
+      label: 'Balance, Neurological & Sensory',
+      subtitle: 'Balance, dizziness, neurological, and sensory conditions',
+      ids: [
+        'neurological_disorder',
+        'vertigo_dizziness',
+        'balance_issues',
+        'vision_impairment',
+        'hearing_impairment',
+        'epilepsy_seizure',
+        'mental_cognitive'
+      ]
+    },
+    {
+      label: 'Weight & Other',
+      subtitle: 'Weight management, recovery, and uncategorized concerns',
+      ids: ['weight_concerns', 'substance_use_recovery', 'other']
+    }
+  ];
+
   private router = inject(Router);
   private safetyService = inject(SafetyService);
 
@@ -138,6 +215,15 @@ export class HomePage implements OnInit {
 
   get hasOther() {
     return this.selectedIds.has('other');
+  }
+
+  get groupedConditions() {
+    return this.conditionGroups.map(group => ({
+      ...group,
+      conditions: group.ids
+        .map(id => this.conditions.find(condition => condition.id === id))
+        .filter((condition): condition is Condition => Boolean(condition))
+    }));
   }
 
   get canSubmit() {

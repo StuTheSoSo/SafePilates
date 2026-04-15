@@ -131,6 +131,12 @@ ion-card {
   font-size: 1rem;
 }
 
+.highlight {
+  background: rgba(255, 241, 135, 0.6);
+  border-radius: 4px;
+  padding: 0 0.15rem;
+}
+
 .exercise-benefits strong {
   font-weight: 700;
   color: var(--ion-color-primary);

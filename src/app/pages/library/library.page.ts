@@ -1,5 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, Router } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
@@ -9,7 +11,7 @@ import exercisesData from '../../../assets/data/exercises.json' with { type: 'js
 @Component({
   selector: 'app-library',
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
   templateUrl: './library.page.html',
   styleUrls: ['./library.page.scss']
 })
@@ -18,8 +20,10 @@ export class LibraryPage implements OnInit {
   allExercises: Exercise[] = [];
   categories: string[] = [];
   selectedCategory = 'All';
+  searchText = '';
   private router = inject(Router);
   private safetyService = inject(SafetyService);
+  private sanitizer = inject(DomSanitizer);
 
   async ngOnInit() {
     this.allExercises = exercisesData as Exercise[];
@@ -61,6 +65,37 @@ export class LibraryPage implements OnInit {
       : this.allExercises.filter(exercise => exercise.category === this.selectedCategory);
   }
 
+  get filteredExercises() {
+    const term = this.searchText.trim().toLowerCase();
+    const categoryFiltered = this.selectedCategory === 'All'
+      ? this.allExercises
+      : this.allExercises.filter(exercise => exercise.category === this.selectedCategory);
+
+    if (!term) {
+      return categoryFiltered;
+    }
+
+    return categoryFiltered.filter(exercise => this.exerciseMatchesSearch(exercise, term));
+  }
+
+  exerciseMatchesSearch(exercise: Exercise, term: string) {
+    return [exercise.name, exercise.shortDescription, exercise.focus, exercise.category]
+      .some(field => field?.toLowerCase().includes(term));
+  }
+
+  highlightText(text: string | undefined): SafeHtml {
+    const raw = text || '';
+    const term = this.searchText.trim();
+    if (!term) {
+      return this.sanitizer.bypassSecurityTrustHtml(raw);
+    }
+
+    const escapedQuery = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+    const highlighted = raw.replace(regex, '<span class="highlight">$1</span>');
+    return this.sanitizer.bypassSecurityTrustHtml(highlighted);
+  }
+
   get libraryWarnings() {
     return this.allExercises
       .map(exercise => {
@@ -77,6 +112,13 @@ export class LibraryPage implements OnInit {
   }
 
   openExercise(id: string) {
-    this.router.navigateByUrl(`/exercise/${id}`);
+    const search = this.searchText.trim();
+    this.safetyService.librarySearchTerm = search;
+    this.router.navigate([`/exercise/${id}`], {
+      queryParams: {
+        search: search || undefined
+      },
+      state: search ? { search } : undefined
+    });
   }
 }

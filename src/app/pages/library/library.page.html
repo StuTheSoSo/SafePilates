@@ -18,6 +18,21 @@
     </ion-chip>
   </div>
 
+  <div class="page-hero ion-padding-horizontal">
+    <ion-searchbar
+      placeholder="Search exercises"
+      [(ngModel)]="searchText"
+      debounce="300"
+      showCancelButton="focus"
+      animated="true"
+      class="condition-searchbar">
+    </ion-searchbar>
+
+    <ion-note *ngIf="searchText.trim() && filteredExercises.length === 0" color="medium" class="search-empty">
+      No exercises match "{{ searchText }}". Try a different keyword.
+    </ion-note>
+  </div>
+
   <ng-container *ngIf="libraryWarnings.length">
     <ion-card color="warning" class="ion-margin-horizontal ion-margin-top">
       <ion-card-header>
@@ -37,15 +52,15 @@
 
   <ion-grid class="ion-padding">
     <ion-row>
-      <ion-col size="12" size-md="6" *ngFor="let exercise of exercises">
+      <ion-col size="12" size-md="6" *ngFor="let exercise of filteredExercises">
         <ion-card button (click)="openExercise(exercise.id)">
           <ion-card-header>
-            <ion-card-title>{{ exercise.name }}</ion-card-title>
+            <ion-card-title [innerHTML]="highlightText(exercise.name)"></ion-card-title>
           </ion-card-header>
           <ion-card-content>
-            <p>{{ exercise.shortDescription }}</p>
-            <p class="exercise-focus">Focus: {{ exercise.focus }}</p>
-            <p class="exercise-category">Category: {{ exercise.category }}</p>
+            <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
+            <p class="exercise-focus" [innerHTML]="highlightText('Focus: ' + exercise.focus)"></p>
+            <p class="exercise-category" [innerHTML]="highlightText('Category: ' + exercise.category)"></p>
           </ion-card-content>
         </ion-card>
       </ion-col>

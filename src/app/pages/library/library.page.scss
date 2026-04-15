@@ -12,6 +12,31 @@ ion-card-content {
   font-family: 'Nunito', 'Inter', sans-serif;
 }
 
+.page-hero {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.condition-searchbar {
+  --background: rgba(255, 255, 255, 0.92);
+  --border-radius: 18px;
+  --box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --placeholder-color: var(--sp-ink-3);
+  border: 1px solid var(--sp-border);
+}
+
+.search-empty {
+  margin-top: 0.75rem;
+  color: var(--sp-ink-3);
+}
+
+.highlight {
+  background: rgba(255, 241, 135, 0.6);
+  border-radius: 4px;
+  padding: 0 0.15rem;
+}
+
 .category-row {
   display: flex;
   flex-wrap: wrap;

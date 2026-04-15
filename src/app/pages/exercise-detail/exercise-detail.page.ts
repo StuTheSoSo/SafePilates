@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, ActivatedRoute } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
@@ -15,7 +16,10 @@ import { Exercise } from '../../models';
 export class ExerciseDetailPage implements OnInit {
   exercise: Exercise | undefined;
   conditionWarnings: Array<{ conditionId: string; conditionLabel: string; reason: string; alternative: string }> = [];
+  searchText = '';
+
   private safetyService = inject(SafetyService);
+  private sanitizer = inject(DomSanitizer);
 
   constructor(private route: ActivatedRoute) {}
 
@@ -30,6 +34,25 @@ export class ExerciseDetailPage implements OnInit {
       this.exercise = this.safetyService.getExerciseById(id);
       this.loadConditionWarnings(id);
     }
+  }
+
+  ionViewWillEnter() {
+    // Called every time Ionic makes this page active — reliable even when component is cached.
+    // Service property is set synchronously by LibraryPage before navigation.
+    this.searchText = this.safetyService.librarySearchTerm?.trim() || '';
+  }
+
+  highlightText(text: string | undefined): SafeHtml {
+    const raw = text || '';
+    const term = this.searchText.trim();
+    if (!term) {
+      return this.sanitizer.bypassSecurityTrustHtml(raw);
+    }
+
+    const escapedQuery = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const regex = new RegExp(`(${escapedQuery})`, 'gi');
+    const highlighted = raw.replace(regex, '<span class="highlight">$1</span>');
+    return this.sanitizer.bypassSecurityTrustHtml(highlighted);
   }
 
   private loadConditionWarnings(exerciseId: string) {

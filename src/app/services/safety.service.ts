@@ -20,6 +20,7 @@ export class SafetyService {
   private dataLoaded = false;
   private latestQuery: SafetyQuery | null = null;
   private latestGuidance: GuidanceResult | null = null;
+  public librarySearchTerm = '';
 
   async initData(): Promise<void> {
     if (this.dataLoaded) {

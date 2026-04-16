@@ -221,6 +221,191 @@
     "description": "Be aware of possible impacts on coordination, judgment, and energy. Use trauma-informed approaches and provide extra support as needed."
   },
   {
+    "id": "hypermobility_syndrome",
+    "label": "Hypermobility Syndrome",
+    "description": "Avoid unsupported extreme joint ranges and rapid direction changes; emphasize controlled strength and joint stability."
+  },
+  {
+    "id": "hernia",
+    "label": "Hernia",
+    "description": "Avoid heavy abdominal strain, Valsalva, and deep intra-abdominal pressure. Focus on supportive core and gentle mobility."
+  },
+  {
+    "id": "parkinsons_disease",
+    "label": "Parkinson's Disease",
+    "description": "Use slow, controlled movement with clear cues, avoiding sudden changes in direction and unsupported balance work."
+  },
+  {
+    "id": "multiple_sclerosis",
+    "label": "Multiple Sclerosis (MS)",
+    "description": "Plan around fatigue and temperature sensitivity. Avoid rapid intensity changes, overheating, and unsupported balance work."
+  },
+  {
+    "id": "stress_incontinence",
+    "label": "Stress Incontinence",
+    "description": "Avoid strong abdominal pressure and high-impact loading. Focus on pelvic floor-friendly stabilization and timing."
+  },
+  {
+    "id": "disc_degeneration",
+    "label": "Disc Degeneration",
+    "description": "Protect the spine with neutral alignment, avoid repeated flexion/extension, and favor gentle segmental movement."
+  },
+  {
+    "id": "radiculopathy_sciatica",
+    "label": "Radiculopathy / Sciatica",
+    "description": "Avoid aggressive spinal flexion and compression. Favor nerve-friendly positions and gentle decompression."
+  },
+  {
+    "id": "ankylosing_spondylitis",
+    "label": "Ankylosing Spondylitis",
+    "description": "Avoid end-range spinal extension and rotation. Focus on gentle mobility, posture, and breath-led segmental movement."
+  },
+  {
+    "id": "sacroiliac_dysfunction",
+    "label": "Sacroiliac Joint (SIJ) Dysfunction",
+    "description": "Avoid deep twisting and uneven weight shifts. Use subtle pelvic stabilization and even hip loading."
+  },
+  {
+    "id": "cervical_spine_dysfunction",
+    "label": "Cervical Spine Dysfunction",
+    "description": "Avoid unsupported head lifts, deep neck extension, and rapid head rotations."
+  },
+  {
+    "id": "frozen_shoulder",
+    "label": "Adhesive Capsulitis / Frozen Shoulder",
+    "description": "Favor gentle shoulder mobility without reaching into pain. Avoid forceful overhead movement and aggressive rotation."
+  },
+  {
+    "id": "rotator_cuff_injury",
+    "label": "Rotator Cuff Injury",
+    "description": "Protect the shoulder with controlled, pain-free ranges and avoid sudden overhead or external rotation under load."
+  },
+  {
+    "id": "acromioclavicular_sprain",
+    "label": "Acromioclavicular (AC) Sprain",
+    "description": "Avoid direct shoulder compression, heavy load on the AC joint, and high-risk shoulder positions."
+  },
+  {
+    "id": "thoracic_outlet_syndrome",
+    "label": "Thoracic Outlet Syndrome (TOS)",
+    "description": "Avoid sustained shoulder elevation, deep neck extension, and compression between the neck and shoulder."
+  },
+  {
+    "id": "tennis_elbow",
+    "label": "Lateral Epicondylitis / Tennis Elbow",
+    "description": "Avoid repetitive gripping, wrist extension under load, and strong resisted elbow extension."
+  },
+  {
+    "id": "golfers_elbow",
+    "label": "Medial Epicondylitis / Golfer's Elbow",
+    "description": "Avoid repetitive wrist flexion and forearm pronation with resisted elbow strain."
+  },
+  {
+    "id": "nerve_compression",
+    "label": "Nerve Compression / Entrapment",
+    "description": "Favor neutral joint alignment and gentle range. Avoid positions that pinch, compress, or overstretch nerves."
+  },
+  {
+    "id": "carpal_tunnel_syndrome",
+    "label": "Carpal Tunnel Syndrome",
+    "description": "Avoid prolonged wrist extension or flexion under load and repeated finger gripping with compression."
+  },
+  {
+    "id": "cubital_tunnel_syndrome",
+    "label": "Ulnar Nerve / Cubital Tunnel Syndrome",
+    "description": "Avoid prolonged elbow flexion, direct pressure on the inner elbow, and forceful gripping."
+  },
+  {
+    "id": "radial_nerve_issue",
+    "label": "Radial Nerve Concern",
+    "description": "Avoid sustained wrist drop positions, pressure at the elbow, and forceful forearm extension under load."
+  },
+  {
+    "id": "ankle_sprain",
+    "label": "Ankle Sprain",
+    "description": "Avoid unstable surfaces, sudden direction changes, and unsupported single-leg landing."
+  },
+  {
+    "id": "achilles_tendinopathy",
+    "label": "Achilles Tendinopathy",
+    "description": "Avoid repeated jumping, sudden forceful push-off, and aggressive dorsiflexion under load."
+  },
+  {
+    "id": "posterior_tibialis_dysfunction",
+    "label": "Posterior Tibialis Dysfunction (PTTD)",
+    "description": "Favor arch support, avoid excessive pronation and prolonged weight-bearing on the inside of the foot."
+  },
+  {
+    "id": "tibial_stress_syndrome",
+    "label": "Tibial Stress Syndrome (TSS)",
+    "description": "Avoid repetitive impact and high-volume loading through the lower leg. Favor low-impact, gradual progression."
+  },
+  {
+    "id": "plantar_fasciitis",
+    "label": "Plantar Fasciitis",
+    "description": "Avoid prolonged toe extension, barefoot loading, and high-impact footwork."
+  },
+  {
+    "id": "bunions",
+    "label": "Bunions (Hallux Valgus)",
+    "description": "Avoid narrow shoe-like foot positioning, toes gripping the floor, and excessive big-toe pressure."
+  },
+  {
+    "id": "hip_arthroscopy",
+    "label": "Total Hip Arthroscopy (THA)",
+    "description": "Move with caution around hip range and avoid deep rotation, wide opening, or forceful hip load."
+  },
+  {
+    "id": "piriformis_syndrome",
+    "label": "Piriformis Syndrome / Sciatic Nerve Entrapment",
+    "description": "Avoid deep external rotation and compression through the buttock and hips. Favor gentle glute and hip mobility."
+  },
+  {
+    "id": "hamstring_tendinopathy",
+    "label": "Hamstring Tendinopathy",
+    "description": "Avoid aggressive hamstring stretching, rapid lengthening, and loaded knee extension through pain."
+  },
+  {
+    "id": "muscle_strain",
+    "label": "Muscle Strain",
+    "description": "Avoid sudden overstretching, aggressive loading, and high-speed lengthening of the affected muscle."
+  },
+  {
+    "id": "snapping_hip_syndrome",
+    "label": "Snapping Hip Syndrome (SHS)",
+    "description": "Avoid sudden hip flexion/extension and loud popping movements. Focus on control, stability, and smooth rotations."
+  },
+  {
+    "id": "greater_trochanteric_pain",
+    "label": "Greater Trochanteric Pain Syndrome / Hip Bursitis",
+    "description": "Avoid direct pressure on the outside of the hip and load that aggravates the lateral hip."
+  },
+  {
+    "id": "femoroacetabular_impingement",
+    "label": "Femoroacetabular Impingement (FAI)",
+    "description": "Avoid deep hip flexion, internal rotation, and forward-flexed hip positions that pinch the front of the hip."
+  },
+  {
+    "id": "patellofemoral_pain",
+    "label": "Patellofemoral Pain Syndrome (PFPS)",
+    "description": "Avoid deep knee bends, prolonged knee loading, and unstable single-leg work that increases front knee stress."
+  },
+  {
+    "id": "iliotibial_band_syndrome",
+    "label": "Iliotibial Band Syndrome (ITBS)",
+    "description": "Avoid repetitive knee flexion/extension and excessive hip adduction that irritates the outer knee."
+  },
+  {
+    "id": "meniscus_tear",
+    "label": "Meniscus Tear",
+    "description": "Avoid twisting under knee load, deep squats, and sudden pivoting that places shear force on the knee."
+  },
+  {
+    "id": "ligament_injury",
+    "label": "Ligament Injury (ACL, PCL, MCL, LCL)",
+    "description": "Avoid twisting, pivoting, and deep or loaded knee positions until ligament healing and stability improve."
+  },
+  {
     "id": "other",
     "label": "Other",
     "description": "Get AI-backed guidance for a condition not listed here."

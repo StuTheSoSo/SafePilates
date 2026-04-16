@@ -70,6 +70,12 @@ export class HomePage implements OnInit {
         'osteoporosis',
         'low_back_pain',
         'scoliosis',
+        'ankylosing_spondylitis',
+        'disc_degeneration',
+        'radiculopathy_sciatica',
+        'sacroiliac_dysfunction',
+        'cervical_spine_dysfunction',
+        'hypermobility_syndrome',
         'arthritis',
         'knee_issues',
         'hip_issues',
@@ -88,8 +94,57 @@ export class HomePage implements OnInit {
         'postpartum',
         'pelvic_floor_dysfunction',
         'diastasis_recti',
+        'hernia',
+        'stress_incontinence',
         'gastrointestinal_pelvic',
         'recent_surgery'
+      ]
+    },
+    {
+      label: 'Neurological & Systemic Conditions',
+      subtitle: 'Neurological and systemic conditions that affect movement and balance',
+      ids: [
+        'multiple_sclerosis',
+        'parkinsons_disease'
+      ]
+    },
+    {
+      label: 'Upper Limb & Nerve Injuries',
+      subtitle: 'Shoulder, elbow, wrist, and nerve-related conditions',
+      ids: [
+        'frozen_shoulder',
+        'rotator_cuff_injury',
+        'acromioclavicular_sprain',
+        'thoracic_outlet_syndrome',
+        'tennis_elbow',
+        'golfers_elbow',
+        'nerve_compression',
+        'carpal_tunnel_syndrome',
+        'cubital_tunnel_syndrome',
+        'radial_nerve_issue'
+      ]
+    },
+    {
+      label: 'Lower Limb & Hip Injuries',
+      subtitle: 'Ankle, foot, knee, and hip injury support',
+      ids: [
+        'ankle_sprain',
+        'achilles_tendinopathy',
+        'posterior_tibialis_dysfunction',
+        'tibial_stress_syndrome',
+        'plantar_fasciitis',
+        'bunions',
+        'hip_arthroscopy',
+        'piriformis_syndrome',
+        'hamstring_tendinopathy',
+        'muscle_strain',
+        'snapping_hip_syndrome',
+        'greater_trochanteric_pain',
+        'femoroacetabular_impingement',
+        'patellofemoral_pain',
+        'iliotibial_band_syndrome',
+        'meniscus_tear',
+        'ligament_injury'
       ]
     },
     {

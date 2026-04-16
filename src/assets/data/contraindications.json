@@ -119,6 +119,117 @@
     {"exerciseId":"elephant","reason":"Weight-bearing through the feet and ankles can aggravate sensitive joints.","alternative":"Choose seated or supported hamstring stretches without heavy foot load."},
     {"exerciseId":"bicycle","reason":"Rapid lower-leg movement and pointed foot positions can irritate ankle or foot pain.","alternative":"Use slower supine leg circles with a neutral foot position."}
   ],
+  "hypermobility_syndrome": [
+    {"exerciseId":"one_leg_circle","reason":"Large unsupported joint ranges can overstretch lax connective tissue in hypermobility.","alternative":"Use smaller curves, active stability, and keep the pelvis supported during leg circles."}
+  ],
+  "hernia": [
+    {"exerciseId":"roll_up","reason":"Loaded abdominal flexion and strain may increase intra-abdominal pressure and irritate a hernia.","alternative":"Choose pelvic tilts, supine core work, and gentle breath support without heavy crunching."}
+  ],
+  "parkinsons_disease": [
+    {"exerciseId":"control_balance","reason":"Unstable balance challenges increase fall risk when motor control and reaction speed are affected.","alternative":"Use grounded, supported movement with a wide base and slow transitions."}
+  ],
+  "multiple_sclerosis": [
+    {"exerciseId":"the_hundred","reason":"Sustained breath pumping and core intensity can overheat or overly fatigue someone with MS.","alternative":"Use shorter, cooler sessions with gentle breath-based core work."}
+  ],
+  "stress_incontinence": [
+    {"exerciseId":"double_leg_stretch","reason":"Strong abdominal extension and pelvic pressure may exacerbate leaking or pelvic floor symptoms.","alternative":"Use heel slides and gentle core engagement with the pelvis stable."}
+  ],
+  "disc_degeneration": [
+    {"exerciseId":"rolling_like_a_ball","reason":"Repeated spinal flexion and compression can aggravate an already degenerated disc.","alternative":"Choose neutral spine pelvic tilts and supported core stabilization."}
+  ],
+  "radiculopathy_sciatica": [
+    {"exerciseId":"roll_up","reason":"Deep spinal flexion can increase nerve root compression and sciatica symptoms.","alternative":"Use gentle supported spinal mobility and avoid forward-bending under load."}
+  ],
+  "ankylosing_spondylitis": [
+    {"exerciseId":"roll_over","reason":"Inversion and axial compression may stress an inflamed, stiff spine and limit chest expansion.","alternative":"Choose supported bridge work and gentle seated spinal mobility."}
+  ],
+  "sacroiliac_dysfunction": [
+    {"exerciseId":"one_leg_circle","reason":"Large leg circles can create uneven pelvic shear and irritate the SI joint.","alternative":"Use small, controlled leg movements with the pelvis stabilized."}
+  ],
+  "cervical_spine_dysfunction": [
+    {"exerciseId":"neck_pull","reason":"Unsupported head lifting and cervical flexion can aggravate neck dysfunction.","alternative":"Keep the head supported and use gentle core exercise without deep neck motion."}
+  ],
+  "frozen_shoulder": [
+    {"exerciseId":"swan_dive","reason":"Prone back extension can aggravate a stiff, painful shoulder and restrict comfortable range.","alternative":"Use supported chest lifts with the arms light and close to the body."}
+  ],
+  "rotator_cuff_injury": [
+    {"exerciseId":"push_through","reason":"Heavy shoulder loading and external rotation may irritate an injured rotator cuff.","alternative":"Choose gentle supported shoulder mobility and avoid deep load on the shoulder joint."}
+  ],
+  "acromioclavicular_sprain": [
+    {"exerciseId":"shoulder_bridge","reason":"Shoulder compression and upper-body load can worsen pain at the AC joint.","alternative":"Use pelvic tilts or low bridge variations with reduced shoulder pressure."}
+  ],
+  "thoracic_outlet_syndrome": [
+    {"exerciseId":"the_hundred","reason":"Sustained shoulder elevation and breath coordination can increase compression near the thoracic outlet.","alternative":"Use gentle chest opening with arms supported and avoid overhead shoulder positions."}
+  ],
+  "tennis_elbow": [
+    {"exerciseId":"push_through","reason":"Weight-bearing on the hands and forearms can aggravate lateral elbow tendon irritation.","alternative":"Use lower-load shoulder work and avoid forceful gripping or wrist extension."}
+  ],
+  "golfers_elbow": [
+    {"exerciseId":"push_through","reason":"Forearm loading and wrist action can strain the medial elbow in golfer’s elbow.","alternative":"Choose supported upper-body work with minimal wrist or grip forcing."}
+  ],
+  "nerve_compression": [
+    {"exerciseId":"corkscrew","reason":"Twisting and spinal compression can pinch a sensitive nerve and worsen compression symptoms.","alternative":"Use gentle spinal mobility with neutral alignment and avoid end-range twist."}
+  ],
+  "carpal_tunnel_syndrome": [
+    {"exerciseId":"teaser","reason":"Wrist extension and gripping can increase pressure in the carpal tunnel.","alternative":"Use supported core work with a neutral wrist and reduced finger grip."}
+  ],
+  "cubital_tunnel_syndrome": [
+    {"exerciseId":"leg_pull_front","reason":"Plank-style upper-body loading can compress the ulnar nerve at the elbow.","alternative":"Use supported core work and keep the elbow straight and free from direct pressure."}
+  ],
+  "radial_nerve_issue": [
+    {"exerciseId":"neck_pull","reason":"Wrist and arm positioning under load may aggravate radial nerve symptoms if the arm is extended or compressed.","alternative":"Use gentle core work with the wrists and elbows in neutral, pain-free positions."}
+  ],
+  "ankle_sprain": [
+    {"exerciseId":"control_balance","reason":"Unsupported balance work can stress a healing ankle and increase the risk of re-sprain.","alternative":"Use seated or supported leg work with both feet grounded."}
+  ],
+  "achilles_tendinopathy": [
+    {"exerciseId":"footwork","reason":"Reformer footbar pushing can overload the Achilles tendon with repeated plantarflexion.","alternative":"Use lighter resistance and avoid strong push-off through the feet."}
+  ],
+  "posterior_tibialis_dysfunction": [
+    {"exerciseId":"footwork","reason":"High-volume footbar work may exacerbate medial ankle and arch strain.","alternative":"Use gentler, neutral foot positions and reduce repetitive loading through the inner foot."}
+  ],
+  "tibial_stress_syndrome": [
+    {"exerciseId":"footwork","reason":"Repeated leg press work can aggravate shin pain and stress reactions in the tibia.","alternative":"Choose lower resistance and avoid long high-volume leg sets."}
+  ],
+  "plantar_fasciitis": [
+    {"exerciseId":"footwork","reason":"High footbar pressure and toe extension can irritate the plantar fascia.","alternative":"Use soft, neutral foot placement and lower resistance with less toe flexion."}
+  ],
+  "bunions": [
+    {"exerciseId":"footwork","reason":"Narrow foot positions and forefoot pressure can increase bunion discomfort.","alternative":"Use wider, softer foot placement and avoid pressing directly through the big toe joint."}
+  ],
+  "hip_arthroscopy": [
+    {"exerciseId":"one_leg_circle","reason":"Large hip circles can strain the healing hip joint and deep tissue after arthroscopy.","alternative":"Use smaller, supported leg circles and keep the pelvis stable."}
+  ],
+  "piriformis_syndrome": [
+    {"exerciseId":"open_leg_rocker","reason":"Wide hip opening and rotation can aggravate piriformis irritation and sciatic symptoms.","alternative":"Use gentle hip mobility with the legs closer together and the pelvis supported."}
+  ],
+  "hamstring_tendinopathy": [
+    {"exerciseId":"scissors","reason":"Aggressive hamstring lengthening and rapid alternating leg motion can worsen tendon irritation.","alternative":"Use gentle hamstring control and avoid fast, end-range leg swings."}
+  ],
+  "muscle_strain": [
+    {"exerciseId":"leg_pull_back","reason":"Loaded posterior chain work and sustained muscle tension can aggravate an acute strain.","alternative":"Use gentle, supported mobility and avoid strong, resisted leg extension."}
+  ],
+  "snapping_hip_syndrome": [
+    {"exerciseId":"hip_circles","reason":"Fast, large hip circles may trigger snapping and irritate the hip tissues.","alternative":"Use smaller, slower hip movements with emphasis on stability."}
+  ],
+  "greater_trochanteric_pain": [
+    {"exerciseId":"side_bend","reason":"Side-lying pressure and strong lateral hip movement can aggravate greater trochanter pain.","alternative":"Use gentle standing or supine hip work with less lateral load."}
+  ],
+  "femoroacetabular_impingement": [
+    {"exerciseId":"one_leg_circle","reason":"Deep hip flexion and internal rotation can pinch the front of the hip in FAI.","alternative":"Use smaller hip circles and avoid end-range flexion and rotation."}
+  ],
+  "patellofemoral_pain": [
+    {"exerciseId":"footwork","reason":"Reformer leg press can increase compression under the kneecap and worsen anterior knee pain.","alternative":"Use lighter resistance and keep knee alignment stable with shallow range."}
+  ],
+  "iliotibial_band_syndrome": [
+    {"exerciseId":"leg_pull_front","reason":"Repetitive knee flexion and hip adduction may irritate the outer knee and IT band.","alternative":"Use controlled lower-leg work avoiding excessive hip adduction."}
+  ],
+  "meniscus_tear": [
+    {"exerciseId":"knee_stretch","reason":"Loaded knee flexion and weight-bearing can aggravate a meniscus tear.","alternative":"Use gentle knee extension work with less compressive load."}
+  ],
+  "ligament_injury": [
+    {"exerciseId":"knee_stretch","reason":"Deep or loaded knee flexion may strain healing knee ligaments.","alternative":"Use controlled, supported knee work with minimal weight and a neutral alignment."}
+  ],
   "chronic_fatigue": [
     {"exerciseId":"the_hundred","reason":"High-repetition breath and core work can worsen fatigue if pacing is too aggressive.","alternative":"Use shorter sets, gentler breath work, and allow rest breaks."},
     {"exerciseId":"swimming","reason":"Sustained prone arm and leg lifts can be too demanding for low-energy clients.","alternative":"Choose single-limb lifts with frequent recovery pauses."},

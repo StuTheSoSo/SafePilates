@@ -80,7 +80,44 @@ export class ResultsPage implements OnInit {
     gastrointestinal_pelvic: 'Keep core work gentle, avoid strong intra-abdominal pressure, and prioritize pelvic comfort and support.',
     neurological_disorder: 'Use additional support, slow progressions, and clear cues to compensate for coordination and sensation changes.',
     mental_cognitive: 'Keep the routine simple and predictable, avoid complex transitions, and allow extra time for processing and focus.',
-    weight_concerns: 'Use joint-friendly, low-impact Pilates and avoid fast, unstable transitions or excessive load on the spine and hips.'
+    weight_concerns: 'Use joint-friendly, low-impact Pilates and avoid fast, unstable transitions or excessive load on the spine and hips.',
+    hypermobility_syndrome: 'Avoid unsupported extreme joint ranges and focus on controlled stability with gentle strength work.',
+    hernia: 'Avoid Valsalva, heavy intra-abdominal pressure, and deep core compression. Keep the core supported and comfortable.',
+    parkinsons_disease: 'Use slow, predictable movement and avoid sudden balance challenges, rapid direction changes, or high-complexity sequences.',
+    multiple_sclerosis: 'Manage fatigue, temperature, and balance with gentle pacing and avoid overheating or rapid intensity spikes.',
+    stress_incontinence: 'Protect the pelvic floor by avoiding strong abdominal pressure and high-impact movement. Focus on gentle core support.',
+    disc_degeneration: 'Support the spine, avoid repeated flexion/extension, and keep movement slow and segmented.',
+    radiculopathy_sciatica: 'Avoid aggressive spinal compression and flexion. Favor nerve-friendly decompression and gentle hip mobility.',
+    ankylosing_spondylitis: 'Avoid deep backbends, forceful twists, and breath-holding; prioritize gentle posture, chest expansion, and supported spinal mobility.',
+    sacroiliac_dysfunction: 'Avoid deep twisting and uneven hip loading. Keep pelvic motion balanced and supported.',
+    cervical_spine_dysfunction: 'Avoid unsupported head lifts, deep neck extension, and rapid head rotation. Keep the cervical spine long and stable.',
+    frozen_shoulder: 'Use gentle shoulder mobility, avoid forceful overhead positions, and do not push into pain.',
+    rotator_cuff_injury: 'Keep shoulder movement controlled and pain-free. Avoid sudden overhead load or aggressive rotation.',
+    acromioclavicular_sprain: 'Avoid direct pressure on the AC joint, heavy load, and high-risk shoulder compression positions.',
+    thoracic_outlet_syndrome: 'Avoid sustained shoulder elevation, deep neck extension, and positions that compress the thoracic outlet.',
+    tennis_elbow: 'Avoid repetitive gripping, wrist extension under load, and resisted elbow extension that aggravates the lateral elbow.',
+    golfers_elbow: 'Avoid repetitive wrist flexion and forearm pronation under load, and protect the medial elbow from strain.',
+    nerve_compression: 'Favor neutral joint alignment and gentle range. Avoid positions that pinch, compress, or overstretch nerves.',
+    carpal_tunnel_syndrome: 'Avoid prolonged wrist extension or flexion under load and repeated gripping that compresses the carpal tunnel.',
+    cubital_tunnel_syndrome: 'Avoid prolonged elbow flexion, direct pressure on the inner elbow, and forceful gripping movements.',
+    radial_nerve_issue: 'Avoid sustained wrist drop positions, elbow pressure, and forceful forearm extension that strains the radial nerve.',
+    ankle_sprain: 'Avoid unstable surfaces, sudden direction changes, and unsupported single-leg landings until the ankle is stable.',
+    achilles_tendinopathy: 'Avoid repeated jumping, rapid forceful push-off, and aggressive dorsiflexion under load.',
+    posterior_tibialis_dysfunction: 'Favor arch support, avoid excessive pronation, and reduce prolonged weight-bearing on the inner foot.',
+    tibial_stress_syndrome: 'Avoid repetitive impact and high-volume lower-leg loading. Progress gradually and use low-impact modification.',
+    plantar_fasciitis: 'Avoid prolonged toe extension, barefoot loading, and high-impact footwork. Support the arch and reduce strain.',
+    bunions: 'Avoid narrow foot positioning, gripping the toes, and excessive pressure on the first metatarsal joint.',
+    hip_arthroscopy: 'Move cautiously around hip range and avoid deep rotation, wide opening, or forceful hip loading.',
+    piriformis_syndrome: 'Avoid deep external rotation and compression through the buttock and hips. Favor gentle glute and hip mobility.',
+    hamstring_tendinopathy: 'Avoid aggressive hamstring stretching, rapid lengthening, and loaded knee extension through pain.',
+    muscle_strain: 'Avoid sudden overstretching, aggressive loading, and high-speed lengthening of the affected muscle.',
+    snapping_hip_syndrome: 'Avoid sudden hip flexion/extension and loud popping movements. Focus on control, stability, and smooth rotations.',
+    greater_trochanteric_pain: 'Avoid direct pressure on the outside of the hip and load that aggravates the lateral hip.',
+    femoroacetabular_impingement: 'Avoid deep hip flexion, internal rotation, and forward-flexed positions that pinch the front of the hip.',
+    patellofemoral_pain: 'Avoid deep knee bends, prolonged knee loading, and unstable single-leg work that increases front knee stress.',
+    iliotibial_band_syndrome: 'Avoid repetitive knee flexion/extension and excessive hip adduction that irritates the outer knee.',
+    meniscus_tear: 'Avoid twisting under knee load, deep squats, and sudden pivoting that places shear force on the meniscus.',
+    ligament_injury: 'Avoid twisting, pivoting, and deep or loaded knee positions until ligament healing and stability improve.'
   };
 
   get selectedConditionLabels() {
@@ -180,6 +217,154 @@ export class ResultsPage implements OnInit {
     foot_ankle_issues: [
       'Use supportive foot positions and avoid high-impact loading, sudden direction changes, and unstable surfaces.',
       'Prioritize gentle strength and mobility with good foot alignment.'
+    ],
+    hypermobility_syndrome: [
+      'Avoid end-range positioning and repetitive joint loading. Favor controlled strength and support around flexible joints.',
+      'Focus on slow, stable movement and avoid fast direction changes or deep unsupported ranges.'
+    ],
+    hernia: [
+      'Keep the core supported, avoid heavy intra-abdominal pressure, and do not strain through the abdomen.',
+      'Choose gentle pelvic and breath-supported movement instead of forceful crunches or Valsalva-style effort.'
+    ],
+    parkinsons_disease: [
+      'Use slow, predictable movement with extra cueing, and avoid sudden balance challenges or fast transitions.',
+      'Keep the routine simple and supported, and focus on consistency rather than complexity.'
+    ],
+    multiple_sclerosis: [
+      'Watch for fatigue and temperature changes, using shorter sessions and lighter loads as needed.',
+      'Avoid rapid intensity spikes, prolonged heat exposure, and unsupported balance work.'
+    ],
+    stress_incontinence: [
+      'Avoid strong abdominal pressure and high-impact exercises. Focus on pelvic floor-friendly support and gentle core engagement.',
+      'Use gradual progression and stop any movement that increases leaking or pelvic discomfort.'
+    ],
+    disc_degeneration: [
+      'Protect the spine with neutral alignment and avoid repeated bending or extension through the lumbar discs.',
+      'Use slow segmental movement and avoid aggressive spinal compression or twisting.'
+    ],
+    radiculopathy_sciatica: [
+      'Avoid aggressive spinal flexion, compression, and prolonged sitting positions that irritate the nerve.',
+      'Favor gentle decompression, nerve-friendly mobility, and careful hip movement with a neutral spine.'
+    ],
+    ankylosing_spondylitis: [
+      'Use gentle posture work and avoid end-range spinal extension and rotation.',
+      'Keep movement slow, supported, and focused on breathing and spinal mobility rather than aggressive range.'
+    ],
+    sacroiliac_dysfunction: [
+      'Keep the pelvis stable and avoid deep twisting or uneven weight shifts that stress the SI joint.',
+      'Choose balanced hip work and gentle core stabilization while avoiding unsupported asymmetry.'
+    ],
+    cervical_spine_dysfunction: [
+      'Support the head and neck, avoid deep neck extension, and keep movements slow and comfortable.',
+      'Avoid abrupt head rotations, prolonged chin tucks, and any position that causes neck pain.'
+    ],
+    frozen_shoulder: [
+      'Use gentle shoulder mobility and stay well within pain-free range, avoiding forceful overhead or rotational positions.',
+      'Keep the shoulder supported and avoid aggressive stretching or loading through the frozen joint.'
+    ],
+    rotator_cuff_injury: [
+      'Keep shoulder movement controlled and pain-free, avoiding deep rotation and heavy overhead positions.',
+      'Focus on scapular stability and gentle range rather than strength work that aggravates the rotator cuff.'
+    ],
+    acromioclavicular_sprain: [
+      'Avoid direct pressure on the AC joint and heavy load that stresses the top of the shoulder.',
+      'Choose gentle shoulder movement with protected arm positions and avoid sharp compression or impact.'
+    ],
+    thoracic_outlet_syndrome: [
+      'Avoid sustained shoulder elevation and deep neck extension that compress the thoracic outlet.',
+      'Favor open chest posture with gentle shoulder mobility and avoid positions that pinch the neck and shoulder.'
+    ],
+    tennis_elbow: [
+      'Avoid repetitive gripping, wrist extension under load, and strong resisted elbow extension.',
+      'Keep the forearm supported and choose light, pain-free arm work.'
+    ],
+    golfers_elbow: [
+      'Avoid repetitive wrist flexion and forearm pronation under load.',
+      'Choose gentle elbow movements and avoid forceful curling or gripping that aggravates the inner elbow.'
+    ],
+    nerve_compression: [
+      'Favor neutral anatomy and gentle range of motion, avoiding positions that pinch or stretch nerves.',
+      'Move slowly and stop if there is tingling, numbness, or sharp nerve pain.'
+    ],
+    carpal_tunnel_syndrome: [
+      'Avoid prolonged wrist extension or flexion under load and repetitive gripping that compresses the wrist tunnel.',
+      'Keep the wrists neutral and use padding or wrist support when needed.'
+    ],
+    cubital_tunnel_syndrome: [
+      'Avoid prolonged elbow flexion and direct pressure on the inner elbow.',
+      'Keep the forearm relaxed and the elbow supported in gentle movement.'
+    ],
+    radial_nerve_issue: [
+      'Avoid sustained wrist drop positions and pressure over the elbow that irritates the radial nerve.',
+      'Choose pain-free wrist and elbow positions and avoid forceful arm extension against resistance.'
+    ],
+    ankle_sprain: [
+      'Avoid unstable surfaces, sudden direction changes, and unsupported single-leg landings.',
+      'Use supportive, low-impact movement and keep the ankle protected until stability returns.'
+    ],
+    achilles_tendinopathy: [
+      'Avoid repeated jumping, rapid push-off, and aggressive dorsiflexion under load.',
+      'Choose gentle calf and ankle mobility with gradual progressions.'
+    ],
+    posterior_tibialis_dysfunction: [
+      'Favor arch support, avoid excessive pronation, and reduce prolonged weight-bearing on the inside of the foot.',
+      'Use controlled ankle alignment and support during lower-leg movement.'
+    ],
+    tibial_stress_syndrome: [
+      'Avoid repetitive impact and high-volume lower-leg loading, and progress movement gradually.',
+      'Focus on low-impact support and stop if shin pain appears.'
+    ],
+    plantar_fasciitis: [
+      'Avoid prolonged toe extension, barefoot loading, and high-impact footwork.',
+      'Use arch support, soft surfaces, and gentle foot mobility.'
+    ],
+    bunions: [
+      'Avoid narrow foot positioning, toe gripping, and direct pressure on the big toe joint.',
+      'Choose wider foot stance and gentle, supported movement that avoids compressing the forefoot.'
+    ],
+    hip_arthroscopy: [
+      'Move cautiously through hip range and avoid deep rotation or forceful hip loading.',
+      'Choose gentle, supported hip movement and avoid aggressive end-range positions.'
+    ],
+    piriformis_syndrome: [
+      'Avoid deep external rotation and buttock compression, and favor gentle glute and hip mobility.',
+      'Keep the pelvis stable and avoid sharp pain in the sciatic region.'
+    ],
+    hamstring_tendinopathy: [
+      'Avoid aggressive hamstring stretching and forceful knee extension through pain.',
+      'Use gentle hamstring lengthening and strengthen the posterior chain gradually.'
+    ],
+    muscle_strain: [
+      'Avoid sudden overstretching, aggressive loading, and rapid lengthening of the strained muscle.',
+      'Choose gentle, supported movement and rest if pain increases.'
+    ],
+    snapping_hip_syndrome: [
+      'Avoid sudden hip flexion/extension and loud popping motions.',
+      'Focus on controlled hip movement, stability, and smooth rotation.'
+    ],
+    greater_trochanteric_pain: [
+      'Avoid direct lateral hip pressure and load that aggravates the outer hip.',
+      'Use gentle hip and glute mobility with cushioned support if needed.'
+    ],
+    femoroacetabular_impingement: [
+      'Avoid deep hip flexion, internal rotation, and forward-flexed positions that pinch the front of the hip.',
+      'Choose smaller ranges of motion and gentle hip stability work.'
+    ],
+    patellofemoral_pain: [
+      'Avoid deep knee bends and unstable single-leg work that increases pressure under the kneecap.',
+      'Keep the knee aligned and move within pain-free range.'
+    ],
+    iliotibial_band_syndrome: [
+      'Avoid repetitive knee flexion/extension and excess hip adduction that irritates the outer knee.',
+      'Focus on gradual loading, gentle hip control, and avoiding aggravated side-to-side movement.'
+    ],
+    meniscus_tear: [
+      'Avoid twisting under knee load, deep squats, and sudden pivoting that places shear force on the knee.',
+      'Use controlled knee movement and avoid painful positions.'
+    ],
+    ligament_injury: [
+      'Avoid twisting, pivoting, and deep or loaded knee positions until ligament healing and stability improve.',
+      'Choose stable, low-impact lower-body movement with protected knee alignment.'
     ],
     chronic_fatigue: [
       'Use short, gentle sessions with plenty of rest and avoid pushing through excessive fatigue.',
@@ -462,6 +647,191 @@ export class ResultsPage implements OnInit {
       what: 'Swollen glands are enlarged lymph nodes typically caused by infection, inflammation, or immune response in the neck, armpit, or groin.',
       dangers: 'Swollen nodes can be tender and may indicate an active infection or inflammation. Aggressive movement, pressure, or strain near the affected area can increase discomfort.',
       avoid: 'Avoid deep neck flexion/extension, strong jaw or shoulder compression, prolonged prone neck loading, and rapid head turns around the tender nodes.'
+    },
+    hypermobility_syndrome: {
+      what: 'Hypermobility syndrome involves joints that move beyond normal ranges with reduced stability.',
+      dangers: 'Loose joints are more vulnerable to subluxation, ligament stress, and overuse without active stability support.',
+      avoid: 'Avoid rapid direction changes, unsupported extreme ranges, and high-speed transitions that rely on passive joint mobility.'
+    },
+    hernia: {
+      what: 'A hernia is a protrusion of tissue through a weakened abdominal wall or pelvic floor, sensitive to increased internal pressure.',
+      dangers: 'Heavy abdominal strain, breath-holding, and deep core compression can worsen the hernia or cause discomfort.',
+      avoid: 'Avoid intense abdominal crunches, Valsalva-style effort, heavy lifting, and exercises that sharply increase intra-abdominal pressure.'
+    },
+    parkinsons_disease: {
+      what: 'Parkinson’s disease affects motor control, balance, and coordination due to progressive neurologic changes.',
+      dangers: 'Sudden movements, unstable balance work, and complex transitions can increase fall risk and reduce movement confidence.',
+      avoid: 'Avoid fast direction changes, unsupported balance challenges, rapid footwork, and sequences that require quick timing or reaction.'
+    },
+    multiple_sclerosis: {
+      what: 'Multiple sclerosis causes variable neurological symptoms, fatigue, and sensitivity to temperature changes.',
+      dangers: 'Overheating, fatigue, and rapid intensity changes can worsen symptoms and reduce safe movement tolerance.',
+      avoid: 'Avoid prolonged high-intensity work, hot environments, and unsupported balance challenges when fatigue or sensation issues are present.'
+    },
+    stress_incontinence: {
+      what: 'Stress incontinence is involuntary leakage caused by pelvic floor weakness and increased abdominal pressure.',
+      dangers: 'High-impact movement and strong abdominal loading can worsen leakage and pelvic floor strain.',
+      avoid: 'Avoid jumping, running, heavy lifting, breath-holding, and intense core compression that increases pelvic pressure.'
+    },
+    disc_degeneration: {
+      what: 'Disc degeneration is wear and tear of the spinal discs, which can increase sensitivity to load and movement.',
+      dangers: 'Repeated spinal flexion, extension, or compression can increase disc irritation and discomfort.',
+      avoid: 'Avoid repeated bending, heavy compression through the spine, end-range flexion, and aggressive twist through the low back.'
+    },
+    radiculopathy_sciatica: {
+      what: 'Radiculopathy and sciatica involve nerve irritation often caused by spinal compression or disc issues, producing pain, numbness, or tingling down the leg.',
+      dangers: 'Aggressive spinal flexion, compression, and prolonged sitting can worsen nerve irritation.',
+      avoid: 'Avoid deep spinal flexion, compression through the lower back, and repeated twisting that aggravates nerve symptoms.'
+    },
+    ankylosing_spondylitis: {
+      what: 'Ankylosing spondylitis is a chronic inflammatory axial spondyloarthritis that often begins in young adults and can stiffen the sacroiliac joints, spine, chest wall, hips, and shoulders.',
+      dangers: 'Ongoing spine inflammation can lead to stiffness, reduced chest expansion, kyphotic posture, osteoporosis, and higher fracture risk from even low-energy trauma.',
+      avoid: 'Avoid deep backbends, forceful twists, end-range spinal extension, sudden axial compression, unstable balance challenges, and breath-holding that limits chest expansion.'
+    },
+    sacroiliac_dysfunction: {
+      what: 'SIJ dysfunction involves instability or inflammation of the sacroiliac joint where the pelvis meets the spine.',
+      dangers: 'Deep twisting, uneven load, and asymmetric positioning can worsen SIJ pain and instability.',
+      avoid: 'Avoid single-leg loading, deep rotational work, and aggressive hip shifts that stress the pelvis.'
+    },
+    cervical_spine_dysfunction: {
+      what: 'Cervical spine dysfunction affects neck movement, stability, and comfort during head and upper-body work.',
+      dangers: 'Unsupported neck positions, deep extension, and rapid head movements can worsen pain or nerve symptoms.',
+      avoid: 'Avoid unsupported head lifts, deep neck extension, sharp head rotation, and prolonged chin tucks.'
+    },
+    frozen_shoulder: {
+      what: 'Frozen shoulder is a condition of shoulder stiffness and restricted rotation due to capsular tightness.',
+      dangers: 'Forceful reaching and aggressive rotation can increase pain and limit mobility.',
+      avoid: 'Avoid forced overhead reaching, deep external rotation, and abrupt shoulder motions that provoke pain.'
+    },
+    rotator_cuff_injury: {
+      what: 'Rotator cuff injuries involve tendons that stabilize the shoulder, making overhead and rotational movements sensitive.',
+      dangers: 'Heavy overhead load, deep rotation, and sudden shoulder force can worsen tendon irritation.',
+      avoid: 'Avoid full overhead pressing, aggressive external rotation, and abrupt shoulder-loading transitions.'
+    },
+    acromioclavicular_sprain: {
+      what: 'AC joint sprains involve injury to the joint at the top of the shoulder, sensitive to compression and load.',
+      dangers: 'Direct pressure, heavy shoulder loading, and impact can aggravate the AC joint.',
+      avoid: 'Avoid leaning on the top of the shoulder, heavy bar-supported positions, and overhead load that compresses the AC joint.'
+    },
+    thoracic_outlet_syndrome: {
+      what: 'TOS results from compression of nerves or blood vessels between the neck and shoulder, causing pain, numbness, or tingling.',
+      dangers: 'Sustained shoulder elevation, neck extension, and compression at the thoracic outlet can worsen symptoms.',
+      avoid: 'Avoid overhead shoulder positions, deep neck extension, and slouched rounded shoulder postures that compress the outlet.'
+    },
+    tennis_elbow: {
+      what: 'Lateral epicondylitis causes pain on the outer elbow from repetitive wrist extension or gripping stress.',
+      dangers: 'Repeated gripping, wrist extension, and resisted elbow motions can worsen tendon irritation.',
+      avoid: 'Avoid forceful gripping, resisted wrist extension, and repetitive arm positions that strain the lateral elbow.'
+    },
+    golfers_elbow: {
+      what: 'Medial epicondylitis causes inner elbow pain from repetitive wrist flexion and forearm pronation. ',
+      dangers: 'Forceful wrist flexion, gripping, and resisted elbow motions can worsen medial tendon irritation.',
+      avoid: 'Avoid strong wrist flexion, forearm pronation under load, and repetitive movements that stress the inner elbow.'
+    },
+    nerve_compression: {
+      what: 'Nerve compression or entrapment occurs when nerves are pinched, squeezed, or irritated by surrounding tissues.',
+      dangers: 'Positions that compress, stretch, or chronically load a nerve can increase pain, numbness, or tingling.',
+      avoid: 'Avoid sustained compression, prolonged awkward postures, and sharp stretching of the affected nerve pathway.'
+    },
+    carpal_tunnel_syndrome: {
+      what: 'Carpal tunnel syndrome causes numbness, tingling, and pain in the hand due to median nerve compression at the wrist.',
+      dangers: 'Prolonged wrist flexion or extension, gripping, and direct pressure can worsen symptoms.',
+      avoid: 'Avoid sustained wrist extension/flexion, hard pressure on the palm/wrist, and repetitive gripping patterns.'
+    },
+    cubital_tunnel_syndrome: {
+      what: 'Cubital tunnel syndrome involves ulnar nerve irritation at the elbow, causing inner forearm and hand symptoms.',
+      dangers: 'Prolonged elbow flexion and direct pressure on the inner elbow can aggravate the nerve.',
+      avoid: 'Avoid leaning on the inner elbow, prolonged flexion, and forceful gripping with the elbow bent.'
+    },
+    radial_nerve_issue: {
+      what: 'Radial nerve concerns may create wrist drop, forearm pain, or weakness in wrist/finger extension.',
+      dangers: 'Pressure at the elbow or forceful forearm extension can irritate the radial nerve.',
+      avoid: 'Avoid sustained wrist drop, direct elbow pressure, and resisted forearm extension against pain.'
+    },
+    ankle_sprain: {
+      what: 'Ankle sprains involve ligament injury around the ankle and require cautious return to movement.',
+      dangers: 'Sudden direction changes, uneven surfaces, and unsupported single-leg loading can worsen the sprain.',
+      avoid: 'Avoid jumping, quick pivots, uneven surfaces, and unsupported single-leg balance until the ankle is stable.'
+    },
+    achilles_tendinopathy: {
+      what: 'Achilles tendinopathy causes pain in the back of the heel and lower leg from repeated tendon loading.',
+      dangers: 'Rapid push-off, high-impact landing, and sudden calf loading can increase tendon irritation.',
+      avoid: 'Avoid repetitive jumping, strong plantarflexion push-offs, and aggressive ankle loading.'
+    },
+    posterior_tibialis_dysfunction: {
+      what: 'Posterior tibialis dysfunction affects the arch and medial ankle, often due to overuse or flat-foot mechanics.',
+      dangers: 'Excessive pronation, prolonged inner foot weight-bearing, and unstable loading can worsen symptoms.',
+      avoid: 'Avoid unsupported pronation, high-impact footwork, and long, heavy lower-leg loading.'
+    },
+    tibial_stress_syndrome: {
+      what: 'Tibial stress syndrome is shin pain from repetitive loading and lower-leg fatigue.',
+      dangers: 'High-impact or high-volume lower-leg work can worsen shin irritation and risk stress reaction.',
+      avoid: 'Avoid repetitive jumping, long impact sets, and sudden increases in load through the shins.'
+    },
+    plantar_fasciitis: {
+      what: 'Plantar fasciitis causes heel pain from inflammation of the foot’s connective tissue.',
+      dangers: 'Barefoot load, excessive toe extension, and high-impact footwork can irritate the plantar fascia.',
+      avoid: 'Avoid prolonged barefoot loading, intense calf stretching into pain, and jumping on hard surfaces.'
+    },
+    bunions: {
+      what: 'Bunions are a bony deformity at the base of the big toe that can be sensitive to pressure and narrow foot positions.',
+      dangers: 'Tight foot positions, direct forefoot compression, and toe gripping can increase discomfort.',
+      avoid: 'Avoid narrow foot placement, pressing directly on the bunion, and gripping the toes to maintain balance.'
+    },
+    hip_arthroscopy: {
+      what: 'Total hip arthroscopy recovery requires cautious range-of-motion and load around the hip joint.',
+      dangers: 'Deep rotation, wide hip opening, and forceful load can stress healing tissues or the joint itself.',
+      avoid: 'Avoid deep hip rotation, wide externally rotated positions, and aggressive hip load.'
+    },
+    piriformis_syndrome: {
+      what: 'Piriformis syndrome involves irritation of the piriformis muscle and nearby sciatic nerve.',
+      dangers: 'Deep external rotation and compression through the buttock can aggravate the muscle and nerve.',
+      avoid: 'Avoid intense external rotation, seated cross-leg compression, and positions that cause sharp buttock pain.'
+    },
+    hamstring_tendinopathy: {
+      what: 'Hamstring tendinopathy is tendon pain from repetitive hamstring loading and overstretching.',
+      dangers: 'Aggressive hamstring stretches, rapid lengthening, and loaded knee extension can worsen the tendon.',
+      avoid: 'Avoid forceful hamstring lengthening, fast high-knee extension, and heavy overload through the back of the thigh.'
+    },
+    muscle_strain: {
+      what: 'Muscle strain is an overstretch or tear of muscle fibers, requiring gentle progression and protection.',
+      dangers: 'Rapid stretching, sudden load, and repeated strain can worsen the injury and delay healing.',
+      avoid: 'Avoid ballistic movement, fast lengthening, and high-load effort through the injured muscle.'
+    },
+    snapping_hip_syndrome: {
+      what: 'Snapping hip syndrome is a hip condition where tendons or muscles catch during motion.',
+      dangers: 'Sudden hip flexion/extension and loud popping movement can irritate the hip tissues.',
+      avoid: 'Avoid abrupt hip snapping motions, fast leg swings, and unsupported end-range hip flexion.'
+    },
+    greater_trochanteric_pain: {
+      what: 'Greater trochanteric pain syndrome is lateral hip pain often caused by bursitis or tendon irritation.',
+      dangers: 'Direct pressure on the outside of the hip and repetitive side-loading can worsen pain.',
+      avoid: 'Avoid side-lying pressure on the hip, aggressive hip abduction loading, and sharp outer hip compression.'
+    },
+    femoroacetabular_impingement: {
+      what: 'Femoroacetabular impingement is hip pain caused by abnormal contact between the femur and acetabulum.',
+      dangers: 'Deep flexion, internal rotation, and forward hip position can pinch the front of the hip.',
+      avoid: 'Avoid deep hip flexion, internal rotation under load, and forward-flexed hip positions that pinch.'
+    },
+    patellofemoral_pain: {
+      what: 'Patellofemoral pain syndrome is pain at the front of the knee around the kneecap.',
+      dangers: 'Deep knee bends, unstable single-leg work, and long knee-loading sets can aggravate the joint.',
+      avoid: 'Avoid deep squatting, step-downs with twist, and any activity that causes front knee pain.'
+    },
+    iliotibial_band_syndrome: {
+      what: 'ITBS is irritation of the outer knee from repetitive friction and lower-leg movement.',
+      dangers: 'Repetitive knee bending and excessive hip adduction can worsen outer knee pain.',
+      avoid: 'Avoid repeated knee flexion/extension, heavy lateral work, and strong hip adduction that compresses the outer knee.'
+    },
+    meniscus_tear: {
+      what: 'A meniscus tear is damage to the knee’s cartilage that absorbs shock and stabilizes the joint.',
+      dangers: 'Twisting under load, deep squats, and sudden direction changes can worsen the tear.',
+      avoid: 'Avoid deep loaded knee flexion, pivoting, and high-impact direction changes.'
+    },
+    ligament_injury: {
+      what: 'Ligament injuries destabilize the knee and require cautious return to movement as healing occurs.',
+      dangers: 'Twisting, pivoting, and deep or loaded knee positions can strain healing ligaments.',
+      avoid: 'Avoid sudden changes in direction, deep weight-bearing knee flexion, and unstable single-leg movement.'
     },
     recent_surgery: {
       what: 'Recent surgery means tissues are healing and must be reintroduced to movement gradually with medical clearance.',

@@ -14,25 +14,56 @@
     </ion-card-header>
     <ion-card-content>
       <p class="exercise-description" [innerHTML]="highlightText(exercise.shortDescription)"></p>
-      <p *ngIf="exercise.keyTakeaway" class="exercise-takeaway"><strong>Key takeaway:</strong> <span [innerHTML]="highlightText(exercise.keyTakeaway)"></span></p>
-      <p *ngIf="exercise.safetyNote" class="exercise-safety"><strong>Safety:</strong> <span [innerHTML]="highlightText(exercise.safetyNote)"></span></p>
-      <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
-        <div class="exercise-instructor-note-header">
-          <ion-icon name="people-circle-outline"></ion-icon>
-          <strong>Instructor note</strong>
+
+      <div class="summary-section">
+        <div class="summary-row" *ngIf="exercise.level">
+          <div class="summary-label">Level</div>
+          <div class="summary-value" [innerHTML]="highlightText(exercise.level)"></div>
         </div>
-        <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
-      </div>
-      <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
-        <div class="exercise-teaching-cues-header">
-          <ion-icon name="help-circle-outline"></ion-icon>
-          <strong>Teaching cues</strong>
+        <div class="summary-row" *ngIf="exercise.category">
+          <div class="summary-label">Category</div>
+          <div class="summary-value" [innerHTML]="highlightText(exercise.category)"></div>
         </div>
-        <ul>
-          <li *ngFor="let cue of teachingCues" [innerHTML]="highlightText(cue)"></li>
-        </ul>
-        <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
+        <div class="summary-row" *ngIf="exercise.focus">
+          <div class="summary-label">Focus</div>
+          <div class="summary-value" [innerHTML]="highlightText(exercise.focus)"></div>
+        </div>
+        <div class="summary-row" *ngIf="exercise.keyTakeaway">
+          <div class="summary-label">Key takeaway</div>
+          <div class="summary-value" [innerHTML]="highlightText(exercise.keyTakeaway)"></div>
+        </div>
+        <div class="summary-row" *ngIf="exercise.safetyNote">
+          <div class="summary-label">Safety</div>
+          <div class="summary-value" [innerHTML]="highlightText(exercise.safetyNote)"></div>
+        </div>
       </div>
+
+      <div class="details-accordion">
+        <details open>
+          <summary>Quick safety & instructor guidance</summary>
+          <div class="section-content">
+            <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
+              <div class="exercise-instructor-note-header">
+                <ion-icon name="people-circle-outline"></ion-icon>
+                <strong>Instructor note</strong>
+              </div>
+              <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
+            </div>
+
+            <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
+              <div class="exercise-teaching-cues-header">
+                <ion-icon name="help-circle-outline"></ion-icon>
+                <strong>Teaching cues</strong>
+              </div>
+              <ul>
+                <li *ngFor="let cue of teachingCues" [innerHTML]="highlightText(cue)"></li>
+              </ul>
+              <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
+            </div>
+          </div>
+        </details>
+      </div>
+
       <ion-card class="exercise-note-card">
         <ion-card-header>
           <ion-card-title>Exercise note</ion-card-title>
@@ -52,6 +83,7 @@
           </div>
         </ion-card-content>
       </ion-card>
+
       <div *ngIf="exercise.contraindicationsNote" class="exercise-contraindications">
         <div class="exercise-contraindications-header">
           <ion-icon name="warning-outline"></ion-icon>
@@ -59,30 +91,36 @@
         </div>
         <p [innerHTML]="highlightText(exercise.contraindicationsNote)"></p>
       </div>
-      <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
-        <div class="exercise-modifications-header">
-          <ion-icon name="construct-outline"></ion-icon>
-          <strong>Modification guidance</strong>
-        </div>
-        <p *ngFor="let mod of exercise.modifications | slice:0:2" [innerHTML]="highlightText(mod)"></p>
-        <p *ngIf="exercise.modifications.length > 2" class="exercise-modifications-note">
-          More modification details available below.
-        </p>
+
+      <div class="details-accordion">
+        <details>
+          <summary>Modifications & safer alternatives</summary>
+          <div class="section-content">
+            <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
+              <div class="exercise-modifications-header">
+                <ion-icon name="construct-outline"></ion-icon>
+                <strong>Modification guidance</strong>
+              </div>
+              <p *ngFor="let mod of exercise.modifications" [innerHTML]="highlightText(mod)"></p>
+            </div>
+            <div *ngIf="exercise.whatToAvoid" class="exercise-avoid">
+              <div class="exercise-avoid-header">
+                <ion-icon name="close-circle-outline"></ion-icon>
+                <strong>What to avoid</strong>
+              </div>
+              <p [innerHTML]="highlightText(exercise.whatToAvoid)"></p>
+            </div>
+            <div *ngIf="exercise.alternativeExercise" class="exercise-alternative">
+              <div class="exercise-alternative-header">
+                <ion-icon name="swap-horizontal-outline"></ion-icon>
+                <strong>Alternative exercise</strong>
+              </div>
+              <p [innerHTML]="highlightText(exercise.alternativeExercise)"></p>
+            </div>
+          </div>
+        </details>
       </div>
-      <div *ngIf="exercise.whatToAvoid" class="exercise-avoid">
-        <div class="exercise-avoid-header">
-          <ion-icon name="close-circle-outline"></ion-icon>
-          <strong>What to avoid</strong>
-        </div>
-        <p [innerHTML]="highlightText(exercise.whatToAvoid)"></p>
-      </div>
-      <div *ngIf="exercise.alternativeExercise" class="exercise-alternative">
-        <div class="exercise-alternative-header">
-          <ion-icon name="swap-horizontal-outline"></ion-icon>
-          <strong>Alternative exercise</strong>
-        </div>
-        <p [innerHTML]="highlightText(exercise.alternativeExercise)"></p>
-      </div>
+
       <div class="exercise-meta">
         <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
         <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
@@ -111,66 +149,64 @@
         </p>
       </div>
 
-      <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
-        <ion-list-header>
-          <ion-label>Instructions</ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let step of exercise.instructions; let i = index">
-          <ion-label>
-            <div class="exercise-step">
-              <span class="exercise-step-number">{{ i + 1 }}.</span>
-              <span *ngIf="!isArray(step)" [innerHTML]="highlightText(step)"></span>
-            </div>
-            <ol *ngIf="isArray(step)" type="a" class="exercise-substeps">
-              <li *ngFor="let substep of step" [innerHTML]="highlightText(substep)"></li>
-            </ol>
-          </ion-label>
-        </ion-item>
-      </ion-list>
+      <div class="details-accordion">
+        <details>
+          <summary>Instructions & details</summary>
+          <div class="section-content">
+            <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
+              <ion-list-header>
+                <ion-label>Instructions</ion-label>
+              </ion-list-header>
+              <ion-item *ngFor="let step of exercise.instructions; let i = index">
+                <ion-label>
+                  <div class="exercise-step">
+                    <span class="exercise-step-number">{{ i + 1 }}.</span>
+                    <span *ngIf="!isArray(step)" [innerHTML]="highlightText(step)"></span>
+                  </div>
+                  <ol *ngIf="isArray(step)" type="a" class="exercise-substeps">
+                    <li *ngFor="let substep of step" [innerHTML]="highlightText(substep)"></li>
+                  </ol>
+                </ion-label>
+              </ion-item>
+            </ion-list>
 
-      <ion-list *ngIf="exercise.commonMistakes?.length" lines="inset" class="exercise-detail-list">
-        <ion-list-header>
-          <ion-label>Common Mistakes</ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let mistake of exercise.commonMistakes">
-          <ion-label>{{ mistake }}</ion-label>
-        </ion-item>
-      </ion-list>
+            <ion-list *ngIf="exercise.commonMistakes?.length" lines="inset" class="exercise-detail-list">
+              <ion-list-header>
+                <ion-label>Common Mistakes</ion-label>
+              </ion-list-header>
+              <ion-item *ngFor="let mistake of exercise.commonMistakes">
+                <ion-label>{{ mistake }}</ion-label>
+              </ion-item>
+            </ion-list>
 
-      <ion-list *ngIf="exercise.modifications?.length" lines="inset" class="exercise-detail-list">
-        <ion-list-header>
-          <ion-label>Modifications</ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let mod of exercise.modifications">
-          <ion-label>{{ mod }}</ion-label>
-        </ion-item>
-      </ion-list>
+            <ion-list *ngIf="exercise.progressions?.length" lines="inset" class="exercise-detail-list">
+              <ion-list-header>
+                <ion-label>Progressions</ion-label>
+              </ion-list-header>
+              <ion-item *ngFor="let prog of exercise.progressions">
+                <ion-label>{{ prog }}</ion-label>
+              </ion-item>
+            </ion-list>
 
-      <ion-card *ngIf="conditionWarnings.length" class="exercise-detail-list">
-        <ion-card-header>
-          <ion-card-title>Condition-specific adaptation cues</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-list lines="none">
-            <ion-item *ngFor="let warning of conditionWarnings">
-              <ion-label>
-                <h3>{{ warning.conditionLabel }}</h3>
-                <p>If the client has {{ warning.conditionLabel }}, {{ warning.reason }}</p>
-                <p><strong>Alternative:</strong> {{ warning.alternative }}</p>
-              </ion-label>
-            </ion-item>
-          </ion-list>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-list *ngIf="exercise.progressions?.length" lines="inset" class="exercise-detail-list">
-        <ion-list-header>
-          <ion-label>Progressions</ion-label>
-        </ion-list-header>
-        <ion-item *ngFor="let prog of exercise.progressions">
-          <ion-label>{{ prog }}</ion-label>
-        </ion-item>
-      </ion-list>
+            <ion-card *ngIf="conditionWarnings.length" class="exercise-detail-list">
+              <ion-card-header>
+                <ion-card-title>Condition-specific adaptation cues</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-list lines="none">
+                  <ion-item *ngFor="let warning of conditionWarnings">
+                    <ion-label>
+                      <h3>{{ warning.conditionLabel }}</h3>
+                      <p>If the client has {{ warning.conditionLabel }}, {{ warning.reason }}</p>
+                      <p><strong>Alternative:</strong> {{ warning.alternative }}</p>
+                    </ion-label>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </details>
+      </div>
 
       <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">Video and advanced guidance coming soon.</p>
     </ion-card-content>

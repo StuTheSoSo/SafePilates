@@ -1,3 +1,131 @@
+@import '../../styles/_typography.scss';
+
+// Use utility classes for all typography
+ion-card-title, h1, h2, h3 {
+  @extend .h1;
+}
+ion-card-subtitle {
+  @extend .small;
+}
+.exercise-description, .exercise-benefits, .exercise-takeaway, .exercise-safety, .exercise-meta-item, .exercise-detail-list ion-label {
+  @extend .body;
+}
+.summary-label {
+  @extend .label;
+}
+.summary-value {
+  @extend .body;
+  font-weight: 500;
+}
+.section-content, .exercise-meta, .details-accordion, .summary-section {
+  margin-bottom: 1.2rem;
+}
+.summary-section {
+  gap: 0.5rem;
+  padding-bottom: 0.2rem;
+}
+.summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.1rem;
+}
+// --- Summary section formatting ---
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.2rem;
+}
+.summary-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  margin-bottom: 0.1rem;
+}
+.summary-label {
+  min-width: 120px;
+  font-weight: 800;
+  color: var(--ion-color-dark);
+  font-size: 1.08rem;
+  letter-spacing: 0.01em;
+  flex-shrink: 0;
+  padding-right: 0.2rem;
+}
+.summary-value {
+  font-size: 1.05rem;
+  color: var(--sp-brand-ink);
+  font-weight: 500;
+  line-height: 1.5;
+  word-break: break-word;
+}
+// --- Master UX/UI improvements ---
+ion-card, .exercise-note-card, .exercise-instructor-note, .exercise-contraindications, .exercise-modifications, .exercise-alternative, .exercise-avoid {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+}
+
+ion-card-title, h1, h2, h3 {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ion-color-primary);
+}
+
+ion-card-subtitle, .exercise-meta-item, .exercise-detail-list ion-label, .exercise-description, .exercise-benefits, .exercise-takeaway, .exercise-safety {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-size: 1.01rem;
+  color: var(--sp-brand-ink);
+}
+
+ion-button, ion-chip {
+  border-radius: 16px;
+  font-size: 1.08rem;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 2px 8px var(--sp-shadow-soft);
+  border: 1.5px solid var(--sp-border);
+  transition: background 0.2s, color 0.2s;
+}
+
+ion-chip.selected, .category-row ion-chip.selected, .theme-row ion-chip.selected {
+  --background: var(--ion-color-primary);
+  --color: #fff;
+  --border-color: var(--ion-color-tertiary);
+  background: linear-gradient(90deg, var(--ion-color-primary) 60%, var(--ion-color-tertiary) 100%) !important;
+  color: #fff !important;
+  border: 1.5px solid var(--ion-color-tertiary);
+}
+
+ion-button:focus, ion-chip:focus, ion-card:focus {
+  outline: 2px solid var(--ion-color-primary);
+  outline-offset: 2px;
+}
+ion-button:hover, ion-chip:hover {
+  filter: brightness(0.97);
+  box-shadow: 0 4px 16px var(--sp-shadow);
+}
+
+.details-accordion, .summary-card-band, .exercise-meta, .exercise-detail-list {
+  margin-bottom: 1.2rem;
+}
+
+.section-content {
+  padding: 0.5rem 0.2rem 0.5rem 0.2rem;
+}
+
+@media (max-width: 600px) {
+  ion-card, .exercise-note-card, .exercise-instructor-note, .exercise-contraindications, .exercise-modifications, .exercise-alternative, .exercise-avoid {
+    border-radius: 14px;
+    padding: 0.5rem;
+  }
+  .summary-grid, .exercise-meta {
+    gap: 0.2rem;
+  }
+}
 ion-card {
   min-height: 180px;
   border-radius: 24px;

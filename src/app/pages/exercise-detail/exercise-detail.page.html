@@ -16,6 +16,13 @@
       <p class="exercise-description" [innerHTML]="highlightText(exercise.shortDescription)"></p>
       <p *ngIf="exercise.keyTakeaway" class="exercise-takeaway"><strong>Key takeaway:</strong> <span [innerHTML]="highlightText(exercise.keyTakeaway)"></span></p>
       <p *ngIf="exercise.safetyNote" class="exercise-safety"><strong>Safety:</strong> <span [innerHTML]="highlightText(exercise.safetyNote)"></span></p>
+      <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
+        <div class="exercise-instructor-note-header">
+          <ion-icon name="people-circle-outline"></ion-icon>
+          <strong>Instructor note</strong>
+        </div>
+        <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
+      </div>
       <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
         <div class="exercise-teaching-cues-header">
           <ion-icon name="help-circle-outline"></ion-icon>
@@ -26,6 +33,25 @@
         </ul>
         <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
       </div>
+      <ion-card class="exercise-note-card">
+        <ion-card-header>
+          <ion-card-title>Exercise note</ion-card-title>
+          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-textarea
+            rows="5"
+            [(ngModel)]="exerciseNote"
+            placeholder="Type an instructor note here..."
+            auto-grow="true"
+            class="note-textarea"
+          ></ion-textarea>
+          <div class="note-actions">
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()">Save note</ion-button>
+            <span *ngIf="noteSaved" class="note-saved">Saved</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
       <div *ngIf="exercise.contraindicationsNote" class="exercise-contraindications">
         <div class="exercise-contraindications-header">
           <ion-icon name="warning-outline"></ion-icon>

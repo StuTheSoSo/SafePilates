@@ -108,6 +108,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 10. Add instructor-focused notes for special populations
+**Status:** ✅ Implemented
 **Goal:** Support Pilates teachers with an immediate clinical context.
 
 **Prompt:**

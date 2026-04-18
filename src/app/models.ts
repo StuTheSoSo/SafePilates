@@ -2,6 +2,7 @@ export interface Condition {
   id: string;
   label: string;
   description: string;
+  instructorNote?: string;
   hasTrimester?: boolean;
 }
 
@@ -34,6 +35,7 @@ export interface Exercise {
   contraindicationsNote?: string;
   whatToAvoid?: string;
   alternativeExercise?: string;
+  instructorNote?: string;
   selfCheck?: string;
   teachingCues?: string[];
   videoUrl?: string;
@@ -53,6 +55,7 @@ export interface ConditionResult {
   conditionId: string;
   conditionLabel: string;
   conditionDescription: string;
+  instructorNote?: string;
   pregnancyTrimester?: string;
   contraindications: Contraindication[];
 }

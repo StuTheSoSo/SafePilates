@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
@@ -9,12 +10,14 @@ import { GuidanceResult, ConditionResult } from '../../models';
 @Component({
   selector: 'app-results',
   standalone: true,
-  imports: [CommonModule, IonicModule],
+  imports: [CommonModule, FormsModule, IonicModule],
   templateUrl: './results.page.html',
   styleUrls: ['./results.page.scss']
 })
 export class ResultsPage implements OnInit {
   guidance: GuidanceResult | null = null;
+  conditionNotes: Record<string, string> = {};
+  noteSavedConditionId: string | null = null;
 
   constructor(private safetyService: SafetyService, private router: Router, private sanitizer: DomSanitizer) {}
 
@@ -29,6 +32,24 @@ export class ResultsPage implements OnInit {
 
   private refreshGuidance() {
     this.guidance = this.safetyService.getGuidance();
+    this.loadConditionNotes();
+  }
+
+  private loadConditionNotes() {
+    this.conditionNotes = {};
+    this.guidance?.conditionResults?.forEach(condition => {
+      this.conditionNotes[condition.conditionId] = this.safetyService.getConditionNote(condition.conditionId);
+    });
+  }
+
+  saveConditionNote(conditionId: string) {
+    this.safetyService.setConditionNote(conditionId, this.conditionNotes[conditionId] || '');
+    this.noteSavedConditionId = conditionId;
+    setTimeout(() => {
+      if (this.noteSavedConditionId === conditionId) {
+        this.noteSavedConditionId = null;
+      }
+    }, 1800);
   }
 
   get hasResults() {

@@ -60,6 +60,29 @@
                 </p>
               </div>
             </div>
+            <div *ngIf="condition.instructorNote" class="condition-instructor-note">
+              <h3>Instructor note</h3>
+              <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
+            </div>
+            <ion-card class="condition-note-card">
+              <ion-card-header>
+                <ion-card-title>Your note</ion-card-title>
+                <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
+              </ion-card-header>
+              <ion-card-content>
+                <ion-textarea
+                  rows="5"
+                  [(ngModel)]="conditionNotes[condition.conditionId]"
+                  placeholder="Type an instructor note here..."
+                  auto-grow="true"
+                  class="note-textarea"
+                ></ion-textarea>
+                <div class="note-actions">
+                  <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)">Save note</ion-button>
+                  <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
+                </div>
+              </ion-card-content>
+            </ion-card>
             <div *ngIf="condition.contraindications.length === 0" class="no-results">
               No local modifications found. AI fallback or professional guidance may help.
             </div>

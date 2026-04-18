@@ -109,6 +109,42 @@ export class SafetyService {
     ) ?? [];
   }
 
+  getExerciseNote(exerciseId: string): string {
+    if (typeof localStorage === 'undefined') {
+      return '';
+    }
+    return localStorage.getItem(`exercise_note_${exerciseId}`) || '';
+  }
+
+  setExerciseNote(exerciseId: string, note: string): void {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
+    if (note.trim()) {
+      localStorage.setItem(`exercise_note_${exerciseId}`, note);
+    } else {
+      localStorage.removeItem(`exercise_note_${exerciseId}`);
+    }
+  }
+
+  getConditionNote(conditionId: string): string {
+    if (typeof localStorage === 'undefined') {
+      return '';
+    }
+    return localStorage.getItem(`condition_note_${conditionId}`) || '';
+  }
+
+  setConditionNote(conditionId: string, note: string): void {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
+    if (note.trim()) {
+      localStorage.setItem(`condition_note_${conditionId}`, note);
+    } else {
+      localStorage.removeItem(`condition_note_${conditionId}`);
+    }
+  }
+
   setGuidance(guidance: GuidanceResult) {
     this.latestGuidance = guidance;
   }
@@ -147,6 +183,7 @@ export class SafetyService {
       conditionId: condition.id,
       conditionLabel: condition.label,
       conditionDescription: condition.description,
+      instructorNote: condition.instructorNote,
       pregnancyTrimester: condition.id === 'pregnancy' ? (query.pregnancyTrimester ?? 'Unknown') : undefined,
       contraindications: this.contraindications[condition.id] ?? []
     }));

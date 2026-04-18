@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, ActivatedRoute } from '@angular/router';
@@ -9,7 +10,7 @@ import { Exercise } from '../../models';
 @Component({
   selector: 'app-exercise-detail',
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
   templateUrl: './exercise-detail.page.html',
   styleUrls: ['./exercise-detail.page.scss']
 })
@@ -17,6 +18,8 @@ export class ExerciseDetailPage implements OnInit {
   exercise: Exercise | undefined;
   conditionWarnings: Array<{ conditionId: string; conditionLabel: string; reason: string; alternative: string }> = [];
   searchText = '';
+  exerciseNote = '';
+  noteSaved = false;
 
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
@@ -48,6 +51,7 @@ export class ExerciseDetailPage implements OnInit {
     if (id) {
       this.exercise = this.safetyService.getExerciseById(id);
       this.loadConditionWarnings(id);
+      this.exerciseNote = this.safetyService.getExerciseNote(id);
     }
 
     this.syncSearchText();
@@ -85,5 +89,14 @@ export class ExerciseDetailPage implements OnInit {
 
   private loadConditionWarnings(exerciseId: string) {
     this.conditionWarnings = this.safetyService.getExerciseGuidanceForSelectedConditions(exerciseId);
+  }
+
+  saveExerciseNote() {
+    if (!this.exercise) {
+      return;
+    }
+    this.safetyService.setExerciseNote(this.exercise.id, this.exerciseNote || '');
+    this.noteSaved = true;
+    setTimeout(() => this.noteSaved = false, 1800);
   }
 }

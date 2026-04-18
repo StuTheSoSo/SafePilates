@@ -55,30 +55,27 @@
                 <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
               </div>
               <div class="divider"></div>
-              <!-- Progressive disclosure for details -->
-              <details class="condition-accordion" aria-label="Exercises to be avoided and alternatives section" style="min-height:44px;">
-                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse exercises to be avoided and alternatives">Exercises to be avoided & alternatives</summary>
-                <div class="condition-block section-content">
-                  <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
-                  <p *ngIf="condition.contraindications.length" class="avoid-exercises">
-                    <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
-                  </p>
-                  <ion-list lines="none">
-                    <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
-                      <ion-item lines="none">
-                        <ion-label>
-                          <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-                          <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
-                          <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
-                        </ion-label>
-                      </ion-item>
-                    </div>
-                  </ion-list>
-                  <div *ngIf="condition.contraindications.length === 0" class="no-results">
-                    No local modifications found. AI fallback or professional guidance may help.
+              <div class="section-header h2">Exercises to be avoided & alternatives</div>
+              <div class="condition-block section-content">
+                <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
+                <p *ngIf="condition.contraindications.length" class="avoid-exercises">
+                  <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
+                </p>
+                <ion-list lines="none">
+                  <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
+                    <ion-item lines="none">
+                      <ion-label>
+                        <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
+                        <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
+                        <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
+                      </ion-label>
+                    </ion-item>
                   </div>
+                </ion-list>
+                <div *ngIf="condition.contraindications.length === 0" class="no-results">
+                  No local modifications found. AI fallback or professional guidance may help.
                 </div>
-              </details>
+              </div>
               <div class="divider"></div>
               <details class="condition-accordion" *ngIf="condition.instructorNote">
                 <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">Instructor Note</summary>

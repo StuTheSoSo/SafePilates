@@ -266,7 +266,8 @@ ion-card {
   font-size: 1rem;
 }
 
-.highlight {
+.highlight,
+.keyword-highlight {
   display: inline;
   line-height: inherit;
   background: rgba(255, 241, 135, 0.6);
@@ -274,6 +275,10 @@ ion-card {
   padding: 0 0.08rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.keyword-highlight {
+  background: rgba(255, 213, 128, 0.6);
 }
 
 .exercise-benefits strong {

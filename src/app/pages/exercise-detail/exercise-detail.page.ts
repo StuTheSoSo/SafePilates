@@ -67,14 +67,20 @@ export class ExerciseDetailPage implements OnInit {
   highlightText(text: string | undefined): SafeHtml {
     const raw = text || '';
     const term = this.searchText.trim();
-    if (!term) {
+    const keywords = ['avoid', 'modify', 'alternative', 'pregnancy', 'osteoporosis', 'low back pain'];
+    const searchTokens = term ? [term] : [];
+    const patterns = [...new Set([...keywords, ...searchTokens])]
+      .filter(token => token.trim())
+      .sort((a, b) => b.length - a.length)
+      .map(token => token.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'));
+
+    if (!patterns.length) {
       return this.sanitizer.bypassSecurityTrustHtml(raw);
     }
 
-    const escapedQuery = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    const regex = new RegExp(`(${escapedQuery})`, 'gi');
-    const highlighted = raw.replace(regex, '<span class="highlight">$1</span>');
-    return this.sanitizer.bypassSecurityTrustHtml(highlighted);
+    const regex = new RegExp(`(${patterns.join('|')})`, 'gi');
+    const constHighlights = raw.replace(regex, '<span class="keyword-highlight">$1</span>');
+    return this.sanitizer.bypassSecurityTrustHtml(constHighlights);
   }
 
   private loadConditionWarnings(exerciseId: string) {

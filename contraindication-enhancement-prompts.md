@@ -99,6 +99,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 9. Highlight concern keywords in search results and details
+**Status:** ✅ Implemented
 **Goal:** Boost scanability for at-risk language like contraindications and modifications.
 
 **Prompt:**

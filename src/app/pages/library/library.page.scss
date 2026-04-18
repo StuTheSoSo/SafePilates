@@ -31,7 +31,8 @@ ion-card-content {
   color: var(--sp-ink-3);
 }
 
-.highlight {
+.highlight,
+.keyword-highlight {
   display: inline;
   line-height: inherit;
   background: rgba(255, 241, 135, 0.6);
@@ -39,6 +40,10 @@ ion-card-content {
   padding: 0 0.08rem;
   box-decoration-break: clone;
   -webkit-box-decoration-break: clone;
+}
+
+.keyword-highlight {
+  background: rgba(255, 213, 128, 0.6);
 }
 
 .category-row {

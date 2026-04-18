@@ -34,12 +34,19 @@ export class ExerciseDetailPage implements OnInit {
       this.exercise = this.safetyService.getExerciseById(id);
       this.loadConditionWarnings(id);
     }
+
+    this.syncSearchText();
   }
 
   ionViewWillEnter() {
     // Called every time Ionic makes this page active — reliable even when component is cached.
-    // Service property is set synchronously by LibraryPage before navigation.
-    this.searchText = this.safetyService.librarySearchTerm?.trim() || '';
+    this.syncSearchText();
+  }
+
+  private syncSearchText() {
+    this.searchText = this.safetyService.librarySearchTerm?.trim()
+      || this.route.snapshot.queryParamMap.get('search')?.trim()
+      || '';
   }
 
   highlightText(text: string | undefined): SafeHtml {

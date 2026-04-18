@@ -59,6 +59,11 @@ export class LibraryPage implements OnInit {
     this.applyFilter();
   }
 
+  onSearchTextChange(event: CustomEvent) {
+    this.searchText = event.detail.value || '';
+    this.safetyService.librarySearchTerm = this.searchText.trim();
+  }
+
   private applyFilter() {
     this.exercises = this.selectedCategory === 'All'
       ? this.allExercises

@@ -110,6 +110,16 @@ ion-card {
   border: 1.5px solid var(--sp-border);
 }
 
+.highlight {
+  display: inline;
+  line-height: inherit;
+  background: rgba(255, 241, 135, 0.6);
+  border-radius: 3px;
+  padding: 0 0.08rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
 ion-chip {
   margin: 0.25rem;
   border-radius: 16px;

@@ -132,9 +132,13 @@ ion-card {
 }
 
 .highlight {
+  display: inline;
+  line-height: inherit;
   background: rgba(255, 241, 135, 0.6);
-  border-radius: 4px;
-  padding: 0 0.15rem;
+  border-radius: 3px;
+  padding: 0 0.08rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .exercise-benefits strong {

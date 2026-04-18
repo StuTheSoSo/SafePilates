@@ -22,6 +22,7 @@
     <ion-searchbar
       placeholder="Search exercises"
       [(ngModel)]="searchText"
+      (ionInput)="onSearchTextChange($event)"
       debounce="300"
       showCancelButton="focus"
       animated="true"

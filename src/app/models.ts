@@ -35,6 +35,7 @@ export interface Exercise {
   whatToAvoid?: string;
   alternativeExercise?: string;
   selfCheck?: string;
+  teachingCues?: string[];
   videoUrl?: string;
   breathPatternVisual?: string;
   level?: 'Beginner' | 'Intermediate' | 'Advanced' | string;

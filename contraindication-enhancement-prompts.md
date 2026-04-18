@@ -87,6 +87,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 8. Use stronger safety-focused teaching cues
+**Status:** ✅ Implemented
 **Goal:** Encourage safer, more mindful practice through precise instruction.
 
 **Prompt:**

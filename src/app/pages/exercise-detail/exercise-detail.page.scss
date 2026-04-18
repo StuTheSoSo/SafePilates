@@ -38,6 +38,45 @@ ion-card {
   font-weight: 700;
 }
 
+.exercise-teaching-cues {
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(232, 245, 233, 0.95);
+  border: 1px solid rgba(129, 199, 132, 0.9);
+  color: var(--sp-brand-ink);
+}
+
+.exercise-teaching-cues-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.65rem;
+  color: var(--ion-color-success);
+  font-weight: 700;
+}
+
+.exercise-teaching-cues ion-icon {
+  font-size: 1.2rem;
+}
+
+.exercise-teaching-cues ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--sp-brand-ink);
+  line-height: 1.65;
+}
+
+.exercise-teaching-cues li {
+  margin-bottom: 0.55rem;
+}
+
+.exercise-teaching-warning {
+  margin-top: 0.85rem;
+  color: var(--ion-color-danger);
+  font-weight: 700;
+}
+
 .exercise-contraindications {
   margin: 0 0 1rem;
   padding: 1rem 1rem 0.9rem;

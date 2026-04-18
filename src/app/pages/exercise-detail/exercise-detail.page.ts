@@ -23,6 +23,21 @@ export class ExerciseDetailPage implements OnInit {
 
   constructor(private route: ActivatedRoute) {}
 
+  get teachingCues(): string[] {
+    if (!this.exercise) {
+      return [];
+    }
+
+    const cues = [...(this.exercise.teachingCues ?? [])];
+    if (this.exercise.selfCheck) {
+      cues.push(this.exercise.selfCheck);
+    }
+    if (!cues.length && this.exercise.safetyNote) {
+      cues.push(this.exercise.safetyNote);
+    }
+    return cues;
+  }
+
   isArray(value: unknown): value is string[] {
     return Array.isArray(value);
   }

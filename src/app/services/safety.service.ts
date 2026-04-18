@@ -80,6 +80,10 @@ export class SafetyService {
     return this.exercises.find(exercise => exercise.id === id);
   }
 
+  getExerciseContraindication(exerciseId: string, conditionId: string) {
+    return (this.contraindications[conditionId] ?? []).find((item: Contraindication) => item.exerciseId === exerciseId);
+  }
+
   getSelection(): SafetyQuery | null {
     return this.latestQuery;
   }

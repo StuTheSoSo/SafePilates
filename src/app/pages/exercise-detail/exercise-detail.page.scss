@@ -93,6 +93,54 @@ ion-card {
   font-size: 0.95rem;
 }
 
+.exercise-alternative {
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(230, 245, 255, 0.9);
+  border: 1px solid rgba(118, 181, 246, 0.9);
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-alternative-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ion-color-primary);
+  font-weight: 700;
+}
+
+.exercise-alternative ion-icon {
+  font-size: 1.2rem;
+}
+
+.exercise-avoid {
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 0.9rem;
+  border-radius: 16px;
+  background: rgba(255, 230, 230, 0.9);
+  border: 1px solid rgba(255, 172, 172, 0.9);
+  color: var(--sp-brand-ink);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.exercise-avoid-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--ion-color-danger);
+  font-weight: 700;
+}
+
+.exercise-avoid ion-icon {
+  font-size: 1.2rem;
+}
+
 .exercise-contraindications strong {
   color: var(--ion-color-warning);
   font-weight: 700;

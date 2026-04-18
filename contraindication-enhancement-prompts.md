@@ -29,6 +29,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 3. Create condition-specific adaptation cues
+**Status:** ✅ Implemented
 **Goal:** Tie common health concerns directly to the exercise description.
 
 **Prompt:**
@@ -40,6 +41,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 4. Add a "What to avoid" section
+**Status:** ✅ Implemented
 **Goal:** Tell the user exactly what risky movement or alignment to avoid.
 
 **Prompt:**
@@ -51,6 +53,7 @@ This document is a standalone guide for improving the SafePilates app with stron
 ---
 
 ## 5. Add "Alternative exercise" recommendations
+**Status:** ✅ Implemented
 **Goal:** Provide a safe substitute when the main exercise is contraindicated.
 
 **Prompt:**

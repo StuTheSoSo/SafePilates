@@ -32,6 +32,8 @@ export interface Exercise {
   transitionOut?: string;
   apparatusSettings?: string;
   contraindicationsNote?: string;
+  whatToAvoid?: string;
+  alternativeExercise?: string;
   selfCheck?: string;
   videoUrl?: string;
   breathPatternVisual?: string;

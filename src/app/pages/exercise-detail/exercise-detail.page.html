@@ -33,6 +33,20 @@
           More modification details available below.
         </p>
       </div>
+      <div *ngIf="exercise.whatToAvoid" class="exercise-avoid">
+        <div class="exercise-avoid-header">
+          <ion-icon name="close-circle-outline"></ion-icon>
+          <strong>What to avoid</strong>
+        </div>
+        <p [innerHTML]="highlightText(exercise.whatToAvoid)"></p>
+      </div>
+      <div *ngIf="exercise.alternativeExercise" class="exercise-alternative">
+        <div class="exercise-alternative-header">
+          <ion-icon name="swap-horizontal-outline"></ion-icon>
+          <strong>Alternative exercise</strong>
+        </div>
+        <p [innerHTML]="highlightText(exercise.alternativeExercise)"></p>
+      </div>
       <div class="exercise-meta">
         <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
         <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
@@ -98,14 +112,14 @@
 
       <ion-card *ngIf="conditionWarnings.length" class="exercise-detail-list">
         <ion-card-header>
-          <ion-card-title>Condition-specific guidance</ion-card-title>
+          <ion-card-title>Condition-specific adaptation cues</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <ion-list lines="none">
             <ion-item *ngFor="let warning of conditionWarnings">
               <ion-label>
                 <h3>{{ warning.conditionLabel }}</h3>
-                <p><strong>Avoid/Modify:</strong> {{ warning.reason }}</p>
+                <p>If the client has {{ warning.conditionLabel }}, {{ warning.reason }}</p>
                 <p><strong>Alternative:</strong> {{ warning.alternative }}</p>
               </ion-label>
             </ion-item>

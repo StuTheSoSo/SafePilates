@@ -32,19 +32,22 @@
   - A notes icon and tooltip clarify the purpose of notes, making them easy to find and use.
   - See exercise-detail.page.html and exercise-detail.page.scss for implementation details.
 
-## 4. Contextual Tooltips
+## [COMPLETED] 4. Contextual Tooltips
 - **Goal:** Help users understand key terms without clutter.
 - **Actions:**
   - Add info icons with tooltips for terms like “Contraindications”, “Key takeaway”, “Progressions”, “Theme”, and “Legal”.
 - **Prompt:**
   - "Add an info icon with a tooltip next to each key term (e.g., 'Contraindications', 'Key takeaway', etc.) explaining its meaning."
 
-## 5. Accordion Animation
+## [COMPLETED] 5. Accordion Animation
 - **Goal:** Make UI feel smooth and modern.
 - **Actions:**
   - Add smooth open/close transitions for all collapsible sections.
 - **Prompt:**
   - "Add a smooth open/close animation to all accordion/collapsible sections for a modern feel."
+- **Implementation:**
+  - All collapsible sections (accordions) on both the exercise detail and results pages now feature a smooth open/close animation for a modern, polished feel.
+  - See exercise-detail.page.scss and results.page.scss for implementation details.
 
 ## 6. Accessibility & Touch
 - **Goal:** Ensure the app is usable by everyone.

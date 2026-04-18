@@ -58,8 +58,8 @@
               </div>
               <div class="divider"></div>
               <!-- Progressive disclosure for details -->
-              <details class="condition-accordion">
-                <summary class="section-header h2">Exercises to be avoided & alternatives</summary>
+              <details class="condition-accordion" aria-label="Exercises to be avoided and alternatives section" style="min-height:44px;">
+                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse exercises to be avoided and alternatives">Exercises to be avoided & alternatives</summary>
                 <div class="condition-block section-content">
                   <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
                   <p *ngIf="condition.contraindications.length" class="avoid-exercises">
@@ -83,14 +83,14 @@
               </details>
               <div class="divider"></div>
               <details class="condition-accordion" *ngIf="condition.instructorNote">
-                <summary class="section-header h2">Instructor Note</summary>
+                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">Instructor Note</summary>
                 <div class="condition-instructor-note section-content">
                   <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
                 </div>
               </details>
               <div class="divider"></div>
               <details class="condition-accordion">
-                <summary class="section-header h2">Your Note</summary>
+                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse your note">Your Note</summary>
                 <ion-card class="condition-note-card section-content">
                   <ion-card-header>
                     <ion-card-title>Your note</ion-card-title>
@@ -105,10 +105,11 @@
                       class="note-textarea"
                     ></ion-textarea>
                     <div class="note-actions">
-                      <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)">Save note</ion-button>
+                      <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">Save note</ion-button>
                       <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
                     </div>
                   </ion-card-content>
+
                 </ion-card>
               </details>
             </div>
@@ -116,6 +117,7 @@
         </ion-card>
       </div>
     </ng-container>
+
 
     <ion-card *ngIf="guidance.aiFallback">
       <ion-card-header>
@@ -129,6 +131,10 @@
       If symptoms persist or you are unsure, consult a qualified clinician before progressing.
     </div>
   </ng-container>
+
+
+
+
 
   <ng-template #justAi>
     <ion-card>

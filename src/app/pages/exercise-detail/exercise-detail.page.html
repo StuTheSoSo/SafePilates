@@ -60,7 +60,7 @@
             class="note-textarea"
           ></ion-textarea>
           <div class="note-actions">
-            <ion-button fill="solid" size="small" (click)="saveExerciseNote()">Save note</ion-button>
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
             <span *ngIf="noteSaved" class="note-saved">Saved</span>
           </div>
         </ion-card-content>
@@ -68,8 +68,8 @@
       <div class="divider"></div>
 
       <div class="details-accordion">
-        <details open>
-          <summary class="section-header h2">Quick safety & instructor guidance</summary>
+        <details open aria-label="Quick safety and instructor guidance section" style="min-height:44px;">
+          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse quick safety and instructor guidance">Quick safety & instructor guidance</summary>
           <div class="section-content">
             <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
               <div class="exercise-instructor-note-header">
@@ -106,8 +106,8 @@
       <div class="divider"></div>
 
       <div class="details-accordion">
-        <details>
-          <summary class="section-header h2">Modifications & safer alternatives</summary>
+        <details aria-label="Modifications and safer alternatives section" style="min-height:44px;">
+          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse modifications and safer alternatives">Modifications & safer alternatives</summary>
           <div class="section-content">
             <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
               <div class="exercise-modifications-header">
@@ -166,8 +166,8 @@
       <div class="divider"></div>
 
       <div class="details-accordion">
-        <details>
-          <summary class="section-header h2">Instructions & details</summary>
+        <details aria-label="Instructions and details section" style="min-height:44px;">
+          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructions and details">Instructions & details</summary>
           <div class="section-content">
             <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
               <ion-list-header>

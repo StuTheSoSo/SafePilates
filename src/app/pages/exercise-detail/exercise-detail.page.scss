@@ -6,12 +6,13 @@
 }
 
 .disclaimer-card {
-  background: rgba(255, 255, 255, 0.96);
-  border: 1.5px solid var(--sp-border);
-  border-radius: 18px;
-  box-shadow: 0 2px 8px var(--sp-shadow-soft);
-  margin-bottom: 1rem;
-  padding: 1.5rem;
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--ion-color-primary);
+  border-radius: 14px;
+  box-shadow: none;
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.25rem;
+  opacity: 0.88;
 }
 
 .disclaimer-card strong {
@@ -229,12 +230,37 @@ ion-card {
   font-weight: 700;
 }
 
+.safety-overview-section {
+  margin: 1rem 0 1.2rem;
+}
+
+.safety-overview-header {
+  @extend .h2;
+  padding: 0.85rem 1.1rem;
+  margin-bottom: 0.8rem;
+  border-radius: 14px 14px 0 0;
+  background: var(--sp-chip-start);
+  border: 1.5px solid var(--sp-border);
+  border-bottom: none;
+  color: var(--sp-brand-ink);
+  font-weight: 800;
+}
+
+.safety-overview-content {
+  padding: 1rem 1.1rem;
+  border-radius: 0 0 14px 14px;
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--sp-border);
+  border-top: none;
+  box-shadow: 0 4px 16px var(--sp-shadow-soft);
+}
+
 .exercise-teaching-cues {
   margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
-  border-radius: 16px;
-  background: rgba(232, 245, 233, 0.95);
-  border: 1px solid rgba(129, 199, 132, 0.9);
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: var(--sp-chip-start);
+  border: 1px solid var(--sp-border);
   color: var(--sp-brand-ink);
 }
 
@@ -243,7 +269,7 @@ ion-card {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.65rem;
-  color: var(--ion-color-success);
+  color: var(--ion-color-primary);
   font-weight: 700;
 }
 
@@ -327,10 +353,10 @@ ion-card {
 
 .exercise-instructor-note {
   margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
+  padding: 1rem 1.1rem;
   border-radius: 16px;
-  background: rgba(232, 240, 254, 0.95);
-  border: 1px solid rgba(125, 179, 255, 0.9);
+  background: var(--sp-chip-start);
+  border: 1px solid var(--sp-border);
   color: var(--sp-brand-ink);
 }
 
@@ -339,7 +365,7 @@ ion-card {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.65rem;
-  color: var(--ion-color-secondary);
+  color: var(--ion-color-primary);
   font-weight: 700;
 }
 
@@ -355,10 +381,10 @@ ion-card {
 
 .exercise-contraindications {
   margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
+  padding: 1rem 1.1rem;
   border-radius: 16px;
-  background: rgba(255, 244, 205, 0.8);
-  border: 1px solid rgba(255, 209, 102, 0.9);
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--ion-color-primary);
   color: var(--sp-brand-ink);
   font-size: 1rem;
   line-height: 1.6;
@@ -369,7 +395,7 @@ ion-card {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
-  color: var(--ion-color-warning);
+  color: var(--ion-color-primary);
   font-weight: 700;
 }
 
@@ -378,11 +404,11 @@ ion-card {
 }
 
 .exercise-modifications {
-  margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
-  border-radius: 16px;
-  background: rgba(227, 245, 255, 0.9);
-  border: 1px solid rgba(118, 181, 246, 0.9);
+  margin: 0 0 0.6rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: var(--sp-chip-start);
+  border: 1px solid var(--sp-border);
   color: var(--sp-brand-ink);
   font-size: 1rem;
   line-height: 1.6;
@@ -409,11 +435,11 @@ ion-card {
 }
 
 .exercise-alternative {
-  margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
-  border-radius: 16px;
-  background: rgba(230, 245, 255, 0.9);
-  border: 1px solid rgba(118, 181, 246, 0.9);
+  margin: 0 0 0.6rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: var(--sp-chip-start);
+  border: 1px solid var(--sp-border);
   color: var(--sp-brand-ink);
   font-size: 1rem;
   line-height: 1.6;
@@ -433,11 +459,11 @@ ion-card {
 }
 
 .exercise-avoid {
-  margin: 0 0 1rem;
-  padding: 1rem 1rem 0.9rem;
-  border-radius: 16px;
-  background: rgba(255, 230, 230, 0.9);
-  border: 1px solid rgba(255, 172, 172, 0.9);
+  margin: 0 0 0.6rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 14px;
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--sp-border);
   color: var(--sp-brand-ink);
   font-size: 1rem;
   line-height: 1.6;
@@ -448,7 +474,7 @@ ion-card {
   align-items: center;
   gap: 0.5rem;
   margin-bottom: 0.5rem;
-  color: var(--ion-color-danger);
+  color: var(--sp-brand-ink);
   font-weight: 700;
 }
 

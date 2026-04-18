@@ -44,30 +44,28 @@
         <p>Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</p>
       </div>
 
-      <div class="details-accordion">
-        <details open aria-label="Safety overview section" style="min-height:44px;">
-          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse safety overview">Safety overview</summary>
-          <div class="section-content">
-            <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
-              <div class="exercise-instructor-note-header">
-                <ion-icon name="people-circle-outline"></ion-icon>
-                <strong>Instructor note</strong>
-              </div>
-              <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
+      <div class="safety-overview-section">
+        <div class="safety-overview-header">Safety overview</div>
+        <div class="safety-overview-content">
+          <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
+            <div class="exercise-instructor-note-header">
+              <ion-icon name="people-circle-outline"></ion-icon>
+              <strong>Instructor note</strong>
             </div>
-
-            <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
-              <div class="exercise-teaching-cues-header">
-                <ion-icon name="help-circle-outline"></ion-icon>
-                <strong>Teaching cues</strong>
-              </div>
-              <ul>
-                <li *ngFor="let cue of teachingCues" [innerHTML]="highlightText(cue)"></li>
-              </ul>
-              <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
-            </div>
+            <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
           </div>
-        </details>
+
+          <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
+            <div class="exercise-teaching-cues-header">
+              <ion-icon name="help-circle-outline"></ion-icon>
+              <strong>Teaching cues</strong>
+            </div>
+            <ul>
+              <li *ngFor="let cue of teachingCues" [innerHTML]="highlightText(cue)"></li>
+            </ul>
+            <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
+          </div>
+        </div>
       </div>
       <div class="divider"></div>
 

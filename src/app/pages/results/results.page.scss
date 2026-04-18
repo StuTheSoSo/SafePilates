@@ -154,12 +154,12 @@ ion-item-divider {
 }
 
 .condition-card .contraindication-card {
-  margin: 0 0 0.9rem;
-  padding: 0.15rem;
-  border-radius: 18px;
-  border: 1px solid rgba(58, 134, 255, 0.15);
-  background: rgba(255, 255, 255, 0.92);
-  box-shadow: 0 8px 18px rgba(10, 30, 80, 0.04);
+  margin: 0 0 0.75rem;
+  padding: 0.25rem 0.1rem;
+  border-radius: 14px;
+  border: 1.5px solid var(--sp-border);
+  background: var(--sp-card-start);
+  box-shadow: 0 2px 8px var(--sp-shadow-soft);
 }
 
 .condition-card .contraindication-card:last-child {
@@ -176,10 +176,10 @@ ion-item-divider {
 
 .condition-note-card {
   margin: 1rem 0 1.3rem;
-  border-radius: 20px;
-  background: rgba(242, 246, 255, 0.95);
-  border: 1px solid rgba(120, 152, 255, 0.4);
-  box-shadow: 0 18px 45px rgba(56, 83, 156, 0.08);
+  border-radius: 16px;
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--sp-border);
+  box-shadow: 0 2px 12px var(--sp-shadow-soft);
 }
 
 .condition-note-card ion-card-header {
@@ -232,11 +232,11 @@ ion-item-divider {
 }
 
 .condition-instructor-note {
-  margin: 1rem 0 0;
-  padding: 1rem;
-  border-radius: 18px;
-  background: rgba(232, 240, 254, 0.95);
-  border: 1px solid rgba(125, 179, 255, 0.9);
+  margin: 0.5rem 0 0;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: var(--sp-chip-start);
+  border: 1px solid var(--sp-border);
 }
 
 .condition-instructor-note h3 {
@@ -288,10 +288,10 @@ ion-item-divider {
 }
 
 .condition-block {
-  padding: 0.95rem 1rem;
-  border-radius: 18px;
-  background: rgba(248, 251, 255, 0.95);
-  border: 1px solid rgba(180, 199, 230, 0.55);
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: var(--sp-card-start);
+  border: 1.5px solid var(--sp-border);
 }
 
 .condition-block h3 {
@@ -317,10 +317,11 @@ ion-item-divider {
 
 .no-results {
   margin: 0.75rem 0;
-  padding: 0.85rem 0.75rem;
-  background: rgba(188, 152, 255, 0.1);
-  border-radius: 14px;
-  color: var(--ion-color-primary);
+  padding: 0.85rem 1rem;
+  background: var(--sp-chip-start);
+  border-radius: 12px;
+  border: 1px solid var(--sp-border);
+  color: var(--sp-brand-ink);
   font-weight: 600;
 }
 

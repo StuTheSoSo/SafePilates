@@ -44,59 +44,74 @@
           </ion-card-header>
           <ion-card-content>
             <div class="condition-sections">
-              <div class="condition-block">
-                <h3>What is it?</h3>
+              <!-- Summary and safety always visible -->
+              <div class="section-header h2">Summary</div>
+              <div class="condition-block section-content">
+                <h3 class="h3">What is it?</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('what', condition))"></p>
               </div>
-              <div class="condition-block">
-                <h3>What are the dangers?</h3>
+              <div class="divider"></div>
+              <div class="section-header h2">Safety</div>
+              <div class="condition-block section-content">
+                <h3 class="h3">What are the dangers?</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
               </div>
-              <div class="condition-block">
-                <h3>Exercises to be avoided</h3>
-                <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
-                <p *ngIf="condition.contraindications.length" class="avoid-exercises">
-                  <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
-                </p>
-              </div>
-            </div>
-            <div *ngIf="condition.instructorNote" class="condition-instructor-note">
-              <h3>Instructor note</h3>
-              <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
-            </div>
-            <ion-card class="condition-note-card">
-              <ion-card-header>
-                <ion-card-title>Your note</ion-card-title>
-                <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
-              </ion-card-header>
-              <ion-card-content>
-                <ion-textarea
-                  rows="5"
-                  [(ngModel)]="conditionNotes[condition.conditionId]"
-                  placeholder="Type an instructor note here..."
-                  auto-grow="true"
-                  class="note-textarea"
-                ></ion-textarea>
-                <div class="note-actions">
-                  <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)">Save note</ion-button>
-                  <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
+              <div class="divider"></div>
+              <!-- Progressive disclosure for details -->
+              <details class="condition-accordion">
+                <summary class="section-header h2">Exercises to be avoided & alternatives</summary>
+                <div class="condition-block section-content">
+                  <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
+                  <p *ngIf="condition.contraindications.length" class="avoid-exercises">
+                    <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
+                  </p>
+                  <ion-list lines="none">
+                    <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
+                      <ion-item lines="none">
+                        <ion-label>
+                          <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
+                          <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
+                          <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
+                        </ion-label>
+                      </ion-item>
+                    </div>
+                  </ion-list>
+                  <div *ngIf="condition.contraindications.length === 0" class="no-results">
+                    No local modifications found. AI fallback or professional guidance may help.
+                  </div>
                 </div>
-              </ion-card-content>
-            </ion-card>
-            <div *ngIf="condition.contraindications.length === 0" class="no-results">
-              No local modifications found. AI fallback or professional guidance may help.
+              </details>
+              <div class="divider"></div>
+              <details class="condition-accordion" *ngIf="condition.instructorNote">
+                <summary class="section-header h2">Instructor Note</summary>
+                <div class="condition-instructor-note section-content">
+                  <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
+                </div>
+              </details>
+              <div class="divider"></div>
+              <details class="condition-accordion">
+                <summary class="section-header h2">Your Note</summary>
+                <ion-card class="condition-note-card section-content">
+                  <ion-card-header>
+                    <ion-card-title>Your note</ion-card-title>
+                    <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <ion-textarea
+                      rows="5"
+                      [(ngModel)]="conditionNotes[condition.conditionId]"
+                      placeholder="Type an instructor note here..."
+                      auto-grow="true"
+                      class="note-textarea"
+                    ></ion-textarea>
+                    <div class="note-actions">
+                      <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)">Save note</ion-button>
+                      <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
+                    </div>
+                  </ion-card-content>
+                </ion-card>
+              </details>
             </div>
-            <ion-list lines="none">
-              <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
-                <ion-item lines="none">
-                  <ion-label>
-                    <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-                    <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
-                    <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
-                  </ion-label>
-                </ion-item>
-              </div>
-            </ion-list>
           </ion-card-content>
         </ion-card>
       </div>

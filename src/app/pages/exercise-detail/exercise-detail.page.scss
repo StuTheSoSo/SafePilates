@@ -1,3 +1,45 @@
+// Prominent persistent notes card styles
+.prominent-note {
+  margin-top: 0.7rem;
+  box-shadow: 0 4px 18px var(--sp-shadow);
+  border: 2px solid var(--ion-color-primary-tint);
+}
+.note-icon {
+  font-size: 1.5em;
+  color: var(--ion-color-primary);
+  margin-right: 0.5em;
+  vertical-align: middle;
+}
+.note-tooltip-icon {
+  font-size: 1.2em;
+  color: var(--ion-color-medium);
+  margin-left: 0.5em;
+  cursor: pointer;
+  vertical-align: middle;
+}
+// Section headers and dividers for major blocks (match results page)
+.section-header {
+  @extend .h2;
+  padding: 0.3rem 0 0.2rem 0.1rem;
+  background: linear-gradient(90deg, var(--sp-card-end) 0%, transparent 100%);
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0.2rem;
+  margin-top: 1.2rem;
+  letter-spacing: 0.01em;
+}
+.section-content {
+  background: rgba(var(--ion-color-light-rgb), 0.13);
+  border-radius: 0 0 12px 12px;
+  padding: 0.7rem 0.7rem 0.7rem 0.9rem;
+  margin-bottom: 0.2rem;
+}
+.divider {
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--sp-border) 0%, transparent 100%);
+  border-radius: 2px;
+  margin: 1.1rem 0 0.7rem 0;
+  opacity: 0.45;
+}
 @import '../../styles/_typography.scss';
 
 // Use utility classes for all typography

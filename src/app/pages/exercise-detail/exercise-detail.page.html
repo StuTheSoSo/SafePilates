@@ -15,7 +15,8 @@
     <ion-card-content>
       <p class="exercise-description" [innerHTML]="highlightText(exercise.shortDescription)"></p>
 
-      <div class="summary-section">
+      <div class="section-header h2">Summary</div>
+      <div class="summary-section section-content">
         <div class="summary-row" *ngIf="exercise.level">
           <div class="summary-label">Level</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.level)"></div>
@@ -38,9 +39,37 @@
         </div>
       </div>
 
+      <!-- Prominent persistent notes card -->
+      <ion-card class="exercise-note-card section-content prominent-note">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
+            Notes
+            <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
+              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
+              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
+          </ion-card-title>
+          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-textarea
+            rows="5"
+            [(ngModel)]="exerciseNote"
+            placeholder="Type an instructor note here..."
+            auto-grow="true"
+            class="note-textarea"
+          ></ion-textarea>
+          <div class="note-actions">
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()">Save note</ion-button>
+            <span *ngIf="noteSaved" class="note-saved">Saved</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+      <div class="divider"></div>
+
       <div class="details-accordion">
         <details open>
-          <summary>Quick safety & instructor guidance</summary>
+          <summary class="section-header h2">Quick safety & instructor guidance</summary>
           <div class="section-content">
             <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
               <div class="exercise-instructor-note-header">
@@ -63,38 +92,22 @@
           </div>
         </details>
       </div>
+      <div class="divider"></div>
 
-      <ion-card class="exercise-note-card">
-        <ion-card-header>
-          <ion-card-title>Exercise note</ion-card-title>
-          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-textarea
-            rows="5"
-            [(ngModel)]="exerciseNote"
-            placeholder="Type an instructor note here..."
-            auto-grow="true"
-            class="note-textarea"
-          ></ion-textarea>
-          <div class="note-actions">
-            <ion-button fill="solid" size="small" (click)="saveExerciseNote()">Save note</ion-button>
-            <span *ngIf="noteSaved" class="note-saved">Saved</span>
-          </div>
-        </ion-card-content>
-      </ion-card>
 
-      <div *ngIf="exercise.contraindicationsNote" class="exercise-contraindications">
-        <div class="exercise-contraindications-header">
+
+      <div *ngIf="exercise.contraindicationsNote" class="exercise-contraindications section-content">
+        <div class="exercise-contraindications-header section-header h2">
           <ion-icon name="warning-outline"></ion-icon>
           <strong>Contraindications</strong>
         </div>
         <p [innerHTML]="highlightText(exercise.contraindicationsNote)"></p>
       </div>
+      <div class="divider"></div>
 
       <div class="details-accordion">
         <details>
-          <summary>Modifications & safer alternatives</summary>
+          <summary class="section-header h2">Modifications & safer alternatives</summary>
           <div class="section-content">
             <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
               <div class="exercise-modifications-header">
@@ -120,8 +133,10 @@
           </div>
         </details>
       </div>
+      <div class="divider"></div>
 
-      <div class="exercise-meta">
+      <div class="section-header h2">Meta & Details</div>
+      <div class="exercise-meta section-content">
         <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
         <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
         <p class="exercise-meta-item"><strong>Category:</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
@@ -148,10 +163,11 @@
           </a>
         </p>
       </div>
+      <div class="divider"></div>
 
       <div class="details-accordion">
         <details>
-          <summary>Instructions & details</summary>
+          <summary class="section-header h2">Instructions & details</summary>
           <div class="section-content">
             <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
               <ion-list-header>

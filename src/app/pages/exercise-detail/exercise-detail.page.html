@@ -39,37 +39,14 @@
         </div>
       </div>
 
-      <!-- Prominent persistent notes card -->
-      <ion-card class="exercise-note-card section-content prominent-note">
-        <ion-card-header>
-          <ion-card-title>
-            <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
-            Notes
-            <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
-              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
-              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
-          </ion-card-title>
-          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-textarea
-            rows="5"
-            [(ngModel)]="exerciseNote"
-            placeholder="Type an instructor note here..."
-            auto-grow="true"
-            class="note-textarea"
-          ></ion-textarea>
-          <div class="note-actions">
-            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-            <span *ngIf="noteSaved" class="note-saved">Saved</span>
-          </div>
-        </ion-card-content>
-      </ion-card>
-      <div class="divider"></div>
+      <div class="disclaimer-card ion-padding">
+        <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice.</strong>
+        <p>Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</p>
+      </div>
 
       <div class="details-accordion">
-        <details open aria-label="Quick safety and instructor guidance section" style="min-height:44px;">
-          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse quick safety and instructor guidance">Quick safety & instructor guidance</summary>
+        <details open aria-label="Safety overview section" style="min-height:44px;">
+          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse safety overview">Safety overview</summary>
           <div class="section-content">
             <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
               <div class="exercise-instructor-note-header">
@@ -103,6 +80,33 @@
         </div>
         <p [innerHTML]="highlightText(exercise.contraindicationsNote)"></p>
       </div>
+
+      <!-- Prominent persistent notes card -->
+      <ion-card class="exercise-note-card section-content prominent-note">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
+            Notes
+            <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
+              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
+              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
+          </ion-card-title>
+          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-textarea
+            rows="5"
+            [(ngModel)]="exerciseNote"
+            placeholder="Type an instructor note here..."
+            auto-grow="true"
+            class="note-textarea"
+          ></ion-textarea>
+          <div class="note-actions">
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
+            <span *ngIf="noteSaved" class="note-saved">Saved</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
       <div class="divider"></div>
 
       <div class="details-accordion">
@@ -135,33 +139,37 @@
       </div>
       <div class="divider"></div>
 
-      <div class="section-header h2">Meta & Details</div>
-      <div class="exercise-meta section-content">
-        <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
-        <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
-        <p class="exercise-meta-item"><strong>Category:</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
-        <p *ngIf="exercise.level" class="exercise-meta-item"><strong>Level:</strong> <span [innerHTML]="highlightText(exercise.level)"></span></p>
-        <p class="exercise-meta-item exercise-focus"><strong>Focus:</strong> <span [innerHTML]="highlightText(exercise.focus)"></span></p>
-        <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>Suggested reps:</strong>
-          <span *ngIf="exercise.repRanges.beginner">Beginner: {{ exercise.repRanges.beginner }}</span>
-          <span *ngIf="exercise.repRanges.intermediate">Intermediate: {{ exercise.repRanges.intermediate }}</span>
-          <span *ngIf="exercise.repRanges.advanced">Advanced: {{ exercise.repRanges.advanced }}</span>
-          <span *ngIf="exercise.repRanges.notes">({{ exercise.repRanges.notes }})</span>
-        </p>
-        <p *ngIf="exercise.reps && !exercise.repRanges" class="exercise-meta-item"><strong>Suggested reps:</strong> <span [innerHTML]="highlightText(exercise.reps)"></span></p>
-        <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>Primary muscles:</strong> <span [innerHTML]="highlightText(exercise.primaryMuscles.join(', '))"></span></p>
-        <p *ngIf="exercise.whereToFeel" class="exercise-meta-item"><strong>Where to feel it:</strong> <span [innerHTML]="highlightText(exercise.whereToFeel)"></span></p>
-        <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>Setup:</strong> <span [innerHTML]="highlightText(exercise.setup)"></span></p>
-        <p *ngIf="exercise.transitionIn" class="exercise-meta-item"><strong>Transition in:</strong> <span [innerHTML]="highlightText(exercise.transitionIn)"></span></p>
-        <p *ngIf="exercise.transitionOut" class="exercise-meta-item"><strong>Transition out:</strong> <span [innerHTML]="highlightText(exercise.transitionOut)"></span></p>
-        <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>Breathing:</strong> <span [innerHTML]="highlightText(exercise.breathing)"></span></p>
-        <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>Benefits:</strong> <span [innerHTML]="highlightText(exercise.benefits)"></span></p>
-        <p *ngIf="exercise.selfCheck" class="exercise-meta-item exercise-selfcheck"><strong>Self-check:</strong> <span [innerHTML]="highlightText(exercise.selfCheck)"></span></p>
-        <p *ngIf="exercise.videoUrl" class="exercise-meta-item exercise-video">
-          <a [href]="exercise.videoUrl" target="_blank" rel="noopener">
-            <ion-icon name="play-circle-outline"></ion-icon> Watch demo video
-          </a>
-        </p>
+      <div class="details-accordion">
+        <details aria-label="Reference details section" style="min-height:44px;">
+          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse reference details">Reference details</summary>
+          <div class="section-content exercise-meta">
+            <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+            <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
+            <p class="exercise-meta-item"><strong>Category:</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
+            <p *ngIf="exercise.level" class="exercise-meta-item"><strong>Level:</strong> <span [innerHTML]="highlightText(exercise.level)"></span></p>
+            <p class="exercise-meta-item exercise-focus"><strong>Focus:</strong> <span [innerHTML]="highlightText(exercise.focus)"></span></p>
+            <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>Suggested reps:</strong>
+              <span *ngIf="exercise.repRanges.beginner">Beginner: {{ exercise.repRanges.beginner }}</span>
+              <span *ngIf="exercise.repRanges.intermediate">Intermediate: {{ exercise.repRanges.intermediate }}</span>
+              <span *ngIf="exercise.repRanges.advanced">Advanced: {{ exercise.repRanges.advanced }}</span>
+              <span *ngIf="exercise.repRanges.notes">({{ exercise.repRanges.notes }})</span>
+            </p>
+            <p *ngIf="exercise.reps && !exercise.repRanges" class="exercise-meta-item"><strong>Suggested reps:</strong> <span [innerHTML]="highlightText(exercise.reps)"></span></p>
+            <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>Primary muscles:</strong> <span [innerHTML]="highlightText(exercise.primaryMuscles.join(', '))"></span></p>
+            <p *ngIf="exercise.whereToFeel" class="exercise-meta-item"><strong>Where to feel it:</strong> <span [innerHTML]="highlightText(exercise.whereToFeel)"></span></p>
+            <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>Setup:</strong> <span [innerHTML]="highlightText(exercise.setup)"></span></p>
+            <p *ngIf="exercise.transitionIn" class="exercise-meta-item"><strong>Transition in:</strong> <span [innerHTML]="highlightText(exercise.transitionIn)"></span></p>
+            <p *ngIf="exercise.transitionOut" class="exercise-meta-item"><strong>Transition out:</strong> <span [innerHTML]="highlightText(exercise.transitionOut)"></span></p>
+            <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>Breathing:</strong> <span [innerHTML]="highlightText(exercise.breathing)"></span></p>
+            <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>Benefits:</strong> <span [innerHTML]="highlightText(exercise.benefits)"></span></p>
+            <p *ngIf="exercise.selfCheck" class="exercise-meta-item exercise-selfcheck"><strong>Self-check:</strong> <span [innerHTML]="highlightText(exercise.selfCheck)"></span></p>
+            <p *ngIf="exercise.videoUrl" class="exercise-meta-item exercise-video">
+              <a [href]="exercise.videoUrl" target="_blank" rel="noopener">
+                <ion-icon name="play-circle-outline"></ion-icon> Watch demo video
+              </a>
+            </p>
+          </div>
+        </details>
       </div>
       <div class="divider"></div>
 

@@ -45,13 +45,11 @@
           <ion-card-content>
             <div class="condition-sections">
               <!-- Summary and safety always visible -->
-              <div class="section-header h2">Summary</div>
+              <div class="section-header h2">Why it matters</div>
               <div class="condition-block section-content">
                 <h3 class="h3">What is it?</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('what', condition))"></p>
               </div>
-              <div class="divider"></div>
-              <div class="section-header h2">Safety</div>
               <div class="condition-block section-content">
                 <h3 class="h3">What are the dangers?</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
@@ -89,29 +87,26 @@
                 </div>
               </details>
               <div class="divider"></div>
-              <details class="condition-accordion">
-                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse your note">Your Note</summary>
-                <ion-card class="condition-note-card section-content">
-                  <ion-card-header>
-                    <ion-card-title>Your note</ion-card-title>
-                    <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
-                  </ion-card-header>
-                  <ion-card-content>
-                    <ion-textarea
-                      rows="5"
-                      [(ngModel)]="conditionNotes[condition.conditionId]"
-                      placeholder="Type an instructor note here..."
-                      auto-grow="true"
-                      class="note-textarea"
-                    ></ion-textarea>
-                    <div class="note-actions">
-                      <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-                      <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
-                    </div>
-                  </ion-card-content>
-
-                </ion-card>
-              </details>
+              <div class="section-header h2">Your note</div>
+              <ion-card class="condition-note-card section-content">
+                <ion-card-header>
+                  <ion-card-title>Your note</ion-card-title>
+                  <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
+                </ion-card-header>
+                <ion-card-content>
+                  <ion-textarea
+                    rows="5"
+                    [(ngModel)]="conditionNotes[condition.conditionId]"
+                    placeholder="Type an instructor note here..."
+                    auto-grow="true"
+                    class="note-textarea"
+                  ></ion-textarea>
+                  <div class="note-actions">
+                    <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">Save note</ion-button>
+                    <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
+                  </div>
+                </ion-card-content>
+              </ion-card>
             </div>
           </ion-card-content>
         </ion-card>

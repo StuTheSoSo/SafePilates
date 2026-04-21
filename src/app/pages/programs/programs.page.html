@@ -31,6 +31,21 @@
               </ion-chip>
             </div>
             <p class="exercise-count">{{ program.exerciseIds.length }} exercises</p>
+
+            <div class="program-note-box" (click)="$event.stopPropagation()">
+              <ion-textarea
+                rows="2"
+                [(ngModel)]="programNotes[program.id]"
+                placeholder="Quick note for this program"
+                auto-grow="true"
+                class="program-note-textarea"
+                (click)="$event.stopPropagation()"
+              ></ion-textarea>
+              <div class="note-actions">
+                <ion-button fill="outline" size="small" (click)="saveProgramNote(program.id); $event.stopPropagation()" aria-label="Save program note">Save</ion-button>
+                <span *ngIf="noteSavedProgramId === program.id" class="note-saved">Saved</span>
+              </div>
+            </div>
           </ion-card-content>
         </ion-card>
       </ion-col>

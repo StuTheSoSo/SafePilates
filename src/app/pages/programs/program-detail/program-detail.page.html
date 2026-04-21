@@ -38,6 +38,32 @@
         </ion-label>
       </ion-item>
     </ion-list>
+
+    <ion-card class="program-note-card section-content prominent-note">
+      <ion-card-header>
+        <ion-card-title>
+          <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
+          Notes
+          <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
+            [attr.aria-label]="'Notes are private reminders for this program. Only you can see them.'"
+            title="Notes are private reminders for this program. Only you can see them."></ion-icon>
+        </ion-card-title>
+        <ion-card-subtitle>Keep quick, private reminders for this program flow.</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-textarea
+          rows="5"
+          [(ngModel)]="programNote"
+          placeholder="Type a program note here..."
+          auto-grow="true"
+          class="note-textarea"
+        ></ion-textarea>
+        <div class="note-actions">
+          <ion-button fill="solid" size="small" (click)="saveProgramNote()" aria-label="Save program note" style="min-height:44px;min-width:44px;">Save note</ion-button>
+          <span *ngIf="noteSaved" class="note-saved">Saved</span>
+        </div>
+      </ion-card-content>
+    </ion-card>
   </ng-container>
 
   <ng-template #notFound>

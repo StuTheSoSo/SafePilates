@@ -79,34 +79,6 @@
         <p [innerHTML]="highlightText(exercise.contraindicationsNote)"></p>
       </div>
 
-      <!-- Prominent persistent notes card -->
-      <ion-card class="exercise-note-card section-content prominent-note">
-        <ion-card-header>
-          <ion-card-title>
-            <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
-            Notes
-            <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
-              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
-              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
-          </ion-card-title>
-          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <ion-textarea
-            rows="5"
-            [(ngModel)]="exerciseNote"
-            placeholder="Type an instructor note here..."
-            auto-grow="true"
-            class="note-textarea"
-          ></ion-textarea>
-          <div class="note-actions">
-            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-            <span *ngIf="noteSaved" class="note-saved">Saved</span>
-          </div>
-        </ion-card-content>
-      </ion-card>
-      <div class="divider"></div>
-
       <div class="details-accordion">
         <details aria-label="Modifications and safer alternatives section" style="min-height:44px;">
           <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse modifications and safer alternatives">Modifications & safer alternatives</summary>
@@ -229,6 +201,33 @@
           </div>
         </details>
       </div>
+
+      <!-- Prominent persistent notes card -->
+      <ion-card class="exercise-note-card section-content prominent-note">
+        <ion-card-header>
+          <ion-card-title>
+            <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
+            Notes
+            <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
+              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
+              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
+          </ion-card-title>
+          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-textarea
+            rows="5"
+            [(ngModel)]="exerciseNote"
+            placeholder="Type an instructor note here..."
+            auto-grow="true"
+            class="note-textarea"
+          ></ion-textarea>
+          <div class="note-actions">
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
+            <span *ngIf="noteSaved" class="note-saved">Saved</span>
+          </div>
+        </ion-card-content>
+      </ion-card>
 
       <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">Video and advanced guidance coming soon.</p>
     </ion-card-content>

@@ -35,6 +35,9 @@ export interface Exercise {
   contraindicationsNote?: string;
   whatToAvoid?: string;
   alternativeExercise?: string;
+  modificationsAndAlternatives?: string[];
+  referenceDetails?: string;
+  instructionsAndDetails?: string;
   instructorNote?: string;
   selfCheck?: string;
   teachingCues?: string[];

@@ -82,3 +82,29 @@ ion-badge {
     padding: 0.5rem;
   }
 }
+
+.program-note-box {
+  margin-top: 0.85rem;
+  background: rgba(var(--ion-color-light-rgb), 0.12);
+  border-radius: 16px;
+  padding: 0.75rem;
+}
+
+.program-note-textarea {
+  min-height: 3.4rem;
+  border-radius: 16px;
+  background: rgba(var(--ion-color-light-rgb), 0.9);
+}
+
+.note-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  margin-top: 0.6rem;
+}
+
+.note-saved {
+  color: var(--ion-color-success);
+  font-weight: 700;
+}

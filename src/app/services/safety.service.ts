@@ -127,6 +127,24 @@ export class SafetyService {
     }
   }
 
+  getProgramNote(programId: string): string {
+    if (typeof localStorage === 'undefined') {
+      return '';
+    }
+    return localStorage.getItem(`program_note_${programId}`) || '';
+  }
+
+  setProgramNote(programId: string, note: string): void {
+    if (typeof localStorage === 'undefined') {
+      return;
+    }
+    if (note.trim()) {
+      localStorage.setItem(`program_note_${programId}`, note);
+    } else {
+      localStorage.removeItem(`program_note_${programId}`);
+    }
+  }
+
   getConditionNote(conditionId: string): string {
     if (typeof localStorage === 'undefined') {
       return '';

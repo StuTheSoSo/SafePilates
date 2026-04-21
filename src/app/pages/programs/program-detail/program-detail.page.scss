@@ -1,0 +1,113 @@
+@import '../../../styles/_typography.scss';
+
+.program-hero-card {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+  margin-bottom: 1.2rem;
+}
+
+ion-card-title {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ion-color-primary);
+  margin-top: 0.4rem;
+}
+
+ion-card-subtitle {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--sp-brand-ink);
+  margin-top: 0.2rem;
+}
+
+.program-level-row {
+  margin-bottom: 0.4rem;
+}
+
+.program-description {
+  font-size: 0.97rem;
+  color: var(--sp-brand-ink);
+  margin-bottom: 0.75rem;
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.focus-chip {
+  font-size: 0.82rem;
+  height: 26px;
+  border-radius: 12px;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  border: 1.5px solid var(--sp-border);
+}
+
+.section-header {
+  @extend .h2;
+  padding: 0.3rem 0 0.5rem 0.1rem;
+  color: var(--ion-color-primary);
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.exercise-list {
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--sp-card-start);
+  box-shadow: 0 4px 16px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+}
+
+.exercise-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--ion-color-primary);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 0.88rem;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+ion-item h2 {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--ion-color-primary);
+  font-size: 1rem;
+}
+
+ion-item p {
+  font-size: 0.88rem;
+  color: var(--sp-brand-ink);
+}
+
+.exercise-meta {
+  font-size: 0.8rem !important;
+  color: var(--ion-color-medium) !important;
+}
+
+ion-badge {
+  border-radius: 8px;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 600px) {
+  .program-hero-card {
+    border-radius: 14px;
+  }
+}

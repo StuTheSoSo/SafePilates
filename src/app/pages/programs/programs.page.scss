@@ -1,0 +1,84 @@
+@import '../../styles/_typography.scss';
+
+ion-card-title, h1, h2, h3 {
+  @extend .h1;
+}
+
+ion-card-content {
+  @extend .body;
+}
+
+.intro-text {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-size: 1rem;
+  color: var(--sp-brand-ink);
+  margin-bottom: 0.5rem;
+}
+
+ion-card {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+}
+
+ion-card-title {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--ion-color-primary);
+  margin-top: 0.4rem;
+}
+
+ion-card-subtitle {
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-size: 0.92rem;
+  color: var(--sp-brand-ink);
+  margin-top: 0.2rem;
+}
+
+.program-level-row {
+  margin-bottom: 0.4rem;
+}
+
+.program-description {
+  font-size: 0.97rem;
+  color: var(--sp-brand-ink);
+  margin-bottom: 0.75rem;
+}
+
+.focus-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-bottom: 0.6rem;
+}
+
+.focus-chip {
+  font-size: 0.82rem;
+  height: 26px;
+  border-radius: 12px;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  border: 1.5px solid var(--sp-border);
+}
+
+.exercise-count {
+  font-size: 0.88rem;
+  color: var(--ion-color-medium);
+  margin: 0;
+}
+
+ion-badge {
+  border-radius: 8px;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.82rem;
+}
+
+@media (max-width: 600px) {
+  ion-card {
+    border-radius: 14px;
+    padding: 0.5rem;
+  }
+}

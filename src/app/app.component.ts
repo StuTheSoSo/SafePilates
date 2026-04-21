@@ -19,6 +19,7 @@ export class AppComponent {
   tabs = [
     { label: 'Home', icon: 'home-outline', route: '/' },
     { label: 'Library', icon: 'library-outline', route: '/library' },
+    { label: 'Programs', icon: 'list-outline', route: '/programs' },
     { label: 'Settings', icon: 'settings-outline', route: '/settings' },
   ];
 
@@ -28,6 +29,12 @@ export class AppComponent {
 
   get currentRoute() {
     return this.router.url || '/';
+  }
+
+  isTabActive(route: string): boolean {
+    const url = this.router.url || '/';
+    if (route === '/') return url === '/';
+    return url === route || url.startsWith(route + '/');
   }
 
   navigate(path: string) {

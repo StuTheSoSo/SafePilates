@@ -1,0 +1,50 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/programs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ program?.name || 'Program' }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ng-container *ngIf="program; else notFound">
+    <ion-card class="program-hero-card">
+      <ion-card-header>
+        <div class="program-level-row">
+          <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
+        </div>
+        <ion-card-title>{{ program.name }}</ion-card-title>
+        <ion-card-subtitle>{{ program.goal }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p class="program-description">{{ program.description }}</p>
+        <div class="focus-chips">
+          <ion-chip *ngFor="let area of program.focusAreas" outline color="primary" class="focus-chip">
+            {{ area }}
+          </ion-chip>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+    <div class="section-header">Exercises</div>
+    <ion-list class="exercise-list">
+      <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">
+        <div class="exercise-number" slot="start">{{ i + 1 }}</div>
+        <ion-label>
+          <h2>{{ exercise.name }}</h2>
+          <p>{{ exercise.shortDescription }}</p>
+          <p class="exercise-meta">{{ exercise.category }} · {{ exercise.level }}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+
+  <ng-template #notFound>
+    <ion-card>
+      <ion-card-content>
+        <p>Program not found.</p>
+      </ion-card-content>
+    </ion-card>
+  </ng-template>
+</ion-content>

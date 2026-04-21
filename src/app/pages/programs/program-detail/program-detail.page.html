@@ -14,14 +14,14 @@
         <div class="program-level-row">
           <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
         </div>
-        <ion-card-title>{{ program.name }}</ion-card-title>
-        <ion-card-subtitle>{{ program.goal }}</ion-card-subtitle>
+        <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>
+        <ion-card-subtitle [innerHTML]="highlightText(program.goal)"></ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p class="program-description">{{ program.description }}</p>
+        <p class="program-description" [innerHTML]="highlightText(program.description)"></p>
         <div class="focus-chips">
           <ion-chip *ngFor="let area of program.focusAreas" outline color="primary" class="focus-chip">
-            {{ area }}
+            <span [innerHTML]="highlightText(area)"></span>
           </ion-chip>
         </div>
       </ion-card-content>
@@ -32,8 +32,8 @@
       <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">
         <div class="exercise-number" slot="start">{{ i + 1 }}</div>
         <ion-label>
-          <h2>{{ exercise.name }}</h2>
-          <p>{{ exercise.shortDescription }}</p>
+          <h2 [innerHTML]="highlightText(exercise.name)"></h2>
+          <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
           <p class="exercise-meta">{{ exercise.category }} · {{ exercise.level }}</p>
         </ion-label>
       </ion-item>

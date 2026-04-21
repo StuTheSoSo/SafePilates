@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
@@ -19,13 +20,16 @@ export class ProgramDetailPage implements OnInit {
   exercises: Exercise[] = [];
   programNote = '';
   noteSaved = false;
+  searchText = '';
 
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private safetyService = inject(SafetyService);
+  private sanitizer = inject(DomSanitizer);
 
   async ngOnInit() {
     await this.safetyService.initData();
+    this.syncSearchText();
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.program = (programsData as Program[]).find(p => p.id === id);
@@ -36,6 +40,14 @@ export class ProgramDetailPage implements OnInit {
         this.programNote = this.safetyService.getProgramNote(id);
       }
     }
+  }
+
+  ionViewWillEnter() {
+    this.syncSearchText();
+  }
+
+  private syncSearchText() {
+    this.searchText = this.safetyService.librarySearchTerm?.trim() || '';
   }
 
   saveProgramNote() {
@@ -49,6 +61,34 @@ export class ProgramDetailPage implements OnInit {
 
   openExercise(id: string) {
     this.router.navigate(['/exercise', id]);
+  }
+
+  highlightText(text: string | undefined): SafeHtml {
+    const raw = text || '';
+    const term = this.searchText.trim();
+    if (!term) {
+      return this.sanitizer.bypassSecurityTrustHtml(this.escapeHtml(raw));
+    }
+    const escapedTerm = this.escapeRegExp(term);
+    const highlighted = this.escapeHtml(raw).replace(new RegExp(escapedTerm, 'gi'), match => `<mark>${match}</mark>`);
+    return this.sanitizer.bypassSecurityTrustHtml(highlighted);
+  }
+
+  private escapeHtml(text: string): string {
+    return text.replace(/[&<>"']/g, value => {
+      switch (value) {
+        case '&': return '&amp;';
+        case '<': return '&lt;';
+        case '>': return '&gt;';
+        case '"': return '&quot;';
+        case "'": return '&#39;';
+        default: return value;
+      }
+    });
+  }
+
+  private escapeRegExp(text: string): string {
+    return text.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
   }
 
   levelColor(level: string): string {

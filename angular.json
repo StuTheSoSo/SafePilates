@@ -23,6 +23,11 @@
                 "glob": "**/*",
                 "input": "node_modules/onnxruntime-web/dist",
                 "output": "assets/onnx"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/@huggingface/transformers/dist",
+                "output": "assets/transformers"
               }
             ],
             "styles": ["src/styles.scss"],

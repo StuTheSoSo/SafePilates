@@ -839,7 +839,9 @@ export class SafetyService {
   private async getLocalPipeline(modelId: string, modelBasePath: string, wasmBasePath: string): Promise<any> {
     if (!this.localPipelinePromise) {
       this.localPipelinePromise = (async () => {
-        const transformers: any = await import('@huggingface/transformers');
+        const transformersUrl = `${window.location.origin}/assets/transformers/transformers.web.js`;
+        const importedModule: any = await import(/* webpackIgnore: true */ transformersUrl);
+        const transformers: any = importedModule.default ?? importedModule;
         const env = transformers.env;
 
         // Fully offline: only load assets from the app bundle.

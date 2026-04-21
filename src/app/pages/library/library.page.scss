@@ -1,4 +1,4 @@
-@import '../../styles/_typography.scss';
+@use '../../styles/typography' as *;
 
 ion-card-title, h1, h2, h3 {
   @extend .h1;

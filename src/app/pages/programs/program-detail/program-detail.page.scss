@@ -1,4 +1,4 @@
-@import '../../../styles/_typography.scss';
+@use '../../../styles/typography' as *;
 
 .program-hero-card {
   border-radius: 22px;

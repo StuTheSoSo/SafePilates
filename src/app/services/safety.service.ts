@@ -228,7 +228,11 @@ export class SafetyService {
     }
 
     const result: GuidanceResult = {
-      conditionResults,
+      // When an AI/heuristic fallback covers the "other" text, drop the generic "other"
+      // condition card so only the specific AI guidance card renders.
+      conditionResults: aiFallback
+        ? conditionResults.filter(r => r.conditionId !== 'other')
+        : conditionResults,
       aiFallback,
       aiUsed,
       searchTerm: query.searchTerm?.trim() || undefined
@@ -282,10 +286,10 @@ export class SafetyService {
 
     try {
       const otherText = (query.otherText || '').trim();
-      if (otherText && this.shouldUseHeuristicForOther(otherText) && !this.isAiConfigured(provider)) {
+      if (otherText && this.shouldUseHeuristicForOther(otherText)) {
         localStorage.setItem(countKey, String(currentCount + 1));
         const fallbackText = this.buildHeuristicGuidance(query, selectedConditions);
-        console.log('SafetyService.requestAiFallback using heuristic because AI is not configured', { fallbackText });
+        console.log('SafetyService.requestAiFallback using heuristic', { fallbackText });
         return fallbackText;
       }
 
@@ -312,7 +316,7 @@ export class SafetyService {
   }
 
   private shouldUseHeuristicForOther(otherText: string): boolean {
-    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|swollen glands|swollen lymph nodes|lymphadenopathy|gland swelling|obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis)\b/i.test(otherText);
+    return /\b(hamstring|strain|sprain|tear|injury|pain|rupture|tendon|ligament|muscle|sciatica|low back|lumbar|thoracic|spine|spinal|neck|shoulder|knee|hip|ankle|foot|arch|fallen arches|flat foot|plantar|heel|swollen|swelling|edema|joint|joint swelling|joint inflammation|pregnatal|postpartum|pelvic floor|pelvic|diastasis|pregnancy|asthma|breath|breathing|lung|wheeze|respiratory|shortness of breath|airway|bronch|cough|digestive|gastro|ibs|gerd|acid reflux|stomach|cancer|chemotherapy|radiation|lymph|lymphedema|swollen glands|swollen lymph nodes|lymphadenopathy|gland swelling|obese|obesity|overweight|overw[iy]ght|overwight|overwdight|weight(?:\s+(?:loss|gain|management))?|body mass|bmi|multiple sclerosis|ms\b|neuropathy|neurological|nerve|autoimmune|fibromyalgia|lupus|rheumatoid|chronic fatigue|migraines|demyelinating|neurogenic|balance|dizziness|vertigo|hypertension|blood pressure|heart|cardiovascular|cardio|chest pain|palpitations|arrhythmia|surgery|post[- ]surgery|replacement|arthriti|osteoporosis|arthritis|scoliosis|anxiety|depression|\bptsd\b|cognitive|dementia|brain fog|mental health|psychological|stress disorder|mood disorder|diabetes|thyroid|hypothyroid|hyperthyroid|\bmetabolic\b|endocrine|insulin|hormonal|adrenal|hashimoto|graves|fever|\bflu\b|infection|infectious|immune|immunocompromised|immunosuppressed|transplant)\b/i.test(otherText);
   }
 
   private inferConditionsFromOtherText(otherText: string): Condition[] {
@@ -604,6 +608,27 @@ export class SafetyService {
       );
     }
 
+    // Swollen joints / joint inflammation concerns
+    if (/(swollen|swelling|edema|joint swelling|joint inflammation)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Joint swelling & inflammation support\n\n' +
+        'Avoid\n' +
+        '- Deep compression or heavy loading of the affected joint(s)\n' +
+        '- Repetitive end-range movements that increase swelling or discomfort\n' +
+        '- Prolonged unsupported weight-bearing on sensitive joints\n\n' +
+        'Why\n' +
+        '- Swollen joints often indicate inflammation, irritation, or fluid buildup around the joint structures\n' +
+        '- Protected movement and joint support help reduce pain and prevent worsening symptoms\n\n' +
+        'Safer focus\n' +
+        '- Use gentle, supported movement with a comfortable range of motion\n' +
+        '- Keep joints aligned, avoid compression, and favor stability over depth\n' +
+        '- Pause frequently and stop if swelling or pain increases\n\n' +
+        'If the swelling is new, severe, or accompanied by redness, heat, or sharp pain, consult a qualified clinician before continuing.'
+      );
+    }
+
     // Foot / arch / fallen arches concerns
     if (/(fallen arches|flat foot|flat feet|arch|plantar|heel|foot pain|metatarsal|posterior tibial|pes planus)/.test(otherLower)) {
       return (
@@ -766,6 +791,69 @@ export class SafetyService {
       );
     }
 
+    // Metabolic / endocrine concerns
+    if (/(diabetes|thyroid|hypothyroid|hyperthyroid|\bmetabolic\b|endocrine|insulin|hormonal|adrenal|hashimoto|graves|hormone(?:\s+(?:imbalance|therapy|replacement))?)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Metabolic & Endocrine Support\n\n' +
+        'Avoid\n' +
+        '- Sudden high-intensity efforts or long sessions without adequate rest and hydration\n' +
+        '- Breath-holding, extreme temperature exposure, or rapid energy demands\n' +
+        '- Pushing through fatigue, dizziness, or signs of blood sugar instability\n\n' +
+        'Why\n' +
+        '- Metabolic and endocrine conditions can affect energy levels, temperature regulation, and recovery\n' +
+        '- Careful pacing and monitoring help keep exercise safe and sustainable\n\n' +
+        'Safer focus\n' +
+        '- Choose steady, moderate-intensity Pilates with frequent rest breaks\n' +
+        '- Keep movement controlled and avoid prolonged high-effort sequences\n' +
+        '- Prioritize hydration, temperature comfort, and energy management throughout the session\n\n' +
+        'If the client has diabetes, check blood glucose before and after exercise. Consult a qualified clinician before continuing if symptoms are unstable or new.'
+      );
+    }
+
+    // Immune / infectious concerns
+    if (/(fever|\bflu\b|infection|infectious|\bimmune\b|immunocompromised|immunosuppressed|transplant)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Immune & Infectious Condition Support\n\n' +
+        'Avoid\n' +
+        '- Exercising through active fever, systemic illness, or infectious symptoms\n' +
+        '- High-intensity or prolonged sessions that further stress a compromised immune system\n' +
+        '- Group environments if there is any risk of spreading infection\n\n' +
+        'Why\n' +
+        '- The body uses energy resources to fight infection; exercise during acute illness can worsen symptoms and prolong recovery\n' +
+        '- Immunocompromised clients need additional caution around load, hygiene, and environment\n\n' +
+        'Safer focus\n' +
+        '- If currently unwell: rest is usually preferable; gentle movement only if cleared by a clinician\n' +
+        '- During recovery: restart with low-intensity, short sessions and progress gradually\n' +
+        '- Prioritize hygiene, ventilation, and keeping sessions light until fully recovered\n\n' +
+        'If symptoms include fever, shortness of breath, or chest pain, stop and seek medical advice before exercising.'
+      );
+    }
+
+    // Mental health / cognitive concerns
+    if (/(anxiety|depression|\bptsd\b|cognitive|dementia|brain\s*fog|mental health|psychological|stress disorder|mood disorder)/.test(otherLower)) {
+      return (
+        disclaimer +
+        contextLine +
+        'Mental Health & Cognitive Support\n\n' +
+        'Avoid\n' +
+        '- Overly complex, fast-paced routines that increase confusion or anxiety\n' +
+        '- Pushing through emotional or physical distress without pausing\n' +
+        '- High-pressure environments, unpredictable transitions, or unfamiliar settings without adequate orientation\n\n' +
+        'Why\n' +
+        '- Mental health and cognitive conditions can affect concentration, emotional regulation, and body awareness\n' +
+        '- A calm, structured environment supports focus and reduces risk of overwhelm\n\n' +
+        'Safer focus\n' +
+        '- Keep routines predictable, cues simple and clear, and transitions slow\n' +
+        '- Use grounding movements: breath, gentle body awareness, and steady rhythmic exercise\n' +
+        '- Allow extra time between exercises and check in frequently on how the client is feeling\n\n' +
+        'If the client is in acute distress, on new medication, or has concerns about exercising, consult a qualified mental health provider or clinician before continuing.'
+      );
+    }
+
     // Generic injury/unknown concern fallback
     const shortOther = other ? `"${other}"` : 'this concern';
     return (
@@ -911,6 +999,7 @@ CRITICAL SAFETY RULES — NEVER BREAK THESE:
 - Do NOT diagnose conditions, prescribe specific rehabilitation exercises, or give individualized medical recommendations.
 - Treat any unlisted or "Other" concern as a symptom-based general guidance request.
 - Use the user’s text to infer the likely system or movement risk (for example respiratory, digestive, neurological, joint, pelvic, or cardiovascular) and shape guidance around safe Pilates practice.
+- If the concern mentions swelling, joint irritation, edema, or inflammation, frame it as a joint-support and protection issue.
 - If the concern is unclear, vague, or may be serious, keep recommendations conservative and urge professional clearance.
 - Keep the response concise (under 350 words) with short headings and bullet points for mobile readability.
 
@@ -955,6 +1044,7 @@ Context: ${input || 'No details provided.'}
 ${inferredHint ? `Likely concern type: ${inferredHint}` : ''}
 
 If this is an unlisted concern, use the text to infer the general system or movement risk and keep the advice conservative.
+If the text mentions swelling, inflammation, or joint irritation, emphasize joint protection and avoiding compression or painful range.
 
 Now write the guidance with EXACTLY these headings and 2–4 bullet points each:
 

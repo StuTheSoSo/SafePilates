@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +19,12 @@ export class ResultsPage implements OnInit {
   conditionNotes: Record<string, string> = {};
   noteSavedConditionId: string | null = null;
 
-  constructor(private safetyService: SafetyService, private router: Router, private sanitizer: DomSanitizer) {}
+  constructor(
+    private safetyService: SafetyService,
+    private router: Router,
+    private sanitizer: DomSanitizer,
+    private cd: ChangeDetectorRef
+  ) {}
 
   ngOnInit() {
     this.refreshGuidance();
@@ -34,6 +39,7 @@ export class ResultsPage implements OnInit {
     this.guidance = this.safetyService.getGuidance();
     console.log('ResultsPage.refreshGuidance', { guidance: this.guidance });
     this.loadConditionNotes();
+    this.cd.detectChanges();
   }
 
   private loadConditionNotes() {

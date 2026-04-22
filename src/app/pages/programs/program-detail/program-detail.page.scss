@@ -145,3 +145,21 @@ ion-badge {
     border-radius: 14px;
   }
 }
+
+.premium-lock-card {
+  margin-top: 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+}
+
+.premium-lock-card ion-card-title {
+  font-weight: 700;
+  color: var(--ion-color-primary);
+}
+
+.premium-lock-card ion-card-content p {
+  margin: 0 0 1rem;
+  color: var(--sp-brand-ink);
+}

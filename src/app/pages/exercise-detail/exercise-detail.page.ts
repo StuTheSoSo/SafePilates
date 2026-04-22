@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { IonicModule } from '@ionic/angular';
-import { RouterModule, ActivatedRoute } from '@angular/router';
+import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Exercise } from '../../models';
 
@@ -23,6 +23,9 @@ export class ExerciseDetailPage implements OnInit {
 
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
+  private router = inject(Router);
+
+  hasPremiumExercise = false;
 
   constructor(private route: ActivatedRoute) {}
 
@@ -50,6 +53,10 @@ export class ExerciseDetailPage implements OnInit {
     const id = this.route.snapshot.paramMap.get('id');
     if (id) {
       this.exercise = this.safetyService.getExerciseById(id);
+      this.hasPremiumExercise = this.safetyService.isExercisePremium(this.exercise);
+      if (this.hasPremiumExercise && !this.safetyService.isPremiumActive()) {
+        return;
+      }
       this.loadConditionWarnings(id);
       this.exerciseNote = this.safetyService.getExerciseNote(id);
     }
@@ -59,6 +66,10 @@ export class ExerciseDetailPage implements OnInit {
 
   ionViewWillEnter() {
     // Called every time Ionic makes this page active — reliable even when component is cached.
+    // Re-check premium state in case the user purchased since last visit.
+    if (this.exercise) {
+      this.hasPremiumExercise = this.safetyService.isExercisePremium(this.exercise);
+    }
     this.syncSearchText();
   }
 
@@ -98,5 +109,13 @@ export class ExerciseDetailPage implements OnInit {
     this.safetyService.setExerciseNote(this.exercise.id, this.exerciseNote || '');
     this.noteSaved = true;
     setTimeout(() => this.noteSaved = false, 1800);
+  }
+
+  get hasPremiumAccess(): boolean {
+    return this.safetyService.isPremiumActive();
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 }

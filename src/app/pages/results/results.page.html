@@ -77,12 +77,25 @@
                 </div>
               </div>
               <div class="divider"></div>
-              <details class="condition-accordion" *ngIf="condition.instructorNote">
-                <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">Instructor Note</summary>
-                <div class="condition-instructor-note section-content">
-                  <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
-                </div>
-              </details>
+              <ng-container *ngIf="condition.instructorNote">
+                <details class="condition-accordion" *ngIf="hasPremiumAccess; else instructorNoteLocked">
+                  <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">Instructor Note</summary>
+                  <div class="condition-instructor-note section-content">
+                    <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
+                  </div>
+                </details>
+                <ng-template #instructorNoteLocked>
+                  <ion-card color="secondary" class="premium-lock-card">
+                    <ion-card-header>
+                      <ion-card-title>Instructor notes are Pro-only</ion-card-title>
+                    </ion-card-header>
+                    <ion-card-content>
+                      <p>Unlock Pilates Pro to view detailed instructor notes and professional cueing for this condition.</p>
+                      <ion-button expand="block" (click)="navigateToUpgrade()">Upgrade to Pro</ion-button>
+                    </ion-card-content>
+                  </ion-card>
+                </ng-template>
+              </ng-container>
               <div class="divider"></div>
               <div class="section-header h2">Your note</div>
               <ion-card class="condition-note-card section-content">
@@ -118,6 +131,7 @@
         </ion-card-header>
         <ion-card-content>
           <p class="ai-text">{{ guidance.aiFallback }}</p>
+          <ion-button *ngIf="!hasPremiumAccess" expand="block" (click)="navigateToUpgrade()">Unlock AI guidance</ion-button>
         </ion-card-content>
       </ion-card>
     </ng-container>
@@ -151,5 +165,6 @@
     </ion-card-content>
   </ion-card>
 
+  <app-premium-banner *ngIf="!hasPremiumAccess" (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
   <ion-button expand="block" class="results-action" (click)="viewAgain()">Check another concern</ion-button>
 </ion-content>

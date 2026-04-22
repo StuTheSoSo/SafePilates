@@ -54,7 +54,8 @@
   <ion-grid class="ion-padding">
     <ion-row>
       <ion-col size="12" size-md="6" *ngFor="let exercise of filteredExercises">
-        <ion-card button (click)="openExercise(exercise.id)">
+        <ion-card class="exercise-card" button [disabled]="safetyService.isExercisePremium(exercise) && !safetyService.isPremiumActive()" (click)="openExercise(exercise.id, exercise)">
+          <div class="premium-card-flag" *ngIf="safetyService.isExercisePremium(exercise) && !safetyService.isPremiumActive()">Pro</div>
           <ion-card-header>
             <ion-card-title [innerHTML]="highlightText(exercise.name)"></ion-card-title>
           </ion-card-header>
@@ -67,4 +68,6 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
 </ion-content>

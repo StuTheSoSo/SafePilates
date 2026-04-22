@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
+import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 
 interface ThemeOption {
   label: string;
@@ -12,11 +13,12 @@ interface ThemeOption {
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule, RouterModule],
+  imports: [CommonModule, IonicModule, FormsModule, RouterModule, PremiumBannerComponent],
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss']
 })
 export class SettingsPage {
+  private router = inject(Router);
   themeOptions: ThemeOption[] = [
     { label: 'Rose (feminine)', value: 'theme-rose' },
     { label: 'Lilac (feminine)', value: 'theme-lilac' },
@@ -58,5 +60,9 @@ export class SettingsPage {
   applyTheme(theme: string) {
     document.documentElement.classList.remove(...this.themeOptions.map(t => t.value));
     document.documentElement.classList.add(theme);
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 }

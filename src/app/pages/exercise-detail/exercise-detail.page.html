@@ -9,10 +9,11 @@
 
 <ion-content fullscreen class="ion-padding">
   <ion-card *ngIf="exercise; else missingExercise">
-    <ion-card-header>
-      <ion-card-title [innerHTML]="highlightText(exercise.name)"></ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
+    <ng-container *ngIf="!hasPremiumExercise || hasPremiumAccess; else premiumExerciseLocked">
+      <ion-card-header>
+        <ion-card-title [innerHTML]="highlightText(exercise.name)"></ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
       <p class="exercise-description" [innerHTML]="highlightText(exercise.shortDescription)"></p>
 
       <div class="section-header h2">Summary</div>
@@ -231,6 +232,19 @@
 
       <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">Video and advanced guidance coming soon.</p>
     </ion-card-content>
+    </ng-container>
+
+    <ng-template #premiumExerciseLocked>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Premium Exercise</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>This exercise is part of Pilates Pro and requires an upgrade to view full details.</p>
+          <ion-button expand="block" (click)="navigateToUpgrade()">Upgrade to Pro</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
   </ion-card>
 </ion-content>
 

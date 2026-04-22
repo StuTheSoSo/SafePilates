@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
+import { RevenueCatService } from './services/revenueCat.service';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,7 @@ import { Router, RouterModule } from '@angular/router';
 })
 export class AppComponent {
   private router = inject(Router);
+  private revenueCatService = inject(RevenueCatService);
   private readonly themeStorageKey = 'pilatesafe-theme';
   private readonly defaultTheme = 'theme-rose';
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
@@ -25,6 +27,9 @@ export class AppComponent {
 
   constructor() {
     this.applySavedTheme();
+    // Initialize RevenueCat at startup so premium state is available on every page
+    // before the user navigates anywhere. Fire-and-forget; init() is idempotent.
+    this.revenueCatService.init();
   }
 
   get currentRoute() {

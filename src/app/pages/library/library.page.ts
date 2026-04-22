@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule, Router } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
+import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Exercise } from '../../models';
 import exercisesData from '../../../assets/data/exercises.json' with { type: 'json' };
 
 @Component({
   selector: 'app-library',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
   templateUrl: './library.page.html',
   styleUrls: ['./library.page.scss']
 })
@@ -122,14 +123,24 @@ export class LibraryPage implements OnInit {
       .filter(Boolean) as { name: string; issues: string[] }[];
   }
 
-  openExercise(id: string) {
+  openExercise(id: string, exercise: Exercise) {
     const search = this.searchText.trim();
     this.safetyService.librarySearchTerm = search;
+
+    if (this.safetyService.isExercisePremium(exercise) && !this.safetyService.isPremiumActive()) {
+      this.navigateToUpgrade();
+      return;
+    }
+
     this.router.navigate([`/exercise/${id}`], {
       queryParams: {
         search: search || undefined
       },
       state: search ? { search } : undefined
     });
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 }

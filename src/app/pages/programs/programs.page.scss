@@ -51,6 +51,31 @@ ion-card-subtitle {
 
 .program-level-row {
   margin-bottom: 0.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.program-pro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+  padding: 0.22rem 0.75rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb33f 0%, #ff7d00 100%);
+  color: #141414;
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 18px rgba(255, 125, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.program-pro-badge::before {
+  content: '★';
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .program-description {

@@ -8,6 +8,7 @@ import { PrivacyPolicyPage } from './pages/privacy-policy/privacy-policy.page';
 import { EulaPage } from './pages/eula/eula.page';
 import { ProgramsPage } from './pages/programs/programs.page';
 import { ProgramDetailPage } from './pages/programs/program-detail/program-detail.page';
+import { UpgradePage } from './pages/upgrade/upgrade.page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'programs', component: ProgramsPage },
   { path: 'programs/:id', component: ProgramDetailPage },
   { path: 'settings', component: SettingsPage },
+  { path: 'upgrade', component: UpgradePage },
   { path: 'privacy-policy', component: PrivacyPolicyPage },
   { path: 'eula', component: EulaPage },
   { path: '**', redirectTo: '' }

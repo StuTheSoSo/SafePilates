@@ -54,6 +54,7 @@
               [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
               [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
               [class.selected]="selectedIds.has(condition.id)"
+              [class.premium]="safetyService.isConditionPremium(condition.id)"
               (click)="toggleCondition(condition.id)"
               class="condition-chip">
               <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
@@ -62,7 +63,9 @@
                 <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
                   ({{ pregnancyTrimester }} trimester)
                 </span>
+                <span *ngIf="safetyService.isConditionPremium(condition.id)" class="pro-badge">Pro</span>
               </ion-label>
+              <ion-icon *ngIf="safetyService.isConditionPremium(condition.id)" slot="end" name="lock-closed" class="premium-lock"></ion-icon>
             </ion-chip>
 
             <div *ngIf="condition.id === 'other' && selectedIds.has('other')" class="other-details">
@@ -94,6 +97,8 @@
       </ion-list>
     </ion-card>
   </div>
+
+  <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
 </div>
 
   <!-- overlays and modals remain outside home-inner -->

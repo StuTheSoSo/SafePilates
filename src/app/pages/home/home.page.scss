@@ -268,6 +268,35 @@ ion-button:hover, ion-chip:hover {
   box-shadow: 0 14px 32px var(--sp-selected-shadow);
   font-weight: 700;
 }
+
+.condition-chip .pro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.18em;
+  margin-left: 0.45rem;
+  padding: 0.16rem 0.6rem;
+  background: linear-gradient(135deg, #ffb33f 0%, #ff7d00 100%);
+  color: #141414;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 14px rgba(255, 125, 0, 0.38);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.condition-chip .pro-badge::before {
+  content: '★';
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.condition-chip .premium-lock {
+  font-size: 1rem;
+  color: var(--ion-color-warning);
+}
+
 .condition-chip.selected ion-label,
 .condition-chip.selected ion-icon {
   color: #fff !important;

@@ -5,13 +5,14 @@ import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Condition, Exercise } from '../../models';
+import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import exercisesData from '../../../assets/data/exercises.json' with { type: 'json' };
 import safetyConditionsData from '../../../assets/data/safety-conditions.json' with { type: 'json' };
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']
 })
@@ -278,6 +279,11 @@ export class HomePage implements OnInit {
   }
 
   toggleCondition(conditionId: string) {
+    if (!this.selectedIds.has(conditionId) && this.safetyService.isConditionPremium(conditionId) && !this.safetyService.isPremiumActive()) {
+      this.router.navigateByUrl('/upgrade');
+      return;
+    }
+
     if (this.selectedIds.has(conditionId)) {
       this.selectedIds.delete(conditionId);
       if (conditionId === 'pregnancy') {
@@ -398,5 +404,9 @@ export class HomePage implements OnInit {
 
   openExercise(id: string) {
     this.router.navigateByUrl(`/exercise/${id}`);
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 }

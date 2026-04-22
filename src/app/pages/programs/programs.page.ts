@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
+import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Program } from '../../models';
 import programsData from '../../../assets/data/programs.json' with { type: 'json' };
 
 @Component({
   selector: 'app-programs',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
   templateUrl: './programs.page.html',
   styleUrls: ['./programs.page.scss']
 })
@@ -117,5 +118,9 @@ export class ProgramsPage implements OnInit {
       case 'Advanced': return 'danger';
       default: return 'medium';
     }
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 }

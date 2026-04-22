@@ -1,0 +1,190 @@
+.premium-banner-container {
+  padding: 16px;
+  background: #0b121c;
+}
+
+.premium-banner {
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 20px;
+  background:
+    radial-gradient(1000px 300px at -10% -20%, rgba(255, 200, 64, 0.25), transparent 60%),
+    radial-gradient(900px 360px at 120% -10%, rgba(0, 185, 255, 0.2), transparent 55%),
+    linear-gradient(135deg, #101827, #16253d);
+  padding: 24px 20px;
+  overflow: hidden;
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.28);
+}
+
+.premium-banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.12) 50%, transparent 70%);
+  transform: translateX(-65%);
+  animation: banner-shimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.premium-badge {
+  position: absolute;
+  top: 14px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #111827;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.banner-content {
+  margin-top: 12px;
+}
+
+.banner-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.banner-icon {
+  font-size: 38px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.banner-text {
+  flex: 1;
+}
+
+.banner-title {
+  margin: 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.banner-subtitle {
+  margin: 8px 0 0;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.4;
+}
+
+.pricing-section {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffd166;
+  margin-bottom: 4px;
+}
+
+.price-alt {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.features-list {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.feature-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.feature-icon {
+  font-size: 24px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+}
+
+.feature-text {
+  flex: 1;
+}
+
+.feature-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 2px;
+}
+
+.feature-desc {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.upgrade-btn {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #ffd166, #ff8fab);
+  color: #111827;
+  border: none;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 12px 24px rgba(255, 142, 112, 0.28);
+}
+
+.upgrade-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(255, 142, 112, 0.35);
+}
+
+.upgrade-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 8px 16px rgba(255, 142, 112, 0.22);
+}
+
+@keyframes banner-shimmer {
+  0% { transform: translateX(-65%); }
+  50% { transform: translateX(0%); }
+  100% { transform: translateX(65%); }
+}
+
+@media (max-width: 540px) {
+  .premium-banner-container {
+    padding: 12px;
+  }
+
+  .premium-banner {
+    padding: 20px 16px;
+  }
+
+  .banner-title {
+    font-size: 22px;
+  }
+
+  .banner-subtitle {
+    font-size: 14px;
+  }
+
+  .price {
+    font-size: 24px;
+  }
+}

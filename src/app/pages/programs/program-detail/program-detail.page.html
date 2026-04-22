@@ -27,17 +27,31 @@
       </ion-card-content>
     </ion-card>
 
-    <div class="section-header">Exercises</div>
-    <ion-list class="exercise-list">
-      <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">
-        <div class="exercise-number" slot="start">{{ i + 1 }}</div>
-        <ion-label>
-          <h2 [innerHTML]="highlightText(exercise.name)"></h2>
-          <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
-          <p class="exercise-meta">{{ exercise.category }} · {{ exercise.level }}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
+    <ng-container *ngIf="hasPremium; else premiumLockNotice">
+      <div class="section-header">Exercises</div>
+      <ion-list class="exercise-list">
+        <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">
+          <div class="exercise-number" slot="start">{{ i + 1 }}</div>
+          <ion-label>
+            <h2 [innerHTML]="highlightText(exercise.name)"></h2>
+            <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
+            <p class="exercise-meta">{{ exercise.category }} · {{ exercise.level }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ng-container>
+
+    <ng-template #premiumLockNotice>
+      <ion-card color="secondary" class="premium-lock-card">
+        <ion-card-header>
+          <ion-card-title>Premium Program Content</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Full program exercise sequences are available with Pilates Pro.</p>
+          <ion-button expand="block" (click)="navigateToUpgrade()">Unlock Pro</ion-button>
+        </ion-card-content>
+      </ion-card>
+    </ng-template>
 
     <ion-card class="program-note-card section-content prominent-note">
       <ion-card-header>
@@ -64,6 +78,8 @@
         </div>
       </ion-card-content>
     </ion-card>
+
+    <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
   </ng-container>
 
   <ng-template #notFound>

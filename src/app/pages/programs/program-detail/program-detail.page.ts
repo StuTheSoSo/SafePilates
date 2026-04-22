@@ -5,13 +5,14 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../../services/safety.service';
+import { PremiumBannerComponent } from '../../../components/premium-banner/premium-banner.component';
 import { Program, Exercise } from '../../../models';
 import programsData from '../../../../assets/data/programs.json' with { type: 'json' };
 
 @Component({
   selector: 'app-program-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
   templateUrl: './program-detail.page.html',
   styleUrls: ['./program-detail.page.scss']
 })
@@ -22,12 +23,14 @@ export class ProgramDetailPage implements OnInit {
   noteSaved = false;
   searchText = '';
 
+  hasPremium = false;
   private route = inject(ActivatedRoute);
   private router = inject(Router);
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
 
   async ngOnInit() {
+    this.hasPremium = this.safetyService.isPremiumActive();
     await this.safetyService.initData();
     this.syncSearchText();
     const id = this.route.snapshot.paramMap.get('id');
@@ -44,6 +47,11 @@ export class ProgramDetailPage implements OnInit {
 
   ionViewWillEnter() {
     this.syncSearchText();
+    this.hasPremium = this.safetyService.isPremiumActive();
+  }
+
+  navigateToUpgrade() {
+    this.router.navigateByUrl('/upgrade');
   }
 
   private syncSearchText() {

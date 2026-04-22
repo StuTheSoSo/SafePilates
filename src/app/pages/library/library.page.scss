@@ -18,10 +18,41 @@ ion-card-content, .exercise-focus, .exercise-category, .body {
 }
 // --- Master UX/UI improvements ---
 ion-card {
+  position: relative;
   border-radius: 22px;
   box-shadow: 0 8px 32px var(--sp-shadow);
   border: 1.5px solid var(--sp-border);
   background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+}
+
+.exercise-card {
+  overflow: hidden;
+}
+
+.premium-card-flag {
+  position: absolute;
+  top: 0.85rem;
+  right: 0.85rem;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25em;
+  padding: 0.38rem 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb33f 0%, #ff7d00 100%);
+  color: #141414;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 6px 20px rgba(255, 125, 0, 0.45), 0 0 0 2px rgba(255,179,63,0.18);
+  border: 1.5px solid rgba(255, 255, 255, 0.7);
+}
+
+.premium-card-flag::before {
+  content: '★';
+  font-size: 0.82rem;
+  color: #fff;
 }
 
 ion-card-title, h1, h2, h3 {

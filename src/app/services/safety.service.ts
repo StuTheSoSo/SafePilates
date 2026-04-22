@@ -4,6 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { Capacitor } from '@capacitor/core';
 import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult, Program } from '../models';
 import { environment } from '../../environments/environment';
+import { RevenueCatService } from './revenueCat.service';
 import safetyConditionsData from '../../assets/data/safety-conditions.json' with { type: 'json' };
 import exercisesData from '../../assets/data/exercises.json' with { type: 'json' };
 import contraindicationsData from '../../assets/data/contraindications.json' with { type: 'json' };
@@ -14,6 +15,7 @@ type AiProvider = 'none' | 'local';
 @Injectable({ providedIn: 'root' })
 export class SafetyService {
   private http = inject(HttpClient);
+  private revenueCatService = inject(RevenueCatService);
   private conditions: Condition[] = [];
   private exercises: Exercise[] = [];
   private contraindications: Record<string, Contraindication[]> = {};
@@ -22,6 +24,27 @@ export class SafetyService {
   private latestQuery: SafetyQuery | null = null;
   private latestGuidance: GuidanceResult | null = null;
   public librarySearchTerm = '';
+  private readonly freeConditionIds = new Set<string>([
+    'low_back_pain',
+    'osteoporosis',
+    'pregnancy',
+    'postpartum',
+    'arthritis',
+    'knee_issues',
+    'scoliosis',
+    'disc_degeneration',
+    'rotator_cuff_injury',
+    'hip_replacement',
+    'hypertension',
+    'obesity',
+    'chronic_fatigue',
+    'respiratory',
+    'vertigo_dizziness',
+    'balance_issues',
+    'plantar_fasciitis',
+    'weight_concerns',
+    'other'
+  ]);
 
   async initData(): Promise<void> {
     if (this.dataLoaded) {
@@ -65,8 +88,6 @@ export class SafetyService {
     }
 
     this.dataLoaded = true;
-
-    this.dataLoaded = true;
   }
 
   getConditions(): Condition[] {
@@ -95,6 +116,40 @@ export class SafetyService {
 
   getSelectedConditionResults(): ConditionResult[] {
     return this.latestGuidance?.conditionResults ?? [];
+  }
+
+  isConditionPremium(conditionId: string): boolean {
+    return !this.freeConditionIds.has(conditionId);
+  }
+
+  getFreeConditions(): Condition[] {
+    return this.conditions.filter(condition => !this.isConditionPremium(condition.id));
+  }
+
+  /**
+   * Returns true when the exercise belongs to the premium tier,
+   * regardless of whether the user currently has premium access.
+   * Callers that need to gate UI should combine: isExercisePremium(e) && !isPremiumActive().
+   */
+  isExercisePremium(exercise: Exercise | undefined): boolean {
+    if (!exercise) {
+      return false;
+    }
+
+    const category = (exercise.category || '').toLowerCase();
+    const equipment = (exercise.equipment || '').toLowerCase();
+    const apparatusSettings = (exercise.apparatusSettings || '').toLowerCase();
+    const premiumTerms = ['reformer', 'cadillac', 'chair', 'barrel', 'tower', 'strap', 'spring', 'props', 'prop', 'carriage', 'apparatus'];
+
+    return premiumTerms.some(term =>
+      category.includes(term) ||
+      equipment.includes(term) ||
+      apparatusSettings.includes(term)
+    );
+  }
+
+  isPremiumActive(): boolean {
+    return this.revenueCatService.isEntitlementActive('premium');
   }
 
   getExerciseGuidanceForSelectedConditions(exerciseId: string): Array<{ conditionId: string; conditionLabel: string; reason: string; alternative: string }> {
@@ -188,9 +243,26 @@ export class SafetyService {
     await this.initData();
     this.latestQuery = query;
 
-    const selectedConditions = query.conditionIds.map((id: string) => this.conditions.find(item => item.id === id)).filter(Boolean) as Condition[];
+    const premiumBlockedIds = query.conditionIds.filter(id => this.isConditionPremium(id) && !this.isPremiumActive());
     const otherText = query.otherText?.trim() ?? '';
-    const inferredConditions = query.conditionIds.includes('other') && otherText ? this.inferConditionsFromOtherText(otherText) : [];
+    const hasOther = query.conditionIds.includes('other');
+
+    if (hasOther && otherText && !this.isPremiumActive()) {
+      const result: GuidanceResult = {
+        conditionResults: [],
+        aiFallback: 'AI-assisted guidance for custom concerns is available with Pilates Pro. Upgrade to unlock this feature.',
+        aiUsed: false,
+        searchTerm: query.searchTerm?.trim() || undefined
+      };
+      this.latestGuidance = result;
+      return result;
+    }
+
+    const selectedConditions = query.conditionIds
+      .filter(id => !this.isConditionPremium(id) || this.isPremiumActive())
+      .map((id: string) => this.conditions.find(item => item.id === id))
+      .filter(Boolean) as Condition[];
+    const inferredConditions = hasOther && otherText ? this.inferConditionsFromOtherText(otherText) : [];
     const effectiveConditions = selectedConditions.filter(condition => condition.id !== 'other');
     const allConditions = inferredConditions.length > 0
       ? [...effectiveConditions, ...inferredConditions]
@@ -207,6 +279,7 @@ export class SafetyService {
       contraindications: this.contraindications[condition.id] ?? []
     }));
 
+    const premiumBlocked = premiumBlockedIds.length > 0;
     const noLocalData = allConditions.some(condition => condition.id === 'other') || conditionResults.every(result => result.contraindications.length === 0);
     let aiFallback: string | undefined;
     const aiProvider = this.getAiProvider();
@@ -223,7 +296,9 @@ export class SafetyService {
       queryOther: otherText
     });
 
-    if (noLocalData) {
+    if (premiumBlocked && conditionResults.length === 0) {
+      aiFallback = 'Some selected conditions require Pilates Pro. Upgrade to unlock premium condition guidance.';
+    } else if (noLocalData) {
       aiFallback = await this.getAiFallback(aiProvider, query, selectedConditions, aiAvailable);
       console.log('SafetyService.fetchGuidance AI fallback result', { aiFallback });
     }

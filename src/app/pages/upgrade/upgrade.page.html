@@ -1,0 +1,40 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Upgrade to Pro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Unlock Pilates Pro</ion-card-title>
+      <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Pro unlocks full condition coverage, apparatus-specific safety guidance, curated programs, instructor notes, and AI-assisted custom concern support.</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Choose your plan</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="plan-grid">
+      <ion-button expand="block" fill="solid" (click)="purchaseMonthly()" [disabled]="isProcessing">Monthly • $9.99</ion-button>
+      <ion-button expand="block" fill="outline" (click)="purchaseAnnual()" [disabled]="isProcessing">Annual • $59.99</ion-button>
+      <ion-button expand="block" fill="clear" (click)="purchaseLifetime()" [disabled]="isProcessing">Lifetime • $89.99</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Restore purchase</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,6 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { Capacitor } from '@capacitor/core';
 import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult, Program } from '../models';
 import { environment } from '../../environments/environment';
 import safetyConditionsData from '../../assets/data/safety-conditions.json' with { type: 'json' };
@@ -243,11 +244,19 @@ export class SafetyService {
   }
 
   private getAiProvider(): AiProvider {
+    if (this.isAndroidNoAi()) {
+      return 'none';
+    }
+
     const provider = (environment as { aiProvider?: string }).aiProvider?.trim().toLowerCase();
     if (provider === 'local' || provider === 'none') {
       return provider;
     }
     return 'none';
+  }
+
+  private isAndroidNoAi(): boolean {
+    return Capacitor.getPlatform() === 'android';
   }
 
   private isAiConfigured(provider: AiProvider): boolean {

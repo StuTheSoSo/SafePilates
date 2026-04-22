@@ -22,6 +22,28 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    packagingOptions {
+        excludes += [
+            "assets/public/assets/models/**",
+            "assets/public/assets/onnx/**",
+            "assets/public/assets/transformers/**"
+        ]
+    }
+}
+
+afterEvaluate {
+    tasks.matching { task ->
+        task.name == 'mergeReleaseAssets' ||
+        task.name == 'processReleaseAssets' ||
+        task.name == 'packageRelease' ||
+        task.name == 'bundleRelease'
+    }.configureEach { task ->
+        task.doFirst {
+            delete fileTree("${projectDir}/src/main/assets/public/assets/models")
+            delete fileTree("${projectDir}/src/main/assets/public/assets/onnx")
+            delete fileTree("${projectDir}/src/main/assets/public/assets/transformers")
+        }
+    }
 }
 
 repositories {

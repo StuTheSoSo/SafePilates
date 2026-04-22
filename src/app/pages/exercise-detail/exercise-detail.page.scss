@@ -44,12 +44,13 @@
 // Section headers and dividers for major blocks (match results page)
 .section-header {
   @extend .h2;
-  padding: 0.3rem 0 0.2rem 0.1rem;
+  padding: 0.3rem 0 0 0.1rem;
   background: linear-gradient(90deg, var(--sp-card-end) 0%, transparent 100%);
   border-radius: 8px 8px 0 0;
-  margin-bottom: 0.2rem;
-  margin-top: 1.2rem;
+  margin-bottom: 0;
   letter-spacing: 0.01em;
+  padding-right: 0.5em;
+  padding-left: 0.25em;
 }
 .section-content {
   background: rgba(var(--ion-color-light-rgb), 0.13);

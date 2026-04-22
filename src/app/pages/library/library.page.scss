@@ -29,6 +29,10 @@ ion-card {
   overflow: hidden;
 }
 
+.exercise-card--locked {
+  cursor: pointer;
+}
+
 .premium-card-flag {
   position: absolute;
   top: 0.85rem;

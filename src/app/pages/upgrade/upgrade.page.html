@@ -8,33 +8,94 @@
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Unlock Pilates Pro</ion-card-title>
-      <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <p>Pro unlocks full condition coverage, apparatus-specific safety guidance, curated programs, instructor notes, and AI-assisted custom concern support.</p>
-    </ion-card-content>
-  </ion-card>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Choose your plan</ion-card-title>
-    </ion-card-header>
-    <ion-card-content class="plan-grid">
-      <ion-button expand="block" fill="solid" (click)="purchaseMonthly()" [disabled]="isProcessing">Monthly • $9.99</ion-button>
-      <ion-button expand="block" fill="outline" (click)="purchaseAnnual()" [disabled]="isProcessing">Annual • $59.99</ion-button>
-      <ion-button expand="block" fill="clear" (click)="purchaseLifetime()" [disabled]="isProcessing">Lifetime • $89.99</ion-button>
-    </ion-card-content>
-  </ion-card>
+  <!-- Already premium -->
+  <ng-container *ngIf="hasPremium">
+    <ion-card class="active-card">
+      <ion-card-header>
+        <ion-card-title>Pro is active ✓</ion-card-title>
+        <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>You have full access to all Pilates Pro features — condition coverage, apparatus guidance, curated programs, instructor notes, and AI-assisted support.</p>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Restore purchase</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Restore purchase</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
-    </ion-card-content>
-  </ion-card>
+  <!-- Not yet premium -->
+  <ng-container *ngIf="!hasPremium">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Unlock Pilates Pro</ion-card-title>
+        <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="features-list">
+          <li>Full coverage of 60+ health conditions</li>
+          <li>Apparatus-specific safety guidance (Reformer, Cadillac, Chair, Barrel)</li>
+          <li>Detailed instructor notes and professional cueing</li>
+          <li>Curated safe programs for complex conditions</li>
+          <li>AI-assisted guidance for unlisted client concerns</li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Choose your plan</ion-card-title>
+      </ion-card-header>
+      <ion-card-content class="plan-grid">
+
+        <div class="plan-card">
+          <ion-button expand="block" fill="outline" (click)="purchaseMonthly()" [disabled]="isProcessing">
+            <span class="plan-label">Monthly</span>
+            <span class="plan-price" *ngIf="monthlyPrice">{{ monthlyPrice }}</span>
+            <ion-spinner *ngIf="!monthlyPrice" name="dots" slot="end"></ion-spinner>
+          </ion-button>
+        </div>
+
+        <div class="plan-card plan-card--featured">
+          <div class="plan-badge">Best value</div>
+          <ion-button expand="block" fill="solid" (click)="purchaseAnnual()" [disabled]="isProcessing">
+            <span class="plan-label">Annual</span>
+            <span class="plan-price" *ngIf="annualPrice">{{ annualPrice }}</span>
+            <ion-spinner *ngIf="!annualPrice" name="dots" slot="end"></ion-spinner>
+          </ion-button>
+          <p class="plan-saving">Save ~58% vs monthly</p>
+        </div>
+
+        <div class="plan-card">
+          <ion-button expand="block" fill="clear" (click)="purchaseLifetime()" [disabled]="isProcessing">
+            <span class="plan-label">Lifetime</span>
+            <span class="plan-price" *ngIf="lifetimePrice">{{ lifetimePrice }}</span>
+            <ion-spinner *ngIf="!lifetimePrice" name="dots" slot="end"></ion-spinner>
+          </ion-button>
+          <p class="plan-saving">One-time purchase, pay once forever</p>
+        </div>
+
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Already purchased?</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <div class="legal-note">
+    Prices are set in your local currency. Subscriptions renew automatically. Cancel anytime in your device settings.
+  </div>
+
 </ion-content>

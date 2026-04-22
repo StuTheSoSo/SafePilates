@@ -1,6 +1,71 @@
 .plan-grid {
   display: grid;
-  gap: 1rem;
+  gap: 1.25rem;
+}
+
+.plan-card {
+  position: relative;
+}
+
+.plan-card--featured {
+  ion-button {
+    --border-width: 2px;
+    font-size: 1.08rem;
+  }
+}
+
+.plan-badge {
+  display: inline-block;
+  margin-bottom: 0.4rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ffb33f 0%, #ff7d00 100%);
+  color: #141414;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(255, 125, 0, 0.3);
+}
+
+.plan-saving {
+  margin: 0.3rem 0 0 0.25rem;
+  font-size: 0.85rem;
+  color: var(--sp-ink-3, #888);
+}
+
+ion-button .plan-label {
+  flex: 1;
+  text-align: left;
+}
+
+ion-button .plan-price {
+  font-weight: 700;
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+.features-list {
+  padding-left: 1.2rem;
+  margin: 0;
+  li {
+    margin-bottom: 0.55rem;
+    font-size: 0.98rem;
+    line-height: 1.5;
+  }
+}
+
+.active-card {
+  border-left: 4px solid var(--ion-color-success, #2dd36f);
+}
+
+.legal-note {
+  margin-top: 1.5rem;
+  padding: 0 0.5rem;
+  font-size: 0.78rem;
+  color: var(--sp-ink-3, #999);
+  text-align: center;
+  line-height: 1.5;
 }
 
 ion-card {

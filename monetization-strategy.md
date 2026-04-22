@@ -1,5 +1,20 @@
 # PilateSafe — Monetization Strategy
 
+## Pricing (set in App Store Connect / Google Play Console)
+
+These are the target prices. The app fetches real `priceString` values from RevenueCat at runtime — no hardcoded prices in the UI.
+
+| Plan | Product ID | Price | Notes |
+|---|---|---|---|
+| Monthly | `pilatesafe_monthly` | $19.99/mo | Entry point |
+| Annual | `pilatesafe_annual` | $99.99/yr | ~$8.33/mo, saves 58% vs monthly |
+| Lifetime | `pilatesafe_lifetime` | $249.99 | One-time, ~2.5× annual |
+
+**Rationale:** Target audience is professional Pilates instructors ($80–150/session). This is a professional tool, not a consumer app. Lifetime at $249.99 is still less than two client sessions and represents high perceived value for long-term practitioners.
+
+---
+
+
 ## What this app actually is
 
 PilateSafe is a **Pilates safety assistant for instructors and health-conscious teachers**. The core flow is:

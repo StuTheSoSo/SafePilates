@@ -35,7 +35,7 @@
   </ion-card>
 
   <ng-container *ngIf="guidance; else justAi">
-    <ng-container *ngIf="hasResults; else justAi">
+    <ng-container *ngIf="hasResults">
       <div class="condition-list">
         <ion-card class="condition-card" *ngFor="let condition of guidance.conditionResults">
           <ion-card-header>
@@ -110,16 +110,19 @@
       </div>
     </ng-container>
 
+    <ng-container *ngIf="guidance.aiFallback">
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>AI guidance</ion-card-title>
+          <ion-card-subtitle *ngIf="!hasResults">Generated for unlisted or unmatched health concerns when local guidance is unavailable.</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="ai-text">{{ guidance.aiFallback }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ng-container>
 
-    <ion-card *ngIf="guidance.aiFallback">
-      <ion-card-header>
-        <ion-card-title>Additional guidance</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <p class="ai-text">{{ guidance.aiFallback }}</p>
-      </ion-card-content>
-    </ion-card>
-    <div class="professional-note">
+    <div class="professional-note" *ngIf="guidance.aiFallback">
       If symptoms persist or you are unsure, consult a qualified clinician before progressing.
     </div>
   </ng-container>

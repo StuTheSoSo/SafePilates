@@ -32,6 +32,7 @@ export class ResultsPage implements OnInit {
 
   private refreshGuidance() {
     this.guidance = this.safetyService.getGuidance();
+    console.log('ResultsPage.refreshGuidance', { guidance: this.guidance });
     this.loadConditionNotes();
   }
 

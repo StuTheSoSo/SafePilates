@@ -212,8 +212,19 @@ export class SafetyService {
     const aiAvailable = this.isAiConfigured(aiProvider);
     const aiUsed = noLocalData && aiAvailable;
 
+    console.log('SafetyService.fetchGuidance', {
+      selectedConditions: selectedConditions.map(c => c.id),
+      inferredConditions: inferredConditions.map(c => c.id),
+      conditionResultsCount: conditionResults.length,
+      noLocalData,
+      aiProvider,
+      aiAvailable,
+      queryOther: otherText
+    });
+
     if (noLocalData) {
       aiFallback = await this.getAiFallback(aiProvider, query, selectedConditions, aiAvailable);
+      console.log('SafetyService.fetchGuidance AI fallback result', { aiFallback });
     }
 
     const result: GuidanceResult = {
@@ -273,7 +284,9 @@ export class SafetyService {
       const otherText = (query.otherText || '').trim();
       if (otherText && this.shouldUseHeuristicForOther(otherText) && !this.isAiConfigured(provider)) {
         localStorage.setItem(countKey, String(currentCount + 1));
-        return this.buildHeuristicGuidance(query, selectedConditions);
+        const fallbackText = this.buildHeuristicGuidance(query, selectedConditions);
+        console.log('SafetyService.requestAiFallback using heuristic because AI is not configured', { fallbackText });
+        return fallbackText;
       }
 
       const promptText =
@@ -281,10 +294,14 @@ export class SafetyService {
           ? this.buildLocalAiPrompt(query, selectedConditions)
           : this.buildAiPrompt(query, selectedConditions);
 
+      console.log('SafetyService.requestAiFallback prompt', { provider, promptText });
+
       const aiText =
         provider === 'local'
           ? await this.requestLocalOnDevice(promptText, query, selectedConditions)
           : 'AI fallback is disabled. Please consult a qualified professional for guidance.';
+
+      console.log('SafetyService.requestAiFallback result', { aiText });
 
       localStorage.setItem(countKey, String(currentCount + 1));
       return aiText;
@@ -839,7 +856,7 @@ export class SafetyService {
   private async getLocalPipeline(modelId: string, modelBasePath: string, wasmBasePath: string): Promise<any> {
     if (!this.localPipelinePromise) {
       this.localPipelinePromise = (async () => {
-        const transformersUrl = `${window.location.origin}/assets/transformers/transformers.web.js`;
+        const transformersUrl = `${window.location.origin}/assets/transformers/transformers.js`;
         const importedModule: any = await import(/* webpackIgnore: true */ transformersUrl);
         const transformers: any = importedModule.default ?? importedModule;
         const env = transformers.env;
@@ -892,10 +909,10 @@ CRITICAL SAFETY RULES — NEVER BREAK THESE:
 - ALWAYS begin the response with this exact bold disclaimer on its own line:
 **⚠️ IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.**
 - Do NOT diagnose conditions, prescribe specific rehabilitation exercises, or give individualized medical recommendations.
-- If the selected concern is "Other," stay general, refer to symptoms or movement risks, and recommend professional clearance.
-- If the user's text suggests a likely category such as respiratory, digestive, neurological, or musculoskeletal, use that category to shape safer, more relevant guidance.
+- Treat any unlisted or "Other" concern as a symptom-based general guidance request.
+- Use the user’s text to infer the likely system or movement risk (for example respiratory, digestive, neurological, joint, pelvic, or cardiovascular) and shape guidance around safe Pilates practice.
+- If the concern is unclear, vague, or may be serious, keep recommendations conservative and urge professional clearance.
 - Keep the response concise (under 350 words) with short headings and bullet points for mobile readability.
-- If the issue is unclear, rare, or potentially serious, say so and urge the user to consult a qualified healthcare professional.
 
 ${conditionSummary || 'No listed conditions provided.'}
 
@@ -917,7 +934,7 @@ Keep the answer educational, clear, and non-prescriptive.`;
     // Keep this short: tiny on-device models are easily derailed by long “system” prompts.
     const listedConditions = selectedConditions.filter(condition => condition.id !== 'other');
     const listedNames = listedConditions.map(c => c.label).join(', ');
-    const other = (query.otherText?.trim() || '').slice(0, 120);
+    const other = (query.otherText?.trim() || '').slice(0, 180);
     const trimester = query.pregnancyTrimester ? `Pregnancy trimester: ${query.pregnancyTrimester}.` : '';
 
     const input = [
@@ -936,6 +953,8 @@ IMPORTANT: This is general educational information only and is NOT a substitute 
 
 Context: ${input || 'No details provided.'}
 ${inferredHint ? `Likely concern type: ${inferredHint}` : ''}
+
+If this is an unlisted concern, use the text to infer the general system or movement risk and keep the advice conservative.
 
 Now write the guidance with EXACTLY these headings and 2–4 bullet points each:
 

@@ -43,38 +43,42 @@
     </ion-note>
 
     <div *ngIf="!loading && filteredGroupedConditions.length > 0" class="condition-groups">
-      <ion-card *ngFor="let group of filteredGroupedConditions" class="condition-group">
+      <ion-card *ngFor="let group of filteredGroupedConditions; trackBy: trackByGroup" class="condition-group">
         <div class="group-header">
           <h3>{{ group.label }}</h3>
           <p *ngIf="group.subtitle">{{ group.subtitle }}</p>
         </div>
         <div class="condition-grid">
-          <ion-chip *ngFor="let condition of group.conditions"
-                    [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
-                    [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
-                    [class.selected]="selectedIds.has(condition.id)"
-                    (click)="toggleCondition(condition.id)"
-                    class="condition-chip">
-            <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
-            <ion-label>
-              {{ condition.label }}
-              <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
-                ({{ pregnancyTrimester }} trimester)
-              </span>
-            </ion-label>
-          </ion-chip>
+          <ng-container *ngFor="let condition of group.conditions; trackBy: trackByCondition">
+            <ion-chip
+              [fill]="selectedIds.has(condition.id) ? 'solid' : 'outline'"
+              [color]="selectedIds.has(condition.id) ? 'primary' : 'medium'"
+              [class.selected]="selectedIds.has(condition.id)"
+              (click)="toggleCondition(condition.id)"
+              class="condition-chip">
+              <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
+              <ion-label>
+                {{ condition.label }}
+                <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
+                  ({{ pregnancyTrimester }} trimester)
+                </span>
+              </ion-label>
+            </ion-chip>
+
+            <div *ngIf="condition.id === 'other' && selectedIds.has('other')" class="other-details">
+              <ion-item>
+                <ion-label position="stacked">Other concern details</ion-label>
+                <ion-textarea [value]="otherText" (ionInput)="otherText = $event.detail.value" placeholder="Briefly describe the concern"></ion-textarea>
+              </ion-item>
+
+              <ion-note *ngIf="!otherText.trim()" color="warning" class="other-note">
+                Please describe the client’s concern so you can review it safely.
+              </ion-note>
+            </div>
+          </ng-container>
         </div>
       </ion-card>
     </div>
-
-    <ion-item *ngIf="hasOther">
-      <ion-label position="stacked">Other concern details</ion-label>
-      <ion-textarea [(ngModel)]="otherText" placeholder="Briefly describe the concern"></ion-textarea>
-    </ion-item>
-
-    <ion-note *ngIf="hasOther && !otherText.trim()" color="warning" class="other-note">
-      Please describe the client’s concern so you can review it safely.
-    </ion-note>
 
     <ion-card>
       <ion-card-header>

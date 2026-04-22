@@ -379,6 +379,14 @@ export class HomePage implements OnInit {
     this.showTrimesterModal = false;
   }
 
+  trackByGroup(_: number, group: { label: string }): string {
+    return group.label;
+  }
+
+  trackByCondition(_: number, condition: Condition): string {
+    return condition.id;
+  }
+
   getFeaturedExercises(category: string): Exercise[] {
     return this.allExercises.filter(exercise => exercise.category === category).slice(0, 4);
   }

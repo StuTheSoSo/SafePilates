@@ -237,6 +237,14 @@ ion-button:hover, ion-chip:hover {
   align-items: stretch;
 }
 
+.other-details {
+  grid-column: 1 / -1;
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
 .condition-chip {
   display: flex;
   align-items: center;

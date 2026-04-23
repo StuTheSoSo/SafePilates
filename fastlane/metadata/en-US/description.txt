@@ -1,0 +1,30 @@
+PilateSafe helps Pilates instructors and practitioners select safe exercises and modifications for clients with health conditions, injuries, or physical limitations.
+
+Choose from a comprehensive library of classical mat Pilates exercises. Select one or more health concerns — from back pain and joint conditions to cardiovascular conditions, neurological disorders, and post-surgical recovery — and instantly see which exercises are safe, which to avoid, and how to adapt each movement for that client.
+
+KEY FEATURES
+
+• Exercise library — Browse the full classical mat Pilates repertoire with difficulty levels, focus areas, key cues, and safety notes for each exercise.
+
+• Health condition guidance — Select from 60+ health conditions and get tailored safety advice, contraindications, and movement modifications specific to each concern.
+
+• Multi-condition support — Layer multiple health concerns at once and see combined guidance that accounts for all selected conditions simultaneously.
+
+• Offline-first — All exercise data and condition guidance is stored locally on device. No internet connection required.
+
+• Privacy-first — No personal data is collected or transmitted. Your selected conditions stay on your device.
+
+• Clean, fast interface — Built for busy teaching environments. Results load instantly with no account or login required.
+
+MEDICAL DISCLAIMER
+
+PilateSafe is NOT a medical device and does not diagnose, treat, cure, or prevent any medical condition. It provides general educational fitness information only and is NOT a substitute for professional medical advice, diagnosis, or treatment. Always consult the client's physician, physical therapist, or qualified healthcare provider before starting, modifying, or continuing any exercise program — especially when health conditions are present. Users and instructors must not rely solely on this app when making decisions about an individual's exercise program or health management. If the client experiences pain, dizziness, shortness of breath, or any adverse symptoms during exercise, stop immediately and seek professional medical assistance.
+
+DESIGNED FOR
+
+• Pilates instructors working with diverse or medically complex clients
+• Fitness professionals seeking structured contraindication reference
+• Rehab practitioners integrating Pilates into client programs
+• Anyone exploring safe Pilates practice with a health condition
+
+PilateSafe is an educational reference tool. It does not replace clinical judgment or professional medical advice.

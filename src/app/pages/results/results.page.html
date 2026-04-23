@@ -142,14 +142,5 @@
     </ion-card>
   </ng-template>
 
-  <ion-card *ngIf="guidance" class="debug-card">
-    <ion-card-header>
-      <ion-card-title>Debug: guidance object</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <pre>{{ guidance | json }}</pre>
-    </ion-card-content>
-  </ion-card>
-
   <ion-button expand="block" class="results-action" (click)="viewAgain()">Check another concern</ion-button>
 </ion-content>

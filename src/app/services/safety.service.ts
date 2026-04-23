@@ -25,24 +25,36 @@ export class SafetyService {
   private latestGuidance: GuidanceResult | null = null;
   public librarySearchTerm = '';
   private readonly freeConditionIds = new Set<string>([
+    // Musculoskeletal — core studio concerns
     'low_back_pain',
     'osteoporosis',
-    'pregnancy',
-    'postpartum',
-    'arthritis',
-    'knee_issues',
     'scoliosis',
     'disc_degeneration',
-    'rotator_cuff_injury',
+    'arthritis',
+    'knee_issues',
+    'hip_issues',           // consistent with hip_replacement
     'hip_replacement',
-    'hypertension',
-    'obesity',
-    'chronic_fatigue',
-    'respiratory',
-    'vertigo_dizziness',
-    'balance_issues',
+    'rotator_cuff_injury',
+    'shoulder_instability', // consistent with rotator_cuff_injury
+    'neck_shoulder',        // one of the most common studio complaints
     'plantar_fasciitis',
+    'balance_issues',
+    'vertigo_dizziness',
+    // Pregnancy / women's health — always co-occur
+    'pregnancy',
+    'postpartum',
+    'pelvic_floor_dysfunction', // almost always co-occurs with postpartum
+    'diastasis_recti',          // almost always co-occurs with postpartum
+    // Chronic / cardiovascular — basic safety awareness
+    'hypertension',
+    'cardiovascular_disease', // consistent with hypertension
+    'diabetes',
+    'respiratory',
+    'chronic_fatigue',
     'weight_concerns',
+    // Mental / cognitive — common in older clients
+    'mental_cognitive',
+    // Open-ended
     'other'
   ]);
 

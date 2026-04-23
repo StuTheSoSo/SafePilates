@@ -133,10 +133,23 @@ This is a professional Pilates tool with an offline-first safety focus, so posit
 
 ## RevenueCat setup checklist
 
-- [ ] Create entitlement: `premium`
-- [ ] Create products: `pilatesafe_monthly`, `pilatesafe_annual`, `pilatesafe_lifetime`
-- [ ] Add RevenueCat keys to `src/environments/environment.ts` and `src/environments/environment.prod.ts`
-- [ ] Install `@revenuecat/purchases-capacitor` and run `npm install && npx cap sync`
+### Blocking — nothing will work without these
+
+- [ ] **Replace placeholder API keys** in `src/environments/environment.ts` and `src/environments/environment.prod.ts` (iOS: `appl_...`, Android: `goog_...`)
+- [ ] **Create products** in App Store Connect / Google Play Console matching product IDs: `pilatesafe_monthly`, `pilatesafe_annual`, `pilatesafe_lifetime`
+- [ ] **Configure the RevenueCat dashboard** — create a project, add the app(s), create an entitlement named exactly `premium`, and attach the three products to offerings
+
+### Native / build steps
+
+- [ ] **Run `npx cap sync`** — syncs the Capacitor plugin native bridge into iOS/Android projects
+- [ ] **iOS:** add `NSUserTrackingUsageDescription` to `Info.plist` for iOS 14+ (and SKAdNetwork keys if using attribution)
+- [ ] **Android:** confirm `uses-permission android:name="com.android.vending.BILLING"` is in `AndroidManifest.xml` (the plugin usually adds it; verify after `cap sync`)
+
+### Nice-to-haves (not blocking for launch)
+
+- [ ] **User identification** — call `Purchases.logIn(userId)` after auth if accounts are added, so purchases follow the user across devices (currently anonymous/device-scoped)
+- [ ] **Webhook / server-side validation** — configure a RevenueCat webhook to POST purchase events to a backend endpoint for fraud protection
+- [ ] **Sandbox testing** — create a StoreKit sandbox account (iOS) or Google Play test account to verify the full purchase → entitlement → unlock flow before submitting
 
 ---
 

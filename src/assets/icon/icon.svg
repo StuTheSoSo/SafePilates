@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="PilateSafe app icon">
-  <rect width="512" height="512" rx="96" fill="#f3ede5"/>
-  <g fill="none" stroke="#697969" stroke-width="27" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="148" cy="175" r="28"/>
-    <path d="M 148 203 C 85 300 88 388 178 415"/>
-    <line x1="178" y1="415" x2="435" y2="95"/>
-  </g>
-</svg>

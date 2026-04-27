@@ -63,9 +63,9 @@
                 <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
                   ({{ pregnancyTrimester }} trimester)
                 </span>
-                <span *ngIf="safetyService.isConditionPremium(condition.id)" class="pro-badge">Pro</span>
+                <span *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" class="pro-badge">Pro</span>
               </ion-label>
-              <ion-icon *ngIf="safetyService.isConditionPremium(condition.id)" slot="end" name="lock-closed" class="premium-lock"></ion-icon>
+              <ion-icon *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" slot="end" name="lock-closed" class="premium-lock"></ion-icon>
             </ion-chip>
 
             <div *ngIf="condition.id === 'other' && selectedIds.has('other')" class="other-details">

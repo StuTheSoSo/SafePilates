@@ -15,6 +15,8 @@ export interface RevenueCatCustomerInfo {
   [key: string]: any;
 }
 
+export const ENTITLEMENT_ID = 'PilateSafe Pro';
+
 @Injectable({ providedIn: 'root' })
 export class RevenueCatService {
   private purchases: any | null = null;
@@ -71,7 +73,7 @@ export class RevenueCatService {
     }
   }
 
-  isEntitlementActive(entitlementId = 'premium'): boolean {
+  isEntitlementActive(entitlementId = ENTITLEMENT_ID): boolean {
     return !!this.entitlements[entitlementId];
   }
 
@@ -157,7 +159,7 @@ export class RevenueCatService {
       }
     }
 
-    this.premiumActive$.next(this.isEntitlementActive('premium'));
+    this.premiumActive$.next(this.isEntitlementActive(ENTITLEMENT_ID));
   }
 
   private isReady(): boolean {

@@ -69,5 +69,5 @@
     </ion-row>
   </ion-grid>
 
-  <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
+  <app-premium-banner *ngIf="!hasPremiumAccess" (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
 </ion-content>

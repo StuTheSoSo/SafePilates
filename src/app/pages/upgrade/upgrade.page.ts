@@ -1,13 +1,13 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ToastController, LoadingController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
-import { RevenueCatService, RevenueCatProduct } from '../../services/revenueCat.service';
+import { RevenueCatService, RevenueCatProduct, ENTITLEMENT_ID } from '../../services/revenueCat.service';
 
 const PRODUCT_IDS = {
-  monthly: 'pilatesafe_monthly',
-  annual: 'pilatesafe_annual',
-  lifetime: 'pilatesafe_lifetime',
+  monthly: 'com.pilatesafe.app.monthly',
+  annual: 'com.pilatesafe.app.yearly',
+  lifetime: 'com.pilatesafe.app.life',
 } as const;
 
 const FALLBACK_PRICES: Record<string, string> = {
@@ -32,6 +32,8 @@ export class UpgradePage implements OnInit {
   prices: Record<string, string> = { ...FALLBACK_PRICES };
 
   private revenueCatService = inject(RevenueCatService);
+  private toastCtrl = inject(ToastController);
+  private loadingCtrl = inject(LoadingController);
 
   async ngOnInit() {
     await this.revenueCatService.init();
@@ -44,7 +46,7 @@ export class UpgradePage implements OnInit {
   }
 
   private syncPremiumState() {
-    this.hasPremium = this.revenueCatService.isEntitlementActive('premium');
+    this.hasPremium = this.revenueCatService.isEntitlementActive(ENTITLEMENT_ID);
     this.statusMessage = this.hasPremium
       ? 'You have active Pro access.'
       : 'Unlock Pro to access full Pilates safety guidance.';
@@ -83,34 +85,59 @@ export class UpgradePage implements OnInit {
   async purchaseLifetime() { await this.purchaseProduct(PRODUCT_IDS.lifetime); }
 
   async restorePurchase() {
-    this.isProcessing = true;
+    const loading = await this.loadingCtrl.create({ message: 'Restoring purchases…', spinner: 'crescent' });
+    await loading.present();
     try {
       await this.revenueCatService.restorePurchases();
       this.syncPremiumState();
-      if (!this.hasPremium) {
-        this.statusMessage = 'Restore completed, but no active Pro subscription was found.';
+      if (this.hasPremium) {
+        await this.showToast('Pro access restored!', 'success');
+      } else {
+        await this.showToast('No active Pro subscription found.', 'warning');
       }
     } catch (error) {
       console.warn('Restore error', error);
-      this.statusMessage = 'Restore failed. Please try again or contact support.';
+      await this.showToast('Restore failed. Please try again.', 'danger');
     } finally {
-      this.isProcessing = false;
+      await loading.dismiss();
     }
   }
 
   private async purchaseProduct(productId: string) {
+    const loading = await this.loadingCtrl.create({ message: 'Processing…', spinner: 'crescent' });
+    await loading.present();
     this.isProcessing = true;
     try {
       await this.revenueCatService.purchaseProduct(productId);
       this.syncPremiumState();
-      if (!this.hasPremium) {
-        this.statusMessage = 'Purchase complete but Pro access was not detected. Try restoring purchases.';
+      if (this.hasPremium) {
+        await this.showToast('Welcome to Pro! 🎉', 'success');
+      } else {
+        await this.showToast('Purchase complete — try Restore if Pro is not active.', 'warning');
       }
-    } catch (error) {
+    } catch (error: any) {
       console.warn('Purchase failed', error);
-      this.statusMessage = 'Purchase failed. Please try again or contact support.';
+      // User-cancelled purchases throw with a specific code — don't show an error toast for those.
+      const cancelled = error?.code === 'PURCHASE_CANCELLED' ||
+                        error?.userCancelled === true ||
+                        String(error?.message ?? '').toLowerCase().includes('cancel');
+      if (!cancelled) {
+        await this.showToast('Purchase failed. Please try again.', 'danger');
+      }
     } finally {
+      await loading.dismiss();
       this.isProcessing = false;
     }
+  }
+
+  private async showToast(message: string, color: 'success' | 'warning' | 'danger') {
+    const toast = await this.toastCtrl.create({
+      message,
+      duration: 3500,
+      position: 'bottom',
+      color,
+      buttons: [{ icon: 'close', role: 'cancel' }]
+    });
+    await toast.present();
   }
 }

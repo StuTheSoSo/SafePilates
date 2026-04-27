@@ -143,4 +143,8 @@ export class LibraryPage implements OnInit {
   navigateToUpgrade() {
     this.router.navigateByUrl('/upgrade');
   }
+
+  get hasPremiumAccess(): boolean {
+    return this.safetyService.isPremiumActive();
+  }
 }

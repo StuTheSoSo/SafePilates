@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 1024px;
+      height: 1024px;
+      overflow: hidden;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    .canvas {
+      width: 1024px;
+      height: 1024px;
+      position: relative;
+      /* Matches the feature graphic deep-purple gradient */
+      background: linear-gradient(160deg, #5b3fbe 0%, #7c5ce8 35%, #8b6aed 55%, #9b85f5 75%, #b8a0ff 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Soft noise/depth overlay */
+    .canvas::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 700px 500px at 50% 0%, rgba(255,255,255,0.12) 0%, transparent 65%),
+        radial-gradient(ellipse 500px 400px at 100% 100%, rgba(100, 60, 200, 0.35) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    /* ---- App icon area ---- */
+    .icon-wrap {
+      position: relative;
+      z-index: 2;
+      margin-top: 104px;
+      width: 248px;
+      height: 248px;
+      border-radius: 56px;
+      background: linear-gradient(145deg, #90cdf4 0%, #7f7fff 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow:
+        0 32px 80px rgba(60, 20, 140, 0.45),
+        0 0 0 6px rgba(255,255,255,0.18),
+        0 0 0 1px rgba(255,255,255,0.08);
+    }
+
+    /* ---- Stars scattered ---- */
+    .star {
+      position: absolute;
+      z-index: 1;
+      border-radius: 50%;
+      background: #fff;
+      opacity: 0;
+      animation: twinkle 3s ease-in-out infinite;
+    }
+
+    /* ---- Text block ---- */
+    .text-area {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      margin-top: 48px;
+      padding: 0 60px;
+    }
+
+    .pro-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.30);
+      color: #ffffff;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      padding: 8px 22px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .pro-pill .star-icon {
+      font-size: 13px;
+    }
+
+    .app-name {
+      font-size: 96px;
+      font-weight: 900;
+      color: #ffffff;
+      letter-spacing: -3px;
+      line-height: 1;
+      margin-bottom: 18px;
+      text-shadow: 0 4px 24px rgba(60, 20, 140, 0.3);
+    }
+
+    .tagline {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.72);
+      letter-spacing: 0.5px;
+      line-height: 1.4;
+      margin-bottom: 52px;
+    }
+
+    /* ---- Feature pills row ---- */
+    .features {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .feat-pill {
+      background: rgba(255,255,255,0.14);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.22);
+      color: #ffffff;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+<div class="canvas">
+
+  <!-- Background decorative circles matching icon gradient -->
+  <svg style="position:absolute;top:0;left:0;width:1024px;height:1024px;pointer-events:none;z-index:1" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="512" cy="512" r="480" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1.5"/>
+    <circle cx="512" cy="512" r="430" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    <!-- Sparkle dots -->
+    <circle cx="140" cy="210" r="3.5" fill="rgba(255,255,255,0.55)"/>
+    <circle cx="190" cy="170" r="2"   fill="rgba(255,255,255,0.35)"/>
+    <circle cx="108" cy="280" r="2"   fill="rgba(255,255,255,0.30)"/>
+    <circle cx="880" cy="190" r="4"   fill="rgba(255,255,255,0.50)"/>
+    <circle cx="920" cy="240" r="2"   fill="rgba(255,255,255,0.30)"/>
+    <circle cx="860" cy="290" r="2.5" fill="rgba(255,255,255,0.40)"/>
+    <circle cx="155" cy="810" r="3"   fill="rgba(255,255,255,0.40)"/>
+    <circle cx="100" cy="860" r="2"   fill="rgba(255,255,255,0.25)"/>
+    <circle cx="890" cy="820" r="3.5" fill="rgba(255,255,255,0.45)"/>
+    <circle cx="940" cy="880" r="2"   fill="rgba(255,255,255,0.28)"/>
+    <circle cx="512" cy="78"  r="3"   fill="rgba(255,255,255,0.45)"/>
+    <circle cx="480" cy="50"  r="2"   fill="rgba(255,255,255,0.30)"/>
+    <circle cx="544" cy="42"  r="1.5" fill="rgba(255,255,255,0.25)"/>
+    <!-- Cross sparkles -->
+    <path d="M140 210 L140 200 M140 210 L140 220 M130 210 L120 210 M150 210 L160 210" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M880 190 L880 178 M880 190 L880 202 M868 190 L856 190 M892 190 L904 190" stroke="rgba(255,255,255,0.45)" stroke-width="1.5" stroke-linecap="round"/>
+    <path d="M512 78  L512 66  M512 78  L512 90  M500 78  L488 78  M524 78  L536 78"  stroke="rgba(255,255,255,0.40)" stroke-width="1.5" stroke-linecap="round"/>
+  </svg>
+
+  <!-- App icon -->
+  <div class="icon-wrap">
+    <!-- Inline the app SVG mark, scaled to fit 248px container -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="192" height="192">
+      <defs>
+        <linearGradient id="shield2" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ffffff" stop-opacity="0.97"/>
+          <stop offset="100%" stop-color="#d9e8ff" stop-opacity="0.97"/>
+        </linearGradient>
+        <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#3a1fa0" flood-opacity="0.20"/>
+        </filter>
+      </defs>
+      <g transform="translate(256 160)">
+        <path d="M0 0c-56 24-96 68-96 118 0 87 96 152 96 152s96-65 96-152c0-50-40-94-96-118z"
+              fill="url(#shield2)" stroke="rgba(255,255,255,0.7)" stroke-width="10"
+              filter="url(#shadow2)"/>
+        <path d="M-16 12c0 0-18 26-18 42 0 14 10 24 18 28h32c8-4 18-14 18-28 0-16-18-42-18-42z"
+              fill="#7f7fff"/>
+        <circle cx="0" cy="-28" r="26" fill="#7f7fff"/>
+        <path d="M-46 18c22-20 58-20 92 0" fill="none" stroke="#7f7fff" stroke-width="16" stroke-linecap="round"/>
+        <path d="M-18 58c0 12 10 20 22 20s22-8 22-20" fill="none" stroke="#7f7fff" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+      </g>
+    </svg>
+  </div>
+
+  <!-- Text -->
+  <div class="text-area">
+    <div class="pro-pill"><span class="star-icon">✦</span> PRO UPGRADE</div>
+    <div class="app-name">Safe Pilates</div>
+    <div class="tagline">Professional safety guidance for every client,<br>every condition, every apparatus.</div>
+    <div class="features">
+      <div class="feat-pill">60+ Health Conditions</div>
+      <div class="feat-pill">Reformer &amp; Apparatus</div>
+      <div class="feat-pill">Instructor Notes</div>
+      <div class="feat-pill">Curated Programs</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>

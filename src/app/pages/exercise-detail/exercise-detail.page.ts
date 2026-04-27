@@ -66,9 +66,13 @@ export class ExerciseDetailPage implements OnInit {
 
   ionViewWillEnter() {
     // Called every time Ionic makes this page active — reliable even when component is cached.
-    // Re-check premium state in case the user purchased since last visit.
+    // Re-check premium state and reload content if the user purchased since last visit.
     if (this.exercise) {
       this.hasPremiumExercise = this.safetyService.isExercisePremium(this.exercise);
+      if (!this.hasPremiumExercise || this.hasPremiumAccess) {
+        this.loadConditionWarnings(this.exercise.id);
+        this.exerciseNote = this.safetyService.getExerciseNote(this.exercise.id);
+      }
     }
     this.syncSearchText();
   }

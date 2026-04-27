@@ -4,7 +4,7 @@ import { firstValueFrom } from 'rxjs';
 import { Capacitor } from '@capacitor/core';
 import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult, Program } from '../models';
 import { environment } from '../../environments/environment';
-import { RevenueCatService } from './revenueCat.service';
+import { RevenueCatService, ENTITLEMENT_ID } from './revenueCat.service';
 import safetyConditionsData from '../../assets/data/safety-conditions.json' with { type: 'json' };
 import exercisesData from '../../assets/data/exercises.json' with { type: 'json' };
 import contraindicationsData from '../../assets/data/contraindications.json' with { type: 'json' };
@@ -161,7 +161,7 @@ export class SafetyService {
   }
 
   isPremiumActive(): boolean {
-    return this.revenueCatService.isEntitlementActive('premium');
+    return this.revenueCatService.isEntitlementActive(ENTITLEMENT_ID);
   }
 
   getExerciseGuidanceForSelectedConditions(exerciseId: string): Array<{ conditionId: string; conditionLabel: string; reason: string; alternative: string }> {

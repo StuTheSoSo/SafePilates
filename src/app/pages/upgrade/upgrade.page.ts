@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule, ToastController, LoadingController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
@@ -11,8 +11,8 @@ const PRODUCT_IDS = {
 } as const;
 
 const FALLBACK_PRICES: Record<string, string> = {
-  [PRODUCT_IDS.monthly]: '$19.99/mo',
-  [PRODUCT_IDS.annual]: '$99.99/yr',
+  [PRODUCT_IDS.monthly]: '$9.99/mo',
+  [PRODUCT_IDS.annual]: '$49.99/yr',
   [PRODUCT_IDS.lifetime]: '$249.99',
 };
 
@@ -34,6 +34,7 @@ export class UpgradePage implements OnInit {
   private revenueCatService = inject(RevenueCatService);
   private toastCtrl = inject(ToastController);
   private loadingCtrl = inject(LoadingController);
+  private cdr = inject(ChangeDetectorRef);
 
   async ngOnInit() {
     await this.revenueCatService.init();
@@ -56,23 +57,26 @@ export class UpgradePage implements OnInit {
     try {
       const ids = Object.values(PRODUCT_IDS);
       const products: RevenueCatProduct[] = await this.revenueCatService.getProducts(ids);
+      const updated = { ...this.prices };
       for (const product of products) {
         const display = product.priceString ?? product.price;
         if (display) {
           // Append billing period hint for subscription products.
           if (product.identifier === PRODUCT_IDS.monthly) {
-            this.prices[product.identifier] = `${display}/mo`;
+            updated[product.identifier] = `${display}/mo`;
           } else if (product.identifier === PRODUCT_IDS.annual) {
-            this.prices[product.identifier] = `${display}/yr`;
+            updated[product.identifier] = `${display}/yr`;
           } else {
-            this.prices[product.identifier] = display;
+            updated[product.identifier] = display;
           }
         }
       }
+      this.prices = updated;
     } catch {
       // Keep fallback prices on any error.
     } finally {
       this.pricesLoaded = true;
+      this.cdr.detectChanges();
     }
   }
 

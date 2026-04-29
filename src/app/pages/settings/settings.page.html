@@ -53,5 +53,32 @@
     </ion-list>
   </ion-card>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Account</ion-card-title>
+      <ion-card-subtitle>Used to restore your subscription across devices.</ion-card-subtitle>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-input
+          type="email"
+          placeholder="your@email.com"
+          [(ngModel)]="emailInput"
+          [disabled]="isSavingEmail"
+          autocomplete="email"
+          inputmode="email"
+          clearInput>
+        </ion-input>
+      </ion-item>
+      <div *ngIf="savedEmail" class="email-saved-note">
+        Saved: {{ savedEmail }}
+      </div>
+      <ion-button expand="block" (click)="saveEmail()" [disabled]="isSavingEmail" class="ion-margin-top">
+        <ion-spinner *ngIf="isSavingEmail" name="dots" slot="start"></ion-spinner>
+        {{ savedEmail ? 'Update Email' : 'Save Email' }}
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+
   <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
 </ion-content>

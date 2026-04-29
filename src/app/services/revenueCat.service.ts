@@ -126,6 +126,20 @@ export class RevenueCatService {
     return result;
   }
 
+  async logIn(appUserId: string): Promise<void> {
+    if (!this.purchases || !this.isReady()) {
+      return;
+    }
+    if (typeof this.purchases.logIn !== 'function') {
+      return;
+    }
+    const result = await this.purchases.logIn({ appUserID: appUserId });
+    const customerInfo = result?.customerInfo ?? result;
+    if (customerInfo) {
+      this.updateEntitlements(customerInfo);
+    }
+  }
+
   async getProducts(productIdentifiers: string[]): Promise<RevenueCatProduct[]> {
     if (!this.purchases || !this.isReady()) {
       return [];

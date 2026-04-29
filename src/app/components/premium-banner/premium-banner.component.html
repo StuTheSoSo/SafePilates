@@ -1,4 +1,4 @@
-<div class="premium-banner-container" *ngIf="showBanner">
+<div class="premium-banner-container" *ngIf="showBanner && !hasPremium">
   <div class="premium-banner">
     <div class="premium-badge">GO PREMIUM</div>
 
@@ -15,19 +15,19 @@
         <div class="pricing-plans">
           <div class="plan-tile">
             <div class="plan-label">Monthly</div>
-            <div class="plan-price">$19.99</div>
+            <div class="plan-price">{{ monthlyPrice }}</div>
             <div class="plan-period">/ month</div>
           </div>
           <div class="plan-tile plan-tile--featured">
             <div class="plan-badge">BEST VALUE</div>
             <div class="plan-label">Annual</div>
-            <div class="plan-price">$99.99</div>
+            <div class="plan-price">{{ annualPrice }}</div>
             <div class="plan-period">/ year</div>
             <div class="plan-saving">Save 58%</div>
           </div>
           <div class="plan-tile">
             <div class="plan-label">Lifetime</div>
-            <div class="plan-price">$249.99</div>
+            <div class="plan-price">{{ lifetimePrice }}</div>
             <div class="plan-period">one-time</div>
           </div>
         </div>

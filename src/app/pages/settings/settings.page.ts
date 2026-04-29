@@ -1,9 +1,12 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
+import { IonicModule, ToastController } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
+import { RevenueCatService } from '../../services/revenueCat.service';
+
+const EMAIL_KEY = 'pilatesafe-user-email';
 
 interface ThemeOption {
   label: string;
@@ -19,6 +22,9 @@ interface ThemeOption {
 })
 export class SettingsPage {
   private router = inject(Router);
+  private revenueCatService = inject(RevenueCatService);
+  private toastCtrl = inject(ToastController);
+
   themeOptions: ThemeOption[] = [
     { label: 'Rose (feminine)', value: 'theme-rose' },
     { label: 'Lilac (feminine)', value: 'theme-lilac' },
@@ -26,6 +32,10 @@ export class SettingsPage {
     { label: 'Sage (subtle)', value: 'theme-sage' },
   ];
   selectedTheme = this.normalizeTheme(localStorage.getItem('pilatesafe-theme')) || 'theme-rose';
+
+  savedEmail = localStorage.getItem(EMAIL_KEY) ?? '';
+  emailInput = this.savedEmail;
+  isSavingEmail = false;
 
   constructor() {
     this.applyTheme(this.selectedTheme);
@@ -64,5 +74,28 @@ export class SettingsPage {
 
   navigateToUpgrade() {
     this.router.navigateByUrl('/upgrade');
+  }
+
+  async saveEmail() {
+    const email = this.emailInput.trim().toLowerCase();
+    if (!email || !email.includes('@')) {
+      const toast = await this.toastCtrl.create({ message: 'Please enter a valid email address.', duration: 2500, color: 'warning' });
+      await toast.present();
+      return;
+    }
+    this.isSavingEmail = true;
+    try {
+      await this.revenueCatService.init();
+      await this.revenueCatService.logIn(email);
+      localStorage.setItem(EMAIL_KEY, email);
+      this.savedEmail = email;
+      const toast = await this.toastCtrl.create({ message: 'Account email saved.', duration: 2000, color: 'success' });
+      await toast.present();
+    } catch {
+      const toast = await this.toastCtrl.create({ message: 'Could not save email. Try again later.', duration: 2500, color: 'danger' });
+      await toast.present();
+    } finally {
+      this.isSavingEmail = false;
+    }
   }
 }

@@ -60,6 +60,7 @@
             <span class="plan-price" *ngIf="monthlyPrice">{{ monthlyPrice }}</span>
             <ion-spinner *ngIf="!monthlyPrice" name="dots" slot="end"></ion-spinner>
           </ion-button>
+          <p class="plan-renewal">Auto-renewing monthly subscription</p>
         </div>
 
         <div class="plan-card plan-card--featured">
@@ -70,6 +71,7 @@
             <ion-spinner *ngIf="!annualPrice" name="dots" slot="end"></ion-spinner>
           </ion-button>
           <p class="plan-saving">Save ~58% vs monthly</p>
+          <p class="plan-renewal">Auto-renewing annual subscription</p>
         </div>
 
         <div class="plan-card">
@@ -96,6 +98,7 @@
 
   <div class="legal-note">
     Prices are set in your local currency. Subscriptions renew automatically. Cancel anytime in your device settings.
+    By subscribing you agree to our <a href="https://sites.google.com/view/pilatesaveeula/home" target="_blank" rel="noopener">Terms of Use (EULA)</a> and <a href="https://sites.google.com/view/pilatesafe-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>.
   </div>
 
 </ion-content>

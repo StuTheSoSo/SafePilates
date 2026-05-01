@@ -2,6 +2,8 @@ PilateSafe helps Pilates instructors and practitioners select safe exercises and
 
 Choose from a comprehensive library of classical mat Pilates exercises. Select one or more health concerns — from back pain and joint conditions to cardiovascular conditions, neurological disorders, and post-surgical recovery — and instantly see which exercises are safe, which to avoid, and how to adapt each movement for that client.
 
+This app offers auto-renewable subscriptions. Terms of Use (EULA): https://sites.google.com/view/pilatesaveeula/home | Privacy Policy: https://sites.google.com/view/pilatesafe-privacy/home
+
 KEY FEATURES
 
 • Exercise library — Browse the full classical mat Pilates repertoire with difficulty levels, focus areas, key cues, and safety notes for each exercise.
@@ -35,3 +37,5 @@ PilateSafe Pro is available as a monthly subscription, annual subscription, or o
 
 Terms of Use (EULA): https://sites.google.com/view/pilatesaveeula/home
 Privacy Policy: https://sites.google.com/view/pilatesafe-privacy/home
+
+This listing includes the required Terms of Use link for auto-renewable subscriptions.

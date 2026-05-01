@@ -1,1 +1,6 @@
 This app provides general educational fitness information and exercise safety reference for Pilates practitioners and instructors. It is not medical software and does not diagnose, treat, or prescribe. Users should consult a qualified healthcare professional before making any exercise or health decisions.
+
+Auto-renewable subscriptions are offered. The App Description includes a direct Terms of Use (EULA) link:
+https://sites.google.com/view/pilatesaveeula/home
+and a Privacy Policy link:
+https://sites.google.com/view/pilatesafe-privacy/home

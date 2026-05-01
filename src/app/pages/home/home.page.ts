@@ -2,12 +2,13 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { Router, RouterModule } from '@angular/router';
+import { NavigationEnd, Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
-import { Condition, Exercise } from '../../models';
+import { Condition, Exercise } from '../../models.js';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import exercisesData from '../../../assets/data/exercises.json' with { type: 'json' };
 import safetyConditionsData from '../../../assets/data/safety-conditions.json' with { type: 'json' };
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -35,6 +36,20 @@ export class HomePage implements OnInit {
   initFailed = false;
   showSafetyOverlay = true;
   showTrimesterModal = false;
+
+  constructor(private router: Router) {
+    this.router.events.pipe(
+      filter(event => event instanceof NavigationEnd)
+    ).subscribe(() => {
+      console.log('clearing.........');
+      this.refreshComponent();
+    });
+  }
+
+  refreshComponent() {
+    this.selectedIds.clear();
+    // Reset other properties as needed
+  }
 
   onSearchTextChange(event: CustomEvent) {
     this.searchText = event.detail.value || '';
@@ -195,7 +210,6 @@ export class HomePage implements OnInit {
     }
   ];
 
-  private router = inject(Router);
   private safetyService = inject(SafetyService);
 
   async ngOnInit() {
@@ -222,7 +236,7 @@ export class HomePage implements OnInit {
 
     try {
       await this.safetyService.initData();
-      const serviceConditions = this.safetyService.getConditions();
+      const serviceConditions = this.safetyService.getConditions() as Condition[];
       if (serviceConditions.length) {
         this.conditions = serviceConditions;
       }

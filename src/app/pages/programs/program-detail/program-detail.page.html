@@ -15,9 +15,15 @@
           <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
         </div>
         <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>
-        <ion-card-subtitle [innerHTML]="highlightText(program.goal)"></ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
+        <div class="goal-callout">
+          <ion-icon name="target-outline" slot="start"></ion-icon>
+          <div class="goal-text">
+            <div class="goal-label">Program Goal</div>
+            <div class="goal-value" [innerHTML]="highlightText(program.goal)"></div>
+          </div>
+        </div>
         <p class="program-description" [innerHTML]="highlightText(program.description)"></p>
         <div class="focus-chips">
           <ion-chip *ngFor="let area of program.focusAreas" outline color="primary" class="focus-chip">
@@ -27,15 +33,50 @@
       </ion-card-content>
     </ion-card>
 
+    <div class="sequence-flow">
+      <div class="flow-header">Program Flow</div>
+      <div class="flow-timeline">
+        <div class="flow-stage">
+          <div class="stage-dot"></div>
+          <div class="stage-label">Warm-up</div>
+        </div>
+        <div class="flow-stage">
+          <div class="stage-dot"></div>
+          <div class="stage-label">Core activation</div>
+        </div>
+        <div class="flow-stage">
+          <div class="stage-dot"></div>
+          <div class="stage-label">Integration</div>
+        </div>
+        <div class="flow-stage">
+          <div class="stage-dot"></div>
+          <div class="stage-label">Cool-down</div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="getRelevantModifications().length > 0" class="modifications-section">
+      <div class="section-header">Your Program Modifications</div>
+      <ion-card *ngFor="let mod of getRelevantModifications()" class="modification-card">
+        <ion-card-content>
+          <p><strong>For {{ mod.condition }}:</strong></p>
+          <p>{{ mod.modification }}</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
     <ng-container *ngIf="hasPremium || program?.accessLevel === 'Free'; else premiumLockNotice">
       <div class="section-header">Exercises</div>
       <ion-list class="exercise-list">
-        <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">
+        <ion-item *ngFor="let item of exercisesWithRoles; let i = index" button detail (click)="openExercise(item.exercise.id)">
           <div class="exercise-number" slot="start">{{ i + 1 }}</div>
           <ion-label>
-            <h2 [innerHTML]="highlightText(exercise.name)"></h2>
-            <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
-            <p class="exercise-meta">{{ exercise.category }} · {{ exercise.level }}</p>
+            <div class="exercise-role" *ngIf="item.role">
+              <span class="role-badge" [ngClass]="'role-' + item.role.toLowerCase().replace(' ', '-')"> {{ item.role }} </span>
+            </div>
+            <h2 [innerHTML]="highlightText(item.exercise.name)"></h2>
+            <p [innerHTML]="highlightText(item.exercise.shortDescription)"></p>
+            <p class="exercise-meta">{{ item.exercise.category }} · {{ item.exercise.level }}</p>
           </ion-label>
         </ion-item>
       </ion-list>

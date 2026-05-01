@@ -19,9 +19,11 @@ import programsData from '../../../../assets/data/programs.json' with { type: 'j
 export class ProgramDetailPage implements OnInit {
   program: Program | undefined;
   exercises: Exercise[] = [];
+  exercisesWithRoles: Array<{ exercise: Exercise; role?: string }> = [];
   programNote = '';
   noteSaved = false;
   searchText = '';
+  activeConditionIds: string[] = [];
 
   hasPremium = false;
   private route = inject(ActivatedRoute);
@@ -40,6 +42,12 @@ export class ProgramDetailPage implements OnInit {
         this.exercises = this.program.exerciseIds
           .map(eid => this.safetyService.getExerciseById(eid))
           .filter((e): e is Exercise => e !== undefined);
+        
+        this.exercisesWithRoles = this.exercises.map(ex => ({
+          exercise: ex,
+          role: this.program?.exerciseRoles?.[ex.id]
+        }));
+        
         this.programNote = this.safetyService.getProgramNote(id);
       }
     }
@@ -69,6 +77,21 @@ export class ProgramDetailPage implements OnInit {
 
   openExercise(id: string) {
     this.router.navigate(['/exercise', id]);
+  }
+
+  getConditionModification(conditionId: string): string | undefined {
+    return this.program?.conditionModifications?.[conditionId];
+  }
+
+  getRelevantModifications(): Array<{ condition: string; modification: string }> {
+    if (!this.program?.conditionModifications) return [];
+    
+    return this.activeConditionIds
+      .map(condId => {
+        const mod = this.program?.conditionModifications?.[condId];
+        return { condition: condId, modification: mod || '' };
+      })
+      .filter(item => item.modification);
   }
 
   highlightText(text: string | undefined): SafeHtml {

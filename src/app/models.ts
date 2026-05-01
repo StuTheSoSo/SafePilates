@@ -71,7 +71,9 @@ export interface Program {
   goal: string;
   focusAreas: string[];
   exerciseIds: string[];
-  accessLevel?: 'Free' | 'Pro'; 
+  accessLevel?: 'Free' | 'Pro';
+  exerciseRoles?: Record<string, 'Warm-up' | 'Core activation' | 'Integration' | 'Cool-down'>;
+  conditionModifications?: Record<string, string>;
 }
 
 export interface SafetyQuery {

@@ -41,7 +41,6 @@ export class HomePage implements OnInit {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe(() => {
-      console.log('clearing.........');
       this.refreshComponent();
     });
   }

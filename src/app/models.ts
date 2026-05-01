@@ -71,6 +71,7 @@ export interface Program {
   goal: string;
   focusAreas: string[];
   exerciseIds: string[];
+  accessLevel?: 'Free' | 'Pro'; 
 }
 
 export interface SafetyQuery {

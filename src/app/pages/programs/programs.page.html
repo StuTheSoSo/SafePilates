@@ -33,7 +33,7 @@
           <ion-card-header>
             <div class="program-level-row">
               <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
-              <span *ngIf="!safetyService.isPremiumActive()" class="program-pro-badge">Pro</span>
+              <span *ngIf="program.accessLevel === 'Pro'" class="program-pro-badge">Pro</span>
             </div>
             <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>
             <ion-card-subtitle [innerHTML]="highlightText(program.goal)"></ion-card-subtitle>

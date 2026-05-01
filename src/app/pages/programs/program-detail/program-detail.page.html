@@ -27,7 +27,7 @@
       </ion-card-content>
     </ion-card>
 
-    <ng-container *ngIf="hasPremium; else premiumLockNotice">
+    <ng-container *ngIf="hasPremium || program?.accessLevel === 'Free'; else premiumLockNotice">
       <div class="section-header">Exercises</div>
       <ion-list class="exercise-list">
         <ion-item *ngFor="let exercise of exercises; let i = index" button detail (click)="openExercise(exercise.id)">

@@ -74,15 +74,6 @@
           <p class="plan-renewal">Auto-renewing annual subscription</p>
         </div>
 
-        <div class="plan-card">
-          <ion-button expand="block" fill="clear" (click)="purchaseLifetime()" [disabled]="isProcessing">
-            <span class="plan-label">Lifetime</span>
-            <span class="plan-price" *ngIf="lifetimePrice">{{ lifetimePrice }}</span>
-            <ion-spinner *ngIf="!lifetimePrice" name="dots" slot="end"></ion-spinner>
-          </ion-button>
-          <p class="plan-saving">One-time purchase, pay once forever</p>
-        </div>
-
       </ion-card-content>
     </ion-card>
 

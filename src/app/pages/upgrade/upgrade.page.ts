@@ -2,18 +2,22 @@ import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule, ToastController, LoadingController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
+import { Capacitor } from '@capacitor/core';
 import { RevenueCatService, RevenueCatProduct, ENTITLEMENT_ID } from '../../services/revenueCat.service';
 
-const PRODUCT_IDS = {
-  monthly: 'com.pilatesafe.app.monthly',
-  annual: 'com.pilatesafe.app.yearly',
-  lifetime: 'com.pilatesafe.app.life',
-} as const;
+const PRODUCT_IDS = Capacitor.getPlatform() === 'ios'
+  ? {
+      monthly: 'com.pilatesafe.app.monthly',
+      annual:  'com.pilatesafe.app.yearly',
+    }
+  : {
+      monthly: 'pilatesafe_pro_monthly:monthly-premium-plan',
+      annual:  'pilatesafe_pro_monthly:yearly-premium-plan',
+    };
 
 const FALLBACK_PRICES: Record<string, string> = {
   [PRODUCT_IDS.monthly]: '$9.99/mo',
   [PRODUCT_IDS.annual]: '$49.99/yr',
-  [PRODUCT_IDS.lifetime]: '$249.99',
 };
 
 @Component({
@@ -82,11 +86,9 @@ export class UpgradePage implements OnInit {
 
   get monthlyPrice() { return this.prices[PRODUCT_IDS.monthly]; }
   get annualPrice()  { return this.prices[PRODUCT_IDS.annual]; }
-  get lifetimePrice(){ return this.prices[PRODUCT_IDS.lifetime]; }
 
-  async purchaseMonthly()  { await this.purchaseProduct(PRODUCT_IDS.monthly); }
-  async purchaseAnnual()   { await this.purchaseProduct(PRODUCT_IDS.annual); }
-  async purchaseLifetime() { await this.purchaseProduct(PRODUCT_IDS.lifetime); }
+  async purchaseMonthly() { await this.purchaseProduct(PRODUCT_IDS.monthly); }
+  async purchaseAnnual()  { await this.purchaseProduct(PRODUCT_IDS.annual); }
 
   async restorePurchase() {
     const loading = await this.loadingCtrl.create({ message: 'Restoring purchases…', spinner: 'crescent' });
@@ -120,13 +122,15 @@ export class UpgradePage implements OnInit {
         await this.showToast('Purchase complete — try Restore if Pro is not active.', 'warning');
       }
     } catch (error: any) {
-      console.warn('Purchase failed', error);
+      console.warn('Purchase failed', JSON.stringify(error));
       // User-cancelled purchases throw with a specific code — don't show an error toast for those.
       const cancelled = error?.code === 'PURCHASE_CANCELLED' ||
                         error?.userCancelled === true ||
                         String(error?.message ?? '').toLowerCase().includes('cancel');
       if (!cancelled) {
-        await this.showToast('Purchase failed. Please try again.', 'danger');
+        const code = error?.code ?? error?.errorCode ?? 'UNKNOWN';
+        const msg = error?.message ?? error?.underlyingErrorMessage ?? '';
+        await this.showToast(`Purchase failed [${code}]: ${msg}`.slice(0, 200), 'danger');
       }
     } finally {
       await loading.dismiss();

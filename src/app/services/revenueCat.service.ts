@@ -12,6 +12,7 @@ export interface RevenueCatProduct {
 
 export interface RevenueCatCustomerInfo {
   entitlements?: Record<string, any>;
+  activeSubscriptions?: string[];
   [key: string]: any;
 }
 
@@ -170,6 +171,16 @@ export class RevenueCatService {
           ? value
           : !!(value?.isActive ?? true);
         this.entitlements[key] = isActive;
+      }
+    }
+
+    // Fallback: if entitlements are empty but activeSubscriptions is non-empty,
+    // the products are not yet attached to an entitlement in the RevenueCat dashboard.
+    // Grant premium access based on the subscription being active.
+    if (!this.isEntitlementActive(ENTITLEMENT_ID)) {
+      const activeSubs: string[] = customerInfo?.activeSubscriptions ?? [];
+      if (activeSubs.length > 0) {
+        this.entitlements[ENTITLEMENT_ID] = true;
       }
     }
 

@@ -7,11 +7,12 @@ import { Router } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { GuidanceResult, ConditionResult } from '../../models';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-results',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, PremiumBannerComponent],
+  imports: [CommonModule, FormsModule, IonicModule, PremiumBannerComponent, TranslatePipe],
   templateUrl: './results.page.html',
   styleUrls: ['./results.page.scss']
 })

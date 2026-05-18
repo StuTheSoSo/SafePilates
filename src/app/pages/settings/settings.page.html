@@ -3,18 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Settings</ion-title>
+    <ion-title>{{ 'SETTINGS.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="ion-padding">
   <ion-card class="disclaimer-card ion-padding">
-    <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</strong>
+    <strong>{{ 'APP.DISCLAIMER' | translate }}</strong>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Color Theme</ion-card-title>
+      <ion-card-title>{{ 'SETTINGS.COLOR_THEME' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <div class="theme-row">
@@ -31,38 +31,56 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>About PilateSafe</ion-card-title>
+      <ion-card-title>{{ 'SETTINGS.LANGUAGE' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ 'SETTINGS.LANGUAGE_SUBTITLE' | translate }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <p>PilateSafe is a safety-first mobile MVP for classical mat Pilates guidance, built with Angular 19, Ionic 8, and Capacitor 8.</p>
-      <p>The exercise library and condition guidance are stored locally in JSON to keep the experience fast and offline-first.</p>
+      <div class="theme-row">
+        <ion-chip *ngFor="let locale of languageService.locales"
+                  [outline]="languageService.currentLocale() !== locale.code"
+                  [color]="languageService.currentLocale() === locale.code ? 'primary' : 'secondary'"
+                  [class.selected]="languageService.currentLocale() === locale.code"
+                  (click)="onLanguageChange(locale.code)">
+          <ion-label>{{ locale.nativeName }}</ion-label>
+        </ion-chip>
+      </div>
     </ion-card-content>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Legal</ion-card-title>
+      <ion-card-title>{{ 'SETTINGS.ABOUT_TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>{{ 'SETTINGS.ABOUT_TEXT_1' | translate }}</p>
+      <p>{{ 'SETTINGS.ABOUT_TEXT_2' | translate }}</p>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ 'SETTINGS.LEGAL' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-list>
       <ion-item routerLink="/privacy-policy" detail>
-        <ion-label>Privacy Policy</ion-label>
+          <ion-label>{{ 'APP.PRIVACY_POLICY' | translate }}</ion-label>
       </ion-item>
       <ion-item routerLink="/eula" detail>
-        <ion-label>End User License Agreement</ion-label>
+          <ion-label>{{ 'APP.EULA' | translate }}</ion-label>
       </ion-item>
     </ion-list>
   </ion-card>
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Account</ion-card-title>
-      <ion-card-subtitle>Used to restore your subscription across devices.</ion-card-subtitle>
+      <ion-card-title>{{ 'SETTINGS.ACCOUNT' | translate }}</ion-card-title>
+      <ion-card-subtitle>{{ 'SETTINGS.ACCOUNT_SUBTITLE' | translate }}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-item lines="none">
         <ion-input
           type="email"
-          placeholder="your@email.com"
+          [placeholder]="'SETTINGS.EMAIL_PLACEHOLDER' | translate"
           [(ngModel)]="emailInput"
           [disabled]="isSavingEmail"
           autocomplete="email"
@@ -71,11 +89,11 @@
         </ion-input>
       </ion-item>
       <div *ngIf="savedEmail" class="email-saved-note">
-        Saved: {{ savedEmail }}
+        {{ 'SETTINGS.EMAIL_SAVED' | translate: { email: savedEmail } }}
       </div>
       <ion-button expand="block" (click)="saveEmail()" [disabled]="isSavingEmail" class="ion-margin-top">
         <ion-spinner *ngIf="isSavingEmail" name="dots" slot="start"></ion-spinner>
-        {{ savedEmail ? 'Update Email' : 'Save Email' }}
+        {{ savedEmail ? ('SETTINGS.UPDATE_EMAIL' | translate) : ('SETTINGS.SAVE_EMAIL' | translate) }}
       </ion-button>
     </ion-card-content>
   </ion-card>

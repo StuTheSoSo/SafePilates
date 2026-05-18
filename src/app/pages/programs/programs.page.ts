@@ -8,11 +8,12 @@ import { SafetyService } from '../../services/safety.service';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Program } from '../../models';
 import programsData from '../../../assets/data/programs.json' with { type: 'json' };
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-programs',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent, TranslatePipe],
   templateUrl: './programs.page.html',
   styleUrls: ['./programs.page.scss']
 })

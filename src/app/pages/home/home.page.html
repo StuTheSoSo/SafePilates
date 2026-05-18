@@ -8,13 +8,13 @@
   <div class="home-content">
     <div class="home-inner">
       <ion-card class="hero-card ion-margin-bottom">
-      <h1>PilateSafe for every body</h1>
-      <p>Find fast, offline guidance for Pilates exercises across mat work, reformer, chair, and prop-based training.</p>
+      <h1>{{ 'HOME.HERO_TITLE' | translate }}</h1>
+      <p>{{ 'HOME.HERO_SUBTITLE' | translate }}</p>
     </ion-card>
 
     <div class="page-hero">
       <ion-searchbar
-        placeholder="Search concerns"
+        [placeholder]="'HOME.SEARCH_PLACEHOLDER' | translate"
         [(ngModel)]="searchText"
         (ionInput)="onSearchTextChange($event)"
         debounce="300"
@@ -24,7 +24,7 @@
       </ion-searchbar>
 
       <ion-note *ngIf="searchText.trim() && filteredGroupedConditions.length === 0" color="medium" class="search-empty">
-        No concerns match "{{ searchText }}". Try a different keyword.
+        {{ 'HOME.SEARCH_EMPTY' | translate: { term: searchText } }}
       </ion-note>
     </div>
 
@@ -32,21 +32,21 @@
       <div class="action-block">
         <ion-button expand="block" [disabled]="!canSubmit || loading" (click)="submit()">
           <ion-spinner *ngIf="loading" name="crescent"></ion-spinner>
-          <span *ngIf="!loading">Get Guidance</span>
+          <span *ngIf="!loading">{{ 'HOME.GET_GUIDANCE' | translate }}</span>
         </ion-button>
       </div>
     </div>
 
     <ion-spinner *ngIf="loading" name="crescent" class="loading-spinner"></ion-spinner>
     <ion-note *ngIf="hasNoConditions" color="danger">
-      Could not load condition guidance yet. Please refresh the app or try again shortly.
+      {{ 'HOME.LOAD_ERROR' | translate }}
     </ion-note>
 
     <div *ngIf="!loading && filteredGroupedConditions.length > 0" class="condition-groups">
       <ion-card *ngFor="let group of filteredGroupedConditions; trackBy: trackByGroup" class="condition-group">
         <div class="group-header">
-          <h3>{{ group.label }}</h3>
-          <p *ngIf="group.subtitle">{{ group.subtitle }}</p>
+          <h3>{{ group.label | translate }}</h3>
+          <p *ngIf="group.subtitle">{{ group.subtitle | translate }}</p>
         </div>
         <div class="condition-grid">
           <ng-container *ngFor="let condition of group.conditions; trackBy: trackByCondition">
@@ -59,11 +59,11 @@
               class="condition-chip">
               <ion-icon *ngIf="selectedIds.has(condition.id)" slot="start" name="checkmark-circle" class="selected-icon"></ion-icon>
               <ion-label>
-                {{ condition.label }}
+                {{ ('HOME.CONDITIONS.' + condition.id) | translate }}
                 <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
                   ({{ pregnancyTrimester }} trimester)
                 </span>
-                <span *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" class="pro-badge">Pro</span>
+                <span *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" class="pro-badge">{{ 'APP.PRO_BADGE' | translate }}</span>
               </ion-label>
               <ion-icon *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" slot="end" name="lock-closed" class="premium-lock"></ion-icon>
             </ion-chip>
@@ -76,14 +76,14 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Privacy & Legal</ion-card-title>
+        <ion-card-title>{{ 'APP.PRIVACY_LEGAL' | translate }}</ion-card-title>
       </ion-card-header>
       <ion-list>
         <ion-item routerLink="/privacy-policy" detail>
-          <ion-label>Privacy Policy</ion-label>
+          <ion-label>{{ 'APP.PRIVACY_POLICY' | translate }}</ion-label>
         </ion-item>
         <ion-item routerLink="/eula" detail>
-          <ion-label>End User License Agreement</ion-label>
+          <ion-label>{{ 'APP.EULA' | translate }}</ion-label>
         </ion-item>
       </ion-list>
     </ion-card>
@@ -98,19 +98,18 @@
     <div class="overlay-panel">
       <div class="overlay-header">
         <div>
-          <h2>Safety disclaimer</h2>
-          <p>Please review this important information before using the app.</p>
+          <h2>{{ 'HOME.DISCLAIMER_TITLE' | translate }}</h2>
+          <p>{{ 'HOME.DISCLAIMER_BODY' | translate }}</p>
         </div>
       </div>
 
       <div class="disclaimer-card">
-        <strong>IMPORTANT:</strong>
-        <p>This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</p>
+        <p><strong>{{ 'APP.DISCLAIMER' | translate }}</strong></p>
       </div>
 
       <div class="overlay-actions">
         <ion-button expand="block" (click)="closeSafetyOverlay()">
-          Acknowledge
+          {{ 'HOME.ACKNOWLEDGE' | translate }}
         </ion-button>
       </div>
     </div>
@@ -120,32 +119,32 @@
     <div class="overlay-panel">
       <div class="overlay-header">
         <div>
-          <h2>Pregnancy Trimester</h2>
-          <p>Select the client’s current trimester to tailor results.</p>
+          <h2>{{ 'HOME.TRIMESTER_TITLE' | translate }}</h2>
+          <p>{{ 'HOME.TRIMESTER_SUBTITLE' | translate }}</p>
         </div>
       </div>
 
       <ion-item>
-        <ion-label>Trimester</ion-label>
+        <ion-label>{{ 'HOME.TRIMESTER_LABEL' | translate }}</ion-label>
         <ion-segment [(ngModel)]="pregnancyTrimester" (ionChange)="onTrimesterSelected($event.detail.value)">
           <ion-segment-button value="1st">
-            <ion-label>1st</ion-label>
+            <ion-label>{{ 'HOME.TRIMESTER_1ST' | translate }}</ion-label>
           </ion-segment-button>
           <ion-segment-button value="2nd">
-            <ion-label>2nd</ion-label>
+            <ion-label>{{ 'HOME.TRIMESTER_2ND' | translate }}</ion-label>
           </ion-segment-button>
           <ion-segment-button value="3rd">
-            <ion-label>3rd</ion-label>
+            <ion-label>{{ 'HOME.TRIMESTER_3RD' | translate }}</ion-label>
           </ion-segment-button>
         </ion-segment>
       </ion-item>
       <p *ngIf="pregnancyTrimester" class="selected-trimester">
-        Selected: {{ pregnancyTrimester }} trimester
+        {{ 'HOME.TRIMESTER_SELECTED' | translate: { trimester: pregnancyTrimester } }}
       </p>
 
       <div class="overlay-actions">
         <ion-button expand="block" [disabled]="!pregnancyTrimester" (click)="closeTrimesterModal()">
-          Continue
+          {{ 'HOME.CONTINUE' | translate }}
         </ion-button>
       </div>
     </div>

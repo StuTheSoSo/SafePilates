@@ -5,6 +5,9 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { RevenueCatService } from '../../services/revenueCat.service';
+import { SafetyService } from '../../services/safety.service';
+import { LanguageService } from '../../services/language.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 const EMAIL_KEY = 'pilatesafe-user-email';
 
@@ -16,7 +19,7 @@ interface ThemeOption {
 @Component({
   selector: 'app-settings',
   standalone: true,
-  imports: [CommonModule, IonicModule, FormsModule, RouterModule, PremiumBannerComponent],
+  imports: [CommonModule, IonicModule, FormsModule, RouterModule, PremiumBannerComponent, TranslatePipe],
   templateUrl: './settings.page.html',
   styleUrls: ['./settings.page.scss']
 })
@@ -24,6 +27,8 @@ export class SettingsPage {
   private router = inject(Router);
   private revenueCatService = inject(RevenueCatService);
   private toastCtrl = inject(ToastController);
+  readonly languageService = inject(LanguageService);
+  private safetyService = inject(SafetyService);
 
   themeOptions: ThemeOption[] = [
     { label: 'Rose (feminine)', value: 'theme-rose' },
@@ -74,6 +79,11 @@ export class SettingsPage {
 
   navigateToUpgrade() {
     this.router.navigateByUrl('/upgrade');
+  }
+
+  async onLanguageChange(code: string): Promise<void> {
+    await this.languageService.setLanguage(code);
+    await this.safetyService.reloadData(code);
   }
 
   async saveEmail() {

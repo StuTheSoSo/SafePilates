@@ -3,17 +3,17 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Programs</ion-title>
+    <ion-title>{{ 'PROGRAMS.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   <div class="programs-intro ion-padding-horizontal ion-padding-top">
-    <p class="intro-text">Curated sequences for common goals — tap any program to see its exercises.</p>
+    <p class="intro-text">{{ 'PROGRAMS.INTRO' | translate }}</p>
   </div>
   <div class="programs-search ion-padding-horizontal ion-padding-bottom">
     <ion-searchbar
-      placeholder="Search program flows"
+      [placeholder]="'PROGRAMS.SEARCH_PLACEHOLDER' | translate"
       [(ngModel)]="searchText"
       (ionInput)="onSearchTextChange($event)"
       debounce="300"
@@ -22,7 +22,7 @@
       class="program-searchbar">
     </ion-searchbar>
     <ion-note *ngIf="searchText.trim() && filteredPrograms.length === 0" color="medium" class="search-empty">
-      No programs match "{{ searchText }}". Try a different keyword.
+      {{ 'PROGRAMS.SEARCH_EMPTY' | translate: { term: searchText } }}
     </ion-note>
   </div>
 
@@ -33,7 +33,7 @@
           <ion-card-header>
             <div class="program-level-row">
               <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
-              <span *ngIf="program.accessLevel === 'Pro'" class="program-pro-badge">Pro</span>
+              <span *ngIf="program.accessLevel === 'Pro'" class="program-pro-badge">{{ 'APP.PRO_BADGE' | translate }}</span>
             </div>
             <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>
             <ion-card-subtitle [innerHTML]="highlightText(program.goal)"></ion-card-subtitle>

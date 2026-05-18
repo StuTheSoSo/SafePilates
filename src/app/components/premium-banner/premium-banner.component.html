@@ -1,29 +1,29 @@
 <div class="premium-banner-container" *ngIf="showBanner && !hasPremium">
   <div class="premium-banner">
-    <div class="premium-badge">GO PREMIUM</div>
+    <div class="premium-badge">{{ 'PREMIUM.GO_PREMIUM' | translate }}</div>
 
     <div class="banner-content">
       <div class="banner-header">
         <div class="banner-icon">✨</div>
         <div class="banner-text">
-          <h2 class="banner-title">Unlock Pilates Pro</h2>
-          <p class="banner-subtitle">Deep safety guidance, premium apparatus support, and curated programs.</p>
+          <h2 class="banner-title">{{ 'PREMIUM.TITLE' | translate }}</h2>
+          <p class="banner-subtitle">{{ 'PREMIUM.SUBTITLE' | translate }}</p>
         </div>
       </div>
 
       <div class="pricing-section">
         <div class="pricing-plans">
           <div class="plan-tile">
-            <div class="plan-label">Monthly</div>
+            <div class="plan-label">{{ 'PREMIUM.MONTHLY' | translate }}</div>
             <div class="plan-price">{{ monthlyPrice }}</div>
-            <div class="plan-period">/ month</div>
+            <div class="plan-period">{{ 'PREMIUM.MONTHLY_PERIOD' | translate }}</div>
           </div>
           <div class="plan-tile plan-tile--featured">
-            <div class="plan-badge">BEST VALUE</div>
-            <div class="plan-label">Annual</div>
+            <div class="plan-badge">{{ 'PREMIUM.BEST_VALUE' | translate }}</div>
+            <div class="plan-label">{{ 'PREMIUM.ANNUAL' | translate }}</div>
             <div class="plan-price">{{ annualPrice }}</div>
-            <div class="plan-period">/ year</div>
-            <div class="plan-saving">Save 58%</div>
+            <div class="plan-period">{{ 'PREMIUM.ANNUAL_PERIOD' | translate }}</div>
+            <div class="plan-saving">{{ 'PREMIUM.SAVE_58' | translate }}</div>
           </div>
 
         </div>
@@ -33,29 +33,29 @@
         <div class="feature-item">
           <div class="feature-icon">🧠</div>
           <div class="feature-text">
-            <div class="feature-title">Expert safety notes</div>
-            <div class="feature-desc">Professional instructor cues and condition-specific teaching guidance.</div>
+            <div class="feature-title">{{ 'PREMIUM.FEATURE_NOTES_TITLE' | translate }}</div>
+            <div class="feature-desc">{{ 'PREMIUM.FEATURE_NOTES_DESC' | translate }}</div>
           </div>
         </div>
 
         <div class="feature-item">
           <div class="feature-icon">🤸‍♀️</div>
           <div class="feature-text">
-            <div class="feature-title">Apparatus-specific support</div>
-            <div class="feature-desc">Reformer, Chair, Cadillac, and prop-based modifications for health concerns.</div>
+            <div class="feature-title">{{ 'PREMIUM.FEATURE_APPARATUS_TITLE' | translate }}</div>
+            <div class="feature-desc">{{ 'PREMIUM.FEATURE_APPARATUS_DESC' | translate }}</div>
           </div>
         </div>
 
         <div class="feature-item">
           <div class="feature-icon">📋</div>
           <div class="feature-text">
-            <div class="feature-title">Curated programs</div>
-            <div class="feature-desc">Unlock the full Pilates program library and program builder notes.</div>
+            <div class="feature-title">{{ 'PREMIUM.FEATURE_PROGRAMS_TITLE' | translate }}</div>
+            <div class="feature-desc">{{ 'PREMIUM.FEATURE_PROGRAMS_DESC' | translate }}</div>
           </div>
         </div>
       </div>
 
-      <button class="upgrade-btn" (click)="onUpgradeClick()">GO PREMIUM</button>
+      <button class="upgrade-btn" (click)="onUpgradeClick()">{{ 'PREMIUM.UPGRADE_NOW' | translate }}</button>
     </div>
   </div>
 </div>

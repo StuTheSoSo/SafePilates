@@ -242,3 +242,19 @@ ion-segment {
   border-radius: 18px;
   box-shadow: 0 2px 8px var(--sp-shadow-soft);
 }
+
+/* ===== RTL SUPPORT (Arabic) ===== */
+:root[dir="rtl"] {
+  /* Flip the accordion expand arrow */
+  details summary::after {
+    margin-left: 0;
+    margin-right: 1.2rem;
+  }
+
+  /* Logical-property fallbacks for older WebKit */
+  .ion-padding-start { padding-right: var(--ion-padding, 16px); padding-left: 0; }
+  .ion-padding-end   { padding-left:  var(--ion-padding, 16px); padding-right: 0; }
+  .ion-margin-start  { margin-right: var(--ion-margin, 16px);  margin-left: 0; }
+  .ion-margin-end    { margin-left:  var(--ion-margin, 16px);  margin-right: 0; }
+}
+

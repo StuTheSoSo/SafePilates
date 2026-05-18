@@ -96,6 +96,39 @@ export class SafetyService {
     this.dataLoaded = true;
   }
 
+  /**
+   * Reload app data for the given locale.
+   * Falls back to English bundled data if locale-specific files are not found.
+   */
+  async reloadData(lang: string): Promise<void> {
+    // Locales that have translated data files under /assets/data/{lang}/
+    const dataLocales = new Set(['en']);
+
+    if (lang === 'en' || !dataLocales.has(lang)) {
+      this.conditions        = safetyConditionsData as Condition[];
+      this.exercises         = exercisesData as Exercise[];
+      this.contraindications = contraindicationsData as Record<string, Contraindication[]>;
+      this.programs          = programsData as Program[];
+      return;
+    }
+
+    try {
+      const [conditions, exercises, contraindications, programs] = await Promise.all([
+        firstValueFrom(this.http.get<Condition[]>(`/assets/data/${lang}/safety-conditions.json`)),
+        firstValueFrom(this.http.get<Exercise[]>(`/assets/data/${lang}/exercises.json`)),
+        firstValueFrom(this.http.get<Record<string, Contraindication[]>>(`/assets/data/${lang}/contraindications.json`)),
+        firstValueFrom(this.http.get<Program[]>(`/assets/data/${lang}/programs.json`)),
+      ]);
+      if (conditions?.length)                          this.conditions       = conditions;
+      if (exercises?.length)                           this.exercises        = exercises;
+      if (contraindications && Object.keys(contraindications).length)
+                                                       this.contraindications = contraindications;
+      if (programs?.length)                            this.programs         = programs;
+    } catch {
+      // Locale data files not yet available — silently keep current (English) data.
+    }
+  }
+
   getConditions(): Condition[] {
     return this.conditions;
   }

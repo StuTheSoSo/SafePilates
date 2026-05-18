@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/settings"></ion-back-button>
     </ion-buttons>
-    <ion-title>Upgrade to Pro</ion-title>
+    <ion-title>{{ 'UPGRADE.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,19 +13,19 @@
   <ng-container *ngIf="hasPremium">
     <ion-card class="active-card">
       <ion-card-header>
-        <ion-card-title>Pro is active ✓</ion-card-title>
+        <ion-card-title>{{ 'UPGRADE.ACTIVE_TITLE' | translate }}</ion-card-title>
         <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
-        <p>You have full access to all Pilates Pro features — condition coverage, apparatus guidance, curated programs, instructor notes, and AI-assisted support.</p>
+        <p>{{ 'UPGRADE.ALREADY_PRO' | translate }}</p>
       </ion-card-content>
     </ion-card>
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Restore purchase</ion-card-title>
+        <ion-card-title>{{ 'UPGRADE.RESTORE_TITLE' | translate }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
+        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">{{ 'UPGRADE.RESTORE_BUTTON' | translate }}</ion-button>
       </ion-card-content>
     </ion-card>
   </ng-container>
@@ -34,44 +34,43 @@
   <ng-container *ngIf="!hasPremium">
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Unlock Pilates Pro</ion-card-title>
+        <ion-card-title>{{ 'UPGRADE.UNLOCK_TITLE' | translate }}</ion-card-title>
         <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ul class="features-list">
-          <li>Full coverage of 60+ health conditions</li>
-          <li>Apparatus-specific safety guidance (Reformer, Cadillac, Chair, Barrel)</li>
-          <li>Detailed instructor notes and professional cueing</li>
-          <li>Curated safe programs for complex conditions</li>
-          <li>AI-assisted guidance for unlisted client concerns</li>
+          <li>{{ 'UPGRADE.FEATURE_CONDITIONS' | translate }}</li>
+          <li>{{ 'UPGRADE.FEATURE_APPARATUS' | translate }}</li>
+          <li>{{ 'UPGRADE.FEATURE_INSTRUCTOR' | translate }}</li>
+          <li>{{ 'UPGRADE.FEATURE_PROGRAMS' | translate }}</li>
         </ul>
       </ion-card-content>
     </ion-card>
 
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Choose your plan</ion-card-title>
+        <ion-card-title>{{ 'UPGRADE.CHOOSE_PLAN' | translate }}</ion-card-title>
       </ion-card-header>
       <ion-card-content class="plan-grid">
 
         <div class="plan-card">
           <ion-button expand="block" fill="outline" (click)="purchaseMonthly()" [disabled]="isProcessing">
-            <span class="plan-label">Monthly</span>
+            <span class="plan-label">{{ 'UPGRADE.MONTHLY_LABEL' | translate }}</span>
             <span class="plan-price" *ngIf="monthlyPrice">{{ monthlyPrice }}</span>
             <ion-spinner *ngIf="!monthlyPrice" name="dots" slot="end"></ion-spinner>
           </ion-button>
-          <p class="plan-renewal">Auto-renewing monthly subscription</p>
+          <p class="plan-renewal">{{ 'UPGRADE.AUTO_RENEW_MONTHLY' | translate }}</p>
         </div>
 
         <div class="plan-card plan-card--featured">
-          <div class="plan-badge">Best value</div>
+          <div class="plan-badge">{{ 'UPGRADE.BEST_VALUE' | translate }}</div>
           <ion-button expand="block" fill="solid" (click)="purchaseAnnual()" [disabled]="isProcessing">
-            <span class="plan-label">Annual</span>
+            <span class="plan-label">{{ 'UPGRADE.ANNUAL_LABEL' | translate }}</span>
             <span class="plan-price" *ngIf="annualPrice">{{ annualPrice }}</span>
             <ion-spinner *ngIf="!annualPrice" name="dots" slot="end"></ion-spinner>
           </ion-button>
-          <p class="plan-saving">Save ~58% vs monthly</p>
-          <p class="plan-renewal">Auto-renewing annual subscription</p>
+          <p class="plan-saving">{{ 'UPGRADE.SAVE_VS_MONTHLY' | translate }}</p>
+          <p class="plan-renewal">{{ 'UPGRADE.AUTO_RENEW_ANNUAL' | translate }}</p>
         </div>
 
       </ion-card-content>
@@ -79,16 +78,16 @@
 
     <ion-card>
       <ion-card-header>
-        <ion-card-title>Already purchased?</ion-card-title>
+        <ion-card-title>{{ 'UPGRADE.RESTORE_TITLE' | translate }}</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">Restore Purchases</ion-button>
+        <ion-button expand="block" fill="outline" (click)="restorePurchase()" [disabled]="isProcessing">{{ 'UPGRADE.RESTORE_BUTTON' | translate }}</ion-button>
       </ion-card-content>
     </ion-card>
   </ng-container>
 
   <div class="legal-note">
-    Prices are set in your local currency. Subscriptions renew automatically. Cancel anytime in your device settings.
+    {{ 'UPGRADE.LEGAL_NOTE' | translate }}
     By subscribing you agree to our <a href="https://sites.google.com/view/pilatesaveeula/home" target="_blank" rel="noopener">Terms of Use (EULA)</a> and <a href="https://sites.google.com/view/pilatesafe-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>.
   </div>
 

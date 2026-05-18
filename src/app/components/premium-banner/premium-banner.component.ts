@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Subscription } from 'rxjs';
 import { Capacitor } from '@capacitor/core';
 import { RevenueCatService, RevenueCatProduct } from '../../services/revenueCat.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 const PRODUCT_IDS = Capacitor.getPlatform() === 'ios'
   ? {
@@ -22,7 +23,7 @@ const FALLBACK_PRICES: Record<string, string> = {
 @Component({
   selector: 'app-premium-banner',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './premium-banner.component.html',
   styleUrls: ['./premium-banner.component.scss'],
 })

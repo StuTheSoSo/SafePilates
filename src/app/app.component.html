@@ -5,7 +5,7 @@
       <div class="tab-row">
         <button class="tab-btn" *ngFor="let tab of tabs" [class.selected]="isTabActive(tab.route)" (click)="navigate(tab.route)">
           <ion-icon [name]="tab.icon"></ion-icon>
-          <span>{{ tab.label }}</span>
+          <span>{{ tab.label | translate }}</span>
         </button>
       </div>
     </ion-toolbar>

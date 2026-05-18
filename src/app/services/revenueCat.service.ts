@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { Capacitor } from '@capacitor/core';
 import { environment } from '../../environments/environment';
 
 export interface RevenueCatProduct {
@@ -30,7 +31,11 @@ export class RevenueCatService {
       return;
     }
 
-    if (!environment.revenueCatApiKey || environment.revenueCatApiKey.startsWith('YOUR_')) {
+    const apiKey = Capacitor.getPlatform() === 'ios'
+      ? environment.revenueCatApiKeyIos
+      : environment.revenueCatApiKeyAndroid;
+
+    if (!apiKey || apiKey.startsWith('YOUR_')) {
       console.warn('RevenueCat API key is not configured. Skipping initialization.');
       this.initialized = true;
       return;
@@ -42,9 +47,9 @@ export class RevenueCatService {
       this.purchases = Purchases;
 
       if (typeof this.purchases.configure === 'function') {
-        await this.purchases.configure({ apiKey: environment.revenueCatApiKey });
+        await this.purchases.configure({ apiKey });
       } else if (typeof this.purchases.setup === 'function') {
-        await this.purchases.setup(environment.revenueCatApiKey);
+        await this.purchases.setup(apiKey);
       } else {
         console.warn('RevenueCat Purchases plugin loaded but no setup method found.');
       }

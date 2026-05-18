@@ -3,18 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Results</ion-title>
+    <ion-title>{{ 'RESULTS.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen class="ion-padding results-content">
   <div class="disclaimer-card ion-padding">
-    <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice. Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</strong>
+    <strong>{{ 'APP.DISCLAIMER' | translate }}</strong>
   </div>
 
   <ion-card *ngIf="selectedConditionLabels.length" class="summary-card">
     <ion-card-header>
-      <ion-card-title>Selected concerns</ion-card-title>
+      <ion-card-title>{{ 'RESULTS.SELECTED_CONCERNS' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <p [innerHTML]="getHighlightedText(selectedConditionLabels.join(', '))"></p>
@@ -23,7 +23,7 @@
 
   <ion-card *ngIf="hasResults" class="hint-card">
     <ion-card-header>
-      <ion-card-title>What to do first</ion-card-title>
+      <ion-card-title>{{ 'RESULTS.WHAT_TO_DO_FIRST' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
       <ion-list lines="none">
@@ -40,46 +40,46 @@
         <ion-card class="condition-card" *ngFor="let condition of guidance.conditionResults">
           <ion-card-header>
             <ion-card-title [innerHTML]="getHighlightedText(condition.conditionLabel)"></ion-card-title>
-            <p *ngIf="condition.pregnancyTrimester" class="trimester-tag">{{ condition.pregnancyTrimester }} trimester guidance</p>
+            <p *ngIf="condition.pregnancyTrimester" class="trimester-tag">{{ 'RESULTS.TRIMESTER_GUIDANCE' | translate: { trimester: condition.pregnancyTrimester } }}</p>
           </ion-card-header>
           <ion-card-content>
             <div class="condition-sections">
               <!-- Summary and safety always visible -->
-              <div class="section-header h2">Why it matters</div>
+              <div class="section-header h2">{{ 'RESULTS.WHY_IT_MATTERS' | translate }}</div>
               <div class="condition-block section-content">
-                <h3 class="h3">What is it?</h3>
+                <h3 class="h3">{{ 'RESULTS.WHAT_IS_IT' | translate }}</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('what', condition))"></p>
               </div>
               <div class="condition-block section-content">
-                <h3 class="h3">What are the dangers?</h3>
+                <h3 class="h3">{{ 'RESULTS.WHAT_ARE_DANGERS' | translate }}</h3>
                 <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
               </div>
               <div class="divider"></div>
-              <div class="section-header h2">Exercises to be avoided & alternatives</div>
+              <div class="section-header h2">{{ 'RESULTS.EXERCISES_TO_AVOID' | translate }}</div>
               <div class="condition-block section-content">
                 <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
                 <p *ngIf="condition.contraindications.length" class="avoid-exercises">
-                  <strong>Examples:</strong> {{ getAvoidedExercises(condition) }}
+                  <strong>{{ 'RESULTS.EXAMPLES' | translate }}</strong> {{ getAvoidedExercises(condition) }}
                 </p>
                 <ion-list lines="none">
                   <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
                     <ion-item lines="none">
                       <ion-label>
                         <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-                        <p><strong>Avoid/Modify:</strong> {{ contraindication.reason }}</p>
-                        <p><strong>Safer alternative:</strong> {{ contraindication.alternative }}</p>
+                        <p><strong>{{ 'RESULTS.AVOID_MODIFY' | translate }}</strong> {{ contraindication.reason }}</p>
+                        <p><strong>{{ 'RESULTS.SAFER_ALTERNATIVE' | translate }}</strong> {{ contraindication.alternative }}</p>
                       </ion-label>
                     </ion-item>
                   </div>
                 </ion-list>
                 <div *ngIf="condition.contraindications.length === 0" class="no-results">
-                  No specific modifications found. Consult a qualified professional for guidance.
+                  {{ 'RESULTS.NO_MODIFICATIONS' | translate }}
                 </div>
               </div>
               <div class="divider"></div>
               <ng-container *ngIf="condition.instructorNote">
                 <details class="condition-accordion" *ngIf="hasPremiumAccess; else instructorNoteLocked">
-                  <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">Instructor Note</summary>
+                  <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">{{ 'RESULTS.INSTRUCTOR_NOTE' | translate }}</summary>
                   <div class="condition-instructor-note section-content">
                     <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
                   </div>
@@ -87,33 +87,33 @@
                 <ng-template #instructorNoteLocked>
                   <ion-card color="secondary" class="premium-lock-card">
                     <ion-card-header>
-                      <ion-card-title>Instructor notes are Pro-only</ion-card-title>
+                      <ion-card-title>{{ 'RESULTS.INSTRUCTOR_NOTE_PRO_TITLE' | translate }}</ion-card-title>
                     </ion-card-header>
                     <ion-card-content>
-                      <p>Unlock Pilates Pro to view detailed instructor notes and professional cueing for this condition.</p>
-                      <ion-button expand="block" (click)="navigateToUpgrade()">Upgrade to Pro</ion-button>
+                      <p>{{ 'RESULTS.INSTRUCTOR_NOTE_PRO_DESC' | translate }}</p>
+                      <ion-button expand="block" (click)="navigateToUpgrade()">{{ 'RESULTS.UPGRADE_TO_PRO' | translate }}</ion-button>
                     </ion-card-content>
                   </ion-card>
                 </ng-template>
               </ng-container>
               <div class="divider"></div>
-              <div class="section-header h2">Your note</div>
+              <div class="section-header h2">{{ 'RESULTS.YOUR_NOTE' | translate }}</div>
               <ion-card class="condition-note-card section-content">
                 <ion-card-header>
-                  <ion-card-title>Your note</ion-card-title>
-                  <ion-card-subtitle>Keep a quick reminder for this concern.</ion-card-subtitle>
+                  <ion-card-title>{{ 'RESULTS.YOUR_NOTE' | translate }}</ion-card-title>
+                  <ion-card-subtitle>{{ 'RESULTS.NOTE_SUBTITLE' | translate }}</ion-card-subtitle>
                 </ion-card-header>
                 <ion-card-content>
                   <ion-textarea
                     rows="5"
                     [(ngModel)]="conditionNotes[condition.conditionId]"
-                    placeholder="Type an instructor note here..."
+                    [placeholder]="'RESULTS.NOTE_PLACEHOLDER' | translate"
                     auto-grow="true"
                     class="note-textarea"
                   ></ion-textarea>
                   <div class="note-actions">
-                    <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-                    <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">Saved</span>
+                    <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">{{ 'RESULTS.SAVE_NOTE' | translate }}</ion-button>
+                    <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">{{ 'RESULTS.SAVED' | translate }}</span>
                   </div>
                 </ion-card-content>
               </ion-card>
@@ -135,11 +135,11 @@
         <ion-card-title>Safety guidance</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p>No results found. Please return to the checker to select your concerns.</p>
+        <p>{{ 'RESULTS.NO_RESULTS' | translate }}</p>
       </ion-card-content>
     </ion-card>
   </ng-template>
 
   <app-premium-banner *ngIf="!hasPremiumAccess" (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
-  <ion-button expand="block" class="results-action" (click)="viewAgain()">Check another concern</ion-button>
+  <ion-button expand="block" class="results-action" (click)="viewAgain()">{{ 'RESULTS.CHECK_ANOTHER' | translate }}</ion-button>
 </ion-content>

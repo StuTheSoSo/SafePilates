@@ -2,34 +2,36 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule } from '@angular/router';
+import { TranslatePipe } from '@ngx-translate/core';
 import { RevenueCatService } from './services/revenueCat.service';
+import { LanguageService } from './services/language.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule],
+  imports: [CommonModule, IonicModule, RouterModule, TranslatePipe],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   private router = inject(Router);
   private revenueCatService = inject(RevenueCatService);
+  private languageService = inject(LanguageService);
   private readonly themeStorageKey = 'pilatesafe-theme';
   private readonly defaultTheme = 'theme-rose';
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
 
   tabs = [
-    { label: 'Home', icon: 'home-outline', route: '/' },
-    { label: 'Library', icon: 'library-outline', route: '/library' },
-    { label: 'Programs', icon: 'list-outline', route: '/programs' },
-    { label: 'Settings', icon: 'settings-outline', route: '/settings' },
+    { label: 'TABS.HOME',     icon: 'home-outline',     route: '/' },
+    { label: 'TABS.LIBRARY',  icon: 'library-outline',  route: '/library' },
+    { label: 'TABS.PROGRAMS', icon: 'list-outline',      route: '/programs' },
+    { label: 'TABS.SETTINGS', icon: 'settings-outline',  route: '/settings' },
   ];
 
   constructor() {
     this.applySavedTheme();
-    // Initialize RevenueCat at startup so premium state is available on every page
-    // before the user navigates anywhere. Fire-and-forget; init() is idempotent.
     this.revenueCatService.init();
+    this.languageService.init();
   }
 
   get currentRoute() {

@@ -8,11 +8,12 @@ import { SafetyService } from '../../services/safety.service';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Exercise } from '../../models';
 import exercisesData from '../../../assets/data/exercises.json' with { type: 'json' };
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-library',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent, TranslatePipe],
   templateUrl: './library.page.html',
   styleUrls: ['./library.page.scss']
 })

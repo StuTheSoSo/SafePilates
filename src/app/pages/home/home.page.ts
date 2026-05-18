@@ -9,11 +9,12 @@ import { PremiumBannerComponent } from '../../components/premium-banner/premium-
 import exercisesData from '../../../assets/data/exercises.json' with { type: 'json' };
 import safetyConditionsData from '../../../assets/data/safety-conditions.json' with { type: 'json' };
 import { filter } from 'rxjs';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent, TranslatePipe],
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss']
 })
@@ -78,8 +79,8 @@ export class HomePage implements OnInit {
 
   conditionGroups = [
     {
-      label: 'Spine & Joints',
-      subtitle: 'Back, hips, knees, shoulders, and joint support',
+      label: 'HOME.GROUPS.SPINE_JOINTS',
+      subtitle: 'HOME.GROUPS.SPINE_JOINTS_SUB',
       ids: [
         'osteoporosis',
         'low_back_pain',
@@ -101,8 +102,8 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Core, Pelvic & Pregnancy',
-      subtitle: 'Pregnancy, postpartum, pelvic floor, and abdominal recovery',
+      label: 'HOME.GROUPS.CORE_PELVIC',
+      subtitle: 'HOME.GROUPS.CORE_PELVIC_SUB',
       ids: [
         'pregnancy',
         'postpartum',
@@ -115,16 +116,16 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Neurological & Systemic Conditions',
-      subtitle: 'Neurological and systemic conditions that affect movement and balance',
+      label: 'HOME.GROUPS.NEURO_SYSTEMIC',
+      subtitle: 'HOME.GROUPS.NEURO_SYSTEMIC_SUB',
       ids: [
         'multiple_sclerosis',
         'parkinsons_disease'
       ]
     },
     {
-      label: 'Upper Limb & Nerve Injuries',
-      subtitle: 'Shoulder, elbow, wrist, and nerve-related conditions',
+      label: 'HOME.GROUPS.UPPER_LIMB',
+      subtitle: 'HOME.GROUPS.UPPER_LIMB_SUB',
       ids: [
         'frozen_shoulder',
         'rotator_cuff_injury',
@@ -139,8 +140,8 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Lower Limb & Hip Injuries',
-      subtitle: 'Ankle, foot, knee, and hip injury support',
+      label: 'HOME.GROUPS.LOWER_LIMB',
+      subtitle: 'HOME.GROUPS.LOWER_LIMB_SUB',
       ids: [
         'ankle_sprain',
         'achilles_tendinopathy',
@@ -162,8 +163,8 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Heart, Lungs & Metabolic',
-      subtitle: 'Cardiovascular, respiratory, and endocrine concerns',
+      label: 'HOME.GROUPS.HEART_LUNGS',
+      subtitle: 'HOME.GROUPS.HEART_LUNGS_SUB',
       ids: [
         'respiratory',
         'respiratory_pulmonary',
@@ -175,8 +176,8 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Immune, Inflammation & Recovery',
-      subtitle: 'Autoimmune, infection, cancer treatment, and recovery support',
+      label: 'HOME.GROUPS.IMMUNE',
+      subtitle: 'HOME.GROUPS.IMMUNE_SUB',
       ids: [
         'autoimmune_inflammatory',
         'chronic_fatigue',
@@ -189,8 +190,8 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Balance, Neurological & Sensory',
-      subtitle: 'Balance, dizziness, neurological, and sensory conditions',
+      label: 'HOME.GROUPS.BALANCE',
+      subtitle: 'HOME.GROUPS.BALANCE_SUB',
       ids: [
         'neurological_disorder',
         'vertigo_dizziness',
@@ -202,13 +203,14 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Weight & Substance Use',
-      subtitle: 'Weight management and substance use recovery support',
+      label: 'HOME.GROUPS.WEIGHT',
+      subtitle: 'HOME.GROUPS.WEIGHT_SUB',
       ids: ['weight_concerns', 'substance_use_recovery']
     }
   ];
 
   private safetyService = inject(SafetyService);
+  private translate = inject(TranslateService);
 
   async ngOnInit() {
     // Show disclaimer overlay each app start.
@@ -337,8 +339,9 @@ export class HomePage implements OnInit {
   }
 
   private conditionMatchesSearch(condition: Condition, term: string) {
-    return [condition.label, condition.description]
-      .some(field => field.toLowerCase().includes(term));
+    const translatedLabel = this.translate.instant('HOME.CONDITIONS.' + condition.id);
+    return [condition.label, condition.description, translatedLabel]
+      .some(field => field && field.toLowerCase().includes(term));
   }
 
   get canSubmit() {

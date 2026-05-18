@@ -4,6 +4,7 @@ import { IonicModule, ToastController, LoadingController } from '@ionic/angular'
 import { RouterModule } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { RevenueCatService, RevenueCatProduct, ENTITLEMENT_ID } from '../../services/revenueCat.service';
+import { TranslatePipe } from '@ngx-translate/core';
 
 const PRODUCT_IDS = Capacitor.getPlatform() === 'ios'
   ? {
@@ -23,7 +24,7 @@ const FALLBACK_PRICES: Record<string, string> = {
 @Component({
   selector: 'app-upgrade',
   standalone: true,
-  imports: [CommonModule, IonicModule, RouterModule],
+  imports: [CommonModule, IonicModule, RouterModule, TranslatePipe],
   templateUrl: './upgrade.page.html',
   styleUrls: ['./upgrade.page.scss']
 })

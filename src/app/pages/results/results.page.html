@@ -73,7 +73,7 @@
                   </div>
                 </ion-list>
                 <div *ngIf="condition.contraindications.length === 0" class="no-results">
-                  No local modifications found. AI fallback or professional guidance may help.
+                  No specific modifications found. Consult a qualified professional for guidance.
                 </div>
               </div>
               <div class="divider"></div>
@@ -123,22 +123,6 @@
       </div>
     </ng-container>
 
-    <ng-container *ngIf="guidance.aiFallback">
-      <ion-card>
-        <ion-card-header>
-          <ion-card-title>AI guidance</ion-card-title>
-          <ion-card-subtitle *ngIf="!hasResults">Generated for unlisted or unmatched health concerns when local guidance is unavailable.</ion-card-subtitle>
-        </ion-card-header>
-        <ion-card-content>
-          <p class="ai-text">{{ guidance.aiFallback }}</p>
-          <ion-button *ngIf="!hasPremiumAccess" expand="block" (click)="navigateToUpgrade()">Unlock AI guidance</ion-button>
-        </ion-card-content>
-      </ion-card>
-    </ng-container>
-
-    <div class="professional-note" *ngIf="guidance.aiFallback">
-      If symptoms persist or you are unsure, consult a qualified clinician before progressing.
-    </div>
   </ng-container>
 
 
@@ -151,7 +135,7 @@
         <ion-card-title>Safety guidance</ion-card-title>
       </ion-card-header>
       <ion-card-content>
-        <p class="ai-text">{{ guidance?.aiFallback ?? 'No local results. Please return to the checker to select concerns.' }}</p>
+        <p>No results found. Please return to the checker to select your concerns.</p>
       </ion-card-content>
     </ion-card>
   </ng-template>

@@ -30,7 +30,6 @@ export class HomePage implements OnInit {
   conditions: Condition[] = [];
   selectedIds = new Set<string>();
   pregnancyTrimester = '';
-  otherText = '';
   searchText = '';
   loading = false;
   initFailed = false;
@@ -203,9 +202,9 @@ export class HomePage implements OnInit {
       ]
     },
     {
-      label: 'Weight & Other',
-      subtitle: 'Weight management, recovery, and uncategorized concerns',
-      ids: ['weight_concerns', 'substance_use_recovery', 'other']
+      label: 'Weight & Substance Use',
+      subtitle: 'Weight management and substance use recovery support',
+      ids: ['weight_concerns', 'substance_use_recovery']
     }
   ];
 
@@ -315,10 +314,6 @@ export class HomePage implements OnInit {
     return Array.from(this.selectedIds);
   }
 
-  get hasOther() {
-    return this.selectedIds.has('other');
-  }
-
   get groupedConditions() {
     return this.conditionGroups.map(group => ({
       ...group,
@@ -349,7 +344,6 @@ export class HomePage implements OnInit {
   get canSubmit() {
     const needsTrimester = this.selectedIds.has('pregnancy');
     return this.selectedIds.size > 0
-      && (!this.hasOther || this.otherText.trim().length > 0)
       && (!needsTrimester || !!this.pregnancyTrimester);
   }
 
@@ -361,18 +355,11 @@ export class HomePage implements OnInit {
       return;
     }
 
-    const otherTextLower = this.otherText.trim().toLowerCase();
-    if (this.hasOther && !this.selectedIds.has('pregnancy') && /(pregnanc|pregenanc|pregnan)/.test(otherTextLower)) {
-      this.selectedIds.delete('other');
-      this.selectedIds.add('pregnancy');
-    }
-
     this.loading = true;
     try {
       await this.safetyService.fetchGuidance({
         conditionIds: this.selectedConditions,
         pregnancyTrimester: this.selectedIds.has('pregnancy') ? this.pregnancyTrimester : undefined,
-        otherText: this.otherText.trim(),
         searchTerm: this.searchText.trim() || undefined
       });
     } catch (error) {

@@ -68,16 +68,7 @@
               <ion-icon *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" slot="end" name="lock-closed" class="premium-lock"></ion-icon>
             </ion-chip>
 
-            <div *ngIf="condition.id === 'other' && selectedIds.has('other')" class="other-details">
-              <ion-item>
-                <ion-label position="stacked">Other concern details</ion-label>
-                <ion-textarea [value]="otherText" (ionInput)="otherText = $event.detail.value" placeholder="Briefly describe the concern"></ion-textarea>
-              </ion-item>
 
-              <ion-note *ngIf="!otherText.trim()" color="warning" class="other-note">
-                Please describe the client’s concern so you can review it safely.
-              </ion-note>
-            </div>
           </ng-container>
         </div>
       </ion-card>

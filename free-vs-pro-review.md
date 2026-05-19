@@ -28,7 +28,7 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #3 — Partial Progress Bar in Settings
 
-**Status:** 🔲  
+**Status:** ✅  
 **Where:** `src/app/pages/settings/` (settings page)  
 **What:** Show *"41 of 88 conditions unlocked"* with a visual progress bar. Partial completion creates a persistent motivation loop (same mechanic as Duolingo streaks).
 
@@ -39,7 +39,7 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #4 — Identity Framing on Clients Page
 
-**Status:** 🔲  
+**Status:** ✅  
 **Where:** `src/app/pages/clients/` (pro gate empty state)  
 **What:** The pro gate currently says "Pro feature". Change to identity framing: *"How professional instructors manage clients"* — not a restriction, a professional identity signal.
 
@@ -50,7 +50,7 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #5 — Risk / Liability Framing on Upgrade Page
 
-**Status:** 🔲  
+**Status:** ✅  
 **Where:** `src/app/pages/upgrade/upgrade.page.html` + i18n  
 **What:** Add a liability reframe line: *"One injury from a client whose condition you weren't briefed on costs more than a decade of Pro."* Reframes $49/year as professional insurance, not a subscription fee.
 

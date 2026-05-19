@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "Clientes",
-    "PRO_TITLE": "Perfiles de clientes — Función Pro",
-    "PRO_SUBTITLE": "Guarda las condiciones de tus clientes y consulta su seguridad con un toque.",
+    "PRO_TITLE": "Así gestionan sus clientes los instructores profesionales de Pilates",
+    "PRO_SUBTITLE": "Antes de cada sesión, compruebe el perfil de seguridad exacto de su cliente con un solo toque.",
     "GATE_FEATURE_1": "Guardar las condiciones de cada cliente",
     "GATE_FEATURE_2": "Toca un cliente antes de clase para ver su resumen de seguridad",
     "GATE_FEATURE_3": "Añade notas privadas por cliente",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "tu@email.com",
     "EMAIL_SAVED": "Guardado: {{email}}",
     "UPDATE_EMAIL": "Actualizar email",
-    "SAVE_EMAIL": "Guardar email"
+    "SAVE_EMAIL": "Guardar email",
+    "CONDITIONS_TITLE": "Acceso a condiciones",
+    "CONDITIONS_UNLOCKED": "{{free}} de {{total}} condiciones desbloqueadas",
+    "CONDITIONS_ALL_UNLOCKED": "Todas las {{total}} condiciones desbloqueadas ✓",
+    "CONDITIONS_UPGRADE_CTA": "Actualiza para desbloquear todo"
   },
   "UPGRADE": {
     "TITLE": "Actualizar a Pro",
@@ -233,6 +237,7 @@
     "FEATURE_CLIENTS": "Perfiles de clientes — un toque para comprobar la seguridad antes de clase",
     "PROFESSIONAL_TAGLINE": "Usado por instructores de Pilates antes de cada sesión",
     "PROFESSIONAL_VALUE": "Un año de Pro cuesta menos que una sesión cancelada.",
+    "LIABILITY_FRAMING": "Una contraindicación ignorada puede costar más que una década de Pro.",
     "CHOOSE_PLAN": "Elige tu plan",
     "MONTHLY_LABEL": "Mensual",
     "ANNUAL_LABEL": "Anual",

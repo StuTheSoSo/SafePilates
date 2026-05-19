@@ -47,6 +47,26 @@
     </ion-card-content>
   </ion-card>
 
+  <ion-card class="conditions-access-card">
+    <ion-card-header>
+      <ion-card-title>{{ 'SETTINGS.CONDITIONS_TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p *ngIf="hasPremiumAccess; else freeProgress">
+        {{ 'SETTINGS.CONDITIONS_ALL_UNLOCKED' | translate: { total: totalConditionCount } }}
+      </p>
+      <ng-template #freeProgress>
+        <p>{{ 'SETTINGS.CONDITIONS_UNLOCKED' | translate: { free: freeConditionCount, total: totalConditionCount } }}</p>
+        <div class="conditions-progress-track">
+          <div class="conditions-progress-fill" [style.width.%]="conditionUnlockProgress"></div>
+        </div>
+        <ion-button expand="block" size="small" class="ion-margin-top" (click)="navigateToUpgrade()">
+          {{ 'SETTINGS.CONDITIONS_UPGRADE_CTA' | translate }}
+        </ion-button>
+      </ng-template>
+    </ion-card-content>
+  </ion-card>
+
   <ion-card>
     <ion-card-header>
       <ion-card-title>{{ 'SETTINGS.ABOUT_TITLE' | translate }}</ion-card-title>

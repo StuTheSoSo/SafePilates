@@ -81,6 +81,25 @@ export class SettingsPage {
     this.router.navigateByUrl('/upgrade');
   }
 
+  get hasPremiumAccess(): boolean {
+    return this.safetyService.isPremiumActive();
+  }
+
+  get freeConditionCount(): number {
+    return this.safetyService.getFreeConditions().length;
+  }
+
+  get totalConditionCount(): number {
+    return this.safetyService.getConditions().length;
+  }
+
+  get conditionUnlockProgress(): number {
+    const total = this.totalConditionCount;
+    if (total === 0) return 0;
+    const unlocked = this.hasPremiumAccess ? total : this.freeConditionCount;
+    return Math.round((unlocked / total) * 100);
+  }
+
   async onLanguageChange(code: string): Promise<void> {
     await this.languageService.setLanguage(code);
     await this.safetyService.reloadData(code);

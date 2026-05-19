@@ -33,10 +33,12 @@
   <!-- Not yet premium -->
   <ng-container *ngIf="!hasPremium">
 
-    <div class="pro-hero">
-      <p class="pro-tagline">{{ 'UPGRADE.PROFESSIONAL_TAGLINE' | translate }}</p>
-      <p class="pro-value">{{ 'UPGRADE.PROFESSIONAL_VALUE' | translate }}</p>
-    </div>
+    <ion-card class="pro-hero-card">
+      <ion-card-content>
+        <p class="pro-tagline">{{ 'UPGRADE.PROFESSIONAL_TAGLINE' | translate }}</p>
+        <p class="pro-value">{{ 'UPGRADE.PROFESSIONAL_VALUE' | translate }}</p>
+      </ion-card-content>
+    </ion-card>
 
     <ion-card>
       <ion-card-header>
@@ -51,6 +53,12 @@
           <li>{{ 'UPGRADE.FEATURE_PROGRAMS' | translate }}</li>
           <li>{{ 'UPGRADE.FEATURE_CLIENTS' | translate }}</li>
         </ul>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="pro-insurance-card">
+      <ion-card-content>
+        <p class="pro-insurance">{{ 'UPGRADE.LIABILITY_FRAMING' | translate }}</p>
       </ion-card-content>
     </ion-card>
 

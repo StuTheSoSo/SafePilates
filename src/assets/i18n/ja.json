@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "クライアント",
-    "PRO_TITLE": "クライアントプロフィール — Pro機能",
-    "PRO_SUBTITLE": "クライアントの病態を保存し、ワンタップで安全性を確認。",
+    "PRO_TITLE": "プロのピラティスインストラクターがクライアントを管理する方法",
+    "PRO_SUBTITLE": "毎回のセッション前に、クライアントの安全プロフィールを1タップで確認。",
     "GATE_FEATURE_1": "各クライアントの病態を保存",
     "GATE_FEATURE_2": "レッスン前にクライアントをタップして安全サマリーを確認",
     "GATE_FEATURE_3": "クライアントごとにプライベートメモを追加",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "your@email.com",
     "EMAIL_SAVED": "保存済み: {{email}}",
     "UPDATE_EMAIL": "メールを更新",
-    "SAVE_EMAIL": "メールを保存"
+    "SAVE_EMAIL": "メールを保存",
+    "CONDITIONS_TITLE": "コンディションへのアクセス",
+    "CONDITIONS_UNLOCKED": "{{total}}件中{{free}}件のコンディションがアンロック済み",
+    "CONDITIONS_ALL_UNLOCKED": "全{{total}}件のコンディションをアンロック済み ✓",
+    "CONDITIONS_UPGRADE_CTA": "すべてアンロックするにはアップグレード"
   },
   "UPGRADE": {
     "TITLE": "Proにアップグレード",
@@ -231,7 +235,9 @@
     "FEATURE_INSTRUCTOR": "詳細なインストラクターノートと専門的なキュー",
     "FEATURE_PROGRAMS": "複雑なコンディション向けの厳選されたプログラム",    "FEATURE_CLIENTS": "クライアントプロフィール — 授業前に1タップで安全確認",
     "PROFESSIONAL_TAGLINE": "ピラティスインストラクターが毎回のセッション前に使用",
-    "PROFESSIONAL_VALUE": "年間プランはキャンセル1回分より安い。",    "CHOOSE_PLAN": "プランを選択",
+    "PROFESSIONAL_VALUE": "年間プランはキャンセル1回分より安い。",
+    "LIABILITY_FRAMING": "禁忌を1つ見落とすだけで、何年分ものPro費用を超えるリスクになります。",
+    "CHOOSE_PLAN": "プランを選択",
     "MONTHLY_LABEL": "月額",
     "ANNUAL_LABEL": "年額",
     "BEST_VALUE": "お得",

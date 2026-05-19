@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "Clients",
-    "PRO_TITLE": "Client Profiles — Pro Feature",
-    "PRO_SUBTITLE": "Save your clients’ conditions and check their safety in one tap.",
+    "PRO_TITLE": "How professional Pilates instructors manage clients",
+    "PRO_SUBTITLE": "Before every session, check your client's exact safety profile in one tap.",
     "GATE_FEATURE_1": "Save each client’s health conditions",
     "GATE_FEATURE_2": "Tap a client before class to instantly get their safety summary",
     "GATE_FEATURE_3": "Add private notes per client",
@@ -183,7 +183,7 @@
     "TRIMESTER_GUIDANCE": "{{trimester}} trimester guidance",
     "INSTRUCTOR_NOTE": "Instructor Note",
     "AVOID_PRO_TITLE": "{{count}} modifications hidden",
-    "AVOID_PRO_DESC": "Your client has {{count}} specific exercise modifications for this condition. You\'re seeing 0 of them. Upgrade to Pro to see exactly what to avoid and safer alternatives.",
+    "AVOID_PRO_DESC": "Your client has {{count}} specific exercise modifications for this condition. You're seeing 0 of them. Upgrade to Pro to see exactly what to avoid and safer alternatives.",
     "INSTRUCTOR_NOTE_PRO_TEASER": "Pro insight — upgrade to read the full instructor note",
     "INSTRUCTOR_NOTE_PRO_TITLE": "Instructor notes are Pro-only",
     "INSTRUCTOR_NOTE_PRO_DESC": "Unlock Pilates Pro to view detailed instructor notes and professional cueing for this condition.",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "your@email.com",
     "EMAIL_SAVED": "Saved: {{email}}",
     "UPDATE_EMAIL": "Update Email",
-    "SAVE_EMAIL": "Save Email"
+    "SAVE_EMAIL": "Save Email",
+    "CONDITIONS_TITLE": "Conditions Access",
+    "CONDITIONS_UNLOCKED": "{{free}} of {{total}} conditions unlocked",
+    "CONDITIONS_ALL_UNLOCKED": "All {{total}} conditions unlocked ✓",
+    "CONDITIONS_UPGRADE_CTA": "Upgrade to unlock all"
   },
   "UPGRADE": {
     "TITLE": "Upgrade to Pro",
@@ -233,6 +237,7 @@
     "FEATURE_CLIENTS": "Client Profiles — one tap to check safety before class",
     "PROFESSIONAL_TAGLINE": "Used by Pilates instructors before every client session",
     "PROFESSIONAL_VALUE": "A year of Pro costs less than one cancelled session.",
+    "LIABILITY_FRAMING": "One missed contraindication can cost more than a decade of Pro.",
     "CHOOSE_PLAN": "Choose your plan",
     "MONTHLY_LABEL": "Monthly",
     "ANNUAL_LABEL": "Annual",

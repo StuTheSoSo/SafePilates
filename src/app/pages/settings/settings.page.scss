@@ -47,6 +47,21 @@ ion-button, ion-chip {
   transition: background 0.2s, color 0.2s;
 }
 
+.conditions-progress-track {
+  background: var(--sp-border);
+  border-radius: 8px;
+  height: 10px;
+  overflow: hidden;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.conditions-progress-fill {
+  height: 100%;
+  background: var(--ion-color-primary);
+  border-radius: 8px;
+  transition: width 0.4s ease;
+}
+
 ion-chip.selected, .theme-row ion-chip.selected {
   --background: var(--ion-color-primary);
   --color: #fff;

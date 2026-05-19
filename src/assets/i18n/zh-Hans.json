@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "学员",
-    "PRO_TITLE": "学员档案 — Pro 功能",
-    "PRO_SUBTITLE": "保存学员病情，一键查看安全指导。",
+    "PRO_TITLE": "专业皮拉提斯教练如何管理学员",
+    "PRO_SUBTITLE": "每次课前，一键查看学员的精确安全档案。",
     "GATE_FEATURE_1": "保存每位学员的健康状况",
     "GATE_FEATURE_2": "课前点击学员名字，即刻获取安全摘要",
     "GATE_FEATURE_3": "为每位学员添加私人备注",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "您的@email.com",
     "EMAIL_SAVED": "已保存：{{email}}",
     "UPDATE_EMAIL": "更新邮箱",
-    "SAVE_EMAIL": "保存邮箱"
+    "SAVE_EMAIL": "保存邮筱",
+    "CONDITIONS_TITLE": "健康状况访问权限",
+    "CONDITIONS_UNLOCKED": "已解锁 {{total}} 个中的 {{free}} 个状况",
+    "CONDITIONS_ALL_UNLOCKED": "已解锁全部 {{total}} 个状况 ✓",
+    "CONDITIONS_UPGRADE_CTA": "升级以解锁全部"
   },
   "UPGRADE": {
     "TITLE": "升级至专业版",
@@ -231,7 +235,9 @@
     "FEATURE_INSTRUCTOR": "详细的教练备注与专业提示",
     "FEATURE_PROGRAMS": "针对复杂健康状况的精选安全计划",    "FEATURE_CLIENTS": "学员档案——课前一键查看安全建议",
     "PROFESSIONAL_TAGLINE": "皮拉提斯教练每次课前必备的专业参考工具",
-    "PROFESSIONAL_VALUE": "一年Pro费用，低于一次取消课程的损失。",    "CHOOSE_PLAN": "选择套餐",
+    "PROFESSIONAL_VALUE": "一年Pro费用，低于一次取消课程的损失。",
+    "LIABILITY_FRAMING": "一次被忽视的禁忌症，可能带来的损失远超多年Pro订阅费用。",
+    "CHOOSE_PLAN": "选择套餐",
     "MONTHLY_LABEL": "月付",
     "ANNUAL_LABEL": "年付",
     "BEST_VALUE": "最超值",

@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "Klienten",
-    "PRO_TITLE": "Klientenprofile — Pro-Funktion",
-    "PRO_SUBTITLE": "Speichere die Erkrankungen deiner Klienten und prüfe ihre Sicherheit mit einem Tipp.",
+    "PRO_TITLE": "So verwalten professionelle Pilates-Trainer ihre Klienten",
+    "PRO_SUBTITLE": "Prüfen Sie vor jeder Stunde das genaue Sicherheitsprofil Ihres Klienten mit einem Tippen.",
     "GATE_FEATURE_1": "Erkrankungen jedes Klienten speichern",
     "GATE_FEATURE_2": "Vor dem Kurs Klienten antippen für sofortige Sicherheitsübersicht",
     "GATE_FEATURE_3": "Private Notizen pro Klient hinzufügen",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "ihre@email.com",
     "EMAIL_SAVED": "Gespeichert: {{email}}",
     "UPDATE_EMAIL": "E-Mail aktualisieren",
-    "SAVE_EMAIL": "E-Mail speichern"
+    "SAVE_EMAIL": "E-Mail speichern",
+    "CONDITIONS_TITLE": "Zugang zu Beschwerden",
+    "CONDITIONS_UNLOCKED": "{{free}} von {{total}} Beschwerden freigeschaltet",
+    "CONDITIONS_ALL_UNLOCKED": "Alle {{total}} Beschwerden freigeschaltet ✓",
+    "CONDITIONS_UPGRADE_CTA": "Upgrade für vollständigen Zugang"
   },
   "UPGRADE": {
     "TITLE": "Auf Pro upgraden",
@@ -233,6 +237,7 @@
     "FEATURE_CLIENTS": "Klientenprofile — ein Tippen für die Sicherheitsprüfung vor dem Training",
     "PROFESSIONAL_TAGLINE": "Von Pilates-Trainern vor jeder Klientenstunde genutzt",
     "PROFESSIONAL_VALUE": "Ein Jahr Pro kostet weniger als eine abgesagte Stunde.",
+    "LIABILITY_FRAMING": "Eine übersehene Kontraindikation kann mehr kosten als ein Jahrzehnt Pro.",
     "CHOOSE_PLAN": "Plan wählen",
     "MONTHLY_LABEL": "Monatlich",
     "ANNUAL_LABEL": "Jährlich",

@@ -52,9 +52,10 @@ ion-button .plan-price {
   padding-left: 1rem;
 }
 
-.pro-hero {
-  text-align: center;
-  padding: 1.4rem 0.5rem 0.8rem;
+.pro-hero-card {
+  ion-card-content {
+    text-align: center;
+  }
 }
 
 .pro-tagline {
@@ -71,6 +72,14 @@ ion-button .plan-price {
   color: var(--sp-ink-3, #888);
   margin: 0;
   font-style: italic;
+}
+
+.pro-insurance {
+  font-size: 0.85rem;
+  color: var(--sp-ink-2, #555);
+  margin: 0;
+  font-style: italic;
+  line-height: 1.5;
 }
 
 .features-list {

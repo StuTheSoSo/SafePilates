@@ -16,8 +16,8 @@
   },
   "CLIENTS": {
     "TITLE": "Clients",
-    "PRO_TITLE": "Profils clients — Fonction Pro",
-    "PRO_SUBTITLE": "Enregistrez les conditions de vos clients et vérifiez leur sécurité en un seul tap.",
+    "PRO_TITLE": "Comment les instructeurs Pilates professionnels gèrent leurs clients",
+    "PRO_SUBTITLE": "Avant chaque séance, consultez le profil de sécurité exact de votre client en un tap.",
     "GATE_FEATURE_1": "Sauvegarder les conditions de chaque client",
     "GATE_FEATURE_2": "Appuyer sur un client avant le cours pour son résumé de sécurité",
     "GATE_FEATURE_3": "Ajouter des notes privées par client",
@@ -218,7 +218,11 @@
     "EMAIL_PLACEHOLDER": "votre@email.com",
     "EMAIL_SAVED": "Enregistré : {{email}}",
     "UPDATE_EMAIL": "Modifier l'e-mail",
-    "SAVE_EMAIL": "Enregistrer l'e-mail"
+    "SAVE_EMAIL": "Enregistrer l'e-mail",
+    "CONDITIONS_TITLE": "Accès aux conditions",
+    "CONDITIONS_UNLOCKED": "{{free}} sur {{total}} conditions débloquées",
+    "CONDITIONS_ALL_UNLOCKED": "Les {{total}} conditions débloquées ✓",
+    "CONDITIONS_UPGRADE_CTA": "Passer à Pro pour tout débloquer"
   },
   "UPGRADE": {
     "TITLE": "Passer à Pro",
@@ -232,8 +236,7 @@
     "FEATURE_PROGRAMS": "Programmes sécurisés pour les conditions complexes",
     "FEATURE_CLIENTS": "Profils clients — un tap pour vérifier la sécurité avant la séance",
     "PROFESSIONAL_TAGLINE": "Utilisé par les instructeurs Pilates avant chaque séance",
-    "PROFESSIONAL_VALUE": "Un an de Pro coûte moins qu’une séance annulée.",
-    "CHOOSE_PLAN": "Choisissez votre formule",
+    "PROFESSIONAL_VALUE": "Un an de Pro coûte moins qu’une séance annulée.",    "LIABILITY_FRAMING": "Une contre-indication manquée peut coûter plus qu'une décennie de Pro.",    "CHOOSE_PLAN": "Choisissez votre formule",
     "MONTHLY_LABEL": "Mensuel",
     "ANNUAL_LABEL": "Annuel",
     "BEST_VALUE": "Meilleure offre",

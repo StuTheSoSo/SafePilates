@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "Iliotibialband-Syndrom",
       "meniscus_tear": "Meniskusriss",
       "ligament_injury": "Bandverletzung (VKB, HKB, MCL, LCB)",
+      "perimenopause_menopause": "Perimenopause / Menopause",
+      "stroke_recovery": "Schlaganfall-Genesung",
+      "long_covid": "Long COVID / Postviral-Syndrom",
+      "hip_labral_tear": "Hüftlabrum-Riss",
+      "wrist_conditions": "Handgelenksbeschwerden",
+      "lymphedema": "Lymphödem",
       "other": "Sonstiges"
     }
   },

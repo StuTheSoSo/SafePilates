@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "Syndrome de la bandelette ilio-tibiale",
       "meniscus_tear": "Déchirure méniscale",
       "ligament_injury": "Lésion ligamentaire (LCA, LCP, LCM, LCL)",
+      "perimenopause_menopause": "Périménopause / Ménopause",
+      "stroke_recovery": "Récupération d'AVC",
+      "long_covid": "COVID Long / Syndrome Post-Viral",
+      "hip_labral_tear": "Déchirure du Labrum de la Hanche",
+      "wrist_conditions": "Problèmes de Poignet",
+      "lymphedema": "Lymphœdème",
       "other": "Autre"
     }
   },

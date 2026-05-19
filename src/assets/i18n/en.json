@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "Iliotibial Band Syndrome (ITBS)",
       "meniscus_tear": "Meniscus Tear",
       "ligament_injury": "Ligament Injury (ACL, PCL, MCL, LCL)",
+      "perimenopause_menopause": "Perimenopause / Menopause",
+      "stroke_recovery": "Stroke / CVA Recovery",
+      "long_covid": "Long COVID / Post-Viral Syndrome",
+      "hip_labral_tear": "Hip Labral Tear",
+      "wrist_conditions": "Wrist Conditions",
+      "lymphedema": "Lymphedema",
       "other": "Other"
     }
   },

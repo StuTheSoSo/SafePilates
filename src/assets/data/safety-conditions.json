@@ -406,6 +406,36 @@
     "description": "Avoid twisting, pivoting, and deep or loaded knee positions until ligament healing and stability improve."
   },
   {
+    "id": "perimenopause_menopause",
+    "label": "Perimenopause / Menopause",
+    "description": "Monitor heat tolerance and bone density; avoid breath-holding, high-impact loading, and extreme intensity. Support joint laxity and cardiovascular adaptation."
+  },
+  {
+    "id": "stroke_recovery",
+    "label": "Stroke / CVA Recovery",
+    "description": "Adapt for hemiplegia, spasticity, and coordination changes. Use slow, supported movement, avoid high exertion, and monitor blood pressure responses."
+  },
+  {
+    "id": "long_covid",
+    "label": "Long COVID / Post-Viral Syndrome",
+    "description": "Respect post-exertional malaise — avoid pushing through fatigue or breathlessness. Use paced, low-intensity movement with frequent rest."
+  },
+  {
+    "id": "hip_labral_tear",
+    "label": "Hip Labral Tear",
+    "description": "Avoid deep hip flexion, internal rotation, and impingement positions. Favor pain-free range, hip stability, and controlled movement."
+  },
+  {
+    "id": "wrist_conditions",
+    "label": "Wrist Conditions",
+    "description": "Modify or avoid weight-bearing on the wrists. Use fist or forearm support for quadruped and plank-based exercises."
+  },
+  {
+    "id": "lymphedema",
+    "label": "Lymphedema",
+    "description": "Avoid tight compression, prolonged arm elevation, and intense exercise of the affected limb. Use gentle, rhythmic movement and diaphragmatic breathing."
+  },
+  {
     "id": "other",
     "label": "Other",
     "description": "Get AI-backed guidance for a condition not listed here."

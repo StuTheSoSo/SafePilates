@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "髂胫束综合征",
       "meniscus_tear": "半月板撕裂",
       "ligament_injury": "韧带损伤（ACL, PCL, MCL, LCL）",
+      "perimenopause_menopause": "围绝经期 / 绝经期",
+      "stroke_recovery": "脑卒中康复",
+      "long_covid": "长新冠 / 病毒感染后综合征",
+      "hip_labral_tear": "髋关节盂唇撕裂",
+      "wrist_conditions": "腕部疾病",
+      "lymphedema": "淋巴水肿",
       "other": "其他"
     }
   },

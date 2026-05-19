@@ -109,6 +109,7 @@ export class HomePage implements OnInit {
         'postpartum',
         'pelvic_floor_dysfunction',
         'diastasis_recti',
+        'perimenopause_menopause',
         'hernia',
         'stress_incontinence',
         'gastrointestinal_pelvic',
@@ -120,7 +121,8 @@ export class HomePage implements OnInit {
       subtitle: 'HOME.GROUPS.NEURO_SYSTEMIC_SUB',
       ids: [
         'multiple_sclerosis',
-        'parkinsons_disease'
+        'parkinsons_disease',
+        'stroke_recovery'
       ]
     },
     {
@@ -133,6 +135,7 @@ export class HomePage implements OnInit {
         'thoracic_outlet_syndrome',
         'tennis_elbow',
         'golfers_elbow',
+        'wrist_conditions',
         'nerve_compression',
         'carpal_tunnel_syndrome',
         'cubital_tunnel_syndrome',
@@ -143,6 +146,7 @@ export class HomePage implements OnInit {
       label: 'HOME.GROUPS.LOWER_LIMB',
       subtitle: 'HOME.GROUPS.LOWER_LIMB_SUB',
       ids: [
+        'hip_labral_tear',
         'ankle_sprain',
         'achilles_tendinopathy',
         'posterior_tibialis_dysfunction',
@@ -182,7 +186,9 @@ export class HomePage implements OnInit {
         'autoimmune_inflammatory',
         'chronic_fatigue',
         'immune_infectious',
+        'long_covid',
         'oncology_treatment',
+        'lymphedema',
         'swollen_glands',
         'transplant_immunosuppression',
         'severe_allergy',

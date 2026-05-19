@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "腸脛靭帯症候群",
       "meniscus_tear": "半月板損傷",
       "ligament_injury": "靭帯損傷（ACL, PCL, MCL, LCL）",
+      "perimenopause_menopause": "更年期前後 / 更年期",
+      "stroke_recovery": "脳卒中後リハビリ",
+      "long_covid": "ロングCOVID / 感染後症候群",
+      "hip_labral_tear": "股関節唇損傷",
+      "wrist_conditions": "手首の障害",
+      "lymphedema": "リンパ浮腫",
       "other": "その他"
     }
   },

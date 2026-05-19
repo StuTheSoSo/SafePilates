@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "Sindrome della bandelletta ileotibiale",
       "meniscus_tear": "Lesione del menisco",
       "ligament_injury": "Lesione legamentosa (LCA, LCP, MCL, LCL)",
+      "perimenopause_menopause": "Perimenopausa / Menopausa",
+      "stroke_recovery": "Recupero da Ictus",
+      "long_covid": "Long COVID / Sindrome Post-Virale",
+      "hip_labral_tear": "Lesione del Labbro Acetabolare",
+      "wrist_conditions": "Condizioni del Polso",
+      "lymphedema": "Linfedema",
       "other": "Altro"
     }
   },

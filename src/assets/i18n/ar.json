@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "متلازمة الحزمة الحرقفية الظنبوبية",
       "meniscus_tear": "تمزق الغضروف الهلالي",
       "ligament_injury": "إصابة الأربطة (ACL, PCL, MCL, LCL)",
+      "perimenopause_menopause": "فترة انقطاع الطمث / انقطاع الطمث",
+      "stroke_recovery": "التعافي من السكتة الدماغية",
+      "long_covid": "كوفيد الطويل / متلازمة ما بعد الفيروس",
+      "hip_labral_tear": "تمزق غضروف حوف الورك",
+      "wrist_conditions": "مشاكل المعصم",
+      "lymphedema": "الوذمة اللمفاوية",
       "other": "أخرى"
     }
   },

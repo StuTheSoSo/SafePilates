@@ -159,6 +159,12 @@
       "iliotibial_band_syndrome": "Síndrome de la Banda Iliotibial",
       "meniscus_tear": "Desgarro de Menisco",
       "ligament_injury": "Lesión Ligamentaria (LCA, LCP, LCM, LCL)",
+      "perimenopause_menopause": "Perimenopausia / Menopausia",
+      "stroke_recovery": "Recuperación de ACV / Ictus",
+      "long_covid": "COVID Prolongado / Síndrome Posviral",
+      "hip_labral_tear": "Desgarro del Labrum de Cadera",
+      "wrist_conditions": "Problemas de Muñeca",
+      "lymphedema": "Linfedema",
       "other": "Otro"
     }
   },

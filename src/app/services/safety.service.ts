@@ -49,7 +49,21 @@ export class SafetyService {
     'chronic_fatigue',
     'weight_concerns',
     // Mental / cognitive — common in older clients
-    'mental_cognitive'
+    'mental_cognitive',
+    // Added: common clinical presentations encountered daily in studios
+    'foot_ankle_issues',       // extremely common
+    'joint_replacement',       // very common in older clients
+    'autoimmune_inflammatory', // RA, lupus — increasingly common
+    'chronic_pain_syndrome',   // fibromyalgia — mentioned in free-vs-pro review
+    'multiple_sclerosis',      // mentioned in free-vs-pro review
+    'neurological_disorder',   // mentioned in free-vs-pro review
+    'oncology_treatment',      // cancer recovery — mentioned in free-vs-pro review
+    'hypermobility_syndrome',  // very common in Pilates specifically
+    'radiculopathy_sciatica',  // sciatica — essentially always co-occurs with back pain clients
+    'stress_incontinence',     // very common women's health issue in Pilates
+    'perimenopause_menopause', // extremely common in core Pilates demographic
+    'long_covid',              // very current; common fatigue/breathlessness management
+    'wrist_conditions',        // very common in Pilates due to weight-bearing exercises
   ]);
 
   async initData(): Promise<void> {

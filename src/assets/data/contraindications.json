@@ -356,5 +356,46 @@
   ],
   "other": [
     {"exerciseId":"control_balance","reason":"This condition is not specifically listed; choose gentle, supported work and consult a qualified clinician before attempting high-risk movement.","alternative":"Use grounded Pilates with a stable base, low load, and clear instruction."}
+  ],
+  "perimenopause_menopause": [
+    {"exerciseId":"roll_over","reason":"Inversion may trigger vasomotor symptoms and elevate blood pressure during hormonal changes.","alternative":"Choose gentle supine core work with the head and chest supported."},
+    {"exerciseId":"jackknife","reason":"High-effort inversion is unsuitable during hormonal cardiovascular changes and potential bone density reduction.","alternative":"Use supported bridge progressions and gentle hip lifts with a neutral spine."},
+    {"exerciseId":"the_hundred","reason":"Sustained high-intensity breath work may be uncomfortable during hot flashes or cardiovascular sensitivity.","alternative":"Practice slower, breath-led abdominal work with shorter sets and open chest posture."},
+    {"exerciseId":"control_balance","reason":"Balance inversion can challenge blood pressure stability and coordination changes associated with perimenopause.","alternative":"Use grounded stability exercises with both feet on the mat and small range movements."}
+  ],
+  "stroke_recovery": [
+    {"exerciseId":"roll_up","reason":"Loaded spinal flexion with bilateral pulling is unsafe with hemiplegia or asymmetric weakness.","alternative":"Focus on gentle breathing, supported pelvic tilts, and unilateral leg slides."},
+    {"exerciseId":"teaser","reason":"High-demand balance and bilateral coordination are unsafe in early stroke recovery.","alternative":"Use supported seated core work with bent knees and grounded feet."},
+    {"exerciseId":"control_balance","reason":"Full balance inversion requires bilateral coordination that is typically unavailable after stroke.","alternative":"Choose grounded core stability exercises with a wide base of support."},
+    {"exerciseId":"spine_twist","reason":"Rotation under load can stress recovering motor pathways and challenge spastic or weak musculature.","alternative":"Use gentle seated rotation with supported arms and slow, controlled movement."},
+    {"exerciseId":"leg_pull_front","reason":"Plank demands bilateral shoulder and leg stability that is usually unavailable after stroke.","alternative":"Work in a supported side-lying or seated position with one limb at a time."}
+  ],
+  "long_covid": [
+    {"exerciseId":"the_hundred","reason":"Sustained aerobic effort can trigger post-exertional malaise in long COVID clients.","alternative":"Use shorter, gentler breath-based core work with frequent rest breaks."},
+    {"exerciseId":"teaser","reason":"Peak exertion exercise is dangerous with post-viral fatigue and energy envelope constraints.","alternative":"Use supported seated core activation with minimal load and slow pacing."},
+    {"exerciseId":"jackknife","reason":"High-intensity inversion is unsafe during energy-limited post-viral recovery.","alternative":"Choose gentle supine bridging with slow transitions and rest between repetitions."},
+    {"exerciseId":"swan_dive","reason":"Dynamic high-effort prone exercise can trigger post-exertional symptom relapse.","alternative":"Use a gentle prone forearm lift or sphinx position with minimal effort."},
+    {"exerciseId":"swimming","reason":"Sustained prone arm and leg lifting may exhaust a long COVID client well within normal limits.","alternative":"Choose single-limb lifts with full rest between repetitions and stop at first sign of fatigue."}
+  ],
+  "hip_labral_tear": [
+    {"exerciseId":"one_leg_circle","reason":"Large hip circles place shear stress on the labrum and may worsen tearing.","alternative":"Use very small, supported leg circles and keep the pelvis completely stable."},
+    {"exerciseId":"open_leg_rocker","reason":"Wide hip opening and balance can impinge an already torn labrum.","alternative":"Use gentle seated adductor work with legs closer together."},
+    {"exerciseId":"hip_circles","reason":"Rotational hip loading stresses the labral tissue and risks further tearing.","alternative":"Use smaller hip movements with strict stability and avoid end-range rotation."},
+    {"exerciseId":"front_splits","reason":"Extreme hip range in flexion and extension compresses and shears the labrum.","alternative":"Use gentle hip hinge work and avoid end-range hip positions."},
+    {"exerciseId":"scissors","reason":"Rapid alternating hip flexion can irritate the labral tear and increase pain.","alternative":"Use slow, controlled leg lowering with a small range and neutral pelvis."}
+  ],
+  "wrist_conditions": [
+    {"exerciseId":"leg_pull_front","reason":"Full body weight is loaded through the wrists in the plank position.","alternative":"Use forearm plank or modify to a seated leg lift to offload the wrist."},
+    {"exerciseId":"push_up","reason":"Loaded wrist extension directly aggravates fractures, sprains, and tendinopathies.","alternative":"Use wall push-ups or forearm-supported positions to remove wrist load."},
+    {"exerciseId":"swan","reason":"Prone push-up positioning places significant body weight through the wrists.","alternative":"Use a sphinx or forearm-supported prone position to avoid wrist loading."},
+    {"exerciseId":"side_bend","reason":"Side plank weight-bearing loads the wrist into extension and lateral compression.","alternative":"Use a forearm side plank or roll the wrist off the mat with a fist position."},
+    {"exerciseId":"plank","reason":"Sustained wrist extension under body weight can worsen any wrist injury or condition.","alternative":"Use a forearm plank as a direct substitute to achieve core work without wrist load."}
+  ],
+  "lymphedema": [
+    {"exerciseId":"swan_dive","reason":"Dynamic overhead arm movement can increase lymphatic pressure and worsen swelling in the affected limb.","alternative":"Use a gentle prone forearm lift with arms supported and avoid overhead reach."},
+    {"exerciseId":"arm_springs","reason":"Repeated resisted arm loading can exacerbate lymphedema and impair lymphatic drainage.","alternative":"Use gentle, rhythmic arm movements below shoulder height with no resistance."},
+    {"exerciseId":"rowing_series","reason":"Pulling resistance with the arms may worsen lymphatic flow and increase swelling.","alternative":"Use gentle supported arm mobility without resistance and keep the limb slightly elevated."},
+    {"exerciseId":"push_through","reason":"Overhead pushing against resistance stresses the affected lymph nodes and vessels.","alternative":"Use a gentle reach with no resistance and keep the arm below the shoulder when possible."},
+    {"exerciseId":"magic_circle_press","reason":"Arm squeezing or overhead pressing can increase venous and lymphatic pressure in affected limbs.","alternative":"Focus on gentle, rhythmic lower-body or core work while resting the affected arm."}
   ]
 }

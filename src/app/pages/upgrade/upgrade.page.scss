@@ -52,6 +52,27 @@ ion-button .plan-price {
   padding-left: 1rem;
 }
 
+.pro-hero {
+  text-align: center;
+  padding: 1.4rem 0.5rem 0.8rem;
+}
+
+.pro-tagline {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--ion-color-primary);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+  font-family: 'Nunito', 'Inter', sans-serif;
+}
+
+.pro-value {
+  font-size: 0.88rem;
+  color: var(--sp-ink-3, #888);
+  margin: 0;
+  font-style: italic;
+}
+
 .features-list {
   padding-left: 1.2rem;
   margin: 0;

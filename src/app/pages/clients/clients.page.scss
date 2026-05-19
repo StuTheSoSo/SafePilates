@@ -37,7 +37,7 @@ ion-content.form-open::part(scroll) {
 // ── Form ──────────────────────────────────────────────
 
 .form-card {
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: 0 6px 24px var(--sp-shadow);
   border: 1.5px solid var(--sp-border);
   margin-bottom: 0;
@@ -138,7 +138,7 @@ ion-content.form-open::part(scroll) {
 }
 
 .client-card {
-  border-radius: 18px;
+  border-radius: 22px;
   box-shadow: 0 4px 16px var(--sp-shadow);
   border: 1.5px solid var(--sp-border);
   background: var(--sp-card-start);

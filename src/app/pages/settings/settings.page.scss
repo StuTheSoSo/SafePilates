@@ -22,6 +22,7 @@ ion-card, .disclaimer-card {
   box-shadow: 0 8px 32px var(--sp-shadow);
   border: 1.5px solid var(--sp-border);
   background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+  margin-bottom: 1rem;
 }
 
 ion-card-title, h1, h2, h3 {
@@ -90,14 +91,6 @@ ion-button:hover, ion-chip:hover {
     padding: 0.5rem;
   }
 }
-ion-card {
-  margin-bottom: 1rem;
-  border-radius: 24px;
-  box-shadow: 0 8px 32px var(--sp-shadow);
-  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
-  border: 1.5px solid var(--sp-border);
-}
-
 .disclaimer-card {
   background: rgba(255, 255, 255, 0.96);
   border: 1.5px solid var(--sp-border);

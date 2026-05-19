@@ -1,3 +1,51 @@
+@use '../../styles/typography' as *;
+
+// ── Typography ───────────────────────────────────────
+ion-card-title, h1, h2, h3 {
+  @extend .h1;
+}
+
+ion-card-content, .body {
+  @extend .body;
+}
+
+// ── Baseline card / interactive elements ─────────────
+ion-card {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+  margin-bottom: 1rem;
+}
+
+ion-button, ion-chip {
+  border-radius: 16px;
+  font-size: 1.08rem;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  font-weight: 700;
+  box-shadow: 0 2px 8px var(--sp-shadow-soft);
+  border: 1.5px solid var(--sp-border);
+  transition: background 0.2s, color 0.2s;
+}
+
+ion-button:focus, ion-chip:focus {
+  outline: 2px solid var(--ion-color-primary);
+  outline-offset: 2px;
+}
+
+ion-button:hover, ion-chip:hover {
+  filter: brightness(0.97);
+  box-shadow: 0 4px 16px var(--sp-shadow);
+}
+
+@media (max-width: 600px) {
+  ion-card {
+    border-radius: 14px;
+    padding: 0.5rem;
+  }
+}
+
+// ── Plan grid ────────────────────────────────────────
 .plan-grid {
   display: grid;
   gap: 1.25rem;
@@ -31,13 +79,13 @@
 .plan-saving {
   margin: 0.3rem 0 0 0.25rem;
   font-size: 0.85rem;
-  color: var(--sp-ink-3, #888);
+  color: var(--sp-ink-3);
 }
 
 .plan-renewal {
   margin: 0.2rem 0 0 0.25rem;
   font-size: 0.75rem;
-  color: var(--sp-ink-3, #aaa);
+  color: var(--sp-ink-3);
   font-style: italic;
 }
 
@@ -69,14 +117,14 @@ ion-button .plan-price {
 
 .pro-value {
   font-size: 0.88rem;
-  color: var(--sp-ink-3, #888);
+  color: var(--sp-ink-3);
   margin: 0;
   font-style: italic;
 }
 
 .pro-insurance {
   font-size: 0.85rem;
-  color: var(--sp-ink-2, #555);
+  color: var(--sp-ink-2);
   margin: 0;
   font-style: italic;
   line-height: 1.5;
@@ -100,15 +148,7 @@ ion-button .plan-price {
   margin-top: 1.5rem;
   padding: 0 0.5rem;
   font-size: 0.78rem;
-  color: var(--sp-ink-3, #999);
+  color: var(--sp-ink-3);
   text-align: center;
   line-height: 1.5;
-}
-
-ion-card {
-  margin-bottom: 1rem;
-}
-
-ion-card-title {
-  font-weight: 700;
 }

@@ -18,18 +18,20 @@ ion-toolbar {
 
 .tab-row {
   display: flex;
-  gap: 0.75rem;
-  justify-content: space-between;
+  gap: 0.4rem;
+  justify-content: center;
   align-items: center;
   padding: 0 0.75rem;
   background: linear-gradient(90deg, var(--ion-color-accent) 10%, rgba(255,255,255,0.85) 100%);
   border-radius: 32px;
   margin: 0 0.35rem;
   padding: 0.7rem 0.75rem;
+  overflow: hidden;
 }
 
 .tab-btn {
   flex: 1;
+  min-width: 0;
   min-height: 68px;
   display: flex;
   flex-direction: column;
@@ -64,8 +66,13 @@ ion-toolbar {
 }
 
 .tab-btn span {
-  font-size: 0.96rem;
+  font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.01em;
   color: inherit;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
 }

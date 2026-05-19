@@ -221,6 +221,17 @@ ion-content {
   --background: linear-gradient(180deg, var(--sp-bg-start) 0%, var(--sp-bg-end) 100%);
 }
 
+ion-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+ion-header ion-toolbar {
+  contain: content;
+}
+
 ion-segment {
   margin: 0.75rem 0;
 }

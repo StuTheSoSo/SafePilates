@@ -83,7 +83,7 @@
               <ng-template #avoidLocked>
                 <ion-card color="secondary" class="premium-lock-card">
                   <ion-card-header>
-                    <ion-card-title>{{ 'RESULTS.AVOID_PRO_TITLE' | translate }}</ion-card-title>
+                    <ion-card-title>{{ 'RESULTS.AVOID_PRO_TITLE' | translate: { count: condition.contraindications.length } }}</ion-card-title>
                   </ion-card-header>
                   <ion-card-content>
                     <p>{{ 'RESULTS.AVOID_PRO_DESC' | translate: { count: condition.contraindications.length } }}</p>

@@ -106,13 +106,53 @@ Status legend: ✅ Done · 🔲 Not started
 
 ---
 
+## #11 — Library: Locked Exercise Detail Page Copy
+
+**Status:** 🔲  
+**Where:** `src/app/pages/exercise-detail/exercise-detail.page.html` (`#premiumExerciseLocked` template)  
+**What:** The current locked detail screen says "Premium Exercise — This exercise is part of Pilates Pro and requires an upgrade to view full details." This is the highest-intent moment in the library (the user tapped through specifically for this exercise) and the copy is the most generic in the app. Replace with exercise-specific loss aversion: name the exercise, reference its category, and list what's locked (modifications, instructor notes, full safety profile). Same pattern as the results page `AVOID_PRO_TITLE/DESC`.
+
+**Key detail:** `exercise` and `hasPremiumExercise` are already available in the component when the locked template renders — name, category, and modification count are all accessible for dynamic copy.
+
+**Prompt:**
+> Implement library suggestion #11: on the exercise detail page, replace the generic `#premiumExerciseLocked` template ("Premium Exercise — This exercise is part of Pilates Pro...") with exercise-specific loss aversion copy that names the exercise, references its category (e.g. "Reformer exercise"), and states what's locked (modifications, instructor notes, full safety profile). Use the same quantified, specific tone as the results page AVOID_PRO_TITLE/DESC pattern. Add i18n keys `EXERCISE_DETAIL.PRO_LOCKED_TITLE` and `EXERCISE_DETAIL.PRO_LOCKED_DESC` to all 9 language files.
+
+---
+
+## #12 — Library: Free/Pro Ratio Indicator
+
+**Status:** 🔲  
+**Where:** `src/app/pages/library/library.page.html` (below the category chips)  
+**What:** Free users browsing "Reformer" see nothing but locked cards — a wall with no context. Add a small count indicator, e.g. *"6 of 42 Reformer exercises available — unlock all with Pro"*, shown when a Pro-gated category is selected and the user is not premium. Transforms a demoralising wall into a quantified gap.
+
+**Key detail:** `filteredExercises` is already computed in `LibraryPage`. Free count = `filteredExercises.filter(e => !safetyService.isExercisePremium(e)).length`. Total = `filteredExercises.length`. Only show when `selectedCategory !== 'All'` and at least one exercise in the filter is locked.
+
+**Prompt:**
+> Implement library suggestion #12: in the exercise library, when the user is not premium and has filtered to a specific category, show a small inline note below the category chips with a free vs total count (e.g. "6 of 42 available — upgrade to unlock all"). Only show it when the filtered set contains at least one locked exercise. Add getter `freeFilteredCount` and `totalFilteredCount` to `LibraryPage`. Add i18n key `LIBRARY.FREE_COUNT_NOTE` (params: `free`, `total`) to all 9 language files.
+
+---
+
+## #13 — Library: Locked Card Visual Weight
+
+**Status:** ✅  
+**Where:** `src/app/pages/library/library.page.scss`  
+**What:** Currently the only signal that a card is locked is a small corner `PRO` flag — free and locked cards look nearly identical. Locked cards should have clearly reduced visual weight (muted opacity, desaturated background, or a lock icon overlay) so free cards read as "yours" and locked cards read as "available if you upgrade." The contrast also makes the free tier feel curated rather than arbitrarily cut off.
+
+**Prompt:**
+> Implement library suggestion #13: increase the visual distinction between free and locked exercise cards. The `.exercise-card--locked` class should make cards appear visually muted — reduced opacity and/or a slight desaturation filter — so free cards stand out as the user's current accessible content. The PRO badge should remain. No HTML changes needed; pure SCSS on the existing `.exercise-card--locked` selector.
+
+---
+
 ## Priority Order (suggested)
 
 1. **#9** — Annual plan default (layout only, highest revenue impact)
 2. **#1** — Loss aversion count on results (strong conversion signal)
-3. **#8** — Per-week anchor (2-line copy change)
-4. **#3** — Progress bar in settings (persistent motivation loop)
-5. **#7** — Micro-commitment save CTA
-6. **#2** — Condition-specific locked chip message
-7. **#4** — Identity framing on clients gate
-8. **#5** — Liability framing line
+3. **#11** — Library locked detail copy (highest-intent paywall in the library)
+4. **#8** — Per-week anchor (2-line copy change)
+5. **#13** — Library locked card visual weight (pure SCSS)
+6. **#3** — Progress bar in settings (persistent motivation loop)
+7. **#12** — Library free/pro ratio indicator
+8. **#7** — Micro-commitment save CTA
+9. **#2** — Condition-specific locked chip message
+10. **#4** — Identity framing on clients gate
+11. **#5** — Liability framing line

@@ -31,6 +31,8 @@ ion-card {
 
 .exercise-card--locked {
   cursor: pointer;
+  opacity: 0.62;
+  filter: saturate(0.45);
 }
 
 .premium-card-flag {

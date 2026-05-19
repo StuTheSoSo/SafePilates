@@ -164,6 +164,64 @@ ion-badge {
   color: var(--sp-brand-ink);
 }
 
+.exercise-list--preview {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom: none;
+}
+
+.exercise-preview-item {
+  --background: var(--sp-card-start);
+}
+
+.exercise-locked-wrapper {
+  position: relative;
+  border-radius: 0 0 16px 16px;
+  overflow: hidden;
+  border: 1.5px solid var(--sp-border);
+  border-top: none;
+}
+
+.exercise-list--blurred {
+  border-radius: 0;
+  box-shadow: none;
+  border: none;
+  filter: blur(4px);
+  user-select: none;
+  pointer-events: none;
+  max-height: 12rem;
+  overflow: hidden;
+}
+
+.exercise-lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: rgba(var(--ion-background-color-rgb, 255,255,255), 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  text-align: center;
+  padding: 1rem;
+}
+
+.exercise-lock-overlay .lock-icon {
+  font-size: 1.6rem;
+  color: var(--ion-color-primary);
+}
+
+.exercise-lock-overlay .lock-label {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sp-brand-ink);
+  max-width: 26ch;
+}
+
 .goal-callout {
   display: flex;
   align-items: flex-start;

@@ -128,4 +128,10 @@ export class ProgramsPage implements OnInit {
   get hasPremiumAccess(): boolean {
     return this.safetyService.isPremiumActive();
   }
+
+  getFirstExerciseName(program: Program): string {
+    if (!program.exerciseIds?.length) return '';
+    const ex = this.safetyService.getExerciseById(program.exerciseIds[0]);
+    return ex?.name ?? '';
+  }
 }

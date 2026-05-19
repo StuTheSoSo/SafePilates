@@ -130,4 +130,12 @@ export class ProgramDetailPage implements OnInit {
       default: return 'medium';
     }
   }
+
+  get previewExercise(): { exercise: Exercise; role?: string } | undefined {
+    return this.exercisesWithRoles[0];
+  }
+
+  get lockedExercisesWithRoles(): Array<{ exercise: Exercise; role?: string }> {
+    return this.exercisesWithRoles.slice(1);
+  }
 }

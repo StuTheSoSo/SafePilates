@@ -83,15 +83,42 @@
     </ng-container>
 
     <ng-template #premiumLockNotice>
-      <ion-card color="secondary" class="premium-lock-card">
-        <ion-card-header>
-          <ion-card-title>Premium Program Content</ion-card-title>
-        </ion-card-header>
-        <ion-card-content>
-          <p>Full program exercise sequences are available with Pilates Pro.</p>
-          <ion-button expand="block" (click)="navigateToUpgrade()">Unlock Pro</ion-button>
-        </ion-card-content>
-      </ion-card>
+      <div class="section-header">Exercises</div>
+      <!-- First exercise — always visible as a quality preview -->
+      <ion-list class="exercise-list exercise-list--preview" *ngIf="previewExercise">
+        <ion-item lines="none" class="exercise-preview-item">
+          <div class="exercise-number" slot="start">1</div>
+          <ion-label>
+            <div class="exercise-role" *ngIf="previewExercise.role">
+              <span class="role-badge" [ngClass]="'role-' + previewExercise.role.toLowerCase().replace(' ', '-')">{{ previewExercise.role }}</span>
+            </div>
+            <h2>{{ previewExercise.exercise.name }}</h2>
+            <p>{{ previewExercise.exercise.shortDescription }}</p>
+            <p class="exercise-meta">{{ previewExercise.exercise.category }} · {{ previewExercise.exercise.level }}</p>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+      <!-- Remaining exercises — blurred with lock overlay -->
+      <div class="exercise-locked-wrapper" *ngIf="lockedExercisesWithRoles.length">
+        <ion-list class="exercise-list exercise-list--blurred" aria-hidden="true">
+          <ion-item *ngFor="let item of lockedExercisesWithRoles; let i = index" lines="none">
+            <div class="exercise-number" slot="start">{{ i + 2 }}</div>
+            <ion-label>
+              <div class="exercise-role" *ngIf="item.role">
+                <span class="role-badge">{{ item.role }}</span>
+              </div>
+              <h2>{{ item.exercise.name }}</h2>
+              <p>{{ item.exercise.shortDescription }}</p>
+              <p class="exercise-meta">{{ item.exercise.category }} · {{ item.exercise.level }}</p>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+        <div class="exercise-lock-overlay">
+          <ion-icon name="lock-closed" class="lock-icon"></ion-icon>
+          <p class="lock-label">{{ lockedExercisesWithRoles.length }} more exercises — upgrade to unlock the full sequence</p>
+          <ion-button size="small" (click)="navigateToUpgrade()">Unlock Pro</ion-button>
+        </div>
+      </div>
     </ng-template>
 
     <ion-card class="program-note-card section-content prominent-note">

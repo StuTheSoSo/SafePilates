@@ -46,6 +46,10 @@
               </ion-chip>
             </div>
             <p class="exercise-count">{{ program.exerciseIds.length }} exercises</p>
+            <p *ngIf="program.accessLevel === 'Pro' && !hasPremiumAccess && getFirstExerciseName(program)" class="exercise-preview-teaser">
+              <ion-icon name="play-circle-outline" class="teaser-icon"></ion-icon>
+              Starts with: <strong>{{ getFirstExerciseName(program) }}</strong>
+            </p>
 
             <div class="program-note-box" (click)="$event.stopPropagation()">
               <ion-textarea

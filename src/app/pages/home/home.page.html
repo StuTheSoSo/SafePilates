@@ -87,6 +87,8 @@
         </ion-item>
       </ion-list>
     </ion-card>
+
+    <div class="bottom-panel-spacer" *ngIf="selectedCount > 0"></div>
   </div>
 
   <app-premium-banner (upgradeClick)="navigateToUpgrade()"></app-premium-banner>

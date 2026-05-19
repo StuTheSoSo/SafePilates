@@ -362,6 +362,10 @@ ion-button {
   margin-top: 0.5rem;
 }
 
+.bottom-panel-spacer {
+  height: calc(100px + env(safe-area-inset-bottom));
+}
+
 .home-bottom-panel {
   position: fixed;
   inset: auto 0 calc(96px + env(safe-area-inset-bottom)) 0;

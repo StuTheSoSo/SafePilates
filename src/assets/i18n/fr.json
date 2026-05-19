@@ -152,6 +152,7 @@
     "INSTRUCTOR_NOTE": "Note de l'instructeur",
     "AVOID_PRO_TITLE": "Les modifications d'exercice sont réservées aux Pro",
     "AVOID_PRO_DESC": "Cette condition comporte {{count}} modifications d'exercice spécifiques. Passez à Pro pour voir exactement quels exercices éviter ou modifier.",
+    "INSTRUCTOR_NOTE_PRO_TEASER": "Aperçu Pro — mettez à niveau pour lire la note complète de l'instructeur",
     "INSTRUCTOR_NOTE_PRO_TITLE": "Notes réservées aux abonnés Pro",
     "INSTRUCTOR_NOTE_PRO_DESC": "Activez Pilates Pro pour consulter les notes détaillées de l'instructeur pour cette condition.",
     "UPGRADE_TO_PRO": "Passer à Pro",

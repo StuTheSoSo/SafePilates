@@ -240,6 +240,55 @@ ion-item-divider {
   border: 1px solid var(--sp-border);
 }
 
+.instructor-note-locked-wrapper {
+  position: relative;
+  margin: 0.5rem 0 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--sp-border);
+}
+
+.instructor-note-blurred {
+  padding: 1rem 1.1rem;
+  background: var(--sp-chip-start);
+  filter: blur(5px);
+  user-select: none;
+  pointer-events: none;
+  line-height: 1.6;
+  color: var(--sp-brand-ink);
+  /* Clamp to ~4 lines so the card stays compact */
+  max-height: 7rem;
+  overflow: hidden;
+}
+
+.instructor-note-lock-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  background: rgba(var(--ion-background-color-rgb, 255,255,255), 0.55);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  text-align: center;
+  padding: 0.75rem 1rem;
+}
+
+.instructor-note-lock-overlay .lock-icon {
+  font-size: 1.6rem;
+  color: var(--ion-color-primary);
+}
+
+.instructor-note-lock-overlay .lock-label {
+  margin: 0;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--sp-brand-ink);
+  max-width: 22ch;
+}
+
 .condition-instructor-note h3 {
   margin: 0 0 0.5rem;
 }

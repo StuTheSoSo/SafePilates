@@ -152,6 +152,7 @@
     "INSTRUCTOR_NOTE": "Instructor Note",
     "AVOID_PRO_TITLE": "Exercise modifications are Pro-only",
     "AVOID_PRO_DESC": "This condition has {{count}} specific exercise modifications. Upgrade to Pro to see exactly which exercises to avoid or modify, and safer alternatives.",
+    "INSTRUCTOR_NOTE_PRO_TEASER": "Pro insight — upgrade to read the full instructor note",
     "INSTRUCTOR_NOTE_PRO_TITLE": "Instructor notes are Pro-only",
     "INSTRUCTOR_NOTE_PRO_DESC": "Unlock Pilates Pro to view detailed instructor notes and professional cueing for this condition.",
     "UPGRADE_TO_PRO": "Upgrade to Pro",

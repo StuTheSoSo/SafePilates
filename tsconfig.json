@@ -3,6 +3,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./wwwout",
+    "rootDir": "./src",
     "sourceMap": true,
     "declaration": false,
     "downlevelIteration": true,

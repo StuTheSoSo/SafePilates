@@ -87,3 +87,13 @@ export interface GuidanceResult {
   conditionResults: ConditionResult[];
   searchTerm?: string;
 }
+
+export interface ClientProfile {
+  id: string;
+  name: string;
+  conditionIds: string[];
+  pregnancyTrimester?: string;
+  notes?: string;
+  createdAt: number;
+  updatedAt: number;
+}

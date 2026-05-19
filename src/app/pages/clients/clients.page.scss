@@ -1,0 +1,194 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+ion-content {
+  --padding-bottom: 100px;
+}
+
+ion-content.form-open {
+  --overflow: hidden;
+}
+
+ion-content.form-open::part(scroll) {
+  overflow: hidden;
+}
+
+// ── Pro gate ──────────────────────────────────────────
+
+.pro-gate-card {
+  border-radius: 22px;
+  box-shadow: 0 8px 32px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: linear-gradient(135deg, var(--sp-card-start) 60%, var(--sp-card-end) 100%);
+  margin-top: 0.5rem;
+}
+
+.gate-feature-list {
+  padding-left: 1.2rem;
+  margin: 0.5rem 0 1.2rem;
+  color: var(--sp-brand-ink);
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+// ── Form ──────────────────────────────────────────────
+
+.form-card {
+  border-radius: 18px;
+  box-shadow: 0 6px 24px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  margin-bottom: 0;
+}
+
+.form-card ion-card-content {
+  padding-bottom: 0.5rem;
+}
+
+.form-item {
+  --padding-start: 0;
+  margin-bottom: 0.5rem;
+}
+
+.condition-search {
+  --background: var(--sp-chip-start);
+  padding: 0.25rem 0;
+}
+
+.condition-chips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0.4rem 0 0.6rem;
+  max-height: 34vh;
+  overflow-y: auto;
+}
+
+.condition-chip-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 0.74rem;
+  font-weight: 600;
+  font-family: 'Nunito', 'Inter', sans-serif;
+  padding: 3px 9px;
+  border-radius: 12px;
+  border: 1.5px solid var(--sp-border);
+  background: transparent;
+  color: var(--ion-color-medium);
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0.1);
+
+  &.chip-selected {
+    background: var(--ion-color-primary);
+    border-color: var(--ion-color-primary);
+    color: #fff;
+  }
+}
+
+.form-bottom-spacer {
+  height: 0;
+}
+
+.form-notes-textarea {
+  height: 18vh;
+  min-height: 14vh;
+}
+
+// ── Empty state ───────────────────────────────────────
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+  color: var(--ion-color-medium);
+}
+
+.empty-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.empty-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.4rem;
+  color: var(--sp-brand-ink);
+}
+
+.empty-desc {
+  font-size: 0.9rem;
+  max-width: 26ch;
+  margin: 0;
+}
+
+// ── Client cards ──────────────────────────────────────
+
+.client-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-bottom: 5rem; // space for FAB
+}
+
+.client-card {
+  border-radius: 18px;
+  box-shadow: 0 4px 16px var(--sp-shadow);
+  border: 1.5px solid var(--sp-border);
+  background: var(--sp-card-start);
+}
+
+.client-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.client-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--ion-color-primary);
+  font-family: 'Nunito', 'Inter', sans-serif;
+}
+
+.client-actions {
+  display: flex;
+  gap: 0.1rem;
+}
+
+.client-conditions {
+  font-size: 0.88rem;
+  color: var(--sp-brand-ink);
+  margin: 0 0 0.5rem;
+  line-height: 1.5;
+}
+
+.client-no-conditions {
+  font-size: 0.85rem;
+  color: var(--ion-color-medium);
+  font-style: italic;
+  margin: 0 0 0.5rem;
+}
+
+.client-notes {
+  font-size: 0.83rem;
+  color: var(--ion-color-medium);
+  margin: 0 0 0.75rem;
+  border-left: 3px solid var(--sp-border);
+  padding-left: 0.6rem;
+}
+
+.check-safety-btn {
+  margin-top: 0.25rem;
+}
+
+ion-fab[slot="fixed"] {
+  bottom: calc(var(--ion-safe-area-bottom, 0px) + 130px) !important;
+  right: calc(var(--ion-safe-area-right, 0px) + 16px) !important;
+}

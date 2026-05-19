@@ -11,7 +11,10 @@ import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    importProvidersFrom(IonicModule.forRoot()),
+    importProvidersFrom(IonicModule.forRoot({
+      scrollAssist: false,
+      scrollPadding: false
+    })),
     importProvidersFrom(TranslateModule.forRoot({ defaultLanguage: 'en' })),
     ...provideTranslateHttpLoader(),
     provideAnimations(),

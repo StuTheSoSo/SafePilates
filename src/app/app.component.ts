@@ -22,9 +22,10 @@ export class AppComponent {
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
 
   tabs = [
-    { label: 'TABS.HOME',     icon: 'home-outline',     route: '/' },
-    { label: 'TABS.LIBRARY',  icon: 'library-outline',  route: '/library' },
+    { label: 'TABS.HOME',     icon: 'home-outline',      route: '/' },
+    { label: 'TABS.LIBRARY',  icon: 'library-outline',   route: '/library' },
     { label: 'TABS.PROGRAMS', icon: 'list-outline',      route: '/programs' },
+    { label: 'TABS.CLIENTS',  icon: 'people-outline',    route: '/clients' },
     { label: 'TABS.SETTINGS', icon: 'settings-outline',  route: '/settings' },
   ];
 

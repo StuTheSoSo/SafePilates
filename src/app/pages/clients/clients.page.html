@@ -1,0 +1,150 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>{{ (isFormOpen ? (editingId ? 'CLIENTS.EDIT_CLIENT' : 'CLIENTS.NEW_CLIENT') : 'CLIENTS.TITLE') | translate }}</ion-title>
+    <ion-buttons slot="end" *ngIf="isFormOpen">
+      <ion-button (click)="cancelForm()" color="medium">{{ 'CLIENTS.CANCEL' | translate }}</ion-button>
+      <ion-button (click)="saveForm()" [disabled]="!formName.trim()" color="primary" strong>{{ 'CLIENTS.SAVE' | translate }}</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen class="ion-padding" [scrollY]="!isFormOpen" [class.form-open]="isFormOpen">
+
+  <!-- ── Pro gate ──────────────────────────────────────── -->
+  <ng-container *ngIf="!hasPremium">
+    <ion-card class="pro-gate-card">
+      <ion-card-header>
+        <ion-card-title>{{ 'CLIENTS.PRO_TITLE' | translate }}</ion-card-title>
+        <ion-card-subtitle>{{ 'CLIENTS.PRO_SUBTITLE' | translate }}</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ul class="gate-feature-list">
+          <li>{{ 'CLIENTS.GATE_FEATURE_1' | translate }}</li>
+          <li>{{ 'CLIENTS.GATE_FEATURE_2' | translate }}</li>
+          <li>{{ 'CLIENTS.GATE_FEATURE_3' | translate }}</li>
+        </ul>
+        <ion-button expand="block" (click)="navigateToUpgrade()">{{ 'CLIENTS.UPGRADE_CTA' | translate }}</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
+
+  <!-- ── Pro content ───────────────────────────────────── -->
+  <ng-container *ngIf="hasPremium">
+
+    <!-- New / Edit form -->
+    <ion-card class="form-card" *ngIf="isFormOpen">
+      <ion-card-header>
+        <ion-card-title>{{ (editingId ? 'CLIENTS.EDIT_CLIENT' : 'CLIENTS.NEW_CLIENT') | translate }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item lines="full" class="form-item">
+          <ion-label position="stacked">{{ 'CLIENTS.NAME_LABEL' | translate }}</ion-label>
+          <ion-input
+            [(ngModel)]="formName"
+            [placeholder]="'CLIENTS.NAME_PLACEHOLDER' | translate"
+            autocomplete="off"
+            clearInput>
+          </ion-input>
+        </ion-item>
+
+        <ion-item lines="none" class="form-item">
+          <ion-label position="stacked">{{ 'CLIENTS.CONDITIONS_LABEL' | translate }}</ion-label>
+        </ion-item>
+
+        <ion-searchbar
+          [(ngModel)]="conditionSearchText"
+          [placeholder]="'CLIENTS.CONDITIONS_SEARCH' | translate"
+          debounce="200"
+          animated="true"
+          class="condition-search">
+        </ion-searchbar>
+
+        <div class="condition-chips-grid">
+          <button
+            type="button"
+            *ngFor="let condition of filteredConditions"
+            [class.chip-selected]="formConditionIds.has(condition.id)"
+            (click)="toggleFormCondition(condition.id)"
+            class="condition-chip-btn">
+            <ion-icon *ngIf="formConditionIds.has(condition.id)" name="checkmark-circle"></ion-icon>
+            {{ condition.label }}
+          </button>
+        </div>
+
+        <ion-item lines="full" class="form-item" *ngIf="formConditionIds.has('pregnancy')">
+          <ion-label position="stacked">{{ 'CLIENTS.TRIMESTER_LABEL' | translate }}</ion-label>
+          <ion-select [(ngModel)]="formPregnancyTrimester" [placeholder]="'CLIENTS.TRIMESTER_PLACEHOLDER' | translate">
+            <ion-select-option value="1st">1st trimester</ion-select-option>
+            <ion-select-option value="2nd">2nd trimester</ion-select-option>
+            <ion-select-option value="3rd">3rd trimester</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item lines="full" class="form-item">
+          <ion-label position="stacked">{{ 'CLIENTS.NOTES_LABEL' | translate }}</ion-label>
+          <ion-textarea
+            class="form-notes-textarea"
+            [(ngModel)]="formNotes"
+            [placeholder]="'CLIENTS.NOTES_PLACEHOLDER' | translate"
+            rows="4">
+          </ion-textarea>
+        </ion-item>
+
+        <div class="form-bottom-spacer"></div>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Empty state -->
+    <div class="empty-state" *ngIf="!isFormOpen && clients.length === 0">
+      <ion-icon name="people-outline" class="empty-icon"></ion-icon>
+      <p class="empty-title">{{ 'CLIENTS.EMPTY_TITLE' | translate }}</p>
+      <p class="empty-desc">{{ 'CLIENTS.EMPTY_DESC' | translate }}</p>
+    </div>
+
+    <!-- Client list -->
+    <div class="client-list" *ngIf="!isFormOpen && clients.length > 0">
+      <ion-card class="client-card" *ngFor="let client of clients">
+        <ion-card-header>
+          <div class="client-header-row">
+            <ion-card-title class="client-name">{{ client.name }}</ion-card-title>
+            <div class="client-actions">
+              <ion-button fill="clear" size="small" (click)="openEditForm(client)" aria-label="Edit client">
+                <ion-icon slot="icon-only" name="create-outline"></ion-icon>
+              </ion-button>
+              <ion-button fill="clear" size="small" color="danger" (click)="deleteClient(client)" aria-label="Delete client">
+                <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+              </ion-button>
+            </div>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <p class="client-conditions" *ngIf="client.conditionIds.length > 0">
+            {{ getConditionLabels(client.conditionIds) }}
+          </p>
+          <p class="client-no-conditions" *ngIf="client.conditionIds.length === 0">
+            {{ 'CLIENTS.NO_CONDITIONS' | translate }}
+          </p>
+          <p class="client-notes" *ngIf="client.notes">{{ client.notes }}</p>
+          <ion-button
+            expand="block"
+            class="check-safety-btn"
+            [disabled]="client.conditionIds.length === 0 || checkingClientId === client.id"
+            (click)="checkSafety(client)">
+            <ion-spinner *ngIf="checkingClientId === client.id" name="crescent" slot="start"></ion-spinner>
+            <ion-icon *ngIf="checkingClientId !== client.id" name="shield-checkmark-outline" slot="start"></ion-icon>
+            {{ 'CLIENTS.CHECK_SAFETY' | translate }}
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+  </ng-container>
+
+  <!-- FAB — only shown when pro and form is not open -->
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end" *ngIf="hasPremium && !isFormOpen">
+    <ion-fab-button (click)="openNewForm()" color="primary">
+      <ion-icon name="person-add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

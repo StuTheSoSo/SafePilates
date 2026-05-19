@@ -215,7 +215,7 @@ details > .section-content > *:last-child {
 
 ion-content {
   --padding-top: calc(env(safe-area-inset-top) + 0.5rem);
-  --padding-bottom: calc(env(safe-area-inset-bottom) + 130px);
+  --padding-bottom: calc(env(safe-area-inset-bottom) + 160px);
   --padding-start: calc(env(safe-area-inset-left) + 0.75rem);
   --padding-end: calc(env(safe-area-inset-right) + 0.75rem);
   --background: linear-gradient(180deg, var(--sp-bg-start) 0%, var(--sp-bg-end) 100%);

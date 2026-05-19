@@ -9,6 +9,7 @@ import { EulaPage } from './pages/eula/eula.page';
 import { ProgramsPage } from './pages/programs/programs.page';
 import { ProgramDetailPage } from './pages/programs/program-detail/program-detail.page';
 import { UpgradePage } from './pages/upgrade/upgrade.page';
+import { ClientsPage } from './pages/clients/clients.page';
 
 export const routes: Routes = [
   { path: '', component: HomePage },
@@ -17,6 +18,7 @@ export const routes: Routes = [
   { path: 'exercise/:id', component: ExerciseDetailPage },
   { path: 'programs', component: ProgramsPage },
   { path: 'programs/:id', component: ProgramDetailPage },
+  { path: 'clients', component: ClientsPage },
   { path: 'settings', component: SettingsPage },
   { path: 'upgrade', component: UpgradePage },
   { path: 'privacy-policy', component: PrivacyPolicyPage },

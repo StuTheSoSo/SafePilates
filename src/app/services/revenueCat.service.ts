@@ -80,6 +80,9 @@ export class RevenueCatService {
   }
 
   isEntitlementActive(entitlementId = ENTITLEMENT_ID): boolean {
+    if (!environment.production && localStorage.getItem('pilatesafe-dev-premium') === 'true') {
+      return true;
+    }
     return !!this.entitlements[entitlementId];
   }
 

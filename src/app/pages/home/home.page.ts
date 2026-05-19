@@ -293,11 +293,6 @@ export class HomePage implements OnInit {
   }
 
   toggleCondition(conditionId: string) {
-    if (!this.selectedIds.has(conditionId) && this.safetyService.isConditionPremium(conditionId) && !this.safetyService.isPremiumActive()) {
-      this.router.navigateByUrl('/upgrade');
-      return;
-    }
-
     if (this.selectedIds.has(conditionId)) {
       this.selectedIds.delete(conditionId);
       if (conditionId === 'pregnancy') {

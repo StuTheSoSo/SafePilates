@@ -279,7 +279,6 @@ export class SafetyService {
     this.latestQuery = query;
 
     const selectedConditions = query.conditionIds
-      .filter(id => !this.isConditionPremium(id) || this.isPremiumActive())
       .map((id: string) => this.conditions.find(item => item.id === id))
       .filter(Boolean) as Condition[];
 
@@ -289,7 +288,8 @@ export class SafetyService {
       conditionDescription: condition.description,
       instructorNote: condition.instructorNote,
       pregnancyTrimester: condition.id === 'pregnancy' ? (query.pregnancyTrimester ?? 'Unknown') : undefined,
-      contraindications: this.contraindications[condition.id] ?? []
+      contraindications: this.contraindications[condition.id] ?? [],
+      isPremium: this.isConditionPremium(condition.id)
     }));
 
     const result: GuidanceResult = {

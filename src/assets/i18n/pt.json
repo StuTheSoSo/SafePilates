@@ -150,6 +150,8 @@
     "NO_MODIFICATIONS": "Nenhuma modificação específica encontrada. Consulte um profissional qualificado.",
     "TRIMESTER_GUIDANCE": "Orientação para o {{trimester}} trimestre",
     "INSTRUCTOR_NOTE": "Nota do Instrutor",
+    "AVOID_PRO_TITLE": "As modificações de exercício são apenas para Pro",
+    "AVOID_PRO_DESC": "Esta condição tem {{count}} modificações de exercício específicas. Atualize para Pro para ver exatamente quais exercícios evitar ou modificar.",
     "INSTRUCTOR_NOTE_PRO_TITLE": "Notas do instrutor são exclusivas Pro",
     "INSTRUCTOR_NOTE_PRO_DESC": "Ative o Pilates Pro para ver notas detalhadas do instrutor para esta condição.",
     "UPGRADE_TO_PRO": "Ativar Pro",

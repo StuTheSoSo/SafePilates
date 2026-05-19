@@ -150,6 +150,8 @@
     "NO_MODIFICATIONS": "未找到具体调整建议。请咨询专业人士。",
     "TRIMESTER_GUIDANCE": "第{{trimester}}孕期指导",
     "INSTRUCTOR_NOTE": "教练备注",
+    "AVOID_PRO_TITLE": "练习修改仅限专业版",
+    "AVOID_PRO_DESC": "此状况有 {{count}} 个特定练习修改。升级到专业版以查看需要避免或修改的具体练习。",
     "INSTRUCTOR_NOTE_PRO_TITLE": "教练备注仅限专业版",
     "INSTRUCTOR_NOTE_PRO_DESC": "开通 Pilates Pro 以查看此健康状况的详细教练备注及专业提示。",
     "UPGRADE_TO_PRO": "升级至专业版",

@@ -61,6 +61,7 @@ export interface ConditionResult {
   instructorNote?: string;
   pregnancyTrimester?: string;
   contraindications: Contraindication[];
+  isPremium?: boolean;
 }
 
 export interface Program {

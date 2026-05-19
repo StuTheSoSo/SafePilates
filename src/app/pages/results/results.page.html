@@ -55,27 +55,43 @@
                 <p [innerHTML]="getHighlightedText(getConditionSection('dangers', condition))"></p>
               </div>
               <div class="divider"></div>
-              <div class="section-header h2">{{ 'RESULTS.EXERCISES_TO_AVOID' | translate }}</div>
-              <div class="condition-block section-content">
-                <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
-                <p *ngIf="condition.contraindications.length" class="avoid-exercises">
-                  <strong>{{ 'RESULTS.EXAMPLES' | translate }}</strong> {{ getAvoidedExercises(condition) }}
-                </p>
-                <ion-list lines="none">
-                  <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
-                    <ion-item lines="none">
-                      <ion-label>
-                        <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
-                        <p><strong>{{ 'RESULTS.AVOID_MODIFY' | translate }}</strong> {{ contraindication.reason }}</p>
-                        <p><strong>{{ 'RESULTS.SAFER_ALTERNATIVE' | translate }}</strong> {{ contraindication.alternative }}</p>
-                      </ion-label>
-                    </ion-item>
+
+              <!-- Exercises to avoid: gated for premium conditions when not subscribed -->
+              <ng-container *ngIf="!condition.isPremium || hasPremiumAccess; else avoidLocked">
+                <div class="section-header h2">{{ 'RESULTS.EXERCISES_TO_AVOID' | translate }}</div>
+                <div class="condition-block section-content">
+                  <p [innerHTML]="getHighlightedText(getConditionSection('avoid', condition))"></p>
+                  <p *ngIf="condition.contraindications.length" class="avoid-exercises">
+                    <strong>{{ 'RESULTS.EXAMPLES' | translate }}</strong> {{ getAvoidedExercises(condition) }}
+                  </p>
+                  <ion-list lines="none">
+                    <div class="contraindication-card" *ngFor="let contraindication of condition.contraindications">
+                      <ion-item lines="none">
+                        <ion-label>
+                          <h3>{{ formatExerciseLabel(contraindication.exerciseId) }}</h3>
+                          <p><strong>{{ 'RESULTS.AVOID_MODIFY' | translate }}</strong> {{ contraindication.reason }}</p>
+                          <p><strong>{{ 'RESULTS.SAFER_ALTERNATIVE' | translate }}</strong> {{ contraindication.alternative }}</p>
+                        </ion-label>
+                      </ion-item>
+                    </div>
+                  </ion-list>
+                  <div *ngIf="condition.contraindications.length === 0" class="no-results">
+                    {{ 'RESULTS.NO_MODIFICATIONS' | translate }}
                   </div>
-                </ion-list>
-                <div *ngIf="condition.contraindications.length === 0" class="no-results">
-                  {{ 'RESULTS.NO_MODIFICATIONS' | translate }}
                 </div>
-              </div>
+              </ng-container>
+              <ng-template #avoidLocked>
+                <ion-card color="secondary" class="premium-lock-card">
+                  <ion-card-header>
+                    <ion-card-title>{{ 'RESULTS.AVOID_PRO_TITLE' | translate }}</ion-card-title>
+                  </ion-card-header>
+                  <ion-card-content>
+                    <p>{{ 'RESULTS.AVOID_PRO_DESC' | translate: { count: condition.contraindications.length } }}</p>
+                    <ion-button expand="block" (click)="navigateToUpgrade()">{{ 'RESULTS.UPGRADE_TO_PRO' | translate }}</ion-button>
+                  </ion-card-content>
+                </ion-card>
+              </ng-template>
+
               <div class="divider"></div>
               <ng-container *ngIf="condition.instructorNote">
                 <details class="condition-accordion" *ngIf="hasPremiumAccess; else instructorNoteLocked">

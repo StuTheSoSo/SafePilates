@@ -150,6 +150,8 @@
     "NO_MODIFICATIONS": "特定の修正は見つかりません。資格のある専門家にご相談ください。",
     "TRIMESTER_GUIDANCE": "第{{trimester}}トリメスターのガイダンス",
     "INSTRUCTOR_NOTE": "インストラクターノート",
+    "AVOID_PRO_TITLE": "エクササイズの修正はProのみ",
+    "AVOID_PRO_DESC": "この状態には{{count}}件の特定のエクササイズ修正があります。Proにアップグレードして、避けるべきエクササイズと代替案を確認してください。",
     "INSTRUCTOR_NOTE_PRO_TITLE": "インストラクターノートはProのみ",
     "INSTRUCTOR_NOTE_PRO_DESC": "このコンディションの詳細なインストラクターノートを表示するにはPilates Proを有効にしてください。",
     "UPGRADE_TO_PRO": "Proにアップグレード",

@@ -150,6 +150,8 @@
     "NO_MODIFICATIONS": "Keine spezifischen Anpassungen gefunden. Konsultieren Sie einen qualifizierten Fachmann.",
     "TRIMESTER_GUIDANCE": "Anleitung für das {{trimester}} Trimester",
     "INSTRUCTOR_NOTE": "Instruktornotiz",
+    "AVOID_PRO_TITLE": "Übungsmodifikationen sind nur für Pro",
+    "AVOID_PRO_DESC": "Diese Erkrankung hat {{count}} spezifische Übungsmodifikationen. Upgrade auf Pro, um genau zu sehen, welche Übungen zu vermeiden oder anzupassen sind.",
     "INSTRUCTOR_NOTE_PRO_TITLE": "Instruktornotizen nur für Pro",
     "INSTRUCTOR_NOTE_PRO_DESC": "Aktivieren Sie Pilates Pro, um detaillierte Instruktornotizen für diese Beschwerde anzuzeigen.",
     "UPGRADE_TO_PRO": "Auf Pro upgraden",

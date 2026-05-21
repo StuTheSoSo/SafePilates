@@ -74,9 +74,9 @@
         <ion-item lines="full" class="form-item" *ngIf="formConditionIds.has('pregnancy')">
           <ion-label position="stacked">{{ 'CLIENTS.TRIMESTER_LABEL' | translate }}</ion-label>
           <ion-select [(ngModel)]="formPregnancyTrimester" [placeholder]="'CLIENTS.TRIMESTER_PLACEHOLDER' | translate">
-            <ion-select-option value="1st">1st trimester</ion-select-option>
-            <ion-select-option value="2nd">2nd trimester</ion-select-option>
-            <ion-select-option value="3rd">3rd trimester</ion-select-option>
+            <ion-select-option value="1st">{{ 'CLIENTS.TRIMESTER_1ST' | translate }}</ion-select-option>
+            <ion-select-option value="2nd">{{ 'CLIENTS.TRIMESTER_2ND' | translate }}</ion-select-option>
+            <ion-select-option value="3rd">{{ 'CLIENTS.TRIMESTER_3RD' | translate }}</ion-select-option>
           </ion-select>
         </ion-item>
 

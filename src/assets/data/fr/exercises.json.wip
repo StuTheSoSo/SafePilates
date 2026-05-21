@@ -1,0 +1,889 @@
+[
+  {
+    "id": "the_hundred",
+    "name": "Les Cent",
+    "shortDescription": "Un échauffement inspiré par la respiration qui engage les abdominaux tout en pompant les bras et en stabilisant la cage thoracique.",
+    "focus": "Endurance de base et coordination respiratoire.",
+    "benefits": "Améliore la capacité pulmonaire et un soutien stable du tronc grâce à une stimulation respiratoire intentionnelle.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Gardez la tête sur le tapis et les jambes plus basses pour réduire la tension cervicale et la charge abdominale.",
+      "Effectuez des pompes sur une seule jambe ou des tapotements de talon soutenus si l’extension complète de la jambe est trop intense.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Étendez les jambes plus haut tout en gardant le bassin stable.",
+      "Augmentez légèrement la vitesse des bras une fois que la coordination respiratoire est stable."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Inspirez pendant cinq pompes, expirez pendant cinq pompes ; garder les côtes longues et les épaules détendues.",
+    "setup": "Allongez-vous sur le dos, les genoux pliés sur la table, les épaules détendues et les bras allongés à vos côtés.",
+    "instructions": [
+      "Allongez-vous sur le dos, les genoux pliés sur la table, les épaules détendues et les bras allongés à vos côtés.",
+      "Soulevez votre tête, votre cou et vos épaules du tapis tout en gardant le bas du dos au sol.",
+      "Pompez vigoureusement vos bras en effectuant de petits mouvements le long du corps.",
+      "Coordonnez le mouvement avec la respiration : inspirez pendant cinq pompes, expirez pendant cinq pompes.",
+      "Restez stable jusqu’aux côtes et évitez d’enfoncer les épaules dans les oreilles.",
+      [
+        "Régression : gardez la tête sur le tapis et les jambes plus basses pour réduire la tension cervicale et la charge abdominale.",
+        "Progression : Étendez les jambes plus haut tout en gardant le bassin stable."
+      ]
+    ],
+    "commonMistakes": [
+      "Permettant au bas du dos de s'éloigner du tapis.",
+      "Contracter les épaules ou les soulever vers les oreilles."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Fléchisseurs de hanche",
+      "Épaules"
+    ],
+    "keyTakeaway": "Concentrez-vous sur l’endurance de base et la coordination respiratoire",
+    "safetyNote": "Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée.",
+    "whereToFeel": "Ressentez le travail dans les abdominaux et l’intérieur des cuisses pendant que vous stabilisez la cage thoracique.",
+    "transitionIn": "Allongez-vous sur le dos, les genoux pliés sur la table, les bras à vos côtés et préparez-vous à respirer.",
+    "transitionOut": "Abaissez la tête et les pieds sur le tapis, puis roulez sur le côté pour vous asseoir en toute sécurité.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifiez : Vos abdominaux sont-ils engagés et votre cou est-il détendu ?",
+    "whatToAvoid": "Évitez de pousser le menton vers l'avant, de permettre au bas du dos de se cambrer du tapis ou de retenir la respiration pendant les pompes sur les bras.",
+    "alternativeExercise": "Respiration assise",
+    "instructorNote": "Surveillez les côtes qui éclatent à l’inspiration et la tension prématurée des épaules. Gardez les débutants tête baissée et progressez vers la tête flottante seulement une fois que le bassin est vraiment stable.",
+    "teachingCues": [
+      "Bas du dos lourd et long.",
+      "Pompez à partir des épaules, pas des poignets.",
+      "Respirez par l'arrière de vos côtes."
+    ],
+    "modificationsAndAlternatives": [
+      "Gardez la tête sur le tapis et les jambes plus basses pour réduire la tension cervicale et la charge abdominale.",
+      "Effectuez des pompes sur une seule jambe ou des tapotements de talon soutenus si l’extension complète de la jambe est trop intense.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : la respiration assise"
+    ],
+    "referenceDetails": "Note de sécurité : Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de pousser le menton vers l'avant, de permettre au bas du dos de se cambrer du tapis ou de retenir la respiration pendant les pompes sur les bras.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les genoux pliés sur la table, les épaules détendues et les bras allongés à vos côtés. Respiration : Inspirez pendant cinq pompes, expirez pendant cinq pompes ; garder les côtes longues et les épaules détendues. Instructions : 1. Allongez-vous sur le dos, les genoux pliés sur la table, les épaules détendues et les bras allongés à vos côtés. 2. Soulevez la tête, le cou et les épaules du tapis tout en gardant le bas du dos au sol. 3. Pompez vigoureusement vos bras en effectuant de petits mouvements le long du corps. 4. Coordonnez le mouvement avec la respiration : inspirez pendant cinq pompes, expirez pendant cinq pompes. 5. Restez stable dans les côtes et évitez d’enfoncer les épaules dans les oreilles. Régression : gardez la tête sur le tapis et les jambes plus basses pour réduire la tension cervicale et la charge abdominale. Progression : Étendez les jambes plus haut tout en gardant le bassin stable. Erreurs courantes : permettre au bas du dos de s'éloigner du tapis. Contracter les épaules ou les soulever vers les oreilles. Progressions : Étendez les jambes plus haut tout en gardant le bassin stable.; Augmentez légèrement la vitesse des bras une fois que la coordination respiratoire est stable."
+  },
+  {
+    "id": "roll_up",
+    "name": "Retrousser",
+    "shortDescription": "Articulation vertébrale séquentielle du couché au siège qui renforce la force de base tout en allongeant le dos.",
+    "focus": "Articulation vertébrale et mobilité abdominale.",
+    "benefits": "Développe un contrôle abdominal profond tout en enseignant une articulation vertébrale sûre.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Pliez les genoux et utilisez les bras pour soutenir la colonne vertébrale pendant l'enroulement.",
+      "Commencez par une variante de préparation sur table si la flexibilité des ischio-jambiers est limitée.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Effectuez avec les jambes droites et utilisez moins les bras.",
+      "Soulevez les bras au-dessus de votre tête pour augmenter le défi une fois que la colonne vertébrale est stable."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Expirez pour décoller la colonne vertébrale, inspirez par le haut, puis expirez pour articuler vers le bas.",
+    "setup": "Allongez-vous sur le dos, les jambes tendues et les bras tendus au-dessus de votre tête, le bassin neutre et les côtes molles.",
+    "instructions": [
+      "Allongez-vous sur le dos, les jambes tendues, les bras tendus au-dessus de votre tête et le bassin neutre.",
+      "Inspirez pour allonger la colonne vertébrale et garder les épaules larges et détendues.",
+      "Expirez pour décoller la colonne vertébrale une vertèbre à la fois, en allant vers l'avant à partir des hanches.",
+      "Tenez le haut avec les abdominaux engagés et les côtes inférieures rentrées.",
+      "Inspirez pour amorcer la descente, puis expirez pour articuler lentement la colonne vertébrale vers le bas.",
+      [
+        "Régression : pliez les genoux et utilisez les bras pour soutenir la colonne vertébrale pendant l'enroulement.",
+        "Progression : Effectuez avec les jambes tendues et utilisez moins les bras."
+      ]
+    ],
+    "commonMistakes": [
+      "Utiliser l’élan au lieu d’articuler la colonne vertébrale.",
+      "Tirer sur le cou en vous levant."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Érecteurs de la colonne vertébrale",
+      "Ischio-jambiers"
+    ],
+    "keyTakeaway": "Focus sur l'articulation vertébrale et la mobilité abdominale",
+    "safetyNote": "Gardez le cou long, évitez de tirer sur la tête et arrêtez-vous si le bas du dos s'éloigne du tapis.",
+    "whereToFeel": "Sensation primaire : abdominaux et fléchisseurs de la colonne vertébrale lors du roulage et ischio-jambiers lors de l'étirement.",
+    "transitionIn": "Allongez-vous sur le dos, les jambes tendues et les bras au-dessus de la tête, bassin neutre.",
+    "transitionOut": "Après la dernière répétition, pliez les genoux et roulez sur le côté avant de vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Conseil rapide : gardez le mouvement lent et articulez la colonne vertébrale.",
+    "whatToAvoid": "Évitez de tirer sur le cou, d'utiliser votre élan pour vous balancer dans le bas du dos ou de laisser les pieds se soulever du tapis.",
+    "alternativeExercise": "Rouler comme une balle",
+    "instructorNote": "Repérez l’articulation vertèbre par vertèbre plutôt qu’une charnière. Pour les ischio-jambiers tendus, pliez légèrement les genoux et vérifiez si la colonne vertébrale se segmente réellement.",
+    "teachingCues": [
+      "Pelez une vertèbre à la fois.",
+      "Bas du dos lourd à mesure que vous descendez.",
+      "Ramassez le ventre vers le haut et vers l’intérieur."
+    ],
+    "modificationsAndAlternatives": [
+      "Pliez les genoux et utilisez les bras pour soutenir la colonne vertébrale pendant l'enroulement.",
+      "Commencez par une variante de préparation sur table si la flexibilité des ischio-jambiers est limitée.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : rouler comme une balle"
+    ],
+    "referenceDetails": "Note de sécurité : gardez le cou long, évitez de tirer sur la tête et arrêtez-vous si le bas du dos s'éloigne du tapis. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de tirer sur le cou, d'utiliser votre élan pour vous balancer dans le bas du dos ou de laisser les pieds se soulever du tapis.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les jambes tendues et les bras tendus au-dessus de votre tête, le bassin neutre et les côtes molles. Respiration : Expirez pour décoller la colonne vertébrale, inspirez par le haut, puis expirez pour articuler vers le bas. Instructions : 1. Allongez-vous sur le dos, les jambes tendues, les bras tendus au-dessus de votre tête et le bassin neutre. 2. Inspirez pour allonger la colonne vertébrale et garder les épaules larges et détendues. 3. Expirez pour décoller la colonne vertébrale d’une vertèbre à la fois, en allant vers l’avant à partir des hanches. 4. Tenez le haut avec les abdominaux engagés et les côtes inférieures repliées. 5. Inspirez pour amorcer la descente, puis expirez pour articuler lentement la colonne vertébrale vers le bas. Régression : pliez les genoux et utilisez les bras pour soutenir la colonne vertébrale pendant l'enroulement. Progression : Effectuez avec les jambes tendues et utilisez moins les bras. Erreurs courantes : Utiliser l'élan au lieu d'articuler la colonne vertébrale. ; Tirer sur le cou en vous levant. Progressions : Effectuer avec les jambes tendues et utiliser moins les bras. ; Soulevez les bras au-dessus de votre tête pour augmenter le défi une fois que la colonne vertébrale est stable."
+  },
+  {
+    "id": "roll_over",
+    "name": "Rouler sur",
+    "shortDescription": "Exercice contrôlé d'inversion et de mobilité de la colonne vertébrale qui ouvre la ligne du dos et étire les ischio-jambiers.",
+    "focus": "Extension du dos et libération des ischio-jambiers.",
+    "benefits": "Améliore la flexibilité du dos et aide à étirer la chaîne postérieure.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Gardez les jambes pliées et bougez avec une plus petite amplitude de mouvement pour protéger les ischio-jambiers et le bas du dos.",
+      "Utilisez les bras pour soutenir le mouvement et roulez seulement aussi loin que les épaules le permettent.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Redressez les jambes plus progressivement à mesure que la flexibilité des ischio-jambiers s'améliore.",
+      "Abaissez les jambes plus lentement vers la verticale tout en gardant la colonne vertébrale contrôlée."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Expirez pour lever les jambes au-dessus de votre tête, inspirez en haut, puis expirez pour descendre avec contrôle.",
+    "setup": "Allongez-vous sur le dos, les jambes tendues, les bras le long du corps et le bas du dos ancré au tapis.",
+    "instructions": [
+      "Allongez-vous sur le dos, les jambes tendues et les bras le long du corps.",
+      "Inspirez pour vous préparer, rentrez les abdominaux et gardez les côtes molles.",
+      "Expirez pour lever les jambes au-dessus de votre tête et roulez sur les épaules avec contrôle.",
+      "Pause en haut avec le bassin stable et les jambes longues.",
+      "Inspirez par le haut, puis expirez pour redescendre lentement les jambes tout en gardant le bas du dos soutenu.",
+      [
+        "Régression : gardez les jambes pliées et bougez avec une amplitude de mouvement plus petite pour protéger les ischio-jambiers et le bas du dos.",
+        "Progression : Redressez les jambes plus progressivement à mesure que la flexibilité des ischio-jambiers s'améliore."
+      ]
+    ],
+    "commonMistakes": [
+      "Lâcher les jambes trop rapidement et perdre le contrôle de base.",
+      "Effondrement du bas du dos pendant le roulis."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Ischio-jambiers",
+      "Bas du dos"
+    ],
+    "keyTakeaway": "Concentrez-vous sur l’extension du dos et la libération des ischio-jambiers",
+    "safetyNote": "Déplacez-vous lentement, gardez le bas du dos ancré et choisissez une régression si les ischio-jambiers ou le cou sont tendus.",
+    "whereToFeel": "Ressentez l'étirement des ischio-jambiers et le contrôle des abdominaux inférieurs.",
+    "transitionIn": "Allongez-vous sur le dos, les jambes tendues, les bras le long du corps et le bas du dos ancré.",
+    "transitionOut": "Abaissez les jambes, roulez sur le côté et utilisez vos mains pour vous aider à vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifiez : Vos épaules sont-elles détendues et votre tronc soutient-il le levage ?",
+    "whatToAvoid": "Évitez de rouler sur le cou, de laisser les jambes tomber fortement ou de jouer sans un contrôle adéquat du tronc au préalable.",
+    "alternativeExercise": "Pont d'épaule",
+    "instructorNote": "Ceci est contre-indiqué en cas d’ostéoporose, de problèmes cervicaux et de grossesse. Établissez toujours d’abord la compétence en flexion pelvienne. Assurez-vous que le client soutient le bas de son dos avec les mains avant d’ouvrir les jambes.",
+    "teachingCues": [
+      "Appuyez les bras dans le tapis pour le contrôle.",
+      "Gardez les jambes longues et jointes.",
+      "Roulez à partir du bas du dos, pas du cou."
+    ],
+    "modificationsAndAlternatives": [
+      "Gardez les jambes pliées et bougez avec une plus petite amplitude de mouvement pour protéger les ischio-jambiers et le bas du dos.",
+      "Utilisez les bras pour soutenir le mouvement et roulez seulement aussi loin que les épaules le permettent.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : le pont d'épaule"
+    ],
+    "referenceDetails": "Note de sécurité : bougez lentement, gardez le bas du dos ancré et choisissez une régression si les ischio-jambiers ou le cou sont tendus. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de rouler sur le cou, de laisser les jambes tomber fortement ou de jouer sans un contrôle adéquat du tronc au préalable.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les jambes tendues, les bras le long du corps et le bas du dos ancré au tapis. Respiration : Expirez pour lever les jambes au-dessus de votre tête, inspirez en haut, puis expirez pour descendre avec contrôle. Instructions : 1. Allongez-vous sur le dos, les jambes tendues et les bras le long du corps. 2. Inspirez pour vous préparer, rentrez les abdominaux et gardez les côtes molles. 3. Expirez pour lever les jambes au-dessus de votre tête et roulez sur les épaules avec contrôle. 4. Faites une pause en haut avec le bassin stable et les jambes longues. 5. Inspirez par le haut, puis expirez pour redescendre lentement les jambes tout en gardant le bas du dos soutenu. Régression : gardez les jambes pliées et bougez avec une amplitude de mouvement plus petite pour protéger les ischio-jambiers et le bas du dos. Progression : Redressez les jambes plus progressivement à mesure que la flexibilité des ischio-jambiers s'améliore. Erreurs courantes : laisser tomber les jambes trop rapidement et perdre le contrôle de base. ; Effondrement du bas du dos pendant le roulis. Progressions : Redressez les jambes plus progressivement à mesure que la flexibilité des ischio-jambiers s'améliore. ; Abaissez les jambes plus lentement vers la verticale tout en gardant la colonne vertébrale contrôlée."
+  },
+  {
+    "id": "rolling_like_a_ball",
+    "name": "Rouler comme une balle",
+    "shortDescription": "Mouvement de roulement arrondi qui masse la colonne vertébrale, remet en question l'équilibre et coordonne la respiration avec le mouvement.",
+    "focus": "Massage de la colonne vertébrale et contrôle de l'équilibre.",
+    "benefits": "Développe l’équilibre, la mobilité de la colonne vertébrale et le contrôle des mouvements circulaires.",
+    "category": "Tapis",
+    "level": "Beginner",
+    "modifications": [
+      "Gardez les pieds sur le tapis ou tenez les tibias au lieu des chevilles pour réduire la tension.",
+      "Utilisez une plage de balancement plus petite et concentrez-vous sur le maintien d’une colonne vertébrale arrondie.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Augmentez le défi d’équilibre en vous balançant avec une base de support légèrement plus petite.",
+      "Ajoutez une petite pause au sommet du rocher avant de reculer."
+    ],
+    "equipment": "Tapis",
+    "reps": "8–10 repetitions",
+    "breathing": "Expirez pour basculer en arrière, inspirez pour retrouver l’équilibre avec une colonne vertébrale arrondie.",
+    "setup": "Asseyez-vous avec les genoux pliés, les mains sur les tibias et les épaules détendues.",
+    "instructions": [
+      "Asseyez-vous avec les genoux pliés, les mains sur les tibias et les épaules détendues.",
+      "Arrondissez la colonne vertébrale et ramenez les genoux vers la poitrine.",
+      "Tenez-vous en équilibre sur les ischions et inspirez profondément.",
+      "Expirez pour revenir vers les épaules, en conservant la forme arrondie.",
+      "Inspirez en revenant à l’équilibre avec contrôle.",
+      [
+        "Régression : gardez les pieds sur le tapis ou tenez les tibias au lieu des chevilles pour réduire la tension.",
+        "Progression : augmentez le défi de l'équilibre en vous balançant avec une base d'appui légèrement plus petite."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates.",
+      "Utiliser l’élan plutôt que l’articulation contrôlée."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Extenseurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Focus sur le massage de la colonne vertébrale et le contrôle de l'équilibre",
+    "safetyNote": "Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée.",
+    "whereToFeel": "Sentez les abdominaux et les extenseurs de la colonne vertébrale travailler pour contrôler le roulis et l’équilibre.",
+    "transitionIn": "Asseyez-vous devant le tapis, les genoux fléchis, les mains sur les tibias et en équilibre sur les ischions.",
+    "transitionOut": "Placez les pieds sur le tapis et déroulez la colonne vertébrale pour vous asseoir droit.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifier : utilisez-vous vos abdominaux pour contrôler le roulis, pas l'élan ?",
+    "whatToAvoid": "Évitez de rouler sur le cou, d'utiliser l'élan au lieu du contrôle de base ou de perdre la forme de la boule dans le bas du dos.",
+    "alternativeExercise": "Étirement de la colonne vertébrale vers l’avant",
+    "instructorNote": "Utilisez-le comme massage de la colonne vertébrale et réinitialisation proprioceptive. Les débutants déroulent souvent la forme à mi-roulage – incitez-les à serrer fermement leurs genoux. Contre-indiqué en cas d'ostéoporose et de chirurgie récente de la colonne vertébrale.",
+    "teachingCues": [
+      "Tenez la forme comme une balle – serrée et ronde.",
+      "Roulez avec contrôle, pas avec vitesse.",
+      "Atterrissez sur vos ischions, pas sur votre coccyx."
+    ],
+    "modificationsAndAlternatives": [
+      "Gardez les pieds sur le tapis ou tenez les tibias au lieu des chevilles pour réduire la tension.",
+      "Utilisez une plage de balancement plus petite et concentrez-vous sur le maintien d’une colonne vertébrale arrondie.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : étirement de la colonne vertébrale vers l'avant"
+    ],
+    "referenceDetails": "Note de sécurité : Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de rouler sur le cou, d'utiliser l'élan au lieu du contrôle du tronc ou de perdre la forme de la boule dans le bas du dos.",
+    "instructionsAndDetails": "Configuration : Asseyez-vous avec les genoux pliés, les mains sur les tibias et les épaules détendues. Respiration : Expirez pour basculer en arrière, inspirez pour retrouver l’équilibre avec une colonne vertébrale arrondie. Instructions : 1. Asseyez-vous avec les genoux pliés, les mains sur les tibias et les épaules détendues. 2. Arrondissez la colonne vertébrale et ramenez les genoux vers la poitrine. 3. Tenez-vous en équilibre sur les ischions et inspirez profondément. 4. Expirez pour revenir vers les épaules, en conservant la forme arrondie. 5. Inspirez en revenant à l’équilibre avec contrôle. Régression : gardez les pieds sur le tapis ou tenez les tibias au lieu des chevilles pour réduire la tension. Progression : augmentez le défi de l'équilibre en vous balançant avec une base d'appui légèrement plus petite. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Se déplacer trop rapidement au lieu d'utiliser la précision contrôlée du Pilates.; Utiliser l’élan plutôt que l’articulation contrôlée. Progressions : augmentez le défi de l'équilibre en vous balançant avec une base de soutien légèrement plus petite. ; Ajoutez une petite pause au sommet du rocher avant de reculer."
+  },
+  {
+    "id": "spine_stretch_forward",
+    "name": "Étirement de la colonne vertébrale vers l’avant",
+    "shortDescription": "Étirement assis vers l'avant avec flexion dynamique de la colonne vertébrale et longueur des ischio-jambiers, mettant l'accent sur la posture et le contrôle de la cage thoracique.",
+    "focus": "Longueur et posture de la chaîne postérieure.",
+    "benefits": "Favorise la flexion de la colonne vertébrale avec la longueur des ischio-jambiers et la conscience de la posture.",
+    "category": "Tapis",
+    "level": "Beginner",
+    "modifications": [
+      "Asseyez-vous sur un petit bloc ou un coussin pour faciliter l’étirement des ischio-jambiers.",
+      "Pliez légèrement les genoux et atteignez seulement aussi loin que la colonne vertébrale peut rester longue.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Étendez davantage les jambes et atteignez les bras plus loin que les pieds.",
+      "Maintenez la position la plus longue avec une respiration régulière et un noyau fort."
+    ],
+    "equipment": "Tapis",
+    "reps": "8–10 repetitions",
+    "breathing": "Inspirez pour vous préparer, expirez pour soulever et allonger la colonne vertébrale.",
+    "setup": "Asseyez-vous droit, les jambes étendues et les pieds fléchis.",
+    "instructions": [
+      "Asseyez-vous droit, les jambes étendues et les pieds fléchis.",
+      "Asseyez-vous droit, les jambes étendues et les pieds fléchis.",
+      "Expirez pour tendre les hanches vers l’avant et contourner la colonne vertébrale.",
+      "Gardez le menton légèrement rentré et les épaules baissées.",
+      "Inspirez pour revenir à une posture verticale avec contrôle.",
+      [
+        "Régression : Asseyez-vous sur un petit bloc ou un coussin pour faciliter l’étirement des ischio-jambiers.",
+        "Progression : étendez davantage les jambes et atteignez les bras plus loin que les pieds."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Ischio-jambiers",
+      "Extenseurs de la colonne vertébrale",
+      "Abdominales"
+    ],
+    "keyTakeaway": "Concentrez-vous sur la longueur et la posture de la chaîne postérieure",
+    "safetyNote": "Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée.",
+    "whereToFeel": "Ressentez la longueur des ischio-jambiers et la flexion profonde des abdominaux.",
+    "transitionIn": "Asseyez-vous droit, les jambes étendues et les pieds fléchis, les bras tendus vers l’avant.",
+    "transitionOut": "Pliez les genoux et utilisez vos mains pour vous aider à vous lever ou à passer à l'exercice suivant.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Conseil rapide : gardez la colonne vertébrale longue lorsque vous tendez la main vers l'avant.",
+    "whatToAvoid": "Évitez de vous effondrer à travers la colonne thoracique, d'affaisser le bas du dos en flexion ou d'aller si loin que le bassin penche vers l'avant.",
+    "alternativeExercise": "Courbure latérale assise",
+    "instructorNote": "L’objectif est la longueur de la colonne vertébrale et non l’étirement des ischio-jambiers. Invitez les clients à grandir avant d’atteindre. Asseyez-vous sur une couverture pliée si le bassin bascule vers l'arrière.",
+    "teachingCues": [
+      "Asseyez-vous bien avant d'atteindre.",
+      "Éloignez le nombril des jambes.",
+      "Atteignez le bout des doigts sans effondrer la poitrine."
+    ],
+    "modificationsAndAlternatives": [
+      "Asseyez-vous sur un petit bloc ou un coussin pour faciliter l’étirement des ischio-jambiers.",
+      "Pliez légèrement les genoux et atteignez seulement aussi loin que la colonne vertébrale peut rester longue.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : Courbure latérale assise"
+    ],
+    "referenceDetails": "Note de sécurité : Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de vous effondrer à travers la colonne thoracique, d'affaisser le bas du dos en flexion ou d'atteindre un point tel que le bassin bascule vers l'avant.",
+    "instructionsAndDetails": "Configuration : Asseyez-vous droit, les jambes étendues et les pieds fléchis. Respiration : Inspirez pour vous préparer, expirez pour soulever et allonger la colonne vertébrale. Instructions : 1. Asseyez-vous droit, les jambes étendues et les pieds fléchis. 2. Asseyez-vous droit, les jambes étendues et les pieds fléchis. 3. Expirez pour tendre les hanches vers l’avant et contourner la colonne vertébrale. 4. Gardez le menton légèrement rentré et les épaules baissées. 5. Inspirez pour revenir à une posture verticale avec contrôle. Régression : Asseyez-vous sur un petit bloc ou un coussin pour faciliter l’étirement des ischio-jambiers. Progression : étendez davantage les jambes et atteignez les bras plus loin que les pieds. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : étendez davantage les jambes et atteignez les bras plus loin que les pieds. ; Maintenez la position la plus longue avec une respiration régulière et un noyau fort."
+  },
+  {
+    "id": "roll_down",
+    "name": "Rouler vers le bas",
+    "shortDescription": "Articulation vertébrale séquentielle de la position debout au tapis qui mobilise la colonne vertébrale et allonge le dos.",
+    "focus": "Articulation vertébrale et contrôle du tronc.",
+    "benefits": "Améliore la mobilité segmentaire de la colonne vertébrale tout en renforçant le soutien abdominal profond.",
+    "category": "Tapis",
+    "level": "Beginner",
+    "modifications": [
+      "Pliez légèrement les genoux et bougez plus lentement si la flexibilité des ischio-jambiers est limitée.",
+      "Gardez les bras longs et les épaules détendues, loin des oreilles.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Travaillez vers un déroulement plus lent et entièrement articulé avec des inspirations plus longues entre chaque segment.",
+      "Ajoutez un petit bras tendu vers l'avant en bas pour augmenter la longueur et le contrôle de la colonne vertébrale."
+    ],
+    "equipment": "Tapis",
+    "reps": "8–10 repetitions",
+    "breathing": "Expirez pour décoller la colonne vertébrale, inspirez pour remonter avec longueur.",
+    "setup": "Tenez-vous droit, les pieds écartés à la largeur des hanches, les genoux souples, le bassin neutre et les bras longs devant.",
+    "instructions": [
+      "Tenez-vous droit, les pieds écartés à la largeur des hanches, les genoux souples, le bassin neutre et les côtes souples.",
+      "Inspirez pour allonger la couronne et abaissez les omoplates.",
+      "Expirez pour décoller la colonne vertébrale vers le tapis, une vertèbre à la fois, en gardant le bassin stable.",
+      "Gardez les ischio-jambiers engagés et le bas du dos soutenu lorsque vous atteignez vos orteils.",
+      "Inspirez pour commencer l’enroulement, puis expirez pour revenir debout avec contrôle.",
+      [
+        "Régression : pliez légèrement les genoux et réduisez la portée vers l'avant pour protéger les ischio-jambiers.",
+        "Progression : Ajoutez un petit bras tendu vers le bas tout en gardant la colonne vertébrale longue."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates.",
+      "Utiliser l’élan plutôt que l’articulation contrôlée."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Stabilisateurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Concentrez-vous sur l'articulation de la colonne vertébrale et le contrôle du tronc",
+    "safetyNote": "Maintenez un soutien abdominal uniforme, évitez de vous effondrer dans le bas du dos et abaissez-le seulement aussi loin que vos ischio-jambiers le permettent sans arrondir excessivement.",
+    "whereToFeel": "Ressentez les abdominaux et les stabilisateurs vertébraux contrôlant la descente et le retour.",
+    "transitionIn": "Tenez-vous droit en haut du tapis, les pieds écartés à la largeur des hanches.",
+    "transitionOut": "Après le dernier enroulement, pliez les genoux et revenez debout.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifiez : Est-ce que vous décollez la colonne vertébrale d'une vertèbre à la fois ?",
+    "whatToAvoid": "Évitez de vous effondrer d’un seul coup, d’hyperétendre les genoux ou de laisser le menton tomber au point de fatiguer le cou.",
+    "alternativeExercise": "Mobilisation de la colonne vertébrale",
+    "instructorNote": "Il s’agit d’un excellent outil d’évaluation : observez où la courbe s’arrête et où commence la charnière. Pour les ischio-jambiers tendus, permettez une légère flexion du genou. Pour l’ostéoporose, passez à un rouleau rachidien assis.",
+    "teachingCues": [
+      "Hochez d'abord votre menton, puis décollez.",
+      "Sentez chaque vertèbre se libérer.",
+      "Accrochez-vous lourdement et respirez par le bas."
+    ],
+    "modificationsAndAlternatives": [
+      "Pliez légèrement les genoux et bougez plus lentement si la flexibilité des ischio-jambiers est limitée.",
+      "Gardez les bras longs et les épaules détendues, loin des oreilles.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : mobilisation de la colonne vertébrale"
+    ],
+    "referenceDetails": "Note de sécurité : maintenez un soutien abdominal uniforme, évitez de vous effondrer dans le bas du dos et abaissez-le seulement aussi loin que vos ischio-jambiers le permettent sans arrondir excessivement. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de vous effondrer d'un seul coup, d'hyperétendre les genoux ou de laisser le menton tomber au point de fatiguer le cou.",
+    "instructionsAndDetails": "Configuration : Tenez-vous droit, les pieds écartés à la largeur des hanches, les genoux souples, le bassin neutre et les bras longs devant. Respiration : Expirez pour décoller la colonne vertébrale, inspirez pour remonter avec longueur. Instructions : 1. Tenez-vous droit, les pieds écartés à la largeur des hanches, les genoux souples, le bassin neutre et les côtes souples. 2. Inspirez pour allonger la couronne et abaissez les omoplates. 3. Expirez pour décoller la colonne vertébrale vers le tapis, une vertèbre à la fois, en gardant le bassin stable. 4. Gardez les ischio-jambiers engagés et le bas du dos soutenu lorsque vous atteignez vos orteils. 5. Inspirez pour commencer l’enroulement, puis expirez pour revenir debout avec contrôle. Régression : pliez légèrement les genoux et réduisez la portée vers l'avant pour protéger les ischio-jambiers. Progression : Ajoutez un petit bras tendu vers le bas tout en gardant la colonne vertébrale longue. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Se déplacer trop rapidement au lieu d'utiliser la précision contrôlée du Pilates.; Utiliser l’élan plutôt que l’articulation contrôlée. Progressions : travaillez vers un déroulement plus lent et entièrement articulé avec des inspirations plus longues entre chaque segment. ; Ajoutez un petit bras tendu vers l'avant en bas pour augmenter la longueur et le contrôle de la colonne vertébrale."
+  },
+  {
+    "id": "teaser",
+    "name": "Taquin",
+    "shortDescription": "Lifting classique en forme de V exigeant une précision de base, une coordination des fléchisseurs de hanche et une colonne vertébrale longue et soutenue.",
+    "focus": "Force et contrôle de base.",
+    "benefits": "Renforce l'ensemble du tronc et défie la coordination dans un levage équilibré.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Entraînez-vous avec les genoux fléchis et soutenez les cuisses avec les mains.",
+      "Soulever seulement aussi haut que le bas du dos peut rester long et stable.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Redressez les jambes et abaissez les bras au-dessus de votre tête avec contrôle.",
+      "Maintenez la position haute pendant un temps plus long tout en retenant votre respiration."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Expirez pour initier, inspirez pour relâcher et réinitialiser.",
+    "setup": "Allongez-vous sur le dos, les genoux pliés, les pieds à plat et les bras tendus au-dessus de votre tête ; garder la colonne vertébrale longue et les épaules douces.",
+    "instructions": [
+      "Allongez-vous sur le dos, les genoux pliés, les pieds à plat et les bras tendus au-dessus de votre tête.",
+      "Inspirez pour vous préparer, abaissez les côtes et engagez les abdominaux.",
+      "Expirez pour former un V, en atteignant les bras vers les orteils tout en gardant le bassin stable.",
+      "Retenez une respiration avec la colonne vertébrale longue et les jambes actives.",
+      "Expirez pour rouler lentement, en articulant la colonne vertébrale vers le tapis.",
+      [
+        "Régression : Entraînez-vous avec les genoux fléchis et soutenez les cuisses avec les mains.",
+        "Progression : Redressez les jambes et abaissez les bras au-dessus de votre tête avec contrôle."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Stabilisateurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Concentrez-vous sur la force et le contrôle de base",
+    "safetyNote": "Gardez le cou long et le bassin stable ; arrêtez-vous si le bas du dos s’arrondit excessivement ou si la tête se replie.",
+    "whereToFeel": "Sentez les abdominaux et les fléchisseurs de hanche travailler pour maintenir la forme en V.",
+    "transitionIn": "Allongez-vous sur le dos, les genoux pliés, les pieds à plat, les bras au-dessus de la tête.",
+    "transitionOut": "Abaissez les jambes et la colonne vertébrale sur le tapis, puis roulez sur le côté pour vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Conseil rapide : gardez la forme en V stable et le cou long.",
+    "whatToAvoid": "Évitez de saisir les fléchisseurs de la hanche, de perdre la courbe en C en bas ou de permettre au bas du dos de s'articuler plutôt que de s'articuler.",
+    "alternativeExercise": "Étirement d’une seule jambe",
+    "instructorNote": "Construisez à partir d'un demi-teaser avant un teaser complet. La sortie est aussi importante que l’entrée – signalez l’articulation vers le bas. Surveillez la dominance des fléchisseurs de la hanche et le manque de support d’inclinaison pelvienne postérieure.",
+    "teachingCues": [
+      "Forme en V de la tête aux pieds.",
+      "Ramassez le ventre en descendant.",
+      "Gardez les épaules éloignées des oreilles."
+    ],
+    "modificationsAndAlternatives": [
+      "Entraînez-vous avec les genoux fléchis et soutenez les cuisses avec les mains.",
+      "Soulever seulement aussi haut que le bas du dos peut rester long et stable.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : étirement d’une seule jambe"
+    ],
+    "referenceDetails": "Note de sécurité : Gardez le cou long et le bassin stable ; arrêtez-vous si le bas du dos s’arrondit excessivement ou si la tête se replie. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de saisir les fléchisseurs de la hanche, de perdre la courbe en C en bas ou de permettre au bas du dos de s'articuler plutôt que de s'articuler.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les genoux pliés, les pieds à plat et les bras tendus au-dessus de votre tête ; garder la colonne vertébrale longue et les épaules douces. Respiration : Expirez pour initier, inspirez pour relâcher et réinitialiser. Instructions : 1. Allongez-vous sur le dos, les genoux pliés, les pieds à plat et les bras tendus au-dessus de votre tête. 2. Inspirez pour vous préparer, abaissez les côtes et engagez les abdominaux. 3. Expirez pour former un V, en atteignant les bras vers les orteils tout en gardant le bassin stable. 4. Retenez une respiration avec la colonne vertébrale longue et les jambes actives. 5. Expirez pour rouler lentement, en articulant la colonne vertébrale vers le tapis. Régression : Entraînez-vous avec les genoux fléchis et soutenez les cuisses avec les mains. Progression : Redressez les jambes et abaissez les bras au-dessus de votre tête avec contrôle. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : Redressez les jambes et abaissez les bras au-dessus de votre tête avec contrôle. ; Maintenez la position haute pendant un temps plus long tout en retenant votre respiration."
+  },
+  {
+    "id": "saw",
+    "name": "Scie",
+    "shortDescription": "Rotation assise avec flexion vertébrale qui étire les ischio-jambiers et les obliques tout en maintenant un bassin stable.",
+    "focus": "Rotation oblique et mobilité des ischio-jambiers.",
+    "benefits": "Améliore la mobilité rotationnelle et favorise une colonne vertébrale longue et stable.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Réduisez la plage de torsion et gardez la colonne vertébrale longue plutôt que de s'effondrer.",
+      "Raccourcissez l’écartement des jambes si les ischio-jambiers sont trop tendus.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Allez plus loin au-delà des pieds et approfondissez la rotation avec un torse stable.",
+      "Augmentez la portée tout en gardant les côtes levées au-dessus des hanches."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Expirez pour initier, inspirez pour relâcher et réinitialiser.",
+    "setup": "Asseyez-vous avec les jambes larges, les bras étendus et la colonne vertébrale haute.",
+    "instructions": [
+      "Asseyez-vous avec les jambes larges, les bras étendus et la colonne vertébrale haute.",
+      "Asseyez-vous droit, les jambes étendues et les bras sur les côtés.",
+      "Expirez pour tourner à partir de la taille et atteignez le petit doigt vers le pied opposé.",
+      "Gardez le torse aussi longtemps que vous repliez la jambe avant.",
+      "Inspirez pour revenir au centre avec contrôle.",
+      [
+        "Régression : réduisez la plage de torsion et gardez la colonne vertébrale longue plutôt que de s'effondrer.",
+        "Progression : dépassez les pieds et approfondissez la rotation avec un torse stable."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Obliques",
+      "Ischio-jambiers",
+      "Rotateurs de la colonne vertébrale"
+    ],
+    "keyTakeaway": "Focus sur la rotation oblique et la mobilité des ischio-jambiers",
+    "safetyNote": "Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée.",
+    "whereToFeel": "Ressentez les obliques et les ischio-jambiers lorsque vous tournez et atteignez.",
+    "transitionIn": "Asseyez-vous avec les jambes larges, les bras étendus et la colonne vertébrale haute.",
+    "transitionOut": "Rapprochez les jambes et utilisez vos mains pour vous aider à vous lever ou à avancer.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifier : Les deux ischions sont-ils bien ancrés lorsque vous tournez ?",
+    "whatToAvoid": "Évitez d'effondrer la colonne vertébrale en rotation, de laisser la hanche opposée se soulever ou d'atteindre une position si agressive que vous en perdriez le contrôle.",
+    "alternativeExercise": "Torsion de la colonne vertébrale",
+    "instructorNote": "Le bras est une portée, pas un rebond. Repérez la mise à la terre à travers les deux ischions de manière égale. Pour la scoliose, enseignez la rotation vers la courbe avec une attention particulière autour du sommet.",
+    "teachingCues": [
+      "Les deux ischions restent lourds.",
+      "Faites pivoter à partir de la taille, pas de l’épaule.",
+      "Atteignez votre petit doigt au-delà de votre petit orteil."
+    ],
+    "modificationsAndAlternatives": [
+      "Réduisez la plage de torsion et gardez la colonne vertébrale longue plutôt que de s'effondrer.",
+      "Raccourcissez l’écartement des jambes si les ischio-jambiers sont trop tendus.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : Spine Twist"
+    ],
+    "referenceDetails": "Note de sécurité : Maintenez une respiration régulière, maintenez la colonne vertébrale soutenue et arrêtez-vous en cas de douleur aiguë ou d'apnée. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez d'effondrer la colonne vertébrale en rotation, de laisser la hanche opposée se soulever ou d'atteindre une position si agressive que vous en perdriez le contrôle.",
+    "instructionsAndDetails": "Configuration : Asseyez-vous avec les jambes larges, les bras étendus et la colonne vertébrale haute. Respiration : Expirez pour initier, inspirez pour relâcher et réinitialiser. Instructions : 1. Asseyez-vous avec les jambes écartées, les bras étendus et la colonne vertébrale haute. 2. Asseyez-vous droit, les jambes étendues et les bras sur les côtés. 3. Expirez pour tourner à partir de la taille et atteignez le petit doigt vers le pied opposé. 4. Gardez le torse aussi longtemps que vous repliez la jambe avant. 5. Inspirez pour revenir au centre avec contrôle. Régression : réduisez la plage de torsion et gardez la colonne vertébrale longue plutôt que de s'effondrer. Progression : dépassez les pieds et approfondissez la rotation avec un torse stable. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : allez plus loin au-delà des pieds et approfondissez la rotation avec un torse stable. ; Augmentez la portée tout en gardant les côtes levées au-dessus des hanches."
+  },
+  {
+    "id": "corkscrew",
+    "name": "Tire-bouchon",
+    "shortDescription": "Exercice de cercle de hanche en décubitus dorsal pour un contrôle abdominal inférieur et une articulation douce de la colonne vertébrale par rotation.",
+    "focus": "Force et rotation abdominales basses.",
+    "benefits": "Cible le soutien du bas-ventre et la mobilité douce des hanches.",
+    "category": "Tapis",
+    "level": "Advanced",
+    "modifications": [
+      "Gardez les jambes plus hautes et utilisez des cercles plus petits pour protéger le bas du dos.",
+      "Gardez les épaules au sol et bougez lentement avec contrôle.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Allongez la descente des jambes et augmentez progressivement la taille du cercle.",
+      "Ralentissez le mouvement et concentrez-vous sur la stabilisation constante du torse à chaque rotation."
+    ],
+    "equipment": "Tapis",
+    "reps": "4–6 repetitions",
+    "breathing": "Expirez pour initier le cercle, inspirez pour revenir au centre avec contrôle.",
+    "setup": "Allongez-vous sur le dos, les jambes levées vers le plafond, les bras à vos côtés et le bas du dos ancré au tapis.",
+    "instructions": [
+      "Allongez-vous sur le dos, les jambes levées vers le plafond, les bras à vos côtés et le bas du dos ancré au tapis.",
+      "Inspirez pour préparer et tirez doucement la paroi abdominale vers la colonne vertébrale.",
+      "Expirez pour abaisser les deux jambes d’un côté dans un cercle contrôlé, en gardant le bassin stable.",
+      "Gardez les épaules bien ancrées et les côtes souples pendant que les jambes se déplacent dans le cercle.",
+      "Inspirez par le centre, puis expirez pour faire un cercle vers le côté opposé avec un contrôle uniforme.",
+      [
+        "Régression : gardez les jambes plus hautes et utilisez des cercles plus petits pour protéger le bas du dos.",
+        "Progression : Allonger la descente et augmenter progressivement la taille du cercle tout en conservant la stabilité du bassin."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Fléchisseurs de hanche",
+      "Adducteurs"
+    ],
+    "keyTakeaway": "Concentrez-vous sur la force et la rotation du bas abdominal",
+    "safetyNote": "Gardez les côtes inférieures rentrées et le bassin stable pour protéger la colonne lombaire ; utilisez des cercles plus petits si le bas du dos se soulève.",
+    "whereToFeel": "Sentez le bas des abdominaux et l’intérieur des cuisses guider les cercles contrôlés.",
+    "transitionIn": "Allongez-vous sur le dos, les jambes levées, les bras à vos côtés.",
+    "transitionOut": "Abaissez les jambes sur le tapis et roulez sur le côté pour vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Conseil rapide : gardez le bassin stable et les cercles contrôlés.",
+    "whatToAvoid": "Évitez de rouler sur le cou, de perdre le contrôle du cercle dans le bas du dos ou de dépasser la plage confortable des hanches.",
+    "alternativeExercise": "Cercle à une jambe",
+    "instructorNote": "Construisez le cercle à partir de la cavité de la hanche, et non de l'élan des jambes. Pour les fléchisseurs de hanche serrés, réduisez l’arc. Contre-indiqué en cas d'ostéoporose, de grossesse et de problèmes cervicaux.",
+    "teachingCues": [
+      "Faites un cercle à partir des hanches, pas du bas du dos.",
+      "Gardez le bassin aussi immobile que possible.",
+      "Appuyez les bras dans le tapis pour le contrôle."
+    ],
+    "modificationsAndAlternatives": [
+      "Gardez les jambes plus hautes et utilisez des cercles plus petits pour protéger le bas du dos.",
+      "Gardez les épaules au sol et bougez lentement avec contrôle.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : cercle à une jambe"
+    ],
+    "referenceDetails": "Note de sécurité : gardez les côtes inférieures rentrées et le bassin stable pour protéger la colonne lombaire ; utilisez des cercles plus petits si le bas du dos se soulève. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de rouler sur le cou, de perdre le contrôle du cercle dans le bas du dos ou de dépasser la plage confortable des hanches.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les jambes levées vers le plafond, les bras à vos côtés et le bas du dos ancré au tapis. Respiration : Expirez pour initier le cercle, inspirez pour revenir au centre avec contrôle. Instructions : 1. Allongez-vous sur le dos, les jambes levées vers le plafond, les bras le long du corps et le bas du dos ancré au tapis. 2. Inspirez pour préparer et tirez doucement la paroi abdominale vers la colonne vertébrale. 3. Expirez pour abaisser les deux jambes d’un côté dans un cercle contrôlé, en gardant le bassin stable. 4. Gardez les épaules au sol et les côtes souples pendant que les jambes se déplacent dans le cercle. 5. Inspirez par le centre, puis expirez pour faire un cercle vers le côté opposé avec un contrôle uniforme. Régression : gardez les jambes plus hautes et utilisez des cercles plus petits pour protéger le bas du dos. Progression : Allonger la descente et augmenter progressivement la taille du cercle tout en conservant la stabilité du bassin. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : Allonger la descente des jambes et augmenter progressivement la taille du cercle.; Ralentissez le mouvement et concentrez-vous sur la stabilisation constante du torse à chaque rotation."
+  },
+  {
+    "id": "jackknife",
+    "name": "Couteau de poche",
+    "shortDescription": "Pont avancé vers l'inversion qui articule la colonne vertébrale et les hanches tout en stimulant le contrôle et la stabilité des épaules.",
+    "focus": "Articulation de la colonne vertébrale et stabilité des épaules.",
+    "benefits": "Renforce le contrôle grâce à l'articulation inversée de la colonne vertébrale et au soulèvement des hanches.",
+    "category": "Tapis",
+    "level": "Advanced",
+    "modifications": [
+      "Utilisez la préparation du pont et soulevez les hanches aussi haut que possible.",
+      "Gardez les genoux légèrement pliés et évitez de forcer le bas du dos.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Travaillez vers un soulèvement des hanches plus élevé et un roulement plus complet sur les épaules.",
+      "Descendez lentement avec contrôle plutôt que de descendre à travers la colonne vertébrale."
+    ],
+    "equipment": "Tapis",
+    "reps": "4–6 repetitions",
+    "breathing": "Expirez pour soulever les hanches et les jambes, inspirez pour abaisser avec contrôle.",
+    "setup": "Allongez-vous sur le dos, les jambes tendues, les bras à vos côtés et le bassin au sol.",
+    "instructions": [
+      "Allongez-vous sur le dos, les jambes tendues, les bras à vos côtés et le bassin au sol.",
+      "Inspirez pour vous préparer, activez les abdominaux et gardez le cou long.",
+      "Expirez pour soulever les jambes au-dessus de votre tête et appuyez les hanches vers le plafond avec un noyau solide.",
+      "Gardez les épaules baissées et le bas du dos soutenu lorsque les jambes atteignent la verticale.",
+      "Inspirez pour plier légèrement les genoux si nécessaire, puis expirez pour redescendre lentement les hanches.",
+      [
+        "Régression : utilisez la préparation du pont et soulevez les hanches aussi haut que possible.",
+        "Progression : travaillez vers une levée de hanche plus élevée et un roulement plus complet sur les épaules avec contrôle."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Stabilisateurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Concentrez-vous sur l’articulation de la colonne vertébrale et la stabilité des épaules",
+    "safetyNote": "Gardez les omoplates au sol et évitez de comprimer le cou ; soulevez seulement aussi haut que vos ischio-jambiers et le bas de votre dos le permettent, sans effort.",
+    "whereToFeel": "Sentez les abdominaux et les fléchisseurs de hanche soulever les jambes et soutenir la colonne vertébrale.",
+    "transitionIn": "Allongez-vous sur le dos, les jambes tendues, les bras à vos côtés.",
+    "transitionOut": "Abaissez les jambes et les hanches, puis roulez sur le côté pour vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifiez : soulevez-vous avec les abdominaux, sans balancer les jambes ?",
+    "whatToAvoid": "Évitez de rouler trop loin sur le cou, d'utiliser l'élan des jambes ou de laisser les hanches tomber soudainement en descendant.",
+    "alternativeExercise": "Pont d'épaule",
+    "instructorNote": "Contre-indiqué en cas d'ostéoporose, de troubles cervicaux et pour toute personne ne pouvant pas encore contrôler un pont d'épaule. L’arrivée en position aérienne doit être silencieuse – pas d’écrasement.",
+    "teachingCues": [
+      "Conduisez les talons vers le plafond.",
+      "Gardez le cou long, non comprimé.",
+      "Abaissez avec contrôle, une vertèbre à la fois."
+    ],
+    "modificationsAndAlternatives": [
+      "Utilisez la préparation du pont et soulevez les hanches aussi haut que possible.",
+      "Gardez les genoux légèrement pliés et évitez de forcer le bas du dos.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : le pont d'épaule"
+    ],
+    "referenceDetails": "Note de sécurité : gardez les omoplates au sol et évitez de comprimer le cou ; soulevez seulement aussi haut que vos ischio-jambiers et le bas de votre dos le permettent, sans effort. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de rouler trop loin sur le cou, d'utiliser l'élan des jambes ou de laisser les hanches tomber soudainement en descendant.",
+    "instructionsAndDetails": "Configuration : Allongez-vous sur le dos, les jambes tendues, les bras à vos côtés et le bassin au sol. Respiration : Expirez pour soulever les hanches et les jambes, inspirez pour abaisser avec contrôle. Instructions : 1. Allongez-vous sur le dos, les jambes tendues, les bras le long du corps et le bassin au sol. 2. Inspirez pour vous préparer, activez les abdominaux et gardez le cou long. 3. Expirez pour soulever les jambes au-dessus de votre tête et appuyez les hanches vers le plafond avec un noyau solide. 4. Gardez les épaules baissées et le bas du dos soutenu lorsque les jambes atteignent la verticale. 5. Inspirez pour plier légèrement les genoux si nécessaire, puis expirez pour redescendre lentement les hanches. Régression : utilisez la préparation du pont et soulevez les hanches aussi haut que possible. Progression : travaillez vers une levée de hanche plus élevée et un roulement plus complet sur les épaules avec contrôle. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : Travaillez vers un soulèvement plus élevé des hanches et un roulement plus complet sur les épaules. ; Descendez lentement avec contrôle plutôt que de descendre à travers la colonne vertébrale."
+  },
+  {
+    "id": "neck_pull",
+    "name": "Tirer le cou",
+    "shortDescription": "Soulevez le torse en position couchée en utilisant la force abdominale pour articuler la colonne vertébrale tout en maintenant la longueur du cou.",
+    "focus": "Coordination abdominale et mobilité de la colonne vertébrale.",
+    "benefits": "Prend en charge l'articulation de la colonne vertébrale supérieure entraînée par le noyau sans fatigue du cou.",
+    "category": "Tapis",
+    "level": "Intermediate",
+    "modifications": [
+      "Gardez les mains derrière la tête et évitez de tirer sur le cou.",
+      "Maintenez une petite pliure du menton et soulevez-la seulement aussi loin que les abdominaux peuvent le supporter.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Abaissez les jambes plus près du tapis tout en gardant la colonne vertébrale articulée.",
+      "Étendez les bras au-dessus de votre tête à mesure que le contrôle de base s'améliore."
+    ],
+    "equipment": "Tapis",
+    "reps": "6–8 repetitions",
+    "breathing": "Expirez pour rouler avec contrôle, inspirez pour allonger et expirez pour redescendre.",
+    "setup": "Allongez-vous sur le dos, les genoux pliés, les pieds à plat sur le tapis et les mains soutenant légèrement la base du crâne.",
+    "instructions": [
+      "Allongez-vous sur le dos, les genoux pliés, les pieds à plat sur le tapis et les mains soutenant légèrement la base du crâne.",
+      "Inspirez pour allonger la colonne vertébrale et tirez doucement les côtes inférieures vers le bas.",
+      "Expirez pour décoller la colonne vertébrale vers le haut et vers l’avant tout en gardant le menton rentré et le corset abdominal engagé.",
+      "Tenez le haut avec les épaules larges et la colonne vertébrale longue.",
+      "Inspirez par le haut, puis expirez pour articuler lentement la colonne vertébrale vers le bas, en gardant le cou long.",
+      [
+        "Régression : Gardez la tête légèrement appuyée et évitez de tirer sur le cou.",
+        "Progression : Abaissez les jambes plus près du tapis tout en conservant l’articulation vertébrale."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Stabilisateurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Focus sur la coordination abdominale et la mobilité de la colonne vertébrale",
+    "safetyNote": "Gardez le menton rentré et évitez de tirer sur la tête ; comptez sur les abdominaux pour soulever la colonne vertébrale plutôt que sur le cou.",
+    "whereToFeel": "Sentez les abdominaux et les fléchisseurs de la colonne vertébrale qui articulent la colonne vertébrale.",
+    "transitionIn": "Allongez-vous sur le dos, les genoux pliés, les pieds à plat, les mains derrière la tête.",
+    "transitionOut": "Après la dernière répétition, pliez les genoux et roulez sur le côté avant de vous asseoir.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Petit conseil : gardez le cou long et évitez de tirer avec les mains.",
+    "whatToAvoid": "Évitez de tirer sur l'arrière du crâne, de donner des secousses au milieu du dos ou de laisser les coudes se balancer vers l'intérieur pour tromper le mouvement.",
+    "alternativeExercise": "Retrousser",
+    "instructorNote": "Les mains sont derrière la tête pour le feedback, pas pour l’assistance. Encouragez les coudes à rester larges et le cou long. Progrès depuis Roll Up avant d’introduire Neck Pull.",
+    "teachingCues": [
+      "Coudes larges et arrière.",
+      "Laissez les abdominaux faire le levage.",
+      "Allongez la couronne de la tête en l'éloignant du coccyx."
+    ],
+    "modificationsAndAlternatives": [
+      "Gardez les mains derrière la tête et évitez de tirer sur le cou.",
+      "Maintenez une petite pliure du menton et soulevez-la seulement aussi loin que les abdominaux peuvent le supporter.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : Roll Up"
+    ],
+    "referenceDetails": "Note de sécurité : gardez le menton rentré et évitez de tirer sur la tête ; comptez sur les abdominaux pour soulever la colonne vertébrale plutôt que sur le cou. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez de tirer sur l'arrière du crâne, de donner des secousses au milieu du dos ou de laisser les coudes se balancer vers l'intérieur pour tromper le mouvement.",
+    "instructionsAndDetails": "Mise en place : Allongez-vous sur le dos, les genoux pliés, les pieds à plat sur le tapis et les mains soutenant légèrement la base du crâne. Respiration : Expirez pour rouler avec contrôle, inspirez pour allonger et expirez pour redescendre. Instructions : 1. Allongez-vous sur le dos, les genoux pliés, les pieds à plat sur le tapis et les mains soutenant légèrement la base du crâne. 2. Inspirez pour allonger la colonne vertébrale et abaissez doucement les côtes inférieures. 3. Expirez pour décoller la colonne vertébrale vers le haut et vers l'avant tout en gardant le menton rentré et le corset abdominal engagé. 4. Tenez le haut avec les épaules larges et la colonne vertébrale longue. 5. Inspirez par le haut, puis expirez pour articuler lentement la colonne vertébrale vers le bas, en gardant le cou long. Régression : Gardez la tête légèrement appuyée et évitez de tirer sur le cou. Progression : Abaissez les jambes plus près du tapis tout en conservant l’articulation vertébrale. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : Abaissez les jambes plus près du tapis tout en gardant la colonne vertébrale articulée. ; Étendez les bras au-dessus de votre tête à mesure que le contrôle de base s'améliore."
+  },
+  {
+    "id": "spine_twist",
+    "name": "Torsion de la colonne vertébrale",
+    "shortDescription": "Mouvement de mobilité rotationnel assis qui maintient la stabilité du bassin tout en ouvrant le torse et les épaules.",
+    "focus": "Rotation de la colonne vertébrale et flexibilité du torse.",
+    "benefits": "Augmente la rotation de la colonne vertébrale assise tout en maintenant la stabilité pelvienne.",
+    "category": "Tapis",
+    "level": "Beginner",
+    "modifications": [
+      "Pliez les genoux et raccourcissez la séparation des jambes pour réduire le couple.",
+      "Gardez les hanches stables et tournez uniquement dans la mesure où la colonne vertébrale reste haute.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées."
+    ],
+    "progressions": [
+      "Étendez les jambes plus loin et approfondissez la torsion tout en gardant les côtes levées.",
+      "Regardez par-dessus l’épaule principale pour allonger la colonne vertébrale et le cou."
+    ],
+    "equipment": "Tapis",
+    "reps": "8–10 repetitions",
+    "breathing": "Expirez pour tourner, inspirez pour revenir au centre avec contrôle.",
+    "setup": "Asseyez-vous droit, les jambes étendues ou pliées, les pieds au sol, la colonne vertébrale longue et les bras écartés.",
+    "instructions": [
+      "Asseyez-vous droit, les jambes étendues ou pliées, les pieds au sol, la colonne vertébrale longue et les bras écartés.",
+      "Inspirez pour allonger la couronne et éloignez les épaules des oreilles.",
+      "Expirez pour vous tourner à partir de la taille, en gardant les ischions ancrés et les côtes levées.",
+      "Gardez le torse long et évitez de plier la poitrine lorsque vous tournez.",
+      "Inspirez vers le centre avec contrôle et préparez-vous pour le côté suivant.",
+      [
+        "Régression : pliez les genoux et raccourcissez l'écartement des jambes pour réduire le couple.",
+        "Progression : Étendez les jambes plus loin et approfondissez la torsion tout en gardant les côtes levées."
+      ]
+    ],
+    "commonMistakes": [
+      "Retenir sa respiration au lieu de respirer continuellement.",
+      "Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.",
+      "Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates."
+    ],
+    "primaryMuscles": [
+      "Abdominales",
+      "Stabilisateurs de la colonne vertébrale",
+      "Fléchisseurs de hanche"
+    ],
+    "keyTakeaway": "Concentrez-vous sur la rotation de la colonne vertébrale et la flexibilité du torse",
+    "safetyNote": "Gardez les deux ischions au sol et évitez de comprimer le bas du dos ; tourner à partir de la taille avec une longue colonne vertébrale.",
+    "whereToFeel": "Ressentez les obliques et les rotateurs de la colonne vertébrale lorsque vous tournez.",
+    "transitionIn": "Asseyez-vous droit, les jambes étendues ou pliées, les bras écartés.",
+    "transitionOut": "Rapprochez les jambes et utilisez vos mains pour vous aider à vous lever ou à avancer.",
+    "contraindicationsNote": "Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié.",
+    "repRanges": {
+      "beginner": "4–6",
+      "intermediate": "6–10",
+      "advanced": "10–15",
+      "notes": "Concentrez-vous sur la qualité et contrôlez la quantité."
+    },
+    "selfCheck": "Vérifiez : faites-vous une rotation à partir de la taille et non des épaules ?",
+    "whatToAvoid": "Évitez d'effondrer la colonne vertébrale lorsque vous tournez, ce qui permet au bassin de basculer ou de s'arrondir vers l'avant lorsque les bras reculent.",
+    "alternativeExercise": "Scie",
+    "instructorNote": "Repérez deux impulsions respiratoires distinctes lors de l’expiration pour approfondir la rotation. Surveillez les clients qui s'articulent au niveau de la hanche plutôt qu'au niveau de la colonne thoracique.",
+    "teachingCues": [
+      "Grandissez avant de vous tordre.",
+      "Les deux hanches restent en avant.",
+      "Pulsez la respiration pour essorer la colonne vertébrale."
+    ],
+    "modificationsAndAlternatives": [
+      "Pliez les genoux et raccourcissez la séparation des jambes pour réduire le couple.",
+      "Gardez les hanches stables et tournez uniquement dans la mesure où la colonne vertébrale reste haute.",
+      "Si le client a une déficience visuelle ou auditive, gardez l’espace dégagé, utilisez des repères tactiles et visuels clairs et évitez le timing verbal rapide.",
+      "Pour l'immunosuppression, la guérison récente ou les peaux sensibles, choisissez des accessoires propres, des régressions douces et évitez toute pression directe sur les zones irritées.",
+      "Alternative plus sûre : scie"
+    ],
+    "referenceDetails": "Note de sécurité : gardez les deux ischions au sol et évitez de comprimer le bas du dos ; tourner à partir de la taille avec une longue colonne vertébrale. Contre-indications : Si le client souffre d'ostéoporose, de grossesse, de blessure récente, de déficience visuelle ou auditive, d'immunosuppression, de peau sensible, de spondylarthrite ankylosante ou d'autres problèmes de colonne vertébrale, de problèmes d'épaule ou de coude, de problèmes de pied/cheville ou de genou, de douleur chronique ou d'autres problèmes médicaux, consultez un instructeur ou un clinicien qualifié. Ce qu'il faut éviter : évitez d'effondrer la colonne vertébrale lorsque vous tournez, de permettre au bassin de basculer ou de s'arrondir vers l'avant lorsque les bras reculent.",
+    "instructionsAndDetails": "Configuration : Asseyez-vous droit, les jambes étendues ou pliées, les pieds au sol, la colonne vertébrale longue et les bras écartés. Respiration : Expirez pour tourner, inspirez pour revenir au centre avec contrôle. Instructions : 1. Asseyez-vous droit, les jambes étendues ou pliées, les pieds au sol, la colonne vertébrale longue et les bras écartés. 2. Inspirez pour allonger la couronne et éloignez les épaules des oreilles. 3. Expirez pour tourner à partir de la taille, en gardant les ischions ancrés et les côtes levées. 4. Gardez le torse long et évitez de plier la poitrine lorsque vous tournez. 5. Inspirez vers le centre avec contrôle et préparez-vous pour le côté suivant. Régression : pliez les genoux et raccourcissez l'écartement des jambes pour réduire le couple. Progression : Étendez les jambes plus loin et approfondissez la torsion tout en gardant les côtes levées. Erreurs courantes : Retenir sa respiration au lieu de respirer continuellement. ; Laisser les côtes s'évaser ou les épaules remonter vers les oreilles.; Bouger trop vite au lieu d’utiliser la précision contrôlée du Pilates. Progressions : Étendez les jambes plus loin et approfondissez la torsion tout en gardant les côtes levées. ; Regardez par-dessus l’épaule principale pour allonger la colonne vertébrale et le cou."
+  }
+]

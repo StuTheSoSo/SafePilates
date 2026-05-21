@@ -6,11 +6,12 @@ import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Exercise } from '../../models';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-exercise-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, TranslatePipe],
   templateUrl: './exercise-detail.page.html',
   styleUrls: ['./exercise-detail.page.scss']
 })
@@ -65,13 +66,14 @@ export class ExerciseDetailPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    // Called every time Ionic makes this page active — reliable even when component is cached.
-    // Re-check premium state and reload content if the user purchased since last visit.
-    if (this.exercise) {
+    // Re-fetch exercise so translated data is picked up after a language change.
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.exercise = this.safetyService.getExerciseById(id);
       this.hasPremiumExercise = this.safetyService.isExercisePremium(this.exercise);
       if (!this.hasPremiumExercise || this.hasPremiumAccess) {
-        this.loadConditionWarnings(this.exercise.id);
-        this.exerciseNote = this.safetyService.getExerciseNote(this.exercise.id);
+        this.loadConditionWarnings(id);
+        this.exerciseNote = this.safetyService.getExerciseNote(id);
       }
     }
     this.syncSearchText();

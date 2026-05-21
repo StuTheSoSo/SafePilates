@@ -4,15 +4,15 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 import { SafetyService } from '../../../services/safety.service';
 import { PremiumBannerComponent } from '../../../components/premium-banner/premium-banner.component';
 import { Program, Exercise } from '../../../models';
-import programsData from '../../../../assets/data/programs.json' with { type: 'json' };
 
 @Component({
   selector: 'app-program-detail',
   standalone: true,
-  imports: [CommonModule, FormsModule, IonicModule, RouterModule, PremiumBannerComponent],
+  imports: [CommonModule, FormsModule, IonicModule, RouterModule, TranslateModule, PremiumBannerComponent],
   templateUrl: './program-detail.page.html',
   styleUrls: ['./program-detail.page.scss']
 })
@@ -35,27 +35,29 @@ export class ProgramDetailPage implements OnInit {
     this.hasPremium = this.safetyService.isPremiumActive();
     await this.safetyService.initData();
     this.syncSearchText();
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id) {
-      this.program = (programsData as Program[]).find(p => p.id === id);
-      if (this.program) {
-        this.exercises = this.program.exerciseIds
-          .map(eid => this.safetyService.getExerciseById(eid))
-          .filter((e): e is Exercise => e !== undefined);
-        
-        this.exercisesWithRoles = this.exercises.map(ex => ({
-          exercise: ex,
-          role: this.program?.exerciseRoles?.[ex.id]
-        }));
-        
-        this.programNote = this.safetyService.getProgramNote(id);
-      }
-    }
+    this.loadProgramData();
   }
 
   ionViewWillEnter() {
     this.syncSearchText();
     this.hasPremium = this.safetyService.isPremiumActive();
+    this.loadProgramData();
+  }
+
+  private loadProgramData() {
+    const id = this.route.snapshot.paramMap.get('id');
+    if (!id) return;
+    this.program = this.safetyService.getProgramById(id);
+    if (this.program) {
+      this.exercises = this.program.exerciseIds
+        .map(eid => this.safetyService.getExerciseById(eid))
+        .filter((e): e is Exercise => e !== undefined);
+      this.exercisesWithRoles = this.exercises.map(ex => ({
+        exercise: ex,
+        role: this.program?.exerciseRoles?.[ex.id]
+      }));
+      this.programNote = this.safetyService.getProgramNote(id);
+    }
   }
 
   navigateToUpgrade() {

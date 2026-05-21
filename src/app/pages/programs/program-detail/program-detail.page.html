@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/programs"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ program?.name || 'Program' }}</ion-title>
+    <ion-title>{{ program?.name || ('PROGRAM_DETAIL.TITLE_FALLBACK' | translate) }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -20,7 +20,7 @@
         <div class="goal-callout">
           <ion-icon name="target-outline" slot="start"></ion-icon>
           <div class="goal-text">
-            <div class="goal-label">Program Goal</div>
+            <div class="goal-label">{{ 'PROGRAM_DETAIL.GOAL_LABEL' | translate }}</div>
             <div class="goal-value" [innerHTML]="highlightText(program.goal)"></div>
           </div>
         </div>
@@ -34,39 +34,39 @@
     </ion-card>
 
     <div class="sequence-flow">
-      <div class="flow-header">Program Flow</div>
+      <div class="flow-header">{{ 'PROGRAM_DETAIL.FLOW_HEADER' | translate }}</div>
       <div class="flow-timeline">
         <div class="flow-stage">
           <div class="stage-dot"></div>
-          <div class="stage-label">Warm-up</div>
+          <div class="stage-label">{{ 'PROGRAM_DETAIL.STAGE_WARMUP' | translate }}</div>
         </div>
         <div class="flow-stage">
           <div class="stage-dot"></div>
-          <div class="stage-label">Core activation</div>
+          <div class="stage-label">{{ 'PROGRAM_DETAIL.STAGE_CORE' | translate }}</div>
         </div>
         <div class="flow-stage">
           <div class="stage-dot"></div>
-          <div class="stage-label">Integration</div>
+          <div class="stage-label">{{ 'PROGRAM_DETAIL.STAGE_INTEGRATION' | translate }}</div>
         </div>
         <div class="flow-stage">
           <div class="stage-dot"></div>
-          <div class="stage-label">Cool-down</div>
+          <div class="stage-label">{{ 'PROGRAM_DETAIL.STAGE_COOLDOWN' | translate }}</div>
         </div>
       </div>
     </div>
 
     <div *ngIf="getRelevantModifications().length > 0" class="modifications-section">
-      <div class="section-header">Your Program Modifications</div>
+      <div class="section-header">{{ 'PROGRAM_DETAIL.MODIFICATIONS_HEADER' | translate }}</div>
       <ion-card *ngFor="let mod of getRelevantModifications()" class="modification-card">
         <ion-card-content>
-          <p><strong>For {{ mod.condition }}:</strong></p>
+          <p><strong>{{ 'PROGRAM_DETAIL.FOR_CONDITION' | translate: { condition: mod.condition } }}</strong></p>
           <p>{{ mod.modification }}</p>
         </ion-card-content>
       </ion-card>
     </div>
 
     <ng-container *ngIf="hasPremium || program?.accessLevel === 'Free'; else premiumLockNotice">
-      <div class="section-header">Exercises</div>
+      <div class="section-header">{{ 'PROGRAM_DETAIL.EXERCISES_HEADER' | translate }}</div>
       <ion-list class="exercise-list">
         <ion-item *ngFor="let item of exercisesWithRoles; let i = index" button detail (click)="openExercise(item.exercise.id)">
           <div class="exercise-number" slot="start">{{ i + 1 }}</div>
@@ -83,7 +83,7 @@
     </ng-container>
 
     <ng-template #premiumLockNotice>
-      <div class="section-header">Exercises</div>
+      <div class="section-header">{{ 'PROGRAM_DETAIL.EXERCISES_HEADER' | translate }}</div>
       <!-- First exercise — always visible as a quality preview -->
       <ion-list class="exercise-list exercise-list--preview" *ngIf="previewExercise">
         <ion-item lines="none" class="exercise-preview-item">
@@ -115,8 +115,8 @@
         </ion-list>
         <div class="exercise-lock-overlay">
           <ion-icon name="lock-closed" class="lock-icon"></ion-icon>
-          <p class="lock-label">{{ lockedExercisesWithRoles.length }} more exercises — upgrade to unlock the full sequence</p>
-          <ion-button size="small" (click)="navigateToUpgrade()">Unlock Pro</ion-button>
+          <p class="lock-label">{{ 'PROGRAM_DETAIL.LOCKED_COUNT' | translate: { count: lockedExercisesWithRoles.length } }}</p>
+          <ion-button size="small" (click)="navigateToUpgrade()">{{ 'PROGRAM_DETAIL.UNLOCK_PRO' | translate }}</ion-button>
         </div>
       </div>
     </ng-template>
@@ -125,24 +125,24 @@
       <ion-card-header>
         <ion-card-title>
           <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
-          Notes
+          {{ 'PROGRAM_DETAIL.NOTES_TITLE' | translate }}
           <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
-            [attr.aria-label]="'Notes are private reminders for this program. Only you can see them.'"
-            title="Notes are private reminders for this program. Only you can see them."></ion-icon>
+            [attr.aria-label]="'PROGRAM_DETAIL.NOTES_TOOLTIP' | translate"
+            [title]="'PROGRAM_DETAIL.NOTES_TOOLTIP' | translate"></ion-icon>
         </ion-card-title>
-        <ion-card-subtitle>Keep quick, private reminders for this program flow.</ion-card-subtitle>
+        <ion-card-subtitle>{{ 'PROGRAM_DETAIL.NOTES_SUBTITLE' | translate }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ion-textarea
           rows="5"
           [(ngModel)]="programNote"
-          placeholder="Type a program note here..."
+          [placeholder]="'PROGRAM_DETAIL.NOTE_PLACEHOLDER' | translate"
           auto-grow="true"
           class="note-textarea"
         ></ion-textarea>
         <div class="note-actions">
-          <ion-button fill="solid" size="small" (click)="saveProgramNote()" aria-label="Save program note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-          <span *ngIf="noteSaved" class="note-saved">Saved</span>
+          <ion-button fill="solid" size="small" (click)="saveProgramNote()" aria-label="Save program note" style="min-height:44px;min-width:44px;">{{ 'PROGRAM_DETAIL.SAVE_NOTE' | translate }}</ion-button>
+          <span *ngIf="noteSaved" class="note-saved">{{ 'PROGRAM_DETAIL.SAVED' | translate }}</span>
         </div>
       </ion-card-content>
     </ion-card>
@@ -153,7 +153,7 @@
   <ng-template #notFound>
     <ion-card>
       <ion-card-content>
-        <p>Program not found.</p>
+        <p>{{ 'PROGRAM_DETAIL.NOT_FOUND' | translate }}</p>
       </ion-card-content>
     </ion-card>
   </ng-template>

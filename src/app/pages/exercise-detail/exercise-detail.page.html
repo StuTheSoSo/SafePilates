@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/library"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ exercise?.name || 'Exercise Detail' }}</ion-title>
+    <ion-title>{{ exercise?.name || ('EXERCISE_DETAIL.TITLE' | translate) }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -16,42 +16,41 @@
       <ion-card-content>
       <p class="exercise-description" [innerHTML]="highlightText(exercise.shortDescription)"></p>
 
-      <div class="section-header h2">Summary</div>
+      <div class="section-header h2">{{ 'EXERCISE_DETAIL.SUMMARY' | translate }}</div>
       <div class="summary-section section-content">
         <div class="summary-row" *ngIf="exercise.level">
-          <div class="summary-label">Level</div>
+          <div class="summary-label">{{ 'EXERCISE_DETAIL.LEVEL' | translate }}</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.level)"></div>
         </div>
         <div class="summary-row" *ngIf="exercise.category">
-          <div class="summary-label">Category</div>
+          <div class="summary-label">{{ 'EXERCISE_DETAIL.CATEGORY' | translate }}</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.category)"></div>
         </div>
         <div class="summary-row" *ngIf="exercise.focus">
-          <div class="summary-label">Focus</div>
+          <div class="summary-label">{{ 'EXERCISE_DETAIL.FOCUS' | translate }}</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.focus)"></div>
         </div>
         <div class="summary-row" *ngIf="exercise.keyTakeaway">
-          <div class="summary-label">Key takeaway</div>
+          <div class="summary-label">{{ 'EXERCISE_DETAIL.KEY_TAKEAWAY' | translate }}</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.keyTakeaway)"></div>
         </div>
         <div class="summary-row" *ngIf="exercise.safetyNote">
-          <div class="summary-label">Safety</div>
+          <div class="summary-label">{{ 'EXERCISE_DETAIL.SAFETY' | translate }}</div>
           <div class="summary-value" [innerHTML]="highlightText(exercise.safetyNote)"></div>
         </div>
       </div>
 
       <div class="disclaimer-card ion-padding">
-        <strong>IMPORTANT: This is general educational information only and is NOT a substitute for professional medical advice.</strong>
-        <p>Consult the client’s doctor or a qualified physical therapist before starting, modifying, or continuing any Pilates practice, especially with health conditions. Stop immediately if the client feels pain.</p>
+        <p [innerHTML]="'APP.DISCLAIMER' | translate"></p>
       </div>
 
       <div class="safety-overview-section">
-        <div class="safety-overview-header">Safety overview</div>
+        <div class="safety-overview-header">{{ 'EXERCISE_DETAIL.SAFETY_OVERVIEW' | translate }}</div>
         <div class="safety-overview-content">
           <div *ngIf="exercise.instructorNote" class="exercise-instructor-note">
             <div class="exercise-instructor-note-header">
               <ion-icon name="people-circle-outline"></ion-icon>
-              <strong>Instructor note</strong>
+              <strong>{{ 'EXERCISE_DETAIL.INSTRUCTOR_NOTE' | translate }}</strong>
             </div>
             <p [innerHTML]="highlightText(exercise.instructorNote)"></p>
           </div>
@@ -59,12 +58,12 @@
           <div *ngIf="teachingCues.length" class="exercise-teaching-cues">
             <div class="exercise-teaching-cues-header">
               <ion-icon name="help-circle-outline"></ion-icon>
-              <strong>Teaching cues</strong>
+              <strong>{{ 'EXERCISE_DETAIL.TEACHING_CUES' | translate }}</strong>
             </div>
             <ul>
               <li *ngFor="let cue of teachingCues" [innerHTML]="highlightText(cue)"></li>
             </ul>
-            <p class="exercise-teaching-warning">If the client feels sharp pain, stop immediately.</p>
+            <p class="exercise-teaching-warning">{{ 'EXERCISE_DETAIL.TEACHING_WARNING' | translate }}</p>
           </div>
         </div>
       </div>
@@ -75,33 +74,33 @@
       <div *ngIf="exercise.contraindicationsNote" class="exercise-contraindications section-content">
         <div class="exercise-contraindications-header section-header h2">
           <ion-icon name="warning-outline"></ion-icon>
-          <strong>Contraindications</strong>
+          <strong>{{ 'EXERCISE_DETAIL.CONTRAINDICATIONS' | translate }}</strong>
         </div>
         <p [innerHTML]="highlightText(exercise.contraindicationsNote)"></p>
       </div>
 
       <div class="details-accordion">
         <details aria-label="Modifications and safer alternatives section" style="min-height:44px;">
-          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse modifications and safer alternatives">Modifications & safer alternatives</summary>
+          <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.MODIFICATIONS' | translate">{{ 'EXERCISE_DETAIL.MODIFICATIONS' | translate }}</summary>
           <div class="section-content">
             <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
               <div class="exercise-modifications-header">
                 <ion-icon name="construct-outline"></ion-icon>
-                <strong>Modification guidance</strong>
+                <strong>{{ 'EXERCISE_DETAIL.MODIFICATION_GUIDANCE' | translate }}</strong>
               </div>
               <p *ngFor="let mod of exercise.modifications" [innerHTML]="highlightText(mod)"></p>
             </div>
             <div *ngIf="exercise.whatToAvoid" class="exercise-avoid">
               <div class="exercise-avoid-header">
                 <ion-icon name="close-circle-outline"></ion-icon>
-                <strong>What to avoid</strong>
+                <strong>{{ 'EXERCISE_DETAIL.WHAT_TO_AVOID' | translate }}</strong>
               </div>
               <p [innerHTML]="highlightText(exercise.whatToAvoid)"></p>
             </div>
             <div *ngIf="exercise.alternativeExercise" class="exercise-alternative">
               <div class="exercise-alternative-header">
                 <ion-icon name="swap-horizontal-outline"></ion-icon>
-                <strong>Alternative exercise</strong>
+                <strong>{{ 'EXERCISE_DETAIL.ALTERNATIVE_EXERCISE' | translate }}</strong>
               </div>
               <p [innerHTML]="highlightText(exercise.alternativeExercise)"></p>
             </div>
@@ -112,31 +111,31 @@
 
       <div class="details-accordion">
         <details aria-label="Reference details section" style="min-height:44px;">
-          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse reference details">Reference details</summary>
+          <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.REFERENCE_DETAILS' | translate">{{ 'EXERCISE_DETAIL.REFERENCE_DETAILS' | translate }}</summary>
           <div class="section-content exercise-meta">
-            <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
-            <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>Apparatus settings:</strong> {{ exercise.apparatusSettings }}</p>
-            <p class="exercise-meta-item"><strong>Category:</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
-            <p *ngIf="exercise.level" class="exercise-meta-item"><strong>Level:</strong> <span [innerHTML]="highlightText(exercise.level)"></span></p>
-            <p class="exercise-meta-item exercise-focus"><strong>Focus:</strong> <span [innerHTML]="highlightText(exercise.focus)"></span></p>
-            <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>Suggested reps:</strong>
-              <span *ngIf="exercise.repRanges.beginner">Beginner: {{ exercise.repRanges.beginner }}</span>
-              <span *ngIf="exercise.repRanges.intermediate">Intermediate: {{ exercise.repRanges.intermediate }}</span>
-              <span *ngIf="exercise.repRanges.advanced">Advanced: {{ exercise.repRanges.advanced }}</span>
+            <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.EQUIPMENT' | translate }}</strong> {{ exercise.equipment }}</p>
+            <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.APPARATUS_SETTINGS' | translate }}</strong> {{ exercise.apparatusSettings }}</p>
+            <p class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.CATEGORY' | translate }}</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
+            <p *ngIf="exercise.level" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.LEVEL' | translate }}</strong> <span [innerHTML]="highlightText(exercise.level)"></span></p>
+            <p class="exercise-meta-item exercise-focus"><strong>{{ 'EXERCISE_DETAIL.FOCUS' | translate }}</strong> <span [innerHTML]="highlightText(exercise.focus)"></span></p>
+            <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>{{ 'EXERCISE_DETAIL.SUGGESTED_REPS' | translate }}</strong>
+              <span *ngIf="exercise.repRanges.beginner">{{ 'EXERCISE_DETAIL.BEGINNER' | translate }} {{ exercise.repRanges.beginner }}</span>
+              <span *ngIf="exercise.repRanges.intermediate">{{ 'EXERCISE_DETAIL.INTERMEDIATE' | translate }} {{ exercise.repRanges.intermediate }}</span>
+              <span *ngIf="exercise.repRanges.advanced">{{ 'EXERCISE_DETAIL.ADVANCED' | translate }} {{ exercise.repRanges.advanced }}</span>
               <span *ngIf="exercise.repRanges.notes">({{ exercise.repRanges.notes }})</span>
             </p>
-            <p *ngIf="exercise.reps && !exercise.repRanges" class="exercise-meta-item"><strong>Suggested reps:</strong> <span [innerHTML]="highlightText(exercise.reps)"></span></p>
-            <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>Primary muscles:</strong> <span [innerHTML]="highlightText(exercise.primaryMuscles.join(', '))"></span></p>
-            <p *ngIf="exercise.whereToFeel" class="exercise-meta-item"><strong>Where to feel it:</strong> <span [innerHTML]="highlightText(exercise.whereToFeel)"></span></p>
-            <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>Setup:</strong> <span [innerHTML]="highlightText(exercise.setup)"></span></p>
-            <p *ngIf="exercise.transitionIn" class="exercise-meta-item"><strong>Transition in:</strong> <span [innerHTML]="highlightText(exercise.transitionIn)"></span></p>
-            <p *ngIf="exercise.transitionOut" class="exercise-meta-item"><strong>Transition out:</strong> <span [innerHTML]="highlightText(exercise.transitionOut)"></span></p>
-            <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>Breathing:</strong> <span [innerHTML]="highlightText(exercise.breathing)"></span></p>
-            <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>Benefits:</strong> <span [innerHTML]="highlightText(exercise.benefits)"></span></p>
-            <p *ngIf="exercise.selfCheck" class="exercise-meta-item exercise-selfcheck"><strong>Self-check:</strong> <span [innerHTML]="highlightText(exercise.selfCheck)"></span></p>
+            <p *ngIf="exercise.reps && !exercise.repRanges" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.SUGGESTED_REPS' | translate }}</strong> <span [innerHTML]="highlightText(exercise.reps)"></span></p>
+            <p *ngIf="exercise.primaryMuscles?.length" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.PRIMARY_MUSCLES' | translate }}</strong> <span [innerHTML]="highlightText(exercise.primaryMuscles.join(', '))"></span></p>
+            <p *ngIf="exercise.whereToFeel" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.WHERE_TO_FEEL' | translate }}</strong> <span [innerHTML]="highlightText(exercise.whereToFeel)"></span></p>
+            <p *ngIf="exercise.setup" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.SETUP' | translate }}</strong> <span [innerHTML]="highlightText(exercise.setup)"></span></p>
+            <p *ngIf="exercise.transitionIn" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.TRANSITION_IN' | translate }}</strong> <span [innerHTML]="highlightText(exercise.transitionIn)"></span></p>
+            <p *ngIf="exercise.transitionOut" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.TRANSITION_OUT' | translate }}</strong> <span [innerHTML]="highlightText(exercise.transitionOut)"></span></p>
+            <p *ngIf="exercise.breathing" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.BREATHING' | translate }}</strong> <span [innerHTML]="highlightText(exercise.breathing)"></span></p>
+            <p *ngIf="exercise.benefits" class="exercise-meta-item exercise-benefits"><strong>{{ 'EXERCISE_DETAIL.BENEFITS' | translate }}</strong> <span [innerHTML]="highlightText(exercise.benefits)"></span></p>
+            <p *ngIf="exercise.selfCheck" class="exercise-meta-item exercise-selfcheck"><strong>{{ 'EXERCISE_DETAIL.SELF_CHECK' | translate }}</strong> <span [innerHTML]="highlightText(exercise.selfCheck)"></span></p>
             <p *ngIf="exercise.videoUrl" class="exercise-meta-item exercise-video">
               <a [href]="exercise.videoUrl" target="_blank" rel="noopener">
-                <ion-icon name="play-circle-outline"></ion-icon> Watch demo video
+                <ion-icon name="play-circle-outline"></ion-icon> {{ 'EXERCISE_DETAIL.WATCH_VIDEO' | translate }}
               </a>
             </p>
           </div>
@@ -146,11 +145,11 @@
 
       <div class="details-accordion">
         <details aria-label="Instructions and details section" style="min-height:44px;">
-          <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructions and details">Instructions & details</summary>
+          <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.INSTRUCTIONS_DETAILS' | translate">{{ 'EXERCISE_DETAIL.INSTRUCTIONS_DETAILS' | translate }}</summary>
           <div class="section-content">
             <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">
               <ion-list-header>
-                <ion-label>Instructions</ion-label>
+                <ion-label>{{ 'EXERCISE_DETAIL.INSTRUCTIONS' | translate }}</ion-label>
               </ion-list-header>
               <ion-item *ngFor="let step of exercise.instructions; let i = index">
                 <ion-label>
@@ -167,7 +166,7 @@
 
             <ion-list *ngIf="exercise.commonMistakes?.length" lines="inset" class="exercise-detail-list">
               <ion-list-header>
-                <ion-label>Common Mistakes</ion-label>
+                <ion-label>{{ 'EXERCISE_DETAIL.COMMON_MISTAKES' | translate }}</ion-label>
               </ion-list-header>
               <ion-item *ngFor="let mistake of exercise.commonMistakes">
                 <ion-label>{{ mistake }}</ion-label>
@@ -176,7 +175,7 @@
 
             <ion-list *ngIf="exercise.progressions?.length" lines="inset" class="exercise-detail-list">
               <ion-list-header>
-                <ion-label>Progressions</ion-label>
+                <ion-label>{{ 'EXERCISE_DETAIL.PROGRESSIONS' | translate }}</ion-label>
               </ion-list-header>
               <ion-item *ngFor="let prog of exercise.progressions">
                 <ion-label>{{ prog }}</ion-label>
@@ -185,15 +184,15 @@
 
             <ion-card *ngIf="conditionWarnings.length" class="exercise-detail-list">
               <ion-card-header>
-                <ion-card-title>Condition-specific adaptation cues</ion-card-title>
+                <ion-card-title>{{ 'EXERCISE_DETAIL.CONDITION_CUES' | translate }}</ion-card-title>
               </ion-card-header>
               <ion-card-content>
                 <ion-list lines="none">
                   <ion-item *ngFor="let warning of conditionWarnings">
                     <ion-label>
                       <h3>{{ warning.conditionLabel }}</h3>
-                      <p>If the client has {{ warning.conditionLabel }}, {{ warning.reason }}</p>
-                      <p><strong>Alternative:</strong> {{ warning.alternative }}</p>
+                      <p>{{ 'EXERCISE_DETAIL.CONDITION_IF_CLIENT' | translate: { condition: warning.conditionLabel, reason: warning.reason } }}</p>
+                      <p><strong>{{ 'EXERCISE_DETAIL.ALTERNATIVE' | translate }}</strong> {{ warning.alternative }}</p>
                     </ion-label>
                   </ion-item>
                 </ion-list>
@@ -208,40 +207,40 @@
         <ion-card-header>
           <ion-card-title>
             <ion-icon name="create-outline" class="note-icon" slot="start"></ion-icon>
-            Notes
+            {{ 'EXERCISE_DETAIL.NOTES' | translate }}
             <ion-icon name="information-circle-outline" class="note-tooltip-icon" slot="end" tabindex="0"
-              [attr.aria-label]="'Notes are private reminders for this exercise. Only you can see them.'"
-              title="Notes are private reminders for this exercise. Only you can see them."></ion-icon>
+              [attr.aria-label]="'EXERCISE_DETAIL.NOTES_TOOLTIP' | translate"
+              [title]="'EXERCISE_DETAIL.NOTES_TOOLTIP' | translate"></ion-icon>
           </ion-card-title>
-          <ion-card-subtitle>Keep quick, private reminders for this exercise.</ion-card-subtitle>
+          <ion-card-subtitle>{{ 'EXERCISE_DETAIL.NOTES_SUBTITLE' | translate }}</ion-card-subtitle>
         </ion-card-header>
         <ion-card-content>
           <ion-textarea
             rows="5"
             [(ngModel)]="exerciseNote"
-            placeholder="Type an instructor note here..."
+            [placeholder]="'EXERCISE_DETAIL.NOTE_PLACEHOLDER' | translate"
             auto-grow="true"
             class="note-textarea"
           ></ion-textarea>
           <div class="note-actions">
-            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" aria-label="Save exercise note" style="min-height:44px;min-width:44px;">Save note</ion-button>
-            <span *ngIf="noteSaved" class="note-saved">Saved</span>
+            <ion-button fill="solid" size="small" (click)="saveExerciseNote()" [attr.aria-label]="'EXERCISE_DETAIL.SAVE_NOTE' | translate" style="min-height:44px;min-width:44px;">{{ 'EXERCISE_DETAIL.SAVE_NOTE' | translate }}</ion-button>
+            <span *ngIf="noteSaved" class="note-saved">{{ 'EXERCISE_DETAIL.SAVED' | translate }}</span>
           </div>
         </ion-card-content>
       </ion-card>
 
-      <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">Video and advanced guidance coming soon.</p>
+      <p class="placeholder" *ngIf="!exercise.modifications?.length && !exercise.progressions?.length">{{ 'EXERCISE_DETAIL.VIDEO_COMING_SOON' | translate }}</p>
     </ion-card-content>
     </ng-container>
 
     <ng-template #premiumExerciseLocked>
       <ion-card>
         <ion-card-header>
-          <ion-card-title>Premium Exercise</ion-card-title>
+          <ion-card-title>{{ 'EXERCISE_DETAIL.PREMIUM_TITLE' | translate }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>This exercise is part of Pilates Pro and requires an upgrade to view full details.</p>
-          <ion-button expand="block" (click)="navigateToUpgrade()">Upgrade to Pro</ion-button>
+          <p>{{ 'EXERCISE_DETAIL.PREMIUM_DESC' | translate }}</p>
+          <ion-button expand="block" (click)="navigateToUpgrade()">{{ 'EXERCISE_DETAIL.PREMIUM_CTA' | translate }}</ion-button>
         </ion-card-content>
       </ion-card>
     </ng-template>
@@ -251,10 +250,10 @@
 <ng-template #missingExercise>
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Exercise not found</ion-card-title>
+      <ion-card-title>{{ 'EXERCISE_DETAIL.NOT_FOUND_TITLE' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <p>Please return to the library and select another exercise.</p>
+      <p>{{ 'EXERCISE_DETAIL.NOT_FOUND_DESC' | translate }}</p>
     </ion-card-content>
   </ion-card>
 </ng-template>

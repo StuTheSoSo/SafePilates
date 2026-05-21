@@ -61,7 +61,7 @@
               <ion-label>
                 {{ ('HOME.CONDITIONS.' + condition.id) | translate }}
                 <span *ngIf="condition.id === 'pregnancy' && selectedIds.has('pregnancy') && pregnancyTrimester">
-                  ({{ pregnancyTrimester }} trimester)
+                  ({{ 'HOME.PREGNANCY_TRIMESTER_CHIP' | translate: { trimester: pregnancyTrimester } }})
                 </span>
                 <span *ngIf="safetyService.isConditionPremium(condition.id) && !safetyService.isPremiumActive()" class="pro-badge">{{ 'APP.PRO_BADGE' | translate }}</span>
               </ion-label>

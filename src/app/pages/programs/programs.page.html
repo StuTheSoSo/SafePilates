@@ -45,24 +45,24 @@
                 {{ area }}
               </ion-chip>
             </div>
-            <p class="exercise-count">{{ program.exerciseIds.length }} exercises</p>
+            <p class="exercise-count">{{ 'PROGRAMS.EXERCISE_COUNT' | translate: { count: program.exerciseIds.length } }}</p>
             <p *ngIf="program.accessLevel === 'Pro' && !hasPremiumAccess && getFirstExerciseName(program)" class="exercise-preview-teaser">
               <ion-icon name="play-circle-outline" class="teaser-icon"></ion-icon>
-              Starts with: <strong>{{ getFirstExerciseName(program) }}</strong>
+              {{ 'PROGRAMS.STARTS_WITH' | translate }} <strong>{{ getFirstExerciseName(program) }}</strong>
             </p>
 
             <div class="program-note-box" (click)="$event.stopPropagation()">
               <ion-textarea
                 rows="2"
                 [(ngModel)]="programNotes[program.id]"
-                placeholder="Quick note for this program"
+                [placeholder]="'PROGRAMS.NOTE_PLACEHOLDER' | translate"
                 auto-grow="true"
                 class="program-note-textarea"
                 (click)="$event.stopPropagation()"
               ></ion-textarea>
               <div class="note-actions">
-                <ion-button fill="outline" size="small" (click)="saveProgramNote(program.id); $event.stopPropagation()" aria-label="Save program note">Save</ion-button>
-                <span *ngIf="noteSavedProgramId === program.id" class="note-saved">Saved</span>
+                <ion-button fill="outline" size="small" (click)="saveProgramNote(program.id); $event.stopPropagation()" [attr.aria-label]="'PROGRAMS.SAVE' | translate">{{ 'PROGRAMS.SAVE' | translate }}</ion-button>
+                <span *ngIf="noteSavedProgramId === program.id" class="note-saved">{{ 'PROGRAMS.SAVED' | translate }}</span>
               </div>
             </div>
           </ion-card-content>

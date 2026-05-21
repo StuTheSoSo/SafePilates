@@ -27,16 +27,22 @@ export class ProgramsPage implements OnInit {
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
 
-  ngOnInit() {
-    this.programs = [...(programsData as Program[])].sort((a, b) => a.name.localeCompare(b.name));
+  async ngOnInit() {
+    await this.safetyService.initData();
+    const loaded = this.safetyService.getPrograms();
+    this.programs = (loaded.length ? [...loaded] : [...(programsData as Program[])]).sort((a, b) => a.name.localeCompare(b.name));
     this.searchText = this.safetyService.librarySearchTerm || '';
     this.loadProgramNotes();
     this.filterPrograms();
   }
 
   ionViewWillEnter() {
+    const loaded = this.safetyService.getPrograms();
+    if (loaded.length) {
+      this.programs = [...loaded].sort((a, b) => a.name.localeCompare(b.name));
+      this.filterPrograms();
+    }
     this.loadProgramNotes();
-    this.filterPrograms();
   }
 
   private loadProgramNotes() {

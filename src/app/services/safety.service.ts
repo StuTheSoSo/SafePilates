@@ -115,10 +115,7 @@ export class SafetyService {
    * Falls back to English bundled data if locale-specific files are not found.
    */
   async reloadData(lang: string): Promise<void> {
-    // Locales that have translated data files under /assets/data/{lang}/
-    const dataLocales = new Set(['en']);
-
-    if (lang === 'en' || !dataLocales.has(lang)) {
+    if (lang === 'en') {
       this.conditions        = safetyConditionsData as Condition[];
       this.exercises         = exercisesData as Exercise[];
       this.contraindications = contraindicationsData as Record<string, Contraindication[]>;
@@ -126,21 +123,24 @@ export class SafetyService {
       return;
     }
 
-    try {
-      const [conditions, exercises, contraindications, programs] = await Promise.all([
-        firstValueFrom(this.http.get<Condition[]>(`/assets/data/${lang}/safety-conditions.json`)),
-        firstValueFrom(this.http.get<Exercise[]>(`/assets/data/${lang}/exercises.json`)),
-        firstValueFrom(this.http.get<Record<string, Contraindication[]>>(`/assets/data/${lang}/contraindications.json`)),
-        firstValueFrom(this.http.get<Program[]>(`/assets/data/${lang}/programs.json`)),
-      ]);
-      if (conditions?.length)                          this.conditions       = conditions;
-      if (exercises?.length)                           this.exercises        = exercises;
-      if (contraindications && Object.keys(contraindications).length)
-                                                       this.contraindications = contraindications;
-      if (programs?.length)                            this.programs         = programs;
-    } catch {
-      // Locale data files not yet available — silently keep current (English) data.
-    }
+    // Load each file independently so a missing file for one type
+    // does not prevent the others (e.g. exercises) from loading.
+    const tryGet = async <T>(url: string): Promise<T | null> => {
+      try { return await firstValueFrom(this.http.get<T>(url)); }
+      catch { return null; }
+    };
+
+    const [conditions, exercises, contraindications, programs] = await Promise.all([
+      tryGet<Condition[]>(`/assets/data/${lang}/safety-conditions.json`),
+      tryGet<Exercise[]>(`/assets/data/${lang}/exercises.json`),
+      tryGet<Record<string, Contraindication[]>>(`/assets/data/${lang}/contraindications.json`),
+      tryGet<Program[]>(`/assets/data/${lang}/programs.json`),
+    ]);
+
+    this.conditions        = conditions?.length                            ? conditions        : safetyConditionsData as Condition[];
+    this.exercises         = exercises?.length                             ? exercises         : exercisesData as Exercise[];
+    this.contraindications = contraindications && Object.keys(contraindications).length ? contraindications : contraindicationsData as Record<string, Contraindication[]>;
+    this.programs          = programs?.length                              ? programs          : programsData as Program[];
   }
 
   getConditions(): Condition[] {

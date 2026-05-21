@@ -61,8 +61,8 @@
           </ion-card-header>
           <ion-card-content>
             <p [innerHTML]="highlightText(exercise.shortDescription)"></p>
-            <p class="exercise-focus" [innerHTML]="highlightText('Focus: ' + exercise.focus)"></p>
-            <p class="exercise-category" [innerHTML]="highlightText('Category: ' + exercise.category)"></p>
+            <p class="exercise-focus" [innerHTML]="highlightText(('LIBRARY.FOCUS_LABEL' | translate) + exercise.focus)"></p>
+            <p class="exercise-category" [innerHTML]="highlightText(('LIBRARY.CATEGORY_LABEL' | translate) + exercise.category)"></p>
           </ion-card-content>
         </ion-card>
       </ion-col>

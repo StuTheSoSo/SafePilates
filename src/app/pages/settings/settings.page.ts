@@ -7,7 +7,7 @@ import { PremiumBannerComponent } from '../../components/premium-banner/premium-
 import { RevenueCatService } from '../../services/revenueCat.service';
 import { SafetyService } from '../../services/safety.service';
 import { LanguageService } from '../../services/language.service';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 const EMAIL_KEY = 'pilatesafe-user-email';
 
@@ -29,12 +29,13 @@ export class SettingsPage {
   private toastCtrl = inject(ToastController);
   readonly languageService = inject(LanguageService);
   private safetyService = inject(SafetyService);
+  private translate = inject(TranslateService);
 
   themeOptions: ThemeOption[] = [
-    { label: 'Rose (feminine)', value: 'theme-rose' },
-    { label: 'Lilac (feminine)', value: 'theme-lilac' },
-    { label: 'Ocean (subtle)', value: 'theme-ocean' },
-    { label: 'Sage (subtle)', value: 'theme-sage' },
+    { label: 'SETTINGS.THEME_ROSE', value: 'theme-rose' },
+    { label: 'SETTINGS.THEME_LILAC', value: 'theme-lilac' },
+    { label: 'SETTINGS.THEME_OCEAN', value: 'theme-ocean' },
+    { label: 'SETTINGS.THEME_SAGE', value: 'theme-sage' },
   ];
   selectedTheme = this.normalizeTheme(localStorage.getItem('pilatesafe-theme')) || 'theme-rose';
 
@@ -102,13 +103,12 @@ export class SettingsPage {
 
   async onLanguageChange(code: string): Promise<void> {
     await this.languageService.setLanguage(code);
-    await this.safetyService.reloadData(code);
   }
 
   async saveEmail() {
     const email = this.emailInput.trim().toLowerCase();
     if (!email || !email.includes('@')) {
-      const toast = await this.toastCtrl.create({ message: 'Please enter a valid email address.', duration: 2500, color: 'warning' });
+      const toast = await this.toastCtrl.create({ message: this.translate.instant('SETTINGS.EMAIL_INVALID'), duration: 2500, color: 'warning' });
       await toast.present();
       return;
     }
@@ -118,10 +118,10 @@ export class SettingsPage {
       await this.revenueCatService.logIn(email);
       localStorage.setItem(EMAIL_KEY, email);
       this.savedEmail = email;
-      const toast = await this.toastCtrl.create({ message: 'Account email saved.', duration: 2000, color: 'success' });
+      const toast = await this.toastCtrl.create({ message: this.translate.instant('SETTINGS.EMAIL_SAVED_TOAST'), duration: 2000, color: 'success' });
       await toast.present();
     } catch {
-      const toast = await this.toastCtrl.create({ message: 'Could not save email. Try again later.', duration: 2500, color: 'danger' });
+      const toast = await this.toastCtrl.create({ message: this.translate.instant('SETTINGS.EMAIL_SAVE_ERROR'), duration: 2500, color: 'danger' });
       await toast.present();
     } finally {
       this.isSavingEmail = false;

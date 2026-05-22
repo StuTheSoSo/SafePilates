@@ -4,7 +4,7 @@ import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { SafetyService } from '../../../services/safety.service';
 import { PremiumBannerComponent } from '../../../components/premium-banner/premium-banner.component';
 import { Program, Exercise } from '../../../models';
@@ -30,6 +30,7 @@ export class ProgramDetailPage implements OnInit {
   private router = inject(Router);
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
+  private translate = inject(TranslateService);
 
   async ngOnInit() {
     this.hasPremium = this.safetyService.isPremiumActive();
@@ -131,6 +132,30 @@ export class ProgramDetailPage implements OnInit {
       case 'Advanced': return 'danger';
       default: return 'medium';
     }
+  }
+
+  displayLevel(level: string): string {
+    const normalized = (level || '').toLowerCase();
+    if (normalized === 'beginner') {
+      return this.translate.instant('EXERCISE_DETAIL.BEGINNER').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'intermediate') {
+      return this.translate.instant('EXERCISE_DETAIL.INTERMEDIATE').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'advanced') {
+      return this.translate.instant('EXERCISE_DETAIL.ADVANCED').replace(/[：:]\s*$/, '');
+    }
+    return level;
+  }
+
+  displayRole(role: string | undefined): string {
+    if (!role) return '';
+    const normalized = role.toLowerCase();
+    if (normalized === 'warm-up') return this.translate.instant('PROGRAM_DETAIL.STAGE_WARMUP');
+    if (normalized === 'core activation') return this.translate.instant('PROGRAM_DETAIL.STAGE_CORE');
+    if (normalized === 'integration') return this.translate.instant('PROGRAM_DETAIL.STAGE_INTEGRATION');
+    if (normalized === 'cool-down') return this.translate.instant('PROGRAM_DETAIL.STAGE_COOLDOWN');
+    return role;
   }
 
   get previewExercise(): { exercise: Exercise; role?: string } | undefined {

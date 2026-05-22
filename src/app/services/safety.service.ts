@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 import { Condition, Exercise, Contraindication, GuidanceResult, SafetyQuery, ConditionResult, Program } from '../models';
 import { RevenueCatService, ENTITLEMENT_ID } from './revenueCat.service';
+import { LanguageService } from './language.service';
 import safetyConditionsData from '../../assets/data/safety-conditions.json' with { type: 'json' };
 import exercisesData from '../../assets/data/exercises.json' with { type: 'json' };
 import contraindicationsData from '../../assets/data/contraindications.json' with { type: 'json' };
@@ -12,6 +13,7 @@ import programsData from '../../assets/data/programs.json' with { type: 'json' }
 export class SafetyService {
   private http = inject(HttpClient);
   private revenueCatService = inject(RevenueCatService);
+  private languageService = inject(LanguageService);
   private conditions: Condition[] = [];
   private exercises: Exercise[] = [];
   private contraindications: Record<string, Contraindication[]> = {};
@@ -66,47 +68,19 @@ export class SafetyService {
     'wrist_conditions',        // very common in Pilates due to weight-bearing exercises
   ]);
 
+  constructor() {
+    this.languageService.languageChange$.subscribe(lang => {
+      this.reloadData(lang).catch(error => {
+        console.warn('Localized safety data reload failed', error);
+      });
+    });
+  }
+
   async initData(): Promise<void> {
     if (this.dataLoaded) {
       return;
     }
-
-    // Use bundled JSON data immediately for the first render,
-    // then try to refresh from assets if available.
-    this.conditions = safetyConditionsData as Condition[];
-    this.exercises = exercisesData as Exercise[];
-    this.contraindications = contraindicationsData as Record<string, Contraindication[]>;
-
-    try {
-      const [conditions, exercises, contraindications] = await Promise.all([
-        firstValueFrom(this.http.get<Condition[]>('/assets/data/safety-conditions.json')),
-        firstValueFrom(this.http.get<Exercise[]>('/assets/data/exercises.json')),
-        firstValueFrom(this.http.get<Record<string, Contraindication[]>>('/assets/data/contraindications.json'))
-      ]);
-
-      if (conditions?.length) {
-        this.conditions = conditions;
-      }
-      if (exercises?.length) {
-        this.exercises = exercises;
-      }
-      if (contraindications && Object.keys(contraindications).length) {
-        this.contraindications = contraindications;
-      }
-    } catch (error) {
-      console.warn('Safety data load failed, using bundled fallback data', error);
-    }
-
-    this.programs = programsData as Program[];
-    try {
-      const programs = await firstValueFrom(this.http.get<Program[]>('/assets/data/programs.json'));
-      if (programs?.length) {
-        this.programs = programs;
-      }
-    } catch {
-      // Keep bundled programs if asset loading fails.
-    }
-
+    await this.reloadData(this.languageService.current);
     this.dataLoaded = true;
   }
 
@@ -120,6 +94,9 @@ export class SafetyService {
       this.exercises         = exercisesData as Exercise[];
       this.contraindications = contraindicationsData as Record<string, Contraindication[]>;
       this.programs          = programsData as Program[];
+      if (this.latestQuery) {
+        this.latestGuidance = this.buildGuidance(this.latestQuery);
+      }
       return;
     }
 
@@ -141,6 +118,10 @@ export class SafetyService {
     this.exercises         = exercises?.length                             ? exercises         : exercisesData as Exercise[];
     this.contraindications = contraindications && Object.keys(contraindications).length ? contraindications : contraindicationsData as Record<string, Contraindication[]>;
     this.programs          = programs?.length                              ? programs          : programsData as Program[];
+
+    if (this.latestQuery) {
+      this.latestGuidance = this.buildGuidance(this.latestQuery);
+    }
   }
 
   getConditions(): Condition[] {
@@ -292,6 +273,12 @@ export class SafetyService {
     await this.initData();
     this.latestQuery = query;
 
+    const result = this.buildGuidance(query);
+    this.latestGuidance = result;
+    return result;
+  }
+
+  private buildGuidance(query: SafetyQuery): GuidanceResult {
     const selectedConditions = query.conditionIds
       .map((id: string) => this.conditions.find(item => item.id === id))
       .filter(Boolean) as Condition[];
@@ -311,7 +298,6 @@ export class SafetyService {
       searchTerm: query.searchTerm?.trim() || undefined
     };
 
-    this.latestGuidance = result;
     return result;
   }
 }

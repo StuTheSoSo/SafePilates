@@ -6,7 +6,7 @@ import { Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { ClientService } from '../../services/client.service';
 import { ClientProfile, Condition } from '../../models';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-clients',
@@ -32,6 +32,7 @@ export class ClientsPage implements OnInit {
   private safetyService = inject(SafetyService);
   private clientService = inject(ClientService);
   private router = inject(Router);
+  private translate = inject(TranslateService);
 
   async ngOnInit() {
     await this.safetyService.initData();
@@ -56,7 +57,7 @@ export class ClientsPage implements OnInit {
     const term = this.conditionSearchText.trim().toLowerCase();
     if (!term) return this.allConditions;
     return this.allConditions.filter(c =>
-      c.label.toLowerCase().includes(term) || c.id.toLowerCase().includes(term)
+      this.getConditionLabel(c.id).toLowerCase().includes(term) || c.id.toLowerCase().includes(term)
     );
   }
 
@@ -146,8 +147,16 @@ export class ClientsPage implements OnInit {
 
   getConditionLabels(conditionIds: string[]): string {
     return conditionIds
-      .map(id => this.allConditions.find(c => c.id === id)?.label ?? id)
+      .map(id => this.getConditionLabel(id))
       .join(', ');
+  }
+
+  getConditionLabel(conditionId: string): string {
+    const key = 'HOME.CONDITIONS.' + conditionId;
+    const translated = this.translate.instant(key);
+    return translated !== key
+      ? translated
+      : this.allConditions.find(c => c.id === conditionId)?.label ?? conditionId;
   }
 
   navigateToUpgrade() {

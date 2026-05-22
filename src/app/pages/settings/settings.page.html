@@ -23,7 +23,7 @@
                   [color]="selectedTheme === theme.value ? 'primary' : 'secondary'"
                   [class.selected]="selectedTheme === theme.value"
                   (click)="onThemeChange(theme.value)">
-          <ion-label>{{ theme.label }}</ion-label>
+          <ion-label>{{ theme.label | translate }}</ion-label>
         </ion-chip>
       </div>
     </ion-card-content>

@@ -1,10 +1,11 @@
-import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule, ToastController, LoadingController } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
 import { Capacitor } from '@capacitor/core';
 import { RevenueCatService, RevenueCatProduct, ENTITLEMENT_ID } from '../../services/revenueCat.service';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 const PRODUCT_IDS = Capacitor.getPlatform() === 'ios'
   ? {
@@ -28,23 +29,34 @@ const FALLBACK_PRICES: Record<string, string> = {
   templateUrl: './upgrade.page.html',
   styleUrls: ['./upgrade.page.scss']
 })
-export class UpgradePage implements OnInit {
+export class UpgradePage implements OnInit, OnDestroy {
   hasPremium = false;
-  statusMessage = 'Loading premium status...';
+  statusMessageKey = 'UPGRADE.STATUS_LOADING';
   isProcessing = false;
   pricesLoaded = false;
 
   prices: Record<string, string> = { ...FALLBACK_PRICES };
+  private baseProductPrices: Record<string, string> = {};
+  private langSub?: Subscription;
 
   private revenueCatService = inject(RevenueCatService);
   private toastCtrl = inject(ToastController);
   private loadingCtrl = inject(LoadingController);
   private cdr = inject(ChangeDetectorRef);
+  private translate = inject(TranslateService);
 
   async ngOnInit() {
+    this.langSub = this.translate.onLangChange.subscribe(() => {
+      this.updateLocalizedPrices();
+      this.cdr.detectChanges();
+    });
     await this.revenueCatService.init();
     this.syncPremiumState();
     this.loadPrices();
+  }
+
+  ngOnDestroy(): void {
+    this.langSub?.unsubscribe();
   }
 
   ionViewWillEnter() {
@@ -53,36 +65,42 @@ export class UpgradePage implements OnInit {
 
   private syncPremiumState() {
     this.hasPremium = this.revenueCatService.isEntitlementActive(ENTITLEMENT_ID);
-    this.statusMessage = this.hasPremium
-      ? 'You have active Pro access.'
-      : 'Unlock Pro to access full Pilates safety guidance.';
+    this.statusMessageKey = this.hasPremium
+      ? 'UPGRADE.STATUS_ACTIVE'
+      : 'UPGRADE.STATUS_INACTIVE';
   }
 
   private async loadPrices() {
     try {
       const ids = Object.values(PRODUCT_IDS);
       const products: RevenueCatProduct[] = await this.revenueCatService.getProducts(ids);
-      const updated = { ...this.prices };
+      const updatedBase = { ...this.baseProductPrices };
       for (const product of products) {
         const display = product.priceString ?? product.price;
         if (display) {
-          // Append billing period hint for subscription products.
-          if (product.identifier === PRODUCT_IDS.monthly) {
-            updated[product.identifier] = `${display}/mo`;
-          } else if (product.identifier === PRODUCT_IDS.annual) {
-            updated[product.identifier] = `${display}/yr`;
-          } else {
-            updated[product.identifier] = display;
-          }
+          updatedBase[product.identifier] = display;
         }
       }
-      this.prices = updated;
+      this.baseProductPrices = updatedBase;
+      this.updateLocalizedPrices();
     } catch {
       // Keep fallback prices on any error.
+      this.updateLocalizedPrices();
     } finally {
       this.pricesLoaded = true;
       this.cdr.detectChanges();
     }
+  }
+
+  private updateLocalizedPrices() {
+    const monthlyBase = this.baseProductPrices[PRODUCT_IDS.monthly] ?? FALLBACK_PRICES[PRODUCT_IDS.monthly].replace('/mo', '');
+    const annualBase = this.baseProductPrices[PRODUCT_IDS.annual] ?? FALLBACK_PRICES[PRODUCT_IDS.annual].replace('/yr', '');
+
+    this.prices = {
+      ...this.prices,
+      [PRODUCT_IDS.monthly]: `${monthlyBase}${this.translate.instant('UPGRADE.MONTH_SUFFIX')}`,
+      [PRODUCT_IDS.annual]: `${annualBase}${this.translate.instant('UPGRADE.YEAR_SUFFIX')}`,
+    };
   }
 
   get monthlyPrice() { return this.prices[PRODUCT_IDS.monthly]; }
@@ -92,35 +110,35 @@ export class UpgradePage implements OnInit {
   async purchaseAnnual()  { await this.purchaseProduct(PRODUCT_IDS.annual); }
 
   async restorePurchase() {
-    const loading = await this.loadingCtrl.create({ message: 'Restoring purchases…', spinner: 'crescent' });
+    const loading = await this.loadingCtrl.create({ message: this.translate.instant('UPGRADE.RESTORING_PURCHASES'), spinner: 'crescent' });
     await loading.present();
     try {
       await this.revenueCatService.restorePurchases();
       this.syncPremiumState();
       if (this.hasPremium) {
-        await this.showToast('Pro access restored!', 'success');
+        await this.showToast(this.translate.instant('UPGRADE.RESTORE_SUCCESS'), 'success');
       } else {
-        await this.showToast('No active Pro subscription found.', 'warning');
+        await this.showToast(this.translate.instant('UPGRADE.RESTORE_NONE'), 'warning');
       }
     } catch (error) {
       console.warn('Restore error', error);
-      await this.showToast('Restore failed. Please try again.', 'danger');
+      await this.showToast(this.translate.instant('UPGRADE.RESTORE_FAILED'), 'danger');
     } finally {
       await loading.dismiss();
     }
   }
 
   private async purchaseProduct(productId: string) {
-    const loading = await this.loadingCtrl.create({ message: 'Processing…', spinner: 'crescent' });
+    const loading = await this.loadingCtrl.create({ message: this.translate.instant('UPGRADE.PROCESSING'), spinner: 'crescent' });
     await loading.present();
     this.isProcessing = true;
     try {
       await this.revenueCatService.purchaseProduct(productId);
       this.syncPremiumState();
       if (this.hasPremium) {
-        await this.showToast('Welcome to Pro! 🎉', 'success');
+        await this.showToast(this.translate.instant('UPGRADE.PURCHASE_WELCOME'), 'success');
       } else {
-        await this.showToast('Purchase complete — try Restore if Pro is not active.', 'warning');
+        await this.showToast(this.translate.instant('UPGRADE.PURCHASE_COMPLETE_INACTIVE'), 'warning');
       }
     } catch (error: any) {
       console.warn('Purchase failed', JSON.stringify(error));
@@ -131,7 +149,7 @@ export class UpgradePage implements OnInit {
       if (!cancelled) {
         const code = error?.code ?? error?.errorCode ?? 'UNKNOWN';
         const msg = error?.message ?? error?.underlyingErrorMessage ?? '';
-        await this.showToast(`Purchase failed [${code}]: ${msg}`.slice(0, 200), 'danger');
+        await this.showToast(this.translate.instant('UPGRADE.PURCHASE_FAILED', { code, msg }).slice(0, 200), 'danger');
       }
     } finally {
       await loading.dismiss();

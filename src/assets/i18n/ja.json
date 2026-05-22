@@ -40,7 +40,9 @@
     "CHECK_SAFETY": "安全性を確認",
     "TRIMESTER_1ST": "第1トリメスター",
     "TRIMESTER_2ND": "第2トリメスター",
-    "TRIMESTER_3RD": "第3トリメスター"
+    "TRIMESTER_3RD": "第3トリメスター",
+    "EDIT_CLIENT_ARIA": "クライアントの編集",
+    "DELETE_CLIENT_ARIA": "クライアントの削除"
   },
   "HOME": {
     "HERO_TITLE": "すべての人のためのPilateSafe",
@@ -170,7 +172,8 @@
       "lymphedema": "リンパ浮腫",
       "other": "その他"
     },
-    "PREGNANCY_TRIMESTER_CHIP": "第{{trimester}}トリメスター"
+    "PREGNANCY_TRIMESTER_CHIP": "第{{trimester}}トリメスター",
+    "GUIDANCE_ERROR": "現在ガイドを取得できません。後でもう一度試すか、接続を確認してください。"
   },
   "RESULTS": {
     "TITLE": "結果",
@@ -199,7 +202,9 @@
     "SAVED": "保存済み",
     "NO_RESULTS": "結果が見つかりません。チェッカーに戻ってコンディションを選択してください。",
     "CHECK_ANOTHER": "別のコンディションを確認",
-    "SAFETY_GUIDANCE": "安全ガイダンス"
+    "SAFETY_GUIDANCE": "安全ガイダンス",
+    "INSTRUCTOR_NOTE_ARIA": "講師のメモを展開または折りたたむ",
+    "SAVE_NOTE_ARIA": "保存条件メモ"
   },
   "PROGRAM_DETAIL": {
     "TITLE_FALLBACK": "プログラム",
@@ -220,17 +225,21 @@
     "NOTE_PLACEHOLDER": "プログラムのメモをここに入力...",
     "SAVE_NOTE": "メモを保存",
     "SAVED": "保存済み",
-    "NOT_FOUND": "プログラムが見つかりません。"
+    "NOT_FOUND": "プログラムが見つかりません。",
+    "SAVE_NOTE_ARIA": "プログラムノートを保存する"
   },
   "LIBRARY": {
     "TITLE": "エクササイズライブラリ",
+    "ALL": "すべて",
     "SEARCH_PLACEHOLDER": "エクササイズを検索",
     "SEARCH_EMPTY": "「{{term}}」に一致するエクササイズはありません。別のキーワードをお試しください。",
     "VALIDATION_SUBTITLE": "ライブラリの検証",
     "VALIDATION_TITLE": "エクササイズメタデータが不足",
     "VALIDATION_DESC": "{{count}}件のエクササイズにフォーカスまたはカテゴリの値が不足しています。",
     "FOCUS_LABEL": "フォーカス: ",
-    "CATEGORY_LABEL": "カテゴリー: "
+    "CATEGORY_LABEL": "カテゴリー: ",
+    "MISSING_FOCUS": "フォーカスが未設定",
+    "MISSING_CATEGORY": "カテゴリが未設定"
   },
   "SETTINGS": {
     "TITLE": "設定",
@@ -250,7 +259,14 @@
     "CONDITIONS_TITLE": "コンディションへのアクセス",
     "CONDITIONS_UNLOCKED": "{{total}}件中{{free}}件のコンディションがアンロック済み",
     "CONDITIONS_ALL_UNLOCKED": "全{{total}}件のコンディションをアンロック済み ✓",
-    "CONDITIONS_UPGRADE_CTA": "すべてアンロックするにはアップグレード"
+    "CONDITIONS_UPGRADE_CTA": "すべてアンロックするにはアップグレード",
+    "THEME_ROSE": "ローズ（フェミニン）",
+    "THEME_LILAC": "ライラック（フェミニン）",
+    "THEME_OCEAN": "オーシャン（控えめ）",
+    "THEME_SAGE": "セージ（控えめ）",
+    "EMAIL_INVALID": "有効なメールアドレスを入力してください。",
+    "EMAIL_SAVED_TOAST": "アカウントのメールアドレスを保存しました。",
+    "EMAIL_SAVE_ERROR": "メールを保存できませんでした。後でもう一度お試しください。"
   },
   "UPGRADE": {
     "TITLE": "Proにアップグレード",
@@ -275,7 +291,23 @@
     "SAVE_VS_MONTHLY": "月額より約58%お得",
     "PROCESSING": "処理中...",
     "ALREADY_PRO": "Pilates Proのすべての機能に完全アクセスできます — コンディションカバレッジ、アパラタスガイダンス、プログラム、インストラクターノート。",
-    "LEGAL_NOTE": "価格はお客様の現地通貨で表示されます。サブスクリプションは自動的に更新されます。デバイスの設定からいつでもキャンセルできます。"
+    "LEGAL_NOTE": "価格はお客様の現地通貨で表示されます。サブスクリプションは自動的に更新されます。デバイスの設定からいつでもキャンセルできます。",
+    "LEGAL_CONSENT_PREFIX": "購読すると、次のことに同意したものとみなされます",
+    "TERMS_LINK": "利用規約 (EULA)",
+    "LEGAL_CONSENT_AND": "そして",
+    "PRIVACY_LINK": "プライバシーポリシー",
+    "STATUS_LOADING": "プレミアム状態を読み込み中...",
+    "STATUS_ACTIVE": "Proアクセスが有効です。",
+    "STATUS_INACTIVE": "Proを解除して、Pilatesの安全ガイドをすべて利用できます。",
+    "MONTH_SUFFIX": "/月",
+    "YEAR_SUFFIX": "/年",
+    "RESTORING_PURCHASES": "購入を復元中...",
+    "RESTORE_SUCCESS": "Proアクセスを復元しました。",
+    "RESTORE_NONE": "有効なProサブスクリプションが見つかりません。",
+    "RESTORE_FAILED": "復元に失敗しました。もう一度お試しください。",
+    "PURCHASE_WELCOME": "Proへようこそ。",
+    "PURCHASE_COMPLETE_INACTIVE": "購入が完了しました。Proが有効でない場合は復元をお試しください。",
+    "PURCHASE_FAILED": "購入に失敗しました [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
     "TITLE": "プログラム",
@@ -339,7 +371,11 @@
     "PREMIUM_DESC": "このエクササイズはPilates Proの一部であり、全詳細を表示するにはアップグレードが必要です。",
     "PREMIUM_CTA": "Proにアップグレード",
     "NOT_FOUND_TITLE": "エクササイズが見つかりません",
-    "NOT_FOUND_DESC": "ライブラリに戻って別のエクササイズを選択してください。"
+    "NOT_FOUND_DESC": "ライブラリに戻って別のエクササイズを選択してください。",
+    "MODIFICATIONS_ARIA": "修正とより安全な代替品セクション",
+    "REFERENCE_DETAILS_ARIA": "参照詳細セクション",
+    "INSTRUCTIONS_DETAILS_ARIA": "手順と詳細セクション",
+    "SAVE_NOTE_ARIA": "練習メモを保存する"
   },
   "PREMIUM": {
     "GO_PREMIUM": "Proになる",
@@ -358,5 +394,65 @@
     "FEATURE_PROGRAMS_TITLE": "厳選プログラム",
     "FEATURE_PROGRAMS_DESC": "Pilatesプログラムライブラリへの完全アクセス。",
     "UPGRADE_NOW": "Proになる"
+  },
+  "PRIVACY": {
+    "TITLE": "プライバシーポリシー",
+    "EFFECTIVE_DATE": "発効日：2026年4月11日",
+    "INTRO_TITLE": "導入",
+    "INTRO_BODY_1": "このプライバシー ポリシーでは、PilateSafe が Apple App Store および Google Play Store 経由で配布されるアプリのデータをどのように処理するかについて説明します。",
+    "INTRO_BODY_2": "PilateSafe は PilateSafe によって開発されました。 サポートまたはプライバシーに関するお問い合わせについては、Stu.Schwartz@gmail.com にメールでお問い合わせいただくか、アプリ ストアのリストに記載されているサポート チャネルをご利用ください。",
+    "DATA_TITLE": "データ収集",
+    "DATA_BODY_1": "PilateSafe は、通常のアプリ操作中にユーザーから個人情報を収集しません。",
+    "DATA_BODY_2": "アプリは、選択されたテーマ設定やローカルの毎日の AI 使用状況カウンターなど、ユーザー エクスペリエンスに関連するローカル デバイス データのみを保存します。",
+    "DATA_BODY_3": "このアプリは、分析のために健康データ、連絡先データ、位置データ、カメラやマイクの入力、デバイス識別子を収集または送信しません。",
+    "STORAGE_TITLE": "ローカルストレージとバンドルされたアセット",
+    "STORAGE_BODY_1": "PilateSafe は、オフラインファーストの操作向けに構築されています。 運動ガイダンス、禁忌情報、プログラム コンテンツはアプリにローカルにバンドルされています。",
+    "STORAGE_BODY_2": "オンデバイス AI が有効な場合、モデル アセットはローカル アプリ ファイルからもロードされ、リモート サービスからは要求されません。",
+    "NETWORK_TITLE": "ネットワークの動作",
+    "NETWORK_BODY_1": "アプリは、通常の使用中に、選択された条件、入力されたテキスト、または個人の健康情報を外部サーバーに送信しません。",
+    "NETWORK_BODY_2": "ネットワーク呼び出しは、アプリ パッケージからバンドルされたアセットをロードすることと、標準の更新チャネルを通じてアプリが要求する可能性のある将来の更新に限定されます。",
+    "THIRDPARTY_TITLE": "サードパーティの共有",
+    "THIRDPARTY_BODY_1": "PilateSafe はユーザー データをサードパーティの分析、広告、追跡サービスと共有しません。",
+    "THIRDPARTY_BODY_2": "デフォルトでは、データ収集にサードパーティ SDK は使用されません。 このアプリは、ユーザーの個人データや機密データを販売しません。",
+    "CHILDREN_TITLE": "子供のプライバシー",
+    "CHILDREN_BODY": "このアプリは 13 歳未満の子供を対象としたものではなく、子供から意図的に個人情報を収集することはありません。",
+    "RETENTION_TITLE": "データの保持と削除",
+    "RETENTION_BODY_1": "ローカル設定とカウンターは、アプリがアンインストールされるか、ユーザーによってクリアされるまで、デバイス上に保持されます。",
+    "RETENTION_BODY_2": "ローカルに保存されているデータをすべて削除するには、アプリをアンインストールするか、デバイスの設定でアプリのストレージをクリアします。",
+    "SECURITY_TITLE": "安全",
+    "SECURITY_BODY": "このアプリは、標準の Ionic/Capacitor WebView ストレージ メカニズムとローカル ブラウザ ストレージを使用します。 コア機能の一部として、デバイス センサー、連絡先、位置情報、カメラ、マイク、その他の機密性の高い権限は使用しません。",
+    "UPDATES_TITLE": "ポリシーの更新",
+    "UPDATES_BODY": "このポリシーは、新しい法的要件やアプリの機能を反映するために更新される場合があります。 上記の発効日は変更があった場合に修正されます。",
+    "CONTACT_TITLE": "接触",
+    "CONTACT_BODY": "このポリシーについて質問がある場合は、電子メールでお問い合わせください",
+    "CONTACT_OR": "または訪問"
+  },
+  "EULA": {
+    "TITLE": "エンドユーザー使用許諾契約書",
+    "LICENSE_TITLE": "ライセンスの付与",
+    "LICENSE_BODY": "これらの規約に従い、PilateSafe を個人的、非営利目的で使用するための、限定的、取消可能、非独占的、譲渡不可のライセンスが付与されます。",
+    "EDUCATIONAL_TITLE": "教育用途のみ",
+    "EDUCATIONAL_BODY_1": "PilateSafe は、一般的な教育用フィットネス ガイダンスと運動の安全性に関する情報を提供します。",
+    "EDUCATIONAL_BODY_2": "医学的なアドバイス、診断、治療ではありません。 運動習慣を開始または変更する前に、資格のある医療専門家に相談する必要があります。",
+    "EDUCATIONAL_BODY_3": "痛み、めまい、息切れ、または何らかの有害な症状が発生した場合は、すぐに運動を中止し、専門家の助けを求めてください。",
+    "OBLIGATIONS_TITLE": "ユーザーの義務",
+    "OBLIGATIONS_BODY_1": "お客様は、専門的な医学的アドバイスや正式な診断の代わりとして PilateSafe に依存しないことに同意するものとします。",
+    "OBLIGATIONS_BODY_2": "このアプリは臨床評価を提供しないため、治療に関する決定を行うためにアプリを使用しないでください。",
+    "RESTRICTIONS_TITLE": "制限",
+    "RESTRICTIONS_BODY": "法律で認められる範囲を除き、PilateSafe に基づいてコピー、変更、配布、リバース エンジニアリング、逆コンパイル、派生著作物を作成することはできません。",
+    "DISCLAIMER_TITLE": "免責事項と保証",
+    "DISCLAIMER_BODY_1": "アプリは「現状のまま」および「利用可能な状態」で提供され、明示的か黙示的かを問わず、いかなる種類の保証もありません。",
+    "DISCLAIMER_BODY_2": "開発者は、商品性、特定の目的への適合性、正確性、完全性、または非侵害についての暗黙の保証を特に否認します。",
+    "LIABILITY_TITLE": "責任の制限",
+    "LIABILITY_BODY_1": "法律で認められる最大限の範囲で、開発者は、アプリの使用から生じる直接的、間接的、偶発的、特別、懲罰的、または結果的な損害に対して責任を負いません。",
+    "LIABILITY_BODY_2": "これには、怪我、データの損失、利益の損失、事業の中断、またはアプリの使用に関連するその他の損失による損害が含まれます。",
+    "OWNERSHIP_TITLE": "所有権と知的財産",
+    "OWNERSHIP_BODY": "テキスト、デザイン、バンドルされたデータ資産を含む PilateSafe のすべてのコンテンツは、開発者が所有するか、アプリでの使用がライセンスされています。",
+    "STORE_TITLE": "店頭配布",
+    "STORE_BODY": "PilateSafe は、Apple App Store および Google Play ストアを通じて配布されます。 アプリの使用には、それらのストアの規約とポリシーも適用されます。",
+    "CHANGES_TITLE": "変更点",
+    "CHANGES_BODY": "開発者はこれらの規約をいつでも更新できます。 変更が投稿された後もアプリを継続して使用すると、改訂された規約に同意したことになります。",
+    "CONTACT_TITLE": "接触",
+    "CONTACT_BODY": "サポートまたは法的な問い合わせについては、電子メールでご連絡ください"
   }
 }

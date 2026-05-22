@@ -20,7 +20,7 @@
       <div class="summary-section section-content">
         <div class="summary-row" *ngIf="exercise.level">
           <div class="summary-label">{{ 'EXERCISE_DETAIL.LEVEL' | translate }}</div>
-          <div class="summary-value" [innerHTML]="highlightText(exercise.level)"></div>
+          <div class="summary-value" [innerHTML]="highlightText(displayLevel(exercise.level))"></div>
         </div>
         <div class="summary-row" *ngIf="exercise.category">
           <div class="summary-label">{{ 'EXERCISE_DETAIL.CATEGORY' | translate }}</div>
@@ -80,7 +80,7 @@
       </div>
 
       <div class="details-accordion">
-        <details aria-label="Modifications and safer alternatives section" style="min-height:44px;">
+        <details [attr.aria-label]="'EXERCISE_DETAIL.MODIFICATIONS_ARIA' | translate" style="min-height:44px;">
           <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.MODIFICATIONS' | translate">{{ 'EXERCISE_DETAIL.MODIFICATIONS' | translate }}</summary>
           <div class="section-content">
             <div *ngIf="exercise.modifications?.length" class="exercise-modifications">
@@ -110,13 +110,13 @@
       <div class="divider"></div>
 
       <div class="details-accordion">
-        <details aria-label="Reference details section" style="min-height:44px;">
+        <details [attr.aria-label]="'EXERCISE_DETAIL.REFERENCE_DETAILS_ARIA' | translate" style="min-height:44px;">
           <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.REFERENCE_DETAILS' | translate">{{ 'EXERCISE_DETAIL.REFERENCE_DETAILS' | translate }}</summary>
           <div class="section-content exercise-meta">
             <p *ngIf="exercise.equipment" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.EQUIPMENT' | translate }}</strong> {{ exercise.equipment }}</p>
             <p *ngIf="exercise.apparatusSettings" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.APPARATUS_SETTINGS' | translate }}</strong> {{ exercise.apparatusSettings }}</p>
             <p class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.CATEGORY' | translate }}</strong> <span [innerHTML]="highlightText(exercise.category)"></span></p>
-            <p *ngIf="exercise.level" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.LEVEL' | translate }}</strong> <span [innerHTML]="highlightText(exercise.level)"></span></p>
+            <p *ngIf="exercise.level" class="exercise-meta-item"><strong>{{ 'EXERCISE_DETAIL.LEVEL' | translate }}</strong> <span [innerHTML]="highlightText(displayLevel(exercise.level))"></span></p>
             <p class="exercise-meta-item exercise-focus"><strong>{{ 'EXERCISE_DETAIL.FOCUS' | translate }}</strong> <span [innerHTML]="highlightText(exercise.focus)"></span></p>
             <p *ngIf="exercise.repRanges" class="exercise-meta-item exercise-rep-ranges"><strong>{{ 'EXERCISE_DETAIL.SUGGESTED_REPS' | translate }}</strong>
               <span *ngIf="exercise.repRanges.beginner">{{ 'EXERCISE_DETAIL.BEGINNER' | translate }} {{ exercise.repRanges.beginner }}</span>
@@ -144,7 +144,7 @@
       <div class="divider"></div>
 
       <div class="details-accordion">
-        <details aria-label="Instructions and details section" style="min-height:44px;">
+        <details [attr.aria-label]="'EXERCISE_DETAIL.INSTRUCTIONS_DETAILS_ARIA' | translate" style="min-height:44px;">
           <summary class="section-header h2" tabindex="0" [attr.aria-label]="'EXERCISE_DETAIL.INSTRUCTIONS_DETAILS' | translate">{{ 'EXERCISE_DETAIL.INSTRUCTIONS_DETAILS' | translate }}</summary>
           <div class="section-content">
             <ion-list *ngIf="exercise.instructions?.length" lines="inset" class="exercise-detail-list">

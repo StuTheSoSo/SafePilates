@@ -67,7 +67,7 @@
             (click)="toggleFormCondition(condition.id)"
             class="condition-chip-btn">
             <ion-icon *ngIf="formConditionIds.has(condition.id)" name="checkmark-circle"></ion-icon>
-            {{ condition.label }}
+            {{ getConditionLabel(condition.id) }}
           </button>
         </div>
 
@@ -108,10 +108,10 @@
           <div class="client-header-row">
             <ion-card-title class="client-name">{{ client.name }}</ion-card-title>
             <div class="client-actions">
-              <ion-button fill="clear" size="small" (click)="openEditForm(client)" aria-label="Edit client">
+              <ion-button fill="clear" size="small" (click)="openEditForm(client)" [attr.aria-label]="'CLIENTS.EDIT_CLIENT_ARIA' | translate">
                 <ion-icon slot="icon-only" name="create-outline"></ion-icon>
               </ion-button>
-              <ion-button fill="clear" size="small" color="danger" (click)="deleteClient(client)" aria-label="Delete client">
+              <ion-button fill="clear" size="small" color="danger" (click)="deleteClient(client)" [attr.aria-label]="'CLIENTS.DELETE_CLIENT_ARIA' | translate">
                 <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
               </ion-button>
             </div>

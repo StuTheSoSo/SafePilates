@@ -40,7 +40,9 @@
     "CHECK_SAFETY": "Verificar segurança",
     "TRIMESTER_1ST": "1.º trimestre",
     "TRIMESTER_2ND": "2.º trimestre",
-    "TRIMESTER_3RD": "3.º trimestre"
+    "TRIMESTER_3RD": "3.º trimestre",
+    "EDIT_CLIENT_ARIA": "Editar cliente",
+    "DELETE_CLIENT_ARIA": "Excluir cliente"
   },
   "HOME": {
     "HERO_TITLE": "PilateSafe para todos os corpos",
@@ -170,7 +172,8 @@
       "lymphedema": "Linfedema",
       "other": "Outro"
     },
-    "PREGNANCY_TRIMESTER_CHIP": "{{trimester}} trimestre"
+    "PREGNANCY_TRIMESTER_CHIP": "{{trimester}} trimestre",
+    "GUIDANCE_ERROR": "Não foi possível recuperar a orientação agora. Tente novamente mais tarde ou verifique sua conexão."
   },
   "RESULTS": {
     "TITLE": "Resultados",
@@ -199,7 +202,9 @@
     "SAVED": "Guardado",
     "NO_RESULTS": "Sem resultados. Volte ao seletor para escolher as suas condições.",
     "CHECK_ANOTHER": "Verificar outra condição",
-    "SAFETY_GUIDANCE": "Orientação de segurança"
+    "SAFETY_GUIDANCE": "Orientação de segurança",
+    "INSTRUCTOR_NOTE_ARIA": "Expandir ou recolher a nota do instrutor",
+    "SAVE_NOTE_ARIA": "Salvar nota de condição"
   },
   "PROGRAM_DETAIL": {
     "TITLE_FALLBACK": "Programa",
@@ -220,17 +225,21 @@
     "NOTE_PLACEHOLDER": "Digite uma nota do programa aqui...",
     "SAVE_NOTE": "Salvar nota",
     "SAVED": "Salvo",
-    "NOT_FOUND": "Programa não encontrado."
+    "NOT_FOUND": "Programa não encontrado.",
+    "SAVE_NOTE_ARIA": "Salvar nota do programa"
   },
   "LIBRARY": {
     "TITLE": "Biblioteca de Exercícios",
+    "ALL": "Todos",
     "SEARCH_PLACEHOLDER": "Pesquisar exercícios",
     "SEARCH_EMPTY": "Nenhum exercício corresponde a \"{{term}}\". Tente outra palavra-chave.",
     "VALIDATION_SUBTITLE": "Validação da biblioteca",
     "VALIDATION_TITLE": "Metadados de exercício em falta",
     "VALIDATION_DESC": "{{count}} exercício(s) têm valores de foco ou categoria em falta.",
     "FOCUS_LABEL": "Foco: ",
-    "CATEGORY_LABEL": "Categoria: "
+    "CATEGORY_LABEL": "Categoria: ",
+    "MISSING_FOCUS": "foco ausente",
+    "MISSING_CATEGORY": "categoria ausente"
   },
   "SETTINGS": {
     "TITLE": "Definições",
@@ -250,7 +259,14 @@
     "CONDITIONS_TITLE": "Acesso às condições",
     "CONDITIONS_UNLOCKED": "{{free}} de {{total}} condições desbloqueadas",
     "CONDITIONS_ALL_UNLOCKED": "Todas as {{total}} condições desbloqueadas ✓",
-    "CONDITIONS_UPGRADE_CTA": "Atualize para desbloquear tudo"
+    "CONDITIONS_UPGRADE_CTA": "Atualize para desbloquear tudo",
+    "THEME_ROSE": "Rosa (feminino)",
+    "THEME_LILAC": "Lilás (feminino)",
+    "THEME_OCEAN": "Oceano (sutil)",
+    "THEME_SAGE": "Sálvia (sutil)",
+    "EMAIL_INVALID": "Insira um endereço de e-mail válido.",
+    "EMAIL_SAVED_TOAST": "E-mail da conta salvo.",
+    "EMAIL_SAVE_ERROR": "Não foi possível salvar o e-mail. Tente novamente mais tarde."
   },
   "UPGRADE": {
     "TITLE": "Atualizar para Pro",
@@ -275,7 +291,23 @@
     "SAVE_VS_MONTHLY": "Poupe ~58% em comparação com o mensal",
     "PROCESSING": "A processar...",
     "ALREADY_PRO": "Tem acesso completo a todas as funcionalidades do Pilates Pro — cobertura de condições, orientação por aparelho, programas e notas do instrutor.",
-    "LEGAL_NOTE": "Os preços são apresentados na sua moeda local. As subscrições renovam automaticamente. Cancele a qualquer momento nas definições do dispositivo."
+    "LEGAL_NOTE": "Os preços são apresentados na sua moeda local. As subscrições renovam automaticamente. Cancele a qualquer momento nas definições do dispositivo.",
+    "LEGAL_CONSENT_PREFIX": "Ao se inscrever você concorda com nossos",
+    "TERMS_LINK": "Termos de Uso (EULA)",
+    "LEGAL_CONSENT_AND": "e",
+    "PRIVACY_LINK": "política de Privacidade",
+    "STATUS_LOADING": "Carregando status premium...",
+    "STATUS_ACTIVE": "Você tem acesso Pro ativo.",
+    "STATUS_INACTIVE": "Desbloqueie o Pro para acessar toda a orientação de segurança de Pilates.",
+    "MONTH_SUFFIX": "/mês",
+    "YEAR_SUFFIX": "/ano",
+    "RESTORING_PURCHASES": "Restaurando compras...",
+    "RESTORE_SUCCESS": "Acesso Pro restaurado.",
+    "RESTORE_NONE": "Nenhuma assinatura Pro ativa encontrada.",
+    "RESTORE_FAILED": "Falha ao restaurar. Tente novamente.",
+    "PURCHASE_WELCOME": "Bem-vindo ao Pro.",
+    "PURCHASE_COMPLETE_INACTIVE": "Compra concluída. Tente Restaurar se o Pro não estiver ativo.",
+    "PURCHASE_FAILED": "A compra falhou [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
     "TITLE": "Programas",
@@ -339,7 +371,11 @@
     "PREMIUM_DESC": "Este exercício faz parte do Pilates Pro e requer uma atualização para ver todos os detalhes.",
     "PREMIUM_CTA": "Atualizar para Pro",
     "NOT_FOUND_TITLE": "Exercício não encontrado",
-    "NOT_FOUND_DESC": "Por favor, volte à biblioteca e selecione outro exercício."
+    "NOT_FOUND_DESC": "Por favor, volte à biblioteca e selecione outro exercício.",
+    "MODIFICATIONS_ARIA": "Seção de modificações e alternativas mais seguras",
+    "REFERENCE_DETAILS_ARIA": "Seção de detalhes de referência",
+    "INSTRUCTIONS_DETAILS_ARIA": "Seção de instruções e detalhes",
+    "SAVE_NOTE_ARIA": "Salvar nota de exercício"
   },
   "PREMIUM": {
     "GO_PREMIUM": "IR PRO",
@@ -358,5 +394,65 @@
     "FEATURE_PROGRAMS_TITLE": "Programas selecionados",
     "FEATURE_PROGRAMS_DESC": "Aceda à biblioteca completa de programas.",
     "UPGRADE_NOW": "IR PRO"
+  },
+  "PRIVACY": {
+    "TITLE": "política de Privacidade",
+    "EFFECTIVE_DATE": "Data de vigência: 11 de abril de 2026",
+    "INTRO_TITLE": "Introdução",
+    "INTRO_BODY_1": "Esta Política de Privacidade descreve como o PilateSafe lida com dados de aplicativos distribuídos pela Apple App Store e Google Play Store.",
+    "INTRO_BODY_2": "PilateSafe é desenvolvido por PilateSafe. Para consultas de suporte ou privacidade, envie um e-mail para Stu.Schwartz@gmail.com ou use os canais de suporte listados na listagem da app store.",
+    "DATA_TITLE": "Coleta de dados",
+    "DATA_BODY_1": "PilateSafe não coleta informações pessoais dos usuários durante a operação normal do aplicativo.",
+    "DATA_BODY_2": "O aplicativo armazena apenas dados locais do dispositivo relacionados à experiência do usuário, incluindo preferências de tema selecionadas e um contador local diário de uso de IA.",
+    "DATA_BODY_3": "O aplicativo não coleta nem transmite dados de saúde, dados de contato, dados de localização, entrada de câmera ou microfone ou identificadores de dispositivos para análise.",
+    "STORAGE_TITLE": "Armazenamento local e ativos agrupados",
+    "STORAGE_BODY_1": "PilateSafe foi desenvolvido para operação offline. Orientações sobre exercícios, informações sobre contra-indicações e conteúdo do programa são agrupados localmente no aplicativo.",
+    "STORAGE_BODY_2": "Se a IA no dispositivo estiver habilitada, os ativos do modelo também serão carregados de arquivos de aplicativos locais e não serão solicitados de um serviço remoto.",
+    "NETWORK_TITLE": "Comportamento de rede",
+    "NETWORK_BODY_1": "O aplicativo não transmite as condições selecionadas, o texto inserido ou informações pessoais de saúde para servidores externos durante o uso normal.",
+    "NETWORK_BODY_2": "As chamadas de rede são limitadas ao carregamento de ativos agrupados do pacote do aplicativo e a quaisquer atualizações futuras que o aplicativo possa solicitar por meio de canais de atualização padrão.",
+    "THIRDPARTY_TITLE": "Compartilhamento de terceiros",
+    "THIRDPARTY_BODY_1": "PilateSafe não compartilha dados do usuário com serviços de análise, publicidade ou rastreamento de terceiros.",
+    "THIRDPARTY_BODY_2": "Nenhum SDK de terceiros é usado para coleta de dados por padrão. O aplicativo não vende dados pessoais ou confidenciais do usuário.",
+    "CHILDREN_TITLE": "Privacidade das crianças",
+    "CHILDREN_BODY": "O aplicativo não é direcionado a crianças menores de 13 anos e não coleta intencionalmente informações pessoais de crianças.",
+    "RETENTION_TITLE": "Retenção e exclusão de dados",
+    "RETENTION_BODY_1": "As configurações e contadores locais são retidos no dispositivo até que o aplicativo seja desinstalado ou limpo pelo usuário.",
+    "RETENTION_BODY_2": "Para excluir todos os dados armazenados localmente, desinstale o aplicativo ou limpe o armazenamento do aplicativo nas configurações do seu dispositivo.",
+    "SECURITY_TITLE": "Segurança",
+    "SECURITY_BODY": "O aplicativo usa mecanismos de armazenamento Ionic/Capacitor WebView padrão e armazenamento local do navegador. Ele não usa sensores de dispositivo, contatos, localização, câmera, microfone ou outras permissões confidenciais como parte de sua funcionalidade principal.",
+    "UPDATES_TITLE": "Atualizações de políticas",
+    "UPDATES_BODY": "Esta política pode ser atualizada para refletir novos requisitos legais ou recursos do aplicativo. A data efetiva acima será revisada quando alterações forem feitas.",
+    "CONTACT_TITLE": "Contato",
+    "CONTACT_BODY": "Se você tiver dúvidas sobre esta política, envie um e-mail",
+    "CONTACT_OR": "ou visite"
+  },
+  "EULA": {
+    "TITLE": "Contrato de licença de usuário final",
+    "LICENSE_TITLE": "Concessão de licença",
+    "LICENSE_BODY": "Sujeito a estes termos, você recebe uma licença limitada, revogável, não exclusiva e intransferível para usar o PilateSafe para uso pessoal e não comercial.",
+    "EDUCATIONAL_TITLE": "Apenas para uso educacional",
+    "EDUCATIONAL_BODY_1": "PilateSafe fornece orientações educacionais gerais sobre condicionamento físico e informações sobre segurança nos exercícios.",
+    "EDUCATIONAL_BODY_2": "Não é aconselhamento médico, diagnóstico ou tratamento. Você deve consultar um profissional de saúde qualificado antes de iniciar ou alterar qualquer rotina de exercícios.",
+    "EDUCATIONAL_BODY_3": "Se sentir dor, tontura, falta de ar ou qualquer sintoma adverso, pare imediatamente de se exercitar e procure ajuda profissional.",
+    "OBLIGATIONS_TITLE": "Obrigações do usuário",
+    "OBLIGATIONS_BODY_1": "Você concorda em não confiar no PilateSafe como substituto de aconselhamento médico profissional ou de um diagnóstico formal.",
+    "OBLIGATIONS_BODY_2": "O aplicativo não fornece avaliação clínica e você não deve usá-lo para tomar decisões sobre tratamento médico.",
+    "RESTRICTIONS_TITLE": "Restrições",
+    "RESTRICTIONS_BODY": "Você não pode copiar, modificar, distribuir, fazer engenharia reversa, descompilar ou criar trabalhos derivados baseados no PilateSafe, exceto na medida permitida por lei.",
+    "DISCLAIMER_TITLE": "Isenções de responsabilidade e garantias",
+    "DISCLAIMER_BODY_1": "O aplicativo é fornecido \"como está\" e \"conforme disponível\", sem garantias de qualquer tipo, expressas ou implícitas.",
+    "DISCLAIMER_BODY_2": "O desenvolvedor se isenta especificamente de quaisquer garantias implícitas de comercialização, adequação a uma finalidade específica, precisão, integridade ou não violação.",
+    "LIABILITY_TITLE": "Limitação de responsabilidade",
+    "LIABILITY_BODY_1": "Na medida máxima permitida por lei, o desenvolvedor não é responsável por quaisquer danos diretos, indiretos, incidentais, especiais, punitivos ou consequenciais decorrentes do uso do aplicativo.",
+    "LIABILITY_BODY_2": "Isso inclui danos causados ​​por lesões, perda de dados, lucros cessantes, interrupção de negócios ou quaisquer outras perdas relacionadas ao uso do aplicativo.",
+    "OWNERSHIP_TITLE": "Propriedade e propriedade intelectual",
+    "OWNERSHIP_BODY": "Todo o conteúdo do PilateSafe, incluindo texto, design e ativos de dados agrupados, é de propriedade do desenvolvedor ou licenciado para uso no aplicativo.",
+    "STORE_TITLE": "Distribuição da loja",
+    "STORE_BODY": "PilateSafe é distribuído pela Apple App Store e Google Play Store. O uso do aplicativo também está sujeito aos termos e políticas dessas lojas.",
+    "CHANGES_TITLE": "Mudanças",
+    "CHANGES_BODY": "O desenvolvedor pode atualizar estes termos a qualquer momento. O uso continuado do aplicativo após a publicação das alterações constitui aceitação dos termos revisados.",
+    "CONTACT_TITLE": "Contato",
+    "CONTACT_BODY": "Para suporte ou dúvidas legais, envie um e-mail"
   }
 }

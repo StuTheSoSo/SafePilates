@@ -6,7 +6,7 @@ import { IonicModule } from '@ionic/angular';
 import { Router, RouterModule, ActivatedRoute } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Exercise } from '../../models';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-exercise-detail',
@@ -25,6 +25,7 @@ export class ExerciseDetailPage implements OnInit {
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
   private router = inject(Router);
+  private translate = inject(TranslateService);
 
   hasPremiumExercise = false;
 
@@ -123,5 +124,19 @@ export class ExerciseDetailPage implements OnInit {
 
   navigateToUpgrade() {
     this.router.navigateByUrl('/upgrade');
+  }
+
+  displayLevel(level: string | undefined): string {
+    const normalized = (level || '').toLowerCase();
+    if (normalized === 'beginner') {
+      return this.translate.instant('EXERCISE_DETAIL.BEGINNER').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'intermediate') {
+      return this.translate.instant('EXERCISE_DETAIL.INTERMEDIATE').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'advanced') {
+      return this.translate.instant('EXERCISE_DETAIL.ADVANCED').replace(/[：:]\s*$/, '');
+    }
+    return level || '';
   }
 }

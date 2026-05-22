@@ -95,7 +95,7 @@
               <div class="divider"></div>
               <ng-container *ngIf="condition.instructorNote">
                 <details class="condition-accordion" *ngIf="hasPremiumAccess; else instructorNoteLocked">
-                  <summary class="section-header h2" tabindex="0" aria-label="Expand or collapse instructor note">{{ 'RESULTS.INSTRUCTOR_NOTE' | translate }}</summary>
+                  <summary class="section-header h2" tabindex="0" [attr.aria-label]="'RESULTS.INSTRUCTOR_NOTE_ARIA' | translate">{{ 'RESULTS.INSTRUCTOR_NOTE' | translate }}</summary>
                   <div class="condition-instructor-note section-content">
                     <p [innerHTML]="getHighlightedText(condition.instructorNote)"></p>
                   </div>
@@ -130,7 +130,7 @@
                     class="note-textarea"
                   ></ion-textarea>
                   <div class="note-actions">
-                    <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" aria-label="Save condition note" style="min-height:44px;min-width:44px;">{{ 'RESULTS.SAVE_NOTE' | translate }}</ion-button>
+                    <ion-button fill="solid" size="small" (click)="saveConditionNote(condition.conditionId)" [attr.aria-label]="'RESULTS.SAVE_NOTE_ARIA' | translate" style="min-height:44px;min-width:44px;">{{ 'RESULTS.SAVE_NOTE' | translate }}</ion-button>
                     <span *ngIf="noteSavedConditionId === condition.conditionId" class="note-saved">{{ 'RESULTS.SAVED' | translate }}</span>
                   </div>
                 </ion-card-content>

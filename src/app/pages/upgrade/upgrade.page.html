@@ -14,7 +14,7 @@
     <ion-card class="active-card">
       <ion-card-header>
         <ion-card-title>{{ 'UPGRADE.ACTIVE_TITLE' | translate }}</ion-card-title>
-        <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ statusMessageKey | translate }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <p>{{ 'UPGRADE.ALREADY_PRO' | translate }}</p>
@@ -43,7 +43,7 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>{{ 'UPGRADE.UNLOCK_TITLE' | translate }}</ion-card-title>
-        <ion-card-subtitle>{{ statusMessage }}</ion-card-subtitle>
+        <ion-card-subtitle>{{ statusMessageKey | translate }}</ion-card-subtitle>
       </ion-card-header>
       <ion-card-content>
         <ul class="features-list">
@@ -103,7 +103,10 @@
 
   <div class="legal-note">
     {{ 'UPGRADE.LEGAL_NOTE' | translate }}
-    By subscribing you agree to our <a href="https://sites.google.com/view/pilatesaveeula/home" target="_blank" rel="noopener">Terms of Use (EULA)</a> and <a href="https://sites.google.com/view/pilatesafe-privacy/home" target="_blank" rel="noopener">Privacy Policy</a>.
+    {{ 'UPGRADE.LEGAL_CONSENT_PREFIX' | translate }}
+    <a href="https://sites.google.com/view/pilatesaveeula/home" target="_blank" rel="noopener">{{ 'UPGRADE.TERMS_LINK' | translate }}</a>
+    {{ 'UPGRADE.LEGAL_CONSENT_AND' | translate }}
+    <a href="https://sites.google.com/view/pilatesafe-privacy/home" target="_blank" rel="noopener">{{ 'UPGRADE.PRIVACY_LINK' | translate }}</a>.
   </div>
 
 </ion-content>

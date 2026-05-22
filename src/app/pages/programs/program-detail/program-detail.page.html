@@ -12,7 +12,7 @@
     <ion-card class="program-hero-card">
       <ion-card-header>
         <div class="program-level-row">
-          <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
+          <ion-badge [color]="levelColor(program.level)">{{ displayLevel(program.level) }}</ion-badge>
         </div>
         <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>
       </ion-card-header>
@@ -72,11 +72,11 @@
           <div class="exercise-number" slot="start">{{ i + 1 }}</div>
           <ion-label>
             <div class="exercise-role" *ngIf="item.role">
-              <span class="role-badge" [ngClass]="'role-' + item.role.toLowerCase().replace(' ', '-')"> {{ item.role }} </span>
+              <span class="role-badge" [ngClass]="'role-' + item.role.toLowerCase().replace(' ', '-')"> {{ displayRole(item.role) }} </span>
             </div>
             <h2 [innerHTML]="highlightText(item.exercise.name)"></h2>
             <p [innerHTML]="highlightText(item.exercise.shortDescription)"></p>
-            <p class="exercise-meta">{{ item.exercise.category }} · {{ item.exercise.level }}</p>
+            <p class="exercise-meta">{{ item.exercise.category }} · {{ displayLevel(item.exercise.level) }}</p>
           </ion-label>
         </ion-item>
       </ion-list>
@@ -90,11 +90,11 @@
           <div class="exercise-number" slot="start">1</div>
           <ion-label>
             <div class="exercise-role" *ngIf="previewExercise.role">
-              <span class="role-badge" [ngClass]="'role-' + previewExercise.role.toLowerCase().replace(' ', '-')">{{ previewExercise.role }}</span>
+              <span class="role-badge" [ngClass]="'role-' + previewExercise.role.toLowerCase().replace(' ', '-')">{{ displayRole(previewExercise.role) }}</span>
             </div>
             <h2>{{ previewExercise.exercise.name }}</h2>
             <p>{{ previewExercise.exercise.shortDescription }}</p>
-            <p class="exercise-meta">{{ previewExercise.exercise.category }} · {{ previewExercise.exercise.level }}</p>
+            <p class="exercise-meta">{{ previewExercise.exercise.category }} · {{ displayLevel(previewExercise.exercise.level) }}</p>
           </ion-label>
         </ion-item>
       </ion-list>
@@ -105,11 +105,11 @@
             <div class="exercise-number" slot="start">{{ i + 2 }}</div>
             <ion-label>
               <div class="exercise-role" *ngIf="item.role">
-                <span class="role-badge">{{ item.role }}</span>
+                <span class="role-badge">{{ displayRole(item.role) }}</span>
               </div>
               <h2>{{ item.exercise.name }}</h2>
               <p>{{ item.exercise.shortDescription }}</p>
-              <p class="exercise-meta">{{ item.exercise.category }} · {{ item.exercise.level }}</p>
+              <p class="exercise-meta">{{ item.exercise.category }} · {{ displayLevel(item.exercise.level) }}</p>
             </ion-label>
           </ion-item>
         </ion-list>
@@ -141,7 +141,7 @@
           class="note-textarea"
         ></ion-textarea>
         <div class="note-actions">
-          <ion-button fill="solid" size="small" (click)="saveProgramNote()" aria-label="Save program note" style="min-height:44px;min-width:44px;">{{ 'PROGRAM_DETAIL.SAVE_NOTE' | translate }}</ion-button>
+          <ion-button fill="solid" size="small" (click)="saveProgramNote()" [attr.aria-label]="'PROGRAM_DETAIL.SAVE_NOTE_ARIA' | translate" style="min-height:44px;min-width:44px;">{{ 'PROGRAM_DETAIL.SAVE_NOTE' | translate }}</ion-button>
           <span *ngIf="noteSaved" class="note-saved">{{ 'PROGRAM_DETAIL.SAVED' | translate }}</span>
         </div>
       </ion-card-content>

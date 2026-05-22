@@ -41,8 +41,9 @@ export class LanguageService {
                 ?? this.resolveLocale(nav?.split('-')[0])
                 ?? 'en';
 
-    // Pass notify=false so no data-reload fires on startup
     await this.applyLocale(lang);
+    // Notify subscribers so localized data stores can align with startup locale.
+    this.languageChange$.next(lang);
   }
 
   /**

@@ -14,7 +14,7 @@
               [color]="selectedCategory === category ? 'primary' : 'secondary'"
               [class.selected]="selectedCategory === category"
               (click)="selectCategory(category)">
-      {{ category }}
+      {{ displayCategory(category) }}
     </ion-chip>
   </div>
 

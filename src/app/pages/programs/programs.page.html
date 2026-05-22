@@ -32,7 +32,7 @@
         <ion-card button (click)="openProgram(program.id)">
           <ion-card-header>
             <div class="program-level-row">
-              <ion-badge [color]="levelColor(program.level)">{{ program.level }}</ion-badge>
+              <ion-badge [color]="levelColor(program.level)">{{ displayLevel(program.level) }}</ion-badge>
               <span *ngIf="program.accessLevel === 'Pro'" class="program-pro-badge">{{ 'APP.PRO_BADGE' | translate }}</span>
             </div>
             <ion-card-title [innerHTML]="highlightText(program.name)"></ion-card-title>

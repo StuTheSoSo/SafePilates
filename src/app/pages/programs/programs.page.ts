@@ -8,7 +8,7 @@ import { SafetyService } from '../../services/safety.service';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Program } from '../../models';
 import programsData from '../../../assets/data/programs.json' with { type: 'json' };
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-programs',
@@ -26,6 +26,7 @@ export class ProgramsPage implements OnInit {
   private router = inject(Router);
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
+  private translate = inject(TranslateService);
 
   async ngOnInit() {
     await this.safetyService.initData();
@@ -125,6 +126,20 @@ export class ProgramsPage implements OnInit {
       case 'Advanced': return 'danger';
       default: return 'medium';
     }
+  }
+
+  displayLevel(level: string): string {
+    const normalized = (level || '').toLowerCase();
+    if (normalized === 'beginner') {
+      return this.translate.instant('EXERCISE_DETAIL.BEGINNER').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'intermediate') {
+      return this.translate.instant('EXERCISE_DETAIL.INTERMEDIATE').replace(/[：:]\s*$/, '');
+    }
+    if (normalized === 'advanced') {
+      return this.translate.instant('EXERCISE_DETAIL.ADVANCED').replace(/[：:]\s*$/, '');
+    }
+    return level;
   }
 
   navigateToUpgrade() {

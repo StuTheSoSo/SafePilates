@@ -19,15 +19,11 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./home.page.scss']
 })
 export class HomePage implements OnInit {
+  private readonly ALL_CATEGORY = '__all__';
   exercises: Exercise[] = [];
   allExercises: Exercise[] = [];
   categories: string[] = [];
-  selectedCategory = 'All';
-  featuredSections = [
-    { title: 'Warm-up & Cool down', category: 'Warm-up / Cool down' },
-    { title: 'Classical Reformer', category: 'Reformer' },
-    { title: 'Chair Essentials', category: 'Chair' }
-  ];
+  selectedCategory = this.ALL_CATEGORY;
   conditions: Condition[] = [];
   selectedIds = new Set<string>();
   pregnancyTrimester = '';
@@ -226,7 +222,7 @@ export class HomePage implements OnInit {
     this.conditions = safetyConditionsData as Condition[];
     this.allExercises = exercisesData as Exercise[];
     this.categories = this.getCategories(this.allExercises);
-    this.categories.unshift('All');
+    this.categories.unshift(this.ALL_CATEGORY);
     this.applyFilter();
 
     // Refresh from service in background.
@@ -256,8 +252,8 @@ export class HomePage implements OnInit {
       this.allExercises = loadedAll;
     }
     this.categories = this.getCategories(this.allExercises);
-    if (!this.categories.includes('All')) {
-      this.categories.unshift('All');
+    if (!this.categories.includes(this.ALL_CATEGORY)) {
+      this.categories.unshift(this.ALL_CATEGORY);
     }
     this.applyFilter();
   }
@@ -272,16 +268,10 @@ export class HomePage implements OnInit {
   }
 
   private applyFilter() {
-    const filtered = this.selectedCategory === 'All'
+    const filtered = this.selectedCategory === this.ALL_CATEGORY
       ? this.allExercises
       : this.allExercises.filter(exercise => exercise.category === this.selectedCategory);
     this.exercises = filtered.slice(0, 4);
-  }
-
-  get previewLabel() {
-    return this.selectedCategory === 'All'
-      ? 'Exercise library preview'
-      : `${this.selectedCategory} exercise preview`;
   }
 
   get selectedCount() {
@@ -369,7 +359,7 @@ export class HomePage implements OnInit {
     } catch (error) {
       console.error('Guidance request failed', error);
       this.safetyService.setErrorGuidance(
-        'Unable to retrieve guidance right now. Please try again later or check your connection.'
+        this.translate.instant('HOME.GUIDANCE_ERROR')
       );
     } finally {
       this.loading = false;

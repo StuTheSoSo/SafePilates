@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar><ion-buttons slot="start"><ion-button (click)="backToPlanner()"><ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon></ion-button></ion-buttons><ion-title>{{ runner.state.plan.name || 'Run flow' }}</ion-title></ion-toolbar>
+</ion-header>
+<ion-content>
+  <main class="run-shell" *ngIf="runner.state.exercises.length; else noFlow">
+    <p class="eyebrow">{{ runner.current?.segmentName }}</p>
+    <div class="progress-track"><span [style.width.%]="runner.progress * 100"></span></div>
+    <section class="teaching-screen" [class.completed]="status === 'completed'">
+      <p class="exercise-count">{{ runner.state.currentIndex + 1 }} / {{ runner.state.exercises.length }}</p>
+      <h1>{{ runner.current?.exerciseId }}</h1>
+      <p class="apparatus">{{ runner.current?.apparatus }}</p>
+      <div class="timer">{{ runner.formatSeconds(runner.remainingSeconds) }}</div>
+      <p class="status-copy" *ngIf="status === 'completed'">Flow complete. Nice work.</p>
+      <p class="status-copy" *ngIf="status !== 'completed'">{{ runner.current?.notes || 'Teach with steady breath and clear transitions.' }}</p>
+    </section>
+    <div class="run-controls"><ion-button fill="outline" (click)="runner.previous()" [disabled]="runner.state.currentIndex === 0"><ion-icon name="play-skip-back-outline" slot="icon-only"></ion-icon></ion-button><ion-button class="main-control" (click)="runner.toggle()" [disabled]="status === 'completed'"><ion-icon [name]="status === 'running' ? 'pause-outline' : 'play-outline'" slot="start"></ion-icon>{{ status === 'running' ? 'Pause' : 'Start' }}</ion-button><ion-button fill="outline" (click)="runner.next()"><ion-icon name="play-skip-forward-outline" slot="icon-only"></ion-icon></ion-button></div>
+    <ion-button expand="block" fill="clear" (click)="backToPlanner()">Back to planner</ion-button>
+  </main>
+  <ng-template #noFlow><main class="run-shell empty-run"><ion-icon name="timer-outline"></ion-icon><h1>No flow is ready.</h1><p>Build a flow before starting the teaching timer.</p><ion-button routerLink="/planner">Open planner</ion-button></main></ng-template>
+</ion-content>

@@ -1,0 +1,80 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start"><ion-back-button defaultHref="/"></ion-back-button></ion-buttons>
+    <ion-title>Flow planner</ion-title>
+    <ion-buttons slot="end"><ion-button (click)="saveFlow()" [disabled]="!plan.name.trim()">Save</ion-button></ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="planner-shell">
+    <section class="planner-heading">
+      <div>
+        <p class="eyebrow">Build and teach</p>
+        <ion-input class="title-input" [(ngModel)]="plan.name" placeholder="Untitled flow" (ionBlur)="flowPlanService.updateCurrentPlan(plan)"></ion-input>
+        <p class="summary">{{ planDurationMinutes }} minutes · {{ planExerciseCount }} exercises</p>
+      </div>
+      <ion-button color="primary" (click)="startRun()" [disabled]="!plan.segments.some(segment => segment.items.length) || (warnings.length > 0 && !warningAcknowledged)">
+        <ion-icon name="play-outline" slot="start"></ion-icon>Run flow
+      </ion-button>
+    </section>
+
+    <section class="conditions-panel" aria-labelledby="conditions-heading">
+      <div class="section-heading"><div><p class="eyebrow">Client safety</p><h2 id="conditions-heading">Who is this flow for?</h2></div><ion-button fill="clear" routerLink="/clients">Manage clients</ion-button></div>
+      <ion-select class="client-select" label="Client" interface="popover" [(ngModel)]="selectedClientId" (ngModelChange)="selectClient($event)">
+        <ion-select-option value="">No specific client</ion-select-option>
+        <ion-select-option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</ion-select-option>
+      </ion-select>
+      <div class="selected-conditions" *ngIf="selectedConditionIds.length; else noConditions">
+        <span class="condition-chip" *ngFor="let conditionId of selectedConditionIds"><span>{{ conditions | json | slice:0:0 }}{{ conditions.find(condition => condition.id === conditionId)?.label || conditionId }}</span><button type="button" (click)="removeCondition(conditionId)" aria-label="Remove condition"><ion-icon name="close-outline"></ion-icon></button></span>
+      </div>
+      <ng-template #noConditions><p class="condition-empty">No conditions selected. Add them for targeted safety warnings.</p></ng-template>
+      <div class="condition-browser-heading"><strong>Add a condition</strong><ion-button fill="clear" size="small" (click)="toggleConditionBrowser()">{{ showAllConditions ? 'Hide all' : 'Browse all' }}</ion-button></div>
+      <div class="condition-browser" *ngIf="showAllConditions || conditionSearch">
+        <ion-searchbar [(ngModel)]="conditionSearch" placeholder="Search conditions"></ion-searchbar>
+        <div class="condition-categories"><button type="button" *ngFor="let category of conditionCategories" [class.selected]="conditionCategory === category" (click)="conditionCategory = category">{{ category }}</button></div>
+        <div class="condition-list"><button type="button" *ngFor="let condition of visibleConditions" [class.selected]="selectedConditionIds.includes(condition.id)" (click)="toggleCondition(condition.id)"><ion-icon [name]="selectedConditionIds.includes(condition.id) ? 'checkmark-circle' : 'ellipse-outline'"></ion-icon>{{ condition.label }}</button></div>
+        <p class="condition-empty" *ngIf="!visibleConditions.length">No conditions match that search.</p>
+      </div>
+    </section>
+
+    <section class="segment-tabs" aria-label="Flow sections">
+      <button type="button" *ngFor="let segment of plan.segments" [class.selected]="activeSegmentId === segment.id" (click)="activeSegmentId = segment.id">
+        <strong>{{ segment.name }}</strong><small>{{ segmentDuration(segment) }} min</small>
+      </button>
+    </section>
+
+    <section class="segment-editor">
+      <div class="section-heading"><div><p class="eyebrow">{{ activeSegment.name }}</p><h2>{{ activeSegment.intent }}</h2></div><span>{{ activeSegment.items.length }} movements</span></div>
+      <div class="item-list">
+        <article class="flow-item" *ngFor="let item of activeSegment.items">
+          <div class="item-main" (click)="expandedItemId = expandedItemId === item.id ? '' : item.id">
+            <strong>{{ exerciseFor(item)?.name || item.exerciseId }}</strong><small>{{ item.apparatus }}</small>
+          </div>
+          <div class="duration-controls"><button type="button" (click)="adjustDuration(item, -.25)">-</button><span>{{ item.durationMinutes }} min</span><button type="button" (click)="adjustDuration(item, .25)">+</button></div>
+          <button class="icon-button" type="button" (click)="removeItem(item)" aria-label="Remove exercise"><ion-icon name="trash-outline"></ion-icon></button>
+          <ion-textarea *ngIf="expandedItemId === item.id" class="item-notes" [(ngModel)]="item.notes" (ngModelChange)="flowPlanService.updateCurrentPlan(plan)" placeholder="Teaching cues and notes"></ion-textarea>
+        </article>
+        <p class="empty-state" *ngIf="!activeSegment.items.length">Add movements below to shape this section.</p>
+      </div>
+    </section>
+
+    <section class="grade-panel" *ngIf="flowGrade as grade" aria-labelledby="grade-heading">
+      <div class="section-heading"><div><p class="eyebrow">Flow review</p><h2 id="grade-heading">{{ grade.overallScore }} / 100</h2></div><span class="grade-status" [class.strong]="grade.status === 'strong'">{{ grade.status }}</span></div>
+      <div class="grade-categories"><div class="grade-category" *ngFor="let category of grade.categories"><div><span>{{ category.label }}</span><strong>{{ category.score }}/{{ category.maxScore }}</strong></div><div class="grade-meter"><span [style.width.%]="category.score / category.maxScore * 100"></span></div></div></div>
+      <div class="grade-copy" *ngIf="grade.strengths.length"><strong>Working well</strong><p *ngFor="let strength of grade.strengths">{{ strength }}</p></div>
+      <div class="grade-copy" *ngIf="grade.shortcomings.length"><strong>Next improvements</strong><p *ngFor="let issue of grade.shortcomings">{{ issue.title }}: {{ issue.suggestion }}</p></div>
+    </section>
+
+    <section class="exercise-picker" aria-labelledby="picker-heading">
+      <div class="section-heading"><div><p class="eyebrow">Movement library</p><h2 id="picker-heading">Add to {{ activeSegment.name }}</h2></div><ion-searchbar [(ngModel)]="searchTerm" placeholder="Search exercises"></ion-searchbar></div>
+      <div class="exercise-grid"><button type="button" *ngFor="let exercise of filteredExercises" [class.locked]="isExerciseLocked(exercise)" (click)="addExercise(exercise)"><span><strong>{{ exercise.name }}</strong><small>{{ exercise.level }} · {{ exercise.equipment || exercise.category }}</small></span><ion-icon [name]="isExerciseLocked(exercise) ? 'lock-closed-outline' : 'add-circle-outline'"></ion-icon></button></div>
+    </section>
+
+    <section class="warning-panel" *ngIf="warnings.length" aria-labelledby="warning-heading">
+      <div class="warning-title"><ion-icon name="warning-outline"></ion-icon><div><p class="eyebrow">Review required</p><h2 id="warning-heading">Safety warnings in this flow</h2></div></div>
+      <div class="warning-row" *ngFor="let entry of warnings"><strong>{{ entry.exercise?.name || entry.item.exerciseId }}</strong><span>{{ entry.warning.reason }}</span><small *ngIf="entry.warning.alternative">Alternative: {{ entry.warning.alternative }}</small></div>
+      <ion-item lines="none"><ion-checkbox slot="start" [(ngModel)]="warningAcknowledged"></ion-checkbox><ion-label>I have reviewed these warnings and will teach appropriate modifications.</ion-label></ion-item>
+    </section>
+  </main>
+</ion-content>

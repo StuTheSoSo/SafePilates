@@ -5,6 +5,7 @@ import { Router, RouterModule } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RevenueCatService } from './services/revenueCat.service';
 import { LanguageService } from './services/language.service';
+import { WatchBridgeService } from './watch/watch-bridge.service';
 
 @Component({
   selector: 'app-root',
@@ -17,12 +18,14 @@ export class AppComponent {
   private router = inject(Router);
   private revenueCatService = inject(RevenueCatService);
   private languageService = inject(LanguageService);
+  private watchBridge = inject(WatchBridgeService);
   private readonly themeStorageKey = 'pilatesafe-theme';
   private readonly defaultTheme = 'theme-rose';
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
 
   tabs = [
     { label: 'TABS.HOME',     icon: 'home-outline',      route: '/' },
+    { label: 'TABS.PLANNER',  icon: 'create-outline',    route: '/planner' },
     { label: 'TABS.LIBRARY',  icon: 'library-outline',   route: '/library' },
     { label: 'TABS.PROGRAMS', icon: 'list-outline',      route: '/programs' },
     { label: 'TABS.CLIENTS',  icon: 'people-outline',    route: '/clients' },
@@ -33,6 +36,7 @@ export class AppComponent {
     this.applySavedTheme();
     this.revenueCatService.init();
     this.languageService.init();
+    this.watchBridge.initialize();
   }
 
   get currentRoute() {

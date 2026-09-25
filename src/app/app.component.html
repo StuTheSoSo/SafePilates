@@ -1,6 +1,6 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
-  <ion-footer translucent>
+  <ion-footer translucent *ngIf="!currentRoute.startsWith('/onboarding')">
     <ion-toolbar class="tab-toolbar">
       <div class="tab-row">
         <button class="tab-btn" *ngFor="let tab of tabs" [class.selected]="isTabActive(tab.route)" (click)="navigate(tab.route)">

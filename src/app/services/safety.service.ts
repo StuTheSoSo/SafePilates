@@ -140,6 +140,12 @@ export class SafetyService {
     return (this.contraindications[conditionId] ?? []).find((item: Contraindication) => item.exerciseId === exerciseId);
   }
 
+  getExerciseWarnings(exerciseId: string, conditionIds: string[]): Contraindication[] {
+    return conditionIds.flatMap(conditionId =>
+      (this.contraindications[conditionId] ?? []).filter(item => item.exerciseId === exerciseId)
+    );
+  }
+
   getSelection(): SafetyQuery | null {
     return this.latestQuery;
   }

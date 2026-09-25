@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>PilateSafe Studio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="dashboard-shell">
+    <section class="welcome-band">
+      <div>
+        <p class="eyebrow">Instructor workspace</p>
+        <h1>Build a safer Pilates flow.</h1>
+        <p>Plan the class, check it against client conditions, then run it with a clear teaching timer.</p>
+      </div>
+      <ion-button routerLink="/planner" (click)="startNewFlow()">
+        <ion-icon name="add-outline" slot="start"></ion-icon>
+        New flow
+      </ion-button>
+    </section>
+
+    <section class="action-grid" aria-label="Studio tools">
+      <a class="action-panel action-panel--primary" routerLink="/planner">
+        <ion-icon name="create-outline"></ion-icon>
+        <strong>Flow planner</strong>
+        <span>Shape segments, timing, cues, and transitions.</span>
+      </a>
+      <a class="action-panel" routerLink="/library">
+        <ion-icon name="library-outline"></ion-icon>
+        <strong>Exercise library</strong>
+        <span>Browse movement details and safety notes.</span>
+      </a>
+      <a class="action-panel" routerLink="/clients">
+        <ion-icon name="people-outline"></ion-icon>
+        <strong>Clients</strong>
+        <span>Keep conditions ready for flow safety checks.</span>
+      </a>
+    </section>
+
+    <section class="saved-section" aria-labelledby="saved-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Your studio</p>
+          <h2 id="saved-heading">Saved flows</h2>
+        </div>
+        <ion-button fill="clear" routerLink="/templates">View all</ion-button>
+      </div>
+      <p class="empty-state" *ngIf="!savedFlows.length">Your saved flows will appear here after you save a plan.</p>
+      <div class="flow-list" *ngIf="savedFlows.length">
+        <a class="flow-row" *ngFor="let flow of savedFlows | slice:0:4" [routerLink]="['/planner']" [queryParams]="{ flow: flow.id }">
+          <span><strong>{{ flow.name }}</strong><small>{{ flow.clientName }} · {{ flow.segments.length }} sections</small></span>
+          <ion-icon name="arrow-forward-outline"></ion-icon>
+        </a>
+      </div>
+    </section>
+
+    <section class="saved-section" aria-labelledby="notes-heading">
+      <div class="section-heading"><div><p class="eyebrow">Teaching notes</p><h2 id="notes-heading">Build your eye</h2></div></div>
+      <div class="flow-list"><a class="flow-row" routerLink="/articles/principles"><span><strong>The Pilates principles</strong><small>Use principles as lenses for planning and cueing.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a><a class="flow-row" routerLink="/articles/breathing"><span><strong>Breathing in motion</strong><small>Organize timing, effort, and attention.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a><a class="flow-row" routerLink="/articles/alignment"><span><strong>Alignment that serves movement</strong><small>Choose responsive cues over rigid shapes.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a></div>
+    </section>
+
+    <section class="safety-band">
+      <ion-icon name="shield-checkmark-outline"></ion-icon>
+      <div><strong>Safety stays in the flow.</strong><span>Attach client conditions and acknowledge warnings before running class.</span></div>
+      <ion-button fill="outline" routerLink="/safety">Safety lookup</ion-button>
+    </section>
+  </main>
+</ion-content>

@@ -38,6 +38,7 @@ export class PlannerPage implements OnInit {
   warningAcknowledged = false;
   expandedItemId = '';
   flowGrade: FlowGradeReport | null = null;
+  gradeExpanded = false;
 
   async ngOnInit(): Promise<void> {
     await this.safetyService.initData();
@@ -125,6 +126,14 @@ export class PlannerPage implements OnInit {
     this.commit();
     this.warningAcknowledged = false;
     this.refreshGrade();
+  }
+
+  conditionLabel(conditionId: string): string {
+    return this.conditions.find(condition => condition.id === conditionId)?.label ?? conditionId;
+  }
+
+  toggleGrade(): void {
+    this.gradeExpanded = !this.gradeExpanded;
   }
 
   addExercise(exercise: Exercise): void {

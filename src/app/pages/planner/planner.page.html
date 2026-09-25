@@ -14,27 +14,20 @@
         <ion-input class="title-input" [(ngModel)]="plan.name" placeholder="Untitled flow" (ionBlur)="flowPlanService.updateCurrentPlan(plan)"></ion-input>
         <p class="summary">{{ planDurationMinutes }} minutes · {{ planExerciseCount }} exercises</p>
       </div>
-      <ion-button color="primary" (click)="startRun()" [disabled]="!plan.segments.some(segment => segment.items.length) || (warnings.length > 0 && !warningAcknowledged)">
+      <ion-button class="run-flow-button" color="primary" (click)="startRun()" [disabled]="!plan.segments.some(segment => segment.items.length) || (warnings.length > 0 && !warningAcknowledged)">
         <ion-icon name="play-outline" slot="start"></ion-icon>Run flow
       </ion-button>
     </section>
 
-    <section class="conditions-panel" aria-labelledby="conditions-heading">
-      <div class="section-heading"><div><p class="eyebrow">Client safety</p><h2 id="conditions-heading">Who is this flow for?</h2></div><ion-button fill="clear" routerLink="/clients">Manage clients</ion-button></div>
-      <ion-select class="client-select" label="Client" interface="popover" [(ngModel)]="selectedClientId" (ngModelChange)="selectClient($event)">
-        <ion-select-option value="">No specific client</ion-select-option>
-        <ion-select-option *ngFor="let client of clients" [value]="client.id">{{ client.name }}</ion-select-option>
-      </ion-select>
-      <div class="selected-conditions" *ngIf="selectedConditionIds.length; else noConditions">
-        <span class="condition-chip" *ngFor="let conditionId of selectedConditionIds"><span>{{ conditions | json | slice:0:0 }}{{ conditions.find(condition => condition.id === conditionId)?.label || conditionId }}</span><button type="button" (click)="removeCondition(conditionId)" aria-label="Remove condition"><ion-icon name="close-outline"></ion-icon></button></span>
-      </div>
-      <ng-template #noConditions><p class="condition-empty">No conditions selected. Add them for targeted safety warnings.</p></ng-template>
-      <div class="condition-browser-heading"><strong>Add a condition</strong><ion-button fill="clear" size="small" (click)="toggleConditionBrowser()">{{ showAllConditions ? 'Hide all' : 'Browse all' }}</ion-button></div>
-      <div class="condition-browser" *ngIf="showAllConditions || conditionSearch">
-        <ion-searchbar [(ngModel)]="conditionSearch" placeholder="Search conditions"></ion-searchbar>
-        <div class="condition-categories"><button type="button" *ngFor="let category of conditionCategories" [class.selected]="conditionCategory === category" (click)="conditionCategory = category">{{ category }}</button></div>
-        <div class="condition-list"><button type="button" *ngFor="let condition of visibleConditions" [class.selected]="selectedConditionIds.includes(condition.id)" (click)="toggleCondition(condition.id)"><ion-icon [name]="selectedConditionIds.includes(condition.id) ? 'checkmark-circle' : 'ellipse-outline'"></ion-icon>{{ condition.label }}</button></div>
-        <p class="condition-empty" *ngIf="!visibleConditions.length">No conditions match that search.</p>
+    <section class="grade-panel" [class.is-expanded]="gradeExpanded" *ngIf="flowGrade as grade" aria-labelledby="grade-heading">
+      <button type="button" class="grade-summary" (click)="toggleGrade()" [attr.aria-expanded]="gradeExpanded" aria-controls="grade-details">
+        <span><span class="eyebrow">Flow review</span><strong id="grade-heading">{{ grade.overallScore }} / 100</strong><small>{{ grade.status }}</small></span>
+        <ion-icon [name]="gradeExpanded ? 'chevron-up-outline' : 'chevron-down-outline'" aria-hidden="true"></ion-icon>
+      </button>
+      <div id="grade-details" class="grade-details" *ngIf="gradeExpanded">
+        <div class="grade-categories"><div class="grade-category" *ngFor="let category of grade.categories"><div><span>{{ category.label }}</span><strong>{{ category.score }}/{{ category.maxScore }}</strong></div><div class="grade-meter"><span [style.width.%]="category.score / category.maxScore * 100"></span></div></div></div>
+        <div class="grade-copy" *ngIf="grade.strengths.length"><strong>Working well</strong><p *ngFor="let strength of grade.strengths">{{ strength }}</p></div>
+        <div class="grade-copy" *ngIf="grade.shortcomings.length"><strong>Next improvements</strong><p *ngFor="let issue of grade.shortcomings">{{ issue.title }}: {{ issue.suggestion }}</p></div>
       </div>
     </section>
 
@@ -57,13 +50,6 @@
         </article>
         <p class="empty-state" *ngIf="!activeSegment.items.length">Add movements below to shape this section.</p>
       </div>
-    </section>
-
-    <section class="grade-panel" *ngIf="flowGrade as grade" aria-labelledby="grade-heading">
-      <div class="section-heading"><div><p class="eyebrow">Flow review</p><h2 id="grade-heading">{{ grade.overallScore }} / 100</h2></div><span class="grade-status" [class.strong]="grade.status === 'strong'">{{ grade.status }}</span></div>
-      <div class="grade-categories"><div class="grade-category" *ngFor="let category of grade.categories"><div><span>{{ category.label }}</span><strong>{{ category.score }}/{{ category.maxScore }}</strong></div><div class="grade-meter"><span [style.width.%]="category.score / category.maxScore * 100"></span></div></div></div>
-      <div class="grade-copy" *ngIf="grade.strengths.length"><strong>Working well</strong><p *ngFor="let strength of grade.strengths">{{ strength }}</p></div>
-      <div class="grade-copy" *ngIf="grade.shortcomings.length"><strong>Next improvements</strong><p *ngFor="let issue of grade.shortcomings">{{ issue.title }}: {{ issue.suggestion }}</p></div>
     </section>
 
     <section class="exercise-picker" aria-labelledby="picker-heading">

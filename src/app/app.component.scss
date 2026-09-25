@@ -76,3 +76,33 @@ ion-toolbar {
   white-space: nowrap;
   max-width: 100%;
 }
+
+@media (max-width: 560px) {
+  ion-toolbar {
+    --min-height: 84px;
+    padding: 0.55rem 0 0.7rem;
+  }
+
+  .tab-row {
+    gap: 0.2rem;
+    padding: 0.45rem 0.35rem;
+  }
+
+  .tab-btn {
+    min-height: 58px;
+    padding: 0.35rem 0.12rem;
+    border-radius: 18px;
+  }
+
+  .tab-btn ion-icon {
+    font-size: 1.35rem;
+  }
+
+  .tab-btn span {
+    overflow: visible;
+    font-size: 0.62rem;
+    line-height: 1.05;
+    text-overflow: clip;
+    white-space: normal;
+  }
+}

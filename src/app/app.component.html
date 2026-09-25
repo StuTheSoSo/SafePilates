@@ -3,8 +3,8 @@
   <ion-footer translucent *ngIf="!currentRoute.startsWith('/onboarding')">
     <ion-toolbar class="tab-toolbar">
       <div class="tab-row">
-        <button class="tab-btn" *ngFor="let tab of tabs" [class.selected]="isTabActive(tab.route)" (click)="navigate(tab.route)">
-          <ion-icon [name]="tab.icon"></ion-icon>
+        <button class="tab-btn" *ngFor="let tab of tabs" [class.selected]="isTabActive(tab.route)" (click)="navigate(tab.route)" [attr.aria-label]="tab.label | translate" [attr.title]="tab.label | translate">
+          <ion-icon [name]="tab.icon" aria-hidden="true"></ion-icon>
           <span>{{ tab.label | translate }}</span>
         </button>
       </div>

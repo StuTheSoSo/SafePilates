@@ -7,6 +7,17 @@
 </ion-header>
 
 <ion-content>
+  <div class="planner-wizard-backdrop" *ngIf="plannerWizardOpen" role="dialog" aria-modal="true" aria-labelledby="planner-wizard-title">
+    <main class="wizard-content">
+      <button class="wizard-skip" type="button" (click)="closeWizard()">Skip</button>
+      <ion-icon name="sparkles-outline" aria-hidden="true"></ion-icon>
+      <p class="eyebrow">Quick guide</p>
+      <h1 id="planner-wizard-title">{{ wizardSteps[wizardStep].title }}</h1>
+      <p>{{ wizardSteps[wizardStep].body }}</p>
+      <div class="wizard-dots"><span *ngFor="let step of wizardSteps; let index = index" [class.active]="index === wizardStep"></span></div>
+      <ion-button expand="block" (click)="nextWizardStep()">{{ wizardStep === wizardSteps.length - 1 ? 'Start planning' : 'Next' }}</ion-button>
+    </main>
+  </div>
   <main class="planner-shell">
     <section class="planner-heading">
       <div>
@@ -38,7 +49,7 @@
     </section>
 
     <section class="segment-editor">
-      <div class="section-heading"><div><p class="eyebrow">{{ activeSegment.name }}</p><h2>{{ activeSegment.intent }}</h2></div><span>{{ activeSegment.items.length }} movements</span></div>
+      <div class="section-heading"><div><p class="eyebrow">{{ activeSegment.name }}</p><h2>{{ activeSegment.intent }}</h2></div><div class="section-heading-actions"><span>{{ activeSegment.items.length }} movements</span><ion-button size="small" fill="outline" (click)="togglePicker()"><ion-icon name="add-outline" slot="start"></ion-icon>{{ pickerOpen ? 'Close library' : 'Add movement' }}</ion-button></div></div>
       <div class="item-list">
         <article class="flow-item" *ngFor="let item of activeSegment.items">
           <div class="item-main" (click)="expandedItemId = expandedItemId === item.id ? '' : item.id">
@@ -52,14 +63,20 @@
       </div>
     </section>
 
-    <section class="exercise-picker" aria-labelledby="picker-heading">
-      <div class="section-heading"><div><p class="eyebrow">Movement library</p><h2 id="picker-heading">Add to {{ activeSegment.name }}</h2></div><ion-searchbar [(ngModel)]="searchTerm" placeholder="Search exercises"></ion-searchbar></div>
-      <div class="exercise-grid"><button type="button" *ngFor="let exercise of filteredExercises" [class.locked]="isExerciseLocked(exercise)" (click)="addExercise(exercise)"><span><strong>{{ exercise.name }}</strong><small>{{ exercise.level }} · {{ exercise.equipment || exercise.category }}</small></span><ion-icon [name]="isExerciseLocked(exercise) ? 'lock-closed-outline' : 'add-circle-outline'"></ion-icon></button></div>
-    </section>
+    <div class="picker-backdrop" *ngIf="pickerOpen" role="dialog" aria-modal="true" aria-labelledby="picker-heading">
+      <section class="exercise-picker">
+        <div class="picker-header"><div><p class="eyebrow">Movement library</p><h2 id="picker-heading">Add to {{ activeSegment.name }}</h2></div><button class="picker-close" type="button" (click)="togglePicker()" aria-label="Close movement library"><ion-icon name="close-outline"></ion-icon></button></div>
+        <ion-searchbar [(ngModel)]="searchTerm" placeholder="Search exercises"></ion-searchbar>
+        <p class="picker-hint" *ngIf="!searchTerm">All movements</p>
+        <p class="picker-added" *ngIf="lastAddedExerciseName" role="status">Added {{ lastAddedExerciseName }}</p>
+        <div class="exercise-grid"><button type="button" *ngFor="let exercise of filteredExercises" [class.locked]="isExerciseLocked(exercise)" [class.added]="lastAddedExerciseId === exercise.id" [class.in-flow]="isExerciseInActiveSegment(exercise.id)" [attr.title]="isExerciseInActiveSegment(exercise.id) ? 'Already in this section' : null" (click)="addExercise(exercise)"><span><strong>{{ exercise.name }}</strong><small>{{ exercise.level }} · {{ exercise.equipment || exercise.category }}</small><small class="in-flow-label" *ngIf="isExerciseInActiveSegment(exercise.id)">In this section</small></span><ion-icon [name]="isExerciseLocked(exercise) ? 'lock-closed-outline' : 'add-circle-outline'"></ion-icon></button></div>
+        <p class="empty-state" *ngIf="searchTerm && !filteredExercises.length">No movements match that search.</p>
+      </section>
+    </div>
 
     <section class="warning-panel" *ngIf="warnings.length" aria-labelledby="warning-heading">
       <div class="warning-title"><ion-icon name="warning-outline"></ion-icon><div><p class="eyebrow">Review required</p><h2 id="warning-heading">Safety warnings in this flow</h2></div></div>
-      <div class="warning-row" *ngFor="let entry of warnings"><strong>{{ entry.exercise?.name || entry.item.exerciseId }}</strong><span>{{ entry.warning.reason }}</span><small *ngIf="entry.warning.alternative">Alternative: {{ entry.warning.alternative }}</small></div>
+      <div class="warning-row" *ngFor="let entry of warnings"><strong>{{ entry.exercise?.name || entry.item.exerciseId }}</strong><small *ngIf="entry.occurrenceCount > 1">Used {{ entry.occurrenceCount }} times in this flow</small><div class="warning-detail" *ngFor="let warning of entry.warnings"><span>{{ warning.reason }}</span><small *ngIf="warning.alternative">Alternative: {{ warning.alternative }}</small></div></div>
       <ion-item lines="none"><ion-checkbox slot="start" [(ngModel)]="warningAcknowledged"></ion-checkbox><ion-label>I have reviewed these warnings and will teach appropriate modifications.</ion-label></ion-item>
     </section>
   </main>

@@ -18,6 +18,7 @@ import { FlowGradeReport } from '../../models';
   styleUrls: ['./planner.page.scss']
 })
 export class PlannerPage implements OnInit {
+  private readonly plannerWizardKey = 'pilatesafe-planner-wizard-seen';
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   readonly flowPlanService = inject(FlowPlanService);
@@ -39,6 +40,16 @@ export class PlannerPage implements OnInit {
   expandedItemId = '';
   flowGrade: FlowGradeReport | null = null;
   gradeExpanded = false;
+  pickerOpen = false;
+  lastAddedExerciseId = '';
+  lastAddedExerciseName = '';
+  plannerWizardOpen = false;
+  wizardStep = 0;
+  readonly wizardSteps = [
+    { title: 'Shape the class', body: 'Use Arrival, Main Flow, and Closing to give the session a clear arc.' },
+    { title: 'Add movements', body: 'Choose a section, tap Add movement, then search or pick a starter movement.' },
+    { title: 'Review and run', body: 'Check the flow summary, then use Run flow when the class is ready to teach.' },
+  ];
 
   async ngOnInit(): Promise<void> {
     await this.safetyService.initData();
@@ -53,6 +64,7 @@ export class PlannerPage implements OnInit {
     this.selectedClientId = this.plan.clientId ?? '';
     this.selectedConditionIds = [...this.plan.selectedConditionIds];
     this.refreshGrade();
+    this.plannerWizardOpen = localStorage.getItem(this.plannerWizardKey) !== 'true';
   }
 
   get activeSegment(): FlowSegment {
@@ -61,8 +73,27 @@ export class PlannerPage implements OnInit {
 
   get filteredExercises(): Exercise[] {
     const query = this.searchTerm.trim().toLowerCase();
-    return this.exercises.filter(exercise => !query || [exercise.name, exercise.category, exercise.focus, exercise.equipment]
-      .filter(Boolean).join(' ').toLowerCase().includes(query)).slice(0, 80);
+    const matches = this.exercises.filter(exercise => !query || [exercise.name, exercise.category, exercise.focus, exercise.equipment]
+      .filter(Boolean).join(' ').toLowerCase().includes(query));
+    return matches.slice(0, query ? 80 : this.exercises.length);
+  }
+
+  togglePicker(): void {
+    this.pickerOpen = !this.pickerOpen;
+    if (!this.pickerOpen) this.searchTerm = '';
+  }
+
+  nextWizardStep(): void {
+    if (this.wizardStep < this.wizardSteps.length - 1) {
+      this.wizardStep++;
+      return;
+    }
+    this.closeWizard();
+  }
+
+  closeWizard(): void {
+    this.plannerWizardOpen = false;
+    localStorage.setItem(this.plannerWizardKey, 'true');
   }
 
   get conditionCategories(): string[] {
@@ -95,13 +126,24 @@ export class PlannerPage implements OnInit {
   }
 
   get warnings() {
-    return this.plan.segments.flatMap(segment => segment.items.flatMap(item =>
-      this.safetyService.getExerciseWarnings(item.exerciseId, this.selectedConditionIds).map(warning => ({
-        item,
-        exercise: this.exerciseFor(item),
-        warning,
-      }))
-    ));
+    const grouped = new Map<string, { item: FlowItem; exercise?: Exercise; occurrenceCount: number; warnings: Array<{ reason: string; alternative?: string }> }>();
+    for (const segment of this.plan.segments) {
+      for (const item of segment.items) {
+        const warnings = this.safetyService.getExerciseWarnings(item.exerciseId, this.selectedConditionIds);
+        if (!warnings.length) continue;
+        const existing = grouped.get(item.exerciseId);
+        if (existing) {
+          existing.occurrenceCount++;
+          existing.warnings.push(...warnings);
+        } else {
+          grouped.set(item.exerciseId, { item, exercise: this.exerciseFor(item), occurrenceCount: 1, warnings: [...warnings] });
+        }
+      }
+    }
+    return [...grouped.values()].map(entry => ({
+      ...entry,
+      warnings: entry.warnings.filter((warning, index, warnings) => warnings.findIndex(candidate => candidate.reason === warning.reason && candidate.alternative === warning.alternative) === index),
+    }));
   }
 
   get planDurationMinutes(): number {
@@ -148,12 +190,24 @@ export class PlannerPage implements OnInit {
       notes: '',
       apparatus: exercise.equipment || 'Mat',
     }];
+    this.lastAddedExerciseId = exercise.id;
+    this.lastAddedExerciseName = exercise.name;
     this.commit();
     this.refreshGrade();
+    window.setTimeout(() => {
+      if (this.lastAddedExerciseId === exercise.id) {
+        this.lastAddedExerciseId = '';
+        this.lastAddedExerciseName = '';
+      }
+    }, 1400);
   }
 
   isExerciseLocked(exercise: Exercise): boolean {
     return this.safetyService.isExercisePremium(exercise) && !this.safetyService.isPremiumActive();
+  }
+
+  isExerciseInActiveSegment(exerciseId: string): boolean {
+    return this.activeSegment.items.some(item => item.exerciseId === exerciseId);
   }
 
   removeItem(item: FlowItem): void {

@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
+import { AlertController, IonicModule } from '@ionic/angular';
 import { Exercise, FlowItem, FlowPlan, FlowSegment, Condition, ClientProfile } from '../../models';
 import { FlowPlanService } from '../../services/flow-plan.service';
 import { SafetyService } from '../../services/safety.service';
@@ -21,6 +21,8 @@ export class PlannerPage implements OnInit {
   private readonly plannerWizardKey = 'pilatesafe-planner-wizard-seen';
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
+  private readonly alertController = inject(AlertController);
+  private readonly changeDetector = inject(ChangeDetectorRef);
   readonly flowPlanService = inject(FlowPlanService);
   readonly safetyService = inject(SafetyService);
   readonly gradingService = inject(FlowGradingService);
@@ -43,11 +45,13 @@ export class PlannerPage implements OnInit {
   pickerOpen = false;
   lastAddedExerciseId = '';
   lastAddedExerciseName = '';
+  savedNotice = false;
   plannerWizardOpen = false;
   wizardStep = 0;
   readonly wizardSteps = [
     { title: 'Shape the class', body: 'Use Arrival, Main Flow, and Closing to give the session a clear arc.' },
     { title: 'Add movements', body: 'Choose a section, tap Add movement, then search or pick a starter movement.' },
+    { title: 'Name and save', body: 'Give the flow a name and tap Save so you can reuse it for another class.' },
     { title: 'Review and run', body: 'Check the flow summary, then use Run flow when the class is ready to teach.' },
   ];
 
@@ -57,7 +61,10 @@ export class PlannerPage implements OnInit {
     this.exercises = this.safetyService.getExercises();
     this.clients = this.clientService.getClients();
     const flowId = this.route.snapshot.queryParamMap.get('flow');
-    if (flowId) {
+    const mode = this.route.snapshot.queryParamMap.get('mode');
+    if (mode === 'new') {
+      this.flowPlanService.startBlankFlow();
+    } else if (flowId) {
       this.flowPlanService.loadSavedFlowIntoPlanner(flowId);
     }
     this.plan = this.flowPlanService.currentPlan;
@@ -216,6 +223,17 @@ export class PlannerPage implements OnInit {
     this.refreshGrade();
   }
 
+  moveItem(item: FlowItem, direction: -1 | 1): void {
+    const index = this.activeSegment.items.findIndex(candidate => candidate.id === item.id);
+    const nextIndex = index + direction;
+    if (index < 0 || nextIndex < 0 || nextIndex >= this.activeSegment.items.length) return;
+    const items = [...this.activeSegment.items];
+    [items[index], items[nextIndex]] = [items[nextIndex], items[index]];
+    this.activeSegment.items = items;
+    this.commit();
+    this.refreshGrade();
+  }
+
   adjustDuration(item: FlowItem, amount: number): void {
     item.durationMinutes = Math.max(.25, Math.round((item.durationMinutes + amount) * 4) / 4);
     this.commit();
@@ -226,6 +244,25 @@ export class PlannerPage implements OnInit {
     if (!name) return;
     this.plan.name = name;
     this.flowPlanService.saveCurrentPlanAsFlow(name);
+    this.savedNotice = true;
+  }
+
+  async startNewFlow(): Promise<void> {
+    const alert = await this.alertController.create({ header: 'Start a new flow?', message: 'This will replace the current draft. Save it to your flow library first if you want to keep it.', buttons: [{ text: 'Cancel', role: 'cancel' }, { text: 'New flow', role: 'confirm' }] });
+    await alert.present();
+    const { role } = await alert.onDidDismiss();
+    if (role !== 'confirm') return;
+    this.plan = this.flowPlanService.startBlankFlow();
+    this.activeSegmentId = this.plan.segments[0].id;
+    this.selectedConditionIds = [];
+    this.selectedClientId = '';
+    this.warningAcknowledged = false;
+    this.expandedItemId = '';
+    this.searchTerm = '';
+    this.pickerOpen = false;
+    this.savedNotice = false;
+    this.refreshGrade();
+    this.changeDetector.detectChanges();
   }
 
   startRun(): void {

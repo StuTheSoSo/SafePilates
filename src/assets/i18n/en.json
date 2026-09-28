@@ -11,7 +11,7 @@
     "HOME": "Home",
     "LIBRARY": "Library",
     "CLIENTS": "Clients",
-    "PROGRAMS": "Programs",
+    "PROGRAMS": "Flows",
     "PLANNER": "Planner",
     "SETTINGS": "Settings"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "Purchase failed [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "Programs",
+    "TITLE": "Flows",
     "INTRO": "Curated sequences for common goals — tap any program to see its exercises.",
     "SEARCH_PLACEHOLDER": "Search program flows",
     "SEARCH_EMPTY": "No programs match \"{{term}}\". Try a different keyword.",

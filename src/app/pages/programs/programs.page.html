@@ -1,17 +1,19 @@
 <ion-header translucent>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
     <ion-title>{{ 'PROGRAMS.TITLE' | translate }}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content fullscreen>
   <div class="programs-intro ion-padding-horizontal ion-padding-top">
-    <p class="intro-text">{{ 'PROGRAMS.INTRO' | translate }}</p>
+    <p class="intro-text">{{ activeView === 'templates' ? ('PROGRAMS.INTRO' | translate) : 'Your saved class plans, ready to edit or teach again.' }}</p>
   </div>
-  <div class="programs-search ion-padding-horizontal ion-padding-bottom">
+  <ion-segment class="flow-view-tabs ion-padding-horizontal" [(ngModel)]="activeView">
+    <ion-segment-button value="templates"><ion-label>Templates</ion-label></ion-segment-button>
+    <ion-segment-button value="saved"><ion-label>Saved Flows</ion-label></ion-segment-button>
+  </ion-segment>
+
+  <div class="programs-search ion-padding-horizontal ion-padding-bottom" *ngIf="activeView === 'templates'">
     <ion-searchbar
       [placeholder]="'PROGRAMS.SEARCH_PLACEHOLDER' | translate"
       [(ngModel)]="searchText"
@@ -26,7 +28,7 @@
     </ion-note>
   </div>
 
-  <ion-grid class="ion-padding">
+  <ion-grid class="ion-padding" *ngIf="activeView === 'templates'">
     <ion-row>
       <ion-col size="12" size-md="6" *ngFor="let program of filteredPrograms">
         <ion-card button (click)="openProgram(program.id)">
@@ -70,6 +72,31 @@
       </ion-col>
     </ion-row>
   </ion-grid>
+
+  <section class="saved-flow-list ion-padding" *ngIf="activeView === 'saved'; else builtInPrograms">
+    <div class="saved-flow-empty" *ngIf="!savedFlows.length">
+      <ion-icon name="copy-outline"></ion-icon>
+      <h2>No saved flows yet</h2>
+      <p>Create a blank flow or save a plan from the Flow Planner.</p>
+      <ion-button (click)="startBlankFlow()">New blank flow</ion-button>
+    </div>
+    <ion-card class="saved-flow-card" *ngFor="let flow of savedFlows">
+      <ion-card-header>
+        <ion-card-title>{{ flow.name }}</ion-card-title>
+        <ion-card-subtitle>{{ flow.clientName }} · {{ durationMinutes(flow) }} min · {{ flow.segments.length }} sections</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{ flow.goal || 'No goal set' }}</p>
+        <div class="saved-flow-actions">
+          <ion-button fill="solid" size="small" (click)="openSavedFlow(flow.id)"><ion-icon name="create-outline" slot="start"></ion-icon>Edit</ion-button>
+          <ion-button fill="outline" size="small" (click)="useSavedFlow(flow.id)"><ion-icon name="copy-outline" slot="start"></ion-icon>Use as new</ion-button>
+          <ion-button fill="outline" size="small" (click)="runSavedFlow(flow)"><ion-icon name="play-outline" slot="start"></ion-icon>Run</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </section>
+
+  <ng-template #builtInPrograms></ng-template>
 
   <app-premium-banner *ngIf="!hasPremiumAccess" (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
 </ion-content>

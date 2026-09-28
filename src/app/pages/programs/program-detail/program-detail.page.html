@@ -1,8 +1,6 @@
 <ion-header translucent>
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/programs"></ion-back-button>
-    </ion-buttons>
+    <ion-buttons slot="start"><ion-back-button defaultHref="/programs" text="Back"></ion-back-button></ion-buttons>
     <ion-title>{{ program?.name || ('PROGRAM_DETAIL.TITLE_FALLBACK' | translate) }}</ion-title>
   </ion-toolbar>
 </ion-header>

@@ -1,20 +1,25 @@
-<ion-header [translucent]="true">
-  <ion-toolbar><ion-buttons slot="start"><ion-button (click)="backToPlanner()"><ion-icon name="arrow-back-outline" slot="icon-only"></ion-icon></ion-button></ion-buttons><ion-title>{{ runner.state.plan.name || 'Run flow' }}</ion-title></ion-toolbar>
-</ion-header>
+<ion-header [translucent]="true" *ngIf="!teachingMode"><ion-toolbar><ion-title>{{ state.plan.name || 'Run flow' }}</ion-title><ion-buttons slot="end"><ion-button (click)="startNewFlow()">New</ion-button><ion-button (click)="backToPlanner()">Planner</ion-button></ion-buttons></ion-toolbar></ion-header>
 <ion-content>
-  <main class="run-shell" *ngIf="runner.state.exercises.length; else noFlow">
-    <p class="eyebrow">{{ runner.current?.segmentName }}</p>
-    <div class="progress-track"><span [style.width.%]="runner.progress * 100"></span></div>
-    <section class="teaching-screen" [class.completed]="status === 'completed'">
-      <p class="exercise-count">{{ runner.state.currentIndex + 1 }} / {{ runner.state.exercises.length }}</p>
-      <h1>{{ runner.current?.exerciseId }}</h1>
-      <p class="apparatus">{{ runner.current?.apparatus }}</p>
-      <div class="timer">{{ runner.formatSeconds(runner.remainingSeconds) }}</div>
-      <p class="status-copy" *ngIf="status === 'completed'">Flow complete. Nice work.</p>
-      <p class="status-copy" *ngIf="status !== 'completed'">{{ runner.current?.notes || 'Teach with steady breath and clear transitions.' }}</p>
+  <section class="teaching-screen" *ngIf="teachingMode" aria-label="Teaching mode">
+    <div class="teaching-timer"><strong>{{ formatTime(remainingSeconds) }}</strong><small>{{ current?.segmentName }}</small></div>
+    <div class="teaching-current"><p>{{ state.currentIndex + 1 }} / {{ state.exercises.length }}</p><h1>{{ exerciseName(current) }}</h1><span>{{ current?.apparatus }}</span></div>
+    <div class="teaching-next"><p>NEXT</p><h2>{{ exerciseName(next) || 'Class complete' }}</h2></div>
+    <div class="teaching-controls"><button type="button" (click)="startTeaching()" [disabled]="isRunning || isCompleted"><ion-icon name="play-outline"></ion-icon>{{ isPaused ? 'Resume' : 'Go' }}</button><button type="button" (click)="stopTeaching()" [disabled]="!isRunning"><ion-icon name="pause-outline"></ion-icon>Pause</button><button type="button" class="stop-control" (click)="confirmStop()" [disabled]="isCompleted"><ion-icon name="stop-outline"></ion-icon>Stop</button><button type="button" (click)="nextExercise()" [disabled]="isCompleted || !next"><ion-icon name="play-skip-forward-outline"></ion-icon>Next</button></div>
+  </section>
+  <main class="run-shell" *ngIf="hasClass; else noFlow">
+    <div class="stage-tracker" role="list" aria-label="Flow stage progress"><ng-container *ngFor="let segment of segments; let last = last"><div class="stage-step" role="listitem" [attr.data-status]="stageStatus(segment)"><span class="stage-dot"><ion-icon *ngIf="stageStatus(segment) === 'complete'" name="checkmark"></ion-icon></span><span>{{ segment.name }}</span></div><span class="stage-line" *ngIf="!last"></span></ng-container></div>
+    <section class="timer-card" [class.completed]="isCompleted" [attr.data-timer-status]="remainingSeconds <= 15 ? 'danger' : remainingSeconds <= 30 ? 'warning' : 'ok'">
+      <div class="timer-ring" [style.--progress.%]="progressPercent"><span>{{ formatTime(remainingSeconds) }}</span><small>{{ current?.segmentName }}</small></div>
+      <div class="current-exercise"><p *ngIf="isSetup" class="eyebrow">Set up next movement</p><p class="exercise-count">{{ state.currentIndex + 1 }} / {{ state.exercises.length }}</p><h1>{{ exerciseName(current) }}</h1><p>{{ exerciseFocus(current) || current?.notes || 'Teach with steady breath and clear transitions.' }}</p><span>{{ current?.apparatus }}</span></div>
     </section>
-    <div class="run-controls"><ion-button fill="outline" (click)="runner.previous()" [disabled]="runner.state.currentIndex === 0"><ion-icon name="play-skip-back-outline" slot="icon-only"></ion-icon></ion-button><ion-button class="main-control" (click)="runner.toggle()" [disabled]="status === 'completed'"><ion-icon [name]="status === 'running' ? 'pause-outline' : 'play-outline'" slot="start"></ion-icon>{{ status === 'running' ? 'Pause' : 'Start' }}</ion-button><ion-button fill="outline" (click)="runner.next()"><ion-icon name="play-skip-forward-outline" slot="icon-only"></ion-icon></ion-button></div>
-    <ion-button expand="block" fill="clear" (click)="backToPlanner()">Back to planner</ion-button>
+    <section class="runner-stats" aria-label="Timer summary"><span><strong>{{ formatTime(state.elapsedSeconds) }}</strong> elapsed</span><span><strong>{{ formatTime(totalRemainingSeconds) }}</strong> left</span><span><strong>{{ formatTime(totalDurationSeconds) }}</strong> total</span></section>
+    <section class="runner-controls" aria-label="Flow controls"><ion-button fill="clear" (click)="previousExercise()" [disabled]="state.currentIndex === 0"><ion-icon name="play-skip-back-outline" slot="icon-only"></ion-icon></ion-button><ion-button *ngIf="!isRunning && !isCompleted" class="primary-control" (click)="startTeaching()"><ion-icon name="play-outline" slot="start"></ion-icon>{{ isPaused ? 'Resume' : 'Start' }}</ion-button><ion-button *ngIf="isRunning" class="primary-control" (click)="stopTeaching()"><ion-icon name="pause-outline" slot="start"></ion-icon>Pause</ion-button><ion-button fill="clear" color="danger" (click)="confirmStop()" [disabled]="isCompleted"><ion-icon name="stop-outline" slot="icon-only"></ion-icon></ion-button><ion-button fill="clear" (click)="nextExercise()" [disabled]="isCompleted"><ion-icon name="play-skip-forward-outline" slot="icon-only"></ion-icon></ion-button></section>
+    <section class="duration-editor" *ngIf="canEditDuration"><button type="button" (click)="adjustDuration(-15)" [disabled]="current!.durationSeconds - 15 < minimumDurationSeconds">-</button><strong>{{ formatTime(current!.durationSeconds) }}</strong><button type="button" (click)="adjustDuration(15)">+</button></section>
+    <section class="completion-actions" *ngIf="isCompleted"><p>Flow complete.</p><ion-button (click)="restartFlow()">Restart flow</ion-button><ion-button fill="outline" (click)="backToPlanner()">Back to planner</ion-button></section>
+    <section class="secondary-controls" *ngIf="!isCompleted"><ion-button fill="clear" (click)="restartExercise()">Restart exercise</ion-button></section>
+    <section class="detail-grid"><article><p class="eyebrow">Next up</p><h2>{{ exerciseName(next) }}</h2><p>{{ exerciseFocus(next) || next?.notes || 'Prepare the next movement.' }}</p></article><article><p class="eyebrow">Notes and cues</p><p>{{ current?.notes || 'No notes for this movement.' }}</p></article></section>
+    <section class="completion-banner" *ngIf="completionMessage" aria-live="assertive"><ion-icon name="checkmark-circle-outline"></ion-icon><strong>{{ completionMessage }}</strong></section>
+    <section class="warning-stack" *ngIf="warnings.length"><div class="warning" *ngFor="let warning of warnings"><ion-icon name="alert-circle-outline"></ion-icon><div><strong>Safety note</strong><p>{{ warning.reason }}</p><span *ngIf="warning.alternative">Alternative: {{ warning.alternative }}</span></div></div></section>
   </main>
   <ng-template #noFlow><main class="run-shell empty-run"><ion-icon name="timer-outline"></ion-icon><h1>No flow is ready.</h1><p>Build a flow before starting the teaching timer.</p><ion-button routerLink="/planner">Open planner</ion-button></main></ng-template>
 </ion-content>

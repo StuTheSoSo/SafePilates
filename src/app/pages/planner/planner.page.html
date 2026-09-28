@@ -1,8 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start"><ion-back-button defaultHref="/"></ion-back-button></ion-buttons>
     <ion-title>Flow planner</ion-title>
-    <ion-buttons slot="end"><ion-button (click)="saveFlow()" [disabled]="!plan.name.trim()">Save</ion-button></ion-buttons>
+    <ion-buttons slot="end"><ion-button (click)="startNewFlow()">New</ion-button><ion-button (click)="saveFlow()" [disabled]="!planExerciseCount">Save</ion-button></ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -24,6 +23,7 @@
         <p class="eyebrow">Build and teach</p>
         <ion-input class="title-input" [(ngModel)]="plan.name" placeholder="Untitled flow" (ionBlur)="flowPlanService.updateCurrentPlan(plan)"></ion-input>
         <p class="summary">{{ planDurationMinutes }} minutes · {{ planExerciseCount }} exercises</p>
+        <div class="saved-notice" *ngIf="savedNotice" role="status"><ion-icon name="checkmark-circle-outline"></ion-icon><span>Saved to your flow library</span><a routerLink="/programs" [queryParams]="{ view: 'saved' }">View saved flows</a></div>
       </div>
       <ion-button class="run-flow-button" color="primary" (click)="startRun()" [disabled]="!plan.segments.some(segment => segment.items.length) || (warnings.length > 0 && !warningAcknowledged)">
         <ion-icon name="play-outline" slot="start"></ion-icon>Run flow
@@ -56,7 +56,11 @@
             <strong>{{ exerciseFor(item)?.name || item.exerciseId }}</strong><small>{{ item.apparatus }}</small>
           </div>
           <div class="duration-controls"><button type="button" (click)="adjustDuration(item, -.25)">-</button><span>{{ item.durationMinutes }} min</span><button type="button" (click)="adjustDuration(item, .25)">+</button></div>
-          <button class="icon-button" type="button" (click)="removeItem(item)" aria-label="Remove exercise"><ion-icon name="trash-outline"></ion-icon></button>
+          <div class="item-actions">
+            <button class="icon-button" type="button" (click)="moveItem(item, -1)" [disabled]="activeSegment.items[0].id === item.id" aria-label="Move exercise up" title="Move up"><ion-icon name="arrow-up-outline"></ion-icon></button>
+            <button class="icon-button" type="button" (click)="moveItem(item, 1)" [disabled]="activeSegment.items[activeSegment.items.length - 1].id === item.id" aria-label="Move exercise down" title="Move down"><ion-icon name="arrow-down-outline"></ion-icon></button>
+            <button class="icon-button remove-button" type="button" (click)="removeItem(item)" aria-label="Remove exercise" title="Remove exercise"><ion-icon name="trash-outline"></ion-icon></button>
+          </div>
           <ion-textarea *ngIf="expandedItemId === item.id" class="item-notes" [(ngModel)]="item.notes" (ngModelChange)="flowPlanService.updateCurrentPlan(plan)" placeholder="Teaching cues and notes"></ion-textarea>
         </article>
         <p class="empty-state" *ngIf="!activeSegment.items.length">Add movements below to shape this section.</p>

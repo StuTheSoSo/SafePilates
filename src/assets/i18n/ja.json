@@ -11,7 +11,7 @@
     "HOME": "ホーム",
     "LIBRARY": "ライブラリ",
     "CLIENTS": "クライアント",
-    "PROGRAMS": "プログラム",
+    "PROGRAMS": "フロー",
     "PLANNER": "プランナー",
     "SETTINGS": "設定"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "購入に失敗しました [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "プログラム",
+    "TITLE": "フロー",
     "INTRO": "共通の目標のための厳選されたシーケンス — プログラムをタップしてエクササイズを表示します。",
     "SEARCH_PLACEHOLDER": "プログラムを検索",
     "SEARCH_EMPTY": "「{{term}}」に一致するプログラムはありません。別のキーワードをお試しください。",

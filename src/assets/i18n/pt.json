@@ -11,7 +11,7 @@
     "HOME": "Início",
     "LIBRARY": "Biblioteca",
     "CLIENTS": "Clientes",
-    "PROGRAMS": "Programas",
+    "PROGRAMS": "Fluxos",
     "PLANNER": "Planejador",
     "SETTINGS": "Definições"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "A compra falhou [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "Programas",
+    "TITLE": "Fluxos",
     "INTRO": "Sequências selecionadas para objetivos comuns — toque num programa para ver os seus exercícios.",
     "SEARCH_PLACEHOLDER": "Pesquisar programas",
     "SEARCH_EMPTY": "Nenhum programa corresponde a \"{{term}}\". Tente outra palavra-chave.",

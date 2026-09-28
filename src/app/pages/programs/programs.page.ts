@@ -1,14 +1,18 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
 import { Program } from '../../models';
 import programsData from '../../../assets/data/programs.json' with { type: 'json' };
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { FlowPlan } from '../../models';
+import { FlowPlanService } from '../../services/flow-plan.service';
+import { FlowRunnerService } from '../../services/flow-runner.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-programs',
@@ -17,24 +21,40 @@ import { TranslatePipe, TranslateService } from '@ngx-translate/core';
   templateUrl: './programs.page.html',
   styleUrls: ['./programs.page.scss']
 })
-export class ProgramsPage implements OnInit {
+export class ProgramsPage implements OnInit, OnDestroy {
   programs: Program[] = [];
   filteredPrograms: Program[] = [];
   searchText = '';
   programNotes: Record<string, string> = {};
   noteSavedProgramId: string | null = null;
+  activeView: 'templates' | 'saved' = 'templates';
+  savedFlows: FlowPlan[] = [];
   private router = inject(Router);
+  private route = inject(ActivatedRoute);
   private safetyService = inject(SafetyService);
   private sanitizer = inject(DomSanitizer);
   private translate = inject(TranslateService);
+  private flowPlanService = inject(FlowPlanService);
+  private flowRunnerService = inject(FlowRunnerService);
+  private savedFlowsSubscription?: Subscription;
+  private viewQuerySubscription?: Subscription;
 
   async ngOnInit() {
+    this.viewQuerySubscription = this.route.queryParamMap.subscribe(params => {
+      this.activeView = params.get('view') === 'saved' ? 'saved' : 'templates';
+    });
+    this.savedFlowsSubscription = this.flowPlanService.savedFlows$.subscribe(flows => this.savedFlows = flows);
     await this.safetyService.initData();
     const loaded = this.safetyService.getPrograms();
     this.programs = (loaded.length ? [...loaded] : [...(programsData as Program[])]).sort((a, b) => a.name.localeCompare(b.name));
     this.searchText = this.safetyService.librarySearchTerm || '';
     this.loadProgramNotes();
     this.filterPrograms();
+  }
+
+  ngOnDestroy(): void {
+    this.savedFlowsSubscription?.unsubscribe();
+    this.viewQuerySubscription?.unsubscribe();
   }
 
   ionViewWillEnter() {
@@ -78,6 +98,28 @@ export class ProgramsPage implements OnInit {
 
   openProgram(id: string) {
     this.router.navigate(['/programs', id]);
+  }
+
+  openSavedFlow(id: string): void {
+    this.router.navigate(['/planner'], { queryParams: { flow: id, mode: 'edit' } });
+  }
+
+  useSavedFlow(id: string): void {
+    if (this.flowPlanService.createDraftFromSavedFlow(id)) this.router.navigateByUrl('/planner');
+  }
+
+  runSavedFlow(flow: FlowPlan): void {
+    this.flowRunnerService.loadPlan(flow);
+    this.router.navigateByUrl('/run');
+  }
+
+  startBlankFlow(): void {
+    this.flowPlanService.startBlankFlow();
+    this.router.navigateByUrl('/planner');
+  }
+
+  durationMinutes(flow: FlowPlan): number {
+    return flow.segments.reduce((total, segment) => total + segment.items.reduce((sum, item) => sum + item.durationMinutes, 0), 0);
   }
 
   saveProgramNote(programId: string) {

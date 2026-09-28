@@ -42,7 +42,7 @@
           <p class="eyebrow">Your studio</p>
           <h2 id="saved-heading">Saved flows</h2>
         </div>
-        <ion-button fill="clear" routerLink="/templates">View all</ion-button>
+        <ion-button fill="clear" routerLink="/programs" [queryParams]="{ view: 'saved' }">View all</ion-button>
       </div>
       <p class="empty-state" *ngIf="!savedFlows.length">Your saved flows will appear here after you save a plan.</p>
       <div class="flow-list" *ngIf="savedFlows.length">
@@ -51,11 +51,6 @@
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </a>
       </div>
-    </section>
-
-    <section class="saved-section" aria-labelledby="notes-heading">
-      <div class="section-heading"><div><p class="eyebrow">Teaching notes</p><h2 id="notes-heading">Build your eye</h2></div></div>
-      <div class="flow-list"><a class="flow-row" routerLink="/articles/principles"><span><strong>The Pilates principles</strong><small>Use principles as lenses for planning and cueing.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a><a class="flow-row" routerLink="/articles/breathing"><span><strong>Breathing in motion</strong><small>Organize timing, effort, and attention.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a><a class="flow-row" routerLink="/articles/alignment"><span><strong>Alignment that serves movement</strong><small>Choose responsive cues over rigid shapes.</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a></div>
     </section>
 
     <section class="safety-band">

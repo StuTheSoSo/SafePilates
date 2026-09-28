@@ -6,6 +6,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { RevenueCatService } from './services/revenueCat.service';
 import { LanguageService } from './services/language.service';
 import { WatchBridgeService } from './watch/watch-bridge.service';
+import { FlowRunnerService } from './services/flow-runner.service';
 
 @Component({
   selector: 'app-root',
@@ -19,6 +20,7 @@ export class AppComponent {
   private revenueCatService = inject(RevenueCatService);
   private languageService = inject(LanguageService);
   private watchBridge = inject(WatchBridgeService);
+  private flowRunner = inject(FlowRunnerService);
   private readonly themeStorageKey = 'pilatesafe-theme';
   private readonly defaultTheme = 'theme-rose';
   private readonly allowedThemes = new Set(['theme-rose', 'theme-lilac', 'theme-ocean', 'theme-sage']);
@@ -36,6 +38,7 @@ export class AppComponent {
     this.applySavedTheme();
     this.revenueCatService.init();
     this.languageService.init();
+    this.flowRunner.initializeLifecycle();
     this.watchBridge.initialize();
   }
 

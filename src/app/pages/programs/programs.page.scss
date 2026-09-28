@@ -15,6 +15,19 @@ ion-card-content {
   margin-bottom: 0.5rem;
 }
 
+.flow-view-tabs { max-width: 720px; margin: .25rem auto 1rem; }
+.saved-flow-list { max-width: 980px; margin: 0 auto; }
+.saved-flow-card { border-radius: 12px; }
+.saved-flow-actions { display: flex; flex-wrap: wrap; gap: .45rem; }
+.saved-flow-actions ion-button { margin: 0; }
+.saved-flow-empty { display: grid; justify-items: center; padding: 4rem 1rem; color: var(--sp-ink-2); text-align: center; }
+.saved-flow-empty > ion-icon { color: var(--ion-color-primary); font-size: 3rem; }
+.saved-flow-empty h2 { color: var(--sp-brand-ink); }
+
+@media (max-width: 600px) {
+  .saved-flow-actions ion-button { min-height: 42px; }
+}
+
 ion-card {
   border-radius: 22px;
   box-shadow: 0 8px 32px var(--sp-shadow);

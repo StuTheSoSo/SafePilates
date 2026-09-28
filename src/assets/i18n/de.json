@@ -11,7 +11,7 @@
     "HOME": "Startseite",
     "LIBRARY": "Bibliothek",
     "CLIENTS": "Klienten",
-    "PROGRAMS": "Programme",
+    "PROGRAMS": "Abläufe",
     "PLANNER": "Planer",
     "SETTINGS": "Einstellungen"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "Kauf fehlgeschlagen [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "Programme",
+    "TITLE": "Abläufe",
     "INTRO": "Kuratierte Sequenzen für häufige Ziele — tippen Sie auf ein Programm, um die Übungen anzuzeigen.",
     "SEARCH_PLACEHOLDER": "Programme suchen",
     "SEARCH_EMPTY": "Keine Programme entsprechen \"{{term}}\". Versuchen Sie ein anderes Stichwort.",

@@ -11,7 +11,7 @@
     "HOME": "Home",
     "LIBRARY": "Libreria",
     "CLIENTS": "Clienti",
-    "PROGRAMS": "Programmi",
+    "PROGRAMS": "Flussi",
     "PLANNER": "Pianificatore",
     "SETTINGS": "Impostazioni"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "Acquisto non riuscito [{{code}}]: {{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "Programmi",
+    "TITLE": "Flussi",
     "INTRO": "Sequenze curate per obiettivi comuni — tocca un programma per vedere gli esercizi.",
     "SEARCH_PLACEHOLDER": "Cerca programmi",
     "SEARCH_EMPTY": "Nessun programma corrisponde a \"{{term}}\". Prova un'altra parola chiave.",

@@ -11,7 +11,7 @@
     "HOME": "主页",
     "LIBRARY": "资料库",
     "CLIENTS": "学员",
-    "PROGRAMS": "计划",
+    "PROGRAMS": "流程",
     "PLANNER": "计划器",
     "SETTINGS": "设置"
   },
@@ -311,7 +311,7 @@
     "PURCHASE_FAILED": "购买失败 [{{code}}]：{{msg}}"
   },
   "PROGRAMS": {
-    "TITLE": "计划",
+    "TITLE": "流程",
     "INTRO": "针对常见目标的精选动作序列——点击任意计划查看其动作。",
     "SEARCH_PLACEHOLDER": "搜索计划",
     "SEARCH_EMPTY": "未找到与「{{term}}」匹配的计划。请尝试其他关键词。",

@@ -1,2 +1,49 @@
-<ion-header [translucent]="true"><ion-toolbar><ion-buttons slot="start"><ion-back-button defaultHref="/"></ion-back-button></ion-buttons><ion-title>Saved flows</ion-title><ion-buttons slot="end"><ion-button routerLink="/planner"><ion-icon name="add-outline" slot="start"></ion-icon>New</ion-button></ion-buttons></ion-toolbar></ion-header>
-<ion-content><main class="templates-shell"><header><p class="eyebrow">Your studio library</p><h1>Saved flows and templates</h1><p>Open a saved plan to refine it, attach a client, or run it as a teaching session.</p></header><section class="flow-list" *ngIf="flows.length; else empty"><article class="flow-card" *ngFor="let flow of flows"><a [routerLink]="['/planner']" [queryParams]="{ flow: flow.id }"><span><strong>{{ flow.name }}</strong><small>{{ flow.clientName }} · {{ flow.segments.length }} sections</small></span><ion-icon name="arrow-forward-outline"></ion-icon></a><ion-button fill="clear" color="danger" (click)="deleteFlow(flow.id)" aria-label="Delete flow"><ion-icon name="trash-outline" slot="icon-only"></ion-icon></ion-button></article></section><ng-template #empty><div class="empty"><ion-icon name="copy-outline"></ion-icon><h2>No saved flows yet</h2><p>Build a plan and save it here for your next class.</p><ion-button routerLink="/planner">Open planner</ion-button></div></ng-template></main></ion-content>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Saved flows</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="newBlankFlow()"><ion-icon name="add-outline" slot="start"></ion-icon>New blank flow</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="templates-shell">
+    <header>
+      <p class="eyebrow">Your studio library</p>
+      <h1>Saved flows</h1>
+      <p>Reuse a class plan, continue editing it, or run it directly.</p>
+      <ion-button fill="outline" routerLink="/programs"><ion-icon name="albums-outline" slot="start"></ion-icon>Browse built-in Programs</ion-button>
+    </header>
+
+    <section class="flow-list" *ngIf="flows.length; else empty">
+      <article class="flow-card" *ngFor="let flow of flows">
+        <div class="flow-card-heading">
+          <div>
+            <strong>{{ flow.name }}</strong>
+            <small>{{ flow.clientName }} · {{ durationMinutes(flow) }} min · {{ exerciseCount(flow) }} movements</small>
+            <small>{{ flow.goal || 'No goal set' }} · {{ level(flow) }}</small>
+          </div>
+          <span class="saved-date" *ngIf="flow.savedAt">{{ flow.savedAt | date:'mediumDate' }}</span>
+        </div>
+        <div class="flow-actions">
+          <ion-button fill="solid" size="small" (click)="editFlow(flow.id)"><ion-icon name="create-outline" slot="start"></ion-icon>Edit</ion-button>
+          <ion-button fill="outline" size="small" (click)="useAsNew(flow.id)"><ion-icon name="copy-outline" slot="start"></ion-icon>Use as new</ion-button>
+          <ion-button fill="outline" size="small" (click)="runFlow(flow)"><ion-icon name="play-outline" slot="start"></ion-icon>Run</ion-button>
+          <ion-button fill="clear" size="small" (click)="duplicateFlow(flow.id)" aria-label="Duplicate flow" title="Duplicate flow"><ion-icon name="copy-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button fill="clear" size="small" (click)="renameFlow(flow)" aria-label="Rename flow" title="Rename flow"><ion-icon name="text-outline" slot="icon-only"></ion-icon></ion-button>
+          <ion-button fill="clear" color="danger" size="small" (click)="deleteFlow(flow)" aria-label="Delete flow" title="Delete flow"><ion-icon name="trash-outline" slot="icon-only"></ion-icon></ion-button>
+        </div>
+      </article>
+    </section>
+
+    <ng-template #empty>
+      <div class="empty">
+        <ion-icon name="copy-outline"></ion-icon>
+        <h2>No saved flows yet</h2>
+        <p>Start with a blank template, then save it when it is ready to reuse.</p>
+        <ion-button (click)="newBlankFlow()">Open blank flow</ion-button>
+      </div>
+    </ng-template>
+  </main>
+</ion-content>

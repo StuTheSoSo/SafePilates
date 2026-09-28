@@ -2,7 +2,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
-import { NavigationEnd, Router, RouterModule } from '@angular/router';
+import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Condition, Exercise } from '../../models.js';
 import { PremiumBannerComponent } from '../../components/premium-banner/premium-banner.component';
@@ -10,6 +10,7 @@ import exercisesData from '../../../assets/data/exercises.json' with { type: 'js
 import safetyConditionsData from '../../../assets/data/safety-conditions.json' with { type: 'json' };
 import { filter } from 'rxjs';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { SafetyNoticeService } from '../../services/safety-notice.service';
 
 @Component({
   selector: 'app-home',
@@ -40,6 +41,9 @@ export class HomePage implements OnInit {
       this.refreshComponent();
     });
   }
+
+  private readonly route = inject(ActivatedRoute);
+  private readonly safetyNotice = inject(SafetyNoticeService);
 
   refreshComponent() {
     this.selectedIds.clear();
@@ -369,6 +373,10 @@ export class HomePage implements OnInit {
 
   closeSafetyOverlay() {
     this.showSafetyOverlay = false;
+    this.safetyNotice.acknowledge();
+    if (this.route.snapshot.queryParamMap.get('returnTo') === 'run') {
+      void this.router.navigateByUrl('/run');
+    }
   }
 
   onTrimesterSelected(value: string) {

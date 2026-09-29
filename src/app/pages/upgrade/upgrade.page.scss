@@ -56,6 +56,12 @@ ion-button:hover, ion-chip:hover {
 }
 
 .plan-card--featured {
+  padding: 0.75rem;
+  border: 2px solid var(--ion-color-primary);
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--sp-bg-start), var(--sp-chip-start));
+  box-shadow: 0 6px 18px var(--sp-shadow);
+
   ion-button {
     --border-width: 2px;
     font-size: 1.08rem;
@@ -63,7 +69,9 @@ ion-button:hover, ion-chip:hover {
 }
 
 .plan-badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
   margin-bottom: 0.4rem;
   padding: 0.2rem 0.7rem;
   border-radius: 999px;
@@ -74,12 +82,24 @@ ion-button:hover, ion-chip:hover {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   box-shadow: 0 4px 12px rgba(255, 125, 0, 0.3);
+
+  ion-icon {
+    font-size: 0.95rem;
+  }
 }
 
 .plan-saving {
   margin: 0.3rem 0 0 0.25rem;
   font-size: 0.85rem;
   color: var(--sp-ink-3);
+}
+
+.plan-weekly-equivalent {
+  margin: 0.35rem 0 0;
+  color: var(--sp-brand-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .plan-renewal {

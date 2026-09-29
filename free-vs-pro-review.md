@@ -17,12 +17,11 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #2 — Loss Aversion: Home Screen Locked Chip
 
-**Status:** 🔲  
-**Where:** `src/app/pages/home/` (condition chip tap → paywall modal/sheet)  
-**What:** When a user taps a locked condition chip, replace the generic paywall with condition-specific copy — e.g. *"Clients with fibromyalgia walk into studios every week. See exactly what to avoid."*
+**Status:** ✅
+**Where:** `src/app/pages/home/home.page.ts` and `src/assets/i18n/`
+**What:** A free user tapping a locked condition chip sees a localized alert that names the condition and explains that Pro unlocks detailed precautions, exercises to avoid or modify, and safer alternatives. The alert offers "Not now" and "Explore Pro"; the locked condition is not added to the user's selection.
 
-**Prompt:**
-> Implement suggestion #2: when the user taps a locked condition chip on the home screen, show a condition-specific paywall message that names the condition and explains what they're missing, instead of a generic "upgrade to Pro" sheet.
+**Implemented:** Added the condition-specific alert in all nine supported locales. Selecting a free condition and selecting any condition as a Pro user continue to work as before.
 
 ---
 
@@ -69,34 +68,31 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #7 — Micro-Commitment: Save to Client Profile CTA
 
-**Status:** 🔲  
-**Where:** `src/app/pages/results/` (bottom of results page, free users only)  
-**What:** After a free results check, surface a soft *"Save this to a client profile?"* button. Tapping it opens the upgrade page — but the user has already committed to the action. Commitment at point of intent converts better than commitment at point of pricing.
+**Status:** ✅
+**Where:** `src/app/pages/results/results.page.html` and `src/assets/i18n/`
+**What:** Free users with at least one condition result see a soft "Save to client profile?" outline button at the bottom of Results. Tapping it opens the Pro upgrade page.
 
-**Prompt:**
-> Implement suggestion #7: on the results page for free users, add a soft "Save to client profile?" CTA button at the bottom. Tapping it opens the upgrade page (since clients is a Pro feature). Only show it when the user has selected at least one condition and is not yet Pro.
+**Implemented:** The CTA is hidden when there are no results or the user has Pro access, and the label is localized in all nine supported locales.
 
 ---
 
 ## #8 — Anchoring: Per-Week Price on Upgrade Page
 
-**Status:** 🔲  
+**Status:** ✅
 **Where:** `src/app/pages/upgrade/upgrade.page.html` + i18n  
-**What:** Show the math visually: *"$49/year = less than $1/week"*. Trivializing cost with a per-week figure is a classic price anchor. Reinforces the existing "less than one cancelled session" line.
+**What:** Optionally show the weekly equivalent derived from the annual price already configured in the store. This is copy only; it must not change the product, billing period, or price.
 
-**Prompt:**
-> Implement suggestion #8: on the upgrade page, below the annual plan price, add a per-week cost breakdown line (e.g. "That's less than $1 per week") as a price anchor. Add the i18n key to all 9 language files.
+**Implemented:** Shows RevenueCat's localized weekly recurrence price when the annual product provides it; the line is hidden otherwise. No price points or store products were changed.
 
 ---
 
 ## #9 — Default Bias: Annual Plan Pre-Selected
 
-**Status:** 🔲  
+**Status:** ✅
 **Where:** `src/app/pages/upgrade/upgrade.page.html` + SCSS  
 **What:** The annual plan should be visually pre-selected (highlighted card, checkmark, "Best Value" badge) by default — not equal weight to monthly. Users take the default; equal presentation leaves money on the table.
 
-**Prompt:**
-> Implement suggestion #9: on the upgrade page, make the annual plan the visually pre-selected default — highlighted card with a "Best Value" badge and checkmark, larger visual weight than monthly. The annual option should look selected on page load.
+**Implemented:** The annual option is visually highlighted on initial load with a primary border, tinted background, Best Value badge, and checkmark. This is a visual default only; prices and products are unchanged.
 
 ---
 
@@ -108,27 +104,21 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## #11 — Library: Locked Exercise Detail Page Copy
 
-**Status:** 🔲  
-**Where:** `src/app/pages/exercise-detail/exercise-detail.page.html` (`#premiumExerciseLocked` template)  
-**What:** The current locked detail screen says "Premium Exercise — This exercise is part of Pilates Pro and requires an upgrade to view full details." This is the highest-intent moment in the library (the user tapped through specifically for this exercise) and the copy is the most generic in the app. Replace with exercise-specific loss aversion: name the exercise, reference its category, and list what's locked (modifications, instructor notes, full safety profile). Same pattern as the results page `AVOID_PRO_TITLE/DESC`.
+**Status:** ✅
+**Where:** `src/app/pages/exercise-detail/exercise-detail.page.html` (`#premiumExerciseLocked` template) and `src/assets/i18n/`
+**What:** The locked detail screen names the exercise, shows its category and exact modification count, and specifies that Pro unlocks instructor notes and the full safety profile.
 
-**Key detail:** `exercise` and `hasPremiumExercise` are already available in the component when the locked template renders — name, category, and modification count are all accessible for dynamic copy.
-
-**Prompt:**
-> Implement library suggestion #11: on the exercise detail page, replace the generic `#premiumExerciseLocked` template ("Premium Exercise — This exercise is part of Pilates Pro...") with exercise-specific loss aversion copy that names the exercise, references its category (e.g. "Reformer exercise"), and states what's locked (modifications, instructor notes, full safety profile). Use the same quantified, specific tone as the results page AVOID_PRO_TITLE/DESC pattern. Add i18n keys `EXERCISE_DETAIL.PRO_LOCKED_TITLE` and `EXERCISE_DETAIL.PRO_LOCKED_DESC` to all 9 language files.
+**Implemented:** Added `PRO_LOCKED_TITLE` and `PRO_LOCKED_DESC` in all nine locales. The count is taken from the exercise's modification data, and Library taps now open this gated preview instead of sending free users directly to the upgrade page.
 
 ---
 
 ## #12 — Library: Free/Pro Ratio Indicator
 
-**Status:** 🔲  
+**Status:** ✅
 **Where:** `src/app/pages/library/library.page.html` (below the category chips)  
-**What:** Free users browsing "Reformer" see nothing but locked cards — a wall with no context. Add a small count indicator, e.g. *"6 of 42 Reformer exercises available — unlock all with Pro"*, shown when a Pro-gated category is selected and the user is not premium. Transforms a demoralising wall into a quantified gap.
+**What:** Free users browsing a specific category see the number of available exercises out of the current filtered total when at least one result is Pro-gated. The inline upgrade link follows the active search and category filters.
 
-**Key detail:** `filteredExercises` is already computed in `LibraryPage`. Free count = `filteredExercises.filter(e => !safetyService.isExercisePremium(e)).length`. Total = `filteredExercises.length`. Only show when `selectedCategory !== 'All'` and at least one exercise in the filter is locked.
-
-**Prompt:**
-> Implement library suggestion #12: in the exercise library, when the user is not premium and has filtered to a specific category, show a small inline note below the category chips with a free vs total count (e.g. "6 of 42 available — upgrade to unlock all"). Only show it when the filtered set contains at least one locked exercise. Add getter `freeFilteredCount` and `totalFilteredCount` to `LibraryPage`. Add i18n key `LIBRARY.FREE_COUNT_NOTE` (params: `free`, `total`) to all 9 language files.
+**Implemented:** Added `freeFilteredCount` and `totalFilteredCount` getters and the `FREE_COUNT_NOTE` translation to all nine locales. The note is hidden for Pro users, "All", and filtered categories with no locked exercises.
 
 ---
 
@@ -145,14 +135,51 @@ Status legend: ✅ Done · 🔲 Not started
 
 ## Priority Order (suggested)
 
-1. **#9** — Annual plan default (layout only, highest revenue impact)
-2. **#1** — Loss aversion count on results (strong conversion signal)
-3. **#11** — Library locked detail copy (highest-intent paywall in the library)
-4. **#8** — Per-week anchor (2-line copy change)
-5. **#13** — Library locked card visual weight (pure SCSS)
-6. **#3** — Progress bar in settings (persistent motivation loop)
-7. **#12** — Library free/pro ratio indicator
-8. **#7** — Micro-commitment save CTA
-9. **#2** — Condition-specific locked chip message
-10. **#4** — Identity framing on clients gate
-11. **#5** — Liability framing line
+1. **#1** — Loss aversion count on results (strong conversion signal)
+2. **#13** — Library locked card visual weight (pure SCSS)
+3. **#3** — Progress bar in settings (persistent motivation loop)
+4. **#4** — Identity framing on clients gate
+5. **#5** — Liability framing line
+
+---
+
+## Tier Structure Recommendations
+
+### Pricing Guardrail
+
+**Do not change pricing.** Preserve the existing App Store / Google Play products, price points, billing periods, and RevenueCat configuration. Any price text or optional weekly equivalent must reflect the price returned by the store; fallback values and old strategy notes are not authoritative.
+
+### Current Product Split
+
+- **Conditions:** 38 of 88 are free. The general condition summary and danger context are visible to all users; detailed contraindications for Pro conditions and instructor notes are gated.
+- **Exercises:** 44 of 93 are currently classified as Pro through apparatus-related text matching. The other 49 are ungated by this rule.
+- **Built-in programs:** 2 of 32 are Free and 30 are Pro.
+- **Flow workflow:** creating, saving, and running a custom flow, including Watch controls, is not currently gated.
+- **Client profiles:** gated to Pro.
+
+### Recommended Free Tier
+
+Keep Free useful for evaluating a real instructor workflow:
+
+- Keep high-level condition summaries and danger context visible for every condition.
+- Keep detailed guidance for the current 38 free conditions and ungated exercise guidance available.
+- Keep custom flow creation, saving, and running available; do not make Watch support a Pro requirement.
+- Expand the built-in Free sample from 2 to roughly 6–8 representative programs, including at least one general-purpose template.
+
+### Recommended Pro Tier
+
+Position Pro as more complete safety depth and instructor workflow:
+
+- Detailed contraindications and instructor notes across all 88 conditions.
+- Apparatus-specific exercise access and guidance.
+- The remaining curated program library and program notes.
+- Client profiles and related client-management tools.
+
+### Product and Trust Follow-Ups
+
+- Keep essential safety context available to everyone; the paywall should gate depth, not conceal the basic risk summary.
+- Replace the exercise apparatus keyword heuristic with explicit access metadata as the catalog grows; substring matching can misclassify content.
+- Update the upgrade page's “60+ health conditions” claim to match the current 88-condition catalog.
+- Do not advertise AI-assisted guidance until that capability exists in the product.
+- Review the liability-framing claim and prefer substantiated descriptions of Pro's actual features.
+- Before changing any tier boundaries, measure which locked-content views lead to upgrades and whether users retain after the free sample is expanded.

@@ -155,6 +155,10 @@
     </ion-card>
   </ng-template>
 
+  <ion-button *ngIf="hasResults && !hasPremiumAccess" expand="block" fill="outline" class="save-client-profile-cta" (click)="navigateToUpgrade()">
+    <ion-icon name="person-add-outline" slot="start"></ion-icon>
+    {{ 'RESULTS.SAVE_TO_CLIENT_PROFILE_CTA' | translate }}
+  </ion-button>
   <app-premium-banner *ngIf="!hasPremiumAccess" (upgradeClick)="navigateToUpgrade()"></app-premium-banner>
   <ion-button expand="block" class="results-action" (click)="viewAgain()">{{ 'RESULTS.CHECK_ANOTHER' | translate }}</ion-button>
 </ion-content>

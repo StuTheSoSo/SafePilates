@@ -96,6 +96,20 @@ export class LibraryPage implements OnInit {
     return categoryFiltered.filter(exercise => this.exerciseMatchesSearch(exercise, term));
   }
 
+  get freeFilteredCount(): number {
+    return this.filteredExercises.filter(exercise => !this.safetyService.isExercisePremium(exercise)).length;
+  }
+
+  get totalFilteredCount(): number {
+    return this.filteredExercises.length;
+  }
+
+  get showFreeCountNote(): boolean {
+    return this.selectedCategory !== this.ALL_CATEGORY
+      && !this.hasPremiumAccess
+      && this.freeFilteredCount < this.totalFilteredCount;
+  }
+
   exerciseMatchesSearch(exercise: Exercise, term: string) {
     return [exercise.name, exercise.shortDescription, exercise.focus, exercise.category]
       .some(field => field?.toLowerCase().includes(term));
@@ -138,12 +152,6 @@ export class LibraryPage implements OnInit {
   openExercise(id: string, exercise: Exercise) {
     const search = this.searchText.trim();
     this.safetyService.librarySearchTerm = search;
-
-    if (this.safetyService.isExercisePremium(exercise) && !this.safetyService.isPremiumActive()) {
-      this.navigateToUpgrade();
-      return;
-    }
-
     this.router.navigate([`/exercise/${id}`], {
       queryParams: {
         search: search || undefined

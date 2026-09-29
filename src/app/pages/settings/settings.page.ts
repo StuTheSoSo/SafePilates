@@ -42,6 +42,8 @@ export class SettingsPage {
   savedEmail = localStorage.getItem(EMAIL_KEY) ?? '';
   emailInput = this.savedEmail;
   isSavingEmail = false;
+  readonly appVersion = '1.10';
+  readonly appBuild = '20';
 
   constructor() {
     this.applyTheme(this.selectedTheme);

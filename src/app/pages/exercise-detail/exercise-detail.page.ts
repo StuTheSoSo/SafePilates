@@ -29,6 +29,10 @@ export class ExerciseDetailPage implements OnInit {
 
   hasPremiumExercise = false;
 
+  get proModificationCount(): number {
+    return this.exercise?.modifications?.length ?? this.exercise?.modificationsAndAlternatives?.length ?? 0;
+  }
+
   constructor(private route: ActivatedRoute) {}
 
   get teachingCues(): string[] {

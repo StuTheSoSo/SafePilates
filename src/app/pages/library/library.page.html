@@ -15,6 +15,10 @@
     </ion-chip>
   </div>
 
+  <button *ngIf="showFreeCountNote" type="button" class="free-count-note" (click)="navigateToUpgrade()">
+    {{ 'LIBRARY.FREE_COUNT_NOTE' | translate: { free: freeFilteredCount, total: totalFilteredCount } }}
+  </button>
+
   <div class="page-hero ion-padding-horizontal">
     <ion-searchbar
       [placeholder]="'LIBRARY.SEARCH_PLACEHOLDER' | translate"

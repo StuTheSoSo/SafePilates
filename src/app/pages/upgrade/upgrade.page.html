@@ -75,12 +75,13 @@
         </div>
 
         <div class="plan-card plan-card--featured">
-          <div class="plan-badge">{{ 'UPGRADE.BEST_VALUE' | translate }}</div>
+          <div class="plan-badge"><ion-icon name="checkmark-circle" aria-hidden="true"></ion-icon>{{ 'UPGRADE.BEST_VALUE' | translate }}</div>
           <ion-button expand="block" fill="solid" (click)="purchaseAnnual()" [disabled]="isProcessing">
             <span class="plan-label">{{ 'UPGRADE.ANNUAL_LABEL' | translate }}</span>
             <span class="plan-price" *ngIf="annualPrice">{{ annualPrice }}</span>
             <ion-spinner *ngIf="!annualPrice" name="dots" slot="end"></ion-spinner>
           </ion-button>
+          <p class="plan-weekly-equivalent" *ngIf="annualWeeklyPrice">{{ 'UPGRADE.WEEKLY_EQUIVALENT' | translate: { price: annualWeeklyPrice } }}</p>
           <p class="plan-saving">{{ 'UPGRADE.SAVE_VS_MONTHLY' | translate }}</p>
           <p class="plan-renewal">{{ 'UPGRADE.AUTO_RENEW_ANNUAL' | translate }}</p>
         </div>

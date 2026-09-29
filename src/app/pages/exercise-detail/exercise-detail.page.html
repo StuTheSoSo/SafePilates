@@ -234,10 +234,10 @@
     <ng-template #premiumExerciseLocked>
       <ion-card>
         <ion-card-header>
-          <ion-card-title>{{ 'EXERCISE_DETAIL.PREMIUM_TITLE' | translate }}</ion-card-title>
+          <ion-card-title>{{ 'EXERCISE_DETAIL.PRO_LOCKED_TITLE' | translate: { exercise: exercise.name } }}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>{{ 'EXERCISE_DETAIL.PREMIUM_DESC' | translate }}</p>
+          <p>{{ 'EXERCISE_DETAIL.PRO_LOCKED_DESC' | translate: { exercise: exercise.name, category: exercise.category, modificationCount: proModificationCount } }}</p>
           <ion-button expand="block" (click)="navigateToUpgrade()">{{ 'EXERCISE_DETAIL.PREMIUM_CTA' | translate }}</ion-button>
         </ion-card-content>
       </ion-card>

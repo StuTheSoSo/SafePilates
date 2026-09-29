@@ -9,6 +9,7 @@ export interface RevenueCatProduct {
   description?: string;
   price?: string;
   priceString?: string;
+  pricePerWeekString?: string | null;
 }
 
 export interface RevenueCatCustomerInfo {

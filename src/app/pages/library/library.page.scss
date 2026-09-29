@@ -106,6 +106,23 @@ ion-button:hover, ion-chip:hover {
   margin-bottom: 1.2rem;
 }
 
+.free-count-note {
+  display: block;
+  width: calc(100% - 2rem);
+  margin: -0.65rem 1rem 1rem;
+  padding: 0.25rem 0;
+  border: 0;
+  background: transparent;
+  color: var(--sp-brand-ink);
+  font: inherit;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  text-align: start;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  cursor: pointer;
+}
+
 @media (max-width: 600px) {
   ion-card {
     border-radius: 14px;

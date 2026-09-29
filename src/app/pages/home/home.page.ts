@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonicModule } from '@ionic/angular';
+import { AlertController, IonicModule } from '@ionic/angular';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
 import { SafetyService } from '../../services/safety.service';
 import { Condition, Exercise } from '../../models.js';
@@ -44,6 +44,7 @@ export class HomePage implements OnInit {
 
   private readonly route = inject(ActivatedRoute);
   private readonly safetyNotice = inject(SafetyNoticeService);
+  private readonly alertController = inject(AlertController);
 
   refreshComponent() {
     this.selectedIds.clear();
@@ -300,11 +301,34 @@ export class HomePage implements OnInit {
         this.showTrimesterModal = false;
       }
     } else {
+      if (this.safetyService.isConditionPremium(conditionId) && !this.safetyService.isPremiumActive()) {
+        void this.showLockedConditionAlert(conditionId);
+        return;
+      }
       this.selectedIds.add(conditionId);
       if (conditionId === 'pregnancy') {
         this.showTrimesterModal = true;
       }
     }
+  }
+
+  private async showLockedConditionAlert(conditionId: string): Promise<void> {
+    const labelKey = `HOME.CONDITIONS.${conditionId}`;
+    const translatedLabel = this.translate.instant(labelKey);
+    const conditionName = translatedLabel === labelKey
+      ? this.conditions.find(condition => condition.id === conditionId)?.label ?? conditionId
+      : translatedLabel;
+    const alert = await this.alertController.create({
+      header: this.translate.instant('HOME.LOCKED_CONDITION_TITLE', { condition: conditionName }),
+      message: this.translate.instant('HOME.LOCKED_CONDITION_MESSAGE', { condition: conditionName }),
+      buttons: [
+        { text: this.translate.instant('HOME.LOCKED_CONDITION_NOT_NOW'), role: 'cancel' },
+        { text: this.translate.instant('HOME.LOCKED_CONDITION_UPGRADE'), role: 'confirm' },
+      ],
+    });
+    await alert.present();
+    const { role } = await alert.onDidDismiss();
+    if (role === 'confirm') this.navigateToUpgrade();
   }
 
   get selectedConditions() {

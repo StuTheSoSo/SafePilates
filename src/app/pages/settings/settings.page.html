@@ -76,6 +76,22 @@
 
   <ion-card>
     <ion-card-header>
+      <ion-card-title>{{ 'SETTINGS.APP_VERSION_TITLE' | translate }}</ion-card-title>
+    </ion-card-header>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>{{ 'SETTINGS.VERSION_LABEL' | translate }}</ion-label>
+        <ion-note slot="end">{{ appVersion }}</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-label>{{ 'SETTINGS.BUILD_LABEL' | translate }}</ion-label>
+        <ion-note slot="end">{{ appBuild }}</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
       <ion-card-title>{{ 'SETTINGS.LEGAL' | translate }}</ion-card-title>
     </ion-card-header>
     <ion-list>

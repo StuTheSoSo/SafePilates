@@ -36,6 +36,7 @@ export class UpgradePage implements OnInit, OnDestroy {
   pricesLoaded = false;
 
   prices: Record<string, string> = { ...FALLBACK_PRICES };
+  annualWeeklyPrice = '';
   private baseProductPrices: Record<string, string> = {};
   private langSub?: Subscription;
 
@@ -79,6 +80,9 @@ export class UpgradePage implements OnInit, OnDestroy {
         const display = product.priceString ?? product.price;
         if (display) {
           updatedBase[product.identifier] = display;
+        }
+        if (product.identifier === PRODUCT_IDS.annual) {
+          this.annualWeeklyPrice = product.pricePerWeekString ?? '';
         }
       }
       this.baseProductPrices = updatedBase;
